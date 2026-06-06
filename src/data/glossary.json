@@ -1,12 +1,12 @@
 {
-  "schema_version": "0.2.0",
-  "categories": ["IA", "Ética", "Narrativa", "Multimedia", "Derechos"],
+  "schema_version": "0.3.0",
+  "categories": ["IA", "Ética", "Narrativa", "Multimedia", "Derechos", "Diseño Visual", "Sonido", "Evaluación"],
   "terms": [
     {
       "term_id": "G01",
       "term": "Inteligencia Artificial (IA)",
       "category": "IA",
-      "session": "S1",
+      "sessions": ["S1", "S2"],
       "tags": ["fundamentos", "ia"],
       "definition": "Sistemas informáticos capaces de realizar tareas que normalmente requieren inteligencia humana, como generar texto, imágenes o voz."
     },
@@ -14,89 +14,337 @@
       "term_id": "G02",
       "term": "Prompt",
       "category": "IA",
-      "session": "S3",
+      "sessions": ["S3", "S4", "S5", "S6"],
       "tags": ["ia", "herramientas"],
-      "definition": "Instrucción o texto que se le da a una herramienta de IA para obtener un resultado, como una imagen o un texto."
+      "definition": "Instrucción o texto que se le da a una herramienta de IA para obtener un resultado. Un buen prompt es específico, contextualizado y ético."
     },
     {
       "term_id": "G03",
       "term": "Decisión humana",
       "category": "Ética",
-      "session": "S1",
+      "sessions": ["S1", "S2", "S3"],
       "tags": ["etica", "responsabilidad"],
-      "definition": "Elección consciente que toma la persona, no la IA. Es la huella de tu criterio dentro de la creación."
+      "definition": "Elección consciente que toma la persona, no la IA. Es la huella de tu criterio dentro de la creación. Sin decisión humana, no hay autoría."
     },
     {
       "term_id": "G04",
       "term": "Reflexión ética",
       "category": "Ética",
-      "session": "S1",
+      "sessions": ["S1", "S2"],
       "tags": ["etica", "portafolio"],
-      "definition": "Nota breve donde explicas por qué tu decisión es justa, honesta y respetuosa."
+      "definition": "Nota breve donde explicas por qué tu decisión es justa, honesta y respetuosa con las personas y con el conocimiento."
     },
     {
       "term_id": "G05",
       "term": "Atribución",
       "category": "Derechos",
-      "session": "S5",
+      "sessions": ["S5", "S8"],
       "tags": ["derechos", "creditos"],
-      "definition": "Reconocer la fuente o autoría de un recurso (imagen, música, texto) que usaste en tu historia."
+      "definition": "Reconocer la fuente o autoría de un recurso (imagen, música, texto) que usaste en tu historia. Es una práctica de honestidad académica."
     },
     {
       "term_id": "G06",
       "term": "Licencia",
       "category": "Derechos",
-      "session": "S9",
+      "sessions": ["S5", "S9"],
       "tags": ["derechos", "entrega"],
-      "definition": "Permiso que define cómo se puede usar, compartir o modificar una obra (por ejemplo, Creative Commons)."
+      "definition": "Permiso que define cómo se puede usar, compartir o modificar una obra. Ejemplo: Creative Commons permite compartir con atribución."
     },
     {
       "term_id": "G07",
       "term": "Logline",
       "category": "Narrativa",
-      "session": "S2",
+      "sessions": ["S2"],
       "tags": ["narrativa", "idea"],
-      "definition": "Resumen de una o dos frases que captura la esencia de una historia."
+      "definition": "Resumen de una o dos frases (máximo 25 palabras) que captura quién es el personaje, qué quiere y qué obstáculo enfrenta."
     },
     {
       "term_id": "G08",
       "term": "Storyboard",
       "category": "Narrativa",
-      "session": "S4",
+      "sessions": ["S4"],
       "tags": ["narrativa", "estructura"],
-      "definition": "Secuencia de escenas o viñetas que planifica visualmente el desarrollo de una historia."
+      "definition": "Secuencia de escenas o viñetas que planifica visualmente el desarrollo de una historia antes de producirla."
     },
     {
       "term_id": "G09",
       "term": "VoiceOver",
       "category": "Multimedia",
-      "session": "S6",
+      "sessions": ["S6", "S7"],
       "tags": ["audio", "voz"],
-      "definition": "Narración de voz que se graba sobre las diapositivas o el video para guiar la historia."
+      "definition": "Narración de voz que se graba (o genera con IA) sobre las diapositivas o el video para guiar al espectador a través de la historia."
     },
     {
       "term_id": "G10",
       "term": "MP4",
       "category": "Multimedia",
-      "session": "S9",
+      "sessions": ["S8", "S9"],
       "tags": ["video", "entrega"],
-      "definition": "Formato de archivo de video ampliamente compatible, usado para la entrega final de la historia."
+      "definition": "Formato de archivo de video ampliamente compatible. Es el formato estándar para la entrega final de la historia multimedia."
     },
     {
       "term_id": "G11",
       "term": "Declaración de uso de IA",
       "category": "Ética",
-      "session": "S8",
+      "sessions": ["S8", "S9"],
       "tags": ["etica", "transparencia"],
-      "definition": "Aviso donde indicas qué partes de tu obra fueron creadas o asistidas por IA y cuáles por personas."
+      "definition": "Aviso incluido en tu proyecto donde indicas qué partes fueron creadas o asistidas por IA y cuáles decidiste o creaste tú."
     },
     {
       "term_id": "G12",
       "term": "Portafolio emergente",
-      "category": "Narrativa",
-      "session": "S2",
+      "category": "Evaluación",
+      "sessions": ["S2", "S9"],
       "tags": ["portafolio", "evidencia"],
-      "definition": "Portafolio que se construye automáticamente a partir de las evidencias que registras en cada sesión."
+      "definition": "Portafolio que se construye automáticamente a partir de las evidencias que registras en cada misión, sin necesidad de redactarlo al final."
+    },
+    {
+      "term_id": "G13",
+      "term": "Manifiesto ético",
+      "category": "Ética",
+      "sessions": ["S1"],
+      "tags": ["etica", "fundamentos"],
+      "definition": "Documento breve donde declaras los principios que guiarán tu uso de la IA durante el proyecto. Es tu compromiso personal con la creación responsable."
+    },
+    {
+      "term_id": "G14",
+      "term": "Sesgo algorítmico",
+      "category": "IA",
+      "sessions": ["S1", "S3"],
+      "tags": ["ia", "etica"],
+      "definition": "Tendencia de un sistema de IA a producir resultados injustos o inexactos porque los datos con que fue entrenado reflejan desigualdades sociales."
+    },
+    {
+      "term_id": "G15",
+      "term": "Transparencia en IA",
+      "category": "Ética",
+      "sessions": ["S1", "S8"],
+      "tags": ["etica", "ia"],
+      "definition": "Práctica de ser abierto y honesto sobre cómo y cuándo se usó la IA en un proyecto, para que otros puedan entender el proceso de creación."
+    },
+    {
+      "term_id": "G16",
+      "term": "Idea central",
+      "category": "Narrativa",
+      "sessions": ["S2", "S4"],
+      "tags": ["narrativa", "idea"],
+      "definition": "El mensaje principal que una historia quiere dejar en su audiencia. Es el 'para qué' de la historia, más allá del 'qué pasa'."
+    },
+    {
+      "term_id": "G17",
+      "term": "Audiencia objetivo",
+      "category": "Narrativa",
+      "sessions": ["S2", "S5"],
+      "tags": ["narrativa", "diseño"],
+      "definition": "Grupo específico de personas para quienes se diseña la historia. Conocer la audiencia guía las decisiones de lenguaje, estilo y contenido."
+    },
+    {
+      "term_id": "G18",
+      "term": "Propósito educativo",
+      "category": "Evaluación",
+      "sessions": ["S2"],
+      "tags": ["pedagogia", "portafolio"],
+      "definition": "La intención de aprendizaje detrás de la historia: qué quieres que el espectador comprenda, sienta o haga después de verla."
+    },
+    {
+      "term_id": "G19",
+      "term": "Avatar narrativo",
+      "category": "Narrativa",
+      "sessions": ["S3"],
+      "tags": ["narrativa", "personaje"],
+      "definition": "Personaje que protagoniza una historia digital o multimedia. El avatar es la voz y el cuerpo del mensaje que quieres comunicar."
+    },
+    {
+      "term_id": "G20",
+      "term": "Diseño de personaje",
+      "category": "Narrativa",
+      "sessions": ["S3", "S5"],
+      "tags": ["narrativa", "diseño"],
+      "definition": "Proceso de definir las características físicas, emocionales y motivacionales de un personaje para hacerlo creíble y memorable."
+    },
+    {
+      "term_id": "G21",
+      "term": "Identidad digital",
+      "category": "Ética",
+      "sessions": ["S3", "S9"],
+      "tags": ["etica", "privacidad"],
+      "definition": "La representación de una persona o personaje en entornos digitales. En AI StoryLab, se refiere a cómo representas a los personajes de forma respetuosa."
+    },
+    {
+      "term_id": "G22",
+      "term": "Generador de imágenes IA",
+      "category": "IA",
+      "sessions": ["S3", "S5"],
+      "tags": ["ia", "herramientas"],
+      "definition": "Herramienta que crea imágenes a partir de descripciones de texto (prompts). Requiere declarar su uso y atribuir correctamente las imágenes generadas."
+    },
+    {
+      "term_id": "G23",
+      "term": "Estructura narrativa",
+      "category": "Narrativa",
+      "sessions": ["S4"],
+      "tags": ["narrativa", "estructura"],
+      "definition": "El esqueleto de una historia: cómo se organizan los eventos para crear tensión, desarrollo y resolución. La más común es inicio-nudo-desenlace."
+    },
+    {
+      "term_id": "G24",
+      "term": "Conflicto dramático",
+      "category": "Narrativa",
+      "sessions": ["S4"],
+      "tags": ["narrativa", "estructura"],
+      "definition": "El problema central que enfrenta el personaje y que impulsa la historia hacia adelante. Sin conflicto, no hay historia que contar."
+    },
+    {
+      "term_id": "G25",
+      "term": "Escena",
+      "category": "Narrativa",
+      "sessions": ["S4", "S7"],
+      "tags": ["narrativa", "produccion"],
+      "definition": "Unidad mínima de acción en una historia. En una presentación multimedia, cada diapositiva o segmento suele corresponder a una escena."
+    },
+    {
+      "term_id": "G26",
+      "term": "Guion",
+      "category": "Narrativa",
+      "sessions": ["S4", "S6"],
+      "tags": ["narrativa", "produccion"],
+      "definition": "Texto que describe escena por escena lo que se verá y escuchará en la historia. Sirve de guía durante la producción multimedia."
+    },
+    {
+      "term_id": "G27",
+      "term": "Moodboard",
+      "category": "Diseño Visual",
+      "sessions": ["S5"],
+      "tags": ["visual", "diseño"],
+      "definition": "Tablero visual que reúne imágenes, colores, texturas y referencias para definir el estilo estético de un proyecto antes de producirlo."
+    },
+    {
+      "term_id": "G28",
+      "term": "Estilo visual",
+      "category": "Diseño Visual",
+      "sessions": ["S5", "S7"],
+      "tags": ["visual", "diseño"],
+      "definition": "Conjunto de decisiones estéticas (colores, formas, tipografía, ilustración) que dan coherencia visual a una historia o proyecto."
+    },
+    {
+      "term_id": "G29",
+      "term": "Paleta de color",
+      "category": "Diseño Visual",
+      "sessions": ["S5"],
+      "tags": ["visual", "diseño"],
+      "definition": "Conjunto limitado de colores seleccionados para un proyecto. Cada color comunica una emoción y contribuye a la identidad visual de la historia."
+    },
+    {
+      "term_id": "G30",
+      "term": "Recursos libres (CC)",
+      "category": "Derechos",
+      "sessions": ["S5", "S8"],
+      "tags": ["derechos", "creditos"],
+      "definition": "Imágenes, músicas o textos con licencia Creative Commons que pueden usarse libremente con atribución correcta. Son la opción más segura para proyectos escolares."
+    },
+    {
+      "term_id": "G31",
+      "term": "Narración dramática",
+      "category": "Sonido",
+      "sessions": ["S6"],
+      "tags": ["audio", "voz"],
+      "definition": "Lectura expresiva de un texto con variaciones de ritmo, volumen y emoción para mantener la atención del espectador y transmitir el mensaje."
+    },
+    {
+      "term_id": "G32",
+      "term": "Voz sintética (TTS)",
+      "category": "IA",
+      "sessions": ["S6"],
+      "tags": ["ia", "audio"],
+      "definition": "Voz generada por inteligencia artificial a partir de texto (Text-to-Speech). Debe declararse su uso en el proyecto para mantener la transparencia."
+    },
+    {
+      "term_id": "G33",
+      "term": "Emoción narrativa",
+      "category": "Sonido",
+      "sessions": ["S6", "S4"],
+      "tags": ["audio", "narrativa"],
+      "definition": "El sentimiento que la historia busca provocar en el espectador: suspenso, alegría, reflexión, tristeza. La voz y la música son sus principales vehículos."
+    },
+    {
+      "term_id": "G34",
+      "term": "Edición de audio",
+      "category": "Sonido",
+      "sessions": ["S6", "S8"],
+      "tags": ["audio", "produccion"],
+      "definition": "Proceso de cortar, mejorar y combinar pistas de audio para lograr una narración clara y de calidad adecuada para la entrega."
+    },
+    {
+      "term_id": "G35",
+      "term": "Prototipo",
+      "category": "Evaluación",
+      "sessions": ["S7"],
+      "tags": ["produccion", "iteracion"],
+      "definition": "Primera versión funcional de un proyecto, incompleta pero suficiente para probar, mostrar y recibir retroalimentación antes de la versión final."
+    },
+    {
+      "term_id": "G36",
+      "term": "Retroalimentación entre pares",
+      "category": "Evaluación",
+      "sessions": ["S7"],
+      "tags": ["evaluacion", "colaboracion"],
+      "definition": "Proceso en que compañeros revisan y ofrecen comentarios constructivos sobre el trabajo de otros para mejorar la calidad antes de la entrega."
+    },
+    {
+      "term_id": "G37",
+      "term": "Iteración creativa",
+      "category": "Evaluación",
+      "sessions": ["S7", "S8"],
+      "tags": ["produccion", "mejora"],
+      "definition": "Ciclo de crear → probar → recibir retroalimentación → mejorar. Los mejores proyectos pasan por varias iteraciones antes de ser finales."
+    },
+    {
+      "term_id": "G38",
+      "term": "Integración multimedia",
+      "category": "Multimedia",
+      "sessions": ["S7"],
+      "tags": ["produccion", "multimedia"],
+      "definition": "Proceso de combinar texto, imágenes, voz y efectos en una sola presentación o video coherente que comunica la historia completa."
+    },
+    {
+      "term_id": "G39",
+      "term": "Curaduría",
+      "category": "Evaluación",
+      "sessions": ["S8"],
+      "tags": ["calidad", "revision"],
+      "definition": "Proceso de seleccionar, organizar y pulir el contenido de un proyecto para asegurarse de que todo lo que se incluye tiene un propósito claro."
+    },
+    {
+      "term_id": "G40",
+      "term": "Control de calidad",
+      "category": "Evaluación",
+      "sessions": ["S8"],
+      "tags": ["calidad", "revision"],
+      "definition": "Revisión sistemática de un proyecto para verificar que cumple con los estándares de contenido, ética, técnica y presentación antes de entregar."
+    },
+    {
+      "term_id": "G41",
+      "term": "Privacidad de datos",
+      "category": "Ética",
+      "sessions": ["S8", "S1"],
+      "tags": ["etica", "privacidad"],
+      "definition": "Derecho de las personas a controlar qué información personal se comparte y cómo. En un proyecto escolar, implica no incluir fotos o datos de personas sin permiso."
+    },
+    {
+      "term_id": "G42",
+      "term": "Pitch",
+      "category": "Narrativa",
+      "sessions": ["S9"],
+      "tags": ["presentacion", "comunicacion"],
+      "definition": "Presentación breve (generalmente 1-2 minutos) que explica un proyecto de forma atractiva y convincente, destacando su valor y mensaje principal."
+    },
+    {
+      "term_id": "G43",
+      "term": "Metadatos de entrega",
+      "category": "Multimedia",
+      "sessions": ["S9"],
+      "tags": ["entrega", "documentacion"],
+      "definition": "Información que acompaña al archivo final: título, autor, herramientas usadas, licencia y declaración de IA. Son el registro oficial de tu autoría."
     }
   ]
 }

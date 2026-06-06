@@ -109,17 +109,67 @@ Este documento registra la **historia técnica y pedagógica** de AI StoryLab: q
 
 ---
 
+### v0.3.0 — Producción Activa y Andamiaje IA
+**Fecha:** 2026-06-05
+**Tipo:** Feature release — pedagogía + UX
+
+**Problema que resolvió:**
+Las actividades lúdicas eran texto estático no conectado al portafolio. Los prompts de IA eran campos vacíos sin guía. El glosario era una pantalla separada sin contexto de uso. El tablero de herramientas era una lista plana sin estrategias pedagógicas.
+
+**Qué se agregó:**
+
+*F1 — Actividades lúdicas interactivas:*
+- `LudicActivityWidget.jsx` — 9 tipos de widget (dilema ético, contador de palabras, ficha de avatar, tres actos, moodboard, lectura dramatizada, retroalimentación de pares, checklist, reflexión)
+- `sessions.json` — `ludic_config` con tipo y campos específicos por actividad
+- `defaultProgress.js` — `ludic_output: {}` por sesión; schema_version → 0.3.0
+- `portfolio.js` — sección "Producción de la actividad lúdica" en el portafolio copiable
+
+*F2 — Prompt sugerido por misión:*
+- `SuggestedPromptBox.jsx` — plantilla con variables, botón copiar que pre-llena `prompt_used`
+- `sessions.json` — `suggested_prompt` en las 9 sesiones
+
+*F3 — Glosario en contexto:*
+- `glossary.json` — expandido de 12 a 43 términos en 8 categorías
+- `sessions.json` — `glossary_terms: []` (5-6 por sesión)
+- `MissionView.jsx` — chips interactivos con definición expandible en la misión
+
+*F4 — Tablero de herramientas expandible:*
+- `ToolCategoryView.jsx` — página de categoría con estrategias, prompts copiables, herramientas
+- `tools.json` — `categories[]` con estrategias, prompts recomendados y `teacher_note` editable
+- `ToolBoard.jsx` — grid de categorías como punto de entrada principal
+
+*F5 — Imágenes personalizables:*
+- Avatar del estudiante → FileReader base64 en `profile.avatar_base64`
+- Hero e insignias → `public/images/` y `public/badges/` (gestión vía GitHub web UI)
+- `BadgeWall.jsx` — fallback `onError` si no existe imagen de badge
+
+*Infraestructura de deployment:*
+- `vite.config.js` — `base: "/ai-storylab-1/"` para GitHub Pages
+- `package.json` — script `deploy` con `gh-pages`
+- Rama `gh-pages` publicada; sitio visible en ricardojuanmorales.github.io/ai-storylab-1/
+
+**Componentes totales:** 17 (3 nuevos: LudicActivityWidget, SuggestedPromptBox, ToolCategoryView)
+**Términos del glosario:** 43 en 8 categorías (antes: 12 en 5 categorías)
+**Datos en sessions.json:** +3 campos por sesión (ludic_config, suggested_prompt, glossary_terms)
+**Decisiones documentadas:** DEC-0006, DEC-0007, DEC-0008, DEC-0009
+
+---
+
 ## 🔭 Hoja de Ruta (Versiones Futuras)
 
-Las siguientes funcionalidades están fuera del alcance del MVP y planificadas para iteraciones posteriores:
+Las siguientes funcionalidades están fuera del alcance del MVP actual y planificadas para iteraciones posteriores:
 
-### v0.3.0 — Mejoras de UX (planificado)
+### v0.4.0 — Personalización avanzada (planificado)
 - [ ] Animaciones de transición entre misiones
 - [ ] Indicador visual de portafolio en construcción
 - [ ] Vista previa del portafolio emergente en tiempo real
 - [ ] Modo oscuro
 
-### v0.4.0 — Herramientas del Facilitador (planificado)
+- [ ] Pre-llenado de variables del prompt sugerido con datos del perfil (tema, audiencia, avatar)
+- [ ] Hero de la página de inicio editable desde la app sin push a GitHub
+- [ ] Estadísticas de actividades lúdicas en el Dashboard Grupal del facilitador
+
+### v0.5.0 — Herramientas del Facilitador (planificado)
 - [ ] Exportación del reporte grupal en CSV
 - [ ] Gráficas de progreso agregadas en el dashboard grupal
 - [ ] Plantillas de bitácora de sesión descargables

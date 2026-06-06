@@ -28,6 +28,19 @@ export function buildCopyReadyText(session) {
   if (session.prompt_used) lines.push(`Prompt usado: ${session.prompt_used}`);
   lines.push(`Decisión humana: ${session.human_decision || "—"}`);
   lines.push(`Reflexión ética: ${session.ethical_reflection || "—"}`);
+
+  const ludic = session.ludic_output;
+  if (ludic && Object.keys(ludic).length > 0) {
+    lines.push("");
+    lines.push("### Producción de la actividad lúdica");
+    Object.entries(ludic).forEach(([key, val]) => {
+      if (val !== "" && val !== false && val !== null && val !== undefined) {
+        const label = key.replace(/_/g, " ");
+        lines.push(`- ${label}: ${val === true ? "Sí" : val}`);
+      }
+    });
+  }
+
   return lines.join("\n");
 }
 
@@ -58,6 +71,7 @@ export function buildPortfolioEmergent(sessions) {
       prompt_used: session.prompt_used || "",
       human_decision: session.human_decision || "",
       ethical_reflection: session.ethical_reflection || "",
+      ludic_output: session.ludic_output || {},
       copy_ready_text: completed ? buildCopyReadyText(session) : "",
       updated_at: session.updated_at || "",
     };

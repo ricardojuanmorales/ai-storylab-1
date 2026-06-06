@@ -3,7 +3,7 @@
 > *"Cada misión que completas no solo avanza tu historia: construye quién eres como creador/a responsable."*
 > — Profesor Aión
 
-**Versión:** 0.2.0 · **Fecha:** 2026-06-05 · **Audiencia:** Estudiantes del taller
+**Versión:** 0.3.0 · **Fecha:** 2026-06-05 · **Audiencia:** Estudiantes del taller
 
 ---
 
@@ -36,6 +36,7 @@ Configura tu perfil antes de empezar. Estos datos identifican tu trabajo:
 
 | Campo | Descripción |
 |---|---|
+| **Foto de perfil** | Opcional — sube una imagen desde tu dispositivo (se guarda solo aquí) |
 | **Código de estudiante** | Identificador único (sin nombre real) |
 | **Seudónimo** | El nombre con que te identificarás en el taller |
 | **Grado** | Tu año escolar |
@@ -45,7 +46,7 @@ Configura tu perfil antes de empezar. Estos datos identifican tu trabajo:
 | **Proyecto** | Título provisional de tu historia |
 | **Docente / Facilitador / Sponsor** | Personas que acompañan el taller |
 
-> 🔒 **Privacidad:** No uses tu nombre completo si prefieres proteger tu identidad. El código de estudiante es suficiente para que el facilitador identifique tu trabajo.
+> 🔒 **Privacidad:** No uses tu nombre completo si prefieres proteger tu identidad. El código de estudiante es suficiente para que el facilitador identifique tu trabajo. La foto de perfil se guarda solo en tu navegador.
 
 ---
 
@@ -77,25 +78,44 @@ Haz clic en cualquier misión disponible para abrirla.
 
 ## 📝 Cómo Completar una Misión
 
-Cada misión tiene las mismas secciones. Aquí te explico cada una:
+Cada misión tiene cuatro secciones. Aquí te explico cada una:
 
-### 1. 📌 Información de la Misión
-- **Pregunta guía** — la pregunta que da sentido a la sesión
-- **Objetivos** — qué vas a lograr hoy
-- **Actividad lúdica** — un mini-reto para calentar motores 🎲
-- **Herramienta sugerida** — la herramienta recomendada para esta sesión
+### 1. 🎮 Actividad Lúdica Interactiva
+Esta sección **produce directamente tu portafolio**. No es solo un calentamiento — es el trabajo de la sesión. Según la misión, puede ser:
 
-### 2. ✍️ Tu Evidencia
-Escribe aquí un resumen de lo que creaste en esta sesión. Puede ser:
-- Un párrafo describiendo tu trabajo
-- La copia de tu manifiesto, guion o ficha de personaje
-- Una descripción de tus imágenes o audio
+| Misión | Tipo de actividad |
+|---|---|
+| S1 | Dilema relámpago: clasifica 3 usos de IA (Ético / Dudoso / No ético) y escribe tu manifiesto |
+| S2 | Logline: escribe tu historia en máximo 25 palabras + completa tu ficha de idea |
+| S3 | Ficha de avatar: nombre, deseo, miedo y superpoder narrativo |
+| S4 | Tres actos: escribe el inicio, nudo y final de tu historia |
+| S5 | Moodboard: describe 3 elementos visuales que definan tu historia |
+| S6 | Lectura dramatizada: fragmento grabado, emoción y decisión de voz |
+| S7 | Pase de prueba: qué te sugirieron y qué decidiste implementar |
+| S8 | Lista de chequeo: 5 criterios de calidad y ética antes de exportar |
+| S9 | Alfombra roja: pitch de 1 minuto, sentimiento al presentar y aprendizaje |
+
+Al hacer clic en **Guardar actividad**, el resultado pasa a tu portafolio automáticamente.
+
+### 2. 📖 Conceptos Clave del Glosario
+Debajo de la actividad encontrarás chips interactivos con los **términos del glosario** más relevantes para esta misión. Haz clic en cualquier chip para ver su definición.
+
+### 3. 🤖 Prompt Sugerido *(sesiones con herramienta IA)*
+Verás una caja amarilla con un **prompt sugerido** que puedes personalizar:
+
+1. Haz clic en **"Copiar y usar"** — el prompt se copia al portapapeles y aparece en el campo de abajo
+2. Reemplaza las partes entre `[corchetes]` con los datos reales de tu proyecto
+3. Pégalo en un asistente IA externo (el que autorice tu facilitador)
+4. Ajusta el resultado final antes de guardarlo como tu prompt usado
+
+### 4. ✍️ Tu Evidencia
+Escribe aquí un resumen de lo que creaste en esta sesión. Si ya guardaste la actividad lúdica, este campo puede pre-llenarse con un resumen automático.
 
 > ⚠️ **Sin evidencia no se puede completar la misión.**
 
-### 3. 🛠️ Herramienta y Prompt Usados *(sesiones S3–S6)*
+### 5. 🛠️ Herramienta y Prompt Usados *(sesiones S3–S6)*
 - **Herramienta:** ¿Qué app o servicio usaste? (ej. ChatGPT, Canva, ElevenLabs)
-- **Prompt:** ¿Qué le escribiste exactamente a la IA? Cópialo aquí.
+- **Prompt:** El prompt sugerido ya debería estar aquí — edítalo con lo que realmente usaste.
 
 > 💡 Registrar tu prompt es parte del aprendizaje. Te ayuda a ver cómo mejoras con el tiempo.
 

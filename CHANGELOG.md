@@ -4,6 +4,52 @@ Todas las modificaciones importantes del MVP se registran aquí siguiendo [Keep 
 
 ---
 
+## [0.3.0] — 2026-06-05
+
+### Added
+
+**F1 — Actividades lúdicas interactivas → Portafolio**
+- `LudicActivityWidget.jsx` — componente nuevo con 9 tipos de widget (ethics_dilemma, word_counter, card_form, three_acts, moodboard, reflection_check, peer_feedback, checklist, reflection)
+- `sessions.json` — campo `ludic_config` añadido a las 9 sesiones con tipo, instrucciones y campos específicos por actividad
+- `defaultProgress.js` — campo `ludic_output: {}` añadido a cada sesión del template
+- `portfolio.js` — sección "Producción de la actividad lúdica" incluida en `copy_ready_text` cuando hay datos
+- `App.jsx` — handler `handleSaveLudicOutput` que actualiza `sessions[n].ludic_output` y auto-llena `evidence_summary`
+- `MissionView.jsx` — la actividad lúdica estática reemplazada por `<LudicActivityWidget />`
+
+**F2 — Prompt sugerido por misión (andamiaje IA)**
+- `SuggestedPromptBox.jsx` — componente nuevo con plantilla de prompt y botón "Copiar y usar" que pre-llena `prompt_used`
+- `sessions.json` — campo `suggested_prompt` con plantilla de 25 palabras o menos añadido a las 9 sesiones
+- `MissionView.jsx` — `<SuggestedPromptBox />` montado encima del campo `prompt_used`
+
+**F3 — Glosario expandido**
+- `glossary.json` — expandido de 12 a 43 términos en 8 categorías (IA, Ética, Narrativa, Multimedia, Derechos, Diseño Visual, Sonido, Evaluación)
+- `glossary.json` — campo `session` (string) migrado a `sessions` (array) para términos transversales
+- `sessions.json` — campo `glossary_terms: []` añadido a las 9 sesiones (5-6 términos por misión)
+- `MissionView.jsx` — sección "Conceptos clave" con chips interactivos; clic muestra definición expandida
+
+**F4 — Tablero de herramientas expandible**
+- `ToolCategoryView.jsx` — componente nuevo: página de detalle por categoría con estrategias, prompts copiables y lista de herramientas
+- `ToolBoard.jsx` — grid de categorías como punto de entrada; clic navega a `ToolCategoryView`
+- `tools.json` — array `categories[]` añadido con 6 objetos completos: estrategias, prompts recomendados, `teacher_note` editable
+
+**F5 — Imágenes personalizables**
+- `App.jsx` (ProfileScreen) — input `type="file"` con FileReader; avatar se guarda como base64 en `profile.avatar_base64`
+- `StudentDashboard.jsx` — avatar del perfil mostrado en el encabezado del panel
+- `BadgeWall.jsx` — soporte para `public/badges/{badge_id}.png` con fallback al icono actual
+- `public/images/` y `public/badges/` — carpetas creadas para imágenes estáticas del profesor
+
+### Changed
+- `schema_version` y `APP_VERSION` actualizados a `"0.3.0"`
+- `MissionView.jsx` — prop `onSaveLudicOutput` añadida; refactorizado para glosario y prompt box
+- `vite.config.js` — `base: "/ai-storylab-1/"` añadido para GitHub Pages
+- `package.json` — script `deploy` añadido (`vite build && gh-pages -d dist`)
+
+### Infrastructure
+- Dependencia `gh-pages` añadida como devDependency
+- Rama `gh-pages` publicada en GitHub Pages
+
+---
+
 ## [0.2.1] — 2026-06-05
 
 ### Added

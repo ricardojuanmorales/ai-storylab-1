@@ -1,8 +1,8 @@
 import sessionsData from "../data/sessions.json";
 import { createDefaultFinalSubmission } from "../utils/finalSubmission.js";
 
-export const SCHEMA_VERSION = "0.2.0";
-export const APP_VERSION = "0.2.0";
+export const SCHEMA_VERSION = "0.3.0";
+export const APP_VERSION = "0.3.0";
 
 /**
  * Build a fresh session entry (one per workshop session).
@@ -20,6 +20,7 @@ function createSessionEntry(session) {
     ethical_reflection: "",
     portfolio_completed: false,
     badge_awarded: false,
+    ludic_output: {},
     updated_at: "",
   };
 }

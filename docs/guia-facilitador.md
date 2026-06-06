@@ -1,6 +1,6 @@
 # 👩‍🏫 Guía del Facilitador — AI StoryLab
 
-**Versión:** 0.2.0 · **Fecha:** 2026-06-05 · **Audiencia:** Facilitadores, docentes y coordinadores del taller
+**Versión:** 0.3.0 · **Fecha:** 2026-06-05 · **Audiencia:** Facilitadores, docentes y coordinadores del taller
 
 ---
 
@@ -110,15 +110,18 @@ Los estudiantes **no suben videos a la aplicación**. La app solo registra metad
 
 Antes de cada sesión:
 
-- [ ] ¿Todos los dispositivos tienen acceso a la app? (`npm run dev` o build desplegado)
-- [ ] ¿Los estudiantes tienen sus archivos JSON del día anterior si es necesario?
-- [ ] ¿Preparaste la actividad lúdica de la sesión? (ver `src/data/sessions.json`)
+- [ ] ¿Todos los dispositivos tienen acceso a la app? (URL GitHub Pages o `npm run dev`)
+- [ ] ¿Los estudiantes tienen sus archivos JSON del día anterior si cambiaron de dispositivo?
+- [ ] ¿Revisaste el `suggested_prompt` de la sesión en `sessions.json` para anticipar preguntas?
+- [ ] ¿Tienes claro qué herramienta de IA externa está aprobada para esta sesión?
 
 Durante la sesión:
 
-- [ ] Circula por los equipos mientras trabajan en la misión
+- [ ] Verifica que los estudiantes completen la **actividad lúdica interactiva** (produce el portafolio)
+- [ ] Recuerda que el prompt sugerido es una plantilla — el estudiante debe personalizar los `[corchetes]`
 - [ ] Verifica que estén escribiendo la **decisión humana** (campo más importante)
 - [ ] Recuerda: la misión no se completa sin evidencia + decisión humana + reflexión ética
+- [ ] Anima a los estudiantes a hacer clic en los **chips del glosario** cuando encuentren términos nuevos
 
 Al cierre de la sesión:
 
@@ -126,6 +129,31 @@ Al cierre de la sesión:
 - [ ] Recoge los archivos
 - [ ] Importa al dashboard grupal y exporta `group_progress.json`
 - [ ] Guarda el respaldo en el repositorio de documentación del taller
+
+## 🛠️ Personalizar las Herramientas para tu Institución
+
+Desde v0.3.0, el **Tablero de Herramientas** tiene una nota editable por categoría:
+
+1. Abre `src/data/tools.json` en un editor de texto
+2. Busca la categoría que quieres personalizar (Texto, Imagen, Audio, etc.)
+3. Edita el campo `teacher_note` con las herramientas específicas de tu institución
+4. Corre `npm run deploy` para publicar los cambios en GitHub Pages
+
+Ejemplo de `teacher_note` editado:
+```json
+"teacher_note": "Herramientas aprobadas en nuestra institución: Microsoft Word (instalado en todos los equipos), Google Docs (cuenta institucional)."
+```
+
+## 🖼️ Subir Imágenes al Repositorio
+
+Para personalizar la imagen hero de la página o las imágenes de insignias:
+
+1. Ve a `github.com/ricardojuanmorales/ai-storylab-1`
+2. Navega a `public/images/` (para el hero) o `public/badges/` (para insignias)
+3. Haz clic en **Add file → Upload files**
+4. Arrastra tu imagen (`hero.jpg` o `B1.png`, `B2.png`, etc.)
+5. Haz commit con un mensaje descriptivo
+6. Corre `npm run deploy` desde tu equipo para actualizar el sitio
 
 ---
 

@@ -1,24 +1,30 @@
 import React, { useState } from "react";
 import toolsData from "../data/tools.json";
 import sessionsData from "../data/sessions.json";
+import ToolCategoryView from "./ToolCategoryView.jsx";
 
 const phaseById = Object.fromEntries(sessionsData.phases.map((p) => [p.id, p]));
 
-/**
- * Tool board: filter by session, phase, type, privacy and difficulty.
- */
 export default function ToolBoard() {
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const [session, setSession] = useState("");
   const [phase, setPhase] = useState("");
-  const [type, setType] = useState("");
   const [privacy, setPrivacy] = useState("");
   const [difficulty, setDifficulty] = useState("");
+
+  if (selectedCategory) {
+    return (
+      <ToolCategoryView
+        categoryId={selectedCategory}
+        onBack={() => setSelectedCategory(null)}
+      />
+    );
+  }
 
   const filtered = toolsData.tools.filter((t) => {
     return (
       (!session || t.sessions.includes(session)) &&
       (!phase || t.phase === phase) &&
-      (!type || t.type === type) &&
       (!privacy || t.privacy === privacy) &&
       (!difficulty || t.difficulty === difficulty)
     );
@@ -28,7 +34,35 @@ export default function ToolBoard() {
     <section className="screen">
       <div className="screen__head">
         <h2>Tablero de Herramientas</h2>
-        <p className="muted">Filtra las herramientas sugeridas para cada etapa del proyecto.</p>
+        <p className="muted">Explora estrategias y herramientas por categoría, o filtra por sesión y fase.</p>
+      </div>
+
+      {/* ── Categorías expandibles ── */}
+      <div className="card">
+        <h3>Explorar por categoría</h3>
+        <div className="category-grid">
+          {toolsData.categories.map((cat) => (
+            <button
+              key={cat.id}
+              type="button"
+              className="category-card"
+              style={{ borderColor: cat.color }}
+              onClick={() => setSelectedCategory(cat.id)}
+            >
+              <span className="category-card__icon">{cat.icon}</span>
+              <div>
+                <strong>{cat.label}</strong>
+                <p className="muted small">{cat.description}</p>
+              </div>
+              <span className="category-card__arrow" style={{ color: cat.color }}>→</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* ── Lista filtrable ── */}
+      <div className="screen__head">
+        <h3>Filtrar herramientas</h3>
       </div>
 
       <div className="filters">
@@ -44,12 +78,6 @@ export default function ToolBoard() {
           <option value="">Todas las fases</option>
           {sessionsData.phases.map((p) => (
             <option key={p.id} value={p.id}>{p.label}</option>
-          ))}
-        </select>
-        <select value={type} onChange={(e) => setType(e.target.value)}>
-          <option value="">Todos los tipos</option>
-          {toolsData.tool_types.map((x) => (
-            <option key={x} value={x}>{x}</option>
           ))}
         </select>
         <select value={privacy} onChange={(e) => setPrivacy(e.target.value)}>
@@ -73,7 +101,13 @@ export default function ToolBoard() {
           <article key={t.tool_id} className="tool-card">
             <header>
               <h3>{t.name}</h3>
-              <span className="tag tag--cat">{t.type}</span>
+              <button
+                type="button"
+                className="tag tag--cat tag--link"
+                onClick={() => setSelectedCategory(t.type)}
+              >
+                {t.type}
+              </button>
             </header>
             <p>{t.description}</p>
             <p className="muted small">Ejemplo: {t.example}</p>

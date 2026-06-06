@@ -1,6 +1,6 @@
 # Primer — Contexto General de AI StoryLab
 
-**Versión del proyecto:** 0.2.1 · **Fecha de actualización:** 2026-06-05
+**Versión del proyecto:** 0.3.0 · **Fecha de actualización:** 2026-06-05
 
 ---
 
@@ -12,39 +12,45 @@ Los estudiantes crean una **historia multimedia asistida por IA** usando PowerPo
 
 ---
 
-## Estado actual del MVP (v0.2.0)
+## Estado actual (v0.3.0)
 
-La aplicación está **completamente funcional** con las siguientes características:
+La aplicación está **completamente funcional y desplegada en GitHub Pages** (`ricardojuanmorales.github.io/ai-storylab-1/`).
 
-**Pantallas / componentes:**
-- Pantalla de Inicio con Profesor Aión (avatar mentor)
-- Configuración de perfil (código, seudónimo, grado, equipo, proyecto...)
-- Dashboard del estudiante (progreso, fase, próxima misión, insignias)
-- Mapa de 9 misiones con estado
-- Vista de misión (evidencia, herramienta, prompt, decisión humana, reflexión ética)
-- Portafolio emergente (texto copiable por sección)
-- Muro de insignias (9 badges con competencias)
-- Glosario con búsqueda y filtros
-- Tablero de herramientas con búsqueda y filtros
-- Exportar / importar progreso individual (JSON con validación)
-- Dashboard grupal del facilitador (importa múltiples JSON, fusiona, exporta group_progress.json)
-- Estación de Entrega Final (metadatos del video; sin almacenar el archivo)
+**Componentes (17 total):**
+- Pantalla de Inicio con Profesor Aión
+- Perfil con avatar upload (base64 localStorage)
+- Dashboard del estudiante (avatar, progreso, fase, próxima misión)
+- Mapa de 9 misiones
+- Vista de misión con:
+  - `LudicActivityWidget` — 9 tipos de actividad interactiva que produce el portafolio
+  - `SuggestedPromptBox` — prompt sugerido por misión con copiar y pre-llenar
+  - Chips de glosario (5-6 términos por misión con definición expandible)
+  - Evidencia, herramienta, prompt_used, decisión humana, reflexión ética
+- Portafolio emergente (incluye ludic_output desde v0.3.0)
+- Muro de insignias (soporta imágenes en `public/badges/`)
+- Tablero de herramientas con `ToolCategoryView` por categoría
+- Glosario global (43 términos, 8 categorías)
+- Exportar / importar progreso (JSON)
+- Dashboard grupal del facilitador
+- Estación de Entrega Final
 
 **Tecnologías:**
-- React 18 + Vite 5 (sin backend)
-- localStorage para persistencia
-- Sin autenticación, sin Supabase, sin APIs externas
+- React 18 + Vite 5, `base: "/ai-storylab-1/"` para GitHub Pages
+- `gh-pages` para deploy automático (`npm run deploy`)
+- localStorage para persistencia; sin backend, sin Supabase, sin APIs externas
 
-**Datos:**
-- `src/data/sessions.json` — 9 sesiones con 4 fases
+**Datos (schema_version: "0.3.0"):**
+- `src/data/sessions.json` — 9 sesiones con `ludic_config`, `suggested_prompt`, `glossary_terms`
+- `src/data/glossary.json` — 43 términos en 8 categorías con `sessions: []`
+- `src/data/tools.json` — 6 categorías con `strategies`, `recommended_prompts`, `teacher_note`
 - `src/data/badges.json` — 9 insignias con competencias
-- `src/data/glossary.json` — términos del taller
-- `src/data/tools.json` — herramientas recomendadas
-- `src/data/competencies.json` — competencias clave
+- `src/data/competencies.json` — 7 competencias
 
 **Modelo de datos:**
-- Progreso individual: `export_type: "student_progress"`, `schema_version: "0.2.0"`
-- Progreso grupal: `export_type: "group_progress"`, `schema_version: "0.2.0"`
+- Progreso individual: `export_type: "student_progress"`, `schema_version: "0.3.0"`
+- Nuevo campo: `sessions[n].ludic_output: {}` — output de la actividad lúdica
+- Nuevo campo: `profile.avatar_base64` — foto de perfil en base64
+- Progreso grupal: `export_type: "group_progress"`, `schema_version: "0.3.0"`
 - Fusión grupal por `student_code + last_updated`
 
 ---
@@ -52,29 +58,34 @@ La aplicación está **completamente funcional** con las siguientes característ
 ## Principios que NUNCA se rompen
 
 - **Local-first** — funciona sin conexión; toda la lógica vive en el navegador
-- **Portafolio emergente** — se acumula de las misiones; no es una tarea separada
+- **Portafolio emergente** — la actividad lúdica produce el portafolio; no es una tarea separada
 - **Decisión humana obligatoria** — campo requerido para completar cualquier misión
-- **Sin backend en el MVP** — no hay servidor, no hay Supabase, no hay APIs externas
+- **Sin backend** — no hay servidor, no hay Supabase, no hay APIs externas
 - **Privacidad por defecto** — no se recopila ni transmite ningún dato
 - **Lógica desacoplada** — `src/utils/` son funciones puras (preparadas para migrar a API)
+- **Andamiaje en contexto** — el prompt sugerido aparece en la misión, no en un doc externo
 
 ---
 
-## Repositorio
+## Repositorio y Deploy
 
 - GitHub: `https://github.com/ricardojuanmorales/ai-storylab-1` (público)
-- Rama principal: `main`
-- Gobernanza en: `governance/`
-- Decisiones en: `governance/DECISION_LOG.md`
-- Bitácoras en: `logs/`
+- GitHub Pages: `https://ricardojuanmorales.github.io/ai-storylab-1/`
+- Rama principal: `main`; rama de deploy: `gh-pages`
+- Gobernanza: `governance/` | Decisiones: `governance/DECISION_LOG.md`
+- Bitácoras: `logs/` | Guías: `docs/`
+
+**Para publicar cambios:** `npm run deploy`
+**Para personalizar herramientas:** editar `teacher_note` en `src/data/tools.json` → `npm run deploy`
+**Para imágenes:** subir a `public/badges/` o `public/images/` vía GitHub web UI → `npm run deploy`
 
 ---
 
-## Lo que NO existe todavía (fuera del alcance del MVP)
+## Lo que NO existe todavía
 
 - Login / autenticación
 - Base de datos remota
-- Subida de archivos o videos
+- Subida de archivos o videos desde la app
 - APIs de IA en tiempo real
-- Galería pública
-- Generación automática de Word/PDF
+- Galería pública dinámica
+- Pre-llenado automático de variables del prompt sugerido con datos del perfil

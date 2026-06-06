@@ -63,6 +63,16 @@ export default function App() {
     setProgress(result.progress);
     return { ok: result.ok, badge: result.badge };
   }
+  function handleSaveLudicOutput(sessionId, ludicData, summary) {
+    const current = progressRef.current;
+    const sessions = current.sessions.map((s) => {
+      if (s.session_id !== sessionId) return s;
+      const updated = { ...s, ludic_output: ludicData, updated_at: new Date().toISOString() };
+      if (summary && !s.evidence_summary) updated.evidence_summary = summary;
+      return updated;
+    });
+    setProgress({ ...current, sessions });
+  }
 
   function handleExport() {
     if (progress) downloadProgressJSON(progress);
@@ -131,6 +141,7 @@ export default function App() {
             session={activeSession}
             onSave={handleSaveSession}
             onComplete={handleCompleteSession}
+            onSaveLudicOutput={handleSaveLudicOutput}
             navigate={navigate}
           />
         )}
@@ -243,6 +254,14 @@ function ProfileScreen({ progress, setProgress, navigate }) {
     setProfile((p) => ({ ...p, [field]: value }));
   }
 
+  function handleAvatarChange(e) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => setP("avatar_base64", ev.target.result);
+    reader.readAsDataURL(file);
+  }
+
   function save() {
     if (!profile.student_code.trim() || !profile.display_name.trim()) {
       setError("El código de estudiante y el nombre/seudónimo son obligatorios.");
@@ -268,6 +287,19 @@ function ProfileScreen({ progress, setProgress, navigate }) {
       <MentorAvatarCard compact message="Usa un seudónimo si prefieres. Recuerda: no escribas información personal sensible." />
 
       <div className="card">
+        <div className="avatar-upload-section">
+          {profile.avatar_base64 ? (
+            <img src={profile.avatar_base64} alt="Avatar" className="avatar-preview" />
+          ) : (
+            <div className="avatar-placeholder">?</div>
+          )}
+          <label className="btn btn--ghost btn--sm avatar-upload-btn">
+            {profile.avatar_base64 ? "Cambiar foto" : "Añadir foto de perfil"}
+            <input type="file" accept="image/*" onChange={handleAvatarChange} style={{ display: "none" }} />
+          </label>
+          <p className="muted small">La foto se guarda solo en este navegador. Usa un seudónimo o avatar ilustrado.</p>
+        </div>
+
         <div className="grid-2">
           <label className="field">
             <span>Código de estudiante *</span>

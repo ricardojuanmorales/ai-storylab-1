@@ -42,14 +42,23 @@ export default function StudentDashboard({ progress, navigate, onExport, onImpor
 
   return (
     <section className="screen">
-      <div className="screen__head">
-        <h2>Panel de {progress.profile.display_name || "estudiante"}</h2>
-        <p className="muted">
-          {progress.profile.modality !== "individual" && progress.profile.team_name
-            ? `Equipo: ${progress.profile.team_name} · `
-            : ""}
-          Proyecto: {progress.project.title || "sin título"}
-        </p>
+      <div className="screen__head dashboard-head">
+        {progress.profile.avatar_base64 ? (
+          <img src={progress.profile.avatar_base64} alt="Avatar" className="dashboard-avatar" />
+        ) : (
+          <div className="dashboard-avatar dashboard-avatar--placeholder">
+            {(progress.profile.display_name || "?")[0].toUpperCase()}
+          </div>
+        )}
+        <div>
+          <h2>Panel de {progress.profile.display_name || "estudiante"}</h2>
+          <p className="muted">
+            {progress.profile.modality !== "individual" && progress.profile.team_name
+              ? `Equipo: ${progress.profile.team_name} · `
+              : ""}
+            Proyecto: {progress.project.title || "sin título"}
+          </p>
+        </div>
       </div>
 
       <MentorAvatarCard compact message={mentorMsg} />

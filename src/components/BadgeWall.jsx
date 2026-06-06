@@ -33,7 +33,13 @@ export default function BadgeWall({ progress }) {
           return (
             <article key={badge.badge_id} className={`badge-tile ${isEarned ? "is-earned" : "is-locked"}`}>
               <div className="badge-tile__icon" style={{ background: isEarned ? badge.color : "#cbd5e1" }}>
-                {isEarned ? "★" : "🔒"}
+                <img
+                  src={`${import.meta.env.BASE_URL}badges/${badge.badge_id}.png`}
+                  alt={badge.name}
+                  onError={(e) => { e.target.style.display = "none"; e.target.nextSibling.style.display = "block"; }}
+                  style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: "inherit" }}
+                />
+                <span style={{ display: "none" }}>{isEarned ? "★" : "🔒"}</span>
               </div>
               <h3>{badge.name}</h3>
               <p className="muted small">{badge.description}</p>

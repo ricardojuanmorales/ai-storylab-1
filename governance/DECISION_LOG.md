@@ -57,6 +57,58 @@
 
 ---
 
+## DEC-0006 — Actividad lúdica como mecanismo de producción del portafolio
+
+**Fecha:** 2026-06-05
+**Responsable:** Curador pedagógico + Desarrollador
+**Contexto:** Las actividades lúdicas de las 9 misiones existían solo como texto descriptivo estático. Los estudiantes las hacían "offline" sin captura digital; el resultado nunca llegaba al portafolio.
+**Decisión:** Cada actividad lúdica se convierte en un widget interactivo cuyo output se guarda en `sessions[n].ludic_output` y fluye directamente al portafolio emergente. La actividad produce el `expected_product` de la misión.
+**Alternativas consideradas:** Mantener la actividad offline y solo capturar una reflexión posterior; usar una sección genérica de "notas de actividad".
+**Razón:** La actividad lúdica no es un calentamiento — es el mecanismo de producción. Si el portafolio debe ser emergente, debe emerger desde el trabajo más activo de la sesión, no desde un resumen posterior.
+**Impacto:** 9 tipos de widget creados (dilema ético, contador de palabras, ficha de avatar, tres actos, moodboard, lectura dramatizada, retroalimentación de pares, checklist, reflexión). La actividad es optativa para el badge pero obligatoria pedagógicamente.
+**Estado:** Activa.
+
+---
+
+## DEC-0007 — Prompt sugerido como andamiaje IA embebido por misión
+
+**Fecha:** 2026-06-05
+**Responsable:** Curador pedagógico
+**Contexto:** El campo `prompt_used` existía pero era un textarea vacío. Los estudiantes no sabían qué escribir; muchos lo dejaban en blanco o escribían prompts genéricos sin contexto pedagógico.
+**Decisión:** Cada misión tiene un `suggested_prompt` en `sessions.json` — plantilla con `[variables]` que el estudiante personaliza antes de usar. Un componente `SuggestedPromptBox` lo muestra con botón "Copiar y usar" que pre-llena el campo.
+**Alternativas consideradas:** Guía PDF externa de prompts, sección de ayuda separada, ejemplo fijo en el placeholder.
+**Razón:** El andamiaje más efectivo es el que aparece en el momento exacto en que se necesita, no en un documento separado. El prompt sugerido reduce la barrera de entrada al uso de IA y modela buenas prácticas de prompting contextualizado.
+**Impacto:** 9 prompts sugeridos por misión con variables contextuales (tema, audiencia, personaje, etc.).
+**Estado:** Activa.
+
+---
+
+## DEC-0008 — Tablero de herramientas expandido con páginas de categoría
+
+**Fecha:** 2026-06-05
+**Responsable:** Desarrollador + Facilitador técnico
+**Contexto:** El tablero de herramientas era una lista filtrable plana de 8 herramientas. No contenía estrategias de uso, prompts recomendados ni espacio para que el profesor añadiera herramientas específicas de su institución.
+**Decisión:** Las 6 categorías (Texto, Imagen, Audio, Presentación, Video, Organización) tienen páginas de detalle con: estrategias pedagógicas, prompts recomendados copiables y un campo `teacher_note` editable en `tools.json`.
+**Alternativas consideradas:** Documentación externa en PDF, Notion o Google Docs para estrategias de herramientas.
+**Razón:** La documentación pedagógica de herramientas debe vivir en el mismo sistema que usa el estudiante, no en un documento separado. El campo `teacher_note` permite personalización sin código: el profesor edita el JSON y hace `npm run deploy`.
+**Impacto:** `ToolCategoryView.jsx` creado, `tools.json` expandido con array `categories[]`. La personalización docente es edición de JSON, no programación.
+**Estado:** Activa.
+
+---
+
+## DEC-0009 — Avatar de perfil en localStorage; imágenes de insignias y hero en public/
+
+**Fecha:** 2026-06-05
+**Responsable:** Desarrollador
+**Contexto:** No había forma de personalizar las imágenes del estudiante (avatar) ni las del sitio (hero, badges). El proyecto local-first no tiene backend para subir imágenes.
+**Decisión:** Tres enfoques diferenciados: (1) Avatar del estudiante → FileReader base64 en localStorage (efímero, ~100KB); (2) Hero e insignias → archivos estáticos en `public/images/` y `public/badges/` gestionados por el profesor vía GitHub web UI; (3) Fallback al ícono actual si no existe la imagen personalizada.
+**Alternativas consideradas:** URLs externas de imagen, subida a GitHub via API con token, sin personalización.
+**Razón:** La solución más simple que funciona dentro del constraint local-first. El profesor no necesita saber programar para subir imágenes — el drag-and-drop de GitHub es suficiente.
+**Impacto:** `profile.avatar_base64` en el esquema de progreso. `BadgeWall.jsx` con fallback onError. Carpetas `public/images/` y `public/badges/` creadas.
+**Estado:** Activa.
+
+---
+
 ## DEC-0005 — Decisión humana como campo obligatorio de misión
 
 **Fecha:** 2026-06-05

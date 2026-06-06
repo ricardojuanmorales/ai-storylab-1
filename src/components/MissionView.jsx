@@ -1,27 +1,28 @@
 import React, { useEffect, useMemo, useState } from "react";
 import sessionsData from "../data/sessions.json";
+import glossaryData from "../data/glossary.json";
 import toolsData from "../data/tools.json";
 import MentorAvatarCard from "./MentorAvatarCard.jsx";
 import EthicalReflectionBox from "./EthicalReflectionBox.jsx";
+import LudicActivityWidget from "./LudicActivityWidget.jsx";
+import SuggestedPromptBox from "./SuggestedPromptBox.jsx";
 import { getBadgeForSession, canCompleteSession } from "../utils/progress.js";
 
 const phaseById = Object.fromEntries(sessionsData.phases.map((p) => [p.id, p]));
 
-/**
- * Individual mission view: read instructions, fill evidence, save & complete.
- */
-export default function MissionView({ sessionId, session, onSave, onComplete, navigate }) {
+export default function MissionView({ sessionId, session, onSave, onComplete, onSaveLudicOutput, navigate }) {
   const meta = sessionsData.sessions.find((s) => s.session_id === sessionId);
   const badge = getBadgeForSession(sessionId);
   const phase = phaseById[meta.phase] || {};
 
   const [draft, setDraft] = useState(session);
   const [flash, setFlash] = useState(null);
+  const [expandedTerm, setExpandedTerm] = useState(null);
 
-  // Re-sync the draft if we navigate to a different mission.
   useEffect(() => {
     setDraft(session);
     setFlash(null);
+    setExpandedTerm(null);
   }, [sessionId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const usesTool = meta.evidence_fields.includes("tool_used");
@@ -31,6 +32,11 @@ export default function MissionView({ sessionId, session, onSave, onComplete, na
     () => toolsData.tools.filter((t) => t.sessions.includes(sessionId)),
     [sessionId]
   );
+
+  const glossaryTerms = useMemo(() => {
+    const termIds = meta.glossary_terms || [];
+    return glossaryData.terms.filter((t) => termIds.includes(t.term_id));
+  }, [meta.glossary_terms]);
 
   const eligible = canCompleteSession(draft);
 
@@ -44,13 +50,12 @@ export default function MissionView({ sessionId, session, onSave, onComplete, na
   }
 
   function handleComplete() {
-    // Persist current draft first, then attempt completion.
     onSave(sessionId, draft);
     const result = onComplete(sessionId, draft);
     if (result.ok) {
       setFlash({
         type: "badge",
-        text: `Misión completada. Has desbloqueado la insignia “${result.badge?.name || ""}”.`,
+        text: `Misión completada. Has desbloqueado la insignia "${result.badge?.name || ""}".`,
       });
     } else {
       setFlash({
@@ -58,6 +63,19 @@ export default function MissionView({ sessionId, session, onSave, onComplete, na
         text: "Aún falta evidencia, decisión humana o reflexión ética para completar la misión.",
       });
     }
+  }
+
+  function handleSaveLudic(data, summary) {
+    const updatedDraft = { ...draft, ludic_output: data };
+    if (summary && !draft.evidence_summary) {
+      updatedDraft.evidence_summary = summary;
+    }
+    setDraft(updatedDraft);
+    onSaveLudicOutput(sessionId, data, summary);
+  }
+
+  function handleUseSuggestedPrompt(text) {
+    update("prompt_used", text);
   }
 
   return (
@@ -76,7 +94,7 @@ export default function MissionView({ sessionId, session, onSave, onComplete, na
 
       <div className="card">
         <h3>Pregunta guía</h3>
-        <p className="mission-view__question">“{meta.guiding_question}”</p>
+        <p className="mission-view__question">"{meta.guiding_question}"</p>
 
         <h4>Objetivos</h4>
         <ul>
@@ -85,9 +103,6 @@ export default function MissionView({ sessionId, session, onSave, onComplete, na
           ))}
         </ul>
 
-        <h4>Actividad lúdica</h4>
-        <p>{meta.ludic_activity}</p>
-
         <h4>Tu tarea</h4>
         <p>{meta.task_instructions}</p>
         <p className="muted">
@@ -95,6 +110,42 @@ export default function MissionView({ sessionId, session, onSave, onComplete, na
         </p>
       </div>
 
+      {/* ── Actividad lúdica interactiva ── */}
+      <LudicActivityWidget
+        config={meta.ludic_config}
+        savedOutput={session.ludic_output || {}}
+        onSave={handleSaveLudic}
+      />
+
+      {/* ── Conceptos clave del glosario ── */}
+      {glossaryTerms.length > 0 && (
+        <div className="card glossary-section">
+          <h4>Conceptos clave de esta misión</h4>
+          <div className="glossary-chips">
+            {glossaryTerms.map((term) => (
+              <div key={term.term_id} className="glossary-chip-wrapper">
+                <button
+                  type="button"
+                  className={`glossary-chip ${expandedTerm === term.term_id ? "glossary-chip--active" : ""}`}
+                  onClick={() =>
+                    setExpandedTerm(expandedTerm === term.term_id ? null : term.term_id)
+                  }
+                >
+                  {term.term}
+                </button>
+                {expandedTerm === term.term_id && (
+                  <div className="glossary-definition">
+                    <span className="glossary-category">{term.category}</span>
+                    <p>{term.definition}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* ── Registro de evidencia ── */}
       <div className="card">
         <h3>Registra tu evidencia</h3>
 
@@ -126,15 +177,21 @@ export default function MissionView({ sessionId, session, onSave, onComplete, na
         )}
 
         {usesPrompt && (
-          <label className="field">
-            <span>Prompt usado (si aplica)</span>
-            <textarea
-              rows={2}
-              value={draft.prompt_used}
-              placeholder="Pega aquí el prompt que diste a la herramienta de IA."
-              onChange={(e) => update("prompt_used", e.target.value)}
+          <>
+            <SuggestedPromptBox
+              prompt={meta.suggested_prompt}
+              onUse={handleUseSuggestedPrompt}
             />
-          </label>
+            <label className="field">
+              <span>Prompt usado (si aplica)</span>
+              <textarea
+                rows={3}
+                value={draft.prompt_used}
+                placeholder="Pega o edita aquí el prompt que diste a la herramienta de IA."
+                onChange={(e) => update("prompt_used", e.target.value)}
+              />
+            </label>
+          </>
         )}
 
         <EthicalReflectionBox
