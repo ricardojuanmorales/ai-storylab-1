@@ -1,0 +1,102 @@
+{
+  "schema_version": "0.2.0",
+  "categories": ["IA", "Ética", "Narrativa", "Multimedia", "Derechos"],
+  "terms": [
+    {
+      "term_id": "G01",
+      "term": "Inteligencia Artificial (IA)",
+      "category": "IA",
+      "session": "S1",
+      "tags": ["fundamentos", "ia"],
+      "definition": "Sistemas informáticos capaces de realizar tareas que normalmente requieren inteligencia humana, como generar texto, imágenes o voz."
+    },
+    {
+      "term_id": "G02",
+      "term": "Prompt",
+      "category": "IA",
+      "session": "S3",
+      "tags": ["ia", "herramientas"],
+      "definition": "Instrucción o texto que se le da a una herramienta de IA para obtener un resultado, como una imagen o un texto."
+    },
+    {
+      "term_id": "G03",
+      "term": "Decisión humana",
+      "category": "Ética",
+      "session": "S1",
+      "tags": ["etica", "responsabilidad"],
+      "definition": "Elección consciente que toma la persona, no la IA. Es la huella de tu criterio dentro de la creación."
+    },
+    {
+      "term_id": "G04",
+      "term": "Reflexión ética",
+      "category": "Ética",
+      "session": "S1",
+      "tags": ["etica", "portafolio"],
+      "definition": "Nota breve donde explicas por qué tu decisión es justa, honesta y respetuosa."
+    },
+    {
+      "term_id": "G05",
+      "term": "Atribución",
+      "category": "Derechos",
+      "session": "S5",
+      "tags": ["derechos", "creditos"],
+      "definition": "Reconocer la fuente o autoría de un recurso (imagen, música, texto) que usaste en tu historia."
+    },
+    {
+      "term_id": "G06",
+      "term": "Licencia",
+      "category": "Derechos",
+      "session": "S9",
+      "tags": ["derechos", "entrega"],
+      "definition": "Permiso que define cómo se puede usar, compartir o modificar una obra (por ejemplo, Creative Commons)."
+    },
+    {
+      "term_id": "G07",
+      "term": "Logline",
+      "category": "Narrativa",
+      "session": "S2",
+      "tags": ["narrativa", "idea"],
+      "definition": "Resumen de una o dos frases que captura la esencia de una historia."
+    },
+    {
+      "term_id": "G08",
+      "term": "Storyboard",
+      "category": "Narrativa",
+      "session": "S4",
+      "tags": ["narrativa", "estructura"],
+      "definition": "Secuencia de escenas o viñetas que planifica visualmente el desarrollo de una historia."
+    },
+    {
+      "term_id": "G09",
+      "term": "VoiceOver",
+      "category": "Multimedia",
+      "session": "S6",
+      "tags": ["audio", "voz"],
+      "definition": "Narración de voz que se graba sobre las diapositivas o el video para guiar la historia."
+    },
+    {
+      "term_id": "G10",
+      "term": "MP4",
+      "category": "Multimedia",
+      "session": "S9",
+      "tags": ["video", "entrega"],
+      "definition": "Formato de archivo de video ampliamente compatible, usado para la entrega final de la historia."
+    },
+    {
+      "term_id": "G11",
+      "term": "Declaración de uso de IA",
+      "category": "Ética",
+      "session": "S8",
+      "tags": ["etica", "transparencia"],
+      "definition": "Aviso donde indicas qué partes de tu obra fueron creadas o asistidas por IA y cuáles por personas."
+    },
+    {
+      "term_id": "G12",
+      "term": "Portafolio emergente",
+      "category": "Narrativa",
+      "session": "S2",
+      "tags": ["portafolio", "evidencia"],
+      "definition": "Portafolio que se construye automáticamente a partir de las evidencias que registras en cada sesión."
+    }
+  ]
+}

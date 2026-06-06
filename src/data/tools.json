@@ -1,0 +1,96 @@
+{
+  "schema_version": "0.2.0",
+  "tool_types": ["Texto", "Imagen", "Audio", "Presentación", "Video", "Organización"],
+  "difficulties": ["básica", "intermedia", "avanzada"],
+  "privacy_levels": ["local", "requiere cuenta", "datos en la nube"],
+  "tools": [
+    {
+      "tool_id": "T01",
+      "name": "Procesador de texto",
+      "type": "Texto",
+      "sessions": ["S1", "S2", "S4"],
+      "phase": "fundamentos",
+      "difficulty": "básica",
+      "privacy": "local",
+      "description": "Editor de documentos para manifiestos, ideas y guiones.",
+      "example": "Word, Google Docs, LibreOffice"
+    },
+    {
+      "tool_id": "T02",
+      "name": "Generador de imágenes IA",
+      "type": "Imagen",
+      "sessions": ["S3", "S5"],
+      "phase": "narrativa",
+      "difficulty": "intermedia",
+      "privacy": "requiere cuenta",
+      "description": "Crea imágenes a partir de prompts de texto. Recuerda declarar su uso.",
+      "example": "Herramienta de texto-a-imagen aprobada por el facilitador"
+    },
+    {
+      "tool_id": "T03",
+      "name": "Banco de imágenes libres",
+      "type": "Imagen",
+      "sessions": ["S5"],
+      "phase": "narrativa",
+      "difficulty": "básica",
+      "privacy": "requiere cuenta",
+      "description": "Imágenes con licencia libre para usar con atribución correcta.",
+      "example": "Bancos con licencia Creative Commons"
+    },
+    {
+      "tool_id": "T04",
+      "name": "Grabadora de voz",
+      "type": "Audio",
+      "sessions": ["S6"],
+      "phase": "produccion",
+      "difficulty": "básica",
+      "privacy": "local",
+      "description": "Graba tu propia narración para el VoiceOver.",
+      "example": "Grabadora del sistema, Audacity"
+    },
+    {
+      "tool_id": "T05",
+      "name": "Voz por IA (TTS)",
+      "type": "Audio",
+      "sessions": ["S6"],
+      "phase": "produccion",
+      "difficulty": "intermedia",
+      "privacy": "datos en la nube",
+      "description": "Convierte texto en voz. Declara cuándo la voz es generada por IA.",
+      "example": "Herramienta de texto-a-voz aprobada"
+    },
+    {
+      "tool_id": "T06",
+      "name": "PowerPoint",
+      "type": "Presentación",
+      "sessions": ["S7", "S8"],
+      "phase": "produccion",
+      "difficulty": "intermedia",
+      "privacy": "local",
+      "description": "Ensambla diapositivas con VoiceOver y exporta a video.",
+      "example": "Microsoft PowerPoint"
+    },
+    {
+      "tool_id": "T07",
+      "name": "Exportador de video",
+      "type": "Video",
+      "sessions": ["S9"],
+      "phase": "curaduria",
+      "difficulty": "intermedia",
+      "privacy": "local",
+      "description": "Exporta la presentación final como video MP4 para la entrega.",
+      "example": "Exportar como video en PowerPoint"
+    },
+    {
+      "tool_id": "T08",
+      "name": "Tablero de planificación",
+      "type": "Organización",
+      "sessions": ["S4", "S7"],
+      "phase": "narrativa",
+      "difficulty": "básica",
+      "privacy": "local",
+      "description": "Organiza escenas, tareas y créditos del proyecto.",
+      "example": "Tablero físico o digital de notas"
+    }
+  ]
+}

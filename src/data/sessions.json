@@ -1,0 +1,182 @@
+{
+  "schema_version": "0.2.0",
+  "phases": [
+    { "id": "fundamentos", "label": "Fundamentos Éticos", "color": "#6d28d9" },
+    { "id": "narrativa", "label": "Construcción Narrativa", "color": "#0e7490" },
+    { "id": "produccion", "label": "Producción Multimedia", "color": "#b45309" },
+    { "id": "curaduria", "label": "Curaduría y Entrega", "color": "#15803d" }
+  ],
+  "sessions": [
+    {
+      "session_id": "S1",
+      "number": 1,
+      "title": "Brújula Ética",
+      "phase": "fundamentos",
+      "guiding_question": "¿Qué principios éticos guiarán mi uso de la IA en esta historia?",
+      "mentor_message": "Toda gran historia empieza con una brújula. Antes de crear, decide qué es justo, honesto y respetuoso para ti.",
+      "objectives": [
+        "Reconocer riesgos y oportunidades del uso de IA",
+        "Definir principios éticos personales del proyecto",
+        "Comprender derechos de autor y atribución"
+      ],
+      "ludic_activity": "Dilema relámpago: en parejas, decidan en 60 segundos si tres usos de IA son éticos, dudosos o no éticos y por qué.",
+      "task_instructions": "Redacta tu manifiesto ético: tres reglas que prometes seguir al usar IA en tu historia.",
+      "expected_product": "Manifiesto ético de 3 reglas",
+      "badge_id": "B1",
+      "tool_default": "Documento de texto",
+      "evidence_fields": ["evidence_summary", "human_decision", "ethical_reflection"]
+    },
+    {
+      "session_id": "S2",
+      "number": 2,
+      "title": "Idea Central",
+      "phase": "fundamentos",
+      "guiding_question": "¿Cuál es el mensaje central que mi historia quiere dejar?",
+      "mentor_message": "Una idea clara vale más que mil efectos. Encuentra el corazón de tu historia.",
+      "objectives": [
+        "Definir tema, audiencia y propósito educativo",
+        "Formular el mensaje central en una frase",
+        "Identificar el enfoque ético de la historia"
+      ],
+      "ludic_activity": "Logline en una línea: escribe tu historia en máximo 25 palabras y léela al equipo.",
+      "task_instructions": "Completa tema, audiencia, propósito educativo y enfoque ético del proyecto.",
+      "expected_product": "Ficha de idea central (logline + propósito)",
+      "badge_id": "B2",
+      "tool_default": "Documento de texto",
+      "evidence_fields": ["evidence_summary", "human_decision", "ethical_reflection"]
+    },
+    {
+      "session_id": "S3",
+      "number": 3,
+      "title": "Avatar o Avatares",
+      "phase": "narrativa",
+      "guiding_question": "¿Quién protagoniza mi historia y qué lo hace creíble?",
+      "mentor_message": "Tus personajes son la voz de tu mensaje. Diséñalos con intención y respeto.",
+      "objectives": [
+        "Diseñar el o los personajes principales",
+        "Definir nombre, rasgos y motivación del avatar",
+        "Decidir qué partes crea la IA y cuáles la persona"
+      ],
+      "ludic_activity": "Ficha exprés: completa la tarjeta del avatar (nombre, deseo, miedo, superpoder narrativo).",
+      "task_instructions": "Describe tu avatar principal y registra qué decisión humana tomaste sobre su diseño.",
+      "expected_product": "Ficha de avatar(es)",
+      "badge_id": "B3",
+      "tool_default": "Generador de imágenes IA",
+      "evidence_fields": ["evidence_summary", "tool_used", "prompt_used", "human_decision", "ethical_reflection"]
+    },
+    {
+      "session_id": "S4",
+      "number": 4,
+      "title": "Narrativa",
+      "phase": "narrativa",
+      "guiding_question": "¿Cómo se estructura mi historia de principio a fin?",
+      "mentor_message": "Una buena estructura sostiene la emoción. Ordena tu historia como un viaje.",
+      "objectives": [
+        "Construir inicio, desarrollo y desenlace",
+        "Distribuir la historia en escenas o diapositivas",
+        "Mantener coherencia con el mensaje central"
+      ],
+      "ludic_activity": "Tres actos en tres post-its: resume tu historia en inicio, nudo y final.",
+      "task_instructions": "Escribe el guion o esquema de escenas de tu historia (mínimo inicio-nudo-desenlace).",
+      "expected_product": "Guion o storyboard textual",
+      "badge_id": "B4",
+      "tool_default": "Documento / Guion",
+      "evidence_fields": ["evidence_summary", "tool_used", "prompt_used", "human_decision", "ethical_reflection"]
+    },
+    {
+      "session_id": "S5",
+      "number": 5,
+      "title": "Mundo Visual",
+      "phase": "narrativa",
+      "guiding_question": "¿Qué estilo visual representa mejor mi historia?",
+      "mentor_message": "El color y la forma también cuentan. Construye un mundo que se vea como suena tu mensaje.",
+      "objectives": [
+        "Definir paleta, estilo e imágenes clave",
+        "Generar o seleccionar recursos visuales con criterio ético",
+        "Atribuir correctamente los recursos usados"
+      ],
+      "ludic_activity": "Moodboard relámpago: elige 3 imágenes o colores que definan tu historia y explica por qué.",
+      "task_instructions": "Registra el estilo visual elegido, las herramientas usadas y los prompts si generaste imágenes con IA.",
+      "expected_product": "Mundo visual (moodboard + recursos)",
+      "badge_id": "B5",
+      "tool_default": "Generador de imágenes IA",
+      "evidence_fields": ["evidence_summary", "tool_used", "prompt_used", "human_decision", "ethical_reflection"]
+    },
+    {
+      "session_id": "S6",
+      "number": 6,
+      "title": "Voz y Sonido",
+      "phase": "produccion",
+      "guiding_question": "¿Cómo suena mi historia y qué emoción transmite la voz?",
+      "mentor_message": "La voz da vida. Decide qué dirás tú y qué dejarás a la IA, siempre con transparencia.",
+      "objectives": [
+        "Grabar o generar la voz en off (VoiceOver)",
+        "Seleccionar música o efectos respetando licencias",
+        "Declarar qué audio es humano y qué es IA"
+      ],
+      "ludic_activity": "Lectura dramatizada: graba 20 segundos de tu narración con tu mejor voz.",
+      "task_instructions": "Registra cómo creaste el audio (voz propia o IA), las herramientas y la declaración de uso.",
+      "expected_product": "Pista de voz y sonido",
+      "badge_id": "B6",
+      "tool_default": "Grabadora / TTS",
+      "evidence_fields": ["evidence_summary", "tool_used", "prompt_used", "human_decision", "ethical_reflection"]
+    },
+    {
+      "session_id": "S7",
+      "number": 7,
+      "title": "Prototipo",
+      "phase": "produccion",
+      "guiding_question": "¿Cómo se integra todo en un primer borrador jugable?",
+      "mentor_message": "Un prototipo no es perfecto, es valiente. Une tus piezas y míralo funcionar.",
+      "objectives": [
+        "Ensamblar diapositivas, voz y visuales en PowerPoint",
+        "Probar el flujo completo de la historia",
+        "Detectar mejoras antes de la curaduría final"
+      ],
+      "ludic_activity": "Pase de prueba: presenta tu prototipo a otro equipo y anota una mejora sugerida.",
+      "task_instructions": "Registra el estado del prototipo, qué funcionó y qué decisión humana de ajuste tomaste.",
+      "expected_product": "Prototipo PowerPoint con VoiceOver",
+      "badge_id": "B7",
+      "tool_default": "PowerPoint",
+      "evidence_fields": ["evidence_summary", "tool_used", "human_decision", "ethical_reflection"]
+    },
+    {
+      "session_id": "S8",
+      "number": 8,
+      "title": "Curaduría Final",
+      "phase": "curaduria",
+      "guiding_question": "¿Qué debo pulir para que mi historia comunique con claridad y ética?",
+      "mentor_message": "Curar es elegir con cuidado. Revisa créditos, ritmo y mensaje antes de exportar.",
+      "objectives": [
+        "Revisar coherencia, créditos y atribuciones",
+        "Verificar declaración de uso de IA",
+        "Preparar la exportación a video MP4"
+      ],
+      "ludic_activity": "Lista de chequeo: marca créditos, declaración de IA, calidad de audio y duración.",
+      "task_instructions": "Registra los ajustes finales, la revisión de privacidad y la declaración de uso de IA.",
+      "expected_product": "Versión final lista para exportar",
+      "badge_id": "B8",
+      "tool_default": "PowerPoint",
+      "evidence_fields": ["evidence_summary", "human_decision", "ethical_reflection"]
+    },
+    {
+      "session_id": "S9",
+      "number": 9,
+      "title": "Premier y Entrega Final",
+      "phase": "curaduria",
+      "guiding_question": "¿Cómo presento y entrego mi historia con orgullo y responsabilidad?",
+      "mentor_message": "Llegó la premier. Comparte tu historia, registra la entrega y celebra tu huella de aprendizaje.",
+      "objectives": [
+        "Exportar el video final en MP4",
+        "Registrar los metadatos de la entrega",
+        "Presentar la historia en la premier"
+      ],
+      "ludic_activity": "Alfombra roja: presenta tu historia en 1 minuto y recibe aplausos del grupo.",
+      "task_instructions": "Completa la Estación de Entrega Final con los metadatos del video y las validaciones.",
+      "expected_product": "Video MP4 entregado + metadatos registrados",
+      "badge_id": "B9",
+      "tool_default": "Exportador de video",
+      "evidence_fields": ["evidence_summary", "human_decision", "ethical_reflection"]
+    }
+  ]
+}
