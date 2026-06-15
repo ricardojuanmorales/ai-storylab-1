@@ -1,7 +1,7 @@
 {
   "name": "ai-storylab",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "description": "AI StoryLab: Constructor Ético de Historias Multimedia — MVP local-first",
   "scripts": {

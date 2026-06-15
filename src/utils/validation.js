@@ -1,6 +1,6 @@
 import { createDefaultFinalSubmission } from "./finalSubmission.js";
 
-export const SUPPORTED_SCHEMA_VERSIONS = ["0.2.0"];
+export const SUPPORTED_SCHEMA_VERSIONS = ["0.3.0", "0.2.0"];
 
 /**
  * Check that a schema version is compatible (same major.minor accepted).
