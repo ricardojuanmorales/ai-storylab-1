@@ -18,10 +18,10 @@ let p = createDefaultProgress();
 p.profile.student_code = "EST-000";
 p.profile.display_name = "Tester";
 assert.equal(p.export_type, "student_progress");
-assert.equal(p.schema_version, "0.2.0");
+assert.equal(p.schema_version, "0.3.0");
 assert.equal(p.sessions.length, 9);
 assert.equal(p.progress.sessions_completed, 0);
-ok("Perfil/progreso por defecto correcto (9 sesiones, v0.2.0)");
+ok("Perfil/progreso por defecto correcto (9 sesiones, v0.3.0)");
 
 // 2. Cannot complete without full evidence
 let r = completeSession(p, "S1");

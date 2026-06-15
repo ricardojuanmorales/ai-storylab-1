@@ -26,7 +26,7 @@ export default function GlossaryView() {
     const matchesQuery =
       !q || t.term.toLowerCase().includes(q) || t.definition.toLowerCase().includes(q);
     const matchesCat = !category || t.category === category;
-    const matchesSession = !session || t.session === session;
+    const matchesSession = !session || (t.sessions || []).includes(session);
     const matchesTag = !tag || (t.tags || []).includes(tag);
     return matchesQuery && matchesCat && matchesSession && matchesTag;
   });
@@ -77,7 +77,9 @@ export default function GlossaryView() {
             </header>
             <p>{t.definition}</p>
             <footer className="glossary-item__foot">
-              <span className="tag">{sessionTitle[t.session] || t.session}</span>
+              {(t.sessions || []).map((sid) => (
+                <span key={sid} className="tag">{sessionTitle[sid] || sid}</span>
+              ))}
               {(t.tags || []).map((x) => (
                 <span key={x} className="tag tag--muted">#{x}</span>
               ))}

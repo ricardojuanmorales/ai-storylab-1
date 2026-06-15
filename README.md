@@ -3,6 +3,8 @@
 > *"Tú tienes la historia. La IA tiene herramientas. Juntos crean algo que no existía antes."*
 > — **Profesor Aión**, Mentor Transdisciplinario
 
+`v0.3.0` · React + Vite · 100% local-first · sin backend
+
 ¡Bienvenido/a a **AI StoryLab**! 🚀✨
 
 Un laboratorio digital donde estudiantes de escuela superior se convierten en **creadores, narradores y pensadores éticos** mientras descubren el poder —y la responsabilidad— de trabajar con inteligencia artificial.
@@ -95,7 +97,7 @@ Cada misión muestra automáticamente 5 o más **conceptos clave** del glosario 
 
 ## 🛠️ Tablero de Herramientas
 
-Las 6 categorías del tablero (Texto, Imagen, Audio, Presentación, Video, Organización) ahora abren su propia **página de detalle** con:
+Las 6 categorías del tablero (Escritura y Texto, Imágenes y Diseño Visual, Voz y Sonido, Presentación Multimedia, Exportación a Video, Organización y Planificación) ahora abren su propia **página de detalle** con:
 - Estrategias básicas de uso para el contexto escolar
 - Prompts recomendados copiables con un clic
 - Lista de herramientas por fase y nivel de privacidad
