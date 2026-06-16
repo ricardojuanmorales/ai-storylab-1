@@ -57,14 +57,14 @@ export default function GroupDashboard({ group, onUpdateGroup }) {
       <div className="screen__head">
         <h2>Dashboard Grupal (Facilitador)</h2>
         <p className="muted">
-          Importa varios archivos JSON de estudiantes. Se fusionan por código sin borrar a los demás.
+          Importa archivos JSON de estudiantes o un group_progress.json exportado. Se fusionan por código sin borrar a los demás.
         </p>
       </div>
 
       <MentorAvatarCard
         compact
         name="Panel del facilitador"
-        message="Importa los JSON de tu cohorte. Si un estudiante ya existe, se conserva el progreso más reciente."
+        message="Importa JSONs de estudiantes o un group_progress.json exportado. Si un estudiante ya existe, se conserva el progreso más reciente."
       />
 
       <div className="actions">
@@ -77,7 +77,7 @@ export default function GroupDashboard({ group, onUpdateGroup }) {
           onChange={handleFiles}
         />
         <button className="btn" onClick={() => fileRef.current?.click()} disabled={busy}>
-          {busy ? "Importando…" : "Importar JSON de estudiantes"}
+          {busy ? "Importando…" : "Importar JSON"}
         </button>
         <button className="btn btn--ghost" onClick={handleExport} disabled={g.students.length === 0}>
           Exportar group_progress.json

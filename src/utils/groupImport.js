@@ -1,5 +1,5 @@
 import sessionsData from "../data/sessions.json";
-import { validateStudentProgress } from "./validation.js";
+import { validateStudentProgress, validateGroupProgress } from "./validation.js";
 import { readJSONFile, triggerDownload } from "./exportImport.js";
 import { createDefaultGroupProgress } from "../templates/defaultGroupProgress.js";
 
@@ -117,6 +117,59 @@ export async function importStudentFilesIntoGroup(group, files, options = {}) {
   for (const file of files) {
     try {
       const parsed = await readJSONFile(file);
+
+      // Handle group_progress exports: merge each student row directly.
+      if (parsed?.export_type === "group_progress") {
+        const validation = validateGroupProgress(parsed);
+        if (!validation.valid) {
+          results.push({ fileName: file.name, status: "error", errors: validation.errors, warnings: [] });
+          continue;
+        }
+        let added = 0, updated = 0, kept = 0;
+        const allWarnings = [];
+        for (const studentRow of parsed.students) {
+          // Reconstruct a minimal progress-like object so mergeStudentIntoGroup can summarize it.
+          const synthetic = {
+            profile: {
+              student_code: studentRow.student_code,
+              display_name: studentRow.display_name,
+              modality: studentRow.modality,
+              cohort: studentRow.cohort,
+            },
+            project: { title: studentRow.project_title },
+            sessions: Object.entries(studentRow.sessions_status || {}).map(([session_id, status]) => ({ session_id, status })),
+            progress: {
+              sessions_completed: studentRow.sessions_completed,
+              badges_awarded: Array(studentRow.badges_awarded).fill(null),
+              last_updated: studentRow.last_updated,
+            },
+            portfolio_emergent: {
+              entries_completed: studentRow.portfolio_completed,
+              entries_expected: studentRow.portfolio_expected,
+            },
+            final_submission: {
+              video_status: studentRow.video_status,
+              ai_use_declaration_confirmed: studentRow.ai_use_declaration_confirmed,
+              gallery_candidate_interest: studentRow.gallery_candidate_interest,
+            },
+          };
+          const merge = mergeStudentIntoGroup(workingGroup, synthetic, options);
+          workingGroup = merge.group;
+          if (merge.action === "added") added++;
+          else if (merge.action === "updated") updated++;
+          else if (merge.action === "kept") kept++;
+          allWarnings.push(...merge.warnings);
+        }
+        results.push({
+          fileName: file.name,
+          status: "added",
+          warnings: allWarnings,
+          errors: [],
+          summary: `${added} añadidos, ${updated} actualizados, ${kept} conservados.`,
+        });
+        continue;
+      }
+
       const validation = validateStudentProgress(parsed);
       if (!validation.valid) {
         results.push({
