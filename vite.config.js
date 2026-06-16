@@ -9,4 +9,7 @@ export default defineConfig({
     port: 5173,
     open: true,
   },
+  test: {
+    environment: "node",
+  },
 });
