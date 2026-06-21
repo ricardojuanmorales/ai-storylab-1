@@ -72,8 +72,8 @@ La aplicación está **completamente funcional y desplegada en GitHub Pages** (`
 - GitHub: `https://github.com/ricardojuanmorales/ai-storylab-1` (público)
 - GitHub Pages: `https://ricardojuanmorales.github.io/ai-storylab-1/`
 - Rama principal: `main`; rama de deploy: `gh-pages`
-- Gobernanza: `governance/` | Decisiones: `governance/DECISION_LOG.md`
-- Bitácoras: `logs/` | Guías: `docs/`
+- Gobernanza: `04_GOBERNANZA_ETICA_Y_RIESGOS/` | Decisiones: `18_DOCUMENTACION_ACTIVA/Registro_Decisiones/Registro_Decisiones_Completo_v0_4_0.md`
+- Bitácoras: `18_DOCUMENTACION_ACTIVA/Bitacoras/` | Guías: `21_WIKI_DOCUMENTACION_HUMANA/`
 
 **Para publicar cambios:** `npm run deploy`
 **Para personalizar herramientas:** editar `teacher_note` en `src/data/tools.json` → `npm run deploy`

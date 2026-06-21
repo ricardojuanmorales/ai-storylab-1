@@ -231,8 +231,8 @@ Como facilitador/a, al recibir los JSON estudiantiles:
 ## 📞 Contacto y Apoyo Técnico
 
 Para soporte técnico del repositorio:
-- Revisa los archivos en `governance/` para entender decisiones de diseño
-- Consulta `primers/PRIMER_MVP_SCOPE.md` para el alcance del MVP
+- Revisa `04_GOBERNANZA_ETICA_Y_RIESGOS/` y `18_DOCUMENTACION_ACTIVA/Registro_Decisiones/` para entender decisiones de diseño
+- Consulta `18_DOCUMENTACION_ACTIVA/Primers_Continuidad/PRIMER_MVP_SCOPE.md` para el alcance del MVP
 - Abre un issue en el repositorio GitHub del proyecto
 
 ---

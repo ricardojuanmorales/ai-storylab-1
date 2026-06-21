@@ -193,12 +193,12 @@ src/
 public/
 ├── images/                      # hero.jpg y otros activos del sitio
 └── badges/                      # Imágenes personalizadas por badge_id
-governance/                      # Políticas, gobernanza y registro de decisiones
-docs/                            # Guías de usuario y documentación oficial
-logs/                            # Bitácoras de sesiones de desarrollo
-primers/                         # Contexto rápido para activar agentes IA
-prompts/                         # Prompts de trabajo con agentes IA
-compendia/                       # Compendios de conocimiento del proyecto
+04_GOBERNANZA_ETICA_Y_RIESGOS/        # Gobernanza, ética, riesgos y decisiones
+21_WIKI_DOCUMENTACION_HUMANA/          # Guías humanas y documentación para usuarios
+18_DOCUMENTACION_ACTIVA/Bitacoras/     # Bitácoras de sesiones y continuidad
+18_DOCUMENTACION_ACTIVA/Primers_Continuidad/  # Primers de continuidad y contexto
+18_DOCUMENTACION_ACTIVA/Prompts_de_Sesion/    # Prompts de trabajo y revisión
+18_DOCUMENTACION_ACTIVA/Compendios/    # Compendios de conocimiento del proyecto
 ```
 
 ---

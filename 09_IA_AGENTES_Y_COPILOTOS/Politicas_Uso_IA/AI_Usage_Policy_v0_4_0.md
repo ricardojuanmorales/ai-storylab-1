@@ -68,8 +68,8 @@ En todo momento, una persona responsable del proyecto debe revisar, aprobar y as
 ## Protocolo de Trabajo con Agentes IA
 
 ### Antes de una sesión de trabajo
-1. Activar contexto con el primer apropiado (`primers/`)
-2. Usar el prompt de activación correspondiente (`prompts/`)
+1. Activar contexto con el primer apropiado (`18_DOCUMENTACION_ACTIVA/Primers_Continuidad/`)
+2. Usar el prompt de activación correspondiente (`18_DOCUMENTACION_ACTIVA/Prompts_de_Sesion/` o `18_DOCUMENTACION_ACTIVA/Prompts_Activacion/`)
 3. Presentar al agente el estado actual del repositorio
 
 ### Durante la sesión
@@ -81,9 +81,9 @@ En todo momento, una persona responsable del proyecto debe revisar, aprobar y as
 ### Al cierre de la sesión
 1. Revisar todos los cambios con `git diff`
 2. Documentar decisiones relevantes en DECISION_LOG
-3. Actualizar la bitácora de sesión (`logs/`)
+3. Actualizar la bitácora de sesión (`18_DOCUMENTACION_ACTIVA/Bitacoras/`)
 4. Hacer commit con mensaje descriptivo
-5. Guardar los prompts relevantes usados en `prompts/`
+5. Guardar los prompts relevantes usados en `18_DOCUMENTACION_ACTIVA/Prompts_de_Sesion/` o `18_DOCUMENTACION_ACTIVA/Prompts_Activacion/`
 
 ---
 
@@ -119,7 +119,7 @@ AI StoryLab enseña a los estudiantes a usar IA de manera responsable. Las regla
 
 Si se detecta un uso de IA que viola esta política:
 
-1. Documentar el incidente en `governance/DECISION_LOG.md`
+1. Documentar el incidente en `18_DOCUMENTACION_ACTIVA/Registro_Decisiones/Registro_Decisiones_Completo_v0_4_0.md`
 2. Revertir los cambios no autorizados con `git revert`
 3. Discutir con el equipo y actualizar esta política si corresponde
 

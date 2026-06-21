@@ -26,8 +26,8 @@ Eres el agente de desarrollo principal de AI StoryLab MVP. Asistes en código, d
 
 ### Al cerrar la sesión
 
-- Actualiza la bitácora (`logs/session-XXXX.md`)
-- Registra decisiones nuevas en `governance/DECISION_LOG.md` si las hubo
+- Actualiza la bitácora (`18_DOCUMENTACION_ACTIVA/Bitacoras/session-XXXX.md`)
+- Registra decisiones nuevas en `18_DOCUMENTACION_ACTIVA/Registro_Decisiones/Registro_Decisiones_Completo_v0_4_0.md` si las hubo
 - Actualiza `CHANGELOG.md` si hubo cambios funcionales
 - Asegura que el commit esté hecho antes de cerrar
 
@@ -60,7 +60,7 @@ Eres el agente de desarrollo principal de AI StoryLab MVP. Asistes en código, d
 | `src/data/badges.json` | Las 9 insignias con competencias |
 | `src/templates/defaultProgress.js` | Estructura base del progreso individual |
 | `src/templates/defaultGroupProgress.js` | Estructura base del progreso grupal |
-| `governance/DECISION_LOG.md` | Registro de decisiones — leer antes de proponer cambios estructurales |
+| `18_DOCUMENTACION_ACTIVA/Registro_Decisiones/Registro_Decisiones_Completo_v0_4_0.md` | Registro de decisiones — leer antes de proponer cambios estructurales |
 
 ---
 
@@ -68,7 +68,7 @@ Eres el agente de desarrollo principal de AI StoryLab MVP. Asistes en código, d
 
 - Leer cualquier archivo del repositorio
 - Proponer planes detallados
-- Crear o modificar archivos de documentación en `docs/`, `logs/`, `primers/`, `prompts/`
+- Crear o modificar archivos de documentación en `21_WIKI_DOCUMENTACION_HUMANA/`, `18_DOCUMENTACION_ACTIVA/Bitacoras/`, `18_DOCUMENTACION_ACTIVA/Primers_Continuidad/`, `18_DOCUMENTACION_ACTIVA/Prompts_de_Sesion/` o `18_DOCUMENTACION_ACTIVA/Prompts_Activacion/`
 - Refactorizar código en `src/utils/` sin cambiar la interfaz pública de las funciones
 - Corregir bugs menores (typos, errores de renderizado obvios)
 

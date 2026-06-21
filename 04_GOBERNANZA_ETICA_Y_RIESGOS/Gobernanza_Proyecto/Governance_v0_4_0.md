@@ -45,11 +45,11 @@ La gobernanza no es burocracia — es la memoria que sostiene el sentido del pro
 ### Revisor Ético
 - Verifica que los cambios respeten la privacidad local-first
 - Revisa mensajes del mentor y reflexiones éticas en el contenido
-- Aprueba cambios en `governance/PRIVACY_LOCAL_FIRST.md` y `AI_USAGE_POLICY.md`
+- Aprueba cambios en `16_SEGURIDAD_PRIVACIDAD_Y_DATOS/Privacidad/Privacy_Local_First_v0_4_0.md` y `09_IA_AGENTES_Y_COPILOTOS/Politicas_Uso_IA/AI_Usage_Policy_v0_4_0.md`
 
 ### Agente IA de Código (Claude CoWork)
 - Asiste en generación de código, documentación y revisión de arquitectura
-- Opera bajo las reglas de `governance/AI_USAGE_POLICY.md`
+- Opera bajo las reglas de `09_IA_AGENTES_Y_COPILOTOS/Politicas_Uso_IA/AI_Usage_Policy_v0_4_0.md`
 - Siempre presenta un plan antes de modificar archivos
 - No tiene autorización para cambiar el alcance del MVP
 
@@ -136,12 +136,12 @@ Cambios de alcance requieren:
 
 | Documento | Propósito |
 |---|---|
-| `AI_USAGE_POLICY.md` | Reglas para el uso de agentes IA |
+| `09_IA_AGENTES_Y_COPILOTOS/Politicas_Uso_IA/AI_Usage_Policy_v0_4_0.md` | Reglas para el uso de agentes IA |
 | `PRIVACY_LOCAL_FIRST.md` | Política de privacidad del MVP |
 | `DECISION_LOG.md` | Registro cronológico de decisiones |
 | `RISK_REGISTER.md` | Riesgos técnicos, éticos y operativos |
 | `REVIEW_CHECKLIST.md` | Lista de verificación antes de aceptar cambios |
 | `RELEASE_CRITERIA.md` | Criterios para considerar el MVP funcional |
 | `CONTRIBUTING.md` | Cómo contribuir al proyecto |
-| `../docs/EVOLUCION_APP.md` | Historia técnica y hoja de ruta |
+| `20_MANTENIMIENTO_Y_EVOLUCION/Planes_Evolucion/Evolucion_App_v0_4_0.md` | Historia técnica y hoja de ruta |
 | `../CHANGELOG.md` | Registro de cambios por versión |

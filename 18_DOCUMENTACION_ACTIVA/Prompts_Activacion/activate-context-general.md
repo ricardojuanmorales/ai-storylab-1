@@ -64,10 +64,10 @@ CRITERIOS DE ACEPTACIÓN:
 
 | Prompt | Cuándo usarlo |
 |---|---|
-| `activation-prompts/activate-debugging.md` | Cuando hay un bug o comportamiento inesperado |
-| `task-prompts/build-localstorage.md` | Para trabajar en la capa de persistencia |
-| `task-prompts/build-structure.md` | Para crear o refactorizar componentes |
-| `task-prompts/build-group-dashboard.md` | Para el dashboard grupal del facilitador |
-| `task-prompts/build-final-submission.md` | Para la estación de entrega final |
-| `review-prompts/review-architecture.md` | Para auditar la arquitectura general |
-| `review-prompts/review-privacy.md` | Para verificar cumplimiento de privacidad |
+| `18_DOCUMENTACION_ACTIVA/Prompts_Activacion/activate-debugging.md` | Cuando hay un bug o comportamiento inesperado |
+| `18_DOCUMENTACION_ACTIVA/Prompts_de_Sesion/build-localstorage.md` | Para trabajar en la capa de persistencia |
+| `18_DOCUMENTACION_ACTIVA/Prompts_de_Sesion/build-structure.md` | Para crear o refactorizar componentes |
+| `18_DOCUMENTACION_ACTIVA/Prompts_de_Sesion/build-group-dashboard.md` | Para el dashboard grupal del facilitador |
+| `18_DOCUMENTACION_ACTIVA/Prompts_de_Sesion/build-final-submission.md` | Para la estación de entrega final |
+| `18_DOCUMENTACION_ACTIVA/Prompts_de_Sesion/review-architecture.md` | Para auditar la arquitectura general |
+| `18_DOCUMENTACION_ACTIVA/Prompts_de_Sesion/review-privacy.md` | Para verificar cumplimiento de privacidad |
