@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.2.0",
+  "competencies": [
+    {
+      "competency_id": "C_ETICA",
+      "name": "Ética en el uso de IA",
+      "description": "Tomar decisiones honestas, transparentes y respetuosas al crear con inteligencia artificial."
+    },
+    {
+      "competency_id": "C_CIUDADANIA_DIGITAL",
+      "name": "Ciudadanía digital",
+      "description": "Actuar con responsabilidad, seguridad y respeto en entornos digitales."
+    },
+    {
+      "competency_id": "C_COMUNICACION",
+      "name": "Comunicación",
+      "description": "Expresar ideas con claridad a través de texto, voz e imagen para una audiencia."
+    },
+    {
+      "competency_id": "C_PENSAMIENTO_CRITICO",
+      "name": "Pensamiento crítico",
+      "description": "Analizar, cuestionar y evaluar información y decisiones creativas."
+    },
+    {
+      "competency_id": "C_CREATIVIDAD",
+      "name": "Creatividad",
+      "description": "Generar ideas originales y soluciones expresivas para contar historias."
+    },
+    {
+      "competency_id": "C_ALFABETIZACION_IA",
+      "name": "Alfabetización en IA",
+      "description": "Comprender cómo funcionan las herramientas de IA y usarlas con criterio."
+    },
+    {
+      "competency_id": "C_RESOLUCION_PROBLEMAS",
+      "name": "Resolución de problemas",
+      "description": "Enfrentar retos técnicos y creativos con estrategias efectivas."
+    }
+  ]
+}

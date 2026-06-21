@@ -11,11 +11,5 @@ export default defineConfig({
   },
   test: {
     environment: "node",
-    include: ["src/**/*.{test,spec}.{js,jsx,ts,tsx}"],
-    exclude: [
-      "**/node_modules/**",
-      "**/dist/**",
-      "99_ARCHIVO_HISTORICO/**",
-    ],
   },
 });

@@ -1,0 +1,305 @@
+{
+  "schema_version": "0.3.0",
+  "phases": [
+    { "id": "fundamentos", "label": "Fundamentos Éticos", "color": "#6d28d9" },
+    { "id": "narrativa", "label": "Construcción Narrativa", "color": "#0e7490" },
+    { "id": "produccion", "label": "Producción Multimedia", "color": "#b45309" },
+    { "id": "curaduria", "label": "Curaduría y Entrega", "color": "#15803d" }
+  ],
+  "sessions": [
+    {
+      "session_id": "S1",
+      "number": 1,
+      "title": "Brújula Ética",
+      "phase": "fundamentos",
+      "guiding_question": "¿Qué principios éticos guiarán mi uso de la IA en esta historia?",
+      "mentor_message": "Toda gran historia empieza con una brújula. Antes de crear, decide qué es justo, honesto y respetuoso para ti.",
+      "objectives": [
+        "Reconocer riesgos y oportunidades del uso de IA",
+        "Definir principios éticos personales del proyecto",
+        "Comprender derechos de autor y atribución"
+      ],
+      "ludic_activity": "Dilema relámpago: en parejas, decidan en 60 segundos si tres usos de IA son éticos, dudosos o no éticos y por qué.",
+      "ludic_config": {
+        "type": "ethics_dilemma",
+        "title": "Dilema Relámpago",
+        "instructions": "Para cada uso de IA, decide si es Ético, Dudoso o No ético. Justifica tu decisión.",
+        "dilemmas": [
+          "Usar IA para generar imágenes de personas reales sin su permiso",
+          "Usar IA para corregir errores gramaticales en un texto que escribiste tú",
+          "Usar IA para escribir todo el ensayo y firmarlo como si fuera solo tuyo"
+        ],
+        "options": ["Ético", "Dudoso", "No ético"],
+        "manifesto_label": "A partir de tus decisiones, escribe las 3 reglas de tu Manifiesto Ético:",
+        "manifesto_placeholder": "Regla 1: Siempre declararé cuándo uso IA...\nRegla 2: ...\nRegla 3: ..."
+      },
+      "suggested_prompt": "Soy estudiante de [grado]. Ayúdame a pensar en tres principios éticos que debería seguir al usar IA en un proyecto escolar multimedia. Explica cada uno con un ejemplo concreto de lo que SÍ haría y lo que NO haría.",
+      "task_instructions": "Redacta tu manifiesto ético: tres reglas que prometes seguir al usar IA en tu historia.",
+      "expected_product": "Manifiesto ético de 3 reglas",
+      "badge_id": "B1",
+      "tool_default": "Documento de texto",
+      "evidence_fields": ["evidence_summary", "human_decision", "ethical_reflection"],
+      "glossary_terms": ["G01", "G03", "G04", "G13", "G14", "G15"]
+    },
+    {
+      "session_id": "S2",
+      "number": 2,
+      "title": "Idea Central",
+      "phase": "fundamentos",
+      "guiding_question": "¿Cuál es el mensaje central que mi historia quiere dejar?",
+      "mentor_message": "Una idea clara vale más que mil efectos. Encuentra el corazón de tu historia.",
+      "objectives": [
+        "Definir tema, audiencia y propósito educativo",
+        "Formular el mensaje central en una frase",
+        "Identificar el enfoque ético de la historia"
+      ],
+      "ludic_activity": "Logline en una línea: escribe tu historia en máximo 25 palabras y léela al equipo.",
+      "ludic_config": {
+        "type": "word_counter",
+        "title": "Logline en una línea",
+        "instructions": "Escribe la esencia de tu historia en máximo 25 palabras. ¡Cada palabra cuenta!",
+        "logline_label": "Tu logline (máx. 25 palabras):",
+        "logline_placeholder": "Una historia sobre [quién] que [qué quiere] y descubre que [mensaje central]...",
+        "max_words": 25,
+        "extra_fields": [
+          { "key": "tema", "label": "Tema principal", "placeholder": "¿De qué trata tu historia en esencia?" },
+          { "key": "audiencia", "label": "Audiencia objetivo", "placeholder": "¿Para quién es esta historia?" },
+          { "key": "proposito", "label": "Propósito educativo", "placeholder": "¿Qué aprenderá quien la vea?" },
+          { "key": "enfoque_etico", "label": "Enfoque ético", "placeholder": "¿Qué valor o dilema ético explora?" }
+        ]
+      },
+      "suggested_prompt": "Tengo una historia sobre [tema] para una audiencia de [audiencia]. Ayúdame a escribir una logline de máximo 25 palabras que capture el mensaje central. Dame 3 opciones diferentes con distintos enfoques.",
+      "task_instructions": "Completa tema, audiencia, propósito educativo y enfoque ético del proyecto.",
+      "expected_product": "Ficha de idea central (logline + propósito)",
+      "badge_id": "B2",
+      "tool_default": "Documento de texto",
+      "evidence_fields": ["evidence_summary", "human_decision", "ethical_reflection"],
+      "glossary_terms": ["G07", "G12", "G16", "G17", "G18"]
+    },
+    {
+      "session_id": "S3",
+      "number": 3,
+      "title": "Avatar o Avatares",
+      "phase": "narrativa",
+      "guiding_question": "¿Quién protagoniza mi historia y qué lo hace creíble?",
+      "mentor_message": "Tus personajes son la voz de tu mensaje. Diséñalos con intención y respeto.",
+      "objectives": [
+        "Diseñar el o los personajes principales",
+        "Definir nombre, rasgos y motivación del avatar",
+        "Decidir qué partes crea la IA y cuáles la persona"
+      ],
+      "ludic_activity": "Ficha exprés: completa la tarjeta del avatar (nombre, deseo, miedo, superpoder narrativo).",
+      "ludic_config": {
+        "type": "card_form",
+        "title": "Ficha Exprés del Avatar",
+        "instructions": "Completa la tarjeta de tu personaje principal. Esta ficha será el corazón de tu historia.",
+        "fields": [
+          { "key": "nombre", "label": "Nombre del avatar", "placeholder": "¿Cómo se llama tu personaje?" },
+          { "key": "deseo", "label": "Deseo central", "placeholder": "¿Qué quiere lograr más que nada en el mundo?" },
+          { "key": "miedo", "label": "Miedo o limitación", "placeholder": "¿Qué le impide lograrlo? ¿Qué le da miedo?" },
+          { "key": "superpoder", "label": "Superpoder narrativo", "placeholder": "¿Qué habilidad o cualidad única lo define como personaje?" }
+        ]
+      },
+      "suggested_prompt": "Estoy creando un personaje para mi historia sobre [tema]. Ayúdame a desarrollar 2 opciones de personaje con: nombre, deseo central, miedo principal y superpoder narrativo (algo especial que lo hace único). Que sea apropiado para [audiencia].",
+      "task_instructions": "Describe tu avatar principal y registra qué decisión humana tomaste sobre su diseño.",
+      "expected_product": "Ficha de avatar(es)",
+      "badge_id": "B3",
+      "tool_default": "Generador de imágenes IA",
+      "evidence_fields": ["evidence_summary", "tool_used", "prompt_used", "human_decision", "ethical_reflection"],
+      "glossary_terms": ["G02", "G19", "G20", "G21", "G22"]
+    },
+    {
+      "session_id": "S4",
+      "number": 4,
+      "title": "Narrativa",
+      "phase": "narrativa",
+      "guiding_question": "¿Cómo se estructura mi historia de principio a fin?",
+      "mentor_message": "Una buena estructura sostiene la emoción. Ordena tu historia como un viaje.",
+      "objectives": [
+        "Construir inicio, desarrollo y desenlace",
+        "Distribuir la historia en escenas o diapositivas",
+        "Mantener coherencia con el mensaje central"
+      ],
+      "ludic_activity": "Tres actos en tres post-its: resume tu historia en inicio, nudo y final.",
+      "ludic_config": {
+        "type": "three_acts",
+        "title": "Tres Actos en Tres Post-its",
+        "instructions": "Divide tu historia en tres momentos clave. Sé concreto: ¿qué pasa exactamente en cada parte?",
+        "acts": [
+          { "key": "inicio", "label": "Inicio", "color": "#6d28d9", "placeholder": "¿Cómo comienza la historia? ¿Quién es el personaje y cuál es su situación inicial?" },
+          { "key": "nudo", "label": "Nudo", "color": "#b45309", "placeholder": "¿Cuál es el conflicto o problema central? ¿Qué desafío enfrenta el personaje?" },
+          { "key": "final", "label": "Final", "color": "#15803d", "placeholder": "¿Cómo se resuelve? ¿Qué aprende el personaje? ¿Cuál es el mensaje final?" }
+        ]
+      },
+      "suggested_prompt": "Mi personaje es [nombre] que quiere [deseo] pero teme [miedo]. Ayúdame a estructurar una historia en tres actos (inicio, nudo, final) sobre [tema] para [audiencia]. La historia debe transmitir un mensaje sobre [enfoque ético]. Dame una versión de 3-5 oraciones por acto.",
+      "task_instructions": "Escribe el guion o esquema de escenas de tu historia (mínimo inicio-nudo-desenlace).",
+      "expected_product": "Guion o storyboard textual",
+      "badge_id": "B4",
+      "tool_default": "Documento / Guion",
+      "evidence_fields": ["evidence_summary", "tool_used", "prompt_used", "human_decision", "ethical_reflection"],
+      "glossary_terms": ["G08", "G23", "G24", "G25", "G26"]
+    },
+    {
+      "session_id": "S5",
+      "number": 5,
+      "title": "Mundo Visual",
+      "phase": "narrativa",
+      "guiding_question": "¿Qué estilo visual representa mejor mi historia?",
+      "mentor_message": "El color y la forma también cuentan. Construye un mundo que se vea como suena tu mensaje.",
+      "objectives": [
+        "Definir paleta, estilo e imágenes clave",
+        "Generar o seleccionar recursos visuales con criterio ético",
+        "Atribuir correctamente los recursos usados"
+      ],
+      "ludic_activity": "Moodboard relámpago: elige 3 imágenes o colores que definan tu historia y explica por qué.",
+      "ludic_config": {
+        "type": "moodboard",
+        "title": "Moodboard Relámpago",
+        "instructions": "Elige 3 elementos visuales (imágenes, colores o estilos) que definan el ambiente de tu historia. Explica qué comunica cada uno.",
+        "slots": [
+          { "index": 1, "element_label": "Elemento visual 1", "element_placeholder": "Ej: azul marino, ciudad nocturna, manos dibujadas...", "reason_label": "¿Por qué representa tu historia?", "reason_placeholder": "Este elemento comunica..." },
+          { "index": 2, "element_label": "Elemento visual 2", "element_placeholder": "Ej: luz cálida, naturaleza, colores tierra...", "reason_label": "¿Por qué representa tu historia?", "reason_placeholder": "Este elemento comunica..." },
+          { "index": 3, "element_label": "Elemento visual 3", "element_placeholder": "Ej: tipografía gruesa, siluetas, contrastes fuertes...", "reason_label": "¿Por qué representa tu historia?", "reason_placeholder": "Este elemento comunica..." }
+        ],
+        "style_label": "Estilo visual general",
+        "style_placeholder": "Ej: ilustración digital, fotografía, collage, minimalista..."
+      },
+      "suggested_prompt": "Mi historia se llama [título] y trata de [tema]. El personaje principal es [nombre del avatar]. Crea un prompt detallado para un generador de imágenes IA que capture el estilo visual ideal para esta historia. El resultado debe ser apropiado para estudiantes de [grado] y no incluir contenido violento o inapropiado.",
+      "task_instructions": "Registra el estilo visual elegido, las herramientas usadas y los prompts si generaste imágenes con IA.",
+      "expected_product": "Mundo visual (moodboard + recursos)",
+      "badge_id": "B5",
+      "tool_default": "Generador de imágenes IA",
+      "evidence_fields": ["evidence_summary", "tool_used", "prompt_used", "human_decision", "ethical_reflection"],
+      "glossary_terms": ["G05", "G27", "G28", "G29", "G30"]
+    },
+    {
+      "session_id": "S6",
+      "number": 6,
+      "title": "Voz y Sonido",
+      "phase": "produccion",
+      "guiding_question": "¿Cómo suena mi historia y qué emoción transmite la voz?",
+      "mentor_message": "La voz da vida. Decide qué dirás tú y qué dejarás a la IA, siempre con transparencia.",
+      "objectives": [
+        "Grabar o generar la voz en off (VoiceOver)",
+        "Seleccionar música o efectos respetando licencias",
+        "Declarar qué audio es humano y qué es IA"
+      ],
+      "ludic_activity": "Lectura dramatizada: graba 20 segundos de tu narración con tu mejor voz.",
+      "ludic_config": {
+        "type": "reflection_check",
+        "title": "Lectura Dramatizada",
+        "instructions": "Graba 20 segundos de tu narración con tu mejor voz. Luego reflexiona sobre tu experiencia de producción de audio.",
+        "fields": [
+          { "key": "fragmento", "label": "Texto que narraste (primeras 2-3 oraciones)", "placeholder": "Escribe el fragmento exacto que grabaste o generaste con TTS..." },
+          { "key": "emocion", "label": "Emoción que quisiste transmitir", "placeholder": "Ej: suspenso, alegría, reflexión, urgencia..." },
+          { "key": "decision_voz", "label": "¿Usaste tu propia voz, voz IA (TTS) o combinación? ¿Por qué?", "placeholder": "Decidí usar [voz propia / TTS / combinación] porque..." }
+        ]
+      },
+      "suggested_prompt": "Tengo este fragmento de narración para mi historia: '[pega tu texto aquí]'. Ayúdame a reescribirlo para que suene más expresivo y emocionante cuando se lea en voz alta. La audiencia es [audiencia] y la emoción principal que quiero transmitir es [emoción]. Mantenlo en español y en un nivel adecuado para [grado].",
+      "task_instructions": "Registra cómo creaste el audio (voz propia o IA), las herramientas y la declaración de uso.",
+      "expected_product": "Pista de voz y sonido",
+      "badge_id": "B6",
+      "tool_default": "Grabadora / TTS",
+      "evidence_fields": ["evidence_summary", "tool_used", "prompt_used", "human_decision", "ethical_reflection"],
+      "glossary_terms": ["G09", "G31", "G32", "G33", "G34"]
+    },
+    {
+      "session_id": "S7",
+      "number": 7,
+      "title": "Prototipo",
+      "phase": "produccion",
+      "guiding_question": "¿Cómo se integra todo en un primer borrador jugable?",
+      "mentor_message": "Un prototipo no es perfecto, es valiente. Une tus piezas y míralo funcionar.",
+      "objectives": [
+        "Ensamblar diapositivas, voz y visuales en PowerPoint",
+        "Probar el flujo completo de la historia",
+        "Detectar mejoras antes de la curaduría final"
+      ],
+      "ludic_activity": "Pase de prueba: presenta tu prototipo a otro equipo y anota una mejora sugerida.",
+      "ludic_config": {
+        "type": "peer_feedback",
+        "title": "Pase de Prueba",
+        "instructions": "Presenta tu prototipo a otro equipo. Escucha con atención y registra el intercambio.",
+        "fields": [
+          { "key": "presentado_a", "label": "¿A quién le presentaste tu prototipo?", "placeholder": "Nombre del equipo o estudiante que lo revisó..." },
+          { "key": "mejora_recibida", "label": "¿Qué mejora te sugirieron?", "placeholder": "El equipo/compañero sugirió que..." },
+          { "key": "decision_implementar", "label": "¿Qué decidiste implementar y por qué?", "placeholder": "Decidí implementar [X] porque mejora [Y] de mi historia..." },
+          { "key": "estado_prototipo", "label": "Estado actual del prototipo", "placeholder": "Describe brevemente qué tiene ya integrado (diapositivas, voz, imágenes)..." }
+        ]
+      },
+      "suggested_prompt": "Tengo un prototipo de historia multimedia en PowerPoint sobre [tema] para [audiencia]. Un compañero sugirió que [mejora sugerida]. Ayúdame a pensar cómo implementar esta mejora dentro de PowerPoint. Dame 2 opciones concretas y cuál recomendarías para mi audiencia.",
+      "task_instructions": "Registra el estado del prototipo, qué funcionó y qué decisión humana de ajuste tomaste.",
+      "expected_product": "Prototipo PowerPoint con VoiceOver",
+      "badge_id": "B7",
+      "tool_default": "PowerPoint",
+      "evidence_fields": ["evidence_summary", "tool_used", "human_decision", "ethical_reflection"],
+      "glossary_terms": ["G35", "G36", "G37", "G38", "G09"]
+    },
+    {
+      "session_id": "S8",
+      "number": 8,
+      "title": "Curaduría Final",
+      "phase": "curaduria",
+      "guiding_question": "¿Qué debo pulir para que mi historia comunique con claridad y ética?",
+      "mentor_message": "Curar es elegir con cuidado. Revisa créditos, ritmo y mensaje antes de exportar.",
+      "objectives": [
+        "Revisar coherencia, créditos y atribuciones",
+        "Verificar declaración de uso de IA",
+        "Preparar la exportación a video MP4"
+      ],
+      "ludic_activity": "Lista de chequeo: marca créditos, declaración de IA, calidad de audio y duración.",
+      "ludic_config": {
+        "type": "checklist",
+        "title": "Lista de Chequeo Final",
+        "instructions": "Antes de exportar, verifica que tu historia cumple con todos los criterios de calidad y ética.",
+        "items": [
+          { "key": "creditos", "label": "Créditos incluidos: cité todas las herramientas de IA y recursos usados (imágenes, música, fuentes)" },
+          { "key": "declaracion_ia", "label": "Declaración de IA: expliqué claramente qué generé con IA y qué decidí o creé yo" },
+          { "key": "calidad_audio", "label": "Calidad de audio: la narración se escucha clara, sin ruido excesivo y en el volumen correcto" },
+          { "key": "duracion", "label": "Duración: el video cumple con el tiempo requerido para la entrega" },
+          { "key": "privacidad", "label": "Privacidad: no incluí información personal sensible de ninguna persona real sin su consentimiento" }
+        ],
+        "notes_label": "Notas adicionales o ajustes realizados:",
+        "notes_placeholder": "Describe qué cambios hiciste durante la curaduría..."
+      },
+      "suggested_prompt": "Usé las siguientes herramientas de IA en mi proyecto multimedia: [lista las herramientas]. Ayúdame a redactar una declaración de uso de IA honesta y completa. Debe indicar qué partes creé yo y en qué partes me asistió la IA. El tono debe ser apropiado para un proyecto escolar.",
+      "task_instructions": "Registra los ajustes finales, la revisión de privacidad y la declaración de uso de IA.",
+      "expected_product": "Versión final lista para exportar",
+      "badge_id": "B8",
+      "tool_default": "PowerPoint",
+      "evidence_fields": ["evidence_summary", "human_decision", "ethical_reflection"],
+      "glossary_terms": ["G11", "G05", "G39", "G40", "G41"]
+    },
+    {
+      "session_id": "S9",
+      "number": 9,
+      "title": "Premier y Entrega Final",
+      "phase": "curaduria",
+      "guiding_question": "¿Cómo presento y entrego mi historia con orgullo y responsabilidad?",
+      "mentor_message": "Llegó la premier. Comparte tu historia, registra la entrega y celebra tu huella de aprendizaje.",
+      "objectives": [
+        "Exportar el video final en MP4",
+        "Registrar los metadatos de la entrega",
+        "Presentar la historia en la premier"
+      ],
+      "ludic_activity": "Alfombra roja: presenta tu historia en 1 minuto y recibe aplausos del grupo.",
+      "ludic_config": {
+        "type": "reflection",
+        "title": "Alfombra Roja",
+        "instructions": "¡Llegó tu premier! Prepara tu pitch de 1 minuto y reflexiona sobre todo el proceso.",
+        "fields": [
+          { "key": "pitch", "label": "Tu pitch de 1 minuto (escríbelo para practicar)", "placeholder": "Mi historia se llama [título] y trata sobre... El mensaje central es... Lo más especial es que..." },
+          { "key": "sentimiento", "label": "¿Cómo te sentiste presentando tu historia?", "placeholder": "Me sentí... porque..." },
+          { "key": "aprendizaje", "label": "¿Cuál fue tu aprendizaje más importante en AI StoryLab?", "placeholder": "Lo más importante que aprendí fue..." }
+        ]
+      },
+      "suggested_prompt": "Completé mi historia multimedia titulada [título] sobre [tema] usando IA de manera ética. Ayúdame a preparar un pitch de exactamente 1 minuto (aprox. 130 palabras en español) para presentar mi proyecto. Debe incluir: el título, el mensaje central, cómo usé la IA de forma responsable, y por qué esta historia es importante para [audiencia].",
+      "task_instructions": "Completa la Estación de Entrega Final con los metadatos del video y las validaciones.",
+      "expected_product": "Video MP4 entregado + metadatos registrados",
+      "badge_id": "B9",
+      "tool_default": "Exportador de video",
+      "evidence_fields": ["evidence_summary", "human_decision", "ethical_reflection"],
+      "glossary_terms": ["G06", "G10", "G42", "G43", "G12"]
+    }
+  ]
+}
