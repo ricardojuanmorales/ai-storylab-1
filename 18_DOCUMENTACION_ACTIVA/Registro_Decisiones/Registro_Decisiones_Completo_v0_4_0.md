@@ -19,3 +19,24 @@ Documento rector inicial. Debe completarse mediante decisión, spec o revisión 
 ## Contenido inicial
 
 Pendiente de desarrollo controlado.
+
+
+---
+
+## ASTL-V040-DEC-010 · Cierre de migración estructural N3
+
+**Fecha:** 2026-06-21  
+**Estado:** Aprobada para PR Draft  
+**Contexto:** Se aplicó la estructura N3 Foundation `v0.4.0`, se migraron documentos heredados mediante `git mv`, se actualizaron referencias activas principales y se validó que el proyecto continúa compilando y pasando pruebas.
+
+**Decisión:** Mantener el PR #3 como Draft hasta completar revisión humana final, pero considerar cerrada la fase de migración estructural inicial.
+
+**Validaciones:**
+- `npm run test`: aprobado, 20/20 pruebas.
+- `npm run build`: aprobado.
+- Merge local contra `origin/main`: sin conflictos.
+- Principio local-first conservado.
+- No se activó backend, autenticación, base de datos remota, APIs externas ni subida automática de archivos.
+
+**Impacto:** La documentación heredada queda reubicada bajo la estructura N3. Los documentos históricos conservan referencias antiguas cuando cumplen función de memoria del proceso.
+
