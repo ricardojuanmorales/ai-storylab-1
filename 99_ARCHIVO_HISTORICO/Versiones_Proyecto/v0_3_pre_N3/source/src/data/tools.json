@@ -1,0 +1,223 @@
+{
+  "schema_version": "0.3.0",
+  "tool_types": ["Texto", "Imagen", "Audio", "Presentación", "Video", "Organización"],
+  "difficulties": ["básica", "intermedia", "avanzada"],
+  "privacy_levels": ["local", "requiere cuenta", "datos en la nube"],
+  "categories": [
+    {
+      "id": "Texto",
+      "label": "Escritura y Texto",
+      "icon": "✍️",
+      "color": "#6d28d9",
+      "phase": "fundamentos",
+      "description": "Herramientas para redactar manifiestos, guiones, loglines y evidencias del proyecto.",
+      "strategies": [
+        "Escribe primero en borrador libre, sin preocuparte por el formato",
+        "Usa la IA para mejorar o corregir tu texto, no para escribirlo desde cero",
+        "Guarda versiones intermedias con fecha para rastrear tu progreso",
+        "Revisa que el mensaje central aparezca claro en el texto antes de finalizar"
+      ],
+      "recommended_prompts": [
+        "Corrige los errores gramaticales de este texto sin cambiar mi estilo personal: [pega tu texto]",
+        "Sugiere tres maneras de hacer este párrafo más claro y directo: [pega tu párrafo]",
+        "Ayúdame a escribir tres reglas éticas para mi proyecto de historia multimedia sobre [tema]"
+      ],
+      "teacher_note": "Herramientas recomendadas para tu institución: edita este campo en tools.json. Ejemplo: Word, Google Docs, LibreOffice Writer."
+    },
+    {
+      "id": "Imagen",
+      "label": "Imágenes y Diseño Visual",
+      "icon": "🖼️",
+      "color": "#0e7490",
+      "phase": "narrativa",
+      "description": "Herramientas para crear o buscar imágenes que den vida al mundo visual de la historia.",
+      "strategies": [
+        "Describe el estilo antes del sujeto: 'ilustración digital de...' o 'fotografía realista de...'",
+        "Especifica la audiencia: 'apropiado para estudiantes de [grado], sin violencia ni contenido inapropiado'",
+        "Indica la emoción que debe transmitir la imagen: 'que inspire esperanza y curiosidad'",
+        "Para personajes, describe rasgos específicos para consistencia entre imágenes",
+        "Usa bancos de imágenes libres (CC) cuando sea posible para simplificar la atribución"
+      ],
+      "recommended_prompts": [
+        "Ilustración digital de [descripción de escena], estilo [estilo], colores [paleta], para audiencia escolar",
+        "Retrato de personaje llamado [nombre]: [descripción física], expresión [emoción], fondo [ambiente]",
+        "Moodboard visual para historia sobre [tema]: combina [elemento 1], [elemento 2] y [elemento 3]"
+      ],
+      "teacher_note": "Herramientas recomendadas para tu institución: edita este campo en tools.json. Ejemplo: Canva IA, Adobe Firefly (educativo), banco de imágenes CC."
+    },
+    {
+      "id": "Audio",
+      "label": "Voz y Sonido",
+      "icon": "🎙️",
+      "color": "#b45309",
+      "phase": "produccion",
+      "description": "Herramientas para grabar la voz propia o generar narración con IA (TTS), más efectos y música.",
+      "strategies": [
+        "Graba en un lugar tranquilo, con el micrófono cerca de la boca pero no demasiado",
+        "Lee el texto en voz alta antes de grabar para identificar partes difíciles",
+        "Si usas TTS (voz IA), elige una voz que coincida con el tono de la historia",
+        "Declara siempre si la voz es humana, IA o una combinación de ambas",
+        "Para música, usa solo recursos con licencia libre (CC) o de dominio público"
+      ],
+      "recommended_prompts": [
+        "Reescribe este texto para que suene más expresivo al leerse en voz alta: [texto]. La emoción es [emoción]",
+        "Crea una lista de 5 efectos de sonido apropiados para una escena de [descripción de escena]",
+        "Sugiere palabras y frases que den ritmo y fluidez a esta narración: [pega tu texto]"
+      ],
+      "teacher_note": "Herramientas recomendadas para tu institución: edita este campo en tools.json. Ejemplo: grabadora del sistema, Audacity, ElevenLabs (con cuenta)."
+    },
+    {
+      "id": "Presentación",
+      "label": "Presentación Multimedia",
+      "icon": "📊",
+      "color": "#15803d",
+      "phase": "produccion",
+      "description": "Herramientas para ensamblar diapositivas, VoiceOver y visuales en la historia final.",
+      "strategies": [
+        "Define la estructura (número de diapositivas) antes de diseñar cada una",
+        "Una idea principal por diapositiva: menos texto, más imagen y narración",
+        "Graba o inserta el VoiceOver después de que las diapositivas estén listas",
+        "Usa el modo de presentador para incluir notas del narrador que te guíen",
+        "Revisa la exportación a video antes de entregar para confirmar sincronización"
+      ],
+      "recommended_prompts": [
+        "Sugiere cómo distribuir una historia de tres actos en [N] diapositivas de PowerPoint",
+        "Dame ideas para el diseño visual de una diapositiva de apertura sobre [tema de la historia]",
+        "¿Qué información debo incluir en la diapositiva de créditos y declaración de uso de IA?"
+      ],
+      "teacher_note": "Herramientas recomendadas para tu institución: edita este campo en tools.json. Ejemplo: Microsoft PowerPoint, Google Slides, Canva Presentaciones."
+    },
+    {
+      "id": "Video",
+      "label": "Exportación a Video",
+      "icon": "🎬",
+      "color": "#be185d",
+      "phase": "curaduria",
+      "description": "Herramientas para exportar la presentación final como video MP4 listo para entregar.",
+      "strategies": [
+        "Exporta en formato MP4 para máxima compatibilidad",
+        "Verifica que el audio del VoiceOver está incluido en el video exportado",
+        "Comprime el video si supera el límite de tamaño para la entrega",
+        "Revisa el video completo una vez exportado antes de entregar",
+        "Guarda una copia de respaldo del archivo de presentación original"
+      ],
+      "recommended_prompts": [
+        "¿Cuáles son los pasos para exportar una presentación de PowerPoint como video MP4 en [versión]?",
+        "¿Cómo comprimir un video MP4 sin perder mucha calidad usando [herramienta]?",
+        "¿Qué configuración de resolución y calidad recomiendas para un video escolar de 3-5 minutos?"
+      ],
+      "teacher_note": "Herramientas recomendadas para tu institución: edita este campo en tools.json. Ejemplo: PowerPoint (Exportar > Crear video), Handbrake (comprimir)."
+    },
+    {
+      "id": "Organización",
+      "label": "Organización y Planificación",
+      "icon": "📋",
+      "color": "#64748b",
+      "phase": "narrativa",
+      "description": "Herramientas para planificar escenas, tareas y créditos del proyecto de forma organizada.",
+      "strategies": [
+        "Usa un tablero visual (físico o digital) para ver el progreso de todo el equipo",
+        "Asigna una tarea específica a cada integrante del equipo con fecha límite",
+        "Registra los créditos de cada recurso mientras los usas, no al final",
+        "Revisa el avance al inicio de cada sesión de trabajo",
+        "Guarda el guion y el storyboard en un lugar accesible para todo el equipo"
+      ],
+      "recommended_prompts": [
+        "Ayúdame a crear una lista de tareas para completar un video multimedia escolar en [N] sesiones",
+        "¿Cómo organizar los créditos de una historia que usó imágenes CC, música libre y voz IA?",
+        "Crea una plantilla simple de storyboard para una historia de [N] escenas con VoiceOver"
+      ],
+      "teacher_note": "Herramientas recomendadas para tu institución: edita este campo en tools.json. Ejemplo: tablero físico de post-its, Trello (gratuito), Google Keep."
+    }
+  ],
+  "tools": [
+    {
+      "tool_id": "T01",
+      "name": "Procesador de texto",
+      "type": "Texto",
+      "sessions": ["S1", "S2", "S4"],
+      "phase": "fundamentos",
+      "difficulty": "básica",
+      "privacy": "local",
+      "description": "Editor de documentos para manifiestos, ideas y guiones.",
+      "example": "Word, Google Docs, LibreOffice"
+    },
+    {
+      "tool_id": "T02",
+      "name": "Generador de imágenes IA",
+      "type": "Imagen",
+      "sessions": ["S3", "S5"],
+      "phase": "narrativa",
+      "difficulty": "intermedia",
+      "privacy": "requiere cuenta",
+      "description": "Crea imágenes a partir de prompts de texto. Recuerda declarar su uso.",
+      "example": "Herramienta de texto-a-imagen aprobada por el facilitador"
+    },
+    {
+      "tool_id": "T03",
+      "name": "Banco de imágenes libres",
+      "type": "Imagen",
+      "sessions": ["S5"],
+      "phase": "narrativa",
+      "difficulty": "básica",
+      "privacy": "requiere cuenta",
+      "description": "Imágenes con licencia libre para usar con atribución correcta.",
+      "example": "Bancos con licencia Creative Commons"
+    },
+    {
+      "tool_id": "T04",
+      "name": "Grabadora de voz",
+      "type": "Audio",
+      "sessions": ["S6"],
+      "phase": "produccion",
+      "difficulty": "básica",
+      "privacy": "local",
+      "description": "Graba tu propia narración para el VoiceOver.",
+      "example": "Grabadora del sistema, Audacity"
+    },
+    {
+      "tool_id": "T05",
+      "name": "Voz por IA (TTS)",
+      "type": "Audio",
+      "sessions": ["S6"],
+      "phase": "produccion",
+      "difficulty": "intermedia",
+      "privacy": "datos en la nube",
+      "description": "Convierte texto en voz. Declara cuándo la voz es generada por IA.",
+      "example": "Herramienta de texto-a-voz aprobada"
+    },
+    {
+      "tool_id": "T06",
+      "name": "PowerPoint",
+      "type": "Presentación",
+      "sessions": ["S7", "S8"],
+      "phase": "produccion",
+      "difficulty": "intermedia",
+      "privacy": "local",
+      "description": "Ensambla diapositivas con VoiceOver y exporta a video.",
+      "example": "Microsoft PowerPoint"
+    },
+    {
+      "tool_id": "T07",
+      "name": "Exportador de video",
+      "type": "Video",
+      "sessions": ["S9"],
+      "phase": "curaduria",
+      "difficulty": "intermedia",
+      "privacy": "local",
+      "description": "Exporta la presentación final como video MP4 para la entrega.",
+      "example": "Exportar como video en PowerPoint"
+    },
+    {
+      "tool_id": "T08",
+      "name": "Tablero de planificación",
+      "type": "Organización",
+      "sessions": ["S4", "S7"],
+      "phase": "narrativa",
+      "difficulty": "básica",
+      "privacy": "local",
+      "description": "Organiza escenas, tareas y créditos del proyecto.",
+      "example": "Tablero físico o digital de notas"
+    }
+  ]
+}

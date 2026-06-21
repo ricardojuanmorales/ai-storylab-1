@@ -1,0 +1,95 @@
+{
+  "schema_version": "0.2.0",
+  "badges": [
+    {
+      "badge_id": "B1",
+      "session_id": "S1",
+      "name": "Brújula Ética",
+      "icon": "compass",
+      "color": "#6d28d9",
+      "description": "Definiste tus principios éticos para crear con IA.",
+      "evidence_required": "Manifiesto ético de 3 reglas + reflexión ética.",
+      "competencies": ["C_ETICA", "C_CIUDADANIA_DIGITAL"]
+    },
+    {
+      "badge_id": "B2",
+      "session_id": "S2",
+      "name": "Idea Clara",
+      "icon": "lightbulb",
+      "color": "#6d28d9",
+      "description": "Formulaste el mensaje central de tu historia.",
+      "evidence_required": "Logline + propósito educativo + enfoque ético.",
+      "competencies": ["C_COMUNICACION", "C_PENSAMIENTO_CRITICO"]
+    },
+    {
+      "badge_id": "B3",
+      "session_id": "S3",
+      "name": "Creador de Avatares",
+      "icon": "mask",
+      "color": "#0e7490",
+      "description": "Diseñaste personajes creíbles con decisiones humanas.",
+      "evidence_required": "Ficha de avatar + decisión humana sobre el diseño.",
+      "competencies": ["C_CREATIVIDAD", "C_ALFABETIZACION_IA"]
+    },
+    {
+      "badge_id": "B4",
+      "session_id": "S4",
+      "name": "Arquitecto Narrativo",
+      "icon": "book",
+      "color": "#0e7490",
+      "description": "Estructuraste tu historia con inicio, nudo y desenlace.",
+      "evidence_required": "Guion o storyboard textual coherente.",
+      "competencies": ["C_COMUNICACION", "C_CREATIVIDAD"]
+    },
+    {
+      "badge_id": "B5",
+      "session_id": "S5",
+      "name": "Diseñador de Mundos",
+      "icon": "palette",
+      "color": "#0e7490",
+      "description": "Construiste un estilo visual con criterio y atribución.",
+      "evidence_required": "Moodboard + herramientas + prompts (si aplica).",
+      "competencies": ["C_CREATIVIDAD", "C_ALFABETIZACION_IA"]
+    },
+    {
+      "badge_id": "B6",
+      "session_id": "S6",
+      "name": "Voz con Propósito",
+      "icon": "mic",
+      "color": "#b45309",
+      "description": "Creaste la voz y el sonido declarando su origen.",
+      "evidence_required": "Pista de voz + declaración humano/IA.",
+      "competencies": ["C_COMUNICACION", "C_ETICA"]
+    },
+    {
+      "badge_id": "B7",
+      "session_id": "S7",
+      "name": "Constructor de Prototipos",
+      "icon": "wrench",
+      "color": "#b45309",
+      "description": "Integraste todo en un primer prototipo funcional.",
+      "evidence_required": "Prototipo PowerPoint con VoiceOver + mejora detectada.",
+      "competencies": ["C_RESOLUCION_PROBLEMAS", "C_CREATIVIDAD"]
+    },
+    {
+      "badge_id": "B8",
+      "session_id": "S8",
+      "name": "Curador Responsable",
+      "icon": "check-shield",
+      "color": "#15803d",
+      "description": "Pulisteis créditos, ética y calidad final.",
+      "evidence_required": "Lista de chequeo + revisión de privacidad e IA.",
+      "competencies": ["C_ETICA", "C_PENSAMIENTO_CRITICO"]
+    },
+    {
+      "badge_id": "B9",
+      "session_id": "S9",
+      "name": "Estrella de la Premier",
+      "icon": "star",
+      "color": "#15803d",
+      "description": "Entregaste tu historia y registraste la premier.",
+      "evidence_required": "Video MP4 entregado + metadatos de entrega.",
+      "competencies": ["C_COMUNICACION", "C_CIUDADANIA_DIGITAL"]
+    }
+  ]
+}
