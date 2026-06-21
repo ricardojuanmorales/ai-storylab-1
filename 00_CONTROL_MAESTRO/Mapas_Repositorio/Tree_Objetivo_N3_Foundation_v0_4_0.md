@@ -1,0 +1,248 @@
+# Tree Ejecutable N3 Foundation Structure v0.4.0
+
+**Uso:** este árbol alimenta el script generador seguro. Cada carpeta debe recibir `README.md`. No toca `src/`, `public/` ni lógica funcional del MVP.
+
+```text
+.specify/
+  memory/
+  specs/
+    Platform_Foundation/
+    Security_Privacy_Baseline/
+    Profile_Progress_JSON/
+    Mission_Engine/
+    Facilitator_Dashboard/
+    Portfolio_Export/
+00_CONTROL_MAESTRO/
+  Control_Versiones/
+    Versiones_Activas/
+    Versiones_Cerradas/
+  Convenciones_Nombres/
+  Indices_Maestros/
+  Manifiestos/
+  Mapas_Repositorio/
+  Protocolos_Cierre_Sesion/
+  Reglas_Colocacion_Documental/
+  Tablas_Ubicacion_Documental/
+01_FUNDAMENTO_FILOSOFICO/
+  Principios/
+  Etica_Creativa/
+  Autonomia_Aprendizaje/
+  Relacion_Humano_Maquina_IA/
+02_ARQUITECTURA_CONCEPTUAL/
+  Modelo_Sistemico/
+  Modelo_Local_First/
+  Modelo_Hibrido_Institucional/
+  Modelo_Pedagogico/
+  Modelo_Datos/
+  Mapas_Relacionales/
+03_METODOLOGIA_Y_FLUJO_DE_TRABAJO/
+  Spec_Driven_Development/
+  Gates_Operacion/
+  Flujo_Humano_Maquina_IA/
+  Rituales_Revision/
+  Transferencia_Simetrica/
+04_GOBERNANZA_ETICA_Y_RIESGOS/
+  Gobernanza_Proyecto/
+  Registro_Decisiones/
+  Riesgos/
+  Excepciones/
+  Derechos_Autoria_Licencias/
+  Revision_Humana/
+05_COMPETENCIAS_Y_PERFILES/
+  Conocimiento_Comun/
+    Bases_Conocimiento/
+      Base_Comun/
+      Paquetes_Semilla/
+      Mapas_Modulares/
+      Convenciones/
+    Invocables/
+      Plantillas/
+      Formatos/
+      Mapas_Familias/
+      Maestros/
+      Derivados/
+      Rutas_Situadas/
+    Caleidoscopio/
+      Lentes/
+      Patrones/
+      Rutas_Recombinacion/
+    Transferencia_Simetrica/
+      Enlaces_Espejo/
+      Criterios_Transferencia/
+    Referencias_Logicas/
+  Programador_Humanista/
+    Perfil_Operativo/
+      Alcance_Operativo/
+      Aplicaciones_Educativas/
+      Arquitectura_Humano_Maquina_IA/
+      Artefactos/
+      Bases_Conocimiento/
+      Competencias/
+      Gobernanza_Perfil/
+      Invocables/
+      Metricas/
+      Transferencia_Simetrica/
+  Investigador_Transdisciplinario/
+    Perfil_Operativo/
+      Alcance_Operativo/
+      Bases_Conocimiento/
+      Competencias/
+      Evidencias/
+      Gobernanza_Perfil/
+      Invocables/
+      Metodologias/
+      Produccion_Academica/
+      Transferencia_Simetrica/
+  Artista_Transdisciplinario/
+    Perfil_Operativo/
+      Alcance_Operativo/
+      Bases_Conocimiento/
+      Competencias/
+      Evidencias/
+      Experiencias_Mediaciones/
+      Gobernanza_Perfil/
+      Invocables/
+      Produccion_Creativa/
+      Transferencia_Simetrica/
+  Caleidoscopio/
+    Marco_Operativo/
+    Lentes_C4_C5/
+    Tensiones_Recombinaciones/
+  Matrices_Competencias/
+  Taxonomias/
+06_PASTILLAS_MODULARES/
+  Microlecciones/
+  Actividades_Cortas/
+  Recursos_Reutilizables/
+  Fragmentos_Formativos/
+07_PLANTILLAS_Y_MODELOS/
+  Plantillas_Documentales/
+  Plantillas_Evaluacion/
+  Modelos_Datos/
+  Modelos_Prompts/
+  Modelos_Gobernanza/
+08_CURSOS_PROGRAMAS_Y_TRAYECTORIAS/
+  Taller_AI_StoryLab/
+    Misiones/
+    Rutas_Aprendizaje/
+    Evidencias/
+  Secuencias_Didacticas/
+  Trayectorias_Nivel/
+09_IA_AGENTES_Y_COPILOTOS/
+  Politicas_Uso_IA/
+  Prompts_Seguros/
+  Agentes_Planificados/
+  Copilotos_Local_First/
+  Evaluacion_IA/
+10_REPOSITORIOS_Y_FLUJO_TECNICO/
+  Git_GitHub/
+  Estructura_App/
+  Dependencias/
+  Build_Test/
+  Convenciones_Commits/
+11_MULTIMODALIDAD_Y_PUBLICACION/
+  Imagenes/
+  Audio/
+  Video/
+  Portafolios/
+  Publicacion_Local/
+12_DISENO_INSTRUCCIONAL_UNIVERSAL/
+  Accesibilidad/
+  DUA/
+  Rubricas/
+  Adaptaciones/
+  Experiencia_Estudiante/
+13_INVESTIGACION_Y_EVIDENCIA/
+  Evidencia_Aprendizaje/
+  Evidence_Ledger/
+  Fuentes/
+  Metodologias/
+  Integracion_IT/
+14_COMUNIDAD_TRANSFERENCIA_Y_ESCALAMIENTO/
+  Comunidad_Practica/
+  Transferencia_Facilitadores/
+  Escalamiento_Institucional/
+  Adopcion_Controlada/
+  Comunicaciones/
+15_EVALUACION_CALIDAD_Y_AUDITORIA/
+  Evaluacion_Accesibilidad/
+  Evaluacion_DevOps/
+  Evaluacion_IA_Agentes/
+  Evaluacion_Seguridad/
+  Evaluacion_Sistemica/
+  Evidencias_Validacion/
+  Gates_Checks_Evaluacion/
+  Metricas_Internas/
+  Reportes_Auditoria/
+  Rubricas_N3_N4/
+16_SEGURIDAD_PRIVACIDAD_Y_DATOS/
+  Privacidad/
+  Politicas_Datos/
+  Modelos_Amenazas/
+  Requisitos_Seguridad/
+  Checklists_Seguridad/
+  Evaluacion_Riesgos_Tecnicos/
+  Seguridad_IA_Agentes/
+  Cumplimiento_Normativo/
+17_INTERNACIONALIZACION_LOCALIZACION/
+  Glosarios/
+  Traducciones/
+  Localizacion_Cultural/
+  Variantes_Linguisticas/
+18_DOCUMENTACION_ACTIVA/
+  Bitacoras/
+  Changelog/
+  Cierres_Sesion/
+  Compendios/
+  Informes_Validacion/
+  Manifiestos_Sesion/
+  Primers_Continuidad/
+  Prompts_Activacion/
+  Prompts_de_Sesion/
+  Registro_Decisiones/
+  Reportes_Evaluacion/
+  Segundo_Cerebro/
+  WIKI_SYNC/
+19_IMPLEMENTACION_Y_DESPLIEGUE/
+  GitHub_Pages/
+  Entornos_Locales/
+  Configuracion_Vite/
+  Release_Checklists/
+  Despliegue_Local_First/
+  Perfiles_Operacion/
+    Local_First_Default/
+    Institutional_Hybrid_Opt_In/
+20_MANTENIMIENTO_Y_EVOLUCION/
+  Actualizaciones/
+  Backlog_Evolutivo/
+  Deuda_Tecnica/
+  Deuda_Estructural/
+  Deuda_WIKI_SYNC/
+  Incidentes_Postmortems/
+  Mantenimiento_Aplicacion/
+  Planes_Evolucion/
+  Sostenibilidad/
+  Versionado_Releases/
+21_WIKI_DOCUMENTACION_HUMANA/
+  Guia_Estudiante/
+  Guia_Facilitador/
+  Guia_Desarrollador/
+  Guia_Seguridad/
+  Guia_Conocimiento_Comun/
+  Guia_Perfiles/
+  Guia_Institucional/
+99_ARCHIVO_HISTORICO/
+  Versiones_Reemplazadas/
+  Versiones_Cerradas/
+  Ciclos_Completados/
+  Sesiones_Cerradas/
+  Exportaciones_Finales/
+    MD/
+    JSON/
+    ZIP/
+  Paquetes_Intermedios/
+  Releases/
+  Planes_Archivo/
+  Wiki_Archivada/
+```
+
