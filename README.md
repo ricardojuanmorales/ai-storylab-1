@@ -1,228 +1,515 @@
-# 🎬 AI StoryLab — Constructor Ético de Historias Multimedia
+# 🎬 AI StoryLab 1
 
-> *"Tú tienes la historia. La IA tiene herramientas. Juntos crean algo que no existía antes."*
+## Constructor Ético de Historias Multimedia con IA Responsable
+
+> *Tú tienes la historia. La IA tiene herramientas. Juntos crean algo que no existía antes.*
 > — **Profesor Aión**, Mentor Transdisciplinario
 
-`v0.3.0` · React + Vite · 100% local-first · sin backend
+---
 
-¡Bienvenido/a a **AI StoryLab**! 🚀✨
+## Estado actual del proyecto
 
-Un laboratorio digital donde estudiantes de escuela superior se convierten en **creadores, narradores y pensadores éticos** mientras descubren el poder —y la responsabilidad— de trabajar con inteligencia artificial.
+AI StoryLab 1 se encuentra en una fase de reformulación estratégica hacia `v1.0`.
+
+```text
+App funcional base: v0.3.0
+Estructura documental y gobernanza: v0.4.0
+Estabilización post-merge y archivo histórico: v0.4.1
+Fase activa: v0.4.2 Strategic Roadmap & Proposal Alignment
+Horizonte: v1.0.0 estable
+```
+
+La versión `v0.3.0` funciona como **MVP fundacional**. No representa la arquitectura final del proyecto. Sirve como prueba de concepto, referencia pedagógica inicial y base histórica para una reformulación integral.
+
+La ruta hacia `v1.0` estará guiada por:
+
+```text
+Spec-Driven Development
+Security by Design
+Security by Default
+marco de competencias
+taxonomías de aprendizaje
+fundamento filosófico transdisciplinario
+arquitectura local-first por defecto
+```
 
 ---
 
-## ✨ ¿Qué es AI StoryLab?
+## Qué es AI StoryLab 1
 
-AI StoryLab es una aplicación educativa **local-first** — todo ocurre en tu navegador, sin crear cuentas ni subir datos — que guía a los estudiantes a través de **9 misiones** para crear una historia multimedia asistida por IA, presentada como un video final en una premier real 🎉.
+AI StoryLab 1 es una metodología operativa transdisciplinaria con aplicación incluida y ecosistema modular de apoyo.
 
-| 🎯 | Lo que ofrece |
-|---|---|
-| 📚 | 9 misiones interactivas con actividades lúdicas que producen el portafolio |
-| 🤖 | Prompt sugerido por misión como andamiaje de IA |
-| 🏆 | 9 insignias desbloqueables con imágenes personalizables |
-| 📁 | Portafolio emergente que crece automáticamente con cada actividad |
-| 📖 | Glosario de 43 términos con 5+ conceptos clave por misión |
-| 🛠️ | Tablero de herramientas con estrategias, prompts y categorías expandibles |
-| 🖼️ | Avatar de perfil personalizable y soporte de imágenes en el repo |
-| 🎥 | Entrega final como video MP4 con VoiceOver |
-| 👩‍🏫 | Dashboard grupal para facilitar sin backend |
+Su propósito es acompañar a distintos públicos en la creación ética, crítica y creativa de historias multimedia asistidas por IA.
 
----
+AI StoryLab 1 no se limita a ser una aplicación. Integra:
 
-## 🗺️ El Viaje: Las 9 Misiones
-
-El taller está dividido en **4 fases** que te llevan de la reflexión ética hasta la premier.
-Cada misión incluye una **actividad lúdica interactiva** que produce directamente el portafolio, y un **prompt sugerido** para usar un asistente IA como andamiaje.
-
-### 🟣 Fase 1 — Fundamentos Éticos
-
-| # | Misión | Pregunta guía | Actividad | Producto |
-|---|---|---|---|---|
-| S1 | 🧭 **Brújula Ética** | ¿Qué principios éticos guiarán mi uso de la IA? | Dilema relámpago (3 dilemas) | Manifiesto ético de 3 reglas |
-| S2 | 💡 **Idea Central** | ¿Cuál es el mensaje que mi historia quiere dejar? | Logline 25 palabras + ficha | Logline + Ficha de idea central |
-
-### 🔵 Fase 2 — Construcción Narrativa
-
-| # | Misión | Pregunta guía | Actividad | Producto |
-|---|---|---|---|---|
-| S3 | 🎭 **Avatar o Avatares** | ¿Quién protagoniza mi historia y qué lo hace creíble? | Ficha exprés del avatar | Ficha de avatar(es) |
-| S4 | 📖 **Narrativa** | ¿Cómo se estructura mi historia de principio a fin? | Tres actos en tres post-its | Guion o storyboard textual |
-| S5 | 🎨 **Mundo Visual** | ¿Qué estilo visual representa mejor mi historia? | Moodboard relámpago | Moodboard + recursos visuales |
-
-### 🟠 Fase 3 — Producción Multimedia
-
-| # | Misión | Pregunta guía | Actividad | Producto |
-|---|---|---|---|---|
-| S6 | 🎙️ **Voz y Sonido** | ¿Cómo suena mi historia y qué emoción transmite? | Lectura dramatizada | Pista de voz y sonido |
-| S7 | 🔧 **Prototipo** | ¿Cómo se integra todo en un primer borrador? | Pase de prueba con pares | Prototipo PowerPoint con VoiceOver |
-
-### 🟢 Fase 4 — Curaduría y Entrega
-
-| # | Misión | Pregunta guía | Actividad | Producto |
-|---|---|---|---|---|
-| S8 | ✅ **Curaduría Final** | ¿Qué debo pulir para comunicar con claridad y ética? | Lista de chequeo final | Versión final lista para exportar |
-| S9 | ⭐ **Premier y Entrega** | ¿Cómo presento y entrego mi historia con orgullo? | Alfombra roja (pitch 1 min) | Video MP4 + metadatos registrados |
+* app local-first;
+* marco filosófico;
+* marco de competencias;
+* taxonomías;
+* misiones adaptativas;
+* portafolio emergente;
+* prompts guiados;
+* rúbricas;
+* documentación activa;
+* guías humanas;
+* specs;
+* criterios de aceptación;
+* threat models;
+* seguridad y privacidad por defecto;
+* archivo histórico;
+* procesos de gobernanza;
+* posibilidad futura de expansión a otros StoryLabs.
 
 ---
 
-## 🎮 Cómo Funciona Cada Misión
+## Públicos principales
 
-Cada misión tiene tres secciones clave:
+AI StoryLab 1 se diseñará para adaptarse a cuatro públicos:
 
-1. **Actividad lúdica interactiva** — Formulario específico por tipo que produce directamente el `expected_product`. El output se guarda en tu portafolio automáticamente.
-2. **Prompt sugerido** — Plantilla lista para copiar, personalizar con `[variables]` y usar con un asistente IA externo como andamiaje del proceso.
-3. **Registro de evidencia** — Resumen, herramienta, prompt usado, decisión humana y reflexión ética. Los tres últimos son obligatorios para completar la misión.
+### Escuela superior
 
----
+Formación de estudiantes como creadores éticos de historias multimedia asistidas por IA.
 
-## 📁 Tu Portafolio Emergente
+Énfasis:
 
-> *El portafolio no se hace al final. Emerge solo, misión a misión.*
+* creatividad;
+* alfabetización en IA;
+* narrativa;
+* ética;
+* privacidad;
+* portafolio;
+* agencia estudiantil;
+* reflexión sobre autoría.
 
-Desde v0.3.0, la **actividad lúdica produce directamente el contenido** del portafolio. Al guardar la actividad, el resumen aparece en tu evidencia y en el portafolio copiable. Al llegar a S9 tendrás un documento completo listo para copiar a Word.
+### Estudiante universitario
 
-Para completar una misión y desbloquear su insignia necesitas:
-- 🎮 Completar la **actividad lúdica** (enriquece el portafolio)
-- ✍️ **Evidencia** de lo que creaste
-- 🧠 **Decisión humana** documentada (lo que decidiste tú, no la IA)
-- 💭 **Reflexión ética** sobre el proceso
+Profundización en creación, análisis, investigación formativa y producción multimedia avanzada.
 
----
+Énfasis:
 
-## 📖 Glosario — 43 Términos por Misión
+* investigación-creación;
+* pensamiento crítico;
+* análisis cultural;
+* documentación de proceso;
+* derechos de autor;
+* multimodalidad;
+* comunicación académica.
 
-Cada misión muestra automáticamente 5 o más **conceptos clave** del glosario como chips interactivos. Al hacer clic en cualquier término aparece su definición. El glosario cubre 8 categorías: IA, Ética, Narrativa, Multimedia, Derechos, Diseño Visual, Sonido y Evaluación.
+### Docente
 
----
+Uso de AI StoryLab 1 como herramienta de diseño instruccional, facilitación y evaluación.
 
-## 🛠️ Tablero de Herramientas
+Énfasis:
 
-Las 6 categorías del tablero (Escritura y Texto, Imágenes y Diseño Visual, Voz y Sonido, Presentación Multimedia, Exportación a Video, Organización y Planificación) ahora abren su propia **página de detalle** con:
-- Estrategias básicas de uso para el contexto escolar
-- Prompts recomendados copiables con un clic
-- Lista de herramientas por fase y nivel de privacidad
-- **Nota del profesor** editable en `src/data/tools.json` para añadir herramientas específicas de tu institución
+* planificación educativa;
+* rúbricas;
+* adaptación curricular;
+* seguimiento grupal;
+* evaluación formativa;
+* diseño universal de aprendizaje;
+* integración responsable de IA.
 
----
+### Investigador
 
-## 🤖 IA Responsable — Nuestra Promesa
+Uso de AI StoryLab 1 como ambiente de investigación-creación y documentación de evidencia.
 
-En AI StoryLab, la IA es una **herramienta, no una autora**. Nuestros principios:
+Énfasis:
 
-1. 🧠 **Tú decides** — Cada misión requiere una decisión humana documentada. La IA sugiere; tú eliges.
-2. 🔍 **Transparencia siempre** — Registramos qué creó la IA y qué creaste tú. Sin trampa.
-3. 🛡️ **Privacidad local-first** — Tu progreso no sale del navegador a menos que tú lo exportes.
-4. 📜 **Atribución honesta** — Citamos recursos, declaramos uso de IA, respetamos derechos de autor.
-5. 💬 **Reflexión en cada sesión** — No solo creamos: pensamos sobre lo que estamos creando.
-
-> ⚠️ **La IA no puede reemplazar tu voz, tu historia ni tu reflexión. Esas son exclusivamente tuyas.**
-
----
-
-## 🔒 Privacidad Local-First
-
-| ✅ Lo que SÍ hace | ❌ Lo que NO hace |
-|---|---|
-| Guarda progreso en `localStorage` | Enviar datos a servidores |
-| Exporta/importa progreso en JSON | Requiere login o cuenta |
-| Guarda avatar como base64 local | Subir imágenes a la nube |
-| Registra metadatos del video final | Almacenar el archivo de video |
-| Permite monitoreo grupal por JSON | Conectarse a APIs externas |
-
-> 🚨 **No escribas información personal sensible.** El JSON de exportación es solo para tu respaldo y, si lo solicita, para el facilitador.
+* trazabilidad;
+* protocolos;
+* evidencia;
+* análisis cualitativo;
+* ética de datos;
+* consentimiento;
+* archivo;
+* transferencia de conocimiento.
 
 ---
 
-## 🖼️ Personalización de Imágenes
+## Fundamento filosófico propuesto
 
-| Imagen | Dónde se gestiona |
-|---|---|
-| **Avatar del estudiante** | Sube desde tu dispositivo en la pantalla de perfil (se guarda local) |
-| **Hero de la página de inicio** | Sube `hero.jpg` a `public/images/` en GitHub |
-| **Imágenes de insignias** | Sube `{badge_id}.png` a `public/badges/` en GitHub |
+El fundamento filosófico inicial de AI StoryLab 1 hacia `v1.0` será:
 
-Para subir imágenes a GitHub: ve al repositorio → navega a la carpeta → arrastra el archivo → commit.
+```text
+Humanismo Transdisciplinario de Investigación-Creación con IA Responsable
+```
+
+Este marco integra:
+
+* humanismo tecnológico;
+* pedagogía crítica;
+* aprendizaje basado en proyectos;
+* investigación-creación;
+* ética aplicada;
+* diseño universal;
+* conocimiento situado;
+* creatividad multimodal;
+* literacidad crítica en IA;
+* responsabilidad cultural y social.
+
+Principio rector:
+
+```text
+La IA no sustituye la imaginación humana, la decisión ética ni la construcción de sentido.
+La IA amplía posibilidades, pero la persona conserva la autoría, la agencia y la responsabilidad.
+```
 
 ---
 
-## 👩‍🏫 Para el Facilitador
+## Marco de competencias y taxonomías
 
-El **Dashboard Grupal** permite sin backend:
-- 📥 Importar los JSON individuales de cada estudiante
-- 📊 Ver tabla de progreso de todo el grupo
-- 📈 Indicadores agregados (misiones, insignias, entrega final)
-- 📤 Exportar `group_progress.json` como respaldo
+AI StoryLab 1 hacia `v1.0` se construirá bajo un marco explícito de competencias, taxonomías, niveles de desempeño y evidencias.
 
-Para personalizar las herramientas de tu institución, edita el campo `teacher_note` de cada categoría en `src/data/tools.json` y corre `npm run deploy`.
+Las competencias no serán una capa decorativa. Serán parte de la arquitectura pedagógica y técnica del proyecto.
+
+### Competencias transversales base
+
+* competencia narrativa;
+* competencia ética en IA;
+* competencia multimodal;
+* competencia crítica y cultural;
+* competencia investigativa;
+* competencia metacognitiva;
+* competencia técnica local-first;
+* competencia colaborativa;
+* competencia comunicativa;
+* competencia de diseño instruccional y facilitación.
+
+### Taxonomías sugeridas
+
+El proyecto podrá integrar taxonomías complementarias para guiar diseño, evaluación y progresión:
+
+* taxonomía cognitiva;
+* taxonomía de profundidad de aprendizaje;
+* taxonomía de literacidad en IA;
+* taxonomía de producción multimodal;
+* taxonomía de agencia humana.
+
+Cada feature futura deberá declarar:
+
+```text
+competencias atendidas
+taxonomía usada
+nivel esperado por público
+evidencias producidas
+criterios de aceptación
+riesgos pedagógicos
+riesgos de seguridad
+privacidad
+pruebas
+documentación
+```
 
 ---
 
-## 🚀 Cómo Correr el Proyecto
+## Papel de la IA
 
-**Requisitos:** Node.js 18+ · probado con Node 22
+AI StoryLab 1 adoptará un modelo escalonado.
+
+### Comportamiento predeterminado
+
+Para `v1.0`, la IA funcionará principalmente como herramienta externa guiada por prompts.
+
+La aplicación no dependerá por defecto de:
+
+* APIs externas;
+* modelos conectados;
+* cuentas;
+* backend;
+* cloud;
+* analíticas externas;
+* subida automática de archivos.
+
+### Diseño futuro
+
+La arquitectura conceptual podrá preparar futuros copilotos especializados:
+
+* copiloto narrativo;
+* copiloto ético;
+* copiloto visual;
+* copiloto sonoro;
+* copiloto investigativo;
+* copiloto docente;
+* copiloto evaluador.
+
+Estos copilotos no se implementarán sin specs, threat model, privacidad, consentimiento, pruebas y documentación.
+
+### Principio pedagógico transversal
+
+La IA también será objeto de estudio.
+
+Los usuarios deberán analizar críticamente:
+
+* autoría;
+* sesgos;
+* privacidad;
+* derechos;
+* cultura;
+* lenguaje;
+* datos;
+* poder;
+* dependencia tecnológica;
+* responsabilidad humana.
+
+---
+
+## Principio local-first
+
+AI StoryLab 1 mantiene como base el principio local-first.
+
+```text
+La experiencia principal debe funcionar sin cuenta, sin backend y sin conexión obligatoria a servicios externos.
+```
+
+### Lo que sí hace
+
+* guarda progreso localmente;
+* permite exportar e importar JSON;
+* permite construir portafolios;
+* permite seguimiento grupal mediante archivos entregados voluntariamente;
+* opera en navegador;
+* minimiza datos;
+* preserva privacidad por defecto.
+
+### Lo que no hace por defecto
+
+* no requiere login;
+* no usa backend;
+* no usa base de datos remota;
+* no se conecta a APIs externas de IA;
+* no sube archivos automáticamente;
+* no usa analíticas externas;
+* no sincroniza con cloud.
+
+---
+
+## v0.3 como MVP fundacional
+
+La versión `v0.3.0` demostró la viabilidad inicial del laboratorio.
+
+Incluyó:
+
+* 9 misiones pedagógicas;
+* actividades lúdicas;
+* portafolio emergente;
+* prompts sugeridos;
+* reflexión ética;
+* decisión humana documentada;
+* exportación/importación JSON;
+* dashboard grupal sin backend;
+* glosario;
+* tablero de herramientas;
+* privacidad local-first.
+
+A partir de `v0.4.1`, la versión `v0.3/pre-N3` queda preservada como archivo histórico en:
+
+```text
+99_ARCHIVO_HISTORICO/Versiones_Proyecto/v0_3_pre_N3/
+```
+
+---
+
+## Estructura N3
+
+El proyecto utiliza una estructura documental N3 para organizar gobernanza, documentación, implementación, continuidad, archivo histórico y desarrollo futuro.
+
+Carpetas clave:
+
+```text
+00_CONTROL_MAESTRO/
+01_FUNDAMENTO_FILOSOFICO/
+04_GOBERNANZA_ETICA_Y_RIESGOS/
+05_COMPETENCIAS_Y_PERFILES/
+18_DOCUMENTACION_ACTIVA/
+19_IMPLEMENTACION_Y_DESPLIEGUE/
+21_WIKI_DOCUMENTACION_HUMANA/
+99_ARCHIVO_HISTORICO/
+.specify/
+```
+
+---
+
+## Mapa de ruta hacia v1.0
+
+El mapa de ruta estratégico se encuentra en:
+
+```text
+19_IMPLEMENTACION_Y_DESPLIEGUE/Roadmap/Mapa_Ruta_AI_StoryLab_1_hacia_v1_0_v0_4_2.md
+```
+
+### v0.4.2 — Strategic Roadmap & Proposal Alignment
+
+Objetivo: actualizar propuesta de implementación, README y narrativa estratégica hacia `v1.0`.
+
+Entregables:
+
+* mapa de ruta hacia `v1.0`;
+* README actualizado;
+* propuesta de implementación actualizada;
+* declaración inicial de fundamento filosófico;
+* incorporación inicial del marco de competencias y taxonomías;
+* registro de decisiones;
+* changelog;
+* WIKI_SYNC.
+
+### v0.4.3 — Philosophical, Pedagogical & Competency Foundation
+
+Objetivo: formalizar fundamento filosófico, pedagógico y competencial.
+
+Entregables:
+
+* fundamento filosófico;
+* marco de competencias;
+* taxonomías por público;
+* principios de IA responsable;
+* invariantes pedagógicas del MVP;
+* criterios éticos;
+* relación con diseño universal de aprendizaje.
+
+### v0.4.4 — SDD Constitution & Governance Gates
+
+Objetivo: convertir Spec-Driven Development, seguridad y gobernanza en proceso operativo.
+
+Entregables:
+
+* constitución SDD;
+* plantillas de specs;
+* criterios de aceptación;
+* plantillas de threat model;
+* plantillas de rúbricas;
+* gates de calidad;
+* gates de accesibilidad;
+* gates de documentación.
+
+### v0.5.0 — Rediseño Conceptual del Producto
+
+Objetivo: diseñar AI StoryLab 1 v1.0 como sistema antes de reconstruir código.
+
+Entregables:
+
+* arquitectura de experiencia por público;
+* mapa de módulos;
+* mapa de datos;
+* mapa de evidencias;
+* mapa de competencias por misión;
+* rúbricas base;
+* flujos de facilitador e investigador.
+
+### v0.6.0 — Arquitectura Técnica Modular
+
+Objetivo: preparar la base técnica de la reformulación.
+
+Entregables:
+
+* separación entre dominio, UI, persistencia, validación y exportación;
+* adaptador de persistencia local;
+* esquemas versionados;
+* módulo de competencias;
+* módulo de evidencias;
+* módulo de rúbricas;
+* módulo de rutas por público;
+* pruebas de regresión.
+
+### v0.7.0 — Security & Privacy Baseline
+
+Objetivo: convertir seguridad y privacidad en controles verificables.
+
+Entregables:
+
+* threat model por módulo;
+* security requirements;
+* privacy requirements;
+* minimización de datos;
+* validación estricta de JSON;
+* límites de importación;
+* sanitización de entradas;
+* revisión de dependencias;
+* SECURITY.md y PRIVACY.md actualizados.
+
+### v0.8.0 — Prototype v1 Architecture
+
+Objetivo: construir un prototipo reformulado de la arquitectura v1.0.
+
+Entregables:
+
+* prototipo funcional local-first;
+* rutas por público;
+* portafolio adaptativo;
+* competencias visibles por ruta;
+* rúbricas iniciales;
+* prompts externos guiados;
+* registro de decisión humana;
+* export/import validado.
+
+### v0.9.0 — Release Candidate
+
+Objetivo: preparar una versión candidata para piloto.
+
+Entregables:
+
+* build estable;
+* test suite;
+* CI/CD;
+* auditoría de dependencias;
+* guías humanas;
+* release notes;
+* changelog;
+* matriz de riesgos;
+* checklist de accesibilidad;
+* primer de continuidad.
+
+### v1.0.0 — Release estable
+
+Objetivo: publicar la primera versión estable reformulada de AI StoryLab 1.
+
+Criterios mínimos:
+
+* fundamento filosófico completo;
+* marco de competencias documentado;
+* taxonomías integradas al diseño;
+* specs principales completas;
+* seguridad y privacidad trazadas a controles;
+* arquitectura local-first estable;
+* públicos adaptativos implementados o documentados según alcance aprobado;
+* pruebas automatizadas;
+* guías humanas;
+* documentación de despliegue;
+* release notes;
+* registro de decisiones;
+* riesgos mitigados o aceptados;
+* archivo histórico preservado;
+* continuidad garantizada.
+
+---
+
+## Cómo correr el proyecto actual
+
+**Requisitos:** Node.js 18+.
 
 ```bash
 npm install
-npm run dev      # desarrollo → http://localhost:5173
-npm run build    # build de producción en /dist
-npm run preview  # previsualizar el build
-npm run deploy   # publicar en GitHub Pages (rama gh-pages)
+npm run dev
+npm run build
+npm run test
+npm run preview
 ```
+
+El proyecto utiliza Vite + React y Vitest.
+
+Las pruebas activas se limitan al código vivo en `src/`. El archivo histórico en `99_ARCHIVO_HISTORICO/` queda excluido del test runner activo.
 
 ---
 
-## 🏗️ Estructura del Proyecto
-
-```
-src/
-├── App.jsx                      # Router + pantallas Inicio y Perfil (con avatar upload)
-├── components/
-│   ├── LudicActivityWidget.jsx  # Actividades lúdicas interactivas (9 tipos)
-│   ├── SuggestedPromptBox.jsx   # Caja de prompt sugerido con copiar
-│   ├── ToolCategoryView.jsx     # Página detallada de categoría de herramienta
-│   ├── ToolBoard.jsx            # Tablero con categorías expandibles
-│   └── ...                      # 12 componentes más
-├── data/
-│   ├── sessions.json            # 9 misiones (ludic_config + suggested_prompt)
-│   ├── glossary.json            # 43 términos, 8 categorías, sessions[]
-│   ├── tools.json               # 6 categorías con estrategias y prompts
-│   └── ...                      # badges, competencies
-├── utils/                       # Lógica pura (storage, progreso, portafolio...)
-├── templates/                   # Estructuras por defecto (v0.3.0 con ludic_output)
-└── styles/global.css            # Estilos del laboratorio
-public/
-├── images/                      # hero.jpg y otros activos del sitio
-└── badges/                      # Imágenes personalizadas por badge_id
-04_GOBERNANZA_ETICA_Y_RIESGOS/        # Gobernanza, ética, riesgos y decisiones
-21_WIKI_DOCUMENTACION_HUMANA/          # Guías humanas y documentación para usuarios
-18_DOCUMENTACION_ACTIVA/Bitacoras/     # Bitácoras de sesiones y continuidad
-18_DOCUMENTACION_ACTIVA/Primers_Continuidad/  # Primers de continuidad y contexto
-18_DOCUMENTACION_ACTIVA/Prompts_de_Sesion/    # Prompts de trabajo y revisión
-18_DOCUMENTACION_ACTIVA/Compendios/    # Compendios de conocimiento del proyecto
-```
-
----
-
-## 🌱 Hoja de Ruta
-
-### En alcance para v0.4 — v0.5
-- 📊 Estadísticas de actividades lúdicas en el portafolio del facilitador
-- 🏠 Pantalla hero con imagen personalizable desde la app (sin GitHub)
-- 🌐 Pre-llenado de variables en prompts sugeridos con datos del perfil
-
-### Fuera del alcance del MVP (planificado para v1.0+)
-- 🔐 Autenticación (OAuth / Supabase)
-- ☁️ Base de datos remota
-- 📤 Subida de archivos y videos
-- 🤖 APIs externas de IA en tiempo real
-- 📄 Generación automática de portafolio en Word
-
----
-
-## 📄 Licencia
+## Licencia
 
 **CC BY-NC-ND 4.0** — Uso educativo y no comercial.
 
 ---
 
-*Construido con 💜 para estudiantes que quieren contar historias con propósito.*
+## Frase guía
+
+```text
+v0.3 demostró que el laboratorio podía respirar.
+v1.0 diseñará el organismo completo.
+```
