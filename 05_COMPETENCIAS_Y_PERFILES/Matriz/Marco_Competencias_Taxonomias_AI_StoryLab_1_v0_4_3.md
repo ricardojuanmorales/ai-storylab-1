@@ -4,7 +4,7 @@
 **Fase:** v0.4.3 - Philosophical, Pedagogical & Competency Foundation  
 **Tipo de documento:** Marco inicial de competencias y taxonomías  
 **Estado:** Aprobado canónico para integración documental  
-**Ruta canónica recomendada:** `05_COMPETENCIAS_Y_PERFILES/Marco_Competencias_Taxonomias_AI_StoryLab_1_v0_4_3.md`  
+**Ruta canónica recomendada:** `05_COMPETENCIAS_Y_PERFILES/Matriz/Marco_Competencias_Taxonomias_AI_StoryLab_1_v0_4_3.md`  
 **Fundamento filosófico relacionado:** `01_FUNDAMENTO_FILOSOFICO/Fundamento_Filosofico_AI_StoryLab_1_v0_4_3.md`  
 **Matriz de conocimiento común relacionada:** `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Matriz/Base_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md`  
 **Matriz índice relacionada:** `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Matriz/Matriz_Indice_Dimensiones_Operacionales_AI_StoryLab_1_v0_4_3.md`  
@@ -912,3 +912,22 @@ Este marco queda aprobado como versión canónica inicial porque:
 - registra deudas documentales y WIKI_SYNC;
 - mantiene límites explícitos de no implementación;
 - prepara documentos derivados posteriores sin sustituirlos.
+---
+
+## 25. Corrección de ruta canónica
+
+Durante la revisión de colocación documental, la ruta canónica del documento se ajusta para ubicarlo dentro del cartapacio semántico `Matriz/` de `05_COMPETENCIAS_Y_PERFILES/`.
+
+Ruta canónica corregida:
+
+```text
+05_COMPETENCIAS_Y_PERFILES/Matriz/Marco_Competencias_Taxonomias_AI_StoryLab_1_v0_4_3.md
+```
+
+Justificación:
+
+- el documento funciona como marco rector y matriz organizadora del bloque competencial;
+- aplica al conjunto de competencias, taxonomías, evidencias, rúbricas, portafolios y subjetividades;
+- no pertenece exclusivamente a `Conocimiento_Comun/`;
+- evita dejar documentos sustantivos sueltos en la raíz de `05_COMPETENCIAS_Y_PERFILES/`;
+- prepara un cartapacio común para futuros documentos matriciales del bloque.
