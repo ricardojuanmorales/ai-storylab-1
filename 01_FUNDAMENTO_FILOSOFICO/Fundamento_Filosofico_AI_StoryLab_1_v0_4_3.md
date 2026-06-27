@@ -2,10 +2,10 @@
 
 **Proyecto:** AI StoryLab 1  
 **Fase:** v0.4.3 - Philosophical, Pedagogical & Competency Foundation  
-**Tipo de documento:** Fundamento filosófico  
-**Pasada documental:** 2 de 3 - Redacción institucional autocontenida  
-**Estado:** Redacción aprobada para tercera pasada de pulido final  
-**Ruta canónica prevista:** `01_FUNDAMENTO_FILOSOFICO/Fundamento_Filosofico_AI_StoryLab_1_v0_4_3.md`  
+**Tipo de documento:** Fundamento filosófico canónico  
+**Pasada documental:** 3 de 3 - Pulido final  
+**Estado:** Aprobado canónico para integración documental  
+**Ruta canónica:** `01_FUNDAMENTO_FILOSOFICO/Fundamento_Filosofico_AI_StoryLab_1_v0_4_3.md`  
 **Documento matriz relacionado:** `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Matriz/Base_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md`  
 **Matriz índice relacionada:** `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Matriz/Matriz_Indice_Dimensiones_Operacionales_AI_StoryLab_1_v0_4_3.md`  
 **Glosario relacionado:** `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Glosarios/Glosario_General_Humano_Maquina_IA_Competencias_Taxonomias_AI_StoryLab_1_v0_4_3.md`
@@ -50,7 +50,7 @@ Cómo se evalúa sin reducir aprendizaje a puntuación?
 Qué debe esperar a una especificación futura?
 ```
 
-Esta segunda pasada transforma la arquitectura aprobada en redacción institucional más continua. Todavía no constituye la versión final. El pulido final deberá revisar estilo, consistencia, enlaces, densidad, transición entre secciones y preparación para integración canónica.
+Esta tercera pasada consolida la arquitectura y la redacción aprobadas en una versión final candidata. Su propósito es dejar el documento listo para aprobación humana, integración canónica y uso como matriz filosófica de decisión para documentos posteriores.
 
 ---
 
@@ -645,31 +645,87 @@ Estas deudas no invalidan el documento. Deben cerrarse antes del paquete final d
 
 ---
 
-## 16. Criterios de aceptación de la segunda pasada
+## 16. Criterios de aceptación del documento final candidato
 
-Esta segunda pasada se acepta si:
+Este documento final candidato se acepta si:
 
-- transforma la arquitectura aprobada en redacción institucional autocontenida;
+- consolida la arquitectura aprobada y la redacción aprobada;
 - mantiene el eje único del documento;
-- conserva las capas dialógicas;
+- conserva la arquitectura de capas dialógicas;
 - integra las diez dimensiones operacionales aprobadas;
-- explica primero lo común y luego diferencia las cuatro subjetividades;
-- mantiene función de matriz de decisión;
+- explica primero el campo común y luego diferencia las cuatro subjetividades;
+- funciona como matriz filosófica de decisión;
 - conecta con competencias, taxonomías, evidencias, rúbricas y portafolios sin desarrollarlos todavía;
 - reconoce local-first, Spec-Driven Development, Security by Design y Security by Default;
 - registra WIKI_SYNC como deuda;
 - reconoce deudas documentales existentes;
 - preserva límites explícitos de no implementación;
-- queda lista para tercera pasada de pulido final.
+- queda listo para aprobación humana final e integración canónica.
 
 ---
 
 ## 17. Estado de aprobación
 
 ```text
-Estado actual: redacción aprobada para tercera pasada de pulido final
-Pasada documental: 2 de 3 completada
-Revisión requerida: completada para redacción
+Estado actual: versión final candidata para aprobación humana
+Pasada documental: 3 de 3 completada
+Revisión requerida: aprobación humana final
+Archivo .md: producido
+Commit: pendiente
+Cambios funcionales: no autorizados
+Impacto en deuda: sí aplica
+Impacto en WIKI_SYNC: registrar como deuda WIKI_SYNC
+Impacto en bitácora de continuidad: sí aplica
+```
+
+---
+
+## 18. Función canónica del documento
+
+Una vez aprobado, este fundamento filosófico deberá funcionar como fuente superior de principios para la fase v0.4.3 y como base de continuidad para fases posteriores, incluyendo v0.4.4.
+
+Su autoridad documental consiste en orientar decisiones, no en reemplazar documentos especializados. Por tanto:
+
+- las competencias deberán derivarse de sus principios y de las dimensiones operacionales;
+- las taxonomías deberán traducir progresiones sin borrar contexto;
+- las evidencias deberán preservar proceso, autoría y reflexión;
+- las rúbricas deberán sostener criterio humano y justicia evaluativa;
+- los portafolios deberán documentar aprendizaje, uso de IA, revisión y transferencia;
+- las futuras specs deberán convertir principios en requisitos verificables antes de implementar.
+
+Este documento es matriz filosófica. No es manual técnico, guía humana, rúbrica final ni especificación funcional.
+
+---
+
+## 19. Relación con documentos canónicos de conocimiento común
+
+Este fundamento debe leerse junto a los documentos canónicos ubicados en:
+
+```text
+05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/
+```
+
+Especialmente:
+
+```text
+05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Matriz/Base_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
+
+05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Matriz/Matriz_Indice_Dimensiones_Operacionales_AI_StoryLab_1_v0_4_3.md
+
+05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Glosarios/Glosario_General_Humano_Maquina_IA_Competencias_Taxonomias_AI_StoryLab_1_v0_4_3.md
+```
+
+Las diez fichas de dimensiones operacionales funcionan como piezas canónicas independientes. Este fundamento las integra en una arquitectura filosófica común.
+
+---
+
+## 20. Estado final candidato
+
+```text
+Estado actual: aprobado canónico para integración documental
+Pasada documental: 3 de 3 completada
+Ruta canónica: 01_FUNDAMENTO_FILOSOFICO/Fundamento_Filosofico_AI_StoryLab_1_v0_4_3.md
+Revisión requerida: completada
 Archivo .md: producido
 Commit: pendiente
 Cambios funcionales: no autorizados
@@ -681,21 +737,19 @@ Impacto en bitácora de continuidad: sí aplica
 
 ---
 
-## 18. Criterios de aceptación de la redacción aprobada
+## 21. Criterios de aprobación canónica
 
-Esta segunda pasada queda aceptada como redacción aprobada porque:
+Este fundamento filosófico queda aprobado como documento canónico inicial de AI StoryLab 1 v0.4.3 porque:
 
-- transforma la arquitectura aprobada en un documento institucional autocontenido;
+- completa las tres pasadas documentales: arquitectura, redacción y pulido final;
 - mantiene el eje único: Humanismo Transdisciplinario de Investigación-Creación con IA Responsable;
-- conserva la arquitectura de capas dialógicas;
 - integra las diez dimensiones operacionales aprobadas;
-- explica primero el campo común y luego diferencia las cuatro subjetividades estratégicas;
-- mantiene función de matriz de decisión filosófica;
+- conserva la arquitectura de capas dialógicas;
+- distingue primero el campo común y luego las cuatro subjetividades estratégicas;
+- funciona como matriz filosófica de decisión para documentos posteriores;
 - conecta con competencias, taxonomías, evidencias, rúbricas y portafolios sin desarrollarlos todavía;
 - reconoce local-first, Spec-Driven Development, Security by Design y Security by Default;
 - registra WIKI_SYNC como deuda;
 - reconoce deudas documentales existentes;
-- preserva límites explícitos de no implementación;
-- habilita la tercera pasada documental: pulido final y emisión canónica.
-
-La aprobación de esta redacción no equivale todavía al cierre final del documento. La tercera pasada deberá revisar consistencia terminológica, enlaces, densidad, estructura, redundancias, estado canónico y preparación para integración definitiva como `Fundamento_Filosofico_AI_StoryLab_1_v0_4_3.md`.
+- mantiene límites explícitos de no implementación;
+- queda listo para integración en la ruta canónica definitiva.
