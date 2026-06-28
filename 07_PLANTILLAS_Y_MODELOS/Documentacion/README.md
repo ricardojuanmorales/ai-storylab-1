@@ -1,8 +1,8 @@
-# Reglas_Colocacion_Documental
+# Documentacion
 
 **Proyecto:** AI StoryLab 1  
 **Fase:** v0.4.3 - Philosophical, Pedagogical & Competency Foundation  
-**Cartapacio:** `00_CONTROL_MAESTRO/Reglas_Colocacion_Documental/`  
+**Cartapacio:** `07_PLANTILLAS_Y_MODELOS/Documentacion/`  
 **Estado:** Activo  
 **Versión interna del README:** v0.4.3  
 **Responsable funcional:** Equipo documental AI StoryLab 1  
@@ -12,14 +12,15 @@
 
 ## Propósito
 
-Contiene reglas para decidir dónde debe colocarse cada documento dentro de la arquitectura de AI StoryLab 1.
+Contiene plantillas documentales reutilizables. Apoya consistencia estructural sin confundir plantillas con documentos sustantivos finales.
 
 ---
 
 ## Qué contiene
 
 ```text
-Regla_Colocacion_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
+Plantilla_Entrada_Glosario_AI_StoryLab_1_v0_4_3.md
+Plantilla_Ficha_Dimension_Operacional_AI_StoryLab_1_v0_4_3.md
 ```
 
 ---
@@ -27,24 +28,27 @@ Regla_Colocacion_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
 ## Qué no contiene
 
 ```text
-tablas de ubicación
-plantillas
+glosarios canónicos
+fichas completadas
+protocolos de control maestro
 bitácoras
+matrices
 documentos finales
-implementación
 ```
 
 ---
 
 ## Cartapacios adyacentes
 
-- `00_CONTROL_MAESTRO/Tablas_Ubicacion_Documental/`: tablas de ubicación documental.
+- `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Glosarios/`: glosarios finales.
+- `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Dimensiones_Operacionales/`: fichas completadas.
+- `00_CONTROL_MAESTRO/Protocolos_Documentales/`: protocolos.
 
 ---
 
 ## Criterios de colocación
 
-Colocar aquí reglas que orienten decisiones de ubicación, deuda estructural y relación entre cartapacios.
+Colocar aquí documentos que funcionen como plantillas reusables y no como contenido canónico final.
 
 ---
 
@@ -62,4 +66,4 @@ WIKI_SYNC pendiente cuando aplique.
 
 ## Estado de deuda
 
-Paga deuda README emergente por cartapacio tocado en PR.
+Paga deuda README de `07_PLANTILLAS_Y_MODELOS/Documentacion/`.

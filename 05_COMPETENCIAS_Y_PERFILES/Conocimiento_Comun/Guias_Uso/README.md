@@ -1,9 +1,9 @@
-# Reglas_Colocacion_Documental
+# Guias_Uso
 
 **Proyecto:** AI StoryLab 1  
 **Fase:** v0.4.3 - Philosophical, Pedagogical & Competency Foundation  
-**Cartapacio:** `00_CONTROL_MAESTRO/Reglas_Colocacion_Documental/`  
-**Estado:** Activo  
+**Cartapacio:** `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Guias_Uso/`  
+**Estado:** Reservado  
 **Versión interna del README:** v0.4.3  
 **Responsable funcional:** Equipo documental AI StoryLab 1  
 **Última revisión:** 2026-06-27  
@@ -12,14 +12,15 @@
 
 ## Propósito
 
-Contiene reglas para decidir dónde debe colocarse cada documento dentro de la arquitectura de AI StoryLab 1.
+Reservado para guías internas de uso del conocimiento común. Explicará cómo leer, invocar, relacionar y aplicar documentos canónicos compartidos.
 
 ---
 
 ## Qué contiene
 
 ```text
-Regla_Colocacion_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
+Guia_Uso_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
+Guia_Lectura_Dimensiones_Operacionales_AI_StoryLab_1_v0_4_3.md
 ```
 
 ---
@@ -27,24 +28,24 @@ Regla_Colocacion_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
 ## Qué no contiene
 
 ```text
-tablas de ubicación
 plantillas
-bitácoras
-documentos finales
-implementación
+protocolos de control maestro
+rúbricas
+actividades curriculares finales
+documentación humana pública
 ```
 
 ---
 
 ## Cartapacios adyacentes
 
-- `00_CONTROL_MAESTRO/Tablas_Ubicacion_Documental/`: tablas de ubicación documental.
+- `21_WIKI_DOCUMENTACION_HUMANA/`: guías humanas para usuarios finales.
 
 ---
 
 ## Criterios de colocación
 
-Colocar aquí reglas que orienten decisiones de ubicación, deuda estructural y relación entre cartapacios.
+Colocar aquí guías internas de uso documental, no protocolos formales ni guías humanas públicas.
 
 ---
 
@@ -62,4 +63,4 @@ WIKI_SYNC pendiente cuando aplique.
 
 ## Estado de deuda
 
-Paga deuda README emergente por cartapacio tocado en PR.
+Paga parte de `ASTL-V043-DEBT-README-CC-001`.

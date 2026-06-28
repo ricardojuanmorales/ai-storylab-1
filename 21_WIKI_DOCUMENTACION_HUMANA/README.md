@@ -1,38 +1,54 @@
 # 21_WIKI_DOCUMENTACION_HUMANA
 
 **Proyecto:** AI StoryLab 1  
-**Versión estructura:** v0.4.0  
-**Estado:** Pendiente_Activacion  
-**ID maestro relacionado:** ASTL-V040-STD-001
+**Fase de apertura Wiki:** v0.4.3 - Philosophical, Pedagogical & Competency Foundation  
+**Tipo de cartapacio:** Documentación humana oficial  
+**Estado:** Activo inicial  
+**Versión interna del README:** v0.4.3  
+
+---
 
 ## Propósito
 
-Describir la función de este cartapacio dentro de la estructura N3 Foundation de AI StoryLab 1.
+Este cartapacio contiene la Wiki oficial humana de AI StoryLab 1. Su función es traducir la arquitectura filosófica, pedagógica, competencial, documental y técnica del proyecto a una documentación legible para personas que quieran estudiar cómo se crea AI StoryLab 1 y cómo se prepara el desarrollo de su primera aplicación asociada.
 
-## Qué contiene
+La Wiki no sustituye documentos canónicos. Los interpreta y organiza para lectura humana.
 
-Pendiente de poblamiento según necesidad, spec, decisión o documentación activa.
+---
 
-## Qué no contiene
+## Estructura inicial
 
-No debe contener documentos fuera de su función, versiones reemplazadas sin archivar, ni implementación prematura de backend, APIs externas, autenticación, base de datos remota o subida automática de archivos.
+```text
+Indice_Wiki_Oficial_AI_StoryLab_1_v0_4_3.md
+Bitacora_Capitan/
+Historia_Proyecto/
+Desarrollo_Aplicacion/
+Guia_Lectura/
+```
 
-## Relación con carpetas vecinas
+---
 
-Debe mantener referencias lógicas hacia documentos canónicos y evitar duplicación.
+## Límites
 
-## Criterios de colocación
+Esta Wiki no contiene código fuente, specs técnicas activas, credenciales, datos personales, evidencias reales sensibles ni información privada.
 
-Colocar aquí solo documentos cuya función primaria corresponda a este cartapacio.
+Debe sostener:
 
-## Riesgos de seguridad y privacidad
+```text
+local-first
+privacidad por defecto
+Security by Design
+Security by Default
+criterio humano
+no implementación prematura
+```
 
-Revisar si los documentos en esta carpeta tocan datos personales, datos educativos, menores, importación/exportación, IA externa, archivos multimedia, backend futuro, autenticación futura o analíticas.
+---
 
-## Relación con WIKI_SYNC
+## WIKI_SYNC
 
-Si una decisión o documento afecta a estudiantes, facilitadores, docentes, familias, desarrolladores o revisores, registrar deuda WIKI_SYNC.
+La apertura de esta Wiki se registra en:
 
-## Última revisión
-
-Pendiente.
+```text
+18_DOCUMENTACION_ACTIVA/WIKI_SYNC/Registro_Apertura_Wiki_Oficial_AI_StoryLab_1_v0_4_3.md
+```

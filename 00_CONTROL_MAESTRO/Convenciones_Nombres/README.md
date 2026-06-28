@@ -1,38 +1,65 @@
 # Convenciones_Nombres
 
 **Proyecto:** AI StoryLab 1  
-**Versión estructura:** v0.4.0  
-**Estado:** Pendiente_Activacion  
-**ID maestro relacionado:** ASTL-V040-STD-001
+**Fase:** v0.4.3 - Philosophical, Pedagogical & Competency Foundation  
+**Cartapacio:** `00_CONTROL_MAESTRO/Convenciones_Nombres/`  
+**Estado:** Activo  
+**Versión interna del README:** v0.4.3  
+**Responsable funcional:** Equipo documental AI StoryLab 1  
+**Última revisión:** 2026-06-27  
+
+---
 
 ## Propósito
 
-Describir la función de este cartapacio dentro de la estructura N3 Foundation de AI StoryLab 1.
+Contiene convenciones de nombres para documentos, archivos y rutas de AI StoryLab 1.
+
+---
 
 ## Qué contiene
 
-Pendiente de poblamiento según necesidad, spec, decisión o documentación activa.
+```text
+Convencion_Nombres_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
+```
+
+---
 
 ## Qué no contiene
 
-No debe contener documentos fuera de su función, versiones reemplazadas sin archivar, ni implementación prematura de backend, APIs externas, autenticación, base de datos remota o subida automática de archivos.
+```text
+documentos sustantivos
+plantillas
+bitácoras
+implementación
+```
 
-## Relación con carpetas vecinas
+---
 
-Debe mantener referencias lógicas hacia documentos canónicos y evitar duplicación.
+## Cartapacios adyacentes
+
+- `00_CONTROL_MAESTRO/Reglas_Colocacion_Documental/`: reglas de ubicación.
+- `00_CONTROL_MAESTRO/Tablas_Ubicacion_Documental/`: tablas de rutas.
+
+---
 
 ## Criterios de colocación
 
-Colocar aquí solo documentos cuya función primaria corresponda a este cartapacio.
+Colocar aquí reglas de nomenclatura y convenciones formales aprobadas o en revisión.
 
-## Riesgos de seguridad y privacidad
+---
 
-Revisar si los documentos en esta carpeta tocan datos personales, datos educativos, menores, importación/exportación, IA externa, archivos multimedia, backend futuro, autenticación futura o analíticas.
+## Seguridad, privacidad y consentimiento
 
-## Relación con WIKI_SYNC
+Este cartapacio no debe contener datos personales, evidencias reales, credenciales, información sensible ni material que active implementación técnica. Debe sostener local-first, Security by Design, Security by Default y privacidad por defecto.
 
-Si una decisión o documento afecta a estudiantes, facilitadores, docentes, familias, desarrolladores o revisores, registrar deuda WIKI_SYNC.
+---
 
-## Última revisión
+## WIKI_SYNC
 
-Pendiente.
+WIKI_SYNC pendiente cuando aplique.
+
+---
+
+## Estado de deuda
+
+Paga deuda README emergente por cartapacio tocado en PR.
