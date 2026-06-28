@@ -1,8 +1,8 @@
-# Reglas_Colocacion_Documental
+# Protocolos_Documentales
 
 **Proyecto:** AI StoryLab 1  
 **Fase:** v0.4.3 - Philosophical, Pedagogical & Competency Foundation  
-**Cartapacio:** `00_CONTROL_MAESTRO/Reglas_Colocacion_Documental/`  
+**Cartapacio:** `00_CONTROL_MAESTRO/Protocolos_Documentales/`  
 **Estado:** Activo  
 **Versión interna del README:** v0.4.3  
 **Responsable funcional:** Equipo documental AI StoryLab 1  
@@ -12,14 +12,14 @@
 
 ## Propósito
 
-Contiene reglas para decidir dónde debe colocarse cada documento dentro de la arquitectura de AI StoryLab 1.
+Contiene protocolos que gobiernan procesos documentales de creación, incorporación, revisión, aprobación, mantenimiento o traslado de documentos.
 
 ---
 
 ## Qué contiene
 
 ```text
-Regla_Colocacion_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
+Protocolo_Incorporacion_Terminos_Glosario_AI_StoryLab_1_v0_4_3.md
 ```
 
 ---
@@ -27,24 +27,27 @@ Regla_Colocacion_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
 ## Qué no contiene
 
 ```text
-tablas de ubicación
 plantillas
+glosarios
+matrices de contenido
 bitácoras
-documentos finales
-implementación
+evidencias
+documentación humana final
+implementación técnica
 ```
 
 ---
 
 ## Cartapacios adyacentes
 
-- `00_CONTROL_MAESTRO/Tablas_Ubicacion_Documental/`: tablas de ubicación documental.
+- `07_PLANTILLAS_Y_MODELOS/Documentacion/`: plantillas.
+- `18_DOCUMENTACION_ACTIVA/Bitacoras/`: bitácoras.
 
 ---
 
 ## Criterios de colocación
 
-Colocar aquí reglas que orienten decisiones de ubicación, deuda estructural y relación entre cartapacios.
+Colocar aquí documentos que definan procedimientos documentales y criterios de aceptación.
 
 ---
 
@@ -62,4 +65,4 @@ WIKI_SYNC pendiente cuando aplique.
 
 ## Estado de deuda
 
-Paga deuda README emergente por cartapacio tocado en PR.
+Paga deuda README de `00_CONTROL_MAESTRO/Protocolos_Documentales/`.

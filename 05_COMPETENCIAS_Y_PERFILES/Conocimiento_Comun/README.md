@@ -1,38 +1,76 @@
 # Conocimiento_Comun
 
 **Proyecto:** AI StoryLab 1  
-**Versión estructura:** v0.4.0  
-**Estado:** Pendiente_Activacion  
-**ID maestro relacionado:** ASTL-V040-STD-001
+**Fase:** v0.4.3 - Philosophical, Pedagogical & Competency Foundation  
+**Cartapacio:** `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/`  
+**Estado:** Activo  
+**Versión interna del README:** v0.4.3  
+**Responsable funcional:** Equipo documental AI StoryLab 1  
+**Última revisión:** 2026-06-27  
+
+---
 
 ## Propósito
 
-Describir la función de este cartapacio dentro de la estructura N3 Foundation de AI StoryLab 1.
+Contiene el conocimiento común canónico de AI StoryLab 1. Estabiliza lenguaje, conceptos, dimensiones operacionales, glosarios, referencias y guías internas compartidas por los perfiles del proyecto.
+
+---
 
 ## Qué contiene
 
-Pendiente de poblamiento según necesidad, spec, decisión o documentación activa.
+```text
+Matriz/
+Dimensiones_Operacionales/
+Glosarios/
+Referencias/
+Guias_Uso/
+```
+
+---
 
 ## Qué no contiene
 
-No debe contener documentos fuera de su función, versiones reemplazadas sin archivar, ni implementación prematura de backend, APIs externas, autenticación, base de datos remota o subida automática de archivos.
+```text
+documentos sueltos sin ruta semántica
+implementación técnica
+backend
+APIs externas
+cloud
+autenticación
+analíticas
+cartapacios no canónicos como Bases_Conocimiento, Caleidoscopio, Invocables, Referencias_Logicas o Transferencia_Simetrica
+```
 
-## Relación con carpetas vecinas
+---
 
-Debe mantener referencias lógicas hacia documentos canónicos y evitar duplicación.
+## Cartapacios adyacentes
+
+- `05_COMPETENCIAS_Y_PERFILES/Matriz/`: matrices rectoras del bloque competencial.
+- `01_FUNDAMENTO_FILOSOFICO/`: fuente superior de principios.
+- `07_PLANTILLAS_Y_MODELOS/Documentacion/`: plantillas documentales.
+- `00_CONTROL_MAESTRO/`: reglas, convenciones y protocolos.
+- `18_DOCUMENTACION_ACTIVA/`: bitácoras y continuidad viva.
+
+---
 
 ## Criterios de colocación
 
-Colocar aquí solo documentos cuya función primaria corresponda a este cartapacio.
+Colocar aquí solo conocimiento transversal reutilizable por más de un perfil, sin activar implementación.
 
-## Riesgos de seguridad y privacidad
+---
 
-Revisar si los documentos en esta carpeta tocan datos personales, datos educativos, menores, importación/exportación, IA externa, archivos multimedia, backend futuro, autenticación futura o analíticas.
+## Seguridad, privacidad y consentimiento
 
-## Relación con WIKI_SYNC
+Este cartapacio no debe contener datos personales, evidencias reales, credenciales, información sensible ni material que active implementación técnica. Debe sostener local-first, Security by Design, Security by Default y privacidad por defecto.
 
-Si una decisión o documento afecta a estudiantes, facilitadores, docentes, familias, desarrolladores o revisores, registrar deuda WIKI_SYNC.
+---
 
-## Última revisión
+## WIKI_SYNC
 
-Pendiente.
+WIKI_SYNC pendiente cuando aplique.
+
+---
+
+## Estado de deuda
+
+Paga parte de `ASTL-V043-DEBT-README-CC-001`.

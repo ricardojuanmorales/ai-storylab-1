@@ -1,38 +1,66 @@
 # Tablas_Ubicacion_Documental
 
 **Proyecto:** AI StoryLab 1  
-**Versión estructura:** v0.4.0  
-**Estado:** Pendiente_Activacion  
-**ID maestro relacionado:** ASTL-V040-STD-001
+**Fase:** v0.4.3 - Philosophical, Pedagogical & Competency Foundation  
+**Cartapacio:** `00_CONTROL_MAESTRO/Tablas_Ubicacion_Documental/`  
+**Estado:** Activo  
+**Versión interna del README:** v0.4.3  
+**Responsable funcional:** Equipo documental AI StoryLab 1  
+**Última revisión:** 2026-06-27  
+
+---
 
 ## Propósito
 
-Describir la función de este cartapacio dentro de la estructura N3 Foundation de AI StoryLab 1.
+Contiene tablas de ubicación documental. Hace visible qué documentos pertenecen a qué rutas canónicas, qué estado tienen y qué deudas quedan pendientes.
+
+---
 
 ## Qué contiene
 
-Pendiente de poblamiento según necesidad, spec, decisión o documentación activa.
+```text
+Tabla_Ubicacion_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
+Verificacion_Rutas_Canonicas_Competencias_Perfiles_AI_StoryLab_1_v0_4_3.md
+```
+
+---
 
 ## Qué no contiene
 
-No debe contener documentos fuera de su función, versiones reemplazadas sin archivar, ni implementación prematura de backend, APIs externas, autenticación, base de datos remota o subida automática de archivos.
+```text
+reglas generales
+plantillas
+bitácoras
+documentos sustantivos
+implementación
+```
 
-## Relación con carpetas vecinas
+---
 
-Debe mantener referencias lógicas hacia documentos canónicos y evitar duplicación.
+## Cartapacios adyacentes
+
+- `00_CONTROL_MAESTRO/Reglas_Colocacion_Documental/`: reglas de colocación.
+
+---
 
 ## Criterios de colocación
 
-Colocar aquí solo documentos cuya función primaria corresponda a este cartapacio.
+Colocar aquí tablas que registren rutas, estados, relaciones, deuda de ubicación y verificación documental.
 
-## Riesgos de seguridad y privacidad
+---
 
-Revisar si los documentos en esta carpeta tocan datos personales, datos educativos, menores, importación/exportación, IA externa, archivos multimedia, backend futuro, autenticación futura o analíticas.
+## Seguridad, privacidad y consentimiento
 
-## Relación con WIKI_SYNC
+Este cartapacio no debe contener datos personales, evidencias reales, credenciales, información sensible ni material que active implementación técnica. Debe sostener local-first, Security by Design, Security by Default y privacidad por defecto.
 
-Si una decisión o documento afecta a estudiantes, facilitadores, docentes, familias, desarrolladores o revisores, registrar deuda WIKI_SYNC.
+---
 
-## Última revisión
+## WIKI_SYNC
 
-Pendiente.
+WIKI_SYNC pendiente cuando aplique.
+
+---
+
+## Estado de deuda
+
+Paga deuda README emergente por cartapacio tocado en PR.

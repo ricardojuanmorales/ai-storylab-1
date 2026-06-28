@@ -1,38 +1,67 @@
 # 01_FUNDAMENTO_FILOSOFICO
 
 **Proyecto:** AI StoryLab 1  
-**Versión estructura:** v0.4.0  
-**Estado:** Pendiente_Activacion  
-**ID maestro relacionado:** ASTL-V040-STD-001
+**Fase:** v0.4.3 - Philosophical, Pedagogical & Competency Foundation  
+**Cartapacio:** `01_FUNDAMENTO_FILOSOFICO/`  
+**Estado:** Activo  
+**Versión interna del README:** v0.4.3  
+**Responsable funcional:** Equipo documental AI StoryLab 1  
+**Última revisión:** 2026-06-27  
+
+---
 
 ## Propósito
 
-Describir la función de este cartapacio dentro de la estructura N3 Foundation de AI StoryLab 1.
+Contiene el fundamento filosófico canónico de AI StoryLab 1, fuente superior de principios para decisiones pedagógicas, competenciales, éticas y documentales.
+
+---
 
 ## Qué contiene
 
-Pendiente de poblamiento según necesidad, spec, decisión o documentación activa.
+```text
+Fundamento_Filosofico_AI_StoryLab_1_v0_4_3.md
+```
+
+---
 
 ## Qué no contiene
 
-No debe contener documentos fuera de su función, versiones reemplazadas sin archivar, ni implementación prematura de backend, APIs externas, autenticación, base de datos remota o subida automática de archivos.
+```text
+borradores de pasada
+documentos de conversación
+bitácoras
+matrices competenciales
+rúbricas
+implementación técnica
+```
 
-## Relación con carpetas vecinas
+---
 
-Debe mantener referencias lógicas hacia documentos canónicos y evitar duplicación.
+## Cartapacios adyacentes
+
+- `18_DOCUMENTACION_ACTIVA/`: decisiones de sesión y continuidad.
+- `05_COMPETENCIAS_Y_PERFILES/Matriz/`: derivación competencial.
+
+---
 
 ## Criterios de colocación
 
-Colocar aquí solo documentos cuya función primaria corresponda a este cartapacio.
+Colocar aquí solo documentos filosóficos canónicos o versiones formalmente aprobadas.
 
-## Riesgos de seguridad y privacidad
+---
 
-Revisar si los documentos en esta carpeta tocan datos personales, datos educativos, menores, importación/exportación, IA externa, archivos multimedia, backend futuro, autenticación futura o analíticas.
+## Seguridad, privacidad y consentimiento
 
-## Relación con WIKI_SYNC
+Este cartapacio no debe contener datos personales, evidencias reales, credenciales, información sensible ni material que active implementación técnica. Debe sostener local-first, Security by Design, Security by Default y privacidad por defecto.
 
-Si una decisión o documento afecta a estudiantes, facilitadores, docentes, familias, desarrolladores o revisores, registrar deuda WIKI_SYNC.
+---
 
-## Última revisión
+## WIKI_SYNC
 
-Pendiente.
+WIKI_SYNC pendiente cuando aplique.
+
+---
+
+## Estado de deuda
+
+Paga deuda README de `01_FUNDAMENTO_FILOSOFICO/`.
