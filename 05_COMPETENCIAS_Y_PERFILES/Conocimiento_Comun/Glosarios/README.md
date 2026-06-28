@@ -1,8 +1,8 @@
-# Reglas_Colocacion_Documental
+# Glosarios
 
 **Proyecto:** AI StoryLab 1  
 **Fase:** v0.4.3 - Philosophical, Pedagogical & Competency Foundation  
-**Cartapacio:** `00_CONTROL_MAESTRO/Reglas_Colocacion_Documental/`  
+**Cartapacio:** `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Glosarios/`  
 **Estado:** Activo  
 **Versión interna del README:** v0.4.3  
 **Responsable funcional:** Equipo documental AI StoryLab 1  
@@ -12,14 +12,14 @@
 
 ## Propósito
 
-Contiene reglas para decidir dónde debe colocarse cada documento dentro de la arquitectura de AI StoryLab 1.
+Contiene glosarios canónicos para estabilizar términos compartidos entre humanos, documentación, IA responsable, competencias y taxonomías.
 
 ---
 
 ## Qué contiene
 
 ```text
-Regla_Colocacion_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
+Glosario_General_Humano_Maquina_IA_Competencias_Taxonomias_AI_StoryLab_1_v0_4_3.md
 ```
 
 ---
@@ -27,24 +27,25 @@ Regla_Colocacion_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
 ## Qué no contiene
 
 ```text
-tablas de ubicación
-plantillas
-bitácoras
-documentos finales
-implementación
+plantillas de entrada
+protocolos de incorporación
+matrices
+fichas de dimensión
+listas informales de términos
 ```
 
 ---
 
 ## Cartapacios adyacentes
 
-- `00_CONTROL_MAESTRO/Tablas_Ubicacion_Documental/`: tablas de ubicación documental.
+- `07_PLANTILLAS_Y_MODELOS/Documentacion/`: plantillas de entrada.
+- `00_CONTROL_MAESTRO/Protocolos_Documentales/`: protocolos de incorporación.
 
 ---
 
 ## Criterios de colocación
 
-Colocar aquí reglas que orienten decisiones de ubicación, deuda estructural y relación entre cartapacios.
+Colocar aquí documentos que definan términos canónicos de uso transversal.
 
 ---
 
@@ -62,4 +63,4 @@ WIKI_SYNC pendiente cuando aplique.
 
 ## Estado de deuda
 
-Paga deuda README emergente por cartapacio tocado en PR.
+Paga parte de `ASTL-V043-DEBT-README-CC-001`.
