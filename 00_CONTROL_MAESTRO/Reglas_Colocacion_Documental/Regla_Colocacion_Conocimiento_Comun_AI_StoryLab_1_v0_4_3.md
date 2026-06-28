@@ -1,80 +1,99 @@
-# Regla de Colocación Documental para Conocimiento Común de AI StoryLab 1 v0.4.3
+# Regla de Colocación Documental para Conocimiento Común y Bloque Competencial de AI StoryLab 1 v0.4.3
 
 **Proyecto:** AI StoryLab 1  
 **Fase:** v0.4.3 - Philosophical, Pedagogical & Competency Foundation  
 **Tipo de documento:** Regla de colocación documental  
-**Estado:** Aprobado para integración documental  
-**ID maestro propuesto:** ASTL-V043-RCD-001  
-**Cartapacio recomendado:** `00_CONTROL_MAESTRO/Reglas_Colocacion_Documental/`  
-**Archivo recomendado:** `Regla_Colocacion_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md`  
-**Documentos relacionados:**  
-- `00_CONTROL_MAESTRO/Convenciones_Nombres/Convencion_Nombres_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md`
-- `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Matriz/Base_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md`
+**Estado:** Borrador actualizado para revisión humana  
+**ID maestro:** ASTL-V043-RCD-001  
+**Cartapacio canónico:** `00_CONTROL_MAESTRO/Reglas_Colocacion_Documental/`  
+**Archivo canónico:** `Regla_Colocacion_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md`  
+**Actualización:** incorpora rutas corregidas de conocimiento común, bloque competencial, plantillas, protocolos y documentación activa.  
+
+**Documentos relacionados:**
+
+```text
+00_CONTROL_MAESTRO/Convenciones_Nombres/Convencion_Nombres_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
+00_CONTROL_MAESTRO/Tablas_Ubicacion_Documental/Tabla_Ubicacion_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
+05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Matriz/Base_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
+05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Matriz/Matriz_Indice_Dimensiones_Operacionales_AI_StoryLab_1_v0_4_3.md
+05_COMPETENCIAS_Y_PERFILES/Matriz/Marco_Competencias_Taxonomias_AI_StoryLab_1_v0_4_3.md
+18_DOCUMENTACION_ACTIVA/Bitacoras/Matriz_Continuidad_Bloque_Competencial_AI_StoryLab_1_v0_4_3.md
+```
 
 ---
 
 ## 1. Propósito
 
-Este documento establece la regla de colocación documental para los archivos de conocimiento común de AI StoryLab 1 durante la fase `v0.4.3 - Philosophical, Pedagogical & Competency Foundation`.
+Este documento establece la regla de colocación documental para los archivos de conocimiento común y para las matrices rectoras del bloque competencial de AI StoryLab 1 durante la fase `v0.4.3 - Philosophical, Pedagogical & Competency Foundation`.
 
-Su propósito es definir dónde deben vivir los documentos canónicos de conocimiento común, cómo deben organizarse en subcartapacios semánticos, cómo deben enlazarse desde otros cartapacios y qué rutas no deben usarse para evitar duplicación, dispersión conceptual o deuda estructural.
+Su propósito es definir dónde deben vivir los documentos canónicos, cómo deben organizarse en cartapacios semánticos, qué rutas no deben usarse, qué documentos pertenecen al control maestro, y cómo evitar duplicación, dispersión conceptual o deuda estructural.
 
-Esta regla complementa la convención de nombres de conocimiento común. La convención define cómo nombrar los archivos. Esta regla define dónde colocarlos y cómo relacionarlos con el resto del sistema documental.
+Esta regla complementa:
+
+- la convención de nombres;
+- la tabla de ubicación documental;
+- la documentación activa;
+- la bitácora de transferencia simétrica;
+- las matrices de continuidad de la fase.
 
 ---
 
 ## 2. Fundamento estructural
 
-La estructura N3 de AI StoryLab 1 conserva numeración en la raíz porque funciona como mapa cardinal del sistema. Desde segundo nivel en adelante, no deben usarse prefijos numéricos.
+La estructura raíz de AI StoryLab 1 conserva numeración porque funciona como mapa cardinal del sistema.
 
-Por tanto, la colocación correcta del conocimiento común es:
+Desde el segundo nivel en adelante, las rutas deben usar nombres semánticos, sin prefijos numéricos.
 
-```text
-05_COMPETENCIAS_Y_PERFILES/
-  Conocimiento_Comun/
-```
-
-No debe usarse:
+Ejemplo correcto:
 
 ```text
-05_COMPETENCIAS_Y_PERFILES/
-  01_Conocimiento_Comun/
+05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/
+05_COMPETENCIAS_Y_PERFILES/Matriz/
 ```
 
-La ruta `Conocimiento_Comun/` funciona como espacio transversal para aquello que aplica a múltiples perfiles, lentes y dimensiones del proyecto.
+Ejemplo incorrecto:
+
+```text
+05_COMPETENCIAS_Y_PERFILES/01_Conocimiento_Comun/
+05_COMPETENCIAS_Y_PERFILES/01_Matriz/
+```
 
 ---
 
-## 3. Ruta canónica general
+## 3. Rutas canónicas principales
 
-La ruta canónica general para conocimiento común será:
+### 3.1 Conocimiento común
+
+La ruta canónica para conocimiento común es:
 
 ```text
 05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/
 ```
 
-Esta ruta contiene documentos conceptuales reutilizables que alimentan:
+Contiene conocimiento transversal reutilizable por múltiples perfiles y documentos del proyecto.
 
-- fundamento filosófico;
-- marco pedagógico;
-- competencias;
-- taxonomías;
-- perfiles de público;
-- glosario general;
-- documentación humana;
-- futuras specs;
-- futuras rúbricas;
-- futuras decisiones de gobernanza.
+### 3.2 Matrices rectoras del bloque competencial
 
-La ruta canónica no debe duplicarse en otros cartapacios.
+La ruta canónica para matrices de competencias, taxonomías, evidencias, rúbricas, portafolios y subjetividades es:
+
+```text
+05_COMPETENCIAS_Y_PERFILES/Matriz/
+```
+
+Esta ruta no debe confundirse con:
+
+```text
+05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Matriz/
+```
+
+La primera organiza el bloque competencial.  
+La segunda organiza la base del conocimiento común.
 
 ---
 
-## 4. Organización interna aprobada
+## 4. Organización interna aprobada de Conocimiento_Comun
 
-El cartapacio `Conocimiento_Comun/` se organizará mediante subcartapacios semánticos, no numerados.
-
-Estructura recomendada:
+Estructura canónica:
 
 ```text
 05_COMPETENCIAS_Y_PERFILES/
@@ -84,19 +103,20 @@ Estructura recomendada:
     Matriz/
       README.md
       Base_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
+      Matriz_Indice_Dimensiones_Operacionales_AI_StoryLab_1_v0_4_3.md
 
     Dimensiones_Operacionales/
       README.md
-      Base_Conocimiento_Comun_Humanismo_Tecnologico_AI_StoryLab_1_v0_4_3.md
-      Base_Conocimiento_Comun_Pedagogia_Critica_AI_StoryLab_1_v0_4_3.md
-      Base_Conocimiento_Comun_Aprendizaje_Ludico_AI_StoryLab_1_v0_4_3.md
-      Base_Conocimiento_Comun_Investigacion_Creacion_AI_StoryLab_1_v0_4_3.md
-      Base_Conocimiento_Comun_Etica_Aplicada_AI_StoryLab_1_v0_4_3.md
-      Base_Conocimiento_Comun_Diseno_Universal_AI_StoryLab_1_v0_4_3.md
-      Base_Conocimiento_Comun_Conocimiento_Situado_AI_StoryLab_1_v0_4_3.md
-      Base_Conocimiento_Comun_Creatividad_Multimodal_AI_StoryLab_1_v0_4_3.md
-      Base_Conocimiento_Comun_Literacidad_Critica_IA_AI_StoryLab_1_v0_4_3.md
-      Base_Conocimiento_Comun_Responsabilidad_Cultural_Social_AI_StoryLab_1_v0_4_3.md
+      Dimension_Agencia_Humana_AI_StoryLab_1_v0_4_3.md
+      Dimension_Aprendizaje_Ludico_AI_StoryLab_1_v0_4_3.md
+      Dimension_Investigacion_Creacion_AI_StoryLab_1_v0_4_3.md
+      Dimension_Literacidad_Critica_IA_AI_StoryLab_1_v0_4_3.md
+      Dimension_Etica_Aplicada_Responsabilidad_AI_StoryLab_1_v0_4_3.md
+      Dimension_Diseno_Universal_Accesibilidad_AI_StoryLab_1_v0_4_3.md
+      Dimension_Conocimiento_Situado_Contextual_AI_StoryLab_1_v0_4_3.md
+      Dimension_Colaboracion_Transdisciplinaria_AI_StoryLab_1_v0_4_3.md
+      Dimension_Reflexion_Metacognitiva_Portafolio_AI_StoryLab_1_v0_4_3.md
+      Dimension_Evaluacion_Formativa_Criterio_Humano_AI_StoryLab_1_v0_4_3.md
 
     Glosarios/
       README.md
@@ -104,519 +124,232 @@ Estructura recomendada:
 
     Referencias/
       README.md
-      Referencias_Base_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
 
     Guias_Uso/
       README.md
-      Guia_Uso_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
 ```
 
-Esta estructura se adopta para evitar que `Conocimiento_Comun/` se convierta en un cartapacio plano con demasiados documentos mezclados.
+`Referencias/` y `Guias_Uso/` pueden estar reservados con README hasta que existan documentos sustantivos que justifiquen su activación plena.
 
 ---
 
-## 5. Función de cada subcartapacio
+## 5. Rutas no canónicas prohibidas dentro de Conocimiento_Comun
 
-### 5.1 `Matriz/`
+No deben existir dentro de `Conocimiento_Comun/` las siguientes rutas:
 
-Contiene documentos que organizan el marco general de conocimiento común.
+```text
+Bases_Conocimiento/
+Caleidoscopio/
+Invocables/
+Referencias_Logicas/
+Transferencia_Simetrica/
+```
 
-Debe incluir:
+Si aparecen en una rama o PR, deben tratarse como deuda estructural o error de colocación.
+
+Acción requerida:
+
+```text
+eliminar del PR o mover a ruta canónica solo si existe justificación aprobada
+```
+
+---
+
+## 6. Función de cada subcartapacio de Conocimiento_Comun
+
+### 6.1 `Matriz/`
+
+Contiene documentos matriz del conocimiento común.
+
+Debe contener:
 
 ```text
 Base_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
+Matriz_Indice_Dimensiones_Operacionales_AI_StoryLab_1_v0_4_3.md
 ```
 
-Función:
+No debe contener matrices competenciales generales.
 
-- definir el eje articulador;
-- organizar las capas dialógicas;
-- declarar dimensiones operacionales;
-- establecer relación con fundamento filosófico, competencias y taxonomías;
-- orientar la creación de fichas canónicas.
+### 6.2 `Dimensiones_Operacionales/`
 
-### 5.2 `Dimensiones_Operacionales/`
+Contiene las fichas canónicas de las diez dimensiones operacionales.
 
-Contiene las fichas canónicas de las diez dimensiones operacionales del Humanismo Transdisciplinario de Investigación-Creación con IA Responsable.
+No debe contener competencias finales, rúbricas finales, portafolios, actividades curriculares ni implementación técnica.
 
-Función:
+### 6.3 `Glosarios/`
 
-- desarrollar cada dimensión;
-- incluir síntesis epistemológica;
-- presentar diez ideas fundacionales;
-- definir conceptos clave;
-- ofrecer referencias útiles;
-- identificar buenas prácticas;
-- sostener enlaces hacia competencias, taxonomías y fundamento filosófico.
+Contiene glosarios transversales canónicos.
 
-### 5.3 `Glosarios/`
-
-Contiene glosarios transversales.
-
-Debe incluir:
+Debe contener:
 
 ```text
 Glosario_General_Humano_Maquina_IA_Competencias_Taxonomias_AI_StoryLab_1_v0_4_3.md
 ```
 
-Función:
+No debe contener plantillas ni protocolos.
 
-- distinguir persona humana, máquina digital e inteligencia artificial;
-- definir términos transversales;
-- preparar conexión conceptual con competencias y taxonomías;
-- evitar ambigüedad terminológica;
-- apoyar WIKI_SYNC y documentación humana futura.
+### 6.4 `Referencias/`
 
-### 5.4 `Referencias/`
+Contiene referencias canónicas compartidas cuando se activen.
 
-Contiene documentos de referencias compartidas.
+En v0.4.3 puede permanecer reservado con `README.md`.
 
-Debe incluir inicialmente:
+### 6.5 `Guias_Uso/`
 
-```text
-Referencias_Base_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
-```
+Contiene guías internas de uso documental del conocimiento común.
 
-Función:
-
-- reunir referencias académicas, institucionales y prácticas;
-- evitar que cada ficha canónica duplique bibliografías extensas;
-- sostener consistencia epistemológica;
-- permitir actualización ordenada de fuentes.
-
-### 5.5 `Guias_Uso/`
-
-Contiene guías internas de uso del conocimiento común.
-
-Debe incluir inicialmente:
-
-```text
-Guia_Uso_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
-```
-
-Función:
-
-- explicar cómo enlazar documentos canónicos;
-- orientar uso interno por el equipo desarrollador/documental;
-- definir cuándo generar WIKI_SYNC;
-- prevenir duplicación;
-- facilitar continuidad entre sesiones.
+En v0.4.3 puede permanecer reservado con `README.md`.
 
 ---
 
-## 6. Estado de cartapacios
+## 7. Organización aprobada del bloque competencial
 
-El cartapacio general deberá declararse como:
-
-```text
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/
-Estado: Activo
-```
-
-Subcartapacios iniciales:
+La ruta canónica para documentos rectores del bloque competencial es:
 
 ```text
-Matriz/
-Estado: Activo
-
-Dimensiones_Operacionales/
-Estado: Activo
-
-Glosarios/
-Estado: Activo
-
-Referencias/
-Estado: Pendiente_Activacion
-
-Guias_Uso/
-Estado: Pendiente_Activacion
+05_COMPETENCIAS_Y_PERFILES/Matriz/
 ```
 
-`Referencias/` y `Guias_Uso/` pueden existir desde el inicio para sostener la arquitectura documental, pero no deben poblarse excesivamente antes de necesidad real.
+Debe contener:
+
+```text
+README.md
+Marco_Competencias_Taxonomias_AI_StoryLab_1_v0_4_3.md
+Matriz_Competencias_por_Dimension_AI_StoryLab_1_v0_4_3.md
+Matriz_Competencias_por_Subjetividad_AI_StoryLab_1_v0_4_3.md
+Matriz_Evidencias_por_Competencia_AI_StoryLab_1_v0_4_3.md
+Matriz_Relacion_Competencias_Rubricas_Portafolios_AI_StoryLab_1_v0_4_3.md
+```
+
+No debe contener:
+
+```text
+fichas de dimensión operacional
+glosarios
+plantillas
+protocolos
+bitácoras
+documentos de sesión
+implementación técnica
+```
 
 ---
 
-## 7. Unidad estructural mínima
+## 8. Colocación de plantillas y protocolos
 
-Todo cartapacio creado deberá incluir `README.md`.
+### 8.1 Plantillas documentales
 
-Esto aplica a:
+Las plantillas pertenecen a:
 
 ```text
-Conocimiento_Comun/
-Matriz/
-Dimensiones_Operacionales/
-Glosarios/
-Referencias/
-Guias_Uso/
+07_PLANTILLAS_Y_MODELOS/Documentacion/
 ```
 
-Cada `README.md` deberá explicar:
+Ejemplos:
 
-- propósito del cartapacio;
+```text
+Plantilla_Entrada_Glosario_AI_StoryLab_1_v0_4_3.md
+Plantilla_Ficha_Dimension_Operacional_AI_StoryLab_1_v0_4_3.md
+```
+
+No deben colocarse en `Glosarios/` ni en `Dimensiones_Operacionales/`.
+
+### 8.2 Protocolos documentales
+
+Los protocolos pertenecen a:
+
+```text
+00_CONTROL_MAESTRO/Protocolos_Documentales/
+```
+
+Ejemplo:
+
+```text
+Protocolo_Incorporacion_Terminos_Glosario_AI_StoryLab_1_v0_4_3.md
+```
+
+No deben colocarse en `Glosarios/`, `Guias_Uso/` ni `Documentacion/`.
+
+---
+
+## 9. Documentación activa y continuidad
+
+Las bitácoras, matrices de continuidad, compendios de cierre y registros de sesión pertenecen a:
+
+```text
+18_DOCUMENTACION_ACTIVA/
+```
+
+Ejemplos:
+
+```text
+18_DOCUMENTACION_ACTIVA/Bitacoras/Matriz_Continuidad_Ronda_Fundamento_Filosofico_AI_StoryLab_1_v0_4_3.md
+18_DOCUMENTACION_ACTIVA/Bitacoras/Matriz_Continuidad_Bloque_Competencial_AI_StoryLab_1_v0_4_3.md
+18_DOCUMENTACION_ACTIVA/Cierres_Sesion/
+```
+
+Estos documentos registran proceso vivo. No sustituyen documentos canónicos.
+
+---
+
+## 10. Unidad estructural mínima
+
+Todo cartapacio creado debe incluir `README.md`.
+
+El README debe explicar:
+
+- propósito;
 - qué contiene;
 - qué no contiene;
 - relación con cartapacios vecinos;
 - criterios de colocación;
-- riesgos de seguridad y privacidad;
-- relación con WIKI_SYNC;
-- estado del cartapacio;
-- responsable funcional;
-- última revisión;
-- versión documental interna.
-
-El `README.md` no se versiona en el nombre del archivo. Su versión interna deberá declararse dentro del propio documento.
+- riesgos de seguridad, privacidad y consentimiento;
+- estado WIKI_SYNC;
+- estado de deuda cuando aplique.
 
 ---
 
-## 8. Rutas canónicas específicas
+## 11. Criterios de colocación por tipo documental
 
-### 8.1 Documento matriz
+| Tipo documental | Ruta correcta |
+|---|---|
+| Matriz de conocimiento común | `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Matriz/` |
+| Ficha de dimensión operacional | `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Dimensiones_Operacionales/` |
+| Glosario canónico | `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Glosarios/` |
+| Referencias comunes | `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Referencias/` |
+| Guías internas de uso de conocimiento común | `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Guias_Uso/` |
+| Matriz competencial | `05_COMPETENCIAS_Y_PERFILES/Matriz/` |
+| Plantilla documental | `07_PLANTILLAS_Y_MODELOS/Documentacion/` |
+| Protocolo documental | `00_CONTROL_MAESTRO/Protocolos_Documentales/` |
+| Convención de nombres | `00_CONTROL_MAESTRO/Convenciones_Nombres/` |
+| Regla de colocación | `00_CONTROL_MAESTRO/Reglas_Colocacion_Documental/` |
+| Tabla de ubicación | `00_CONTROL_MAESTRO/Tablas_Ubicacion_Documental/` |
+| Bitácora o continuidad | `18_DOCUMENTACION_ACTIVA/Bitacoras/` |
+| Cierre de sesión | `18_DOCUMENTACION_ACTIVA/Cierres_Sesion/` |
+| Guía humana pública | `21_WIKI_DOCUMENTACION_HUMANA/` |
 
-```text
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Matriz/Base_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
-```
+---
 
-### 8.2 Fichas de dimensiones operacionales
+## 12. Seguridad y privacidad
 
-```text
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Dimensiones_Operacionales/Base_Conocimiento_Comun_Humanismo_Tecnologico_AI_StoryLab_1_v0_4_3.md
+Esta regla no autoriza almacenar datos personales, evidencias reales, información sensible, credenciales, imágenes identificables, prompts sensibles ni portafolios reales.
 
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Dimensiones_Operacionales/Base_Conocimiento_Comun_Pedagogia_Critica_AI_StoryLab_1_v0_4_3.md
-
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Dimensiones_Operacionales/Base_Conocimiento_Comun_Aprendizaje_Ludico_AI_StoryLab_1_v0_4_3.md
-
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Dimensiones_Operacionales/Base_Conocimiento_Comun_Investigacion_Creacion_AI_StoryLab_1_v0_4_3.md
-
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Dimensiones_Operacionales/Base_Conocimiento_Comun_Etica_Aplicada_AI_StoryLab_1_v0_4_3.md
-
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Dimensiones_Operacionales/Base_Conocimiento_Comun_Diseno_Universal_AI_StoryLab_1_v0_4_3.md
-
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Dimensiones_Operacionales/Base_Conocimiento_Comun_Conocimiento_Situado_AI_StoryLab_1_v0_4_3.md
-
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Dimensiones_Operacionales/Base_Conocimiento_Comun_Creatividad_Multimodal_AI_StoryLab_1_v0_4_3.md
-
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Dimensiones_Operacionales/Base_Conocimiento_Comun_Literacidad_Critica_IA_AI_StoryLab_1_v0_4_3.md
-
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Dimensiones_Operacionales/Base_Conocimiento_Comun_Responsabilidad_Cultural_Social_AI_StoryLab_1_v0_4_3.md
-```
-
-### 8.3 Glosario general
+Todo documento debe sostener:
 
 ```text
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Glosarios/Glosario_General_Humano_Maquina_IA_Competencias_Taxonomias_AI_StoryLab_1_v0_4_3.md
-```
-
-### 8.4 Referencias compartidas
-
-```text
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Referencias/Referencias_Base_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
-```
-
-### 8.5 Guía de uso interna
-
-```text
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Guias_Uso/Guia_Uso_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
+local-first
+Spec-Driven Development
+Security by Design
+Security by Default
+privacidad por defecto
+consentimiento explícito cuando aplique
+no publicación automática
+no IA externa por defecto
 ```
 
 ---
 
-## 9. Documentos que no deben colocarse aquí
-
-No deben colocarse en `Conocimiento_Comun/` ni en sus subcartapacios:
-
-- specs técnicas;
-- código;
-- componentes de interfaz;
-- documentación de despliegue;
-- modelos de amenaza;
-- políticas formales de seguridad;
-- políticas formales de privacidad;
-- actas de cierre;
-- bitácoras de sesión;
-- changelogs;
-- manifests;
-- registros de decisión;
-- guías humanas finales;
-- documentos históricos archivados;
-- evidencia formal de evaluación;
-- documentos de implementación funcional.
-
-Estos documentos tienen rutas propias dentro de la estructura N3.
-
----
-
-## 10. Relación con `01_FUNDAMENTO_FILOSOFICO/`
-
-El cartapacio `01_FUNDAMENTO_FILOSOFICO/` no debe contener copias de los documentos canónicos de conocimiento común.
-
-Debe enlazarlos y articularlos.
-
-Regla:
-
-```text
-01_FUNDAMENTO_FILOSOFICO/
-  contiene documentos integradores y filosóficos.
-
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/
-  contiene piezas conceptuales canónicas reutilizables.
-```
-
-Ejemplo:
-
-```text
-01_FUNDAMENTO_FILOSOFICO/Fundamento_Filosofico_AI_StoryLab_1_v0_4_3.md
-  enlaza a:
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Dimensiones_Operacionales/Base_Conocimiento_Comun_Literacidad_Critica_IA_AI_StoryLab_1_v0_4_3.md
-```
-
-El fundamento filosófico podrá incluir definiciones breves, pero deberá enlazar a las fichas canónicas para el desarrollo conceptual completo.
-
----
-
-## 11. Relación con `05_COMPETENCIAS_Y_PERFILES/Marco_Competencias_Taxonomias/`
-
-El conocimiento común prepara lenguaje y conceptos para competencias y taxonomías, pero no define por sí mismo competencias, niveles de desempeño, rúbricas ni portafolios.
-
-Regla:
-
-```text
-Conocimiento_Comun/
-  define conceptos transversales.
-
-Marco_Competencias_Taxonomias/
-  desarrolla competencias, niveles, evidencias, taxonomías, rúbricas y portafolios.
-```
-
-Cuando un documento de competencias use una dimensión o concepto del conocimiento común, deberá enlazar al documento canónico correspondiente.
-
----
-
-## 12. Relación con perfiles
-
-El conocimiento común no pertenece a un perfil particular.
-
-Debe servir transversalmente a:
-
-```text
-Programador_Humanista/
-Investigador_Transdisciplinario/
-Artista_Transdisciplinario/
-Caleidoscopio/
-```
-
-Regla:
-
-```text
-Conocimiento_Comun/
-  contiene lo transversal.
-
-Programador_Humanista/
-  aplica, prueba u operacionaliza primero cuando corresponda.
-
-Investigador_Transdisciplinario/
-  desarrolla evidencia, metodología e investigación.
-
-Artista_Transdisciplinario/
-  desarrolla mediación, experiencia y producción creativa.
-
-Caleidoscopio/
-  articula integración, tensión, recombinación y lectura sistémica.
-```
-
-Toda transferencia relevante entre perfiles deberá registrarse en documentación activa y considerarse para la bitácora de transferencia simétrica.
-
----
-
-## 13. Relación con `21_WIKI_DOCUMENTACION_HUMANA/`
-
-`21_WIKI_DOCUMENTACION_HUMANA/` no debe duplicar los documentos canónicos de conocimiento común.
-
-Debe traducirlos, explicarlos o adaptarlos para públicos humanos cuando sea necesario.
-
-Regla:
-
-```text
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/
-  conserva la fuente conceptual canónica.
-
-21_WIKI_DOCUMENTACION_HUMANA/
-  produce guías humanas, explicaciones, rutas de lectura o materiales de apoyo.
-```
-
-Si un documento de conocimiento común afecta la comprensión de estudiantes, facilitadores, docentes o instituciones, deberá evaluarse si genera deuda WIKI_SYNC.
-
----
-
-## 14. Relación con `18_DOCUMENTACION_ACTIVA/`
-
-`18_DOCUMENTACION_ACTIVA/` registra el proceso vivo.
-
-No debe almacenar documentos canónicos de conocimiento común, salvo que se trate de actas, bitácoras, manifests, changelogs, WIKI_SYNC o registros derivados del proceso de creación.
-
-Regla:
-
-```text
-Si define concepto canónico:
-  va en Conocimiento_Comun/.
-
-Si registra proceso vivo:
-  va en 18_DOCUMENTACION_ACTIVA/.
-
-Si comunica a públicos humanos:
-  genera WIKI_SYNC o guía humana, según aplique.
-```
-
----
-
-## 15. Relación con `00_CONTROL_MAESTRO/`
-
-`00_CONTROL_MAESTRO/` contiene reglas, convenciones y tablas de ubicación.
-
-Por tanto, los documentos que gobiernan la colocación de conocimiento común deben vivir aquí:
-
-```text
-00_CONTROL_MAESTRO/Convenciones_Nombres/Convencion_Nombres_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
-00_CONTROL_MAESTRO/Reglas_Colocacion_Documental/Regla_Colocacion_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
-00_CONTROL_MAESTRO/Tablas_Ubicacion_Documental/Tabla_Ubicacion_Conocimiento_Comun_AI_StoryLab_1_v0_4_3.md
-```
-
-Estas piezas no sustituyen al estándar estructural general. Lo precisan para el caso de conocimiento común durante v0.4.3.
-
----
-
-## 16. Relación con seguridad y privacidad
-
-Los documentos de conocimiento común pueden incluir implicaciones para Security by Design, Security by Default, local-first, privacidad y consentimiento.
-
-Sin embargo, no sustituyen documentos propios de:
-
-```text
-16_SEGURIDAD_PRIVACIDAD_Y_DATOS/
-```
-
-Si una ficha conceptual identifica un riesgo de privacidad, seguridad o datos sensibles, deberá:
-
-- mencionarlo como criterio conceptual;
-- evitar proponer implementación;
-- registrar deuda o enlace futuro si requiere tratamiento operativo;
-- referir a documentos de seguridad o privacidad cuando existan.
-
----
-
-## 17. Relación con deuda
-
-La creación de conocimiento común puede generar o reducir deuda.
-
-### 17.1 Reduce deuda estructural cuando:
-
-- fija rutas canónicas;
-- evita duplicación documental;
-- establece convenciones;
-- enlaza documentos relacionados;
-- crea `README.md` en cartapacios nuevos;
-- registra ubicación y propósito.
-
-### 17.2 Genera deuda estructural cuando:
-
-- se crea un archivo sin ruta canónica clara;
-- se crea un subcartapacio sin `README.md`;
-- se duplican conceptos en varios lugares;
-- se cambia una ruta sin actualizar enlaces;
-- se aprueba una ficha sin registrarla en tabla de ubicación.
-
-### 17.3 Genera deuda WIKI_SYNC cuando:
-
-- afecta comprensión de estudiantes, docentes, facilitadores o instituciones;
-- introduce conceptos que necesitan guía humana;
-- requiere traducción pedagógica o institucional;
-- modifica el marco de lectura de documentos ya publicados.
-
-### 17.4 No debe generar deuda técnica porque:
-
-- no toca código;
-- no modifica arquitectura funcional;
-- no activa specs de implementación;
-- no introduce backend, APIs, cloud, autenticación ni analíticas.
-
----
-
-## 18. Relación con WIKI_SYNC
-
-Todo documento canónico de conocimiento común deberá evaluar si requiere WIKI_SYNC.
-
-No todo concepto requiere guía humana inmediata, pero todo concepto que afecte navegación, comprensión pedagógica o adopción institucional deberá generar entrada o deuda WIKI_SYNC.
-
-Criterio orientador:
-
-```text
-Si el concepto solo organiza trabajo interno:
-  WIKI_SYNC puede quedar como no requerido.
-
-Si el concepto cambia cómo una persona usuaria entiende el proyecto:
-  WIKI_SYNC debe registrarse como requerido o como deuda justificada.
-```
-
----
-
-## 19. Regla de enlace espejo
-
-La regla de enlace espejo evita duplicación.
-
-Un enlace espejo significa que un documento en otro cartapacio apunta al documento canónico de conocimiento común sin copiarlo completo.
-
-Ejemplo:
-
-```text
-01_FUNDAMENTO_FILOSOFICO/Fundamento_Filosofico_AI_StoryLab_1_v0_4_3.md
-  enlaza a:
-05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Dimensiones_Operacionales/Base_Conocimiento_Comun_Literacidad_Critica_IA_AI_StoryLab_1_v0_4_3.md
-```
-
-La copia literal de una ficha completa en otro cartapacio se considera duplicación y genera deuda estructural.
-
----
-
-## 20. Criterios para crear nuevos subcartapacios futuros
-
-La estructura inicial incluye subcartapacios semánticos suficientes para la fase v0.4.3.
-
-Podrán crearse nuevos subcartapacios si existe volumen suficiente o necesidad de mantenimiento.
-
-Condiciones para crear un subcartapacio adicional:
-
-- justificación documental explícita;
-- nombre semántico sin prefijo numérico;
-- `README.md` propio;
-- estado declarado;
-- actualización de tabla de ubicación;
-- revisión de enlaces existentes;
-- evaluación de deuda estructural;
-- evaluación WIKI_SYNC si afecta navegación humana.
-
-No se deben crear subcartapacios por estética o preferencia momentánea.
-
----
-
-## 21. Criterios de aceptación
-
-Esta regla se considerará aprobada si:
-
-- respeta la ruta `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/`;
-- organiza conocimiento común en subcartapacios semánticos;
-- respeta la prohibición de prefijos numéricos desde segundo nivel;
-- exige `README.md` para cada cartapacio nuevo;
-- distingue fuente canónica de enlaces espejo;
-- evita duplicación con fundamento filosófico y wiki humana;
-- distingue conocimiento común de competencias y taxonomías;
-- integra documentación activa y bitácora de transferencia simétrica;
-- reconoce impacto en deuda estructural y WIKI_SYNC;
-- sostiene local-first, SDD, Security by Design y Security by Default;
-- no autoriza cambios funcionales.
-
----
-
-## 22. Límites explícitos
+## 13. Límites explícitos
 
 Esta regla no autoriza:
 
@@ -635,19 +368,53 @@ integraciones sin threat model
 manejo remoto de datos sin privacidad y consentimiento
 ```
 
-Cualquier propuesta futura en esas áreas requerirá especificación formal, revisión humana, modelo de amenazas, análisis de privacidad, consentimiento y decisión registrada.
+---
+
+## 14. Deudas que esta actualización paga
+
+Esta actualización paga o reduce:
+
+```text
+ASTL-V043-DEBT-LOC-CC-002
+ASTL-V043-DEBT-LOC-CC-003
+ASTL-V043-DEBT-LOC-CP-004
+```
+
+También queda alineada con el pago de:
+
+```text
+ASTL-V043-DEBT-README-CC-001
+ASTL-V043-DEBT-README-CP-001
+```
+
+cuando los README canónicos estén integrados al PR.
 
 ---
 
-## 23. Estado de aprobación
+## 15. WIKI_SYNC
+
+Esta regla genera necesidad de WIKI_SYNC futuro porque afecta navegación documental y comprensión humana de rutas.
+
+Estado:
 
 ```text
-Estado actual: aprobado para integración documental
-Revisión requerida: completada
-Archivo .md descargable: producido
-Commit: pendiente hasta completar conjunto documental aprobado
-Cambios funcionales: no autorizados
-Impacto en deuda: reduce deuda estructural al aprobarse junto con convención y tabla
-Impacto en WIKI_SYNC: probable, según guías humanas derivadas
-Impacto en bitácora de continuidad: sí aplica
+WIKI_SYNC pendiente como deuda controlada
 ```
+
+---
+
+## 16. Criterios de aceptación
+
+Esta regla se acepta si:
+
+- reconoce la ruta canónica `05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/`;
+- reconoce la ruta canónica `05_COMPETENCIAS_Y_PERFILES/Matriz/`;
+- diferencia matrices de conocimiento común y matrices competenciales;
+- corrige la lista de dimensiones operacionales aprobadas;
+- elimina rutas no canónicas;
+- ubica plantillas en `07_PLANTILLAS_Y_MODELOS/Documentacion/`;
+- ubica protocolos en `00_CONTROL_MAESTRO/Protocolos_Documentales/`;
+- ubica bitácoras y continuidad en `18_DOCUMENTACION_ACTIVA/`;
+- mantiene README como unidad estructural mínima;
+- registra deuda pagada o reducida;
+- mantiene límites explícitos de no implementación.
