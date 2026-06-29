@@ -3,10 +3,11 @@
 **Proyecto:** AI StoryLab 1  
 **Fase:** v0.4.4 - Spec-Driven Development, seguridad, privacidad y preparación responsable  
 **Tipo de documento:** Plantilla mínima de spec segura  
-**Estado:** Primer instrumento operativo derivado de la Constitución SDD  
-**Ruta canónica:** `00_CONTROL_MAESTRO/Spec_Driven_Development/Plantillas/Plantilla_Spec_Segura_AI_StoryLab_1_v0_4_4.md`  
-**PR de trabajo:** #8, `docs: incorporar cierre v0.4.3 e inicio continuidad v0.4.4`  
-**Alcance:** Documental, preparatorio y de decisión. No autoriza implementación funcional.  
+**Estado:** Aprobada para archivo en PR #8  
+**Ruta canónica:** `07_PLANTILLAS_Y_MODELOS/Spec_Driven_Development/Plantilla_Spec_Segura_AI_StoryLab_1_v0_4_4.md`  
+**PR de trabajo:** #8  
+**Rama:** `v0.4.4-sdd-foundation`  
+**Alcance:** Documental, preparatorio y de decisión. No autoriza implementación funcional.
 
 ---
 
@@ -45,8 +46,6 @@ Documentos relacionados:
 
 ### 1.1 Tipo de spec
 
-Marcar una o más opciones:
-
 ```text
 [ ] Spec general de aplicación
 [ ] Spec de experiencia de usuario
@@ -70,7 +69,7 @@ Marcar una o más opciones:
 
 ## 2. Propósito humano y educativo
 
-Describir en lenguaje humano qué se propone y por qué importa.
+Toda spec debe comenzar por su sentido humano, educativo, creativo o investigativo.
 
 ```text
 ¿Qué necesidad humana, educativa, creativa o investigativa atiende?
@@ -79,7 +78,7 @@ Describir en lenguaje humano qué se propone y por qué importa.
 ¿Qué problema intenta resolver sin reducir la agencia humana?
 ```
 
-### 2.1 Declaración breve
+Declaración breve:
 
 ```text
 Esta spec propone...
@@ -95,9 +94,9 @@ Sin autorizar...
 
 ```text
 Incluye:
-- 
-- 
-- 
+-
+-
+-
 ```
 
 ### 3.2 Fuera de alcance
@@ -122,8 +121,6 @@ No incluye:
 
 ## 4. Subjetividades y perfiles afectados
 
-Marcar quiénes podrían verse afectados por la spec.
-
 ```text
 [ ] Estudiante de escuela superior
 [ ] Estudiante universitario
@@ -136,7 +133,7 @@ Marcar quiénes podrían verse afectados por la spec.
 [ ] Otro:
 ```
 
-### 4.1 Nivel de cuidado
+Nivel de cuidado:
 
 ```text
 [ ] Bajo: no toca datos personales, evidencia real ni decisiones sensibles.
@@ -155,7 +152,7 @@ Justificación:
 
 ## 5. Experiencia creativa protegida
 
-Responder antes de cualquier requisito técnico.
+Toda spec debe identificar cómo protege la investigación-creación y evita convertir la experiencia en un trámite rígido.
 
 ```text
 ¿Cómo amplía el juego creativo?
@@ -165,9 +162,7 @@ Responder antes de cualquier requisito técnico.
 ¿Cómo protege la capacidad del usuario para decidir qué compartir o no compartir?
 ```
 
-### 5.1 Señales de alerta antirrigidez
-
-Marcar si aparece algún riesgo:
+Señales de alerta antirrigidez:
 
 ```text
 [ ] Exceso de campos obligatorios
@@ -190,9 +185,7 @@ Mitigación propuesta:
 
 ## 6. Datos involucrados
 
-### 6.1 Clasificación de datos
-
-Marcar todo lo que aplique:
+Clasificación:
 
 ```text
 [ ] Ningún dato
@@ -208,8 +201,6 @@ Marcar todo lo que aplique:
 [ ] Datos de menores de edad
 [ ] Otro:
 ```
-
-### 6.2 Justificación de datos
 
 | Dato | Propósito | ¿Es necesario? | ¿Permanece local? | Riesgo | Mitigación |
 |---|---|---|---|---|---|
@@ -232,7 +223,7 @@ Si un dato no puede justificarse, no debe incorporarse.
 ¿Afecta rúbricas, competencias o evaluación formativa?
 ```
 
-### 7.1 Condiciones de cuidado
+Condiciones de cuidado:
 
 ```text
 [ ] La evidencia permanece bajo control del usuario.
@@ -263,8 +254,6 @@ Si se considera IA externa, la spec queda condicionada por:
 [ ] prohibición de juicio final automático
 ```
 
-Descripción del rol permitido:
-
 ```text
 La IA podría actuar como...
 No podrá actuar como...
@@ -273,8 +262,6 @@ No podrá actuar como...
 ---
 
 ## 9. Criterios local-first
-
-Completar la matriz mínima.
 
 | Pregunta | Respuesta |
 |---|---|
@@ -303,7 +290,7 @@ Esta spec preserva control local porque...
 [ ] No puede avanzar hasta crear una matriz de consentimiento específica.
 ```
 
-### 10.1 Preguntas mínimas de consentimiento
+Preguntas mínimas:
 
 ```text
 ¿Qué ocurrirá?
@@ -323,7 +310,7 @@ Esta spec preserva control local porque...
 |---|---|---:|---|---|---|
 | | pedagógico / creativo / privacidad / seguridad / IA / datos / evaluación | | | | |
 
-Niveles:
+Escala:
 
 ```text
 1 = bajo
@@ -338,10 +325,10 @@ Niveles:
 
 ```text
 Activos a proteger:
-- 
+-
 
 Actores o fuentes de riesgo:
-- 
+-
 
 Amenazas previsibles:
 - exposición de datos
@@ -356,13 +343,13 @@ Amenazas previsibles:
 - otras:
 
 Mitigaciones iniciales:
-- 
+-
 
 Riesgos residuales:
-- 
+-
 ```
 
-Resultado del threat model preliminar:
+Resultado:
 
 ```text
 [ ] Suficiente para spec de bajo riesgo.
@@ -373,8 +360,6 @@ Resultado del threat model preliminar:
 ---
 
 ## 13. Análisis Dialógico Transdisciplinario
-
-Activar si existe tensión entre creatividad, privacidad, eficiencia técnica, evaluación, libertad exploratoria, seguridad, trazabilidad o consentimiento.
 
 | Tensión | Principio A | Principio B | Solución situada | Decisión |
 |---|---|---|---|---|
@@ -390,8 +375,6 @@ Justificación narrativa:
 
 ## 14. Criterios de aceptación
 
-Una spec segura debe declarar cómo se sabrá que cumple su propósito.
-
 ```text
 [ ] Protege agencia humana.
 [ ] Mantiene local-first.
@@ -406,9 +389,9 @@ Una spec segura debe declarar cómo se sabrá que cumple su propósito.
 Criterios específicos:
 
 ```text
-- 
-- 
-- 
+-
+-
+-
 ```
 
 ---
@@ -427,12 +410,6 @@ Criterios específicos:
 [ ] Prueba de trazabilidad documental.
 ```
 
-Notas de prueba:
-
-```text
-
-```
-
 ---
 
 ## 16. Revisión humana
@@ -442,6 +419,7 @@ Revisor/a:
 Perfil:
 Fecha:
 Resultado:
+Justificación:
 ```
 
 Resultado permitido:
@@ -451,12 +429,6 @@ Resultado permitido:
 [ ] Condicionada
 [ ] Diferida
 [ ] Bloqueada
-```
-
-Justificación:
-
-```text
-
 ```
 
 ---
@@ -471,7 +443,7 @@ Deuda pagada:
 Documentos que deben actualizarse:
 ```
 
-### 17.1 Registro obligatorio
+Registro obligatorio:
 
 ```text
 [ ] Bitácora de sesión actualizada.
@@ -487,3 +459,5 @@ Documentos que deben actualizarse:
 Esta plantilla paga parcialmente la deuda `ASTL-V044-DEBT-SPEC-001` al proveer un instrumento mínimo para producir specs seguras.
 
 La deuda no queda cerrada hasta que la plantilla sea usada, revisada y conectada con las matrices constitucionales completas.
+
+Esta plantilla no autoriza implementación funcional.
