@@ -48,59 +48,25 @@ no dependencia de servicios externos.
 
 ---
 
-## 4. Diferenciar verbos
+## 4. Local-first y objetos conceptuales
+
+Todo objeto conceptual que toque datos, evidencias, reflexiones, portafolios, exportación, IA o evaluación debe responder las preguntas local-first.
+
+Ejemplos prioritarios:
 
 ```text
-Guardar:
-  mantener bajo control local.
-
-Exportar:
-  sacar copia por acción humana explícita.
-
-Compartir:
-  entregar o mostrar a otra persona o grupo.
-
-Publicar:
-  hacer visible fuera del contexto privado o local.
-
-Enviar a IA externa:
-  transferir contenido a sistema externo bajo condiciones estrictas.
+Evidencia
+Reflexion
+Portafolio
+Exportacion
+RepositorioLocal
+Consentimiento
+UsoIA
+RevisionHumana
 ```
 
 ---
 
-## 5. Evidencia, portafolio y reflexión
-
-```text
-La evidencia no es archivo neutro.
-El portafolio no es repositorio muerto.
-La reflexión no es dato administrativo.
-```
-
-Cada uno debe permanecer local por defecto, sin publicación automática, sin evaluación automática final y sin envío a IA externa por defecto.
-
----
-
-## 6. Señales de alerta
-
-Condicionar, diferir o bloquear si una spec propone:
-
-```text
-subir automáticamente;
-sincronizar con nube;
-analizar actividad del usuario;
-guardar en servidor;
-crear cuenta;
-usar API externa;
-enviar a IA;
-publicar portafolio;
-evaluar automáticamente;
-recopilar datos reales;
-usar datos de estudiantes.
-```
-
----
-
-## 7. Dictamen
+## 5. Dictamen
 
 Local-first es una ética de diseño antes de ser arquitectura. El Programador Humanista debe evitar que lo técnico convierta creatividad en extracción de datos.

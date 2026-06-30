@@ -42,14 +42,28 @@
 [ ] Verifica si hay activadores de threat model.
 [ ] Identifica activos a proteger.
 [ ] Identifica fuentes de amenaza.
-[ ] Identifica amenazas previsibles.
 [ ] Identifica mitigaciones.
 [ ] Identifica riesgos residuales.
 [ ] Clasifica riesgo bajo, medio, alto o bloqueante.
 [ ] Bloquea si hay amenazas críticas sin mitigación.
 ```
 
-## 5. Datos
+## 5. POO conceptual
+
+```text
+[ ] Identifica objetos conceptuales propuestos.
+[ ] Define propósito humano de cada objeto.
+[ ] Define responsabilidades.
+[ ] Declara datos permitidos.
+[ ] Declara datos prohibidos.
+[ ] Declara relaciones con otros objetos.
+[ ] Responde local-first por objeto sensible.
+[ ] Activa threat model por objeto sensible.
+[ ] Declara condiciones de bloqueo.
+[ ] No convierte objetos en clases implementables.
+```
+
+## 6. Datos
 
 ```text
 [ ] Clasifica todos los datos.
@@ -59,7 +73,7 @@
 [ ] Bloquea datos reales si no existe política formal.
 ```
 
-## 6. Evidencias y portafolios
+## 7. Evidencias y portafolios
 
 ```text
 [ ] Trata evidencia como objeto de cuidado.
@@ -68,7 +82,7 @@
 [ ] Prohíbe evaluación automática final.
 ```
 
-## 7. Consentimiento
+## 8. Consentimiento
 
 ```text
 [ ] Explica qué ocurrirá.
@@ -79,14 +93,6 @@
 [ ] Usa consentimiento reforzado si hay menores, datos reales, publicación, exportación o IA externa.
 ```
 
-## 8. IA
-
-```text
-[ ] Declara si no aplica IA.
-[ ] Si es IA externa, exige spec específica, consentimiento explícito, datos ficticios/sintéticos/anonimizados, threat model y revisión humana.
-[ ] Prohíbe IA como juez final, sustituto docente, autoridad creativa o vigilancia.
-```
-
 ## 9. Trazabilidad
 
 ```text
@@ -94,6 +100,7 @@
 [ ] Vincula Plantilla de Spec Segura.
 [ ] Vincula Política Local-First.
 [ ] Vincula Registro Inicial de Threat Models.
+[ ] Vincula Matriz POO Conceptual.
 [ ] Actualiza bitácora, transferencia y deuda.
 [ ] Identifica si requiere Wiki humana.
 ```

@@ -13,7 +13,7 @@
 
 ## 1. Propósito
 
-Esta base de conocimiento traduce la Constitución SDD, la Plantilla de Spec Segura, la Política Local-First Inicial y el Registro Inicial de Threat Models al lenguaje de trabajo del Programador Humanista.
+Esta base de conocimiento traduce la Constitución SDD, la Plantilla de Spec Segura, la Política Local-First Inicial, el Registro Inicial de Threat Models y la Matriz POO Conceptual al lenguaje de trabajo del Programador Humanista.
 
 Permite reproducir la metodología SDD para:
 
@@ -21,6 +21,7 @@ Permite reproducir la metodología SDD para:
 redactar specs seguras;
 aplicar local-first;
 identificar amenazas antes de construir;
+modelar objetos conceptuales sin implementar;
 distinguir riesgos bajos, medios, altos y bloqueantes;
 activar revisión humana;
 proteger agencia humana;
@@ -41,9 +42,10 @@ No es una guía de programación funcional. Es una guía para pensar, especifica
 | `Guia_Uso_Plantilla_Spec_Segura_AI_StoryLab_1_v0_4_4.md` | Explica cómo usar la plantilla de spec segura. |
 | `Guia_Local_First_para_Programador_Humanista_AI_StoryLab_1_v0_4_4.md` | Traduce local-first al trabajo técnico-humanista. |
 | `Guia_Threat_Model_para_Programador_Humanista_AI_StoryLab_1_v0_4_4.md` | Explica cómo activar y leer threat models. |
+| `Guia_POO_Conceptual_para_Programador_Humanista_AI_StoryLab_1_v0_4_4.md` | Explica cómo usar POO como lenguaje conceptual, no como código. |
 | `Checklist_Preimplementacion_SDD_AI_StoryLab_1_v0_4_4.md` | Verificación antes de cualquier avance técnico futuro. |
 | `Glosario_Minimo_SDD_Programador_Humanista_AI_StoryLab_1_v0_4_4.md` | Vocabulario operativo mínimo. |
-| `Mapa_Relaciones_SDD_Programador_Humanista_AI_StoryLab_1_v0_4_4.md` | Relación entre Constitución, política, threat model, plantilla, bitácoras, deuda y Wiki. |
+| `Mapa_Relaciones_SDD_Programador_Humanista_AI_StoryLab_1_v0_4_4.md` | Relación entre Constitución, política, threat model, POO, plantilla, bitácoras, deuda y Wiki. |
 | `Manifest_Base_Conocimiento_SDD_Programador_Humanista_AI_StoryLab_1_v0_4_4.md` | Inventario y criterios de incorporación. |
 
 ---
@@ -63,7 +65,7 @@ No es una guía de programación funcional. Es una guía para pensar, especifica
 ## 4. Regla central
 
 ```text
-Ninguna idea técnica avanza a implementación funcional sin spec segura, local-first, threat model cuando aplique, consentimiento cuando aplique y revisión humana cuando corresponda.
+Ninguna idea técnica avanza a implementación funcional sin spec segura, local-first, threat model cuando aplique, modelado conceptual cuidadoso cuando aplique, consentimiento cuando aplique y revisión humana cuando corresponda.
 ```
 
 ---
@@ -90,4 +92,4 @@ implementación funcional
 
 ## 6. Dictamen
 
-Esta base convierte SDD en conocimiento operacional reproducible para el Programador Humanista. La metodología deja de depender de memoria de sesión y se vuelve una caja de herramientas documental, con cierres, alarmas y brújulas.
+Esta base convierte SDD en conocimiento operacional reproducible para el Programador Humanista. La metodología deja de depender de memoria de sesión y se vuelve una caja de herramientas documental, con cierres, alarmas, brújulas y objetos conceptuales bien cuidados.

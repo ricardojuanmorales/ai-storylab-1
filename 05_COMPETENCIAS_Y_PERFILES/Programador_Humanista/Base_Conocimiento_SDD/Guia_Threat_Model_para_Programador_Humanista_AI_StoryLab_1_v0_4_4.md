@@ -10,24 +10,16 @@
 
 Esta guía traduce el Registro Inicial de Threat Models SDD al trabajo cotidiano del Programador Humanista.
 
-Su función es ayudar a detectar amenazas antes de que una spec se convierta en diseño técnico, objeto conceptual o tarea futura.
-
 ---
 
-## 2. Qué es un threat model en AI StoryLab 1
+## 2. Qué es un threat model
 
 Un threat model es una herramienta de cuidado anticipatorio.
 
-No pregunta solamente “¿quién atacaría el sistema?”, sino:
+Pregunta:
 
 ```text
-¿Qué se puede dañar?
-¿Qué persona pierde control?
-¿Qué evidencia se expone?
-¿Qué dato no debería existir?
-¿Qué automatización desplaza una decisión humana?
-¿Qué consentimiento falta?
-¿Qué amenaza no puedo mitigar todavía?
+¿Qué se puede dañar antes de que diseñemos o construyamos algo?
 ```
 
 ---
@@ -61,91 +53,24 @@ rigidez pedagógica.
 
 ---
 
-## 4. Cuándo bloquear
+## 4. Threat model y POO conceptual
 
-Debe bloquearse, diferirse o rediseñarse si aparece:
+Todo objeto conceptual sensible debe revisar amenazas.
+
+Ejemplo:
 
 ```text
-subida automática;
-publicación automática;
-envío automático a IA externa;
-evaluación automática como juez final;
-datos reales sin política formal;
-datos de menores sin política reforzada;
-almacenamiento remoto sin política aprobada;
-backend sin autorización;
-cloud sin autorización;
-APIs externas sin threat model específico;
-analíticas sin autorización;
-autenticación prematura;
-base de datos remota;
-implementación funcional en v0.4.4.
+Objeto: Portafolio
+Amenazas:
+  publicación automática;
+  pérdida de contexto;
+  evaluación automática final;
+  exportación sin consentimiento;
+  metadatos identificables.
 ```
 
 ---
 
-## 5. Cómo leer niveles de riesgo
-
-```text
-Bajo:
-  datos ficticios, conceptuales, sin exportación ni IA externa.
-
-Medio:
-  metadatos mínimos, evidencia ficticia, objetos conceptuales.
-
-Alto:
-  evidencia educativa, reflexión personal, portafolio, exportación o consentimiento.
-
-Bloqueante:
-  datos reales, menores, IA externa por defecto, subida automática, publicación automática, evaluación automática final o infraestructura no autorizada.
-```
-
----
-
-## 6. Amenazas que no parecen amenazas
-
-El Programador Humanista debe mirar también amenazas blandas:
-
-```text
-formulario excesivo;
-portafolio muerto;
-reflexión obligatoria;
-confusión entre borrador y publicación;
-confusión entre guardar y compartir;
-metadatos invisibles;
-pérdida de contexto creativo;
-deuda cerrada demasiado pronto;
-rutas canónicas equivocadas;
-mezcla de borrador con aprobado.
-```
-
----
-
-## 7. Resultado del threat model
-
-Un threat model puede terminar en:
-
-```text
-aprobado;
-condicionado;
-diferido;
-bloqueado.
-```
-
-Debe registrar:
-
-```text
-mitigaciones;
-riesgos residuales;
-consentimiento requerido;
-revisión humana;
-deuda creada o pagada;
-documentos a actualizar;
-posible Wiki humana.
-```
-
----
-
-## 8. Dictamen
+## 5. Dictamen
 
 El threat model es el radar del Programador Humanista. No ve el futuro, pero impide navegar dormidos hacia arrecifes documentales, técnicos o humanos.

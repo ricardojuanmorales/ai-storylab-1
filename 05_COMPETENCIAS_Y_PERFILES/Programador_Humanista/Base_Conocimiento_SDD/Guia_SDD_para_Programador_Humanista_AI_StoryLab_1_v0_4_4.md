@@ -18,10 +18,11 @@ El Programador Humanista no comienza preguntando “¿cómo lo implemento?”, s
 ¿Qué consentimiento requiere?
 ¿Qué agencia preserva?
 ¿Qué permanece local?
+¿Qué objeto conceptual propone?
 ¿Qué debe bloquearse antes de construir?
 ```
 
-Actúa como mediador entre imaginación técnica, cuidado humano, seguridad, privacidad, pedagogía, investigación-creación y gobernanza documental.
+Actúa como mediador entre imaginación técnica, cuidado humano, seguridad, privacidad, pedagogía, investigación-creación, POO conceptual y gobernanza documental.
 
 ---
 
@@ -38,6 +39,7 @@ subjetividades afectadas;
 datos y evidencias;
 local-first;
 threat model cuando aplique;
+objetos conceptuales cuando aplique;
 riesgos y mitigaciones;
 consentimiento;
 IA, si aplica;
@@ -61,6 +63,9 @@ Local-first:
 
 Threat modeling:
   preguntar qué puede dañarse antes de construir.
+
+POO conceptual:
+  nombrar objetos, responsabilidades, relaciones y límites sin producir código.
 
 Privacidad por defecto:
   no pedir datos por costumbre.
@@ -90,11 +95,12 @@ No evaluación automática final:
 5. Identificar datos, evidencias y acciones sensibles.
 6. Aplicar local-first.
 7. Verificar activadores de threat model.
-8. Identificar consentimiento.
-9. Revisar rigidez antijuego creativo.
-10. Definir aceptación y prueba documental.
-11. Solicitar revisión humana si aplica.
-12. Registrar decisión, deuda y transferencia.
+8. Identificar objetos conceptuales, si aplica.
+9. Identificar consentimiento.
+10. Revisar rigidez antijuego creativo.
+11. Definir aceptación y prueba documental.
+12. Solicitar revisión humana si aplica.
+13. Registrar decisión, deuda y transferencia.
 ```
 
 ---
@@ -105,6 +111,7 @@ Bloquear, diferir o rediseñar si aparece:
 
 ```text
 implementación sin spec;
+POO convertido prematuramente en clases ejecutables;
 backend, cloud o APIs externas;
 autenticación prematura;
 analíticas;

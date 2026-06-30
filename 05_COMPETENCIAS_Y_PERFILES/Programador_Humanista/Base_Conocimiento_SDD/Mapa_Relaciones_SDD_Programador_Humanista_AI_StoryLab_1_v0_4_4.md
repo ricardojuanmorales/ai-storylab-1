@@ -24,8 +24,11 @@ Política Local-First Inicial
 Registro Inicial de Threat Models
   ↓ define activadores, amenazas, riesgos, bloqueos y plantilla mínima
 
+Matriz POO Conceptual
+  ↓ define objetos, responsabilidades, datos, relaciones, riesgos y bloqueos conceptuales
+
 Plantilla de Spec Segura
-  ↓ convierte principios, políticas y amenazas en estructura de spec
+  ↓ convierte principios, políticas, amenazas y objetos en estructura de spec
 
 Base de Conocimiento SDD del Programador Humanista
   ↓ enseña cómo aplicar el método
@@ -46,10 +49,12 @@ Bitácora + Transferencia + Deuda + Wiki humana
 | Constitución SDD | Marco superior | Principios y límites. |
 | Política Local-First Inicial | Política rectora | Criterios sobre datos, evidencias, exportación y consentimiento. |
 | Registro Inicial de Threat Models | Radar documental | Activadores, amenazas, bloqueos y plantilla mínima. |
+| Matriz POO Conceptual | Mapa de objetos | Objetos, responsabilidades, relaciones, datos permitidos y bloqueos. |
 | Plantilla de Spec Segura | Instrumento | Estructura para specs. |
 | Guía SDD | Formación | Cómo pensar antes de implementar. |
 | Guía local-first | Aplicación | Cómo detectar riesgos de datos y exportación. |
 | Guía threat model | Aplicación | Cómo detectar amenazas y condiciones de bloqueo. |
+| Guía POO conceptual | Aplicación | Cómo modelar objetos sin convertirlos en código. |
 | Checklist | Control | Qué revisar antes de avanzar. |
 | Glosario | Lenguaje común | Términos operativos. |
 | Registro de deuda | Memoria | Qué bloquea o condiciona avance. |
@@ -66,45 +71,28 @@ Bitácora + Transferencia + Deuda + Wiki humana
 2. Revisar Constitución.
 3. Revisar Política Local-First si toca datos, evidencia o exportación.
 4. Revisar Registro de Threat Models si hay activadores.
-5. Usar Plantilla de Spec Segura.
-6. Aplicar Checklist.
-7. Registrar decisión y deuda.
+5. Revisar Matriz POO si propone objetos de dominio.
+6. Usar Plantilla de Spec Segura.
+7. Aplicar Checklist.
+8. Registrar decisión y deuda.
 ```
 
-### Propuesta con datos
+### Propuesta con objeto conceptual
 
 ```text
-1. Consultar Política Local-First.
-2. Clasificar datos.
-3. Revisar consentimiento.
-4. Activar threat model si aplica.
-5. Condicionar, diferir o bloquear si hay datos reales sin política formal.
-```
-
-### Propuesta con IA
-
-```text
-1. Confirmar si IA aplica.
-2. Si es IA externa, exigir spec específica.
-3. Exigir consentimiento explícito.
-4. Usar solo datos ficticios, sintéticos o anonimizados.
-5. Exigir threat model.
-6. Prohibir juicio final automático.
-```
-
-### Propuesta con amenazas no mitigadas
-
-```text
-1. Registrar amenaza.
-2. Identificar activo afectado.
-3. Clasificar riesgo.
-4. Proponer mitigación.
-5. Crear deuda si no puede resolverse.
-6. Bloquear si es riesgo crítico.
+1. Nombrar objeto.
+2. Definir propósito humano.
+3. Definir responsabilidades.
+4. Declarar datos permitidos y prohibidos.
+5. Declarar relaciones.
+6. Responder local-first.
+7. Activar threat model si aplica.
+8. Definir consentimiento y bloqueos.
+9. No implementar.
 ```
 
 ---
 
 ## 5. Dictamen
 
-El Programador Humanista usa SDD como sistema de navegación: Constitución como cielo, política como clima, threat model como radar, plantilla como mapa, checklist como linterna y bitácora como memoria de viaje.
+El Programador Humanista usa SDD como sistema de navegación: Constitución como cielo, política como clima, threat model como radar, POO conceptual como mapa de criaturas, plantilla como brújula, checklist como linterna y bitácora como memoria de viaje.

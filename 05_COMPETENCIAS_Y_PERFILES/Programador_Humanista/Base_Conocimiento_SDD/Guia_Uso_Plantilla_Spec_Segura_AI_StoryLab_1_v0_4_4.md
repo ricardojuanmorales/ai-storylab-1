@@ -10,7 +10,7 @@
 
 Esta guía explica cómo usar la Plantilla de Spec Segura sin convertirla en formulario administrativo.
 
-La plantilla debe funcionar como conversación estructurada entre propósito humano, creatividad, datos, riesgos, threat model, consentimiento, local-first, revisión humana y deuda.
+La plantilla debe funcionar como conversación estructurada entre propósito humano, creatividad, datos, riesgos, threat model, local-first, POO conceptual, consentimiento, revisión humana y deuda.
 
 ---
 
@@ -21,13 +21,13 @@ Toda idea debe reformularse en lenguaje humano.
 Ejemplo técnico incompleto:
 
 ```text
-Crear módulo de carga de archivos.
+Crear clase Portfolio.
 ```
 
 Reformulación SDD:
 
 ```text
-Explorar una forma local-first para seleccionar, organizar y describir evidencias creativas sin subida automática, sin almacenamiento remoto y con control explícito sobre compartir o no compartir.
+Definir conceptualmente el objeto Portafolio como una estructura local-first para curar evidencias y reflexiones, sin publicación automática, sin evaluación automática final y con control humano sobre exportación o no compartir.
 ```
 
 ---
@@ -68,6 +68,9 @@ Local-first:
 Threat model:
   activar si hay exportación, publicación, datos reales, menores, IA externa, metadatos, portafolios, evaluación o automatización.
 
+POO conceptual:
+  nombrar objetos, responsabilidades, datos permitidos, datos prohibidos, relaciones y condiciones de bloqueo.
+
 Consentimiento:
   explicar acción, datos, propósito, acceso, riesgos y alternativas.
 
@@ -77,31 +80,14 @@ Decisión:
 
 ---
 
-## 4. Criterios de decisión
-
-```text
-Aprobar:
-  cumple propósito, minimiza datos, preserva local-first y mitiga amenazas.
-
-Condicionar:
-  requiere matriz, política, consentimiento, threat model o revisión adicional.
-
-Diferir:
-  depende de documentos o fase futura.
-
-Bloquear:
-  propone subida automática, IA externa por defecto, datos reales sin política, evaluación automática final o implementación funcional.
-```
-
----
-
-## 5. Producto esperado
+## 4. Producto esperado
 
 Una spec candidata completa debe producir:
 
 ```text
 dictamen;
 threat model preliminar o específico cuando aplique;
+objetos conceptuales definidos cuando aplique;
 deuda creada o pagada;
 decisión clara;
 registro en bitácora;
