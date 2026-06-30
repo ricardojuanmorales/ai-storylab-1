@@ -6,16 +6,27 @@
 
 ---
 
-## 1. Propósito
-
-Esta guía traduce el Registro Inicial de Threat Models SDD al trabajo cotidiano del Programador Humanista.
-
----
-
-## 2. Pregunta base
+## 1. Pregunta base
 
 ```text
 ¿Qué se puede dañar antes de que diseñemos o construyamos algo?
+```
+
+---
+
+## 2. Amenazas creativas frecuentes
+
+```text
+pérdida de contexto;
+exposición de borradores;
+publicación no intencional;
+evaluación automática indebida;
+uso de reflexión como dato de vigilancia;
+metadatos identificables;
+portafolio convertido en cumplimiento;
+desplazamiento de decisión humana por IA;
+reducción de creatividad a indicadores;
+presión a compartir.
 ```
 
 ---

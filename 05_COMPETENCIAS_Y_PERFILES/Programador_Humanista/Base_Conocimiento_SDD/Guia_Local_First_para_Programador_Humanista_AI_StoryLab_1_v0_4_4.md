@@ -28,16 +28,17 @@ Nada sale del control local del usuario por defecto.
 
 ---
 
-## 3. Local-first y consentimiento
+## 3. Local-first y creatividad
 
-Toda salida del entorno local requiere intención humana explícita y, cuando aplique, consentimiento informado y situado.
+La creatividad no rígida necesita control local.
 
 ```text
 guardar localmente no autoriza exportar;
 exportar no autoriza publicar;
-compartir con docente no autoriza compartir con investigador;
-usar en clase no autoriza usar en investigación;
-crear portafolio no autoriza publicar portafolio.
+crear borrador no autoriza evaluarlo;
+crear portafolio no autoriza publicarlo;
+recibir retroalimentación no autoriza crear analíticas;
+usar IA local conceptual no autoriza IA externa.
 ```
 
 ---

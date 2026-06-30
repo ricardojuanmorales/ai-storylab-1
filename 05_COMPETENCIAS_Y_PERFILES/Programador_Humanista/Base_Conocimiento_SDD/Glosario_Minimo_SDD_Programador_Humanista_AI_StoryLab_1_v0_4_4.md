@@ -10,15 +10,17 @@
 
 **Agencia humana:** capacidad real de comprender, decidir, revisar, editar, retirar, exportar, compartir o no compartir datos, evidencias y producciones.
 
+**Borrador protegido:** producción que puede existir sin entregarse, publicarse, evaluarse ni incorporarse automáticamente al portafolio.
+
 **Consentimiento informado:** autorización comprensible que explica acción, datos, propósito, acceso, riesgos y alternativas.
 
 **Consentimiento situado:** consentimiento contextual, específico y ligado a una acción concreta.
 
-**Consentimiento reforzado:** consentimiento de mayor cuidado para menores, datos reales, publicación, investigación, IA externa o sensibilidad.
+**Experiencia creativa no rígida:** experiencia estructurada con cuidado, pero abierta a rutas múltiples, exploración, iteración, error, pausa, revisión, recombinación y decisión humana.
 
-**Consentimiento no suficiente:** caso en que aceptar no basta para permitir una acción, por ejemplo evaluación automática final o subida automática.
+**Portafolio vivo:** portafolio entendido como proceso de curaduría humana, no como carpeta automática o vitrina obligatoria.
 
-**Matriz de Consentimiento:** documento rector que define escenarios, tipos, permisos no transferibles, bloqueos y lenguaje humano mínimo.
+**Reflexión no coercitiva:** reflexión que invita sin extraer, puede omitirse o revisarse, y no se trata como dato administrativo por defecto.
 
 **Permisos no transferibles:** principio según el cual consentir una acción no autoriza automáticamente otra.
 

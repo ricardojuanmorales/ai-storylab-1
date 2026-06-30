@@ -19,6 +19,7 @@ La plantilla debe funcionar como conversación estructurada entre propósito hum
 ```text
 ¿Qué se propone?
 ¿Qué no autoriza?
+¿Qué experiencia creativa protege?
 ¿Qué permanece local?
 ¿Qué amenaza aparece?
 ¿Qué objeto conceptual se nombra?
@@ -29,24 +30,22 @@ La plantilla debe funcionar como conversación estructurada entre propósito hum
 
 ---
 
-## 3. Consentimiento dentro de la spec
+## 3. Experiencia creativa dentro de la spec
 
-La sección de consentimiento debe distinguir:
+La spec debe revisar:
 
 ```text
-guardar localmente;
-organizar;
-revisar;
-exportar;
-compartir;
-publicar;
-usar en investigación;
-enviar a IA externa;
-evaluar;
-evaluar automáticamente.
+rutas múltiples;
+borrador protegido;
+pausa;
+revisión;
+campos no esenciales omitibles;
+portafolio vivo;
+reflexión no coercitiva;
+no publicación automática;
+no evaluación automática final;
+no IA externa por defecto.
 ```
-
-Aceptar una acción no autoriza automáticamente otra.
 
 ---
 
@@ -59,6 +58,7 @@ dictamen;
 threat model preliminar o específico cuando aplique;
 objetos conceptuales definidos cuando aplique;
 consentimiento situado cuando aplique;
+revisión de experiencia creativa no rígida cuando aplique;
 deuda creada o pagada;
 decisión clara;
 registro en bitácora;

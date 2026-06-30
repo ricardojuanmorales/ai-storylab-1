@@ -12,6 +12,7 @@ El Programador Humanista no comienza preguntando “¿cómo lo implemento?”, s
 
 ```text
 ¿Qué experiencia humana protege esta función?
+¿Qué libertad creativa cuida?
 ¿Qué riesgo introduce?
 ¿Qué amenaza anticipable aparece?
 ¿Qué datos toca?
@@ -30,7 +31,7 @@ Una spec debe integrar:
 
 ```text
 propósito humano;
-experiencia creativa;
+experiencia creativa no rígida;
 subjetividades afectadas;
 datos y evidencias;
 local-first;
@@ -59,7 +60,7 @@ decisión final.
 6. Verificar activadores de threat model.
 7. Identificar objetos conceptuales, si aplica.
 8. Identificar consentimiento requerido.
-9. Revisar rigidez antijuego creativo.
+9. Revisar experiencia creativa no rígida.
 10. Definir aceptación y prueba documental.
 11. Solicitar revisión humana si aplica.
 12. Registrar decisión, deuda y transferencia.
@@ -75,6 +76,11 @@ Bloquear, diferir o rediseñar si aparece:
 implementación sin spec;
 consentimiento genérico para acciones sensibles;
 POO convertido prematuramente en clases ejecutables;
+flujo creativo rígido como ruta única;
+reflexión personal obligatoria;
+portafolio automático sin curaduría;
+publicación automática;
+evaluación automática final;
 backend, cloud o APIs externas;
 autenticación prematura;
 analíticas;
@@ -82,8 +88,6 @@ base de datos remota;
 subida automática;
 IA externa por defecto;
 datos reales sin política formal;
-publicación automática;
-evaluación automática final;
 menores sin consentimiento reforzado;
 evidencia sensible sin revisión humana;
 amenaza crítica sin mitigación.
@@ -93,4 +97,4 @@ amenaza crítica sin mitigación.
 
 ## 5. Dictamen
 
-El Programador Humanista no detiene la innovación. La vuelve responsable, trazable, consentida y habitable.
+El Programador Humanista no detiene la innovación. La vuelve responsable, trazable, consentida, habitable y creativamente respirable.

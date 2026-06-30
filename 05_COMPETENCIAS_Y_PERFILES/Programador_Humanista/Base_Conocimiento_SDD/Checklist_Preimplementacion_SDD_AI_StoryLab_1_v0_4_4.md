@@ -52,9 +52,6 @@
 ```text
 [ ] Identifica si requiere consentimiento.
 [ ] Distingue acción específica.
-[ ] Explica propósito.
-[ ] Clasifica datos y evidencias.
-[ ] Declara si hay exportación, publicación, investigación o IA.
 [ ] Incluye lenguaje humano comprensible.
 [ ] Ofrece alternativa cuando aplica.
 [ ] Identifica revisión humana.
@@ -63,7 +60,24 @@
 [ ] No usa consentimiento genérico.
 ```
 
-## 6. Trazabilidad
+## 6. Experiencia creativa no rígida
+
+```text
+[ ] Permite rutas múltiples.
+[ ] Protege borradores.
+[ ] Permite pausa.
+[ ] Permite revisión.
+[ ] Permite omitir campos no esenciales.
+[ ] Protege reflexión personal.
+[ ] Trata evidencia como objeto de cuidado.
+[ ] Mantiene portafolio como proceso vivo.
+[ ] Evita publicación automática.
+[ ] Evita evaluación automática final.
+[ ] Evita IA externa por defecto.
+[ ] Preserva decisión humana.
+```
+
+## 7. Trazabilidad
 
 ```text
 [ ] Vincula Constitución SDD.
@@ -72,6 +86,7 @@
 [ ] Vincula Registro Inicial de Threat Models.
 [ ] Vincula Matriz POO Conceptual.
 [ ] Vincula Matriz de Consentimiento.
+[ ] Vincula Guía de Experiencia Creativa No Rígida.
 [ ] Actualiza bitácora, transferencia y deuda.
 [ ] Identifica si requiere Wiki humana.
 ```

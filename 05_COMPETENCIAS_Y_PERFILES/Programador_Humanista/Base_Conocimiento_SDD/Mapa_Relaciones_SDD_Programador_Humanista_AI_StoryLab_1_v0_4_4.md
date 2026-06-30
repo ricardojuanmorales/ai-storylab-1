@@ -24,8 +24,11 @@ Matriz POO Conceptual
 Matriz de Consentimiento Informado y Situado
   ↓ define permisos, acciones, consentimiento reforzado, lenguaje humano y bloqueos
 
+Guía de Experiencia Creativa No Rígida
+  ↓ define criterios para rutas múltiples, borradores, portafolio vivo y creatividad sin jaula
+
 Plantilla de Spec Segura
-  ↓ convierte principios, políticas, amenazas, objetos y consentimientos en estructura de spec
+  ↓ convierte principios, políticas, amenazas, objetos, consentimientos y experiencia en estructura de spec
 
 Base de Conocimiento SDD del Programador Humanista
   ↓ enseña cómo aplicar el método
@@ -48,13 +51,14 @@ Bitácora + Transferencia + Deuda + Wiki humana
 4. Revisar Registro de Threat Models si hay activadores.
 5. Revisar Matriz POO si propone objetos de dominio.
 6. Revisar Matriz de Consentimiento si pide acción humana, exportación, publicación, IA, datos o evidencias.
-7. Usar Plantilla de Spec Segura.
-8. Aplicar Checklist.
-9. Registrar decisión y deuda.
+7. Revisar Guía de Experiencia Creativa No Rígida si toca actividad, evidencia, portafolio, reflexión, retroalimentación o interfaz futura.
+8. Usar Plantilla de Spec Segura.
+9. Aplicar Checklist.
+10. Registrar decisión y deuda.
 ```
 
 ---
 
 ## 3. Dictamen
 
-El Programador Humanista usa SDD como sistema de navegación: Constitución como cielo, política como clima, threat model como radar, POO conceptual como mapa de criaturas, consentimiento como llave situada, plantilla como brújula, checklist como linterna y bitácora como memoria de viaje.
+El Programador Humanista usa SDD como sistema de navegación: Constitución como cielo, política como clima, threat model como radar, POO conceptual como mapa de criaturas, consentimiento como llave situada, experiencia no rígida como jardín respirable, plantilla como brújula, checklist como linterna y bitácora como memoria de viaje.

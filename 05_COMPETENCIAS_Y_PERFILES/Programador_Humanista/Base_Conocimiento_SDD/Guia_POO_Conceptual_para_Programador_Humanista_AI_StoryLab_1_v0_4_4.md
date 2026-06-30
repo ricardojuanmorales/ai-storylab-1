@@ -25,14 +25,29 @@ Un objeto conceptual no es una clase implementada.
 ¿Qué permanece local?
 ¿Qué amenaza activa?
 ¿Qué consentimiento requiere?
+¿Qué libertad creativa protege o restringe?
 ¿Qué no debe hacer nunca?
 ```
 
 ---
 
-## 3. Consentimiento y objetos
+## 3. Objetos creativos prioritarios
 
-Objetos como `Evidencia`, `Reflexion`, `Portafolio`, `Exportacion`, `UsoIA`, `RevisionHumana`, `Rubrica` y `Retroalimentacion` deben declarar cuándo requieren consentimiento y qué permisos no pueden inferirse automáticamente.
+```text
+ActividadCreativa
+Evidencia
+Reflexion
+Portafolio
+Borrador
+Version
+Curaduria
+Retroalimentacion
+Rubrica
+DecisionHumana
+Exportacion
+Consentimiento
+UsoIA
+```
 
 ---
 

@@ -13,7 +13,17 @@
 
 ## 1. Propósito
 
-Esta base de conocimiento traduce la Constitución SDD, la Plantilla de Spec Segura, la Política Local-First Inicial, el Registro Inicial de Threat Models, la Matriz POO Conceptual y la Matriz de Consentimiento Informado y Situado al lenguaje de trabajo del Programador Humanista.
+Esta base de conocimiento traduce al lenguaje de trabajo del Programador Humanista los documentos rectores SDD activos:
+
+```text
+Constitución SDD
+Plantilla de Spec Segura
+Política Local-First Inicial
+Registro Inicial de Threat Models
+Matriz POO Conceptual
+Matriz de Consentimiento Informado y Situado
+Guía de Experiencia Creativa No Rígida
+```
 
 Permite reproducir la metodología SDD para:
 
@@ -22,8 +32,9 @@ redactar specs seguras;
 aplicar local-first;
 identificar amenazas antes de construir;
 modelar objetos conceptuales sin implementar;
-distinguir riesgos bajos, medios, altos y bloqueantes;
-identificar consentimiento simple, informado, situado y reforzado;
+distinguir consentimiento simple, informado, situado y reforzado;
+proteger experiencia creativa no rígida;
+evitar portafolios muertos, reflexión coercitiva y evaluación automática final;
 proteger agencia humana;
 evitar salto prematuro a código;
 registrar deuda, transferencia y decisiones.
@@ -44,9 +55,10 @@ No es una guía de programación funcional. Es una guía para pensar, especifica
 | `Guia_Threat_Model_para_Programador_Humanista_AI_StoryLab_1_v0_4_4.md` | Explica cómo activar y leer threat models. |
 | `Guia_POO_Conceptual_para_Programador_Humanista_AI_StoryLab_1_v0_4_4.md` | Explica cómo usar POO como lenguaje conceptual, no como código. |
 | `Guia_Consentimiento_Informado_y_Situado_para_Programador_Humanista_AI_StoryLab_1_v0_4_4.md` | Explica cómo aplicar consentimiento informado, situado y reforzado. |
+| `Guia_Experiencia_Creativa_No_Rigida_para_Programador_Humanista_AI_StoryLab_1_v0_4_4.md` | Explica cómo proteger creatividad, borradores, rutas múltiples y portafolios vivos. |
 | `Checklist_Preimplementacion_SDD_AI_StoryLab_1_v0_4_4.md` | Verificación antes de cualquier avance técnico futuro. |
 | `Glosario_Minimo_SDD_Programador_Humanista_AI_StoryLab_1_v0_4_4.md` | Vocabulario operativo mínimo. |
-| `Mapa_Relaciones_SDD_Programador_Humanista_AI_StoryLab_1_v0_4_4.md` | Relación entre Constitución, política, threat model, POO, consentimiento, plantilla, bitácoras, deuda y Wiki. |
+| `Mapa_Relaciones_SDD_Programador_Humanista_AI_StoryLab_1_v0_4_4.md` | Relación entre documentos rectores, specs, bitácoras, deuda y Wiki humana. |
 | `Manifest_Base_Conocimiento_SDD_Programador_Humanista_AI_StoryLab_1_v0_4_4.md` | Inventario y criterios de incorporación. |
 
 ---
@@ -54,7 +66,7 @@ No es una guía de programación funcional. Es una guía para pensar, especifica
 ## 3. Regla central
 
 ```text
-Ninguna idea técnica avanza a implementación funcional sin spec segura, local-first, threat model cuando aplique, modelado conceptual cuidadoso cuando aplique, consentimiento cuando aplique y revisión humana cuando corresponda.
+Ninguna idea técnica avanza a implementación funcional sin spec segura, local-first, threat model cuando aplique, modelado conceptual cuidadoso cuando aplique, consentimiento cuando aplique, experiencia creativa no rígida cuando aplique y revisión humana cuando corresponda.
 ```
 
 ---
@@ -67,4 +79,4 @@ Esta base no autoriza backend, cloud, APIs externas, autenticación, analíticas
 
 ## 5. Dictamen
 
-Esta base convierte SDD en conocimiento operacional reproducible para el Programador Humanista. La metodología deja de depender de memoria de sesión y se vuelve una caja de herramientas documental, con cierres, alarmas, brújulas, objetos conceptuales y permisos humanos situados.
+Esta base convierte SDD en conocimiento operacional reproducible para el Programador Humanista. La metodología deja de depender de memoria de sesión y se vuelve una caja de herramientas documental, con cierres, alarmas, brújulas, objetos conceptuales, permisos humanos situados y espacio real para crear sin jaulas.
