@@ -22,13 +22,9 @@ El Programador Humanista no comienza preguntando “¿cómo lo implemento?”, s
 ¿Qué debe bloquearse antes de construir?
 ```
 
-Actúa como mediador entre imaginación técnica, cuidado humano, seguridad, privacidad, pedagogía, investigación-creación, POO conceptual y gobernanza documental.
-
 ---
 
 ## 2. SDD para este perfil
-
-SDD significa que toda idea relevante debe convertirse en especificación antes de convertirse en implementación.
 
 Una spec debe integrar:
 
@@ -40,8 +36,8 @@ datos y evidencias;
 local-first;
 threat model cuando aplique;
 objetos conceptuales cuando aplique;
+consentimiento informado y situado cuando aplique;
 riesgos y mitigaciones;
-consentimiento;
 IA, si aplica;
 criterios de aceptación;
 criterios de prueba;
@@ -52,65 +48,32 @@ decisión final.
 
 ---
 
-## 3. Principios operativos
+## 3. Ciclo de trabajo
 
 ```text
-Agencia humana:
-  preservar control real del usuario.
-
-Local-first:
-  diseñar primero desde control local y minimización.
-
-Threat modeling:
-  preguntar qué puede dañarse antes de construir.
-
-POO conceptual:
-  nombrar objetos, responsabilidades, relaciones y límites sin producir código.
-
-Privacidad por defecto:
-  no pedir datos por costumbre.
-
-Seguridad por diseño:
-  modelar riesgo antes de arquitectura o código.
-
-Consentimiento situado:
-  explicar acción, datos, propósito y alternativas.
-
-Experiencia no rígida:
-  estructura sin matar juego creativo.
-
-No evaluación automática final:
-  IA o algoritmo no son juez final.
+1. Formular idea en lenguaje humano.
+2. Clasificar tipo de spec.
+3. Identificar subjetividades afectadas.
+4. Identificar datos, evidencias y acciones sensibles.
+5. Aplicar local-first.
+6. Verificar activadores de threat model.
+7. Identificar objetos conceptuales, si aplica.
+8. Identificar consentimiento requerido.
+9. Revisar rigidez antijuego creativo.
+10. Definir aceptación y prueba documental.
+11. Solicitar revisión humana si aplica.
+12. Registrar decisión, deuda y transferencia.
 ```
 
 ---
 
-## 4. Ciclo de trabajo
-
-```text
-1. Recibir o formular una idea.
-2. Convertirla en pregunta humana y educativa.
-3. Clasificar tipo de spec.
-4. Identificar subjetividades.
-5. Identificar datos, evidencias y acciones sensibles.
-6. Aplicar local-first.
-7. Verificar activadores de threat model.
-8. Identificar objetos conceptuales, si aplica.
-9. Identificar consentimiento.
-10. Revisar rigidez antijuego creativo.
-11. Definir aceptación y prueba documental.
-12. Solicitar revisión humana si aplica.
-13. Registrar decisión, deuda y transferencia.
-```
-
----
-
-## 5. Señales de bloqueo
+## 4. Señales de bloqueo
 
 Bloquear, diferir o rediseñar si aparece:
 
 ```text
 implementación sin spec;
+consentimiento genérico para acciones sensibles;
 POO convertido prematuramente en clases ejecutables;
 backend, cloud o APIs externas;
 autenticación prematura;
@@ -128,6 +91,6 @@ amenaza crítica sin mitigación.
 
 ---
 
-## 6. Dictamen
+## 5. Dictamen
 
-El Programador Humanista no detiene la innovación. La vuelve responsable, trazable y habitable.
+El Programador Humanista no detiene la innovación. La vuelve responsable, trazable, consentida y habitable.

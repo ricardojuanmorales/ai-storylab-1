@@ -12,11 +12,7 @@ Esta guía traduce el Registro Inicial de Threat Models SDD al trabajo cotidiano
 
 ---
 
-## 2. Qué es un threat model
-
-Un threat model es una herramienta de cuidado anticipatorio.
-
-Pregunta:
+## 2. Pregunta base
 
 ```text
 ¿Qué se puede dañar antes de que diseñemos o construyamos algo?
@@ -24,53 +20,21 @@ Pregunta:
 
 ---
 
-## 3. Cuándo activarlo
+## 3. Consentimiento no elimina amenaza
 
-Debe activarse si una spec toca:
+Aunque una persona acepte, puede haber acciones bloqueadas:
 
 ```text
-exportación;
-publicación;
-evidencia educativa;
-evidencia creativa;
-reflexiones personales;
-menores de edad;
-datos reales;
-datos personales;
-datos sensibles;
-IA externa;
-metadatos;
-portafolios;
-automatización;
-evaluación;
-compartir con terceros;
-uso en investigación;
-almacenamiento persistente;
-repositorio local;
-pérdida de agencia;
-rigidez pedagógica.
+evaluación automática como juez final;
+subida automática;
+publicación automática;
+IA externa por defecto;
+datos reales sin política formal;
+datos de menores sin política reforzada.
 ```
 
 ---
 
-## 4. Threat model y POO conceptual
-
-Todo objeto conceptual sensible debe revisar amenazas.
-
-Ejemplo:
-
-```text
-Objeto: Portafolio
-Amenazas:
-  publicación automática;
-  pérdida de contexto;
-  evaluación automática final;
-  exportación sin consentimiento;
-  metadatos identificables.
-```
-
----
-
-## 5. Dictamen
+## 4. Dictamen
 
 El threat model es el radar del Programador Humanista. No ve el futuro, pero impide navegar dormidos hacia arrecifes documentales, técnicos o humanos.

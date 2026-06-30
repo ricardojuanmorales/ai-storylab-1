@@ -14,69 +14,39 @@ La plantilla debe funcionar como conversación estructurada entre propósito hum
 
 ---
 
-## 2. Antes de llenar la plantilla
-
-Toda idea debe reformularse en lenguaje humano.
-
-Ejemplo técnico incompleto:
+## 2. Preguntas esenciales por spec
 
 ```text
-Crear clase Portfolio.
-```
-
-Reformulación SDD:
-
-```text
-Definir conceptualmente el objeto Portafolio como una estructura local-first para curar evidencias y reflexiones, sin publicación automática, sin evaluación automática final y con control humano sobre exportación o no compartir.
+¿Qué se propone?
+¿Qué no autoriza?
+¿Qué permanece local?
+¿Qué amenaza aparece?
+¿Qué objeto conceptual se nombra?
+¿Qué consentimiento requiere?
+¿Qué revisión humana necesita?
+¿Qué debe bloquearse?
 ```
 
 ---
 
-## 3. Uso por secciones
+## 3. Consentimiento dentro de la spec
+
+La sección de consentimiento debe distinguir:
 
 ```text
-Identificación:
-  asignar ID, título, versión, estado, responsable y ruta.
-
-Tipo de spec:
-  marcar complejidad real, no simplificar artificialmente.
-
-Propósito:
-  declarar qué propone, a quién sirve y qué no autoriza.
-
-Alcance:
-  delimitar qué entra y qué queda fuera.
-
-Subjetividades:
-  identificar perfiles afectados y elevar cuidado si hay menores.
-
-Experiencia creativa:
-  proteger exploración, pausa, revisión, error y recombinación.
-
-Datos:
-  justificar cada dato o eliminarlo.
-
-Evidencias:
-  tratarlas como objetos de cuidado, no archivos neutros.
-
-IA:
-  marcar si no aplica; si es externa, condicionar por consentimiento, datos ficticios/sintéticos/anonimizados, threat model y revisión humana.
-
-Local-first:
-  responder qué permanece local, qué no se guarda, qué se exporta y qué nunca se sube automáticamente.
-
-Threat model:
-  activar si hay exportación, publicación, datos reales, menores, IA externa, metadatos, portafolios, evaluación o automatización.
-
-POO conceptual:
-  nombrar objetos, responsabilidades, datos permitidos, datos prohibidos, relaciones y condiciones de bloqueo.
-
-Consentimiento:
-  explicar acción, datos, propósito, acceso, riesgos y alternativas.
-
-Decisión:
-  aprobar, condicionar, diferir o bloquear.
+guardar localmente;
+organizar;
+revisar;
+exportar;
+compartir;
+publicar;
+usar en investigación;
+enviar a IA externa;
+evaluar;
+evaluar automáticamente.
 ```
+
+Aceptar una acción no autoriza automáticamente otra.
 
 ---
 
@@ -88,6 +58,7 @@ Una spec candidata completa debe producir:
 dictamen;
 threat model preliminar o específico cuando aplique;
 objetos conceptuales definidos cuando aplique;
+consentimiento situado cuando aplique;
 deuda creada o pagada;
 decisión clara;
 registro en bitácora;

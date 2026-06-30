@@ -10,54 +10,28 @@
 
 **Agencia humana:** capacidad real de comprender, decidir, revisar, editar, retirar, exportar, compartir o no compartir datos, evidencias y producciones.
 
-**Amenaza:** condición, acción, error, diseño o automatización que puede causar daño, exposición, pérdida de agencia o interpretación indebida.
+**Consentimiento informado:** autorización comprensible que explica acción, datos, propósito, acceso, riesgos y alternativas.
 
-**Aprobada:** decisión documental que permite avanzar dentro del marco autorizado, sin autorizar automáticamente implementación funcional.
+**Consentimiento situado:** consentimiento contextual, específico y ligado a una acción concreta.
 
-**Bloqueada:** decisión que impide avanzar mientras exista una condición inaceptable.
+**Consentimiento reforzado:** consentimiento de mayor cuidado para menores, datos reales, publicación, investigación, IA externa o sensibilidad.
 
-**Composición:** forma de modelar objetos mediante relaciones flexibles, evitando jerarquías rígidas.
+**Consentimiento no suficiente:** caso en que aceptar no basta para permitir una acción, por ejemplo evaluación automática final o subida automática.
 
-**Condicionada:** decisión que exige cambios, documentos, matrices, consentimiento, threat model o revisión adicional.
+**Matriz de Consentimiento:** documento rector que define escenarios, tipos, permisos no transferibles, bloqueos y lenguaje humano mínimo.
 
-**Constitución SDD:** documento rector de principios, límites, ciclo de vida y autoridad documental.
-
-**Dato sensible:** dato que puede generar daño, exposición, discriminación, vigilancia, vergüenza o pérdida de agencia.
-
-**Deuda:** elemento pendiente que condiciona avance técnico, documental, ético, pedagógico, de seguridad, privacidad, IA, datos o consentimiento.
-
-**Evidencia:** producción educativa, creativa, reflexiva o investigativa. Es objeto de cuidado, no archivo neutro.
-
-**Evaluación automática como juez final:** uso de IA, algoritmo o rúbrica automática como autoridad final sobre aprendizaje, creatividad o valor humano.
-
-**IA externa:** sistema de IA fuera del control local. No está habilitada por defecto.
-
-**Implementación funcional:** construcción de funcionalidad ejecutable. No autorizada al inicio de v0.4.4.
+**Permisos no transferibles:** principio según el cual consentir una acción no autoriza automáticamente otra.
 
 **Local-first:** principio según el cual datos, evidencias, reflexiones y portafolios permanecen bajo control local por defecto.
 
-**Matriz POO Conceptual:** documento rector que usa POO como lenguaje de pensamiento para objetos, responsabilidades, datos, relaciones, riesgos y bloqueos.
-
-**Mitigación:** acción documental, humana, técnica futura o de diseño que reduce una amenaza identificada.
-
-**Objeto conceptual:** representación documental de una entidad del dominio. No es clase ejecutable.
-
-**Plantilla de Spec Segura:** instrumento reutilizable para redactar specs seguras, trazables y revisables.
+**Threat model:** identificación de activos, amenazas, mitigaciones, riesgos residuales, consentimiento, revisión humana y condiciones de bloqueo.
 
 **POO conceptual:** uso de Programación Orientada a Objetos para pensar dominio, no para implementar software.
 
-**Política Local-First Inicial:** documento rector sobre control local, minimización, consentimiento, portabilidad y no subida automática.
+**Objeto conceptual:** representación documental de una entidad del dominio. No es clase ejecutable.
 
-**Programador Humanista:** perfil que integra criterio técnico con responsabilidad humana, pedagógica, creativa, ética, seguridad y privacidad.
+**Evaluación automática como juez final:** uso de IA, algoritmo o rúbrica automática como autoridad final sobre aprendizaje, creatividad o valor humano. Está prohibida.
 
-**Revisión humana:** evaluación documentada realizada por una persona o instancia humana con capacidad real de aprobar, condicionar, diferir o bloquear.
-
-**SDD:** Spec-Driven Development. Una idea debe convertirse en especificación antes de implementación.
-
-**Threat model:** identificación de activos, amenazas, mitigaciones, riesgos residuales, consentimiento, revisión humana y condiciones de bloqueo.
-
-**Trazabilidad documental:** conexión entre decisiones, documentos fuente, bitácoras, deuda, revisiones y criterios.
-
-**Transferencia simétrica:** registro de cómo una decisión afecta perfiles, cartapacios, fases y documentos.
+**Implementación funcional:** construcción de funcionalidad ejecutable. No autorizada al inicio de v0.4.4.
 
 **Wiki humana:** documentación legible para personas usuarias y equipos no técnicos.

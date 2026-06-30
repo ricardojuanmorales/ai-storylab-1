@@ -6,35 +6,15 @@
 
 ---
 
-## 1. Propósito
-
-Esta guía traduce la Política Local-First Inicial al trabajo del Programador Humanista.
-
----
-
-## 2. Regla de oro
+## 1. Regla de oro
 
 ```text
 Nada sale del control local del usuario por defecto.
 ```
 
-Esto implica:
-
-```text
-no subida automática;
-no publicación automática;
-no envío automático a terceros;
-no envío automático a IA externa;
-no almacenamiento remoto;
-no analíticas;
-no base de datos remota;
-no autenticación prematura;
-no dependencia de servicios externos.
-```
-
 ---
 
-## 3. Preguntas obligatorias
+## 2. Preguntas obligatorias
 
 ```text
 ¿Qué permanece local?
@@ -48,25 +28,20 @@ no dependencia de servicios externos.
 
 ---
 
-## 4. Local-first y objetos conceptuales
+## 3. Local-first y consentimiento
 
-Todo objeto conceptual que toque datos, evidencias, reflexiones, portafolios, exportación, IA o evaluación debe responder las preguntas local-first.
-
-Ejemplos prioritarios:
+Toda salida del entorno local requiere intención humana explícita y, cuando aplique, consentimiento informado y situado.
 
 ```text
-Evidencia
-Reflexion
-Portafolio
-Exportacion
-RepositorioLocal
-Consentimiento
-UsoIA
-RevisionHumana
+guardar localmente no autoriza exportar;
+exportar no autoriza publicar;
+compartir con docente no autoriza compartir con investigador;
+usar en clase no autoriza usar en investigación;
+crear portafolio no autoriza publicar portafolio.
 ```
 
 ---
 
-## 5. Dictamen
+## 4. Dictamen
 
 Local-first es una ética de diseño antes de ser arquitectura. El Programador Humanista debe evitar que lo técnico convierta creatividad en extracción de datos.
