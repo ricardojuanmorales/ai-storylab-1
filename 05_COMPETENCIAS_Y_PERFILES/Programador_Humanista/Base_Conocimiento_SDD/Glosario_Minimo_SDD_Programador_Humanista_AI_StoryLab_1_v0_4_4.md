@@ -10,6 +10,8 @@
 
 **Agencia humana:** capacidad real de comprender, decidir, revisar, editar, retirar, exportar, compartir o no compartir datos, evidencias y producciones.
 
+**Amenaza:** condición, acción, error, diseño o automatización que puede causar daño, exposición, pérdida de agencia o interpretación indebida.
+
 **Análisis Dialógico Transdisciplinario:** método para resolver tensiones entre principios, perfiles, riesgos y disciplinas antes de autorizar una spec.
 
 **Aprobada:** decisión documental que permite avanzar dentro del marco autorizado, sin autorizar automáticamente implementación funcional.
@@ -38,17 +40,21 @@
 
 **Local-first:** principio según el cual datos, evidencias, reflexiones y portafolios permanecen bajo control local por defecto.
 
+**Mitigación:** acción documental, humana, técnica futura o de diseño que reduce una amenaza identificada.
+
 **Plantilla de Spec Segura:** instrumento reutilizable para redactar specs seguras, trazables y revisables.
 
 **Política Local-First Inicial:** documento rector sobre control local, minimización, consentimiento, portabilidad y no subida automática.
 
 **Programador Humanista:** perfil que integra criterio técnico con responsabilidad humana, pedagógica, creativa, ética, de seguridad y privacidad.
 
+**Riesgo bloqueante:** condición que impide avanzar hasta rediseñar, diferir o crear política/matriz/threat model específico.
+
 **Revisión humana:** evaluación documentada realizada por una persona o instancia humana con capacidad real de aprobar, condicionar, diferir o bloquear.
 
 **SDD:** Spec-Driven Development. Una idea debe convertirse en especificación antes de implementación.
 
-**Threat model:** identificación de activos, amenazas, mitigaciones y riesgos residuales.
+**Threat model:** identificación de activos, amenazas, mitigaciones, riesgos residuales, consentimiento, revisión humana y condiciones de bloqueo.
 
 **Trazabilidad documental:** conexión entre decisiones, documentos fuente, bitácoras, deuda, revisiones y criterios.
 

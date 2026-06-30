@@ -21,8 +21,11 @@ Constitución SDD
 Política Local-First Inicial
   ↓ define reglas sobre datos, evidencias, portafolios, exportación y consentimiento
 
+Registro Inicial de Threat Models
+  ↓ define activadores, amenazas, riesgos, bloqueos y plantilla mínima
+
 Plantilla de Spec Segura
-  ↓ convierte principios y políticas en estructura de spec
+  ↓ convierte principios, políticas y amenazas en estructura de spec
 
 Base de Conocimiento SDD del Programador Humanista
   ↓ enseña cómo aplicar el método
@@ -42,9 +45,11 @@ Bitácora + Transferencia + Deuda + Wiki humana
 |---|---|---|
 | Constitución SDD | Marco superior | Principios y límites. |
 | Política Local-First Inicial | Política rectora | Criterios sobre datos, evidencias, exportación y consentimiento. |
+| Registro Inicial de Threat Models | Radar documental | Activadores, amenazas, bloqueos y plantilla mínima. |
 | Plantilla de Spec Segura | Instrumento | Estructura para specs. |
 | Guía SDD | Formación | Cómo pensar antes de implementar. |
 | Guía local-first | Aplicación | Cómo detectar riesgos de datos y exportación. |
+| Guía threat model | Aplicación | Cómo detectar amenazas y condiciones de bloqueo. |
 | Checklist | Control | Qué revisar antes de avanzar. |
 | Glosario | Lenguaje común | Términos operativos. |
 | Registro de deuda | Memoria | Qué bloquea o condiciona avance. |
@@ -60,9 +65,10 @@ Bitácora + Transferencia + Deuda + Wiki humana
 1. Leer Guía SDD.
 2. Revisar Constitución.
 3. Revisar Política Local-First si toca datos, evidencia o exportación.
-4. Usar Plantilla de Spec Segura.
-5. Aplicar Checklist.
-6. Registrar decisión y deuda.
+4. Revisar Registro de Threat Models si hay activadores.
+5. Usar Plantilla de Spec Segura.
+6. Aplicar Checklist.
+7. Registrar decisión y deuda.
 ```
 
 ### Propuesta con datos
@@ -86,8 +92,19 @@ Bitácora + Transferencia + Deuda + Wiki humana
 6. Prohibir juicio final automático.
 ```
 
+### Propuesta con amenazas no mitigadas
+
+```text
+1. Registrar amenaza.
+2. Identificar activo afectado.
+3. Clasificar riesgo.
+4. Proponer mitigación.
+5. Crear deuda si no puede resolverse.
+6. Bloquear si es riesgo crítico.
+```
+
 ---
 
 ## 5. Dictamen
 
-El Programador Humanista usa SDD como sistema de navegación: Constitución como cielo, política como clima, plantilla como mapa, checklist como linterna y bitácora como memoria de viaje.
+El Programador Humanista usa SDD como sistema de navegación: Constitución como cielo, política como clima, threat model como radar, plantilla como mapa, checklist como linterna y bitácora como memoria de viaje.

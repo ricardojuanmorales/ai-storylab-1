@@ -36,7 +36,20 @@
 [ ] No introduce backend, cloud, APIs externas, autenticación, analíticas, base de datos remota ni subida automática.
 ```
 
-## 4. Datos
+## 4. Threat model
+
+```text
+[ ] Verifica si hay activadores de threat model.
+[ ] Identifica activos a proteger.
+[ ] Identifica fuentes de amenaza.
+[ ] Identifica amenazas previsibles.
+[ ] Identifica mitigaciones.
+[ ] Identifica riesgos residuales.
+[ ] Clasifica riesgo bajo, medio, alto o bloqueante.
+[ ] Bloquea si hay amenazas críticas sin mitigación.
+```
+
+## 5. Datos
 
 ```text
 [ ] Clasifica todos los datos.
@@ -46,7 +59,7 @@
 [ ] Bloquea datos reales si no existe política formal.
 ```
 
-## 5. Evidencias y portafolios
+## 6. Evidencias y portafolios
 
 ```text
 [ ] Trata evidencia como objeto de cuidado.
@@ -55,7 +68,7 @@
 [ ] Prohíbe evaluación automática final.
 ```
 
-## 6. Consentimiento
+## 7. Consentimiento
 
 ```text
 [ ] Explica qué ocurrirá.
@@ -66,7 +79,7 @@
 [ ] Usa consentimiento reforzado si hay menores, datos reales, publicación, exportación o IA externa.
 ```
 
-## 7. IA
+## 8. IA
 
 ```text
 [ ] Declara si no aplica IA.
@@ -74,31 +87,13 @@
 [ ] Prohíbe IA como juez final, sustituto docente, autoridad creativa o vigilancia.
 ```
 
-## 8. Experiencia creativa
-
-```text
-[ ] Evita exceso de campos obligatorios.
-[ ] Evita flujo único.
-[ ] Evita portafolio muerto.
-[ ] Permite exploración, pausa, revisión, error y recombinación.
-```
-
-## 9. Threat model
-
-```text
-[ ] Identifica activos a proteger.
-[ ] Identifica amenazas.
-[ ] Identifica mitigaciones.
-[ ] Identifica riesgos residuales.
-[ ] Bloquea si hay amenazas críticas sin mitigación.
-```
-
-## 10. Trazabilidad
+## 9. Trazabilidad
 
 ```text
 [ ] Vincula Constitución SDD.
 [ ] Vincula Plantilla de Spec Segura.
 [ ] Vincula Política Local-First.
+[ ] Vincula Registro Inicial de Threat Models.
 [ ] Actualiza bitácora, transferencia y deuda.
 [ ] Identifica si requiere Wiki humana.
 ```

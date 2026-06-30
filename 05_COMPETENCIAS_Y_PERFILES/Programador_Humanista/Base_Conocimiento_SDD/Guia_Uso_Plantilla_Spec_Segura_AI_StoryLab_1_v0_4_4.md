@@ -10,7 +10,7 @@
 
 Esta guía explica cómo usar la Plantilla de Spec Segura sin convertirla en formulario administrativo.
 
-La plantilla debe funcionar como conversación estructurada entre propósito humano, creatividad, datos, riesgos, consentimiento, local-first, revisión humana y deuda.
+La plantilla debe funcionar como conversación estructurada entre propósito humano, creatividad, datos, riesgos, threat model, consentimiento, local-first, revisión humana y deuda.
 
 ---
 
@@ -65,11 +65,11 @@ IA:
 Local-first:
   responder qué permanece local, qué no se guarda, qué se exporta y qué nunca se sube automáticamente.
 
+Threat model:
+  activar si hay exportación, publicación, datos reales, menores, IA externa, metadatos, portafolios, evaluación o automatización.
+
 Consentimiento:
   explicar acción, datos, propósito, acceso, riesgos y alternativas.
-
-Riesgos:
-  incluir mitigación o condicionar/diferir/bloquear.
 
 Decisión:
   aprobar, condicionar, diferir o bloquear.
@@ -81,7 +81,7 @@ Decisión:
 
 ```text
 Aprobar:
-  cumple propósito, minimiza datos, preserva local-first y mitiga riesgos.
+  cumple propósito, minimiza datos, preserva local-first y mitiga amenazas.
 
 Condicionar:
   requiere matriz, política, consentimiento, threat model o revisión adicional.
@@ -101,6 +101,7 @@ Una spec candidata completa debe producir:
 
 ```text
 dictamen;
+threat model preliminar o específico cuando aplique;
 deuda creada o pagada;
 decisión clara;
 registro en bitácora;

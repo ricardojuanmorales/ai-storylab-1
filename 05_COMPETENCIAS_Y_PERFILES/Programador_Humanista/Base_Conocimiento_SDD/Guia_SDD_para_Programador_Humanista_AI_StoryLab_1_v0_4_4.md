@@ -13,6 +13,7 @@ El Programador Humanista no comienza preguntando “¿cómo lo implemento?”, s
 ```text
 ¿Qué experiencia humana protege esta función?
 ¿Qué riesgo introduce?
+¿Qué amenaza anticipable aparece?
 ¿Qué datos toca?
 ¿Qué consentimiento requiere?
 ¿Qué agencia preserva?
@@ -35,9 +36,10 @@ propósito humano;
 experiencia creativa;
 subjetividades afectadas;
 datos y evidencias;
-riesgos;
-consentimiento;
 local-first;
+threat model cuando aplique;
+riesgos y mitigaciones;
+consentimiento;
 IA, si aplica;
 criterios de aceptación;
 criterios de prueba;
@@ -51,13 +53,29 @@ decisión final.
 ## 3. Principios operativos
 
 ```text
-Agencia humana: preservar control real del usuario.
-Local-first: diseñar primero desde control local y minimización.
-Privacidad por defecto: no pedir datos por costumbre.
-Seguridad por diseño: modelar riesgo antes de construir.
-Consentimiento situado: explicar acción, datos, propósito y alternativas.
-Experiencia no rígida: estructura sin matar juego creativo.
-No evaluación automática final: IA o algoritmo no son juez final.
+Agencia humana:
+  preservar control real del usuario.
+
+Local-first:
+  diseñar primero desde control local y minimización.
+
+Threat modeling:
+  preguntar qué puede dañarse antes de construir.
+
+Privacidad por defecto:
+  no pedir datos por costumbre.
+
+Seguridad por diseño:
+  modelar riesgo antes de arquitectura o código.
+
+Consentimiento situado:
+  explicar acción, datos, propósito y alternativas.
+
+Experiencia no rígida:
+  estructura sin matar juego creativo.
+
+No evaluación automática final:
+  IA o algoritmo no son juez final.
 ```
 
 ---
@@ -71,8 +89,8 @@ No evaluación automática final: IA o algoritmo no son juez final.
 4. Identificar subjetividades.
 5. Identificar datos, evidencias y acciones sensibles.
 6. Aplicar local-first.
-7. Identificar consentimiento.
-8. Crear threat model preliminar.
+7. Verificar activadores de threat model.
+8. Identificar consentimiento.
 9. Revisar rigidez antijuego creativo.
 10. Definir aceptación y prueba documental.
 11. Solicitar revisión humana si aplica.
@@ -97,7 +115,8 @@ datos reales sin política formal;
 publicación automática;
 evaluación automática final;
 menores sin consentimiento reforzado;
-evidencia sensible sin revisión humana.
+evidencia sensible sin revisión humana;
+amenaza crítica sin mitigación.
 ```
 
 ---
