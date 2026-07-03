@@ -1,1031 +1,460 @@
-# Constitución SDD AI StoryLab 1 v0.4.4
+# Constitución SDD AI StoryLab 1 v0.4.4 — Consolidada Final
 
 **Proyecto:** AI StoryLab 1  
-**Fase:** v0.4.4 - Spec-Driven Development, seguridad, privacidad y preparación responsable  
-**Tipo de documento:** Constitución SDD  
-**Estado:** Primer borrador sustantivo aprobado para archivo en PR #8  
-**Ruta canónica propuesta:** `00_CONTROL_MAESTRO/Spec_Driven_Development/Constitucion_SDD_AI_StoryLab_1_v0_4_4.md`  
-**PR de trabajo:** #8, `docs: incorporar cierre v0.4.3 e inicio continuidad v0.4.4`  
-**Alcance:** Documental, constitucional y preparatorio. No autoriza implementación funcional.  
+**Versión:** v0.4.4  
+**Fecha de consolidación:** 2026-07-03  
+**Estado:** Consolidada final para PR #10  
+**Tipo de documento:** Constitución SDD, documento matriz de decisión y autoridad de bloqueo  
+**Ruta canónica:** `00_CONTROL_MAESTRO/Spec_Driven_Development/Constitucion_SDD_AI_StoryLab_1_v0_4_4.md`  
+**Alcance:** Documental, constitucional, prefuncional y transdisciplinario. No autoriza implementación funcional.  
+**PR de cierre:** #10, `docs: consolidar cierre constitucional SDD v0.4.4`
 
 ---
 
-## 0. Declaración de apertura
+## 0. Declaración de cierre constitucional
 
-AI StoryLab 1 abre v0.4.4 como una fase de transición responsable desde la fundación filosófica, pedagógica, competencial y documental consolidada en v0.4.3 hacia un modelo de desarrollo guiado por especificaciones.
+AI StoryLab 1 consolida v0.4.4 como fase de Spec-Driven Development, seguridad, privacidad, gobernanza documental y preparación responsable antes de avanzar hacia specs operativas con semillas arquitectónicas en v0.4.5.
 
-Esta Constitución SDD establece el marco de decisión para dicha transición. Su propósito no es acelerar la implementación, sino impedir que el proyecto avance hacia funciones, datos, automatizaciones o integraciones sin haber definido antes los criterios humanos, pedagógicos, técnicos, éticos, de seguridad y privacidad que las gobiernan.
+Esta Constitución no existe para acelerar la implementación. Existe para proteger el sentido del proyecto antes de que la tecnología adquiera forma funcional.
 
-En esta fase, el desarrollo no comienza por código. Comienza por preguntas, límites, criterios, modelos de riesgo, consentimiento, análisis transdisciplinario y trazabilidad documental.
-
-Esta Constitución tiene autoridad de bloqueo documental. Toda propuesta de función, flujo, integración, objeto de dominio, manejo de datos, uso de IA, módulo técnico o componente de la primera aplicación asociada podrá ser aprobada, condicionada, diferida o bloqueada si no cumple con los criterios aquí establecidos.
-
-La Constitución es evolutiva y revisable. No se concibe como un dogma inmóvil, sino como un contrato vivo de trabajo. Sin embargo, mientras esté vigente, sus restricciones son operativas y deben aplicarse antes de cualquier paso hacia implementación funcional.
-
-Esta Constitución habla a dos comunidades diferenciadas:
-
-```text
-1. Equipo técnico/desarrollador.
-2. Equipo pedagógico, documental, creativo e investigativo.
-```
-
-Ambas comunidades comparten una obligación común: proteger la agencia humana, la experiencia creativa, la privacidad, la seguridad, la trazabilidad y el carácter lúdico-transdisciplinario de AI StoryLab 1.
+En AI StoryLab 1, el desarrollo no comienza por código. Comienza por preguntas, límites, perfiles, riesgos, consentimiento, investigación, agencia humana, trazabilidad, diseño responsable y memoria documental.
 
 ---
 
-## 1. Definición de Spec-Driven Development en AI StoryLab 1
+## 1. Definición de SDD en AI StoryLab 1
 
 Spec-Driven Development, o SDD, es el proceso mediante el cual una idea debe convertirse primero en especificación antes de convertirse en implementación.
 
-En AI StoryLab 1, una especificación no es una lista de tareas técnicas. Es un documento de decisión. Debe declarar qué se propone, por qué se propone, a quién afecta, qué datos toca, qué experiencia humana protege, qué riesgos crea, qué límites impone, qué pruebas requiere y qué revisión humana necesita.
-
-Una spec debe responder, como mínimo:
+Una spec no es una lista técnica. Es un documento de decisión. Debe declarar:
 
 ```text
-qué debe existir
-por qué debe existir
-qué problema o necesidad atiende
-qué experiencia humana protege
-qué perfil o subjetividad afecta
-qué datos toca
-qué evidencias produce, transforma o interpreta
-qué rol tendría la IA, si alguno
-qué riesgos pedagógicos, técnicos, éticos o de privacidad genera
-qué límites debe respetar
-qué criterios local-first aplica
-qué consentimiento requiere
-qué pruebas necesita
-qué revisión humana exige
-qué deuda crea, reduce o transfiere
+qué debe existir,
+por qué debe existir,
+a quién afecta,
+qué experiencia humana protege,
+qué datos toca,
+qué evidencias produce o transforma,
+qué rol tiene la IA, si alguno,
+qué riesgos crea,
+qué límites impone,
+qué pruebas requiere,
+qué revisión humana exige,
+qué deuda crea, reduce o transfiere.
 ```
 
-SDD funciona como una aduana de sentido antes de cualquier construcción. No todo lo imaginable debe especificarse. No todo lo especificado debe implementarse. No todo lo implementable debe aprobarse.
+No todo lo imaginable debe especificarse. No todo lo especificado debe implementarse. No todo lo implementable debe aprobarse.
 
-En AI StoryLab 1, una spec válida debe cuidar la relación entre:
+---
+
+## 2. Autoridad constitucional
+
+Esta Constitución tiene autoridad de bloqueo documental.
+
+Toda propuesta de función, flujo, integración, objeto de dominio, manejo de datos, uso de IA, módulo técnico o componente de la primera aplicación asociada puede ser:
 
 ```text
-filosofía
-pedagogía
-investigación-creación
-experiencia de usuario
-seguridad
-privacidad
-datos
-IA responsable
-evidencias
-portafolios
-competencias
-gobernanza documental
+aprobada,
+condicionada,
+diferida,
+bloqueada.
+```
+
+Ninguna implementación funcional puede avanzar únicamente porque sea técnicamente posible.
+
+---
+
+## 3. Alcance de v0.4.4
+
+v0.4.4 autoriza trabajo documental, constitucional y prefuncional en:
+
+```text
+Constitución SDD,
+índices rectores,
+políticas iniciales,
+matrices,
+guías,
+threat models,
+plantillas,
+modelos conceptuales,
+gates,
+bitácoras,
+registro de deuda,
+transferencia simétrica,
+wiki humana,
+protocolo documental de sesión.
+```
+
+v0.4.4 no autoriza:
+
+```text
+backend,
+cloud,
+autenticación,
+analíticas,
+base de datos remota,
+subida automática de archivos,
+publicación automática,
+IA externa por defecto,
+manejo de datos reales sin política formal,
+evaluación automática como juez final,
+implementación funcional sin spec aprobada.
 ```
 
 ---
 
-## 2. Diferencia entre documentación fundacional, especificación e implementación
+## 4. Secuencia de fases
 
-AI StoryLab 1 distingue tres niveles que no deben confundirse.
-
-### 2.1 Documentación fundacional
-
-La documentación fundacional define principios, dimensiones, competencias, matrices, glosarios, rutas canónicas, gobernanza y memoria del proyecto.
-
-Este nivel fue consolidado en v0.4.3.
-
-Su función es decir:
+AI StoryLab 1 adopta una secuencia principal flexible:
 
 ```text
-qué cree el proyecto
-qué protege
-qué lenguaje usa
-qué estructuras documentales reconoce
-qué perfiles y subjetividades considera
-qué principios deben gobernar fases posteriores
+SDD → arquitectura → diseño → implementación → testing → validación → despliegue → mantenimiento
 ```
 
-### 2.2 Especificación
+Esta secuencia se combina con doble eje operativo: cada versión tiene foco dominante, pero cada módulo relevante debe declarar su relación con specs, arquitectura, diseño, pruebas, validación, deuda, perfiles, investigación y documentación.
 
-La especificación traduce esos principios en requisitos, límites, decisiones, criterios de aceptación, pruebas, modelos de riesgo y condiciones de bloqueo.
-
-Este es el nivel central de v0.4.4.
-
-Su función es decir:
-
-```text
-qué se podría construir
-bajo qué condiciones
-con qué riesgos
-con qué datos
-con qué consentimiento
-con qué pruebas
-con qué límites
-con qué revisión humana
-```
-
-### 2.3 Implementación
-
-La implementación construye funcionalidad autorizada por specs aprobadas.
-
-La implementación funcional no está autorizada al inicio de v0.4.4.
-
-Una implementación futura solo podrá considerarse si existe:
-
-```text
-spec aprobada
-clasificación de datos
-threat model
-política de privacidad aplicable
-criterios local-first
-criterios de consentimiento
-criterios de prueba
-revisión humana
-registro de deuda actualizado
-```
+Ninguna fase puede invadir prematuramente la siguiente sin documento de pase, gate y decisión registrada.
 
 ---
 
-## 3. Principios rectores de v0.4.4
+## 5. Principios rectores
 
-### 3.1 Agencia humana como criterio superior
+### 5.1 Agencia humana
 
-La agencia humana es el criterio superior de esta Constitución.
+La agencia humana es criterio superior. Toda spec debe preservar capacidad de decidir, revisar, editar, retirar, exportar, compartir o no compartir evidencias, reflexiones y producciones.
 
-Toda spec debe preservar la capacidad de las personas para decidir, revisar, editar, retirar, exportar, compartir o no compartir sus evidencias, reflexiones y producciones.
+### 5.2 Experiencia creativa no rígida
 
-La agencia humana no se reduce a aceptar términos de uso. Debe manifestarse en decisiones visibles, comprensibles y reversibles cuando aplique.
+AI StoryLab 1 no debe convertirse en formulario rígido, repositorio muerto ni sistema de cumplimiento mecánico. La estructura debe sostener exploración, no sofocarla.
 
-Una spec que disminuya la capacidad del usuario para comprender o controlar lo que ocurre con sus datos, evidencias o producciones debe ser revisada, condicionada o bloqueada.
+### 5.3 Aprendizaje lúdico e investigación-creación
 
-### 3.2 Experiencia creativa del usuario como prioridad inicial
+El aprendizaje lúdico y la investigación-creación son principios de diseño. Toda spec debe proteger juego, exploración, creación, reflexión, evidencia, portafolio y agencia.
 
-La prioridad inicial de v0.4.4 es proteger la experiencia creativa del usuario.
+### 5.4 Humanismo Transdisciplinario de Investigación-Creación con IA Responsable
 
-AI StoryLab 1 no debe convertirse en una plataforma de cumplimiento mecánico, un repositorio pasivo de archivos, un formulario rígido o un sistema que reduzca la investigación-creación a llenar campos.
+Este es el eje articulador. Ninguna dimensión técnica debe diseñarse separada de sus consecuencias humanas, pedagógicas, creativas, investigativas y éticas.
 
-Toda spec debe preguntarse:
+### 5.5 Privacidad por defecto
 
-```text
-¿esta función amplía o reduce el juego creativo?
-¿invita a explorar o encierra en una ruta única?
-¿permite reflexión o solo captura datos?
-¿acompaña la creatividad o la domestica en exceso?
-```
+Todo dato debe justificarse. Si una spec no puede justificar por qué necesita un dato, ese dato no debe incorporarse.
 
-La estructura debe sostener la exploración, no sofocarla.
+### 5.6 Seguridad por diseño y por defecto
 
-### 3.3 Aprendizaje lúdico e investigación-creación
+Toda spec debe considerar amenazas, abusos, errores previsibles, exposición accidental, pérdida de datos, automatización indebida y dependencias externas.
 
-El aprendizaje lúdico se reconoce como principio de diseño. No significa ausencia de rigor, sino una forma de investigar, ensayar, fallar, recombinar, narrar, imaginar y producir conocimiento.
+### 5.7 Local-first
 
-La investigación-creación se reconoce como proceso legítimo de construcción de evidencias, sentido, método y reflexión.
+El sistema debe diseñarse primero para control local, portabilidad, minimización de datos y autonomía del usuario.
 
-Toda spec debe proteger la relación entre:
+### 5.8 Consentimiento informado y situado
 
-```text
-juego
-exploración
-creación
-reflexión
-evidencia
-portafolio
-agencia
-```
+El consentimiento debe ser explícito, comprensible, contextual y revocable cuando aplique.
 
-### 3.4 Humanismo Transdisciplinario de Investigación-Creación con IA Responsable
+### 5.9 Revisión humana obligatoria
 
-El Humanismo Transdisciplinario de Investigación-Creación con IA Responsable es el eje articulador de v0.4.4.
+Toda decisión sensible debe permitir aprobación, condicionamiento, diferimiento o bloqueo por revisión humana.
 
-En esta fase debe traducirse en criterios concretos de:
+### 5.10 No evaluación automática como juez final
 
-```text
-diseño de experiencia
-manejo de datos
-permisos
-consentimiento
-uso de IA
-evidencias
-portafolios
-interfaces
-objetos de dominio
-análisis de riesgo
-revisión humana
-```
-
-Este principio exige que ninguna dimensión técnica se diseñe separada de sus consecuencias humanas, pedagógicas, creativas y éticas.
-
-### 3.5 Privacidad por defecto
-
-La privacidad no será un ajuste posterior. Toda spec debe comenzar por minimizar la exposición de datos.
-
-Una spec debe identificar:
-
-```text
-qué datos son necesarios
-qué datos son opcionales
-qué datos son sensibles
-qué datos no deben recopilarse
-qué datos deben permanecer locales
-qué datos requieren consentimiento
-qué datos no pueden usarse en esta fase
-```
-
-Si una spec no puede justificar por qué necesita un dato, ese dato no debe incorporarse.
-
-### 3.6 Seguridad por diseño y por defecto
-
-La seguridad debe incorporarse desde la especificación.
-
-Toda spec debe considerar amenazas, abusos, errores previsibles, usos indebidos, exposición accidental, pérdida de datos, automatización indebida y dependencias externas.
-
-La seguridad no debe depender únicamente de buenas intenciones del usuario o del equipo desarrollador.
-
-### 3.7 Local-first
-
-El principio local-first indica que el sistema debe diseñarse primero para preservar control local, portabilidad, minimización de datos y autonomía del usuario.
-
-Toda spec debe declarar:
-
-```text
-qué permanece local
-qué puede exportarse
-qué requiere consentimiento
-qué nunca se sube automáticamente
-qué requiere anonimización
-qué requeriría una spec adicional
-```
-
-En v0.4.4 no se autoriza almacenamiento remoto, backend, cloud, analíticas, autenticación o subida automática de archivos.
-
-### 3.8 Consentimiento informado y situado
-
-El consentimiento debe ser explícito, comprensible, contextual y, cuando aplique, revocable.
-
-No basta con un consentimiento general y abstracto. Toda acción sensible debe explicar:
-
-```text
-qué ocurrirá
-qué datos se usarán
-para qué se usarán
-quién tendrá acceso
-qué riesgos existen
-qué alternativas tiene el usuario
-cómo puede negarse o retirar autorización
-```
-
-Cuando haya menores de edad, evidencia educativa sensible, datos reales, IA externa, publicación o exportación, el consentimiento debe ser tratado como condición de bloqueo.
-
-### 3.9 Revisión humana obligatoria
-
-La revisión humana será obligatoria cuando una spec toque:
-
-```text
-datos reales
-menores de edad
-evidencia educativa sensible
-IA externa
-evaluación
-publicación
-exportación
-almacenamiento remoto
-automatización de decisiones
-```
-
-La revisión humana no debe ser decorativa. Debe poder aprobar, condicionar, diferir o bloquear.
-
-### 3.10 No evaluación automática como juez final
-
-Ninguna IA, algoritmo, rúbrica automática o sistema de puntuación podrá actuar como juez final de aprendizaje, creatividad, calidad, mérito o valor humano.
-
-La IA podrá sugerir, acompañar, organizar o asistir bajo condiciones aprobadas. No podrá sustituir el juicio humano final.
-
-### 3.11 No rigidez antijuego creativo
-
-Debe bloquearse o rediseñarse cualquier spec que convierta la experiencia creativa en:
-
-```text
-formulario rígido
-flujo único obligatorio
-repositorio muerto
-evaluación mecánica
-captura excesiva de datos
-experiencia centrada en cumplimiento y no en creación
-```
-
-AI StoryLab 1 debe ofrecer estructura sin encerrar la imaginación en una caja con etiquetas.
+Ninguna IA, algoritmo, rúbrica automática o sistema de puntuación podrá actuar como juez final de aprendizaje, creatividad, mérito o valor humano.
 
 ---
 
-## 4. Alcance constitucional de v0.4.4
+## 6. Perfiles y subjetividades
 
-### 4.1 Qué autoriza esta Constitución
-
-Esta Constitución autoriza trabajo documental y preparatorio en:
+AI StoryLab 1 reconoce cuatro perfiles de usuario:
 
 ```text
-creación de specs
-plantillas de specs
-matrices de decisión
-políticas iniciales
-modelos de amenaza documentales
-modelo de dominio conceptual
-criterios local-first
-criterios de consentimiento
-criterios de IA externa
-criterios de experiencia creativa
-bitácoras
-registro de deuda
-transferencia simétrica
+estudiante de escuela superior,
+estudiante universitario,
+docente,
+investigador.
 ```
 
-También autoriza el uso de programación orientada a objetos como herramienta conceptual de modelado del dominio, sin autorizar implementación funcional.
-
-### 4.2 Qué no autoriza esta Constitución
-
-Esta Constitución no autoriza:
+También reconoce tres perfiles creadores/documentales principales:
 
 ```text
-backend
-cloud
-APIs externas
-autenticación
-analíticas
-base de datos remota
-subida automática de archivos
-evaluación automática como juez final
-uso de IA externa por defecto
-manejo de datos reales sin política formal
-publicación automática de portafolios
-implementación funcional sin spec aprobada
+PH = Programador Humanista,
+IT = Investigador Transdisciplinario,
+AT = Artista Transdisciplinario.
 ```
 
-### 4.3 Diferencia entre explorar, especificar, prototipar y construir
+PH puede operar como piloto, pero todo documento relevante debe declarar transferibilidad simétrica reversible hacia IT y AT cuando aplique.
 
-AI StoryLab 1 reconoce cuatro verbos de avance:
-
-```text
-Explorar:
-  Formular posibilidades, tensiones, preguntas y alternativas.
-
-Especificar:
-  Documentar propósito, límites, datos, riesgos, pruebas y decisiones.
-
-Prototipar:
-  Crear artefactos experimentales bajo condiciones explícitas y revisables.
-
-Construir:
-  Implementar funcionalidad autorizada por specs aprobadas.
-```
-
-v0.4.4 inicia en exploración y especificación. Cualquier prototipo deberá requerir justificación documental. Cualquier construcción funcional queda bloqueada hasta nueva autorización.
-
----
-
-## 5. Ciclo de vida de una spec
-
-Toda spec debe atravesar un ciclo mínimo.
-
-### 5.1 Propuesta inicial
-
-La propuesta debe describir la idea en lenguaje humano, no técnico solamente.
-
-Debe explicar:
-
-```text
-qué se propone
-a quién sirve
-qué experiencia busca proteger o habilitar
-qué problema intenta resolver
-qué queda fuera de alcance
-```
-
-### 5.2 Clasificación de propósito
-
-La spec debe clasificarse según su propósito principal:
-
-```text
-experiencia de usuario
-portafolio
-evidencia
-reflexión
-consentimiento
-datos
-privacidad
-seguridad
-IA
-interfaz
-exportación
-objeto de dominio
-threat model
-```
-
-### 5.3 Subjetividades afectadas
-
-Toda spec debe indicar qué perfiles o subjetividades afecta:
-
-```text
-estudiante de escuela superior
-estudiante universitario
-docente
-investigador
-programador humanista
-investigador transdisciplinario
-artista transdisciplinario
-caleidoscopio
-```
-
-Si afecta menores de edad, el nivel de cuidado aumenta automáticamente.
-
-### 5.4 Clasificación de datos
-
-La spec debe clasificar datos en categorías como:
-
-```text
-datos ficticios
-datos sintéticos
-datos anonimizados
-datos personales
-datos educativos
-datos sensibles
-metadatos
-evidencias creativas
-reflexiones personales
-```
-
-### 5.5 Evidencias educativas o creativas
-
-La spec debe identificar si toca evidencias, portafolios, reflexiones, rúbricas, competencias o procesos de evaluación.
-
-Toda evidencia debe tratarse como objeto de cuidado, no como archivo neutro.
-
-### 5.6 Análisis Dialógico Transdisciplinario
-
-Toda spec relevante debe pasar por análisis dialógico cuando existan tensiones entre:
-
-```text
-creatividad
-privacidad
-eficiencia técnica
-evaluación educativa
-libertad exploratoria
-seguridad
-trazabilidad
-consentimiento
-```
-
-### 5.7 Threat model preliminar
-
-La spec debe identificar amenazas previsibles:
-
-```text
-exposición de datos
-uso indebido
-automatización indebida
-pérdida de agencia
-acceso no autorizado
-uso de IA externa
-sesgo evaluativo
-publicación no consentida
-rigidez pedagógica
-```
-
-### 5.8 Criterios local-first
-
-Toda spec debe indicar cómo preserva control local, minimización de datos y portabilidad.
-
-### 5.9 Criterios de consentimiento
-
-Toda spec debe indicar si requiere consentimiento, de quién, en qué momento, para qué acción y bajo qué posibilidad de retiro.
-
-### 5.10 Criterios de aceptación
-
-Una spec debe indicar cómo se sabrá que cumple su propósito sin violar los principios de esta Constitución.
-
-### 5.11 Criterios de prueba
-
-Las pruebas deben incluir, cuando aplique:
-
-```text
-pruebas de privacidad
-pruebas de consentimiento
-pruebas de no subida automática
-pruebas de local-first
-pruebas de exportación controlada
-pruebas de revisión humana
-pruebas de no evaluación automática final
-```
-
-### 5.12 Revisión humana
-
-La revisión humana debe quedar registrada. Puede producir cuatro resultados:
-
-```text
-aprobada
-condicionada
-diferida
-bloqueada
-```
-
-### 5.13 Registro en bitácora, transferencia y deuda
-
-Toda decisión relevante debe actualizar:
-
-```text
-bitácora de sesión
-bitácora de transferencia simétrica
-registro de deuda
-```
-
----
-
-## 6. Análisis Dialógico Transdisciplinario
-
-### 6.1 Definición
-
-El Análisis Dialógico Transdisciplinario es el método de deliberación mediante el cual AI StoryLab 1 examina tensiones entre principios, perfiles, datos, experiencias, riesgos y disciplinas antes de autorizar una spec.
-
-No busca imponer una respuesta automática. Busca sostener una conversación documentada entre principios.
-
-### 6.2 Cuándo se activa
-
-Debe activarse cuando una spec involucre:
-
-```text
-datos reales
-menores de edad
-evidencia educativa sensible
-IA externa
-evaluación
-publicación
-exportación
-almacenamiento remoto
-tensión entre creatividad y estructura
-riesgo de rigidez antijuego
-```
-
-### 6.3 Forma mínima
-
-Debe producir:
-
-```text
-matriz breve de tensión
-decisión documentada
-justificación narrativa
-registro de deuda cuando aplique
-```
-
-### 6.4 Decisión situada
-
-Cuando dos principios entren en tensión, se buscará una solución situada que preserve el máximo posible de ambos principios.
-
-Si hay datos reales, menores, evidencia sensible o IA externa, la revisión humana será obligatoria.
-
-### 6.5 Comité humano/documental transdisciplinario
-
-Cuando el análisis no resuelva una tensión, la decisión debe escalarse a revisión humana transdisciplinaria.
-
-Ese comité o instancia humana deberá considerar:
-
-```text
-impacto pedagógico
-impacto creativo
-impacto técnico
-impacto ético
-impacto de privacidad
-impacto en agencia humana
-impacto en la trazabilidad del proyecto
-```
-
----
-
-## 7. Subjetividades, perfiles y composición
-
-AI StoryLab 1 reconoce subjetividades y perfiles diferenciados.
-
-### 7.1 Subjetividades principales
-
-```text
-estudiante de escuela superior
-estudiante universitario
-docente
-investigador
-```
-
-### 7.2 Perfiles operacionales y documentales
-
-```text
-programador humanista
-investigador transdisciplinario
-artista transdisciplinario
-caleidoscopio
-```
-
-### 7.3 Roles múltiples
-
-Una persona puede ocupar varios roles según el contexto. Por ejemplo, un docente puede actuar también como investigador, diseñador de actividad, evaluador formativo o participante reflexivo.
-
-Por ello, esta Constitución recomienda composición antes que clasificación rígida.
-
-Modelo conceptual recomendado:
+Modelo recomendado:
 
 ```text
 Usuario + Rol + Subjetividad + Contexto + Permisos
 ```
 
-Esto evita encerrar a las personas en categorías fijas y permite diseñar permisos, experiencias y responsabilidades situadas.
+---
+
+## 7. Transferencia PH-IT-AT
+
+Todo avance relevante debe incluir, cuando aplique:
+
+```yaml
+transferencia_PH_IT_AT:
+  aplica:
+  origen:
+  transferible_a_PH:
+  transferible_a_IT:
+  transferible_a_AT:
+  condiciones_transferencia:
+  deuda_transferencia:
+  requiere_revision:
+```
+
+La ruta `05_COMPETENCIAS_Y_PERFILES/Programador_Humanista/Base_Conocimiento_SDD/` queda validada como excepción operativa v0.4.4, sin convertir PH en jerarquía permanente.
 
 ---
 
-## 8. Tipos de specs en AI StoryLab 1
+## 8. Tipos de specs
 
-La fase v0.4.4 debe reconocer varios tipos de specs.
+AI StoryLab 1 reconoce, como mínimo:
 
 ```text
-Spec general de aplicación:
-  Describe propósito, alcance, módulos, límites y experiencia global.
-
-Spec de experiencia de usuario:
-  Describe flujos, momentos, decisiones humanas y criterios antirrigidez.
-
-Spec de módulo crítico aislado:
-  Describe una función o núcleo de alto valor y alto cuidado.
-
-Spec de portafolio:
-  Define cómo se organizan evidencias, reflexiones y control del usuario.
-
-Spec de evidencia:
-  Define qué es una evidencia, qué datos contiene y qué límites tiene.
-
-Spec de reflexión:
-  Define cómo el usuario piensa, comenta, revisa o contextualiza su proceso.
-
-Spec de consentimiento:
-  Define permisos, autorización, retiro, visibilidad y condiciones.
-
-Spec de datos:
-  Clasifica datos y define minimización, local-first y restricciones.
-
-Spec de privacidad:
-  Define protección, exposición, anonimización y límites.
-
-Spec de seguridad:
-  Define amenazas, controles y pruebas.
-
-Spec de IA:
-  Define si la IA participa, cómo, con qué datos y bajo qué restricciones.
-
-Spec de interfaz:
-  Define experiencia, accesibilidad, claridad y agencia.
-
-Spec de exportación:
-  Define cómo sale información del entorno local.
-
-Spec de objeto de dominio:
-  Define entidades conceptuales, responsabilidades y reglas éticas.
-
-Spec de threat model:
-  Define amenazas, actores, abusos y mitigaciones.
+spec general de aplicación,
+spec de experiencia de usuario,
+spec de módulo crítico,
+spec de portafolio,
+spec de evidencia,
+spec de reflexión,
+spec de consentimiento,
+spec de datos,
+spec de privacidad,
+spec de seguridad,
+spec de IA,
+spec de interfaz,
+spec de exportación,
+spec de objeto de dominio,
+spec de threat model.
 ```
 
 ---
 
-## 9. Modelo de riesgo
+## 9. Ciclo de vida mínimo de una spec
 
-### 9.1 Riesgo bajo
-
-Una spec es de riesgo bajo si usa datos ficticios o sintéticos, no toca identidad, no usa IA externa, no modifica evidencia real y no produce decisiones sobre usuarios.
-
-### 9.2 Riesgo medio
-
-Una spec es de riesgo medio si estructura experiencia educativa, toca evidencia local, organiza portafolios, implica consentimiento interno o afecta la forma en que el usuario reflexiona sobre su proceso.
-
-### 9.3 Riesgo alto
-
-Una spec es de riesgo alto si toca datos reales, menores de edad, evidencia educativa sensible, IA externa, evaluación, publicación, exportación o almacenamiento remoto.
-
-### 9.4 Riesgo bloqueante
-
-Una spec es bloqueante si propone:
+Toda spec debe atravesar:
 
 ```text
-vigilancia
-evaluación final automática
-uso de datos sin consentimiento
-publicación automática
-subida automática de archivos
-uso de IA externa sin spec
-implementación funcional sin autorización
+1. propuesta inicial;
+2. clasificación de propósito;
+3. perfiles y subjetividades afectadas;
+4. clasificación de datos;
+5. análisis de evidencias;
+6. análisis dialógico transdisciplinario;
+7. threat model preliminar;
+8. criterios local-first;
+9. criterios de consentimiento;
+10. criterios de aceptación;
+11. criterios de prueba;
+12. revisión humana;
+13. registro en bitácora, transferencia y deuda;
+14. gate de avance.
 ```
-
-Las specs de riesgo bloqueante no deben avanzar hasta ser rediseñadas.
 
 ---
 
-## 10. Política local-first inicial
+## 10. Riesgo
 
-AI StoryLab 1 adopta local-first como principio de arquitectura documental y futura arquitectura técnica.
+### Riesgo bajo
 
-Local-first significa que el sistema debe diseñarse para que los datos, evidencias, reflexiones y portafolios permanezcan bajo control del usuario por defecto.
+Datos ficticios o sintéticos, sin identidad, sin IA externa, sin evidencia real ni decisiones sobre usuarios.
 
-Toda spec debe responder:
+### Riesgo medio
 
-```text
-qué se guarda localmente
-qué no se guarda
-qué puede exportarse
-qué requiere consentimiento
-qué requiere anonimización
-qué nunca se sube automáticamente
-qué requeriría autorización futura
-```
+Estructura experiencia educativa, toca evidencia local, organiza portafolios o afecta reflexión del usuario.
 
-En v0.4.4 no se autoriza almacenamiento remoto, backend, cloud, autenticación, analíticas ni subida automática de archivos.
+### Riesgo alto
+
+Toca datos reales, menores de edad, evidencia educativa sensible, IA externa, evaluación, publicación, exportación o almacenamiento remoto.
+
+### Riesgo bloqueante
+
+Propone vigilancia, evaluación final automática, uso de datos sin consentimiento, publicación automática, subida automática, IA externa sin spec o implementación funcional sin autorización.
 
 ---
 
-## 11. Política inicial de IA externa
+## 11. IA responsable
 
-La IA externa no está habilitada por defecto.
+La IA no es autoridad invisible.
 
-Puede explorarse únicamente bajo condiciones limitadas:
-
-```text
-spec aprobada
-consentimiento explícito
-datos ficticios, sintéticos o anonimizados
-threat model
-revisión humana
-prohibición de juicio final automático
-```
-
-La IA puede ser considerada como:
+Puede operar como:
 
 ```text
-asistente creativo
-asistente reflexivo
-organizador
-sugeridor
-analista limitado bajo condiciones
+asistente creativo,
+asistente reflexivo,
+organizador,
+sugeridor,
+analista limitado bajo condiciones.
 ```
 
-No puede ser considerada como:
+No puede operar como:
 
 ```text
-juez final
-evaluador automático definitivo
-sustituto del docente
-autoridad sobre el valor creativo
-mecanismo de vigilancia
+juez final,
+evaluador automático definitivo,
+sustituto del docente,
+autoridad sobre valor creativo,
+mecanismo de vigilancia.
 ```
 
-Si una spec no puede explicar claramente qué hará la IA, qué datos tocará y qué límites tendrá, debe bloquearse.
+La IA solo puede pasar a co-creación situada con spec aprobada, consentimiento, threat model, datos permitidos, revisión humana, pruebas, trazabilidad, reversibilidad, explicación humana, no juicio final y opción clara de no uso.
 
 ---
 
-## 12. POO como herramienta de especificación
+## 12. POO conceptual
 
-AI StoryLab 1 acepta incorporar programación orientada a objetos en v0.4.4 como herramienta de modelado conceptual del dominio.
+La programación orientada a objetos puede usarse en v0.4.4 como herramienta conceptual de modelado del dominio. No autoriza implementación funcional.
 
-Esta aceptación no autoriza implementación funcional.
-
-### 12.1 Propósito de POO en esta fase
-
-POO servirá para:
+Objetos iniciales:
 
 ```text
-nombrar entidades del sistema
-definir responsabilidades
-identificar datos sensibles
-mapear relaciones
-asociar reglas éticas
-anticipar amenazas
-preparar specs futuras
+Usuario,
+Subjetividad,
+Portafolio,
+Evidencia,
+Reflexion,
+ActividadCreativa,
+Competencia,
+Rubrica,
+Spec,
+Consentimiento,
+ThreatModel,
+DecisionHumana,
+UsoIA,
+RegistroDeuda,
+RevisionHumana.
 ```
 
-### 12.2 Objetos iniciales de dominio
-
-```text
-Usuario
-Subjetividad
-Portafolio
-Evidencia
-Reflexion
-ActividadCreativa
-Competencia
-Rubrica
-```
-
-### 12.3 Objetos de gobernanza
-
-```text
-Spec
-Consentimiento
-ThreatModel
-DecisionHumana
-UsoIA
-RegistroDeuda
-RevisionHumana
-```
-
-### 12.4 Objetos técnicos futuros
-
-```text
-RepositorioLocal
-Exportador
-Validador
-AdaptadorIA
-Almacenamiento
-```
-
-Estos objetos técnicos son conceptuales en v0.4.4. No autorizan código.
-
-### 12.5 Composición antes que herencia rígida
-
-La arquitectura conceptual debe preferir composición:
-
-```text
-Usuario + Rol + Subjetividad + Contexto + Permisos
-```
-
-Esto evita jerarquías rígidas que no reflejan la complejidad humana del proyecto.
-
-### 12.6 Reglas éticas como responsabilidades de objeto
-
-Cada objeto deberá especificar:
-
-```text
-propósito
-atributos permitidos
-atributos sensibles
-relaciones
-responsabilidades
-reglas éticas
-amenazas
-pruebas
-condiciones de bloqueo
-```
-
-Ejemplo conceptual:
-
-```text
-Objeto: Evidencia
-Responsabilidad: representar una producción educativa, creativa o reflexiva.
-Regla: no puede compartirse sin consentimiento.
-Regla: no puede enviarse a IA externa sin spec aprobada.
-Regla: no puede ser evaluada automáticamente como juicio final.
-```
+Todo objeto conceptual debe declarar propósito, atributos permitidos, atributos sensibles, relaciones, responsabilidades, reglas éticas, amenazas, pruebas y condiciones de bloqueo.
 
 ---
 
 ## 13. Primera aplicación asociada
 
-La primera aplicación asociada debe abordarse con dos niveles simultáneos:
+La primera aplicación asociada debe comenzar por una spec general y specs profundas para núcleos críticos.
+
+El primer núcleo crítico recomendado es:
 
 ```text
-1. Spec general de toda la aplicación.
-2. Specs profundas, seguras y testeables para funciones críticas.
+experiencia creativa del usuario vinculada a portafolio local-first.
 ```
 
-El primer núcleo crítico será la experiencia creativa del usuario vinculada a portafolio local-first.
-
-Ese núcleo debe proteger:
-
-```text
-creación
-exploración
-reflexión
-evidencia
-control local
-consentimiento
-agencia
-no rigidez
-```
-
-La primera aplicación no debe empezar por backend, autenticación, analíticas, base de datos remota o IA externa por defecto.
-
-Debe empezar por diseñar cuidadosamente qué significa crear, guardar, reflexionar y decidir sobre una evidencia en un entorno local-first.
+Este núcleo debe proteger creación, exploración, reflexión, evidencia, control local, consentimiento, agencia y no rigidez.
 
 ---
 
-## 14. Criterios de bloqueo
+## 14. Gate constitucional
 
-Una spec debe bloquearse, diferirse o rediseñarse si propone:
+El Gate Constitucional de Preimplementación se reconoce como instrumento operativo de esta Constitución.
+
+Ninguna implementación funcional puede avanzar sin:
 
 ```text
-implementación sin spec
-manejo de datos reales sin política de datos
-uso de IA externa sin consentimiento y threat model
-evaluación automática como juicio final
-publicación automática de portafolios
-subida automática de archivos
-backend, cloud, autenticación o analíticas sin autorización
-almacenamiento remoto sin justificación aprobada
-diseño que rigidiza o sofoca el juego creativo
-falta de pruebas
-falta de revisión humana
+spec aprobada,
+clasificación de datos,
+threat model,
+privacidad,
+local-first,
+consentimiento,
+pruebas,
+validación humana,
+transferencia PH-IT-AT,
+deuda revisada,
+documentación activa actualizada,
+decisión registrada.
 ```
-
-El bloqueo no debe entenderse como fracaso. En SDD, bloquear una mala idea a tiempo es una forma de cuidado.
 
 ---
 
-## 15. Matrices constitucionales requeridas
+## 15. Documentación activa y bitácoras
 
-La Constitución deberá desarrollarse con las siguientes matrices:
-
-```text
-matriz de ciclo de vida de specs
-matriz de tipos de specs
-matriz de riesgo
-matriz de datos
-matriz de consentimiento
-matriz de IA externa
-matriz local-first
-matriz POO conceptual
-matriz de bloqueo
-matriz de trazabilidad documental
-```
-
-Estas matrices deberán incorporarse en una versión posterior del documento o en documentos canónicos asociados.
-
----
-
-## 16. Relación con bitácoras, transferencia y deuda
-
-Toda decisión relevante tomada bajo esta Constitución debe actualizar:
+Toda decisión relevante debe actualizar:
 
 ```text
-bitácora de sesión
-bitácora de transferencia simétrica
-registro de deuda
+bitácora de sesión,
+bitácora de transferencia simétrica,
+registro de deuda,
+changelog cuando aplique,
+prompt de continuidad cuando aplique,
+bitácora del capitán cuando afecte rumbo longitudinal.
 ```
 
 La Constitución no debe crecer sin memoria.
 
-La bitácora de sesión registra lo ocurrido.
+---
 
-La bitácora de transferencia simétrica registra cómo una decisión afecta perfiles, cartapacios y fases.
+## 16. Wiki humana
 
-El registro de deuda documenta lo que queda pendiente, lo que bloquea, lo que condiciona y lo que debe pagarse antes de avanzar.
+La wiki humana traduce documentos técnicos y constitucionales en comprensión navegable. No reemplaza documentos rectores. Los explica, los acompaña y facilita continuidad humana.
 
 ---
 
-## 17. Revisión, evolución y gobernanza
+## 17. Deuda
 
-Esta Constitución será evolutiva y revisable.
+v0.4.4 cierra con deuda estructural actual pagada o controlada por PR #9.
 
-Sus cambios se clasifican como:
-
-```text
-cambio menor
-cambio sustantivo
-cambio de bloqueo
-cambio de alcance
-```
-
-Un cambio menor puede ajustar redacción, orden o claridad.
-
-Un cambio sustantivo altera criterios, responsabilidades o procesos.
-
-Un cambio de bloqueo modifica lo que se permite o se prohíbe.
-
-Un cambio de alcance redefine qué puede hacerse en v0.4.4.
-
-Todo cambio sustantivo, de bloqueo o de alcance requiere revisión humana documentada.
+v0.4.5 podrá generar deuda nueva relacionada con specs operativas, semillas arquitectónicas, criterios de diseño o validación. Esa deuda deberá registrarse como deuda de v0.4.5, no como herencia estructural de v0.4.4.
 
 ---
 
-## 18. Checklist constitucional mínimo
+## 18. Archivo histórico
+
+Ningún documento debe moverse a archivo histórico sin doble condición:
 
 ```text
-[ ] No autoriza implementación funcional.
-[ ] Activa SDD como condición previa a código.
-[ ] Incorpora seguridad y privacidad por diseño.
-[ ] Mantiene local-first.
-[ ] Limita IA externa.
-[ ] Protege agencia humana.
-[ ] Protege juego creativo.
-[ ] Integra POO como modelado conceptual.
-[ ] Activa bitácora de sesión.
-[ ] Activa bitácora de transferencia simétrica.
-[ ] Activa registro de deuda.
-[ ] Requiere revisión humana.
+1. existe reemplazo canónico;
+2. existe decisión registrada.
 ```
 
 ---
 
-## 19. Estado del borrador
+## 19. Criterios de bloqueo
 
-Este documento constituye el primer borrador sustantivo aprobado de la Constitución SDD AI StoryLab 1 v0.4.4.
-
-Debe revisarse posteriormente para:
+Debe bloquearse o rediseñarse cualquier propuesta que incluya:
 
 ```text
-ampliar matrices
-crear plantillas asociadas
-validar rutas canónicas
-sincronizar bitácoras
-sincronizar registro de deuda
-verificar consistencia con gobernanza documental
-verificar consistencia con Wiki humana
-validar criterios de bloqueo
+implementación sin spec,
+datos reales sin política,
+IA externa sin consentimiento y threat model,
+evaluación automática como juez final,
+publicación automática,
+subida automática,
+backend, cloud, autenticación o analíticas sin autorización,
+almacenamiento remoto sin justificación aprobada,
+diseño que rigidiza o sofoca el juego creativo,
+falta de pruebas,
+falta de revisión humana,
+falta de trazabilidad documental.
 ```
 
-Hasta su desarrollo ampliado, este documento opera como Constitución SDD inicial aprobada, con autoridad documental para orientar y bloquear avances prematuros.
+---
+
+## 20. Cierre constitucional v0.4.4
+
+Esta versión consolidada incorpora las decisiones estructurales de PR #9 y prepara PR #10 como cierre definitivo de v0.4.4.
+
+v0.4.4 queda cerrada cuando:
+
+```text
+Constitución SDD queda consolidada,
+índice rector queda actualizado,
+derivados quedan sincronizados,
+gate constitucional queda operativo,
+deuda estructural actual queda pagada,
+bitácoras quedan actualizadas,
+Bitácora del Capitán queda abierta,
+prompt de continuidad v0.4.5 queda preparado.
+```
+
+---
+
+## 21. Dictamen
+
+Esta Constitución SDD v0.4.4 consolidada final funciona como documento matriz de decisión y fuente superior de principios para fases posteriores, especialmente v0.4.5.
+
+No autoriza implementación funcional.
+
+**Dictamen:** Constitución SDD v0.4.4 consolidada final aprobada para PR #10.
