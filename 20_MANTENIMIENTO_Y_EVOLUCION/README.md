@@ -1,38 +1,55 @@
-# 20_MANTENIMIENTO_Y_EVOLUCION
+# README — 20_MANTENIMIENTO_Y_EVOLUCION
 
 **Proyecto:** AI StoryLab 1  
-**Versión estructura:** v0.4.0  
-**Estado:** Pendiente_Activacion  
-**ID maestro relacionado:** ASTL-V040-STD-001
+**Cartapacio:** `20_MANTENIMIENTO_Y_EVOLUCION/`  
+**Estado:** Activo  
+**Versión de referencia:** v0.4.4  
+**Última revisión:** 2026-07-03  
 
-## Propósito
+---
 
-Describir la función de este cartapacio dentro de la estructura N3 Foundation de AI StoryLab 1.
+## 1. Propósito
 
-## Qué contiene
+Este cartapacio conserva deuda, mantenimiento, backlog evolutivo, actualizaciones y seguimiento de continuidad estructural, técnica y documental.
 
-Pendiente de poblamiento según necesidad, spec, decisión o documentación activa.
+---
 
-## Qué no contiene
+## 2. Qué contiene
 
-No debe contener documentos fuera de su función, versiones reemplazadas sin archivar, ni implementación prematura de backend, APIs externas, autenticación, base de datos remota o subida automática de archivos.
+```text
+registro de deuda,
+deuda estructural,
+deuda técnica,
+deuda WIKI_SYNC,
+backlog evolutivo,
+actualizaciones.
+```
 
-## Relación con carpetas vecinas
+---
 
-Debe mantener referencias lógicas hacia documentos canónicos y evitar duplicación.
+## 3. Registro de deuda
 
-## Criterios de colocación
+El registro de deuda debe identificar:
 
-Colocar aquí solo documentos cuya función primaria corresponda a este cartapacio.
+```text
+ID,
+tipo,
+ruta afectada,
+riesgo,
+severidad,
+estado,
+acción siguiente,
+versión objetivo.
+```
 
-## Riesgos de seguridad y privacidad
+---
 
-Revisar si los documentos en esta carpeta tocan datos personales, datos educativos, menores, importación/exportación, IA externa, archivos multimedia, backend futuro, autenticación futura o analíticas.
+## 4. Criterio v0.4.4
 
-## Relación con WIKI_SYNC
+La deuda estructural actual de v0.4.4 debe quedar pagada en PR #9 para iniciar v0.4.5 sin herencia estructural pendiente.
 
-Si una decisión o documento afecta a estudiantes, facilitadores, docentes, familias, desarrolladores o revisores, registrar deuda WIKI_SYNC.
+---
 
-## Última revisión
+## 5. Dictamen
 
-Pendiente.
+`20_MANTENIMIENTO_Y_EVOLUCION/` queda activado como sistema de mantenimiento, no como lista informal de pendientes.

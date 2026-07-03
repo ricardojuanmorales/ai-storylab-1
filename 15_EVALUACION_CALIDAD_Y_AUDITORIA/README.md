@@ -1,38 +1,45 @@
-# 15_EVALUACION_CALIDAD_Y_AUDITORIA
+# README — 15_EVALUACION_CALIDAD_Y_AUDITORIA
 
 **Proyecto:** AI StoryLab 1  
-**Versión estructura:** v0.4.0  
-**Estado:** Pendiente_Activacion  
-**ID maestro relacionado:** ASTL-V040-STD-001
+**Cartapacio:** `15_EVALUACION_CALIDAD_Y_AUDITORIA/`  
+**Estado:** Activo  
+**Versión de referencia:** v0.4.4  
+**Última revisión:** 2026-07-03  
 
-## Propósito
+---
 
-Describir la función de este cartapacio dentro de la estructura N3 Foundation de AI StoryLab 1.
+## 1. Propósito
 
-## Qué contiene
+Este cartapacio conserva auditorías, gates, checks, evidencias de validación y evaluación de calidad, seguridad, IA y sistema.
 
-Pendiente de poblamiento según necesidad, spec, decisión o documentación activa.
+---
 
-## Qué no contiene
+## 2. Qué contiene
 
-No debe contener documentos fuera de su función, versiones reemplazadas sin archivar, ni implementación prematura de backend, APIs externas, autenticación, base de datos remota o subida automática de archivos.
+```text
+reportes de auditoría,
+gates constitucionales,
+checks de evaluación,
+evidencias de validación,
+evaluación de seguridad,
+evaluación de IA/agentes,
+evaluación sistémica.
+```
 
-## Relación con carpetas vecinas
+---
 
-Debe mantener referencias lógicas hacia documentos canónicos y evitar duplicación.
+## 3. Gate constitucional
 
-## Criterios de colocación
+El gate constitucional de preimplementación bloquea cualquier avance funcional que no cumpla criterios SDD, privacidad, consentimiento, threat model, local-first, revisión humana, transferencia PH-IT-AT y documentación activa.
 
-Colocar aquí solo documentos cuya función primaria corresponda a este cartapacio.
+---
 
-## Riesgos de seguridad y privacidad
+## 4. Relación con implementación
 
-Revisar si los documentos en esta carpeta tocan datos personales, datos educativos, menores, importación/exportación, IA externa, archivos multimedia, backend futuro, autenticación futura o analíticas.
+Este cartapacio evalúa condiciones de avance. No autoriza implementación por sí solo. Toda aprobación requiere decisión registrada y documentación actualizada.
 
-## Relación con WIKI_SYNC
+---
 
-Si una decisión o documento afecta a estudiantes, facilitadores, docentes, familias, desarrolladores o revisores, registrar deuda WIKI_SYNC.
+## 5. Dictamen
 
-## Última revisión
-
-Pendiente.
+`15_EVALUACION_CALIDAD_Y_AUDITORIA/` queda activado como zona crítica de control de avance.
