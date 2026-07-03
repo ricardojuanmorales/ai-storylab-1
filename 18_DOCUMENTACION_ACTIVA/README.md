@@ -1,38 +1,85 @@
-# 18_DOCUMENTACION_ACTIVA
+# README — 18_DOCUMENTACION_ACTIVA
 
 **Proyecto:** AI StoryLab 1  
-**Versión estructura:** v0.4.0  
-**Estado:** Pendiente_Activacion  
-**ID maestro relacionado:** ASTL-V040-STD-001
+**Cartapacio:** `18_DOCUMENTACION_ACTIVA/`  
+**Estado:** Activo  
+**Versión de referencia:** v0.4.4  
+**Última revisión:** 2026-07-03  
 
-## Propósito
+---
 
-Describir la función de este cartapacio dentro de la estructura N3 Foundation de AI StoryLab 1.
+## 1. Propósito
 
-## Qué contiene
+Este cartapacio conserva la memoria viva del proyecto: bitácoras, cierres, decisiones, changelog, prompts de continuidad, documentación de sesión y elementos de transferencia.
 
-Pendiente de poblamiento según necesidad, spec, decisión o documentación activa.
+---
 
-## Qué no contiene
+## 2. Qué contiene
 
-No debe contener documentos fuera de su función, versiones reemplazadas sin archivar, ni implementación prematura de backend, APIs externas, autenticación, base de datos remota o subida automática de archivos.
+```text
+bitácoras,
+cierres de sesión,
+compendios,
+changelog,
+registro de decisiones,
+primers de continuidad,
+prompts de activación,
+prompts de sesión,
+WIKI_SYNC,
+segundo cerebro.
+```
 
-## Relación con carpetas vecinas
+---
 
-Debe mantener referencias lógicas hacia documentos canónicos y evitar duplicación.
+## 3. Qué no contiene
 
-## Criterios de colocación
+```text
+Constitución SDD rectora,
+plantillas permanentes,
+archivo histórico definitivo,
+documentos funcionales de implementación.
+```
 
-Colocar aquí solo documentos cuya función primaria corresponda a este cartapacio.
+---
 
-## Riesgos de seguridad y privacidad
+## 4. Fronteras funcionales
 
-Revisar si los documentos en esta carpeta tocan datos personales, datos educativos, menores, importación/exportación, IA externa, archivos multimedia, backend futuro, autenticación futura o analíticas.
+```text
+Bitácora:
+  registra proceso y decisiones de sesión.
 
-## Relación con WIKI_SYNC
+Registro de decisiones:
+  convierte acuerdos en autoridad documental.
 
-Si una decisión o documento afecta a estudiantes, facilitadores, docentes, familias, desarrolladores o revisores, registrar deuda WIKI_SYNC.
+Changelog:
+  registra cambios por versión o PR.
 
-## Última revisión
+Prompt de continuidad:
+  permite retomar la próxima sesión.
 
-Pendiente.
+WIKI_SYNC:
+  registra sincronización pendiente hacia wiki humana.
+
+Cierre de sesión:
+  empaqueta el estado al terminar una etapa.
+```
+
+---
+
+## 5. Protocolo documental
+
+La documentación activa se actualiza mediante protocolo escalonado:
+
+```text
+ligera,
+operativa,
+estructural,
+constitucional,
+cierre de versión.
+```
+
+---
+
+## 6. Dictamen
+
+`18_DOCUMENTACION_ACTIVA/` queda activado como memoria viva trazable, no como depósito sin frontera.

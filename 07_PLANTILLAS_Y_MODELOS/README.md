@@ -1,38 +1,58 @@
-# 07_PLANTILLAS_Y_MODELOS
+# README — 07_PLANTILLAS_Y_MODELOS
 
 **Proyecto:** AI StoryLab 1  
-**Versión estructura:** v0.4.0  
-**Estado:** Pendiente_Activacion  
-**ID maestro relacionado:** ASTL-V040-STD-001
+**Cartapacio:** `07_PLANTILLAS_Y_MODELOS/`  
+**Estado:** Activo  
+**Versión de referencia:** v0.4.4  
+**Última revisión:** 2026-07-03  
 
-## Propósito
+---
 
-Describir la función de este cartapacio dentro de la estructura N3 Foundation de AI StoryLab 1.
+## 1. Propósito
 
-## Qué contiene
+Este cartapacio conserva plantillas, modelos y estructuras reutilizables para documentos, specs, evaluación, gobernanza, datos y SDD.
 
-Pendiente de poblamiento según necesidad, spec, decisión o documentación activa.
+---
 
-## Qué no contiene
+## 2. Qué contiene
 
-No debe contener documentos fuera de su función, versiones reemplazadas sin archivar, ni implementación prematura de backend, APIs externas, autenticación, base de datos remota o subida automática de archivos.
+```text
+plantillas documentales,
+plantillas SDD,
+plantillas de evaluación,
+modelos de datos conceptuales,
+modelos de gobernanza.
+```
 
-## Relación con carpetas vecinas
+---
 
-Debe mantener referencias lógicas hacia documentos canónicos y evitar duplicación.
+## 3. Qué no contiene
 
-## Criterios de colocación
+```text
+documentos rectores únicos,
+bitácoras,
+cierres de sesión,
+documentos de deuda,
+implementación funcional.
+```
 
-Colocar aquí solo documentos cuya función primaria corresponda a este cartapacio.
+---
 
-## Riesgos de seguridad y privacidad
+## 4. Rutas críticas
 
-Revisar si los documentos en esta carpeta tocan datos personales, datos educativos, menores, importación/exportación, IA externa, archivos multimedia, backend futuro, autenticación futura o analíticas.
+```text
+07_PLANTILLAS_Y_MODELOS/Plantillas_Documentales/
+07_PLANTILLAS_Y_MODELOS/Spec_Driven_Development/
+```
 
-## Relación con WIKI_SYNC
+---
 
-Si una decisión o documento afecta a estudiantes, facilitadores, docentes, familias, desarrolladores o revisores, registrar deuda WIKI_SYNC.
+## 5. Relación con PR #9
 
-## Última revisión
+PR #9 incorpora una plantilla README de cartapacio para actualizar README críticos de forma consistente y sostenible.
 
-Pendiente.
+---
+
+## 6. Dictamen
+
+`07_PLANTILLAS_Y_MODELOS/` queda activado como zona de reutilización documental, no como zona de autoridad primaria.

@@ -1,38 +1,72 @@
-# 00_CONTROL_MAESTRO
+# README — 00_CONTROL_MAESTRO
 
 **Proyecto:** AI StoryLab 1  
-**Versión estructura:** v0.4.0  
-**Estado:** Pendiente_Activacion  
-**ID maestro relacionado:** ASTL-V040-STD-001
+**Cartapacio:** `00_CONTROL_MAESTRO/`  
+**Estado:** Activo  
+**Versión de referencia:** v0.4.4  
+**Última revisión:** 2026-07-03  
 
-## Propósito
+---
 
-Describir la función de este cartapacio dentro de la estructura N3 Foundation de AI StoryLab 1.
+## 1. Propósito
 
-## Qué contiene
+Este cartapacio conserva los documentos rectores que gobiernan estructura, colocación documental, versiones, mapas, índices, protocolos y Spec-Driven Development.
 
-Pendiente de poblamiento según necesidad, spec, decisión o documentación activa.
+---
 
-## Qué no contiene
+## 2. Qué contiene
 
-No debe contener documentos fuera de su función, versiones reemplazadas sin archivar, ni implementación prematura de backend, APIs externas, autenticación, base de datos remota o subida automática de archivos.
+```text
+reglas de colocación documental,
+mapas del repositorio,
+tablas de ubicación,
+convenciones de nombres,
+índices maestros,
+protocolos de cierre,
+manifiestos,
+control de versiones,
+Constitución SDD y derivados rectores.
+```
 
-## Relación con carpetas vecinas
+---
 
-Debe mantener referencias lógicas hacia documentos canónicos y evitar duplicación.
+## 3. Qué no contiene
 
-## Criterios de colocación
+```text
+bitácoras de sesión,
+cierres específicos de sesión,
+deuda viva,
+wiki humana,
+documentos de perfil,
+implementación funcional.
+```
 
-Colocar aquí solo documentos cuya función primaria corresponda a este cartapacio.
+---
 
-## Riesgos de seguridad y privacidad
+## 4. Rutas críticas
 
-Revisar si los documentos en esta carpeta tocan datos personales, datos educativos, menores, importación/exportación, IA externa, archivos multimedia, backend futuro, autenticación futura o analíticas.
+```text
+00_CONTROL_MAESTRO/Spec_Driven_Development/
+00_CONTROL_MAESTRO/Reglas_Colocacion_Documental/
+00_CONTROL_MAESTRO/Mapas_Repositorio/
+00_CONTROL_MAESTRO/Tablas_Ubicacion_Documental/
+00_CONTROL_MAESTRO/Protocolos_Cierre_Sesion/
+```
 
-## Relación con WIKI_SYNC
+---
 
-Si una decisión o documento afecta a estudiantes, facilitadores, docentes, familias, desarrolladores o revisores, registrar deuda WIKI_SYNC.
+## 5. Relación con SDD
 
-## Última revisión
+Este cartapacio contiene la autoridad documental superior de SDD para v0.4.4. Ningún documento rector SDD debe duplicarse fuera de esta zona sin referencia lógica o decisión registrada.
 
-Pendiente.
+---
+
+## 6. Riesgos
+
+El riesgo principal es convertir control maestro en depósito general. Para evitarlo, todo documento nuevo debe tener función rectora clara.
+
+---
+
+## 7. Dictamen
+
+`00_CONTROL_MAESTRO/` queda activado como zona crítica de gobernanza documental v0.4.4.

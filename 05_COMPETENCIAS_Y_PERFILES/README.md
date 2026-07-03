@@ -1,38 +1,80 @@
-# 05_COMPETENCIAS_Y_PERFILES
+# README — 05_COMPETENCIAS_Y_PERFILES
 
 **Proyecto:** AI StoryLab 1  
-**Versión estructura:** v0.4.0  
-**Estado:** Pendiente_Activacion  
-**ID maestro relacionado:** ASTL-V040-STD-001
+**Cartapacio:** `05_COMPETENCIAS_Y_PERFILES/`  
+**Estado:** Activo  
+**Versión de referencia:** v0.4.4  
+**Última revisión:** 2026-07-03  
 
-## Propósito
+---
 
-Describir la función de este cartapacio dentro de la estructura N3 Foundation de AI StoryLab 1.
+## 1. Propósito
 
-## Qué contiene
+Este cartapacio organiza competencias, perfiles creadores, perfiles de usuario, conocimiento común, matrices y taxonomías relacionadas con AI StoryLab 1.
 
-Pendiente de poblamiento según necesidad, spec, decisión o documentación activa.
+---
 
-## Qué no contiene
+## 2. Perfiles creadores
 
-No debe contener documentos fuera de su función, versiones reemplazadas sin archivar, ni implementación prematura de backend, APIs externas, autenticación, base de datos remota o subida automática de archivos.
+```text
+PH = Programador Humanista
+IT = Investigador Transdisciplinario
+AT = Artista Transdisciplinario
+```
 
-## Relación con carpetas vecinas
+PH puede operar como piloto, pero no como jerarquía permanente sobre IT y AT.
 
-Debe mantener referencias lógicas hacia documentos canónicos y evitar duplicación.
+---
 
-## Criterios de colocación
+## 3. Perfiles de usuario
 
-Colocar aquí solo documentos cuya función primaria corresponda a este cartapacio.
+```text
+estudiante de escuela superior,
+estudiante universitario,
+docente,
+investigador.
+```
 
-## Riesgos de seguridad y privacidad
+---
 
-Revisar si los documentos en esta carpeta tocan datos personales, datos educativos, menores, importación/exportación, IA externa, archivos multimedia, backend futuro, autenticación futura o analíticas.
+## 4. Excepción validada
 
-## Relación con WIKI_SYNC
+Se valida para v0.4.4 la ruta:
 
-Si una decisión o documento afecta a estudiantes, facilitadores, docentes, familias, desarrolladores o revisores, registrar deuda WIKI_SYNC.
+```text
+05_COMPETENCIAS_Y_PERFILES/Programador_Humanista/Base_Conocimiento_SDD/
+```
 
-## Última revisión
+Condiciones:
 
-Pendiente.
+```text
+1. opera como base formativa SDD del PH;
+2. no reemplaza Conocimiento_Comun/;
+3. no autoriza rutas paralelas sin decisión registrada;
+4. mantiene transferencia PH-IT-AT;
+5. se revisa en cierre de v0.4.4 o preparación de v0.5.0.
+```
+
+---
+
+## 5. Transferencia PH-IT-AT
+
+Todo documento nuevo relevante debe declarar:
+
+```yaml
+transferencia_PH_IT_AT:
+  aplica:
+  origen:
+  transferible_a_PH:
+  transferible_a_IT:
+  transferible_a_AT:
+  condiciones_transferencia:
+  deuda_transferencia:
+  requiere_revision:
+```
+
+---
+
+## 6. Dictamen
+
+`05_COMPETENCIAS_Y_PERFILES/` queda activado como zona crítica para continuidad transdisciplinaria y transferencia simétrica.
