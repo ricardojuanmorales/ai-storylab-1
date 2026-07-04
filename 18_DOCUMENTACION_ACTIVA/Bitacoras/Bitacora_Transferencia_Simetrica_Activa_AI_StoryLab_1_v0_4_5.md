@@ -83,3 +83,44 @@ AT pregunta:
 ## 8. Dictamen actualizado
 
 SPEC-OP-006 queda aprobada para Specs Núcleo con deuda controlada. La transferencia simétrica queda reforzada: toda próxima spec debe dialogar con consentimiento, datos/privacidad y seguridad local-first antes de aspirar a aprobación.
+
+
+## 8. Transferencia simétrica de SPEC-OP-007
+
+```text
+fecha: 2026-07-04
+spec: SPEC-OP-007 Datos y Privacidad
+dictamen: aprobada_para_specs_nucleo_con_deuda_controlada
+estado: aceptado por el usuario
+```
+
+### PH
+
+PH acepta SPEC-OP-007 como segunda esclusa operativa porque protege privacidad, agencia estudiantil, no vigilancia pedagógica, no presión evaluativa, no inferencia emocional o diagnóstica y acceso docente no automático.
+
+### IT
+
+IT acepta SPEC-OP-007 porque establece clasificación conceptual, minimización, sensibilidad por combinación, límites de propósito, visibilidad, retención conceptual y dependencia con seguridad local-first.
+
+### AT
+
+AT acepta SPEC-OP-007 porque protege intimidad creativa, borradores, exploración, versiones intermedias y evita que privacidad se convierta en rigidez creativa.
+
+## 9. Regla triangular reforzada para SPEC-OP-008
+
+```text
+PH pregunta:
+  ¿La seguridad local-first conserva agencia, comprensión y no coerción?
+
+IT pregunta:
+  ¿La zona local-first controla riesgos de exposición, exportación accidental,
+  dispositivo compartido, dependencia remota y activación no autorizada?
+
+AT pregunta:
+  ¿La seguridad protege la creación sin convertirla en formulario,
+  vigilancia o jaula de permisos?
+```
+
+## 10. Dictamen actualizado
+
+SPEC-OP-006 y SPEC-OP-007 quedan aprobadas para Specs Núcleo con deuda controlada. La transferencia simétrica queda reforzada: toda próxima spec debe dialogar con consentimiento, datos/privacidad y seguridad local-first antes de aspirar a aprobación. La próxima revisión corresponde a SPEC-OP-008 Seguridad Local-First.

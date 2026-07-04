@@ -31,10 +31,24 @@
 [~] Bitacora_Transferencia_Simetrica_Activa_AI_StoryLab_1_v0_4_5.md actualizada.
 ```
 
+## Hito aprobado : SPEC-OP-007 Datos y Privacidad
+
+```text
+[~] Spec_Operativa_Datos_Privacidad_AI_StoryLab_1_v0_4_5.md actualizada.
+[+] Decision_Aprobacion_SPEC_OP_007_Datos_Privacidad_AI_StoryLab_1_v0_4_5.md.
+[~] Registro_Deuda_Sesion_AI_StoryLab_1_v0_4_5.md actualizado.
+[~] Bitacora_Sesion_Activa_AI_StoryLab_1_v0_4_5.md actualizada.
+[~] Bitacora_Transferencia_Simetrica_Activa_AI_StoryLab_1_v0_4_5.md actualizada.
+```
+
 ## Cambios de estado
 
 ```text
 SPEC-OP-006:
+  antes: borrador_nucleo_condicionado
+  ahora: aprobada_para_specs_nucleo_con_deuda_controlada
+
+SPEC-OP-007:
   antes: borrador_nucleo_condicionado
   ahora: aprobada_para_specs_nucleo_con_deuda_controlada
 ```
@@ -52,11 +66,33 @@ SPEC-OP-006:
 [+] DEUDA-PH-003: checklist PH para acciones sensibles.
 ```
 
+
+
+## Deuda añadida desde SPEC-OP-007
+
+```text
+[+] DEUDA-SESION-006: actualizar glosario general SDD con términos de datos y privacidad.
+[+] DEUDA-SESION-007: identificar documentos necesarios para la base de conocimientos SDD sobre datos, privacidad y minimización.
+[+] DEUDA-SESION-008: desarrollar matriz de clasificación de datos por sensibilidad, visibilidad, propósito, consentimiento, exportación y retención conceptual.
+[+] DEUDA-SESION-009: desarrollar matriz de datos sensibles reforzados para estudiantes de escuela superior.
+[+] DEUDA-SESION-010: desarrollar criterios de minimización por defecto para specs futuras.
+[+] DEUDA-SESION-011: desarrollar matriz de cruce consentimiento-datos-seguridad.
+[+] DEUDA-PH-004: guía PH para protección de estudiantes frente a vigilancia pedagógica.
+[+] DEUDA-PH-005: guía PH para detectar vigilancia pedagógica y presión evaluativa.
+[+] DEUDA-PH-006: criterios PH para revisar datos bajo consentimiento y seguridad local-first.
+[+] DEUDA-SDD-IT-001: guía IT para clasificación conceptual de datos y minimización.
+[+] DEUDA-SDD-IT-002: criterios IT para sensibilidad por combinación de datos.
+[+] DEUDA-SDD-IT-003: guía IT para minimización, campos obligatorios y límites de propósito.
+[+] DEUDA-SDD-IT-004: matriz IT de cruce entre clases de datos, zonas de seguridad y controles.
+[+] DEUDA-AT-001: guía AT para privacidad del proceso creativo.
+[+] DEUDA-AT-002: criterios AT para evitar que privacidad y seguridad rigidicen la creación.
+```
+
 ## Pendiente actualizado
 
 ```text
 [✓] Aprobar SPEC-OP-006 Consentimiento Informado y Situado con deuda controlada.
-[ ] Revisar SPEC-OP-007 Datos y Privacidad.
+[✓] Aprobar SPEC-OP-007 Datos y Privacidad con deuda controlada.
 [ ] Revisar SPEC-OP-008 Seguridad Local-First.
 [ ] Aplicar Gate de aprobación de Specs Núcleo.
 [ ] Sincronizar narrativa del cuerpo de PR #11 al cierre de sesión.
@@ -72,4 +108,7 @@ SPEC-OP-006:
 [!] Datos reales.
 [!] Crear specs futuras que presupongan arquitectura no aprobada.
 [!] Convertir semillas arquitectónicas en implementación.
+[!] Acceso docente automático a datos o evidencias.
+[!] Uso investigativo no declarado.
+[!] Vigilancia pedagógica o evaluación automática.
 ```

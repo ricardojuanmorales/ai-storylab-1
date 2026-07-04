@@ -157,3 +157,100 @@ DEUDA-PH-003: checklist PH para acciones sensibles.
 ## 12. Dictamen actualizado de sesión
 
 La sesión PR #11 queda activa como sesión documental de revisión, planificación longitudinal y aprobación unitaria. No hay autorización para implementar. SPEC-OP-006 queda aprobada como primera compuerta; la próxima revisión unitaria corresponde a SPEC-OP-007 Datos y Privacidad.
+
+
+## 12. Revisión paso a paso de SPEC-OP-007
+
+```text
+fecha: 2026-07-04
+spec: SPEC-OP-007 Datos y Privacidad
+metodo: revisión unitaria paso a paso
+estado_inicial: borrador_nucleo_condicionado
+estado_final_recomendado: aprobada_para_specs_nucleo_con_deuda_controlada
+```
+
+### Paso 2 : propósito, alcance y definiciones
+
+```text
+[✓] Mantener propósito actual.
+[+] Añadir alcance explícito.
+[+] Añadir definiciones operativas mínimas.
+[+] Declarar dependencia directa con SPEC-OP-006 Consentimiento Informado y Situado.
+```
+
+### Paso 3 : clasificación conceptual de datos
+
+```text
+[✓] Conservar tabla de clasificación conceptual de datos.
+[+] Añadir regla de clasificación por defecto hacia mayor protección.
+[+] Añadir regla de escalamiento de sensibilidad.
+[+] Separar creación, dato y evidencia.
+[+] Conectar clasificación con visibilidad y retención conceptual.
+```
+
+### Paso 4 : datos sensibles reforzados y estudiantes de escuela superior
+
+```text
+[✓] Conservar protección reforzada de estudiantes de escuela superior.
+[+] Añadir sensibilidad directa e indirecta.
+[+] Añadir regla de no inferencia emocional o diagnóstica.
+[+] Reforzar acceso docente no automático.
+[+] Separar docencia e investigación.
+```
+
+### Paso 5 : minimización, privacidad por defecto y no vigilancia
+
+```text
+[✓] Conservar reglas de minimización.
+[+] Convertir privacidad por defecto en regla explícita.
+[+] Añadir regla de no vigilancia pedagógica.
+[+] Añadir regla contra campos obligatorios innecesarios.
+[+] Añadir minimización por propósito.
+```
+
+### Paso 6 : relación con SPEC-OP-006 y SPEC-OP-008
+
+```text
+[✓] Declarar que clasificar datos no autoriza usarlos.
+[✓] Declarar que privacidad/minimización no equivalen a seguridad.
+[✓] Añadir regla triangular de Specs Núcleo.
+[✓] Añadir matriz mínima de cruce consentimiento-datos-seguridad.
+```
+
+## 13. Dictamen final de SPEC-OP-007
+
+```text
+fecha: 2026-07-04
+spec: SPEC-OP-007 Datos y Privacidad
+dictamen: aprobada_para_specs_nucleo_con_deuda_controlada
+estado: aceptado por el usuario
+decision_asociada: Decision_Aprobacion_SPEC_OP_007_Datos_Privacidad_AI_StoryLab_1_v0_4_5.md
+```
+
+Se aprueba SPEC-OP-007 como segunda esclusa operativa de Specs Núcleo v0.4.5, con deuda controlada. Esta aprobación habilita continuidad documental hacia SPEC-OP-008 Seguridad Local-First y futuras specs relacionadas con evidencia, portafolio, exportación, investigación, evaluación, experiencia escolar e IA futura.
+
+La aprobación no autoriza implementación funcional, captura de datos reales, almacenamiento, sincronización, exportación, análisis automatizado, IA externa, uso investigativo ni evaluación automática.
+
+## 14. Deuda de sesión registrada desde SPEC-OP-007
+
+```text
+DEUDA-SESION-006: actualizar glosario general SDD con términos de datos y privacidad.
+DEUDA-SESION-007: identificar documentos necesarios para la base de conocimientos SDD sobre datos, privacidad y minimización.
+DEUDA-SESION-008: desarrollar matriz de clasificación de datos por sensibilidad, visibilidad, propósito, consentimiento, exportación y retención conceptual.
+DEUDA-SESION-009: desarrollar matriz de datos sensibles reforzados para estudiantes de escuela superior.
+DEUDA-SESION-010: desarrollar criterios de minimización por defecto para specs futuras.
+DEUDA-SESION-011: desarrollar matriz de cruce consentimiento-datos-seguridad.
+DEUDA-PH-004: guía PH para protección de estudiantes frente a vigilancia pedagógica.
+DEUDA-PH-005: guía PH para detectar vigilancia pedagógica y presión evaluativa.
+DEUDA-PH-006: criterios PH para revisar datos bajo consentimiento y seguridad local-first.
+DEUDA-SDD-IT-001: guía IT para clasificación conceptual de datos y minimización.
+DEUDA-SDD-IT-002: criterios IT para sensibilidad por combinación de datos.
+DEUDA-SDD-IT-003: guía IT para minimización, campos obligatorios y límites de propósito.
+DEUDA-SDD-IT-004: matriz IT de cruce entre clases de datos, zonas de seguridad y controles.
+DEUDA-AT-001: guía AT para privacidad del proceso creativo.
+DEUDA-AT-002: criterios AT para evitar que privacidad y seguridad rigidicen la creación.
+```
+
+## 15. Dictamen actualizado de sesión
+
+La sesión PR #11 queda activa como sesión documental de revisión, planificación longitudinal y aprobación unitaria. No hay autorización para implementar. SPEC-OP-006 y SPEC-OP-007 quedan aprobadas como primera y segunda compuerta de Specs Núcleo v0.4.5, ambas con deuda controlada. La próxima revisión unitaria corresponde a SPEC-OP-008 Seguridad Local-First.
