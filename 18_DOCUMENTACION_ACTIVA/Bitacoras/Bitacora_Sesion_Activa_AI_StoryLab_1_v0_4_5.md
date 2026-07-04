@@ -93,3 +93,59 @@ La sesión reconoce que el Índice Oficial de Gates SDD hacia v1.0.0 es suficien
 ## 9. Dictamen de bitácora
 
 La sesión PR #11 queda activa como sesión documental de revisión, planificación longitudinal y aprobación unitaria. No hay autorización para implementar. El timón está en modo cartografía fina: cada spec aparece cuando el gate la llama por su nombre.
+
+## 10. Hito de mapa longitudinal : Mapa de Gates SDD hacia v1.0.0
+
+```text
+fecha: 2026-07-04
+hito: borrador completo del Mapa de Gates SDD hacia v1.0.0
+documento_principal: Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md
+documento_fuente: Indice_Oficial_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md
+estado: preparado para próximo commit de PR #11
+```
+
+Se acuerda trabajar con el Índice Oficial de Gates aprobado como esqueleto estable para crear el borrador completo del mapa. El mapa no altera el índice; lo desarrolla como ruta longitudinal de autorización, evidencia, deuda y revisión humana hacia v1.0.0.
+
+## 11. Documentos relativos del hito
+
+```text
+[+] Mapa de Gates SDD hacia v1.0.0.
+[+] Tablero Maestro de Dependencias Specs-Gates-Versiones.
+[+] Decisión del Hito Mapa de Gates.
+[+] Tabla de Ubicación Canónica del Hito.
+[+] Registro de Deuda del Hito.
+[+] Actualización de Bitácora del Capitán.
+[+] Prompt de Continuidad Post-Mapa.
+[~] Bitácora de Sesión Activa.
+[~] Transferencia Simétrica Activa.
+[~] Changelog PR #11.
+```
+
+## 12. Dictamen actualizado
+
+La sesión PR #11 queda orientada a cerrar v0.4.5 con una brújula operativa completa: índice, mapa, modelo evolutivo de specs, specs núcleo y gates. No se autoriza implementación. El mapa define navegación; los gates futuros abrirán o cerrarán compuertas.
+
+
+## 13. Aprobación del Índice y Mapa de Gates como unidad canónica
+
+```text
+fecha: 2026-07-04
+hito: aprobación conjunta del Índice Oficial y Mapa de Gates SDD hacia v1.0.0
+estado: aprobado por el usuario para próximo commit de PR #11
+commit_previsto: docs: aprobar índice y mapa de gates SDD hacia v1.0.0
+```
+
+Se aprueba el Mapa de Gates SDD hacia v1.0.0 y se decide incluir el Índice Oficial de Gates en el mismo commit. El índice conserva la estructura estable de gates; el mapa desarrolla esa estructura como ruta longitudinal de autorización, evidencia, deuda y revisión humana.
+
+## 14. Dictamen de aprobación del hito
+
+```text
+[✓] Índice Oficial de Gates incluido.
+[✓] Mapa de Gates aprobado.
+[✓] Tablero Maestro de Dependencias incluido.
+[✓] Decisión de aprobación documental añadida.
+[✓] No se autoriza implementación funcional.
+[✓] La revisión unitaria de Specs Núcleo puede continuar con horizonte longitudinal estable.
+```
+
+La sesión PR #11 alcanza un hito mayor: AI StoryLab 1 ya no solo conoce sus primeras specs núcleo; conoce también la secuencia de compuertas que debe respetar para llegar a v1.0.0.

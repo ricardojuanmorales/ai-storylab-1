@@ -81,3 +81,72 @@ investigador:
 ## 9. Dictamen
 
 La transferencia simétrica queda ampliada: no solo revisa specs, también gobierna su nacimiento. Cada spec debe aparecer cuando su gate, riesgo, evidencia y experiencia humana la hacen necesaria. Ningún perfil debe monopolizar el rumbo.
+
+## 10. Transferencia PH-IT-AT del Mapa de Gates
+
+```text
+hito: Mapa de Gates SDD hacia v1.0.0
+estado: borrador completo para revisión documental
+```
+
+PH, IT y AT deben leer el mapa como una estructura de autorización, no como una lista técnica de tareas.
+
+```text
+PH:
+  verifica que cada gate preserve agencia humana, consentimiento situado,
+  protección de menores, no coerción y no evaluación automática.
+
+IT:
+  verifica que cada gate produzca evidencia, trazabilidad, validez,
+  control de riesgo y criterios de investigación-creación.
+
+AT:
+  verifica que cada gate preserve experiencia creativa, lenguaje habitable,
+  juego, afectividad y no rigidez expresiva.
+```
+
+## 11. Regla de equilibrio para el mapa
+
+```text
+un_gate_no_debe_aprobarse_si:
+  - PH detecta pérdida de agencia humana;
+  - IT detecta debilidad de evidencia o método;
+  - AT detecta rigidez, coerción o reducción de experiencia creativa;
+  - el criterio local-first queda debilitado;
+  - la deuda crítica queda escondida.
+```
+
+## 12. Dictamen actualizado
+
+La transferencia simétrica reconoce el Mapa de Gates como instrumento longitudinal. No decide por sí solo, pero organiza cuándo cada perfil debe intervenir antes de pasar de una versión a otra.
+
+
+## 7. Transferencia simétrica del hito Índice + Mapa de Gates
+
+```text
+fecha: 2026-07-04
+hito: aprobación conjunta del Índice Oficial y Mapa de Gates SDD hacia v1.0.0
+estado: aprobado para commit documental de PR #11
+```
+
+### PH
+
+PH recibe una ruta longitudinal que protege agencia humana, consentimiento situado, privacidad, cuidado reforzado de estudiantes de escuela superior y bloqueo de evaluación automática como juez final.
+
+### IT
+
+IT recibe una estructura de trazabilidad para conectar specs, gates, evidencia, deuda, investigación-creación y criterios de validez por versión.
+
+### AT
+
+AT recibe una cartografía que preserva experiencia creativa no rígida, lenguaje habitable, dimensión afectiva y libertad expresiva antes de cualquier arquitectura o prototipo.
+
+## 8. Dictamen PH-IT-AT
+
+```text
+[✓] El índice define la estructura.
+[✓] El mapa define la navegación.
+[✓] El tablero maestro define las relaciones.
+[✓] Ningún documento autoriza implementación.
+[✓] La simetría PH-IT-AT queda reforzada para las próximas specs.
+```

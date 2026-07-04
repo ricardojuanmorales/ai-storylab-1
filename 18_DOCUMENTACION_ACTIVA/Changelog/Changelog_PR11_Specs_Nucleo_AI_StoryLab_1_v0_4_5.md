@@ -40,13 +40,27 @@
 [~] Modelo de planificación longitudinal de v0.4.5.
 ```
 
+## Hito nuevo : Mapa de Gates SDD hacia v1.0.0
+
+```text
+[+] Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
+[+] Tablero_Maestro_Dependencias_Specs_Gates_Versiones_AI_StoryLab_1_v0_4_5.md.
+[+] Decision_Hito_Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
+[+] Tabla_Ubicacion_Canonica_Hito_Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
+[+] Registro_Deuda_Hito_Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
+[+] Actualizacion_Bitacora_Capitan_Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
+[+] Prompt_Continuidad_Post_Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
+[~] Bitácora de Sesión Activa actualizada.
+[~] Transferencia Simétrica Activa actualizada.
+```
+
 ## Pendiente
 
 ```text
 [ ] Confirmar commit local del índice oficial de gates si aún no ha sido subido.
 [ ] Confirmar commit local de la decisión del modelo evolutivo de specs por gates.
-[ ] Crear Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
-[ ] Crear matriz maestra de dependencias specs-gates-versiones.
+[✓] Crear Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
+[✓] Crear matriz/tablero maestro de dependencias specs-gates-versiones.
 [ ] Aprobar SPEC-OP-006 tras ajustes o aceptación de deuda.
 [ ] Revisar SPEC-OP-007.
 [ ] Revisar SPEC-OP-008.
@@ -62,4 +76,28 @@
 [!] Datos reales.
 [!] Crear specs futuras que presupongan arquitectura no aprobada.
 [!] Convertir semillas arquitectónicas en implementación.
+```
+
+
+## Hito aprobado : Índice + Mapa de Gates SDD hacia v1.0.0
+
+```text
+[+] Indice_Oficial_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md incluido en el commit del mapa.
+[+] Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md aprobado para PR #11.
+[+] Decision_Aprobacion_Indice_Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
+[~] Decision_Hito_Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md actualizada de propuesta a aprobación.
+[~] Bitácora de Sesión Activa actualizada con hito aprobado.
+[~] Transferencia Simétrica Activa actualizada con lectura PH-IT-AT.
+[~] Bitácora del Capitán actualizada con el hito de brújula doble: índice + mapa.
+```
+
+## Pendiente actualizado
+
+```text
+[✓] Incluir Índice Oficial de Gates en el commit del mapa.
+[✓] Aprobar Mapa de Gates SDD hacia v1.0.0.
+[ ] Retomar revisión unitaria de SPEC-OP-006.
+[ ] Revisar SPEC-OP-007.
+[ ] Revisar SPEC-OP-008.
+[ ] Aplicar Gate de aprobación de Specs Núcleo.
 ```
