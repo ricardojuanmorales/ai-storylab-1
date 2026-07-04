@@ -7,10 +7,8 @@
 **PR propuesto:** PR #11, `docs: apertura operativa v0.4.5 specs núcleo`  
 **Modo:** revisión documental unitaria, sin implementación funcional
 
-
 > **Guardarraíl constitucional v0.4.5**  
 > Este documento es una pieza de especificación operativa y gobierno documental. No autoriza implementación funcional, backend, cloud, autenticación, analíticas, IA externa, manejo de datos reales, subida automática ni automatizaciones funcionales. Toda transición posterior requiere revisión humana PH-IT-AT, análisis de riesgo, consentimiento situado, criterios local-first y gate constitucional.
-
 
 ## 1. Activación PR #11
 
@@ -55,6 +53,43 @@ acción_sustituta_segura: preparar paquete PR11 con rutas canónicas y comandos 
 
 La apertura v0.4.5 dejó el camino desde Constitución SDD hacia catálogo, priorización, plantilla, semillas, gate y próxima sesión. Specs Núcleo 1 desarrolló la primera tríada: consentimiento, datos/privacidad y seguridad local-first.
 
-## 6. Dictamen de bitácora
+## 6. Hito de planificación longitudinal : modelo evolutivo de specs por gates
 
-La sesión PR #11 queda activa como sesión documental de revisión y aprobación unitaria. No hay autorización para implementar. El timón está en modo cartografía fina: cada documento entra por una compuerta, no por avalancha.
+```text
+fecha: 2026-07-04
+hito: modelo evolutivo de specs por gates
+decision_asociada: Decision_Modelo_Evolutivo_Specs_por_Gates_AI_StoryLab_1_v0_4_5.md
+estado: aceptado por el usuario para documentación en PR #11
+```
+
+Se establece que AI StoryLab 1 no intentará definir todas las specs requeridas para v1.0.0 dentro de v0.4.5. En su lugar, v0.4.5 documenta el sistema de decisión para que cada spec futura nazca cuando un gate, una dependencia, un riesgo, una evidencia o una necesidad humana la requiera.
+
+La sesión reconoce que el Índice Oficial de Gates SDD hacia v1.0.0 es suficiente como estructura de navegación porque estabiliza los criterios de decisión sin forzar contenido prematuro.
+
+## 7. Decisiones incorporadas al hito
+
+```text
+[✓] Las specs se crearán evolutivamente por necesidad de gate.
+[✓] El índice de gates organiza la ruta hacia v1.0.0.
+[✓] El mapa de gates desarrollará el índice sin alterar sus reglas rectoras.
+[✓] La prioridad se ordena como A+B+C+D:
+    A. protección, consentimiento, privacidad y seguridad;
+    B. experiencia creativa local-first;
+    C. evidencia, trazabilidad e investigación-creación;
+    D. semillas arquitectónicas y transición conceptual.
+[✓] Una spec futura podrá crearse, refinarse, aplazarse o convertirse en deuda según evidencia, riesgo y dependencia.
+```
+
+## 8. Deuda derivada del hito
+
+```text
+[ ] Crear Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
+[ ] Crear matriz maestra de dependencias specs-gates-versiones.
+[ ] Registrar criterios para pasar una spec futura de deuda a borrador.
+[ ] Actualizar changelog PR #11 con el hito de planificación longitudinal.
+[ ] Registrar la entrada narrativa correspondiente en Bitácora del Capitán.
+```
+
+## 9. Dictamen de bitácora
+
+La sesión PR #11 queda activa como sesión documental de revisión, planificación longitudinal y aprobación unitaria. No hay autorización para implementar. El timón está en modo cartografía fina: cada spec aparece cuando el gate la llama por su nombre.

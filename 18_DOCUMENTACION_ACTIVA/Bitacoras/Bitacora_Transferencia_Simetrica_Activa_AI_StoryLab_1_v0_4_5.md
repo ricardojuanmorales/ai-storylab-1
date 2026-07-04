@@ -5,10 +5,8 @@
 **Estado:** activa para PR #11  
 **Fase:** specs operativas con semillas arquitectónicas
 
-
 > **Guardarraíl constitucional v0.4.5**  
 > Este documento es una pieza de especificación operativa y gobierno documental. No autoriza implementación funcional, backend, cloud, autenticación, analíticas, IA externa, manejo de datos reales, subida automática ni automatizaciones funcionales. Toda transición posterior requiere revisión humana PH-IT-AT, análisis de riesgo, consentimiento situado, criterios local-first y gate constitucional.
-
 
 ## 1. Propósito
 
@@ -36,6 +34,50 @@ una_spec_no_se_aprueba_si:
   - el estudiante de escuela superior queda expuesto a captura, presión o evaluación automática.
 ```
 
-## 6. Dictamen
+## 6. Hito transversal : modelo evolutivo de specs por gates
 
-La transferencia simétrica queda activa para PR #11. Las specs núcleo serán revisadas como tríada, pero aprobadas una por una.
+```text
+fecha: 2026-07-04
+hito: modelo evolutivo de specs por gates
+decision_asociada: Decision_Modelo_Evolutivo_Specs_por_Gates_AI_StoryLab_1_v0_4_5.md
+estado: aceptado como regla de planificación longitudinal
+```
+
+La transferencia simétrica adopta el modelo evolutivo de specs por gates. Esto significa que PH, IT y AT no revisarán únicamente documentos ya escritos, sino también **el momento adecuado para que una spec exista**.
+
+## 7. Transferencia PH-IT-AT del modelo evolutivo
+
+```text
+PH:
+  pregunta si la spec futura protege agencia humana, consentimiento,
+  comprensión, cuidado de menores y no coerción.
+
+IT:
+  pregunta si la spec futura responde a evidencia, validez,
+  trazabilidad, riesgo y método.
+
+AT:
+  pregunta si la spec futura conserva experiencia creativa,
+  lenguaje habitable, juego, afectividad y no rigidez.
+```
+
+## 8. Impacto en perfiles de usuario
+
+```text
+estudiante_escuela_superior:
+  ninguna spec futura debe normalizar captura, vigilancia,
+  presión institucional o evaluación automática.
+
+estudiante_universitario:
+  las specs deben preservar autoría, reflexión, portafolio y agencia.
+
+docente:
+  las specs deben apoyar mediación pedagógica sin convertirla en control automático.
+
+investigador:
+  las specs deben exigir protocolo, trazabilidad, consentimiento y límites de uso secundario.
+```
+
+## 9. Dictamen
+
+La transferencia simétrica queda ampliada: no solo revisa specs, también gobierna su nacimiento. Cada spec debe aparecer cuando su gate, riesgo, evidencia y experiencia humana la hacen necesaria. Ningún perfil debe monopolizar el rumbo.
