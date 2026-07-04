@@ -7,7 +7,7 @@
 > **Guardarraíl constitucional v0.4.5**  
 > Este documento es una pieza de especificación operativa y gobierno documental. No autoriza implementación funcional, backend, cloud, autenticación, analíticas, IA externa, manejo de datos reales, subida automática ni automatizaciones funcionales. Toda transición posterior requiere revisión humana PH-IT-AT, análisis de riesgo, consentimiento situado, criterios local-first y gate constitucional.
 
-## Añadido
+## Hitos previos incorporados
 
 ```text
 [+] Protocolo de Trabajo PR #11.
@@ -15,55 +15,51 @@
 [+] Bitácora de Sesión Activa v0.4.5.
 [+] Bitácora de Transferencia Simétrica Activa v0.4.5.
 [+] Plan de Revisión Unitaria.
-[+] Revisión Unitaria SPEC-OP-006.
-[+] Tabla de Ubicación Canónica PR #11.
-[+] Cuerpo de PR #11 sugerido.
 [+] Índice Oficial de Gates SDD hacia v1.0.0.
+[+] Mapa de Gates SDD hacia v1.0.0.
+[+] Tablero Maestro de Dependencias Specs-Gates-Versiones.
 [+] Decisión del Modelo Evolutivo de Specs por Gates.
-[+] Actualización de Bitácora del Capitán como hito narrativo.
 ```
 
-## Reorganizado
+## Hito aprobado : SPEC-OP-006 Consentimiento Informado y Situado
 
 ```text
-[*] Se sustituyen prefijos numéricos por nombres semánticos.
-[*] Se proponen rutas canónicas por función documental.
-[*] Specs Núcleo pasan de paquete suelto a conjunto revisable dentro de PR #11.
-[*] La ruta hacia v1.0.0 pasa de lista de specs futuras a modelo evolutivo gobernado por gates.
+[~] Spec_Operativa_Consentimiento_Informado_Situado_AI_StoryLab_1_v0_4_5.md actualizada.
+[+] Decision_Aprobacion_SPEC_OP_006_Consentimiento_Informado_Situado_AI_StoryLab_1_v0_4_5.md.
+[+] Registro_Deuda_Sesion_AI_StoryLab_1_v0_4_5.md.
+[~] Bitacora_Sesion_Activa_AI_StoryLab_1_v0_4_5.md actualizada.
+[~] Bitacora_Transferencia_Simetrica_Activa_AI_StoryLab_1_v0_4_5.md actualizada.
 ```
 
-## Actualizado
+## Cambios de estado
 
 ```text
-[~] Bitácora de Sesión Activa v0.4.5.
-[~] Bitácora de Transferencia Simétrica Activa v0.4.5.
-[~] Modelo de planificación longitudinal de v0.4.5.
+SPEC-OP-006:
+  antes: borrador_nucleo_condicionado
+  ahora: aprobada_para_specs_nucleo_con_deuda_controlada
 ```
 
-## Hito nuevo : Mapa de Gates SDD hacia v1.0.0
+## Deuda añadida
 
 ```text
-[+] Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
-[+] Tablero_Maestro_Dependencias_Specs_Gates_Versiones_AI_StoryLab_1_v0_4_5.md.
-[+] Decision_Hito_Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
-[+] Tabla_Ubicacion_Canonica_Hito_Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
-[+] Registro_Deuda_Hito_Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
-[+] Actualizacion_Bitacora_Capitan_Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
-[+] Prompt_Continuidad_Post_Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
-[~] Bitácora de Sesión Activa actualizada.
-[~] Transferencia Simétrica Activa actualizada.
+[+] DEUDA-SESION-001: actualizar glosario general SDD con términos de consentimiento.
+[+] DEUDA-SESION-002: identificar documentos necesarios para la base de conocimiento SDD del PH.
+[+] DEUDA-SESION-003: desarrollar criterios de transición entre capas de consentimiento.
+[+] DEUDA-SESION-004: consolidar criterios de consentimiento para estudiantes de escuela superior.
+[+] DEUDA-SESION-005: crear regla triangular común para Specs Núcleo.
+[+] DEUDA-PH-001: guía PH para consentimiento, mediación, coerción y fatiga.
+[+] DEUDA-PH-002: guía PH para consentimiento y agencia estudiantil en contextos escolares.
+[+] DEUDA-PH-003: checklist PH para acciones sensibles.
 ```
 
-## Pendiente
+## Pendiente actualizado
 
 ```text
-[ ] Confirmar commit local del índice oficial de gates si aún no ha sido subido.
-[ ] Confirmar commit local de la decisión del modelo evolutivo de specs por gates.
-[✓] Crear Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
-[✓] Crear matriz/tablero maestro de dependencias specs-gates-versiones.
-[ ] Aprobar SPEC-OP-006 tras ajustes o aceptación de deuda.
-[ ] Revisar SPEC-OP-007.
-[ ] Revisar SPEC-OP-008.
+[✓] Aprobar SPEC-OP-006 Consentimiento Informado y Situado con deuda controlada.
+[ ] Revisar SPEC-OP-007 Datos y Privacidad.
+[ ] Revisar SPEC-OP-008 Seguridad Local-First.
+[ ] Aplicar Gate de aprobación de Specs Núcleo.
+[ ] Sincronizar narrativa del cuerpo de PR #11 al cierre de sesión.
 ```
 
 ## Bloqueado
@@ -76,28 +72,4 @@
 [!] Datos reales.
 [!] Crear specs futuras que presupongan arquitectura no aprobada.
 [!] Convertir semillas arquitectónicas en implementación.
-```
-
-
-## Hito aprobado : Índice + Mapa de Gates SDD hacia v1.0.0
-
-```text
-[+] Indice_Oficial_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md incluido en el commit del mapa.
-[+] Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md aprobado para PR #11.
-[+] Decision_Aprobacion_Indice_Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
-[~] Decision_Hito_Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md actualizada de propuesta a aprobación.
-[~] Bitácora de Sesión Activa actualizada con hito aprobado.
-[~] Transferencia Simétrica Activa actualizada con lectura PH-IT-AT.
-[~] Bitácora del Capitán actualizada con el hito de brújula doble: índice + mapa.
-```
-
-## Pendiente actualizado
-
-```text
-[✓] Incluir Índice Oficial de Gates en el commit del mapa.
-[✓] Aprobar Mapa de Gates SDD hacia v1.0.0.
-[ ] Retomar revisión unitaria de SPEC-OP-006.
-[ ] Revisar SPEC-OP-007.
-[ ] Revisar SPEC-OP-008.
-[ ] Aplicar Gate de aprobación de Specs Núcleo.
 ```

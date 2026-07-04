@@ -34,119 +34,52 @@ una_spec_no_se_aprueba_si:
   - el estudiante de escuela superior queda expuesto a captura, presión o evaluación automática.
 ```
 
-## 6. Hito transversal : modelo evolutivo de specs por gates
+## 6. Transferencia simétrica de SPEC-OP-006
 
 ```text
 fecha: 2026-07-04
-hito: modelo evolutivo de specs por gates
-decision_asociada: Decision_Modelo_Evolutivo_Specs_por_Gates_AI_StoryLab_1_v0_4_5.md
-estado: aceptado como regla de planificación longitudinal
-```
-
-La transferencia simétrica adopta el modelo evolutivo de specs por gates. Esto significa que PH, IT y AT no revisarán únicamente documentos ya escritos, sino también **el momento adecuado para que una spec exista**.
-
-## 7. Transferencia PH-IT-AT del modelo evolutivo
-
-```text
-PH:
-  pregunta si la spec futura protege agencia humana, consentimiento,
-  comprensión, cuidado de menores y no coerción.
-
-IT:
-  pregunta si la spec futura responde a evidencia, validez,
-  trazabilidad, riesgo y método.
-
-AT:
-  pregunta si la spec futura conserva experiencia creativa,
-  lenguaje habitable, juego, afectividad y no rigidez.
-```
-
-## 8. Impacto en perfiles de usuario
-
-```text
-estudiante_escuela_superior:
-  ninguna spec futura debe normalizar captura, vigilancia,
-  presión institucional o evaluación automática.
-
-estudiante_universitario:
-  las specs deben preservar autoría, reflexión, portafolio y agencia.
-
-docente:
-  las specs deben apoyar mediación pedagógica sin convertirla en control automático.
-
-investigador:
-  las specs deben exigir protocolo, trazabilidad, consentimiento y límites de uso secundario.
-```
-
-## 9. Dictamen
-
-La transferencia simétrica queda ampliada: no solo revisa specs, también gobierna su nacimiento. Cada spec debe aparecer cuando su gate, riesgo, evidencia y experiencia humana la hacen necesaria. Ningún perfil debe monopolizar el rumbo.
-
-## 10. Transferencia PH-IT-AT del Mapa de Gates
-
-```text
-hito: Mapa de Gates SDD hacia v1.0.0
-estado: borrador completo para revisión documental
-```
-
-PH, IT y AT deben leer el mapa como una estructura de autorización, no como una lista técnica de tareas.
-
-```text
-PH:
-  verifica que cada gate preserve agencia humana, consentimiento situado,
-  protección de menores, no coerción y no evaluación automática.
-
-IT:
-  verifica que cada gate produzca evidencia, trazabilidad, validez,
-  control de riesgo y criterios de investigación-creación.
-
-AT:
-  verifica que cada gate preserve experiencia creativa, lenguaje habitable,
-  juego, afectividad y no rigidez expresiva.
-```
-
-## 11. Regla de equilibrio para el mapa
-
-```text
-un_gate_no_debe_aprobarse_si:
-  - PH detecta pérdida de agencia humana;
-  - IT detecta debilidad de evidencia o método;
-  - AT detecta rigidez, coerción o reducción de experiencia creativa;
-  - el criterio local-first queda debilitado;
-  - la deuda crítica queda escondida.
-```
-
-## 12. Dictamen actualizado
-
-La transferencia simétrica reconoce el Mapa de Gates como instrumento longitudinal. No decide por sí solo, pero organiza cuándo cada perfil debe intervenir antes de pasar de una versión a otra.
-
-
-## 7. Transferencia simétrica del hito Índice + Mapa de Gates
-
-```text
-fecha: 2026-07-04
-hito: aprobación conjunta del Índice Oficial y Mapa de Gates SDD hacia v1.0.0
-estado: aprobado para commit documental de PR #11
+spec: SPEC-OP-006 Consentimiento Informado y Situado
+dictamen: aprobada_para_specs_nucleo_con_deuda_controlada
+estado: aceptado por el usuario
 ```
 
 ### PH
 
-PH recibe una ruta longitudinal que protege agencia humana, consentimiento situado, privacidad, cuidado reforzado de estudiantes de escuela superior y bloqueo de evaluación automática como juez final.
+PH acepta SPEC-OP-006 como primera esclusa operativa porque protege agencia humana, no coerción, comprensión, cuidado reforzado de estudiantes de escuela superior y bloqueo de evaluación automática como juez final.
+
+PH deberá dar seguimiento a tres deudas:
+
+```text
+DEUDA-PH-001: guía PH para consentimiento, mediación, coerción y fatiga.
+DEUDA-PH-002: guía PH para consentimiento y agencia estudiantil en contextos escolares.
+DEUDA-PH-003: checklist PH para acciones sensibles.
+```
 
 ### IT
 
-IT recibe una estructura de trazabilidad para conectar specs, gates, evidencia, deuda, investigación-creación y criterios de validez por versión.
+IT acepta SPEC-OP-006 porque establece trazabilidad documental para acciones sensibles y dependencia explícita con SPEC-OP-007 Datos y Privacidad y SPEC-OP-008 Seguridad Local-First.
+
+IT deberá verificar que la aprobación no se interprete como autorización para almacenamiento, analítica, exportación, automatización o IA externa.
 
 ### AT
 
-AT recibe una cartografía que preserva experiencia creativa no rígida, lenguaje habitable, dimensión afectiva y libertad expresiva antes de cualquier arquitectura o prototipo.
+AT acepta SPEC-OP-006 porque evita que el consentimiento se convierta en jaula expresiva. La spec conserva exploración creativa inicial, controla fatiga de consentimiento y exige lenguaje breve, situado y habitable.
 
-## 8. Dictamen PH-IT-AT
+AT deberá vigilar que futuras specs no transformen la experiencia creativa en formulario rígido.
+
+## 7. Regla triangular PH-IT-AT para próximas specs
 
 ```text
-[✓] El índice define la estructura.
-[✓] El mapa define la navegación.
-[✓] El tablero maestro define las relaciones.
-[✓] Ningún documento autoriza implementación.
-[✓] La simetría PH-IT-AT queda reforzada para las próximas specs.
+PH pregunta:
+  ¿La persona entiende y autoriza esta acción situada?
+
+IT pregunta:
+  ¿Qué dato, evidencia, reflexión, rastro o visibilidad toca esta acción?
+
+AT pregunta:
+  ¿La forma de pedir, explicar o controlar la acción conserva experiencia creativa no rígida?
 ```
+
+## 8. Dictamen actualizado
+
+SPEC-OP-006 queda aprobada para Specs Núcleo con deuda controlada. La transferencia simétrica queda reforzada: toda próxima spec debe dialogar con consentimiento, datos/privacidad y seguridad local-first antes de aspirar a aprobación.

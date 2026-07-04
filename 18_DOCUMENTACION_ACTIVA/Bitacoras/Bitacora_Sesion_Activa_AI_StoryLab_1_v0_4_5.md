@@ -32,7 +32,7 @@ rama_base: main
 rama_propuesta: v0.4.5-specs-nucleo-pr11
 intento_crear_rama_por_conector: fallido
 motivo_reportado_por_GitHub: Resource not accessible by integration
-acción_sustituta_segura: preparar paquete PR11 con rutas canónicas y comandos manuales
+acción_sustituta_segura: preparar paquetes con rutas canónicas y comandos manuales
 ```
 
 ## 4. Secuencia de trabajo aprobada
@@ -46,7 +46,7 @@ acción_sustituta_segura: preparar paquete PR11 con rutas canónicas y comandos 
 6. Revisar SPEC-OP-008 Seguridad Local-First.
 7. Aprobar o ajustar documentos uno a uno.
 8. Actualizar deuda, changelog, transferencia simétrica y Bitácora del Capitán.
-9. Abrir PR #11 como draft documental.
+9. Mantener PR #11 como draft documental.
 ```
 
 ## 5. Material de continuidad incorporado
@@ -64,88 +64,96 @@ estado: aceptado por el usuario para documentación en PR #11
 
 Se establece que AI StoryLab 1 no intentará definir todas las specs requeridas para v1.0.0 dentro de v0.4.5. En su lugar, v0.4.5 documenta el sistema de decisión para que cada spec futura nazca cuando un gate, una dependencia, un riesgo, una evidencia o una necesidad humana la requiera.
 
-La sesión reconoce que el Índice Oficial de Gates SDD hacia v1.0.0 es suficiente como estructura de navegación porque estabiliza los criterios de decisión sin forzar contenido prematuro.
-
-## 7. Decisiones incorporadas al hito
-
-```text
-[✓] Las specs se crearán evolutivamente por necesidad de gate.
-[✓] El índice de gates organiza la ruta hacia v1.0.0.
-[✓] El mapa de gates desarrollará el índice sin alterar sus reglas rectoras.
-[✓] La prioridad se ordena como A+B+C+D:
-    A. protección, consentimiento, privacidad y seguridad;
-    B. experiencia creativa local-first;
-    C. evidencia, trazabilidad e investigación-creación;
-    D. semillas arquitectónicas y transición conceptual.
-[✓] Una spec futura podrá crearse, refinarse, aplazarse o convertirse en deuda según evidencia, riesgo y dependencia.
-```
-
-## 8. Deuda derivada del hito
-
-```text
-[ ] Crear Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md.
-[ ] Crear matriz maestra de dependencias specs-gates-versiones.
-[ ] Registrar criterios para pasar una spec futura de deuda a borrador.
-[ ] Actualizar changelog PR #11 con el hito de planificación longitudinal.
-[ ] Registrar la entrada narrativa correspondiente en Bitácora del Capitán.
-```
-
-## 9. Dictamen de bitácora
-
-La sesión PR #11 queda activa como sesión documental de revisión, planificación longitudinal y aprobación unitaria. No hay autorización para implementar. El timón está en modo cartografía fina: cada spec aparece cuando el gate la llama por su nombre.
-
-## 10. Hito de mapa longitudinal : Mapa de Gates SDD hacia v1.0.0
-
-```text
-fecha: 2026-07-04
-hito: borrador completo del Mapa de Gates SDD hacia v1.0.0
-documento_principal: Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md
-documento_fuente: Indice_Oficial_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md
-estado: preparado para próximo commit de PR #11
-```
-
-Se acuerda trabajar con el Índice Oficial de Gates aprobado como esqueleto estable para crear el borrador completo del mapa. El mapa no altera el índice; lo desarrolla como ruta longitudinal de autorización, evidencia, deuda y revisión humana hacia v1.0.0.
-
-## 11. Documentos relativos del hito
-
-```text
-[+] Mapa de Gates SDD hacia v1.0.0.
-[+] Tablero Maestro de Dependencias Specs-Gates-Versiones.
-[+] Decisión del Hito Mapa de Gates.
-[+] Tabla de Ubicación Canónica del Hito.
-[+] Registro de Deuda del Hito.
-[+] Actualización de Bitácora del Capitán.
-[+] Prompt de Continuidad Post-Mapa.
-[~] Bitácora de Sesión Activa.
-[~] Transferencia Simétrica Activa.
-[~] Changelog PR #11.
-```
-
-## 12. Dictamen actualizado
-
-La sesión PR #11 queda orientada a cerrar v0.4.5 con una brújula operativa completa: índice, mapa, modelo evolutivo de specs, specs núcleo y gates. No se autoriza implementación. El mapa define navegación; los gates futuros abrirán o cerrarán compuertas.
-
-
-## 13. Aprobación del Índice y Mapa de Gates como unidad canónica
+## 7. Hito de mapa longitudinal : Índice y Mapa de Gates SDD hacia v1.0.0
 
 ```text
 fecha: 2026-07-04
 hito: aprobación conjunta del Índice Oficial y Mapa de Gates SDD hacia v1.0.0
-estado: aprobado por el usuario para próximo commit de PR #11
-commit_previsto: docs: aprobar índice y mapa de gates SDD hacia v1.0.0
+estado: aprobado por el usuario para PR #11
 ```
 
 Se aprueba el Mapa de Gates SDD hacia v1.0.0 y se decide incluir el Índice Oficial de Gates en el mismo commit. El índice conserva la estructura estable de gates; el mapa desarrolla esa estructura como ruta longitudinal de autorización, evidencia, deuda y revisión humana.
 
-## 14. Dictamen de aprobación del hito
+## 8. Reinicio metodológico de revisión de specs operativas
 
 ```text
-[✓] Índice Oficial de Gates incluido.
-[✓] Mapa de Gates aprobado.
-[✓] Tablero Maestro de Dependencias incluido.
-[✓] Decisión de aprobación documental añadida.
-[✓] No se autoriza implementación funcional.
-[✓] La revisión unitaria de Specs Núcleo puede continuar con horizonte longitudinal estable.
+fecha: 2026-07-04
+hito: reinicio de fase de aprobación unitaria de specs
+estado: aceptado por el usuario
 ```
 
-La sesión PR #11 alcanza un hito mayor: AI StoryLab 1 ya no solo conoce sus primeras specs núcleo; conoce también la secuencia de compuertas que debe respetar para llegar a v1.0.0.
+Se establece que las specs operativas principales se trabajarán una por una, paso a paso, sin aprobarlas en bloque y sin crear bitácoras separadas por spec. Los avances se documentarán en esta bitácora activa, en la transferencia simétrica activa, en el changelog y en el registro de deuda de sesión cuando aplique.
+
+## 9. Revisión paso a paso de SPEC-OP-006
+
+```text
+spec: SPEC-OP-006 Consentimiento Informado y Situado
+metodo: revisión unitaria paso a paso
+estado_inicial: borrador_nucleo_condicionado
+```
+
+### Paso 2 : propósito, alcance y definiciones
+
+```text
+[✓] Mantener propósito actual.
+[+] Añadir frase de no autorización técnica.
+[+] Añadir sección de alcance.
+[+] Añadir definiciones operativas mínimas.
+```
+
+### Paso 3 : capas de consentimiento
+
+```text
+[✓] Regla de transición entre capas.
+[✓] Regla contra fatiga de consentimiento.
+[✓] Retiro entendido por capa.
+[✓] Dependencia explícita con SPEC-OP-007 Datos y Privacidad.
+[✓] Deuda de sesión sobre transición entre capas.
+[✓] Deuda PH sobre consentimiento, mediación, coerción y fatiga.
+```
+
+### Paso 4 : estudiantes de escuela superior
+
+```text
+[✓] Regla de lenguaje comprensible por edad y contexto.
+[✓] Mediación docente sin sustitución automática.
+[✓] Protección contra presión académica o escolar.
+[✓] Distinción entre entrega pedagógica, evidencia y uso adicional.
+```
+
+### Paso 5 : relación con SPEC-OP-007 y SPEC-OP-008
+
+```text
+[✓] SPEC-OP-006 debe remitir a SPEC-OP-007 para clasificación de datos.
+[✓] SPEC-OP-006 debe remitir a SPEC-OP-008 para seguridad local-first.
+[✓] Se acepta la regla triangular de Specs Núcleo:
+    consentimiento + datos/privacidad + seguridad local-first.
+```
+
+## 10. Dictamen final de SPEC-OP-006
+
+```text
+fecha: 2026-07-04
+spec: SPEC-OP-006 Consentimiento Informado y Situado
+dictamen: aprobada_para_specs_nucleo_con_deuda_controlada
+estado: aceptado por el usuario
+```
+
+Se aprueba SPEC-OP-006 como primera esclusa operativa de Specs Núcleo v0.4.5, con deuda controlada. Esta aprobación habilita continuidad documental hacia SPEC-OP-007 Datos y Privacidad y SPEC-OP-008 Seguridad Local-First, pero no autoriza implementación funcional.
+
+## 11. Deuda de sesión registrada desde SPEC-OP-006
+
+```text
+DEUDA-SESION-001: actualizar glosario general SDD con términos de consentimiento.
+DEUDA-SESION-002: identificar documentos necesarios para la base de conocimiento SDD del PH.
+DEUDA-SESION-003: desarrollar criterios de transición entre capas de consentimiento.
+DEUDA-SESION-004: consolidar criterios de consentimiento para estudiantes de escuela superior.
+DEUDA-SESION-005: crear regla triangular común para Specs Núcleo.
+DEUDA-PH-001: guía PH para consentimiento, mediación, coerción y fatiga.
+DEUDA-PH-002: guía PH para consentimiento y agencia estudiantil en contextos escolares.
+DEUDA-PH-003: checklist PH para acciones sensibles.
+```
+
+## 12. Dictamen actualizado de sesión
+
+La sesión PR #11 queda activa como sesión documental de revisión, planificación longitudinal y aprobación unitaria. No hay autorización para implementar. SPEC-OP-006 queda aprobada como primera compuerta; la próxima revisión unitaria corresponde a SPEC-OP-007 Datos y Privacidad.
