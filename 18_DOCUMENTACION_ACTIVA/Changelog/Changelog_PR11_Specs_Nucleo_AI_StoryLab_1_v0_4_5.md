@@ -112,3 +112,56 @@ SPEC-OP-007:
 [!] Uso investigativo no declarado.
 [!] Vigilancia pedagógica o evaluación automática.
 ```
+
+## Hito aprobado : SPEC-OP-008 Seguridad Local-First
+
+```text
+[~] Spec_Operativa_Seguridad_Local_First_AI_StoryLab_1_v0_4_5.md actualizada.
+[+] Decision_Aprobacion_SPEC_OP_008_Seguridad_Local_First_AI_StoryLab_1_v0_4_5.md.
+[~] Registro_Deuda_Sesion_AI_StoryLab_1_v0_4_5.md actualizado.
+[~] Bitacora_Sesion_Activa_AI_StoryLab_1_v0_4_5.md actualizada.
+[~] Bitacora_Transferencia_Simetrica_Activa_AI_StoryLab_1_v0_4_5.md actualizada.
+```
+
+## Cambios de estado SPEC-OP-008
+
+```text
+SPEC-OP-008:
+  antes: borrador_nucleo_condicionado
+  ahora: aprobada_para_specs_nucleo_con_deuda_controlada
+```
+
+## Deuda añadida desde SPEC-OP-008
+
+```text
+[+] DEUDA-SESION-012: actualizar glosario general SDD con términos de seguridad local-first.
+[+] DEUDA-SESION-013: identificar documentos necesarios para la base de conocimientos SDD sobre seguridad local-first.
+[+] DEUDA-SESION-014: desarrollar criterios de local-first verificable para specs futuras.
+[+] DEUDA-SESION-015: desarrollar matriz de zonas de seguridad conceptual.
+[+] DEUDA-SESION-016: desarrollar threat model detallado de seguridad local-first.
+[+] DEUDA-SESION-017: desarrollar criterios de seguridad habitable y no rígida.
+[+] DEUDA-SESION-018: consolidar regla triangular de protección núcleo.
+[+] DEUDA-SESION-019: crear matriz común de acciones sensibles para specs futuras.
+[+] DEUDA-PH-007: guía PH para confianza situada en experiencias local-first.
+[+] DEUDA-PH-008: guía PH para revisar seguridad en contextos escolares o compartidos.
+[+] DEUDA-PH-009: guía PH para amenazas de confianza, coerción y exposición en local-first.
+[+] DEUDA-PH-010: guía PH para revisar seguridad sin coerción.
+[+] DEUDA-SDD-IT-005: criterios IT para distinguir local, privado, compartido, exportable y externo.
+[+] DEUDA-SDD-IT-006: matriz IT de zonas local-first, visibilidad, pérdida y recuperación.
+[+] DEUDA-SDD-IT-007: plantilla IT para threat model conceptual.
+[+] DEUDA-SDD-IT-008: criterios IT para controles de seguridad proporcionales al riesgo.
+[+] DEUDA-AT-003: criterios AT para creación local sin fricción innecesaria.
+[+] DEUDA-AT-004: criterios AT para seguridad por zonas sin interrumpir el flujo creativo.
+[+] DEUDA-AT-005: guía AT para mitigaciones de seguridad habitables.
+[+] DEUDA-AT-006: guía AT para seguridad habitable en procesos creativos.
+```
+
+## Pendiente actualizado tras SPEC-OP-008
+
+```text
+[✓] Aprobar SPEC-OP-006 Consentimiento Informado y Situado con deuda controlada.
+[✓] Aprobar SPEC-OP-007 Datos y Privacidad con deuda controlada.
+[✓] Aprobar SPEC-OP-008 Seguridad Local-First con deuda controlada.
+[ ] Aplicar Gate de aprobación de Specs Núcleo.
+[ ] Sincronizar narrativa del cuerpo de PR #11 al cierre de sesión.
+```

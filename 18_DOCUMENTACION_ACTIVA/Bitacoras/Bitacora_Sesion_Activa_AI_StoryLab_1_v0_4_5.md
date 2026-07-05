@@ -254,3 +254,111 @@ DEUDA-AT-002: criterios AT para evitar que privacidad y seguridad rigidicen la c
 ## 15. Dictamen actualizado de sesión
 
 La sesión PR #11 queda activa como sesión documental de revisión, planificación longitudinal y aprobación unitaria. No hay autorización para implementar. SPEC-OP-006 y SPEC-OP-007 quedan aprobadas como primera y segunda compuerta de Specs Núcleo v0.4.5, ambas con deuda controlada. La próxima revisión unitaria corresponde a SPEC-OP-008 Seguridad Local-First.
+
+## 16. Revisión paso a paso de SPEC-OP-008
+
+```text
+fecha: 2026-07-04
+spec: SPEC-OP-008 Seguridad Local-First
+metodo: revisión unitaria paso a paso
+estado_inicial: borrador_nucleo_condicionado
+estado_final_recomendado: aprobada_para_specs_nucleo_con_deuda_controlada
+```
+
+### Paso 2 : propósito, alcance y definiciones
+
+```text
+[✓] Mantener propósito actual.
+[✓] Añadir alcance explícito.
+[✓] Añadir definiciones operativas mínimas.
+[✓] Declarar dependencia con SPEC-OP-006 y SPEC-OP-007.
+```
+
+### Paso 3 : definición operativa de local-first
+
+```text
+[✓] Local-first como criterio conceptual, no arquitectura técnica.
+[✓] No equivalencia entre local-first y privacidad.
+[✓] Control situado en dispositivos personales, escolares o compartidos.
+[✓] Experiencia creativa básica sin cuenta obligatoria.
+```
+
+### Paso 4 : zonas de seguridad conceptual
+
+```text
+[✓] Regla de transición entre zonas.
+[✓] Condición transversal de dispositivo compartido o contexto administrado.
+[✓] Regla de pérdida local.
+[✓] Visibilidad por zona.
+[✓] Borrado, recuperación y retención conceptual.
+```
+
+### Paso 5 : mini threat model conceptual
+
+```text
+[✓] Threat model conceptual, no técnico.
+[✓] Estructura mínima por amenaza futura.
+[✓] Regla de escalamiento de amenaza.
+[✓] Lectura PH-IT-AT de amenazas conceptuales.
+[✓] Mitigación documental distinguida de solución técnica.
+```
+
+### Paso 6 : seguridad sin rigidez creativa
+
+```text
+[✓] Seguridad proporcional al riesgo.
+[✓] Avisos habitables.
+[✓] Controles visibles sin vigilancia permanente.
+[✓] Pausa y cancelación como regla.
+[✓] No castigo a la exploración creativa.
+```
+
+### Paso 7 : relación triangular con consentimiento y datos
+
+```text
+[✓] Seguridad no sustituye consentimiento.
+[✓] Seguridad local-first no sustituye clasificación de datos ni privacidad por defecto.
+[✓] Regla triangular de protección núcleo.
+[✓] Regla contra sustituciones falsas.
+[✓] Matriz mínima de revisión para acciones sensibles.
+```
+
+## 17. Dictamen final de SPEC-OP-008
+
+```text
+fecha: 2026-07-04
+spec: SPEC-OP-008 Seguridad Local-First
+dictamen: aprobada_para_specs_nucleo_con_deuda_controlada
+estado: aceptado por el usuario
+```
+
+Se aprueba SPEC-OP-008 como tercera esclusa operativa de Specs Núcleo v0.4.5, con deuda controlada. Esta aprobación completa la tríada inicial de protección: consentimiento, datos/privacidad y seguridad local-first. No autoriza implementación funcional.
+
+## 18. Deuda de sesión registrada desde SPEC-OP-008
+
+```text
+DEUDA-SESION-012: actualizar glosario general SDD con términos de seguridad local-first.
+DEUDA-SESION-013: identificar documentos necesarios para la base de conocimientos SDD sobre seguridad local-first.
+DEUDA-SESION-014: desarrollar criterios de local-first verificable para specs futuras.
+DEUDA-SESION-015: desarrollar matriz de zonas de seguridad conceptual.
+DEUDA-SESION-016: desarrollar threat model detallado de seguridad local-first.
+DEUDA-SESION-017: desarrollar criterios de seguridad habitable y no rígida.
+DEUDA-SESION-018: consolidar regla triangular de protección núcleo.
+DEUDA-SESION-019: crear matriz común de acciones sensibles para specs futuras.
+DEUDA-PH-007: guía PH para confianza situada en experiencias local-first.
+DEUDA-PH-008: guía PH para revisar seguridad en contextos escolares o compartidos.
+DEUDA-PH-009: guía PH para amenazas de confianza, coerción y exposición en local-first.
+DEUDA-PH-010: guía PH para revisar seguridad sin coerción.
+DEUDA-SDD-IT-005: criterios IT para distinguir local, privado, compartido, exportable y externo.
+DEUDA-SDD-IT-006: matriz IT de zonas local-first, visibilidad, pérdida y recuperación.
+DEUDA-SDD-IT-007: plantilla IT para threat model conceptual.
+DEUDA-SDD-IT-008: criterios IT para controles de seguridad proporcionales al riesgo.
+DEUDA-AT-003: criterios AT para creación local sin fricción innecesaria.
+DEUDA-AT-004: criterios AT para seguridad por zonas sin interrumpir el flujo creativo.
+DEUDA-AT-005: guía AT para mitigaciones de seguridad habitables.
+DEUDA-AT-006: guía AT para seguridad habitable en procesos creativos.
+```
+
+## 19. Dictamen actualizado de sesión
+
+La sesión PR #11 mantiene su carácter documental y no funcional. SPEC-OP-006, SPEC-OP-007 y SPEC-OP-008 quedan aprobadas como tríada de Specs Núcleo con deuda controlada. La próxima acción documental corresponde a verificar el Gate de aprobación de Specs Núcleo, revisar deuda crítica y sincronizar la narrativa del PR #11 al cierre de sesión.

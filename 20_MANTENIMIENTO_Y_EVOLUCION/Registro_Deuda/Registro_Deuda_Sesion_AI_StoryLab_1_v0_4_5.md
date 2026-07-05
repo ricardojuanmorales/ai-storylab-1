@@ -274,3 +274,243 @@ estado: pendiente
 
 Esta deuda no bloquea la aprobación documental de SPEC-OP-006 ni SPEC-OP-007. Sí bloquea cualquier intento futuro de convertir consentimiento, datos, privacidad o seguridad local-first en implementación sin consolidación documental posterior.
 
+## 6. Deuda derivada de SPEC-OP-008
+
+### DEUDA-SESION-012 : Glosario general SDD sobre seguridad local-first
+
+```text
+tema: actualizar glosario general SDD con términos de seguridad local-first
+origen: revisión paso a paso de SPEC-OP-008
+prioridad: alta
+estado: pendiente
+ruta_sugerida:
+  05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Glosarios/
+```
+
+Términos candidatos:
+
+```text
+- local-first
+- seguridad local-first
+- zona de seguridad conceptual
+- control humano
+- dispositivo compartido
+- exportación accidental
+- amenaza conceptual
+- seguridad sin rigidez creativa
+```
+
+### DEUDA-SESION-013 : Base de conocimiento SDD sobre seguridad local-first
+
+```text
+tema: identificar documentos necesarios para la base de conocimientos SDD sobre seguridad local-first
+origen: revisión de local-first, amenaza conceptual y seguridad habitable
+prioridad: alta
+estado: pendiente de inventario
+```
+
+Documentos candidatos:
+
+```text
+- Guía PH para confianza situada en experiencias local-first.
+- Guía IT para threat model conceptual.
+- Guía AT para seguridad habitable en procesos creativos.
+- Matriz de zonas de seguridad local-first.
+- Matriz de acciones sensibles consentimiento-datos-seguridad.
+- Checklist de dispositivos compartidos y contextos administrados.
+- Criterios de exportación accidental y visibilidad por zona.
+```
+
+### DEUDA-SESION-014 : Local-first verificable
+
+```text
+tema: desarrollar criterios de local-first verificable para specs futuras
+incluye:
+  - local-first como criterio conceptual
+  - diferencia entre local y privado
+  - control situado en dispositivos personales, escolares o compartidos
+  - experiencia creativa básica sin cuenta obligatoria
+  - límites antes de arquitectura técnica
+prioridad: alta
+estado: pendiente
+```
+
+### DEUDA-SESION-015 : Matriz de zonas de seguridad conceptual
+
+```text
+tema: desarrollar matriz de zonas de seguridad conceptual
+incluye:
+  - transición entre zonas
+  - dispositivo compartido o contexto administrado
+  - pérdida local
+  - visibilidad por zona
+  - borrado conceptual
+  - recuperación conceptual
+  - retención conceptual
+  - relación con consentimiento y datos
+prioridad: alta
+estado: pendiente
+```
+
+### DEUDA-SESION-016 : Threat model detallado de seguridad local-first
+
+```text
+tema: desarrollar threat model detallado de seguridad local-first
+incluye:
+  - amenazas por zona de seguridad
+  - perfiles afectados
+  - clases de datos y evidencias afectadas
+  - consentimiento requerido
+  - mitigaciones documentales
+  - criterios PH-IT-AT
+  - escalamiento de amenazas
+  - deuda técnica futura
+prioridad: alta
+estado: pendiente
+```
+
+### DEUDA-SESION-017 : Seguridad habitable y no rígida
+
+```text
+tema: desarrollar criterios de seguridad habitable y no rígida
+incluye:
+  - seguridad proporcional al riesgo
+  - avisos breves, situados y no intimidantes
+  - controles visibles sin vigilancia permanente
+  - pausa y cancelación
+  - no castigo a la exploración creativa
+  - protección de borradores, errores y versiones intermedias
+prioridad: alta
+estado: pendiente
+```
+
+### DEUDA-SESION-018 : Regla triangular de protección núcleo
+
+```text
+tema: consolidar regla triangular de protección núcleo
+relación:
+  - SPEC-OP-006 Consentimiento Informado y Situado
+  - SPEC-OP-007 Datos y Privacidad
+  - SPEC-OP-008 Seguridad Local-First
+incluye:
+  - consentimiento no sustituye privacidad
+  - privacidad no sustituye seguridad
+  - seguridad no sustituye consentimiento
+  - local-first no sustituye threat model
+  - minimización no sustituye control humano
+  - control humano no sustituye agencia
+prioridad: alta
+estado: pendiente
+```
+
+### DEUDA-SESION-019 : Matriz común de acciones sensibles
+
+```text
+tema: crear matriz común de acciones sensibles para specs futuras
+incluye:
+  - acción sensible
+  - consentimiento
+  - clasificación de datos
+  - privacidad por defecto
+  - zona de seguridad
+  - amenaza conceptual
+  - control humano
+  - deuda
+  - gate aplicable
+prioridad: alta
+estado: pendiente
+```
+
+## 7. Deuda PH derivada de SPEC-OP-008
+
+### DEUDA-PH-007 : Confianza situada en experiencias local-first
+
+```text
+tema: guía PH para confianza situada en experiencias local-first
+estado: pendiente
+```
+
+### DEUDA-PH-008 : Seguridad en contextos escolares o compartidos
+
+```text
+tema: guía PH para revisar seguridad en contextos escolares o compartidos
+estado: pendiente
+```
+
+### DEUDA-PH-009 : Amenazas de confianza, coerción y exposición
+
+```text
+tema: guía PH para amenazas de confianza, coerción y exposición en local-first
+estado: pendiente
+```
+
+### DEUDA-PH-010 : Seguridad sin coerción
+
+```text
+tema: guía PH para revisar seguridad sin coerción
+estado: pendiente
+```
+
+## 8. Deuda IT derivada de SPEC-OP-008
+
+### DEUDA-SDD-IT-005 : Local, privado, compartido, exportable y externo
+
+```text
+tema: criterios IT para distinguir local, privado, compartido, exportable y externo
+estado: pendiente
+```
+
+### DEUDA-SDD-IT-006 : Matriz de zonas local-first
+
+```text
+tema: matriz IT de zonas local-first, visibilidad, pérdida y recuperación
+estado: pendiente
+```
+
+### DEUDA-SDD-IT-007 : Plantilla de threat model conceptual
+
+```text
+tema: plantilla IT para threat model conceptual
+estado: pendiente
+```
+
+### DEUDA-SDD-IT-008 : Controles proporcionales al riesgo
+
+```text
+tema: criterios IT para controles de seguridad proporcionales al riesgo
+estado: pendiente
+```
+
+## 9. Deuda AT derivada de SPEC-OP-008
+
+### DEUDA-AT-003 : Creación local sin fricción innecesaria
+
+```text
+tema: criterios AT para creación local sin fricción innecesaria
+estado: pendiente
+```
+
+### DEUDA-AT-004 : Seguridad por zonas sin interrumpir flujo creativo
+
+```text
+tema: criterios AT para seguridad por zonas sin interrumpir el flujo creativo
+estado: pendiente
+```
+
+### DEUDA-AT-005 : Mitigaciones de seguridad habitables
+
+```text
+tema: guía AT para mitigaciones de seguridad habitables
+estado: pendiente
+```
+
+### DEUDA-AT-006 : Seguridad habitable en procesos creativos
+
+```text
+tema: guía AT para seguridad habitable en procesos creativos
+estado: pendiente
+```
+
+## 10. Dictamen actualizado de deuda
+
+La deuda registrada desde SPEC-OP-006, SPEC-OP-007 y SPEC-OP-008 no bloquea la aprobación documental de Specs Núcleo. Sí bloquea cualquier intento futuro de convertir consentimiento, datos, privacidad o seguridad local-first en implementación sin consolidación documental posterior, revisión PH-IT-AT y gate constitucional.

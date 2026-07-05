@@ -124,3 +124,76 @@ AT pregunta:
 ## 10. Dictamen actualizado
 
 SPEC-OP-006 y SPEC-OP-007 quedan aprobadas para Specs Núcleo con deuda controlada. La transferencia simétrica queda reforzada: toda próxima spec debe dialogar con consentimiento, datos/privacidad y seguridad local-first antes de aspirar a aprobación. La próxima revisión corresponde a SPEC-OP-008 Seguridad Local-First.
+
+## 12. Transferencia simétrica de SPEC-OP-008
+
+```text
+fecha: 2026-07-04
+spec: SPEC-OP-008 Seguridad Local-First
+dictamen: aprobada_para_specs_nucleo_con_deuda_controlada
+estado: aceptado por el usuario
+```
+
+### PH
+
+PH acepta SPEC-OP-008 porque protege confianza situada, agencia humana, no coerción, comprensión de riesgos, protección de estudiantes y cuidado frente a contextos escolares, dispositivos compartidos o administrados.
+
+PH deberá dar seguimiento a cuatro deudas:
+
+```text
+DEUDA-PH-007: guía PH para confianza situada en experiencias local-first.
+DEUDA-PH-008: guía PH para revisar seguridad en contextos escolares o compartidos.
+DEUDA-PH-009: guía PH para amenazas de confianza, coerción y exposición en local-first.
+DEUDA-PH-010: guía PH para revisar seguridad sin coerción.
+```
+
+### IT
+
+IT acepta SPEC-OP-008 porque establece zonas de seguridad conceptual, threat model documental, escalamiento de amenazas, controles humanos, relación con datos y límites antes de arquitectura técnica.
+
+IT deberá verificar que la aprobación no se interprete como autorización para almacenamiento, cifrado, permisos técnicos, sincronización, respaldo, nube, analítica, exportación real o IA externa.
+
+IT deberá dar seguimiento a cuatro deudas:
+
+```text
+DEUDA-SDD-IT-005: criterios IT para distinguir local, privado, compartido, exportable y externo.
+DEUDA-SDD-IT-006: matriz IT de zonas local-first, visibilidad, pérdida y recuperación.
+DEUDA-SDD-IT-007: plantilla IT para threat model conceptual.
+DEUDA-SDD-IT-008: criterios IT para controles de seguridad proporcionales al riesgo.
+```
+
+### AT
+
+AT acepta SPEC-OP-008 porque protege la experiencia creativa mediante seguridad proporcional, avisos habitables, controles sin vigilancia permanente, pausa, cancelación y no castigo a la exploración creativa.
+
+AT deberá dar seguimiento a cuatro deudas:
+
+```text
+DEUDA-AT-003: criterios AT para creación local sin fricción innecesaria.
+DEUDA-AT-004: criterios AT para seguridad por zonas sin interrumpir el flujo creativo.
+DEUDA-AT-005: guía AT para mitigaciones de seguridad habitables.
+DEUDA-AT-006: guía AT para seguridad habitable en procesos creativos.
+```
+
+## 13. Cierre de tríada PH-IT-AT para Specs Núcleo
+
+```text
+SPEC-OP-006:
+  PH protege consentimiento, agencia y no coerción.
+  IT verifica trazabilidad de acciones sensibles.
+  AT evita fatiga de consentimiento y rigidez expresiva.
+
+SPEC-OP-007:
+  PH protege privacidad estudiantil y no vigilancia pedagógica.
+  IT verifica clasificación, minimización y límites de propósito.
+  AT protege intimidad creativa, borradores y versiones intermedias.
+
+SPEC-OP-008:
+  PH protege confianza situada y seguridad sin coerción.
+  IT verifica zonas, amenazas y controles antes de arquitectura técnica.
+  AT protege seguridad habitable y continuidad creativa.
+```
+
+## 14. Dictamen actualizado
+
+SPEC-OP-006, SPEC-OP-007 y SPEC-OP-008 quedan aprobadas para Specs Núcleo con deuda controlada. La transferencia simétrica reconoce que toda spec futura debe dialogar con consentimiento, datos/privacidad y seguridad local-first antes de aspirar a aprobación.
