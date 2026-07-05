@@ -198,3 +198,37 @@ GATE-SDD-001: gate_aprobado_con_deuda_controlada
 [ ] Pagar o reclasificar deuda antes del cierre de sesión.
 [ ] Sincronizar narrativa del cuerpo de PR #11 al cierre de sesión.
 ```
+
+
+## Hito aprobado : Pago amplio controlado de deuda posterior al Gate
+
+```text
+[+] Glosario_Nucleo_Consentimiento_Datos_Seguridad_AI_StoryLab_1_v0_4_5.md
+[+] Matriz_Acciones_Sensibles_Consentimiento_Datos_Seguridad_AI_StoryLab_1_v0_4_5.md
+[+] Guia_Revision_PH_IT_AT_Triangular_AI_StoryLab_1_v0_4_5.md
+[~] Registro_Deuda_Sesion_AI_StoryLab_1_v0_4_5.md actualizado.
+[~] Bitacora_Sesion_Activa_AI_StoryLab_1_v0_4_5.md actualizada.
+[~] Bitacora_Transferencia_Simetrica_Activa_AI_StoryLab_1_v0_4_5.md actualizada.
+```
+
+### Resultado
+
+```text
+[✓] Glosario núcleo pagado.
+[✓] Matriz común núcleo de acciones sensibles pagada.
+[✓] Guía PH-IT-AT triangular breve pagada.
+[✓] Deuda restante heredada con ruta, función, responsable conceptual y versión destino.
+[!] Implementación funcional sigue bloqueada.
+```
+
+### Pendiente actualizado tras pago de deuda
+
+```text
+[✓] Aprobar SPEC-OP-006 Consentimiento Informado y Situado con deuda controlada.
+[✓] Aprobar SPEC-OP-007 Datos y Privacidad con deuda controlada.
+[✓] Aprobar SPEC-OP-008 Seguridad Local-First con deuda controlada.
+[✓] Aplicar Gate de aprobación de Specs Núcleo.
+[✓] Ejecutar pago amplio controlado de deuda.
+[ ] Sincronizar narrativa del cuerpo de PR #11 al cierre de sesión.
+[ ] Evaluar preparación para merge final.
+```

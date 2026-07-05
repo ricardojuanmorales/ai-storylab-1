@@ -223,3 +223,39 @@ AT acepta el Gate porque la tríada preserva experiencia creativa habitable, pri
 ## 16. Transferencia hacia pago de deuda
 
 La próxima acción no es cierre inmediato. La próxima acción es pagar o reclasificar deuda documental antes de sincronizar la narrativa final de PR #11.
+
+
+## 15. Transferencia simétrica del pago amplio de deuda
+
+```text
+fecha: 2026-07-04
+fase: post Gate de Specs Núcleo
+estado: pago amplio controlado aplicado
+```
+
+### PH
+
+PH recibe como deuda pagada o sustancialmente pagada el glosario núcleo, criterios de consentimiento, agencia estudiantil, no coerción, checklist de acciones sensibles y criterios mínimos de protección en contextos escolares.
+
+Deuda PH heredada no bloqueante: guías extensas por edad, escenarios ficticios y microcriterios para experiencias futuras.
+
+### IT
+
+IT recibe como deuda pagada o sustancialmente pagada la matriz de acciones sensibles, criterios de clasificación, minimización, distinción local/privado/compartido/exportable/externo y plantilla breve de amenaza conceptual.
+
+Deuda IT heredada no bloqueante: threat model detallado local-first y matrices específicas por spec futura.
+
+### AT
+
+AT recibe como deuda pagada o sustancialmente pagada criterios de privacidad del proceso creativo, seguridad sin rigidez, pausa, no vigilancia, no castigo al borrador y controles proporcionales al riesgo.
+
+Deuda AT heredada no bloqueante: guías extensas de experiencia habitable y microcopias para v0.4.7.
+
+### Dictamen conjunto
+
+```text
+PH_IT_AT:
+  resultado: pago_amplio_controlado_aceptable
+  condicion: no habilita implementación funcional
+  continuidad: preparar sincronización narrativa del PR y cierre de sesión
+```

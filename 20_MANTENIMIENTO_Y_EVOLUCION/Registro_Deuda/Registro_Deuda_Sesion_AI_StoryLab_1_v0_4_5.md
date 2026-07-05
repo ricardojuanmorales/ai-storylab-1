@@ -569,3 +569,205 @@ Se heredan como deuda no bloqueante:
 ```
 
 Esta reclasificación no autoriza implementación funcional. Solo permite cerrar documentalmente el Gate de Specs Núcleo y preparar el cierre de sesión.
+
+
+## 11. Pago amplio controlado de deuda posterior al Gate de Specs Núcleo
+
+```text
+fecha: 2026-07-04
+gate_previo: GATE-SDD-001-SPECS-NUCLEO-v0_4_5
+criterio_aprobado:
+  profundidad: pago amplio controlado
+  documentos: tres documentos canónicos breves
+  herencia: solo con ruta, función, responsable conceptual y versión destino
+```
+
+### 11.1 Documentos creados para pago de deuda
+
+```text
+[+] Glosario_Nucleo_Consentimiento_Datos_Seguridad_AI_StoryLab_1_v0_4_5.md
+[+] Matriz_Acciones_Sensibles_Consentimiento_Datos_Seguridad_AI_StoryLab_1_v0_4_5.md
+[+] Guia_Revision_PH_IT_AT_Triangular_AI_StoryLab_1_v0_4_5.md
+```
+
+### 11.2 Deuda pagada
+
+```text
+DEUDA-SESION-001:
+  resultado: pagada
+  evidencia: Glosario Núcleo, términos de consentimiento
+
+DEUDA-SESION-006:
+  resultado: pagada
+  evidencia: Glosario Núcleo, términos de datos y privacidad
+
+DEUDA-SESION-012:
+  resultado: pagada
+  evidencia: Glosario Núcleo, términos de seguridad local-first
+
+DEUDA-SESION-005:
+  resultado: pagada
+  evidencia: Gate de Specs Núcleo + Guía PH-IT-AT Triangular
+
+DEUDA-SESION-011:
+  resultado: pagada
+  evidencia: Matriz Cruzada existente + Matriz de Acciones Sensibles
+
+DEUDA-SESION-018:
+  resultado: pagada
+  evidencia: Gate de Specs Núcleo + Guía PH-IT-AT Triangular
+
+DEUDA-PH-003:
+  resultado: pagada_en_alcance_nucleo
+  evidencia: Matriz de Acciones Sensibles + Checklist PH
+
+DEUDA-SDD-IT-004:
+  resultado: pagada_en_alcance_nucleo
+  evidencia: Matriz de Acciones Sensibles
+```
+
+### 11.3 Deuda sustancialmente pagada con alcance núcleo
+
+```text
+DEUDA-SESION-002:
+  resultado: sustancialmente_pagada
+  evidencia: inventario mínimo PH-IT-AT en guía triangular
+  heredable: guías extensas PH por versión futura
+
+DEUDA-SESION-003:
+  resultado: sustancialmente_pagada
+  evidencia: regla triangular, matriz de acciones sensibles y checklist PH
+  heredable: microcriterios por interfaz futura
+
+DEUDA-SESION-004:
+  resultado: sustancialmente_pagada
+  evidencia: criterios mínimos por perfil de usuario
+  heredable: ejemplos por edad y contexto escolar
+
+DEUDA-SESION-007:
+  resultado: sustancialmente_pagada
+  evidencia: inventario IT en guía triangular
+  heredable: guías extensas de datos, privacidad y minimización
+
+DEUDA-SESION-008:
+  resultado: sustancialmente_pagada_en_alcance_nucleo
+  evidencia: matriz de acciones sensibles + checklist IT
+  heredable: matriz ampliada por spec futura
+
+DEUDA-SESION-009:
+  resultado: sustancialmente_pagada_como_criterio_minimo
+  evidencia: criterios por perfil y escalamiento de sensibilidad
+  heredable: escenarios escolares ficticios
+
+DEUDA-SESION-010:
+  resultado: sustancialmente_pagada
+  evidencia: checklist IT y criterios de minimización
+  heredable: plantillas de campos por spec futura
+
+DEUDA-SESION-013:
+  resultado: sustancialmente_pagada
+  evidencia: inventario de seguridad local-first en guía triangular
+  heredable: guías extensas de seguridad local-first
+
+DEUDA-SESION-014:
+  resultado: sustancialmente_pagada
+  evidencia: criterios local-first verificables
+  heredable: verificación por spec futura
+
+DEUDA-SESION-015:
+  resultado: sustancialmente_pagada_en_alcance_nucleo
+  evidencia: matriz de acciones sensibles y zonas de seguridad
+  heredable: matriz técnica conceptual ampliada en v0.4.6
+
+DEUDA-SESION-017:
+  resultado: sustancialmente_pagada
+  evidencia: checklist AT y seguridad habitable
+  heredable: microcopias y patrones de experiencia v0.4.7
+
+DEUDA-PH-001 a DEUDA-PH-010:
+  resultado: sustancialmente_pagadas_como_guia_nucleo_breve
+  evidencia: Guía PH-IT-AT Triangular
+  heredable: guías PH extensas
+
+DEUDA-SDD-IT-001 a DEUDA-SDD-IT-008:
+  resultado: sustancialmente_pagadas_como_criterios_nucleo_breves
+  evidencia: Guía PH-IT-AT Triangular + Matriz de Acciones Sensibles
+  heredable: plantillas IT extensas y threat model detallado
+
+DEUDA-AT-001 a DEUDA-AT-006:
+  resultado: sustancialmente_pagadas_como_guia_nucleo_breve
+  evidencia: Guía PH-IT-AT Triangular
+  heredable: guías AT extensas de experiencia habitable
+```
+
+### 11.4 Deuda parcialmente pagada y heredable
+
+```text
+DEUDA-SESION-019:
+  resultado: pagada_en_alcance_nucleo_y_heredable_para_ampliacion
+  funcion_documental: matriz común de acciones sensibles
+  ruta_sugerida: 00_CONTROL_MAESTRO/Spec_Driven_Development/Gobernanza/
+  responsable_conceptual: PH + IT + AT
+  version_destino: v0.4.6, v0.4.7 y v0.5.x según specs futuras
+  razon_no_bloqueante: la matriz núcleo ya existe; faltan ampliaciones por specs futuras
+  se_vuelve_bloqueante_si: una spec futura toca exportación, evaluación, investigación, portafolio o IA sin matriz específica
+```
+
+### 11.5 Deuda heredada no bloqueante con ruta, función y versión destino
+
+```text
+threat_model_detallado_local_first:
+  origen: DEUDA-SESION-016
+  funcion_documental: ampliar amenazas por zona, perfil y acción sensible
+  ruta_sugerida: 00_CONTROL_MAESTRO/Spec_Driven_Development/Specs_Operativas/
+  responsable_conceptual: IT con revisión PH y AT
+  version_destino: v0.4.6
+  razon_no_bloqueante: SPEC-OP-008 y el Gate contienen threat model conceptual mínimo
+  se_vuelve_bloqueante_si: se propone arquitectura conceptual, prototipo o persistencia sin threat model ampliado
+
+ejemplos_por_edad_y_contexto:
+  origen: deudas PH y deuda permitida por Gate
+  funcion_documental: traducir consentimiento y privacidad a lenguaje por perfil
+  ruta_sugerida: 05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Guias_Uso/
+  responsable_conceptual: PH con apoyo AT
+  version_destino: v0.4.7
+  razon_no_bloqueante: el Gate no habilita pruebas con personas ni interfaz funcional
+  se_vuelve_bloqueante_si: se redactan microcopias, pruebas o experiencias con estudiantes
+
+guías_extensas_PH_IT_AT:
+  origen: deudas PH, IT y AT sustancialmente pagadas como núcleo breve
+  funcion_documental: convertir criterios breves en guías extensas por rol
+  ruta_sugerida: 05_COMPETENCIAS_Y_PERFILES/Conocimiento_Comun/Guias_Uso/
+  responsable_conceptual: PH + IT + AT
+  version_destino: v0.4.6 y v0.4.7
+  razon_no_bloqueante: existe guía triangular breve suficiente para cierre v0.4.5
+  se_vuelve_bloqueante_si: una spec futura requiere revisión especializada no cubierta por la guía núcleo
+
+matrices_ampliadas_por_spec:
+  origen: DEUDA-SESION-019 y matrices futuras
+  funcion_documental: expandir acciones sensibles para evidencia, portafolio, exportación, evaluación, investigación e IA
+  ruta_sugerida: 00_CONTROL_MAESTRO/Spec_Driven_Development/Gobernanza/
+  responsable_conceptual: PH + IT + AT
+  version_destino: v0.4.6, v0.4.7, v0.5.x
+  razon_no_bloqueante: la matriz núcleo ya cubre acciones sensibles iniciales
+  se_vuelve_bloqueante_si: se abre una spec futura sin matriz específica de acciones sensibles
+```
+
+### 11.6 Dictamen
+
+```text
+resultado: pago_amplio_controlado_realizado
+estado_deuda_v0_4_5:
+  - núcleo triangular pagado;
+  - glosario núcleo pagado;
+  - matriz común núcleo pagada;
+  - guía PH-IT-AT núcleo pagada;
+  - deuda restante heredada con ruta, función, responsable conceptual y versión destino.
+
+no_autoriza:
+  - implementación funcional;
+  - código de aplicación;
+  - pruebas con personas;
+  - datos reales;
+  - backend, cloud, autenticación, analíticas o IA externa.
+```

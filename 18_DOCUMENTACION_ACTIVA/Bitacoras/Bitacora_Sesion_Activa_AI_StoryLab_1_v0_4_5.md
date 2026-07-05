@@ -394,3 +394,45 @@ La aprobación no autoriza implementación funcional, código, UI real, backend,
 [>] Priorizar DEUDA-SESION-005, DEUDA-SESION-011, DEUDA-SESION-018 y DEUDA-SESION-019.
 [>] Sincronizar cuerpo visible del PR #11 al cierre.
 ```
+
+
+## 20. Pago amplio controlado de deuda posterior al Gate de Specs Núcleo
+
+```text
+fecha: 2026-07-04
+criterio_usuario:
+  profundidad: pago amplio controlado
+  documentos: tres documentos canónicos breves
+  herencia: solo con ruta, función, responsable conceptual y versión destino
+estado: aplicado documentalmente
+```
+
+Se crean tres documentos canónicos breves para pagar deuda núcleo sin abrir implementación funcional:
+
+```text
+[+] Glosario_Nucleo_Consentimiento_Datos_Seguridad_AI_StoryLab_1_v0_4_5.md
+[+] Matriz_Acciones_Sensibles_Consentimiento_Datos_Seguridad_AI_StoryLab_1_v0_4_5.md
+[+] Guia_Revision_PH_IT_AT_Triangular_AI_StoryLab_1_v0_4_5.md
+```
+
+### Deuda pagada o sustancialmente pagada
+
+```text
+[✓] Glosario núcleo de consentimiento, datos y seguridad.
+[✓] Regla triangular común.
+[✓] Matriz común núcleo de acciones sensibles.
+[✓] Checklist PH mínimo para acciones sensibles.
+[✓] Criterios IT mínimos de clasificación, minimización y seguridad local-first.
+[✓] Criterios AT mínimos de privacidad y seguridad sin rigidez creativa.
+```
+
+### Deuda heredada no bloqueante
+
+```text
+[~] Threat model detallado local-first: v0.4.6.
+[~] Ejemplos por edad y contexto: v0.4.7.
+[~] Guías extensas PH, IT y AT: v0.4.6-v0.4.7.
+[~] Matrices ampliadas por spec futura: v0.4.6-v0.5.x.
+```
+
+La sesión queda más liviana de deuda estructural, pero sin autorizar implementación, pruebas, datos reales, IA externa, backend, cloud o arquitectura técnica.
