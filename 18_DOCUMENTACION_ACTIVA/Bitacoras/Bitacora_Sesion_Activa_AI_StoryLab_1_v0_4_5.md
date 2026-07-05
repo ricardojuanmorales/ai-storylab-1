@@ -362,3 +362,35 @@ DEUDA-AT-006: guía AT para seguridad habitable en procesos creativos.
 ## 19. Dictamen actualizado de sesión
 
 La sesión PR #11 mantiene su carácter documental y no funcional. SPEC-OP-006, SPEC-OP-007 y SPEC-OP-008 quedan aprobadas como tríada de Specs Núcleo con deuda controlada. La próxima acción documental corresponde a verificar el Gate de aprobación de Specs Núcleo, revisar deuda crítica y sincronizar la narrativa del PR #11 al cierre de sesión.
+
+
+## 20. Aprobación del Gate de Specs Núcleo
+
+```text
+fecha: 2026-07-04
+gate: GATE-SDD-001-SPECS-NUCLEO-v0_4_5
+documento: Gate_Aprobacion_Specs_Nucleo_Consentimiento_Datos_Seguridad_AI_StoryLab_1_v0_4_5.md
+dictamen: gate_aprobado_con_deuda_controlada
+estado: aceptado por el usuario
+```
+
+Se aprueba el Gate de Specs Núcleo como cierre documental de la tríada inicial:
+
+```text
+[✓] SPEC-OP-006 Consentimiento Informado y Situado.
+[✓] SPEC-OP-007 Datos y Privacidad.
+[✓] SPEC-OP-008 Seguridad Local-First.
+[✓] Matriz Cruzada Consentimiento/Datos/Seguridad.
+[✓] Dictamen PH-IT-AT.
+[✓] Deuda explícita por spec.
+```
+
+La aprobación no autoriza implementación funcional, código, UI real, backend, cloud, autenticación, analíticas, IA externa, datos reales, exportaciones reales, pruebas con personas ni arquitectura técnica.
+
+## 21. Próxima acción documental
+
+```text
+[>] Iniciar pago o reclasificación de deuda antes del cierre de sesión.
+[>] Priorizar DEUDA-SESION-005, DEUDA-SESION-011, DEUDA-SESION-018 y DEUDA-SESION-019.
+[>] Sincronizar cuerpo visible del PR #11 al cierre.
+```

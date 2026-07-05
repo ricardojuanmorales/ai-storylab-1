@@ -514,3 +514,58 @@ estado: pendiente
 ## 10. Dictamen actualizado de deuda
 
 La deuda registrada desde SPEC-OP-006, SPEC-OP-007 y SPEC-OP-008 no bloquea la aprobación documental de Specs Núcleo. Sí bloquea cualquier intento futuro de convertir consentimiento, datos, privacidad o seguridad local-first en implementación sin consolidación documental posterior, revisión PH-IT-AT y gate constitucional.
+
+
+## 7. Pago y reclasificación inicial tras Gate de Specs Núcleo
+
+```text
+fecha: 2026-07-04
+gate: GATE-SDD-001-SPECS-NUCLEO-v0_4_5
+estado_gate: gate_aprobado_con_deuda_controlada
+```
+
+### Deuda pagada o sustancialmente pagada
+
+```text
+DEUDA-SESION-005:
+  resultado: pagada_por_gate
+  evidencia:
+    - regla triangular común consolidada por SPEC-OP-006, SPEC-OP-007, SPEC-OP-008;
+    - Gate de Specs Núcleo aprobado;
+    - Matriz Cruzada creada.
+
+DEUDA-SESION-011:
+  resultado: pagada_por_matriz_cruzada
+  evidencia:
+    - Matriz_Cruce_Consentimiento_Datos_Seguridad_AI_StoryLab_1_v0_4_5.md.
+
+DEUDA-SESION-018:
+  resultado: pagada_por_gate
+  evidencia:
+    - Gate de Specs Núcleo consolida consentimiento + datos/privacidad + seguridad local-first;
+    - decisión formal del Gate aprobada.
+```
+
+### Deuda parcialmente pagada y heredable
+
+```text
+DEUDA-SESION-019:
+  resultado: parcialmente_pagada_y_heredable
+  evidencia:
+    - Matriz Cruzada cubre acciones sensibles núcleo;
+    - falta expansión para specs futuras de experiencia, evidencia, portafolio, exportación e IA.
+```
+
+### Deuda no bloqueante heredada
+
+```text
+Se heredan como deuda no bloqueante:
+  - glosarios específicos;
+  - guías PH, IT y AT;
+  - ejemplos por edad o contexto;
+  - escenarios ficticios complementarios;
+  - threat model detallado futuro;
+  - matrices ampliadas por perfil, zona o versión.
+```
+
+Esta reclasificación no autoriza implementación funcional. Solo permite cerrar documentalmente el Gate de Specs Núcleo y preparar el cierre de sesión.

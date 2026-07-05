@@ -197,3 +197,29 @@ SPEC-OP-008:
 ## 14. Dictamen actualizado
 
 SPEC-OP-006, SPEC-OP-007 y SPEC-OP-008 quedan aprobadas para Specs Núcleo con deuda controlada. La transferencia simétrica reconoce que toda spec futura debe dialogar con consentimiento, datos/privacidad y seguridad local-first antes de aspirar a aprobación.
+
+
+## 15. Transferencia simétrica del Gate de Specs Núcleo
+
+```text
+fecha: 2026-07-04
+gate: GATE-SDD-001-SPECS-NUCLEO-v0_4_5
+dictamen: gate_aprobado_con_deuda_controlada
+estado: aceptado por el usuario
+```
+
+### PH
+
+PH acepta el Gate porque la tríada preserva consentimiento situado, agencia humana, posibilidad de pausa y retiro, no coerción, protección de estudiantes y límites frente a presión escolar o institucional.
+
+### IT
+
+IT acepta el Gate porque la tríada preserva clasificación conceptual de datos, minimización, privacidad por defecto, zonas de seguridad local-first, threat model conceptual y bloqueo de arquitectura técnica prematura.
+
+### AT
+
+AT acepta el Gate porque la tríada preserva experiencia creativa habitable, privacidad de borradores, no vigilancia, pausa, cancelación, no castigo a la exploración y seguridad proporcional al riesgo.
+
+## 16. Transferencia hacia pago de deuda
+
+La próxima acción no es cierre inmediato. La próxima acción es pagar o reclasificar deuda documental antes de sincronizar la narrativa final de PR #11.

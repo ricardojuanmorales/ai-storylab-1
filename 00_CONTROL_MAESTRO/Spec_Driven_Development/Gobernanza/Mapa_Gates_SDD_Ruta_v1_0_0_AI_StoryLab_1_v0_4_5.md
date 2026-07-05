@@ -70,7 +70,7 @@ Este orden evita que la arquitectura se adelante a la agencia humana, que la exp
 | Gate | Versión objetivo | Autoriza | No autoriza | Evidencia mínima | Estado v0.4.5 |
 |---|---|---|---|---|---|
 | Gate 0 | v0.4.5 | Activación documental PR #11 | Implementación | PR draft, bitácoras, protocolo | activo |
-| Gate 1 | v0.4.5 | Cierre Specs Núcleo | Arquitectura detallada | revisión SPEC-OP-006, 007, 008 | pendiente, mapa aprobado |
+| Gate 1 | v0.4.5 | Cierre Specs Núcleo | Arquitectura detallada | revisión SPEC-OP-006, 007, 008, matriz cruzada, gate evaluativo | aprobado con deuda controlada |
 | Gate 2 | v0.4.6 | Arquitectura conceptual | Código funcional | modelos conceptuales y límites | proyectado |
 | Gate 3 | v0.4.7 | Diseño de experiencia no funcional | UI funcional | flujos humanos y lenguaje | proyectado |
 | Gate 4 | v0.5.x | Prototipo local-first mínimo | Piloto real | datos ficticios y threat model | proyectado |

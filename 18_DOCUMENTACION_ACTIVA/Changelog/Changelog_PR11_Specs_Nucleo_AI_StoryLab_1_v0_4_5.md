@@ -165,3 +165,36 @@ SPEC-OP-008:
 [ ] Aplicar Gate de aprobación de Specs Núcleo.
 [ ] Sincronizar narrativa del cuerpo de PR #11 al cierre de sesión.
 ```
+
+
+## Hito aprobado : Gate de Specs Núcleo
+
+```text
+[+] Gate_Aprobacion_Specs_Nucleo_Consentimiento_Datos_Seguridad_AI_StoryLab_1_v0_4_5.md.
+[+] Decision_Aprobacion_Gate_Specs_Nucleo_Consentimiento_Datos_Seguridad_AI_StoryLab_1_v0_4_5.md.
+[~] Indice_Oficial_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md actualizado.
+[~] Mapa_Gates_SDD_Ruta_v1_0_0_AI_StoryLab_1_v0_4_5.md actualizado.
+[~] Tablero_Maestro_Dependencias_Specs_Gates_Versiones_AI_StoryLab_1_v0_4_5.md actualizado.
+[~] Bitacora_Sesion_Activa_AI_StoryLab_1_v0_4_5.md actualizada.
+[~] Bitacora_Transferencia_Simetrica_Activa_AI_StoryLab_1_v0_4_5.md actualizada.
+```
+
+## Estado tras Gate de Specs Núcleo
+
+```text
+SPEC-OP-006: aprobada_para_specs_nucleo_con_deuda_controlada
+SPEC-OP-007: aprobada_para_specs_nucleo_con_deuda_controlada
+SPEC-OP-008: aprobada_para_specs_nucleo_con_deuda_controlada
+GATE-SDD-001: gate_aprobado_con_deuda_controlada
+```
+
+## Pendiente actualizado tras Gate
+
+```text
+[✓] Aprobar SPEC-OP-006 Consentimiento Informado y Situado con deuda controlada.
+[✓] Aprobar SPEC-OP-007 Datos y Privacidad con deuda controlada.
+[✓] Aprobar SPEC-OP-008 Seguridad Local-First con deuda controlada.
+[✓] Aplicar Gate de aprobación de Specs Núcleo.
+[ ] Pagar o reclasificar deuda antes del cierre de sesión.
+[ ] Sincronizar narrativa del cuerpo de PR #11 al cierre de sesión.
+```

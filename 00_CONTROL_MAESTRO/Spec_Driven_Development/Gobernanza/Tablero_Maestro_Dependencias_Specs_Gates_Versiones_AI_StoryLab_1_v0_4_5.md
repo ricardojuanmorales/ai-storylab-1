@@ -30,7 +30,7 @@ una_spec_se_prioriza_si:
 
 | Versión | Gate | Specs mínimas requeridas | Specs que pueden nacer | Evidencia clave | Deuda bloqueante |
 |---|---|---|---|---|---|
-| v0.4.5 | Gate 1 | Consentimiento, Datos/Privacidad, Seguridad Local-First | Índice, Mapa, Modelo Evolutivo, Matriz Cruzada | revisión unitaria y gate núcleo | ausencia de tríada núcleo |
+| v0.4.5 | Gate 1 | Consentimiento, Datos/Privacidad, Seguridad Local-First | Índice, Mapa, Modelo Evolutivo, Matriz Cruzada | revisión unitaria, matriz cruzada y gate núcleo aprobado | deuda triangular no clasificada |
 | v0.4.6 | Gate 2 | Tríada núcleo cerrada | Objeto de dominio, Threat model, Modelo conceptual | modelos sin código | arquitectura funcional prematura |
 | v0.4.7 | Gate 3 | Experiencia creativa, Interfaz no rígida, Reflexión | Lenguaje por perfiles, Accesibilidad expresiva | pruebas de escritorio | interfaz coercitiva |
 | v0.5.x | Gate 4 | Prototipo local-first, Evidencia, Portafolio | Escenarios ficticios, No captura accidental | datos ficticios y threat model | datos reales o cloud |

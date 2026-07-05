@@ -253,7 +253,7 @@ gate_indice:
   criterio_de_cierre: specs núcleo aprobadas o aprobadas con deuda aceptada y controlada
   no_autoriza: arquitectura detallada ni implementación funcional
   documento_gate_evaluativo: 15_EVALUACION_CALIDAD_Y_AUDITORIA/Gates_Checks_Evaluacion/Gate_Aprobacion_Specs_Nucleo_Consentimiento_Datos_Seguridad_AI_StoryLab_1_v0_4_5.md
-  estado: pendiente
+  estado: aprobado_con_deuda_controlada
 ```
 
 ### Gate 2 : Transición a Arquitectura Conceptual v0.4.6
