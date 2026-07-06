@@ -1,87 +1,122 @@
-# README Bloque 3 Consolidación de Ruta hacia v1.0.0 v0.5.0 : AI StoryLab 1
+# README Bloque 3 v2 : Consolidación de Ruta hacia v1.0.0 como Ecosistema Funcional Futuro
 
 **Proyecto:** AI StoryLab 1  
+**Documento:** `README_Bloque_3_Consolidacion_Ruta_v1_0_0_v0_5_0_AI_StoryLab.md`  
 **Fase:** v0.5.0 Gobernanza Mayor y Consolidación de Ruta hacia v1.0.0  
-**Bloque:** 3  
-**Estado:** consolidación documental de ruta  
-**Naturaleza:** documentación SDD, sin implementación funcional  
+**Bloque:** 3 v2  
+**Estado:** reemplazo correctivo del Bloque 3  
+**Naturaleza:** documentación SDD, sin implementación funcional en v0.5.0  
 **Fecha:** 2026-07-06  
 
 ---
 
-## Propósito
+## 1. Propósito
 
-Este bloque consolida la ruta documental hacia **v1.0.0** como horizonte de estabilidad, trazabilidad y gobernanza.
+Este bloque reemplaza la versión anterior del Bloque 3 para corregir la interpretación de `v1.0.0`.
 
-No activa v1.0.0 como fase funcional ni como producto implementado.
+`v1.0.0` no debe entenderse como mera documentación. Debe entenderse como **ecosistema funcional publicable**, con aplicación funcional incluida, metodología, documentación, guías, seguridad, validación, despliegue y mantenimiento.
+
+Durante v0.5.0, esa meta se trabaja solo como planificación y consolidación documental.
 
 ---
 
-## Relación con bloques previos
+## 2. Decisión de ruta adoptada
+
+Se adopta la ruta:
 
 ```text
-bloque_1:
-  nombre: activacion_v0_5_0
-  funcion: abrir_fase_mayor_documental
+v0.5:
+  Gobernanza y roadmap
 
-bloque_2:
-  nombre: gobernanza_mayor
-  funcion: instalar_mesa_de_decision
+v0.6:
+  Diseño funcional + UX
 
-bloque_3:
-  nombre: consolidacion_ruta_hacia_v1_0_0
-  funcion: ordenar_horizonte_mayor_sin_activar_funcionalidad
+v0.7:
+  Arquitectura tecnica + seguridad
+
+v0.8:
+  Implementacion incremental
+
+v0.9:
+  Validacion + marketplace readiness
+
+v1.0:
+  Publicacion estable
 ```
 
 ---
 
-## Documentos incluidos
+## 3. Qué hace v0.5.0
 
 ```text
+v0_5_0:
+  consolida:
+    - documentacion
+    - gobernanza
+    - criterios_de_transicion
+    - roadmap_funcional_futuro
+    - dependencias_por_fase
+    - gates
+    - deuda_bloqueada
+    - continuidad_PH_IT_AT
+
+  no_activa:
+    - diseno_funcional_detallado
+    - arquitectura_tecnica
+    - implementacion
+    - testing_operativo
+    - validacion_con_personas
+    - despliegue
+    - mantenimiento
+```
+
+---
+
+## 4. Qué significa v1.0.0
+
+```text
+v1_0_0:
+  destino: ecosistema_funcional_publicable
+  incluye:
+    - aplicacion_funcional_local_first
+    - metodologia_operativa
+    - documentacion_educativa
+    - documentacion_tecnica
+    - guias_humanas
+    - specs
+    - pruebas
+    - validacion
+    - release_notes
+    - despliegue
+    - mantenimiento
+    - gobernanza_post_release
+```
+
+---
+
+## 5. Documentos incluidos en este bloque
+
+```text
+18_DOCUMENTACION_ACTIVA/Decisiones/Decision_Correccion_Ruta_v1_0_0_Ecosistema_Funcional_v0_5_0_AI_StoryLab.md
 18_DOCUMENTACION_ACTIVA/Continuidad/v0_5_0/README_Bloque_3_Consolidacion_Ruta_v1_0_0_v0_5_0_AI_StoryLab.md
-18_DOCUMENTACION_ACTIVA/Mapas/Mapa_Ruta_Documental_v0_5_0_a_v1_0_0_AI_StoryLab.md
-18_DOCUMENTACION_ACTIVA/Matrices/Matriz_Alineacion_v0_5_0_v1_0_0_AI_StoryLab.md
-18_DOCUMENTACION_ACTIVA/Criterios/Criterios_Preparacion_v1_0_0_AI_StoryLab.md
-18_DOCUMENTACION_ACTIVA/Planes/Plan_Trabajo_Consolidacion_Ruta_v1_0_0_AI_StoryLab.md
-18_DOCUMENTACION_ACTIVA/Gates/Gate_Consolidacion_Ruta_v1_0_0_v0_5_0_AI_StoryLab.md
-18_DOCUMENTACION_ACTIVA/Transferencias/Transferencia_Parcial_Ruta_v1_0_0_PH_IT_AT_AI_StoryLab.md
-18_DOCUMENTACION_ACTIVA/Bitacoras/Actualizacion_Bitacora_Capitan_v0_5_0_Bloque_3_AI_StoryLab.md
+18_DOCUMENTACION_ACTIVA/Mapas/Mapa_Ruta_v0_5_a_v1_0_Ecosistema_Funcional_AI_StoryLab.md
+18_DOCUMENTACION_ACTIVA/Matrices/Matriz_Fases_v0_5_a_v1_0_AI_StoryLab.md
+18_DOCUMENTACION_ACTIVA/Criterios/Criterios_Transicion_Fases_v0_5_a_v1_0_AI_StoryLab.md
+18_DOCUMENTACION_ACTIVA/Planes/Plan_Roadmap_v0_5_a_v1_0_Publicable_GitHub_Marketplace_AI_StoryLab.md
+18_DOCUMENTACION_ACTIVA/Gates/Gate_Correccion_Ruta_v1_0_0_v0_5_0_AI_StoryLab.md
+18_DOCUMENTACION_ACTIVA/Transferencias/Transferencia_Ruta_v1_0_0_Ecosistema_Funcional_PH_IT_AT_AI_StoryLab.md
+18_DOCUMENTACION_ACTIVA/Bitacoras/Actualizacion_Bitacora_Capitan_v0_5_0_Bloque_3_v2_AI_StoryLab.md
 ```
 
 ---
 
-## Qué consolida
+## 6. Dictamen
 
-```text
-consolida:
-  - v1_0_0_como_horizonte_documental
-  - criterios_de_preparacion
-  - dependencias_de_gobernanza
-  - ruta_de_madurez
-  - transferencia_PH_IT_AT
-  - deuda_bloqueada
-  - condiciones_de_cierre_futuro
-```
+El Bloque 3 v2 corrige la ruta.
 
----
-
-## Qué no consolida
-
-```text
-no_consolida:
-  - app_funcional
-  - UI_final
-  - prototipo
-  - arquitectura_tecnica
-  - datos_reales
-  - investigacion_activa
-  - automatizacion_funcional
-```
-
----
-
-## Dictamen
-
-Este bloque acerca el mapa a v1.0.0.
-
-No acerca el motor a encendido.
+v0.5.0 prepara.  
+v0.6 diseña funcionalmente.  
+v0.7 estructura técnicamente.  
+v0.8 implementa incrementalmente.  
+v0.9 valida y prepara publicación.  
+v1.0.0 publica un ecosistema funcional estable.
