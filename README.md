@@ -9,7 +9,9 @@
 
 ## Estado actual del proyecto
 
-AI StoryLab 1 se encuentra en **v0.4.8**, fase de **Cierre Post-Merge, Consolidación y Reindexación Documental**, posterior al merge de **PR #13** y al cierre documental de **v0.4.7 Diseño de Experiencia No Funcional**.
+AI StoryLab 1 se encuentra en **v0.4.9**, fase de **Gobernanza de Transición y Preparación de Fase Mayor**, posterior al merge de **PR #15** y al cierre documental de **v0.4.9** como fase estrictamente documental.
+
+La fase mayor futura **no está activada**. Permanece condicionada a autorización humana explícita, gate independiente y confirmación canónica posterior.
 
 ```text
 App funcional base histórica: v0.3.0
@@ -22,7 +24,8 @@ Specs Núcleo: v0.4.5
 Arquitectura Conceptual No Funcional: v0.4.6
 Diseño de Experiencia No Funcional: v0.4.7
 Cierre Post-Merge, Consolidación y Reindexación Documental: v0.4.8
-Fase futura condicionada: v0.4.9 Gobernanza de Transición y Preparación de Fase Mayor
+Gobernanza de Transición y Preparación de Fase Mayor: v0.4.9
+Fase mayor futura: condicionada, no activada
 Horizonte: v1.0.0 sistema documentalmente estable y gobernado por gates
 ```
 
@@ -56,7 +59,7 @@ mantenimiento y deuda documentada.
 
 La implementación funcional futura permanece bloqueada hasta que un gate documental futuro la autorice explícitamente.
 
-En **v0.4.8** no se autoriza:
+En **v0.4.9** no se autoriza:
 
 ```text
 implementacion_funcional,
@@ -76,7 +79,8 @@ evaluacion_automatica,
 arquitectura_tecnica,
 automatizacion_funcional,
 publicacion_automatica,
-subida_automatica_de_archivos.
+subida_automatica_de_archivos,
+fase_mayor_automatica.
 ```
 
 ---
@@ -100,10 +104,11 @@ v0.4.8:
 
 v0.4.9:
   Gobernanza de Transición y Preparación de Fase Mayor
-  estado: futura condicionada, no activada
+  estado: cerrada documentalmente por PR #15
 
-v0.5.x en adelante:
-  fases condicionadas por gates y autorización explícita
+fase_mayor_futura:
+  estado: condicionada, no activada
+  requiere: autorizacion_humana_explicita_y_gate_independiente
 
 v1.0.0:
   sistema documentalmente estable, trazable y gobernado
@@ -150,9 +155,11 @@ Rutas críticas vigentes:
 00_CONTROL_MAESTRO/Tablas_Ubicacion_Documental/
 15_EVALUACION_CALIDAD_Y_AUDITORIA/
 18_DOCUMENTACION_ACTIVA/
-18_DOCUMENTACION_ACTIVA/Continuidad/v0_4_8/
+18_DOCUMENTACION_ACTIVA/Continuidad/v0_4_9/
+18_DOCUMENTACION_ACTIVA/Continuidad/v0_4_9/Post_Merge_PR15/
 18_DOCUMENTACION_ACTIVA/Gates/
 18_DOCUMENTACION_ACTIVA/Bitacoras/
+18_DOCUMENTACION_ACTIVA/Transferencias/
 20_MANTENIMIENTO_Y_EVOLUCION/
 21_WIKI_DOCUMENTACION_HUMANA/
 ```
@@ -174,8 +181,14 @@ PR #13:
 
 PR #14:
   fase: v0.4.8
-  estado: draft en desarrollo
+  resultado: cierre por merge
   naturaleza: cierre post-merge, consolidación y reindexación documental
+
+PR #15:
+  fase: v0.4.9
+  resultado: cierre por merge
+  naturaleza: gobernanza de transición y preparación de fase mayor
+  fase_mayor: no activada
 ```
 
 ---
