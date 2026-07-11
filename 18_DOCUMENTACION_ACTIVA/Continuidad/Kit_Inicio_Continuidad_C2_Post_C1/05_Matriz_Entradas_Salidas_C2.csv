@@ -1,0 +1,11 @@
+id,entrada,uso,salida
+C2-IO-001,Plan_Correccion_Validacion_Reversion_Cierre_B7,definir alcance C2,mapa de estructura objetivo
+C2-IO-002,Acta_Cierre_Fase_C1,confirmar cierre y limites,estado de entrada C2
+C2-IO-003,Registro_Maestro_Fuentes_Canonicas_Vigencia_C1,proteger fuentes activas,matriz de fronteras
+C2-IO-004,Tabla_Sucesion_Deprecacion_Documental_C1,evitar sucesion o movimiento implicito,reglas de no migracion
+C2-IO-005,Registro_Maestro_Decisiones_C1,aplicar DEC-AUD25-003 y DEC-AUD25-010,decisiones C2
+C2-IO-006,Registro_Maestro_Deuda_Gobernanza_C1,atender DEBT-GOV-003,criterios de cierre C2
+C2-IO-007,Registro_Maestro_Gates_C1,activar GATE-CORR-G1,acta de gate G1
+C2-IO-008,Arbol actual 02-15-18-20-99,comparar fronteras,rutas objetivo propuestas
+C2-IO-009,README de frontera,materializar contenedor sin contenido sustantivo,contenedores preparados
+C2-IO-010,Bitacora_Transferencia_Simetrica_Cierre_C1_Preparacion_C2,continuidad de contexto,transferencia de cierre C2
