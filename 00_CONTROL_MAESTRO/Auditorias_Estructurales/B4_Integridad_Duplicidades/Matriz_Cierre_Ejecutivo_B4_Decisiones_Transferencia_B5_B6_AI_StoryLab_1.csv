@@ -1,0 +1,13 @@
+﻿id,tema,dictamen,estado,destino,prioridad,decision_humana
+B4-C-001,Fuente canónica,Un documento sustantivo completo debe tener una sola ruta canónica; las demás rutas deben referenciarlo.,principio consolidado,B5 como hallazgo rector; B6 como regla de simulación,P1,aprobar en cierre B4
+B4-C-002,SDD,"SDD permanece como columna vertebral de especificación y gobierno, con autoridad documental en 00, workspace en .specify, plantillas en 07 y formación en 05.",posición propuesta,B5 y B6,P1,aprobar posición y precedencia
+B4-C-003,Arquitectura y diseño,Los documentos sustantivos deben descubrirse por función y no quedar ocultos bajo la versión en que fueron creados.,hallazgo crítico,B6,P1,aprobar simulación del nuevo contenedor 02
+B4-C-004,Contenedor 02,Evaluar la evolución de 02_ARQUITECTURA_CONCEPTUAL hacia 02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA.,hipótesis estructural principal,B6,P1,"pendiente de simulación, no de ejecución"
+B4-C-005,Relación 00 y 15,"00 conserva método, reglas, mapas e índices; 15 conserva reportes finales, dictámenes, gates, checks y evidencias.",frontera propuesta,B5 y B6,P1,aprobar regla de traspaso
+B4-C-006,18_DOCUMENTACION_ACTIVA,"18 debe conservar memoria viva, decisiones, cierres y continuidad, no operar como ruta principal de documentos sustantivos.",hallazgo crítico,B5 y B6,P1,aprobar ciclo de vida documental
+B4-C-007,20_MANTENIMIENTO_Y_EVOLUCION,20 debe ser la fuente primaria y única de deuda activa; otros documentos solo deben referenciar identificadores.,frontera propuesta,B5 y B6,P1,aprobar centralización por referencia
+B4-C-008,99_ARCHIVO_HISTORICO,"99 debe preservar documentos cerrados o sustituidos con origen, fecha, motivo, vigencia terminada y regla de no edición.",frontera pendiente de formalización,B5 y B6,P1,aprobar criterio de ingreso
+B4-C-009,Versiones,"La versión debe conservarse como metadato, baseline e historia; no debe ser la ruta principal de descubrimiento de documentos sustantivos.",principio consolidado,B5 y B6,P1,aprobar
+B4-C-010,Plantillas e instancias,07 conserva plantillas; las instancias completadas viven en el cartapacio correspondiente a su función.,frontera propuesta,B5,P2,aprobar regla
+B4-C-011,Protocolo de cartapacios,"El protocolo vigente guía decisiones, pero conserva estado de borrador operativo; su autoridad debe resolverse antes de v1.0.0.",riesgo de autoridad,B5,P1,"promover, sustituir o limitar explícitamente"
+B4-C-012,Corrección estructural,"B4 no autoriza movimientos. Toda corrección deberá simularse en B6 y ejecutarse, si se aprueba, mediante PR separado y reversible.",límite de auditoría,B6 y B7,P1,ratificar
