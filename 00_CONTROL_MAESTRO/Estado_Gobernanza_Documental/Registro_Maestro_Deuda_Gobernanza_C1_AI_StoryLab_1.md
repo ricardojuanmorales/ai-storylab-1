@@ -1,0 +1,536 @@
+# Registro Maestro de Deuda de Gobernanza · C1
+
+## AI StoryLab 1
+
+**Identificador:** `DOC-DOC-008`  
+**Fase:** C1-C · Decisiones, deuda y gates  
+**Estado:** Borrador para aprobación humana  
+**Fecha:** 2026-07-11  
+**PR de trabajo:** PR #30  
+**Rama:** `docs/c1-completar-indices-metadatos`  
+**Documento rector relacionado:** `Registro_Maestro_Decisiones_C1_AI_StoryLab_1.md`  
+**Alcance:** Deuda documental, estructural, funcional, UX, técnica, ética y de gobernanza prioritaria  
+**Restricciones:** Este registro identifica, normaliza y relaciona deuda. No cierra deudas por declaración, no ejecuta soluciones, no mueve documentos, no inicia C2 y no abre v0.8.0.
+
+---
+
+## 1. Propósito
+
+Este registro consolida la deuda prioritaria de AI StoryLab 1 sin borrar sus identificadores históricos ni confundir documentación producida con deuda resuelta.
+
+Debe permitir responder:
+
+```text
+qué deuda existe;
+de dónde proviene;
+qué prioridad tiene;
+cuál es su estado;
+qué documentos afecta;
+qué decisión la sostiene;
+qué fase puede atenderla;
+qué evidencia sería necesaria para cerrarla;
+qué deuda está bloqueada;
+qué deuda fue diferida deliberadamente.
+```
+
+La deuda no representa necesariamente una falla.
+
+Puede representar:
+
+- trabajo pendiente;
+- riesgo aceptado;
+- decisión diferida;
+- condición de transición;
+- necesidad de validación;
+- memoria de diseño;
+- restricción que debe permanecer visible.
+
+---
+
+## 2. Campos obligatorios
+
+| Campo | Contenido |
+|---|---|
+| `debt_id` | Identificador persistente |
+| `legacy_ids` | Identificadores históricos, cuando existan |
+| `title` | Descripción breve |
+| `domain` | Dominio principal |
+| `priority` | P1, P2 o P3 |
+| `status` | `open`, `accepted`, `blocked`, `resolved` o `deferred` |
+| `source` | Hallazgo, auditoría, decisión o registro de origen |
+| `affected_documents` | IDs documentales o capas afectadas |
+| `related_decisions` | Decisiones aplicables |
+| `owner` | Responsable, cuando exista |
+| `target_phase` | Fase prevista |
+| `acceptance_reference` | Evidencia de aceptación |
+| `resolution_reference` | Evidencia de cierre |
+| `closure_criteria` | Condiciones verificables de resolución |
+| `notes` | Límites o aclaraciones |
+
+---
+
+## 3. Interpretación de estados
+
+| Estado | Interpretación |
+|---|---|
+| `open` | Requiere trabajo o decisión |
+| `accepted` | Permanece activa, reconocida y controlada |
+| `blocked` | No puede resolverse por falta de gate, decisión o dependencia |
+| `resolved` | Existe evidencia suficiente de cierre |
+| `deferred` | Se atenderá en una fase posterior expresamente identificada |
+
+### Regla de cierre
+
+Una deuda solo puede marcarse `resolved` cuando exista:
+
+```text
+decisión documentada
++ evidencia verificable
++ documento, commit o PR asociado
++ validación de no contradicción
++ actualización del registro
++ aprobación humana cuando afecte alcance
+```
+
+Un documento relacionado no constituye por sí solo evidencia de resolución.
+
+---
+
+## 4. Reglas de normalización
+
+### REG-C1C-DEBT-001 · Preservación de identificadores
+
+Se conservan los identificadores históricos:
+
+```text
+DE-PR9-001
+DFUX-LF-001
+DFUX-FAC-v0.6-001
+DEBT-GROUP-PROGRESS
+```
+
+### REG-C1C-DEBT-002 · Variantes de escritura
+
+La forma:
+
+```text
+DFUX_FAC_v0_6_001
+```
+
+se reconoce como variante histórica de:
+
+```text
+DFUX-FAC-v0.6-001
+```
+
+El identificador canónico utilizado por C1 será:
+
+```text
+DFUX-FAC-v0.6-001
+```
+
+### REG-C1C-DEBT-003 · Riesgo no equivale a deuda
+
+Los códigos:
+
+```text
+R-v0.7-001
+R-v0.7-002
+...
+```
+
+son riesgos, no deudas.
+
+Solo se registran como deuda cuando una fuente aprobada les asigna explícitamente obligación pendiente.
+
+### REG-C1C-DEBT-004 · Documento producido no equivale a cierre
+
+Una deuda puede contar con documento conceptual y permanecer:
+
+```text
+status: accepted
+```
+
+hasta que se validen sus criterios de cierre.
+
+### REG-C1C-DEBT-005 · C1 registra, C7 consolidará
+
+C1 crea identidad y trazabilidad.
+
+C7 decidirá la fuente primaria consolidada de deuda activa en:
+
+```text
+20_MANTENIMIENTO_Y_EVOLUCION
+```
+
+### REG-C1C-DEBT-006 · Ningún cierre retroactivo por inferencia
+
+Un PR posterior puede aportar evidencia.
+
+No cierra automáticamente todas las deudas temáticamente relacionadas.
+
+---
+
+# 5. Deuda histórica de PR #9
+
+El registro v0.4.4 declara estas deudas pagadas, cerradas o controladas.
+
+| Debt ID | Dominio | Estado C1 | Evidencia |
+|---|---|---|---|
+| `DE-PR9-001` | Orientación | `resolved` | README raíz actualizado |
+| `DE-PR9-002` | README críticos | `resolved` | README críticos activados |
+| `DE-PR9-003` | Mapa | `resolved` | Mapa real post-PR8 |
+| `DE-PR9-004` | Excepción formativa | `resolved` | Excepción validada |
+| `DE-PR9-005` | Documentación activa | `resolved` | README y protocolo |
+| `DE-PR9-006` | Registro de deuda | `resolved` | Registro actualizado |
+| `DE-PR9-007` | Gate | `resolved` | Gate constitucional incorporado |
+| `DE-PR9-008` | Terminología SDD | `resolved` | Sigla oficial controlada |
+| `DE-PR9-009` | Archivo histórico | `resolved` dentro de PR #9 | Criterio mínimo documentado |
+| `DE-PR9-010` | Transferencia PH-IT-AT | `resolved` | Campo establecido |
+| `DE-PR9-011` | Tabla de ubicación | `resolved` | Tabla incorporada |
+| `DE-PR9-012` | Cierre PR #9 | `resolved` | PR #9 completado |
+
+Nota:
+
+```text
+DE-PR9-009 no sustituye la deuda estructural posterior sobre la
+formalización integral de 99_ARCHIVO_HISTORICO.
+```
+
+La deuda de C8 es una obligación nueva y más amplia.
+
+---
+
+# 6. Deuda estructural y de gobernanza derivada de PR #25
+
+| Debt ID | Título | Prioridad | Estado | Fase objetivo | Decisiones relacionadas |
+|---|---|---:|---|---|---|
+| `DEBT-GOV-001` | Formalizar una sola fuente activa por alcance | P1 | `accepted` | C1 | `DEC-AUD25-001`, `DEC-C1-004` |
+| `DEBT-GOV-002` | Ratificar autoridad distribuida de SDD | P1 | `resolved` | C0 | `DEC-AUD25-002`, `DEC-C0-002`–`005` |
+| `DEBT-GOV-003` | Crear contenedor funcional estable para arquitectura y diseño | P1 | `open` | C2 | `DEC-AUD25-003` |
+| `DEBT-GOV-004` | Elevar arquitectura funcional y UX desde rutas de continuidad | P1 | `blocked` | C3 | `DEC-AUD25-003`, `DEC-C1-009` |
+| `DEBT-GOV-005` | Elevar arquitectura técnica, datos, seguridad y privacidad | P1 | `blocked` | C4 | `DEC-AUD25-003`, `DEC-C1-009` |
+| `DEBT-GOV-006` | Separar método de `00` y resultados de `15` | P1 | `open` | C5 | `DEC-AUD25-005` |
+| `DEBT-GOV-007` | Formalizar ciclo de vida de `18_DOCUMENTACION_ACTIVA` | P1 | `open` | C6 | `DEC-AUD25-006` |
+| `DEBT-GOV-008` | Consolidar deuda activa en `20` mediante IDs únicos | P1 | `open` | C7 | `DEC-AUD25-007` |
+| `DEBT-GOV-009` | Formalizar archivo histórico, manifiestos y no vigencia | P1 | `open` | C8 | `DEC-AUD25-008` |
+| `DEBT-GOV-010` | Alinear Wiki y documentación humana con fuentes canónicas | P2 | `open` | C9 | `DEC-AUD25-009` |
+| `DEBT-GOV-011` | Validar integridad estructural completa | P1 | `blocked` | C10 | `DEC-AUD25-010` |
+| `DEBT-GOV-012` | Revisar individualmente specs de `.specify` | P1 | `blocked` | C4 o C9 | `DEC-C0-003`, `DEC-C1-008` |
+| `DEBT-GOV-013` | Crear índice interno de la Base de Conocimiento SDD | P2 | `open` | C9 | `DEC-C0-005`, `DEC-C1-008` |
+| `DEBT-GOV-014` | Automatizar índices y comprobaciones documentales | P2 | `deferred` | Posterior a C10 | `DEC-AUD25-010` |
+
+## 6.1 Criterios de cierre destacados
+
+### `DEBT-GOV-001`
+
+Requiere:
+
+```text
+Registro Maestro aprobado
++ Índice de Vigencia aprobado
++ Tabla de Sucesión aprobada
++ merge de PR #30
++ validación C1-D
+```
+
+### `DEBT-GOV-003`
+
+Requiere:
+
+```text
+ruta objetivo aprobada
++ README de frontera
++ gate humano de C2
++ cero movimientos prematuros
+```
+
+### `DEBT-GOV-008`
+
+Requiere:
+
+```text
+fuente primaria de deuda en 20
++ referencias desde fuentes históricas
++ IDs preservados
++ criterios de cierre uniformes
+```
+
+---
+
+# 7. Deuda de cierre v0.6
+
+Las siguientes deudas se consideran resueltas por la secuencia posterior de cierre, merge y apertura controlada de v0.7.
+
+| Debt ID | Título abreviado | Estado | Referencia de resolución |
+|---|---|---|---|
+| `DFUX-CIERRE-001` | Confirmar comentarios de hito PR #20 | `resolved` | Cierre y merge de PR #20 |
+| `DFUX-CIERRE-002` | Integrar bitácoras y registros | `resolved` | Paquete final de PR #20 |
+| `DFUX-CIERRE-003` | Decisión humana del gate | `resolved` | Gate v0.6 → v0.7 |
+| `DFUX-CIERRE-004` | Verificar estado operativo del PR | `resolved` | Merge de PR #20 |
+| `DFUX-CIERRE-005` | Decidir salida de draft | `resolved` | Cierre de PR #20 |
+| `DFUX-CIERRE-006` | Decidir merge condicionado | `resolved` | PR #20 fusionado |
+
+Estas resoluciones son operativas e históricas.
+
+No convierten en resueltas las deudas funcionales o técnicas restantes.
+
+---
+
+# 8. Deuda local-first y seguridad heredada de v0.6
+
+| Debt ID | Título abreviado | Prioridad | Estado | Fase objetivo |
+|---|---|---:|---|---|
+| `DFUX-LF-001` | Arquitectura local-first verificable | P1 | `accepted` | C4 y v0.8 |
+| `DFUX-LF-002` | Almacenamiento local y recuperación segura | P1 | `accepted` | C4 y v0.8 |
+| `DFUX-LF-003` | Exportación e importación por decisión humana | P1 | `accepted` | C4 y v0.8 |
+| `DFUX-LF-004` | Manejo seguro de referencias externas | P1 | `accepted` | C4 |
+| `DFUX-LF-005` | Sensibilidad de evidencias y enlaces | P1 | `accepted` | C4 |
+| `DFUX-LF-006` | Evitar sincronización automática de enlaces | P1 | `accepted` | C4 y v0.8 |
+| `DFUX-LF-007` | Advertencias de privacidad, autoría y enlaces | P1 | `accepted` | C4 y v0.8 |
+
+Los documentos v0.7 constituyen evidencia conceptual.
+
+La implementación verificable permanece pendiente.
+
+---
+
+# 9. Deuda de misiones y producción
+
+| Debt ID | Título abreviado | Prioridad | Estado | Fase objetivo |
+|---|---|---:|---|---|
+| `DFUX-MIS-001` | Misiones configurables sin rigidez | P1 | `accepted` | C3 y v0.8 |
+| `DFUX-MIS-002` | Ruta mínima y libertad creativa | P1 | `accepted` | C3 |
+| `DFUX-MIS-003` | Variantes escuela superior y universidad | P1 | `deferred` | v0.8 |
+| `DFUX-MIS-004` | Matriz misión-evento-herramienta-evidencia-portafolio | P1 | `accepted` | C3–C4 |
+| `DFUX-MIS-005` | Estados funcionales de misión | P1 | `accepted` | C3 y v0.8 |
+| `DFUX-MIS-006` | Completitud, calidad, curaduría y transferencia | P2 | `deferred` | v0.8 |
+| `DFUX-MIS-007` | Reinterpretar S1–S9 sin fijar canon | P1 | `accepted` | C3–C4 |
+
+---
+
+# 10. Deuda humano-IA
+
+| Debt ID | Título abreviado | Prioridad | Estado | Fase objetivo |
+|---|---|---:|---|---|
+| `DFUX-HIA-001` | Banco canónico de prompts por misión | P1 | `accepted` | C4 y v0.8 |
+| `DFUX-HIA-002` | Campos mínimos de uso externo | P1 | `accepted` | C4 |
+| `DFUX-HIA-003` | Advertencias antes de copiar prompts | P1 | `accepted` | C4 y v0.8 |
+| `DFUX-HIA-004` | Rutas sin herramienta externa | P1 | `accepted` | C3 y v0.8 |
+| `DFUX-HIA-005` | Atribución por herramienta | P1 | `deferred` | v0.8 |
+| `DFUX-HIA-006` | Checklist docente de uso responsable | P1 | `deferred` | v0.8 |
+| `DFUX-HIA-007` | Registrar apoyo externo sin sobrecaptura | P1 | `accepted` | C4 |
+| `DFUX-HIA-008` | Auditar lenguaje sobre IA embebida | P1 | `accepted` | C4 y C9 |
+
+---
+
+# 11. Deuda de evidencia y portafolio
+
+| Debt ID | Título abreviado | Prioridad | Estado | Fase objetivo |
+|---|---|---:|---|---|
+| `DFUX-EVI-001` | Estructura de evidencia contextualizada | P1 | `accepted` | C3–C4 |
+| `DFUX-EVI-002` | Sensibilidad de evidencia | P1 | `accepted` | C4 |
+| `DFUX-EVI-003` | Portafolio vivo local | P1 | `accepted` | C3–C4 |
+| `DFUX-EVI-004` | Vincular evidencia, decisión y reflexión | P1 | `accepted` | C3–C4 |
+| `DFUX-EVI-005` | Estados de evidencia y curaduría | P1 | `accepted` | C3–C4 |
+| `DFUX-EVI-006` | Evitar portafolio como carpeta pasiva | P1 | `deferred` | v0.8 |
+| `DFUX-EVI-007` | Narrativa de proceso transferible | P2 | `deferred` | v0.8 |
+
+---
+
+# 12. Deuda de accesibilidad y claridad
+
+| Debt ID | Título abreviado | Prioridad | Estado | Fase objetivo |
+|---|---|---:|---|---|
+| `DFUX-ACC-001` | Guía de lenguaje claro para misiones | P1 | `accepted` | C3 y C9 |
+| `DFUX-ACC-002` | Mensajes local-first canónicos | P1 | `accepted` | C4 y C9 |
+| `DFUX-ACC-003` | Patrones de advertencia por riesgo | P1 | `accepted` | C4 |
+| `DFUX-ACC-004` | Glosario funcional breve | P2 | `accepted` | C4 o C9 |
+| `DFUX-ACC-005` | Carga cognitiva proporcional | P2 | `deferred` | v0.8 |
+| `DFUX-ACC-006` | Auditoría técnica de accesibilidad | P2 | `deferred` | v0.8–v0.9 |
+
+---
+
+# 13. Deuda de asistencia docente
+
+| Debt ID | Título abreviado | Prioridad | Estado | Fase objetivo |
+|---|---|---:|---|---|
+| `DFUX-DOC-001` | Asistencia docente por misión | P1 | `accepted` | C3 y v0.8 |
+| `DFUX-DOC-002` | Guías para acompañar sin sustituir | P1 | `deferred` | v0.8 |
+| `DFUX-DOC-003` | Señales de alerta docente | P2 | `deferred` | v0.8 |
+| `DFUX-DOC-004` | Acompañamiento diferenciado por nivel | P1 | `deferred` | v0.8 |
+
+---
+
+# 14. Deuda de trazabilidad y gobernanza
+
+| Debt ID | Título abreviado | Prioridad | Estado | Fase objetivo |
+|---|---|---:|---|---|
+| `DFUX-TRZ-001` | Matriz requisito-documento-origen-deuda | P1 | `accepted` | C1, C3 y C4 |
+| `DFUX-TRZ-002` | Checklist de no regresión documental | P1 | `accepted` | C1-D y C10 |
+| `DFUX-TRZ-003` | Trazabilidad longitudinal | P1 | `accepted` | C3–C4 |
+| `DFUX-TRZ-004` | Gate humano antes de activar fases | P1 | `accepted` | Todas |
+| `DFUX-TRZ-005` | Definir alcance de MVP técnico | P1 | `blocked` | Gate de v0.8 |
+
+---
+
+# 15. Deuda crítica de la Vista del Facilitador
+
+```yaml
+debt_id: DFUX-FAC-v0.6-001
+legacy_ids:
+  - DFUX_FAC_v0_6_001
+title: Invisibilización parcial de la Vista del Facilitador
+domain:
+  - arquitectura de roles
+  - privacidad
+  - seguridad
+  - experiencia docente
+  - acompañamiento formativo
+priority: P1
+status: accepted
+source:
+  - auditoría post v0.6
+  - registro de riesgos y controles v0.7
+  - cierre formal v0.7
+affected_documents:
+  - DOC-UX-007
+  - DOC-SEG-002
+  - DOC-SEG-003
+  - DOC-SEG-004
+  - DOC-FOR-001
+related_decisions:
+  - DEC-V07-008
+  - DEC-V07-009
+owner: pendiente
+target_phase:
+  - C3
+  - C4
+  - v0.8
+resolution_reference: none
+```
+
+No puede cerrarse hasta verificar:
+
+- propósito formativo;
+- visibilidad mínima;
+- roles y permisos;
+- controles contra vigilancia;
+- límites administrativos;
+- trazabilidad proporcional;
+- consentimiento;
+- privacidad local-first;
+- ausencia de ranking;
+- ausencia de monitoreo continuo.
+
+---
+
+# 16. Deudas activas preservadas al cierre de v0.7
+
+| Debt ID | Asunto | Prioridad | Estado | Fase objetivo |
+|---|---|---:|---|---|
+| `DEBT-GROUP-PROGRESS` | `group_progress` bajo auditoría | P1 | `accepted` | C3–C4 y v0.8 |
+| `DEBT-DATA-EXPORT` | Exportación por propósito | P1 | `accepted` | C4 y v0.8 |
+| `DEBT-PORTFOLIO` | Transición a portafolio curado | P1 | `accepted` | C3–C4 y v0.8 |
+| `DEBT-PROMPT` | Prompt como dato de alto cuidado | P1 | `accepted` | C4 y v0.8 |
+| `DEBT-PRIVATE-LINK` | Enlaces privados | P1 | `accepted` | C4 y v0.8 |
+| `DEBT-LANGUAGE` | Lenguaje no punitivo | P2 | `accepted` | C3 y C9 |
+| `DEBT-TOOLS` | Herramientas externas como frontera | P1 | `accepted` | C4 y v0.8 |
+| `DEBT-IMPORT` | Importación validada | P1 | `accepted` | C4 y v0.8 |
+| `DEBT-GALLERY` | Galería pública | P1 | `deferred` | Gate posterior |
+| `DEBT-RESEARCH` | Investigación con datos | P1 | `deferred` | Gate posterior |
+
+Ninguna de estas deudas autoriza la capacidad que describe.
+
+---
+
+# 17. Deuda creada por C1
+
+| Debt ID | Título | Prioridad | Estado | Fase objetivo |
+|---|---|---:|---|---|
+| `DEBT-C1-001` | Verificar todos los IDs documentales contra el árbol completo | P1 | `open` | C1-D |
+| `DEBT-C1-002` | Verificar unicidad de IDs de decisiones | P1 | `open` | C1-D |
+| `DEBT-C1-003` | Verificar unicidad de IDs de deuda | P1 | `open` | C1-D |
+| `DEBT-C1-004` | Verificar unicidad de IDs de gates | P1 | `open` | C1-D |
+| `DEBT-C1-005` | Confirmar que ninguna fuente activa duplicada quedó omitida | P1 | `open` | C1-D |
+| `DEBT-C1-006` | Confirmar que el PR #30 contiene cero movimientos y eliminaciones | P1 | `open` | C1-D |
+| `DEBT-C1-007` | Consolidar fuente primaria de deuda en C7 | P1 | `deferred` | C7 |
+| `DEBT-C1-008` | Automatizar validación de registros | P2 | `deferred` | Posterior a C10 |
+
+---
+
+# 18. Resumen de estado
+
+```text
+deuda PR #9 resuelta: 12
+deuda estructural y de gobernanza C0–C10: 14
+deuda de cierre v0.6 resuelta: 6
+deuda v0.6 funcional, UX y técnica preservada: 44
+deuda crítica Vista del Facilitador: 1
+deudas adicionales preservadas por cierre v0.7: 10
+deudas creadas por C1: 8
+
+cierres ejecutados por este registro: 0
+movimientos ejecutados: 0
+C2 iniciado: no
+v0.8.0 abierto: no
+```
+
+Los conteos describen entradas registradas.
+
+No equivalen a tareas independientes ni a estimaciones de esfuerzo.
+
+---
+
+# 19. Gate parcial C1-C.2
+
+Este registro se aprueba conjuntamente con:
+
+```text
+Registro_Maestro_Gates_C1_AI_StoryLab_1.md
+```
+
+Opciones:
+
+- [ ] **Aprobado.** El registro puede integrarse como auxiliar de C1-C.
+- [ ] **Aprobado con reservas.** Las reservas se registran en el comentario de hito.
+- [ ] **Cambios requeridos.** El registro permanece en borrador.
+- [ ] **Rechazado.** El registro no se incorpora.
+
+La aprobación conjunta habilita:
+
+```text
+staging de los tres productos C1-C;
+validación técnica del bloque;
+commit funcional único;
+push al PR #30;
+comentario de hito C1-C.
+```
+
+No habilita:
+
+```text
+cierre de deuda;
+implementación;
+movimientos;
+C2;
+v0.8.0;
+merge final del PR #30.
+```
+
+---
+
+# 20. Estado de salida esperado
+
+```text
+C0: cerrado
+C1.1: vigente
+C1-A: aprobado
+C1-B: cerrado
+C1-C.1: aprobado
+C1-C.2: pendiente de aprobación conjunta
+C1-D: no iniciado
+C2: no iniciado
+movimientos: ninguno
+v0.8.0: no abierto
+```
