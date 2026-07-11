@@ -1,0 +1,7 @@
+id,entrada,uso,salida
+C0-IO-001,Protocolo_Auditoria_Estructural_Reproducible,marco metodologico,regla de autoridad
+C0-IO-002,Protocolo_Manejo_Cartapacios,fuente a evaluar,dictamen de estado
+C0-IO-003,Constitucion SDD,autoridad SDD,declaracion de precedencia
+C0-IO-004,.specify,workspace tecnico,limite operativo
+C0-IO-005,07_PLANTILLAS_Y_MODELOS,plantillas,regla plantilla-instancia
+C0-IO-006,05_COMPETENCIAS_Y_PERFILES,formacion,frontera de competencia
