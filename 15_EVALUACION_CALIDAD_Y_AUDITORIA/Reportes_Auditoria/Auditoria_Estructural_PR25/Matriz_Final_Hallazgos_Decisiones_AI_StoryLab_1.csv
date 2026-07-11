@@ -1,0 +1,13 @@
+﻿id,tema,decision_o_dictamen,estado,prioridad,fase_destino
+DEC-001,Fuente canónica,Una sola fuente activa por documento sustantivo,Aprobación humana,P1,C0-C1
+DEC-002,SDD,00 gobierna; .specify opera; 07 modela; 05 forma,Aprobación humana,P1,C0
+DEC-003,Arquitectura y diseño,Evaluar nuevo 02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA,Aprobación humana,P1,C2-C4
+DEC-004,Versiones,"La versión es metadato e historia, no ruta primaria",Aprobación humana,P1,C1-C6
+DEC-005,00 y 15,"00 conserva método; 15 resultados, gates y evidencias",Aprobación humana,P1,C5
+DEC-006,18,"Memoria, continuidad y decisiones; no autoridad sustantiva general",Aprobación humana,P1,C6
+DEC-007,20,Fuente primaria de deuda activa mediante IDs únicos,Aprobación humana,P1,C7
+DEC-008,99,"Archivo con manifiesto, no vigencia y no edición",Aprobación humana,P1,C8
+DEC-009,21,Capa humana derivada que referencia fuentes canónicas,Aprobación humana,P2,C9
+DEC-010,Migración,"Corrección por PR separados, lotes pequeños y reversibles",Ratificación humana,P1,C0-C10
+DEC-011,v0.8.0,Decisión independiente del cierre de la auditoría,Ratificación humana,P1,posterior
+DEC-012,PR #25,"Cerrar como auditoría y plan, no como migración",Aprobación humana,P1,cierre
