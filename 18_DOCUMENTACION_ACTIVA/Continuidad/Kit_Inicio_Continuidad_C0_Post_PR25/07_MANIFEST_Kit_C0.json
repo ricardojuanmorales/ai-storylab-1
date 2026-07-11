@@ -1,0 +1,16 @@
+{
+  "package": "Kit_Inicio_Continuidad_C0_Post_PR25",
+  "date": "2026-07-11",
+  "starts_after": "merge PR #25",
+  "target_phase": "C0",
+  "session_style": "corta, productiva, un PR",
+  "files": [
+    "00_README_Kit_Inicio_Continuidad_C0_Post_PR25.md",
+    "01_Kit_Inicio_Sesion_C0_Autoridad_Precedencia.md",
+    "02_Prompt_Arranque_Proxima_Sesion_C0.md",
+    "03_Plan_Sesion_Corta_C0.md",
+    "04_Checklist_PR_C0.md",
+    "05_Matriz_Entradas_Salidas_C0.csv",
+    "06_Transferencia_Inicial_C0.md"
+  ]
+}
