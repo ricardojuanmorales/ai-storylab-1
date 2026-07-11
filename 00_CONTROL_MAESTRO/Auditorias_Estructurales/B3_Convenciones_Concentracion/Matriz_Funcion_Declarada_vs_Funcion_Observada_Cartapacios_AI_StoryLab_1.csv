@@ -1,0 +1,30 @@
+﻿cartapacio_raiz,archivos,profundidad_promedio,tipos_predominantes,funcion_declarada,funcion_observada_provisional,nivel_coherencia_provisional,riesgo_preliminar,decision_humana
+(raiz),16,0.0,"Documento (4), Decisión (4), Configuración (3), Guía (3), Código (2)",pendiente_revision_humana,"Documento (4), Decisión (4), Configuración (3), Guía (3), Código (2)",indeterminado,pendiente,pendiente
+.specify,11,2.55,"Especificación (8), Guía (2), Documento (1)",pendiente_revision_humana,"Especificación (8), Guía (2), Documento (1)",indeterminado,pendiente,pendiente
+00_CONTROL_MAESTRO,53,2.49,"Especificación (12), Guía (11), Documento (9), Protocolo (6), Matriz (5)",pendiente_revision_humana,"Especificación (12), Guía (11), Documento (9), Protocolo (6), Matriz (5)",indeterminado,pendiente,pendiente
+01_FUNDAMENTO_FILOSOFICO,7,1.57,"Guía (5), Documento (2)",pendiente_revision_humana,"Guía (5), Documento (2)",indeterminado,pendiente,pendiente
+02_ARQUITECTURA_CONCEPTUAL,7,1.86,"Arquitectura (6), Mapa (1)",pendiente_revision_humana,"Arquitectura (6), Mapa (1)",indeterminado,pendiente,pendiente
+03_METODOLOGIA_Y_FLUJO_DE_TRABAJO,6,1.83,"Guía (3), Gate (1), Especificación (1), Continuidad (1)",pendiente_revision_humana,"Guía (3), Gate (1), Especificación (1), Continuidad (1)",indeterminado,pendiente,pendiente
+04_GOBERNANZA_ETICA_Y_RIESGOS,9,1.89,"Guía (6), Documento (2), Decisión (1)",pendiente_revision_humana,"Guía (6), Documento (2), Decisión (1)",indeterminado,pendiente,pendiente
+05_COMPETENCIAS_Y_PERFILES,81,3.15,"Guía (49), Documento (12), Matriz (9), Referencia (5), Continuidad (3)",pendiente_revision_humana,"Guía (49), Documento (12), Matriz (9), Referencia (5), Continuidad (3)",indeterminado,pendiente,pendiente
+06_PASTILLAS_MODULARES,5,1.8,Guía (5),pendiente_revision_humana,Guía (5),indeterminado,pendiente,pendiente
+07_PLANTILLAS_Y_MODELOS,11,1.91,"Modelo (10), Referencia (1)",pendiente_revision_humana,"Modelo (10), Referencia (1)",indeterminado,pendiente,pendiente
+08_CURSOS_PROGRAMAS_Y_TRAYECTORIAS,7,2.29,Guía (7),pendiente_revision_humana,Guía (7),indeterminado,pendiente,pendiente
+09_IA_AGENTES_Y_COPILOTOS,7,1.86,"Guía (5), Auditoría (1), Documento (1)",pendiente_revision_humana,"Guía (5), Auditoría (1), Documento (1)",indeterminado,pendiente,pendiente
+10_REPOSITORIOS_Y_FLUJO_TECNICO,9,1.89,"Guía (6), Auxiliar (2), Documento (1)",pendiente_revision_humana,"Guía (6), Auxiliar (2), Documento (1)",indeterminado,pendiente,pendiente
+11_MULTIMODALIDAD_Y_PUBLICACION,6,1.83,Guía (6),pendiente_revision_humana,Guía (6),indeterminado,pendiente,pendiente
+12_DISENO_INSTRUCCIONAL_UNIVERSAL,6,1.83,"Guía (5), Matriz (1)",pendiente_revision_humana,"Guía (5), Matriz (1)",indeterminado,pendiente,pendiente
+13_INVESTIGACION_Y_EVIDENCIA,6,1.83,Guía (6),pendiente_revision_humana,Guía (6),indeterminado,pendiente,pendiente
+14_COMUNIDAD_TRANSFERENCIA_Y_ESCALAMIENTO,6,1.83,Continuidad (6),pendiente_revision_humana,Continuidad (6),indeterminado,pendiente,pendiente
+15_EVALUACION_CALIDAD_Y_AUDITORIA,16,1.94,"Auditoría (11), Gate (4), Decisión (1)",pendiente_revision_humana,"Auditoría (11), Gate (4), Decisión (1)",indeterminado,pendiente,pendiente
+16_SEGURIDAD_PRIVACIDAD_Y_DATOS,13,1.92,"Guía (7), Documento (3), Modelo (2), Auditoría (1)",pendiente_revision_humana,"Guía (7), Documento (3), Modelo (2), Auditoría (1)",indeterminado,pendiente,pendiente
+17_INTERNACIONALIZACION_LOCALIZACION,5,1.8,"Guía (4), Referencia (1)",pendiente_revision_humana,"Guía (4), Referencia (1)",indeterminado,pendiente,pendiente
+18_DOCUMENTACION_ACTIVA,334,2.9,"Continuidad (176), Auxiliar (38), Decisión (37), Gate (17), Matriz (15)",pendiente_revision_humana,"Continuidad (176), Auxiliar (38), Decisión (37), Gate (17), Matriz (15)",indeterminado,pendiente,pendiente
+19_IMPLEMENTACION_Y_DESPLIEGUE,12,2.08,"Guía (9), Plan (1), Documento (1), Mapa (1)",pendiente_revision_humana,"Guía (9), Plan (1), Documento (1), Mapa (1)",indeterminado,pendiente,pendiente
+20_MANTENIMIENTO_Y_EVOLUCION,23,1.96,"Registro de deuda (13), Guía (8), Documento (1), Gate (1)",pendiente_revision_humana,"Registro de deuda (13), Guía (8), Documento (1), Gate (1)",indeterminado,pendiente,pendiente
+21_WIKI_DOCUMENTACION_HUMANA,32,1.94,"Guía (15), Documento (9), Continuidad (6), Gate (2)",pendiente_revision_humana,"Guía (15), Documento (9), Continuidad (6), Gate (2)",indeterminado,pendiente,pendiente
+99_ARCHIVO_HISTORICO,92,5.0,"Histórico (33), Código (32), Guía (18), Configuración (8), Decisión (1)",pendiente_revision_humana,"Histórico (33), Código (32), Guía (18), Configuración (8), Decisión (1)",indeterminado,pendiente,pendiente
+prompts,1,2.0,Prompt (1),pendiente_revision_humana,Prompt (1),indeterminado,pendiente,pendiente
+public,3,3.0,Activo (3),pendiente_revision_humana,Activo (3),indeterminado,pendiente,pendiente
+scripts,1,1.0,Auxiliar (1),pendiente_revision_humana,Auxiliar (1),indeterminado,pendiente,pendiente
+src,35,1.94,Código (35),pendiente_revision_humana,Código (35),indeterminado,pendiente,pendiente
