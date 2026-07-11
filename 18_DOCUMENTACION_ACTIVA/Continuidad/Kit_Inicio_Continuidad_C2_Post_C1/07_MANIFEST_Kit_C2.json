@@ -1,0 +1,19 @@
+{
+  "package": "Kit_Inicio_Continuidad_C2_Post_C1",
+  "date": "2026-07-11",
+  "starts_after": "merge PR #30 and local synchronization of main",
+  "base_commit": "5c14bf5146dd051c2f7fc75d498d01a02d0b99dc",
+  "target_phase": "C2",
+  "session_style": "corta, productiva, un PR, cero migraciones",
+  "gate": "GATE-CORR-G1",
+  "debt_focus": "DEBT-GOV-003",
+  "files": [
+    "00_README_Kit_Inicio_Continuidad_C2_Post_C1.md",
+    "01_Kit_Inicio_Sesion_C2_Preparacion_Contenedores.md",
+    "02_Prompt_Arranque_Proxima_Sesion_C2.md",
+    "03_Plan_Sesion_Corta_C2.md",
+    "04_Checklist_PR_C2.md",
+    "05_Matriz_Entradas_Salidas_C2.csv",
+    "06_Transferencia_Inicial_C2.md"
+  ]
+}
