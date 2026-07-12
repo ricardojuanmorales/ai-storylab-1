@@ -1,43 +1,4 @@
-# Reportes_Auditoria
-
-**Proyecto:** AI StoryLab 1  
-**Versión estructura:** v0.4.0  
-**Estado:** Pendiente_Activacion  
-**ID maestro relacionado:** ASTL-V040-STD-001
-
-## Propósito
-
-Describir la función de este cartapacio dentro de la estructura N3 Foundation de AI StoryLab 1.
-
-## Qué contiene
-
-Pendiente de poblamiento según necesidad, spec, decisión o documentación activa.
-
-## Qué no contiene
-
-No debe contener documentos fuera de su función, versiones reemplazadas sin archivar, ni implementación prematura de backend, APIs externas, autenticación, base de datos remota o subida automática de archivos.
-
-## Relación con carpetas vecinas
-
-Debe mantener referencias lógicas hacia documentos canónicos y evitar duplicación.
-
-## Criterios de colocación
-
-Colocar aquí solo documentos cuya función primaria corresponda a este cartapacio.
-
-## Riesgos de seguridad y privacidad
-
-Revisar si los documentos en esta carpeta tocan datos personales, datos educativos, menores, importación/exportación, IA externa, archivos multimedia, backend futuro, autenticación futura o analíticas.
-
-## Relación con WIKI_SYNC
-
-Si una decisión o documento afecta a estudiantes, facilitadores, docentes, familias, desarrolladores o revisores, registrar deuda WIKI_SYNC.
-
-## Última revisión
-
-Pendiente.
-
----
+# Arquitectura y Diseño del Ecosistema
 
 <!-- C2_BOUNDARY_README -->
 
@@ -45,7 +6,7 @@ Pendiente.
 
 ### Propósito de la frontera
 
-Definir la frontera futura para reportes formales de auditoría documental, institucional, técnica o estructural.
+Preparar la frontera candidata para productos de arquitectura y diseño del ecosistema AI StoryLab 1. Esta ruta no renombra, sustituye, depreca ni elimina `02_ARQUITECTURA_CONCEPTUAL`.
 
 ### Autoridad documental
 
@@ -59,7 +20,7 @@ Este README no sustituye esas fuentes ni autoriza una migración.
 
 Durante C2 se permite únicamente documentación de frontera.
 
-Después de la autorización correspondiente podrán incorporarse reportes finales aprobados y sus metadatos de trazabilidad.
+En fases posteriores autorizadas podrán evaluarse productos de arquitectura conceptual, funcional y técnica, diseño funcional y UX, modelo de datos, seguridad, privacidad y decisiones arquitectónicas.
 
 ### Contenido excluido
 
@@ -80,7 +41,7 @@ modifica su identidad, autoridad, vigencia, precedencia ni estado.
 
 ### Fase autorizada para poblar la ruta
 
-Una fase posterior expresamente autorizada.
+C3 o C4, según corresponda y mediante una operación independiente.
 
 La incorporación de contenido requiere aprobación previa de
 `GATE-CORR-G1` y una operación independiente.
