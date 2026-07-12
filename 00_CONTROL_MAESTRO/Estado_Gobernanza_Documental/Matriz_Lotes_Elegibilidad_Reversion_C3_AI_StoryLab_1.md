@@ -2,7 +2,7 @@
 
 **Identificador:** `DOC-DOC-016`
 **Fecha:** 2026-07-12
-**Estado:** Propuesta para revisión humana
+**Estado:** Reevaluada post-PR36; pendiente de apertura de migración
 **Gate:** `GATE-CORR-G2 · pending`
 
 ---
@@ -11,7 +11,8 @@
 
 | Lote | Documentos | Ruta objetivo | Condiciones antes de mover | Estrategia futura | Reversión |
 |---|---|---|---|---|---|
-| C3-A | `DOC-ARQ-001`, `DOC-ARQ-002` | `02/.../Arquitectura_Funcional/` | identidad, vigencia, enlaces y conflicto C4 verificados | commit puro de `git mv`; metadatos en commit separado | `git revert` del commit del lote |
+| C3-A0 | `DOC-ARQ-001` | `02/.../Arquitectura_Funcional/` | identidad, vigencia, referencias y destino verificados | commit puro de `git mv`; referencias en commit separado | `git revert` del commit C3-A0 |
+| C3-A2 | `DOC-ARQ-002` | `02/.../Arquitectura_Funcional/` | ejecutar después de C3-A0, C3-C y C3-B; validar los nueve antecedentes declarados | commit puro de `git mv`; referencias finales en commit separado | `git revert` del commit C3-A2 |
 | C3-B | `DOC-UX-002`, `DOC-UX-004`–`DOC-UX-006` | `02/.../Diseno_Funcional_UX/` | identidad, vigencia, enlaces, accesibilidad y coherencia UX verificadas | commit puro de `git mv`; metadatos en commit separado | `git revert` del commit del lote |
 | C3-C | `DOC-GOB-007`, `DOC-UX-003` | `02/.../Arquitectura_Funcional/` + `02/.../Diseno_Funcional_UX/` | autoridad y destino resueltos; referencias, hashes y reversión verificados; aprobación humana G2 | un commit atómico de movimiento para el par; metadatos y enlaces en commit separado | `git revert` del commit atómico C3-C |
 | C3-H2 | `DOC-UX-007` | pendiente | separación UX, roles, seguridad y dependencia C4 | no mover | no aplica |
@@ -35,12 +36,14 @@ aprobación humana
 
 ```text
 C3-P0 preparación documental
-C3-A1 movimiento puro arquitectura funcional
-C3-A2 enlaces y metadatos arquitectura funcional
+C3-A0.1 movimiento puro del mapa funcional
+C3-A0.2 referencias y metadatos del mapa funcional
 C3-C1 movimiento atómico marco de misión + flujos
-C3-C2 enlaces y metadatos del par documental
-C3-B1 movimiento puro diseño funcional y UX restante
-C3-B2 enlaces y metadatos diseño funcional y UX restante
+C3-C2 referencias y metadatos del par documental
+C3-B1 movimiento puro del bloque UX restante
+C3-B2 referencias y metadatos del bloque UX
+C3-A2.1 movimiento puro de requisitos funcionales
+C3-A2.2 referencias finales y validación integral
 GATE-CORR-G2 decisión humana
 merge
 cierre documental C3
@@ -64,3 +67,21 @@ La operación futura se detiene si:
 Esta matriz no aprueba lotes ni autoriza movimientos.
 
 Solo define cómo podrían ejecutarse y revertirse.
+
+---
+
+## 6. Resultado de reevaluación post-PR36
+
+```text
+C3-A0: apto para preparar migración
+C3-C: apto para preparar migración atómica
+C3-B: apto para preparar migración después de C3-C
+C3-A2: apto para preparar migración al cierre de secuencia
+C3-H2: fuera de alcance; permanece C3-C4
+GATE-CORR-G2: pending
+aptitud_aprobacion_G2: no_todavia
+```
+
+La reevaluación habilita recomendar una rama independiente de migración controlada.
+
+No autoriza movimientos ni aprueba el gate.
