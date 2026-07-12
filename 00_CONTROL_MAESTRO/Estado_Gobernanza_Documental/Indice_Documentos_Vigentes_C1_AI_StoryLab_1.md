@@ -138,7 +138,7 @@ No gobiernan el contenido de una spec o instancia ya aprobada.
 
 | ID | Documento | Ruta actual | Función | Estado | Condición de ruta |
 |---|---|---|---|---|---|
-| `DOC-ARQ-001` | Mapa Funcional Preliminar del Ecosistema | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Mapa_Funcional_Preliminar_Ecosistema_AI_StoryLab_v0_6.md` | Arquitectura funcional | `active` | `transitoria`, elevación C3 |
+| `DOC-ARQ-001` | Mapa Funcional Preliminar del Ecosistema | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Mapa_Funcional_Preliminar_Ecosistema_AI_StoryLab_v0_6.md` | Arquitectura funcional | `active` | `candidata_en_rama`, pendiente G2 y merge |
 | `DOC-UX-002` | Modelo de Experiencia de Usuario | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Modelo_Experiencia_Usuario_AI_StoryLab_v0_6.md` | Modelo UX | `active` | `transitoria`, elevación C3 |
 | `DOC-UX-003` | Flujos Funcionales Conceptuales | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Flujos_Funcionales_Conceptuales_AI_StoryLab_v0_6.md` | Diseño funcional | `active` | `transitoria`, elevación C3 |
 | `DOC-UX-004` | Recorridos de Usuario Sintéticos | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Recorridos_Usuario_Sinteticos_AI_StoryLab_v0_6.md` | Recorridos UX | `active` | `transitoria`, elevación C3 |

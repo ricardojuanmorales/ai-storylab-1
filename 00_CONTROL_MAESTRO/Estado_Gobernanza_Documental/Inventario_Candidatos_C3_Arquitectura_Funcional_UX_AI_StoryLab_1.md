@@ -19,7 +19,7 @@ La preparación no cambia identidad, autoridad, vigencia ni precedencia.
 
 | ID | Fuente | Ruta actual | Destino candidato | Lote | Estado preparatorio |
 |---|---|---|---|---|---|
-| `DOC-ARQ-001` | Mapa Funcional Preliminar del Ecosistema | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Mapa_Funcional_Preliminar_Ecosistema_AI_StoryLab_v0_6.md` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Mapa_Funcional_Preliminar_Ecosistema_AI_StoryLab_v0_6.md` | C3-A0 | apto_preparar_migracion_raiz |
+| `DOC-ARQ-001` | Mapa Funcional Preliminar del Ecosistema | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Mapa_Funcional_Preliminar_Ecosistema_AI_StoryLab_v0_6.md` | `misma ruta en rama; canónica al merge post-G2` | C3-A0 | movido_en_rama_pending_G2 |
 | `DOC-ARQ-002` | Requisitos Funcionales Preliminares | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Requisitos_Funcionales_Preliminares_AI_StoryLab_v0_6.md` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Requisitos_Funcionales_Preliminares_AI_StoryLab_v0_6.md` | C3-A2 | apto_preparar_migracion_cierre |
 | `DOC-UX-002` | Modelo de Experiencia de Usuario | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Modelo_Experiencia_Usuario_AI_StoryLab_v0_6.md` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Modelo_Experiencia_Usuario_AI_StoryLab_v0_6.md` | C3-B | apto_preparar_migracion_ux |
 | `DOC-UX-003` | Flujos Funcionales Conceptuales | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Flujos_Funcionales_Conceptuales_AI_StoryLab_v0_6.md` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Flujos_Funcionales_Conceptuales_AI_StoryLab_v0_6.md` | C3-C | apto_preparar_migracion_atomica |

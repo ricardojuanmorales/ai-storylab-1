@@ -152,7 +152,7 @@ Todos los documentos de esta sección conservan identidad durante C3.
 
 | ID | Estado de relación | Ruta actual | Fase de elevación | Predecessor ID | Successor ID |
 |---|---|---|---|---|---|
-| `DOC-ARQ-001` | `pending_elevation` | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Mapa_Funcional_Preliminar_Ecosistema_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
+| `DOC-ARQ-001` | `elevation_in_draft` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Mapa_Funcional_Preliminar_Ecosistema_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
 | `DOC-UX-002` | `pending_elevation` | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Modelo_Experiencia_Usuario_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
 | `DOC-UX-003` | `pending_elevation` | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Flujos_Funcionales_Conceptuales_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
 | `DOC-UX-004` | `pending_elevation` | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Recorridos_Usuario_Sinteticos_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
