@@ -2,14 +2,14 @@
 
 **Identificador:** `DOC-DOC-016`
 **Fecha:** 2026-07-12
-**Estado:** Ejecutada en rama controlada; pendiente de G2 y merge
-**Gate:** `GATE-CORR-G2 · pending`
+**Estado:** Integrada en `main` mediante PR #38
+**Gate:** `GATE-CORR-G2 · approved / fulfilled`
 
 ---
 
 ## 1. Matriz
 
-| Lote | Documentos | Ruta objetivo | Condiciones antes de mover | Estrategia futura | Reversión |
+| Lote | Documentos | Ruta objetivo | Condiciones antes de mover | Estrategia ejecutada | Reversión |
 |---|---|---|---|---|---|
 | C3-A0 | `DOC-ARQ-001` | `02/.../Arquitectura_Funcional/` | identidad, vigencia, referencias y destino verificados | commit puro de `git mv`; referencias en commit separado | `git revert` del commit C3-A0 |
 | C3-A2 | `DOC-ARQ-002` | `02/.../Arquitectura_Funcional/` | ejecutar después de C3-A0, C3-C y C3-B; validar los nueve antecedentes declarados | commit puro de `git mv`; referencias finales en commit separado | `git revert` del commit C3-A2 |
@@ -32,7 +32,7 @@ reversión ensayada
 aprobación humana
 ```
 
-## 3. Secuencia futura recomendada
+## 3. Secuencia ejecutada
 
 ```text
 C3-P0 preparación documental
@@ -51,7 +51,7 @@ cierre documental C3
 
 ## 4. Reglas de detención
 
-La operación futura se detiene si:
+La operación se habría detenido si:
 
 - cambia el head del PR;
 - aparece una fuente competidora;
@@ -64,13 +64,13 @@ La operación futura se detiene si:
 
 ## 5. Efecto de esta matriz
 
-Esta matriz no aprueba lotes ni autoriza movimientos.
+Esta matriz definió cómo ejecutar y revertir los lotes.
 
-Solo define cómo podrían ejecutarse y revertirse.
+La aprobación humana y la integración efectiva constan en la sección 7.
 
 ---
 
-## 6. Resultado de reevaluación post-PR36
+## 6. Resultado histórico de reevaluación post-PR36
 
 ```text
 C3-A0: apto para preparar migración
@@ -91,16 +91,16 @@ No autoriza movimientos ni aprueba el gate.
 
 | Lote | Commit puro | Commit de referencias | Estado |
 |---|---|---|---|
-| `C3-A0` | `169339a273d28bed8cf2df71d171886bb1e6c1d7` | `a5fd5f579bbca2ad452b3dd07748d79880622eb5` | `ejecutado_en_rama_pending_G2` |
-| `C3-C` | `fa18235905b6733a5f67fd99890e0c90726326b1` | `2cbd61054eb244cb6c15f40432c931b4698a13c2` | `ejecutado_en_rama_pending_G2` |
-| `C3-B` | `14ef4ab2ba5711db3a710764e7fb3c943c00cd34` | `99a6b955bd3e56eb4bfc46a320db46bdb33fae5b` | `ejecutado_en_rama_pending_G2` |
-| `C3-A2` | `f1f9bb10e3c8a625ef83ea4f545b0cf6e814b1d9` | `3eba007f32bfaa3aeea4d49d9f7ef1ad2131d841` | `ejecutado_en_rama_pending_G2` |
+| `C3-A0` | `169339a273d28bed8cf2df71d171886bb1e6c1d7` | `a5fd5f579bbca2ad452b3dd07748d79880622eb5` | `integrado_en_main_post_G2` |
+| `C3-C` | `fa18235905b6733a5f67fd99890e0c90726326b1` | `2cbd61054eb244cb6c15f40432c931b4698a13c2` | `integrado_en_main_post_G2` |
+| `C3-B` | `14ef4ab2ba5711db3a710764e7fb3c943c00cd34` | `99a6b955bd3e56eb4bfc46a320db46bdb33fae5b` | `integrado_en_main_post_G2` |
+| `C3-A2` | `f1f9bb10e3c8a625ef83ea4f545b0cf6e814b1d9` | `3eba007f32bfaa3aeea4d49d9f7ef1ad2131d841` | `integrado_en_main_post_G2` |
 
 ```text
-GATE-CORR-G2: pending
-merge_authorized: false
-DEBT-GOV-004: blocked
+GATE-CORR-G2: approved / fulfilled
+merge_commit: c1ebf74408716846f9eb2c131ce989b7a188fa1c
+DEBT-GOV-004: blocked · decisión de resolución pendiente
 ```
 
-La ejecución en rama produce evidencia. No autoriza el merge.
+La ejecución fue aprobada e integrada mediante PR #38. El cierre de deuda y de C3 permanece separado.
 <!-- C3_EXECUTION_EVIDENCE_END -->
