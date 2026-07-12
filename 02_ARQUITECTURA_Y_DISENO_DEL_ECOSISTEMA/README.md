@@ -50,7 +50,7 @@ La incorporación de contenido requiere aprobación previa de
 
 `GATE-CORR-G1 · Estructura objetivo`
 
-Estado: `pending`.
+Estado: `approved / fulfilled`.
 
 La existencia de este README produce evidencia para el gate, pero no lo
 aprueba automáticamente.
@@ -67,9 +67,9 @@ C2 no inicia C3 ni C4.
 
 ### Estado del contenedor
 
-`preparado_en_C2_sujeto_a_G1`
+`preparado_en_C2_con_G1_cumplido`
 
-`DEBT-GOV-003` permanece `open`.
+`DEBT-GOV-003` está `resolved`. `DEBT-GOV-004` permanece `blocked`.
 
 v0.8.0 no está abierto.
 
@@ -84,3 +84,37 @@ Después del merge, revertir el commit de C2.
 
 No será necesario restaurar documentos sustantivos porque C2 no traslada
 contenido.
+
+---
+
+## Enmienda de preparación C3
+
+<!-- C3_PREPARATION_BOUNDARY_UPDATE -->
+
+### Estado vigente
+
+```text
+C2: cerrado
+GATE-CORR-G1: approved / fulfilled
+DEBT-GOV-003: resolved
+C3: preparación documental iniciada
+migración funcional: no iniciada
+GATE-CORR-G2: pending / future
+DEBT-GOV-004: blocked
+C4: no iniciado
+v0.8.0: no abierto
+implementación: no autorizada
+```
+
+### Subfronteras preparadas
+
+- `Arquitectura_Funcional/`
+- `Diseno_Funcional_UX/`
+
+Estas subfronteras contienen únicamente README de preparación.
+
+No contienen fuentes sustantivas y no autorizan movimientos.
+
+### Regla de activación
+
+La migración funcional requerirá una operación independiente, revisión por lotes y aprobación humana explícita de `GATE-CORR-G2`.
