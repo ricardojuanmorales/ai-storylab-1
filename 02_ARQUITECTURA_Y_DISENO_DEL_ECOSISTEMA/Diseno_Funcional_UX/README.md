@@ -23,13 +23,16 @@ DOC-UX-006 · Criterios de Interacción Humano-IA
 ### Estado
 
 ```text
-C3: migración funcional integrada
+C3: closed / integrated
 GATE-CORR-G2: approved / fulfilled
-PR: #38
-merge: c1ebf74408716846f9eb2c131ce989b7a188fa1c
+PR de migración: #38
+merge funcional: c1ebf74408716846f9eb2c131ce989b7a188fa1c
+PR post-G2: #39
+merge post-G2: 369ee01023911538ec313af82b14bc54c8cf4d6e
 canonical_en_main: yes
-DEBT-GOV-004: blocked · decisión de resolución pendiente
-cierre formal C3: pendiente
+DEBT-GOV-004: resolved
+C4: no iniciado
+GATE-CORR-G3: pending / future
 ```
 
 ### Contenido permitido
@@ -49,7 +52,7 @@ cierre formal C3: pendiente
 
 ### HOLD compartido C3–C4
 
-`DOC-UX-007 · Vista del Facilitador No Vigilante` permanece fuera de esta integración.
+`DOC-UX-007 · Vista del Facilitador No Vigilante` permanece fuera del alcance cerrado de C3 y en HOLD para evaluación futura C4.
 
 Su posible elevación requiere separar y validar dimensiones UX, roles y seguridad antes de decidir una ruta.
 

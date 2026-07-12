@@ -208,7 +208,7 @@ La deuda de C8 es una obligación nueva y más amplia.
 | `DEBT-GOV-001` | Formalizar una sola fuente activa por alcance | P1 | `accepted` | C1 | `DEC-AUD25-001`, `DEC-C1-004` |
 | `DEBT-GOV-002` | Ratificar autoridad distribuida de SDD | P1 | `resolved` | C0 | `DEC-AUD25-002`, `DEC-C0-002`–`005` |
 | `DEBT-GOV-003` | Crear contenedor funcional estable para arquitectura y diseño | P1 | `resolved` | C2 | `DEC-AUD25-003` |
-| `DEBT-GOV-004` | Elevar arquitectura funcional y UX desde rutas de continuidad | P1 | `blocked` | C3 | `DEC-AUD25-003`, `DEC-C1-009` |
+| `DEBT-GOV-004` | Elevar arquitectura funcional y UX desde rutas de continuidad | P1 | `resolved` | C3 | `DEC-AUD25-003`, `DEC-C1-009`, `DEC-C3-001`, `DEC-C3-002` |
 | `DEBT-GOV-005` | Elevar arquitectura técnica, datos, seguridad y privacidad | P1 | `blocked` | C4 | `DEC-AUD25-003`, `DEC-C1-009` |
 | `DEBT-GOV-006` | Separar método de `00` y resultados de `15` | P1 | `open` | C5 | `DEC-AUD25-005` |
 | `DEBT-GOV-007` | Formalizar ciclo de vida de `18_DOCUMENTACION_ACTIVA` | P1 | `open` | C6 | `DEC-AUD25-006` |
@@ -282,6 +282,49 @@ La resolución de `DEBT-GOV-003` no resuelve automáticamente:
 - `DEBT-GOV-009`;
 - ninguna deuda funcional, técnica o de implementación.
 
+
+### Resolución C3 de `DEBT-GOV-004`
+
+<!-- C3_CLOSURE_DEBT_UPDATE -->
+
+```yaml
+debt_id: DEBT-GOV-004
+status: resolved
+resolution_date: 2026-07-12
+decision_reference:
+  - DEC-C3-001
+  - DEC-C3-002
+  - aprobación humana explícita en PR #39
+resolution_reference:
+  - PR #38
+  - merge c1ebf74408716846f9eb2c131ce989b7a188fa1c
+  - GATE-CORR-G2 approved / fulfilled
+  - PR #39
+  - head aprobado a620d93be7ed5f7ae229265f1e42edeabcbf2c98
+  - merge 369ee01023911538ec313af82b14bc54c8cf4d6e
+  - DOC-DOC-028
+  - DOC-DOC-029
+  - DOC-DOC-030
+validation:
+  sources_elevated: 8
+  hashes_equivalent: 8/8
+  movement_commits: 4
+  reversal_rehearsals: 4
+  competing_copies: 0
+  substantive_sources_modified_by_closure: 0
+  DOC_UX_007_modified: false
+  C4_started: false
+notes:
+  - C3 queda cerrado
+  - GATE-CORR-G3 permanece pending / future
+  - DOC-UX-007 permanece en HOLD para evaluación futura C4
+  - DEBT-GOV-005 permanece blocked
+  - v0.8.0 no está abierto
+  - implementación no está autorizada
+```
+
+La resolución de `DEBT-GOV-004` no resuelve automáticamente `DEBT-GOV-005`
+ni inicia C4.
 ### `DEBT-GOV-008`
 
 Requiere:

@@ -98,9 +98,13 @@ No autoriza movimientos ni aprueba el gate.
 
 ```text
 GATE-CORR-G2: approved / fulfilled
-merge_commit: c1ebf74408716846f9eb2c131ce989b7a188fa1c
-DEBT-GOV-004: blocked · decisión de resolución pendiente
+migration_merge: c1ebf74408716846f9eb2c131ce989b7a188fa1c
+post_G2_merge: 369ee01023911538ec313af82b14bc54c8cf4d6e
+DEBT-GOV-004: resolved
+C3: closed
+C4: no iniciado
+DOC-UX-007: HOLD para evaluación futura C4
 ```
 
-La ejecución fue aprobada e integrada mediante PR #38. El cierre de deuda y de C3 permanece separado.
+La ejecución fue aprobada e integrada mediante PR #38. La resolución de deuda y el cierre formal de C3 fueron aprobados por autoridad humana e integrados como evidencia mediante PR #39. C4 permanece sin iniciar.
 <!-- C3_EXECUTION_EVIDENCE_END -->

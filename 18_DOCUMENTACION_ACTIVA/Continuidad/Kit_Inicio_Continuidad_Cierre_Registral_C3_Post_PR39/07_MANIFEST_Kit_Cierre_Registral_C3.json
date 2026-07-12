@@ -1,0 +1,26 @@
+{
+  "package": "Kit_Inicio_Continuidad_Cierre_Registral_C3_Post_PR39",
+  "date": "2026-07-12",
+  "starts_after": "merge PR #39 and local construction of final C3 registry package",
+  "base_commit": "369ee01023911538ec313af82b14bc54c8cf4d6e",
+  "registry_package_head": "e91d0993a7e592e7c4a65b901e12cee6c17aea4f",
+  "branch": "docs/c3-cierre-registral-final",
+  "target_operation": "publish final C3 registry branch and open draft PR",
+  "target_phase": "C3 registry closure only",
+  "session_style": "corta, auditable, draft PR, no C4",
+  "gate_state": "GATE-CORR-G3 pending / future",
+  "debt_state": {
+    "DEBT-GOV-004": "resolved",
+    "DEBT-GOV-005": "blocked"
+  },
+  "files": [
+    "00_README_Kit_Inicio_Continuidad_Cierre_Registral_C3_Post_PR39.md",
+    "01_Kit_Inicio_Sesion_Cierre_Registral_C3.md",
+    "02_Prompt_Arranque_Proxima_Sesion_Cierre_Registral_C3.md",
+    "03_Plan_Sesion_Corta_Cierre_Registral_C3.md",
+    "04_Checklist_PR_Cierre_Registral_C3.md",
+    "05_Matriz_Entradas_Salidas_Cierre_Registral_C3.csv",
+    "06_Transferencia_Inicial_Cierre_Registral_C3.md",
+    "08_SHA256SUMS.txt"
+  ]
+}
