@@ -153,11 +153,11 @@ Todos los documentos de esta sección conservan identidad durante C3.
 | ID | Estado de relación | Ruta actual | Fase de elevación | Predecessor ID | Successor ID |
 |---|---|---|---|---|---|
 | `DOC-ARQ-001` | `elevation_in_draft` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Mapa_Funcional_Preliminar_Ecosistema_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
-| `DOC-UX-002` | `pending_elevation` | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Modelo_Experiencia_Usuario_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
+| `DOC-UX-002` | `elevation_in_draft` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Modelo_Experiencia_Usuario_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
 | `DOC-UX-003` | `elevation_in_draft` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Flujos_Funcionales_Conceptuales_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
-| `DOC-UX-004` | `pending_elevation` | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Recorridos_Usuario_Sinteticos_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
-| `DOC-UX-005` | `pending_elevation` | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Criterios_Accesibilidad_Claridad_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
-| `DOC-UX-006` | `pending_elevation` | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Criterios_Interaccion_Humano_IA_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
+| `DOC-UX-004` | `elevation_in_draft` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Recorridos_Usuario_Sinteticos_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
+| `DOC-UX-005` | `elevation_in_draft` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Criterios_Accesibilidad_Claridad_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
+| `DOC-UX-006` | `elevation_in_draft` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Criterios_Interaccion_Humano_IA_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
 | `DOC-ARQ-002` | `pending_elevation` | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Requisitos_Funcionales_Preliminares_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
 | `DOC-GOB-007` | `elevation_in_draft` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Marco_Estandarizado_Mision_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
 

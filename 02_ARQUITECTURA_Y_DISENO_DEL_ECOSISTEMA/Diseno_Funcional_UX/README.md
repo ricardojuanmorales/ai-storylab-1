@@ -79,6 +79,10 @@ Los documentos pueden existir en una rama aislada para producir evidencia. No pu
 Documentos presentes en esta frontera:
 
 - `DOC-UX-003`
+- `DOC-UX-002`
+- `DOC-UX-004`
+- `DOC-UX-006`
+- `DOC-UX-005`
 
 ```text
 canonical_en_main: no
