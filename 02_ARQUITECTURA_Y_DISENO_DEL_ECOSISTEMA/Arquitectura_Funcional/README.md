@@ -68,6 +68,7 @@ Los documentos pueden existir en una rama aislada para producir evidencia. No pu
 Documentos presentes en esta frontera:
 
 - `DOC-ARQ-001`
+- `DOC-GOB-007`
 
 ```text
 canonical_en_main: no
