@@ -11,7 +11,18 @@ Preparar una ruta estable para documentos que describen la organización funcion
 ```text
 DOC-ARQ-001 · Mapa Funcional Preliminar del Ecosistema
 DOC-ARQ-002 · Requisitos Funcionales Preliminares
+DOC-GOB-007 · Marco Estandarizado de Misión
 ```
+
+### Autoridad funcional acotada
+
+`DOC-GOB-007` se clasifica como marco normativo funcional sobre la estructura de las misiones.
+
+No gobierna el repositorio, la colocación documental, la arquitectura técnica ni la implementación.
+
+Su elevación futura se coordinará con `DOC-UX-003` mediante el lote conjunto `C3-C`.
+
+Esta clasificación no autoriza movimiento.
 
 ### Estado
 
@@ -41,7 +52,7 @@ movement_authorized: false
 
 ### Identidad documental
 
-La elevación futura deberá preservar los identificadores `DOC-ARQ-001` y `DOC-ARQ-002`.
+La elevación futura deberá preservar los identificadores `DOC-ARQ-001`, `DOC-ARQ-002` y `DOC-GOB-007`.
 
 La fuente actual seguirá siendo canónica hasta que el movimiento sea aprobado y fusionado.
 

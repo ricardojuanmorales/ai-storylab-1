@@ -12,8 +12,8 @@
 | Lote | Documentos | Ruta objetivo | Condiciones antes de mover | Estrategia futura | Reversión |
 |---|---|---|---|---|---|
 | C3-A | `DOC-ARQ-001`, `DOC-ARQ-002` | `02/.../Arquitectura_Funcional/` | identidad, vigencia, enlaces y conflicto C4 verificados | commit puro de `git mv`; metadatos en commit separado | `git revert` del commit del lote |
-| C3-B | `DOC-UX-002`–`DOC-UX-006` | `02/.../Diseno_Funcional_UX/` | identidad, vigencia, enlaces, accesibilidad y coherencia UX verificadas | commit puro de `git mv`; metadatos en commit separado | `git revert` del commit del lote |
-| C3-H1 | `DOC-GOB-007` | pendiente | dictamen de autoridad y destino | no mover | no aplica |
+| C3-B | `DOC-UX-002`, `DOC-UX-004`–`DOC-UX-006` | `02/.../Diseno_Funcional_UX/` | identidad, vigencia, enlaces, accesibilidad y coherencia UX verificadas | commit puro de `git mv`; metadatos en commit separado | `git revert` del commit del lote |
+| C3-C | `DOC-GOB-007`, `DOC-UX-003` | `02/.../Arquitectura_Funcional/` + `02/.../Diseno_Funcional_UX/` | autoridad y destino resueltos; referencias, hashes y reversión verificados; aprobación humana G2 | un commit atómico de movimiento para el par; metadatos y enlaces en commit separado | `git revert` del commit atómico C3-C |
 | C3-H2 | `DOC-UX-007` | pendiente | separación UX, roles, seguridad y dependencia C4 | no mover | no aplica |
 
 ## 2. Checks obligatorios por lote
@@ -37,8 +37,10 @@ aprobación humana
 C3-P0 preparación documental
 C3-A1 movimiento puro arquitectura funcional
 C3-A2 enlaces y metadatos arquitectura funcional
-C3-B1 movimiento puro diseño funcional y UX
-C3-B2 enlaces y metadatos diseño funcional y UX
+C3-C1 movimiento atómico marco de misión + flujos
+C3-C2 enlaces y metadatos del par documental
+C3-B1 movimiento puro diseño funcional y UX restante
+C3-B2 enlaces y metadatos diseño funcional y UX restante
 GATE-CORR-G2 decisión humana
 merge
 cierre documental C3

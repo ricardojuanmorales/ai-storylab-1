@@ -16,6 +16,19 @@ DOC-UX-005 · Criterios de Accesibilidad y Claridad
 DOC-UX-006 · Criterios de Interacción Humano-IA
 ```
 
+### Coordinación documental C3-C
+
+`DOC-UX-003` conserva destino en esta frontera, pero su posible movimiento deberá ejecutarse conjuntamente con `DOC-GOB-007`.
+
+El par documental se tratará como una unidad atómica de migración con dos destinos coordinados:
+
+```text
+DOC-GOB-007 → Arquitectura_Funcional/
+DOC-UX-003  → Diseno_Funcional_UX/
+```
+
+Esta coordinación no autoriza movimiento ni aprueba `GATE-CORR-G2`.
+
 ### Estado
 
 ```text
