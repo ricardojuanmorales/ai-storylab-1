@@ -449,6 +449,39 @@ successor_decision: none_declared
 | `DEC-C1-009` | Reconocer fuentes v0.6 y v0.7 como vigentes en rutas transitorias                             | `active` | `DOC-ARQ-001`–`004`, `DOC-UX-002`–`007`, `DOC-DAT-001`–`002`, `DOC-SEG-002`–`004` |
 | `DEC-C1-010` | Registrar sucesión y deprecación sin ejecutarlas durante C1                                   | `active` | `DOC-DOC-006`                                                                     |
 
+
+## 11.1 Decisiones de cierre C3
+
+```yaml
+decision_date: 2026-07-12
+authority: aprobación humana explícita registrada en PR #39
+evidence:
+  - PR #38
+  - merge c1ebf74408716846f9eb2c131ce989b7a188fa1c
+  - PR #39
+  - head aprobado a620d93be7ed5f7ae229265f1e42edeabcbf2c98
+  - merge 369ee01023911538ec313af82b14bc54c8cf4d6e
+  - comentario de decisión humana en PR #39
+  - DOC-DOC-028
+  - DOC-DOC-029
+status: ratified
+successor_decision: none_declared
+```
+
+| Decision ID | Título | Ciclo | Documentos afectados |
+|---|---|---|---|
+| `DEC-C3-001` | Resolver `DEBT-GOV-004` tras completar la elevación funcional | `fulfilled` | `DOC-DOC-008`, `DOC-DOC-028`–`030` |
+| `DEC-C3-002` | Cerrar formalmente C3 sin iniciar C4 | `fulfilled` | `process:C3`, `DOC-UX-007`, `GATE-CORR-G3` |
+
+Límites de ambas decisiones:
+
+```text
+C4: no iniciado
+GATE-CORR-G3: pending / future
+DOC-UX-007: permanece en HOLD para evaluación futura C4
+v0.8.0: no abierto
+implementación: no autorizada
+```
 ---
 
 # 12. Decisiones no explotadas en IDs individuales durante C1

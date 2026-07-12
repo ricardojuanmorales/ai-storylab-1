@@ -4,8 +4,8 @@
 
 **Identificador:** `DOC-DOC-015`
 **Fecha:** 2026-07-12
-**Estado:** Integración G2 verificada
-**Movimiento e integración:** Completados mediante PR #38
+**Estado:** C3 cerrado; inventario final
+**Movimiento e integración:** Completados mediante PR #38; cierre post-G2 integrado mediante PR #39
 
 ---
 
@@ -50,11 +50,13 @@ lote_raiz_C3_A0: 1
 lote_atomico_C3_C: 2
 lote_UX_C3_B: 4
 lote_cierre_C3_A2: 1
-hold_clasificacion: 0
-hold_compartido_C3_C4: 1
 movimientos_puros: 4
 hashes_equivalentes: 8/8
 reversiones_ensayadas: 4
 copias_competidoras: 0
+DEBT_GOV_004: resolved
+C3: closed
+hold_compartido_transferido_a_evaluacion_futura_C4: 1
 DOC_UX_007_movido: 0
+C4: no_iniciado
 ```

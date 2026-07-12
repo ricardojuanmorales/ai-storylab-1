@@ -87,7 +87,7 @@ contenido.
 
 ---
 
-## Enmienda de preparación C3
+## Enmienda de integración y cierre C3
 
 <!-- C3_PREPARATION_BOUNDARY_UPDATE -->
 
@@ -97,12 +97,15 @@ contenido.
 C2: cerrado
 GATE-CORR-G1: approved / fulfilled
 DEBT-GOV-003: resolved
-C3: migración funcional integrada
+C3: closed / integrated
 GATE-CORR-G2: approved / fulfilled
-PR de integración: #38
-merge: c1ebf74408716846f9eb2c131ce989b7a188fa1c
-DEBT-GOV-004: blocked · decisión de resolución pendiente
-cierre formal C3: pendiente
+PR de migración funcional: #38
+merge funcional: c1ebf74408716846f9eb2c131ce989b7a188fa1c
+PR post-G2 y cierre: #39
+merge post-G2: 369ee01023911538ec313af82b14bc54c8cf4d6e
+DEBT-GOV-004: resolved
+GATE-CORR-G3: pending / future
+DOC-UX-007: HOLD para evaluación futura C4
 C4: no iniciado
 v0.8.0: no abierto
 implementación: no autorizada
@@ -119,4 +122,4 @@ Estas subfronteras contienen ocho fuentes sustantivas v0.6 integradas y sus READ
 
 `DOC-UX-007` permanece fuera de la migración y conserva su dependencia compartida C3–C4.
 
-La integración de C3 no abre C4, no abre v0.8.0 y no autoriza implementación.
+El cierre de C3 no abre C4, no aprueba `GATE-CORR-G3`, no abre v0.8.0 y no autoriza implementación.
