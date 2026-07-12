@@ -429,7 +429,7 @@ Los gates G0–G6 definidos por la auditoría se normalizan para evitar colision
 | Gate ID | Etiqueta histórica | Alcance | Estado | Ciclo | Fase |
 |---|---|---|---|---|---|
 | `GATE-CORR-G0` | G0 · Autoridad | Confirmar qué documentos gobiernan | `approved` | `fulfilled` | C0 |
-| `GATE-CORR-G1` | G1 · Estructura objetivo | Aprobar nuevo `02` y fronteras principales | `pending` | `future` | C2 |
+| `GATE-CORR-G1` | G1 · Estructura objetivo | Aprobar nuevo `02` y fronteras principales | `approved` | `fulfilled` | C2 |
 | `GATE-CORR-G2` | G2 · Migración funcional | Aprobar arquitectura funcional y UX por lote | `pending` | `future` | C3 |
 | `GATE-CORR-G3` | G3 · Migración técnica | Aprobar arquitectura técnica y decisiones | `pending` | `future` | C4 |
 | `GATE-CORR-G4` | G4 · Integridad referencial | Confirmar enlaces, gates y decisiones | `pending` | `future` | C5–C7 y C10 |
@@ -454,6 +454,58 @@ blocked_result:
   - movimientos no autorizados
   - inicio automático de C2
 ```
+
+## 11.2 Gate G1 cumplido
+
+<!-- C2_CLOSURE_GATE_UPDATE -->
+
+```yaml
+gate_id: GATE-CORR-G1
+label: G1 · Estructura objetivo
+phase: C2
+scope:
+  - aprobar nuevo contenedor funcional 02
+  - aprobar fronteras de 15
+  - aprobar frontera de continuidad en 18
+  - aprobar frontera futura de deuda en 20
+  - aprobar política y manifiestos futuros en 99
+status: approved
+lifecycle: fulfilled
+date: 2026-07-12
+authority: aprobación humana explícita registrada para PR #32
+evidence:
+  - PR #32
+  - comentario de validación previa a GATE-CORR-G1
+  - aprobación humana explícita
+  - merge 3595200378825a9d013188de87f394988c8f1de0
+  - 10 README de frontera
+  - 7 archivos añadidos
+  - 3 README ampliados de forma aditiva
+  - cero movimientos
+  - cero renombres
+  - cero eliminaciones
+dependencies:
+  - GATE-CORR-G0
+  - cierre de C1
+  - PR #31
+allowed_result:
+  - cerrar documentalmente C2
+  - reconocer las rutas objetivo como preparadas
+  - habilitar la preparación futura e independiente de C3
+blocked_result:
+  - inicio automático de C3
+  - inicio de C4
+  - migración de documentos
+  - renombres
+  - deprecaciones
+  - apertura de v0.8.0
+  - implementación
+next_gate: GATE-CORR-G2
+```
+
+La aprobación de G1 reconoce las fronteras estructurales.
+
+No autoriza poblarlas con documentos sustantivos.
 
 ---
 
@@ -697,7 +749,8 @@ implementación no está autorizada
 | `GATE-V07-OPEN-001` | `approved` | `fulfilled` | Apertura documental v0.7 |
 | `GATE-V07-CLOSE-001` | `approved` | `fulfilled` | Cierre v0.7 con deuda |
 | `GATE-CORR-G0` | `approved` | `fulfilled` | Autoridad ratificada |
-| `GATE-CORR-G1`–`G6` | `pending` | `future` | Corrección estructural posterior |
+| `GATE-CORR-G1` | `approved` | `fulfilled` | Estructura objetivo aprobada mediante PR #32 |
+| `GATE-CORR-G2`–`G6` | `pending` | `future` | Corrección estructural posterior |
 | `GATE-C1-1` | `approved` | `fulfilled` | Esquema C1 vigente |
 | `GATE-C1-A` | `approved` | `fulfilled` | Plan operativo |
 | `GATE-C1-B1` | `approved` | `fulfilled` | Registro rector |
@@ -723,7 +776,8 @@ Antes de aprobar debe confirmarse que:
 - C1-C.1 consta como aprobado pero pendiente de integración;
 - C1-C.2 permanece pendiente;
 - el gate final de C1 permanece pendiente;
-- G1–G6 de corrección no se presentan como aprobados;
+- G1 se presenta como aprobado y cumplido mediante evidencia de C2;
+- G2–G6 permanecen pendientes y no se presentan como aprobados;
 - el gate de v0.8.0 permanece pendiente;
 - no se autoriza implementación.
 
@@ -783,3 +837,23 @@ C2: no iniciado
 v0.8.0: no abierto
 implementación: no autorizada
 ```
+
+
+---
+
+# 18. Enmienda de cierre C2
+
+<!-- C2_CLOSURE_GATE_UPDATE -->-STATE
+
+```text
+GATE-CORR-G0: approved / fulfilled
+GATE-CORR-G1: approved / fulfilled
+GATE-CORR-G2: pending / future
+GATE-CORR-G3: pending / future
+GATE-CORR-G4: pending / future
+GATE-CORR-G5: pending / future
+GATE-CORR-G6: pending / future
+GATE-V08-OPEN-001: pending / future
+```
+
+El cierre de G1 no abre C3, C4 ni v0.8.0.

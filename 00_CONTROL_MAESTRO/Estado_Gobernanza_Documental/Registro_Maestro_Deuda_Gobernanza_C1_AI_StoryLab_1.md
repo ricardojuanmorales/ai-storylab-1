@@ -207,7 +207,7 @@ La deuda de C8 es una obligación nueva y más amplia.
 |---|---|---:|---|---|---|
 | `DEBT-GOV-001` | Formalizar una sola fuente activa por alcance | P1 | `accepted` | C1 | `DEC-AUD25-001`, `DEC-C1-004` |
 | `DEBT-GOV-002` | Ratificar autoridad distribuida de SDD | P1 | `resolved` | C0 | `DEC-AUD25-002`, `DEC-C0-002`–`005` |
-| `DEBT-GOV-003` | Crear contenedor funcional estable para arquitectura y diseño | P1 | `open` | C2 | `DEC-AUD25-003` |
+| `DEBT-GOV-003` | Crear contenedor funcional estable para arquitectura y diseño | P1 | `resolved` | C2 | `DEC-AUD25-003` |
 | `DEBT-GOV-004` | Elevar arquitectura funcional y UX desde rutas de continuidad | P1 | `blocked` | C3 | `DEC-AUD25-003`, `DEC-C1-009` |
 | `DEBT-GOV-005` | Elevar arquitectura técnica, datos, seguridad y privacidad | P1 | `blocked` | C4 | `DEC-AUD25-003`, `DEC-C1-009` |
 | `DEBT-GOV-006` | Separar método de `00` y resultados de `15` | P1 | `open` | C5 | `DEC-AUD25-005` |
@@ -244,6 +244,43 @@ ruta objetivo aprobada
 + gate humano de C2
 + cero movimientos prematuros
 ```
+
+### Resolución C2 de `DEBT-GOV-003`
+
+<!-- C2_CLOSURE_DEBT_UPDATE -->
+
+```yaml
+debt_id: DEBT-GOV-003
+status: resolved
+resolution_date: 2026-07-12
+resolution_reference:
+  - PR #32
+  - merge 3595200378825a9d013188de87f394988c8f1de0
+  - GATE-CORR-G1 approved
+  - 02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/README.md
+validation:
+  route_approved: true
+  boundary_readme: true
+  human_gate: true
+  premature_moves: 0
+  renames: 0
+  deletions: 0
+notes:
+  - la resolución prepara la frontera
+  - no eleva documentos de arquitectura funcional o técnica
+  - no inicia C3
+  - no inicia C4
+  - no abre v0.8.0
+  - no autoriza implementación
+```
+
+La resolución de `DEBT-GOV-003` no resuelve automáticamente:
+
+- `DEBT-GOV-004`;
+- `DEBT-GOV-005`;
+- `DEBT-GOV-008`;
+- `DEBT-GOV-009`;
+- ninguna deuda funcional, técnica o de implementación.
 
 ### `DEBT-GOV-008`
 
@@ -470,9 +507,9 @@ deuda crítica Vista del Facilitador: 1
 deudas adicionales preservadas por cierre v0.7: 10
 deudas creadas por C1: 8
 
-cierres ejecutados por este registro: 0
+cierres ejecutados mediante actualización C2: 1
 movimientos ejecutados: 0
-C2 iniciado: no
+C2: cierre efectivo después del merge del PR #33
 v0.8.0 abierto: no
 ```
 
@@ -533,4 +570,23 @@ C1-D: no iniciado
 C2: no iniciado
 movimientos: ninguno
 v0.8.0: no abierto
+```
+
+
+---
+
+# 21. Enmienda de cierre C2
+
+<!-- C2_CLOSURE_DEBT_UPDATE -->-STATE
+
+```text
+DEBT-GOV-003: resolved
+DEBT-GOV-004: blocked hasta operación independiente de C3
+DEBT-GOV-005: blocked hasta operación independiente de C4
+DEBT-GOV-008: open para C7
+DEBT-GOV-009: open para C8
+C3: no iniciado
+C4: no iniciado
+v0.8.0: no abierto
+implementación: no autorizada
 ```
