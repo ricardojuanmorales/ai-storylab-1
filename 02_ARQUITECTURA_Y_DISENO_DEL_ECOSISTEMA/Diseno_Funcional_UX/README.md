@@ -1,6 +1,6 @@
 # Diseño Funcional y UX
 
-## Frontera de preparación C3
+## Frontera de migración controlada C3
 
 ### Propósito
 
@@ -27,15 +27,16 @@ DOC-GOB-007 → Arquitectura_Funcional/
 DOC-UX-003  → Diseno_Funcional_UX/
 ```
 
-Esta coordinación no autoriza movimiento ni aprueba `GATE-CORR-G2`.
+La autorización humana posterior al PR #37 permite el movimiento atómico únicamente en la rama aislada. No aprueba `GATE-CORR-G2` ni autoriza merge.
 
 ### Estado
 
 ```text
-C3: preparación documental
+C3: migración controlada en rama
 GATE-CORR-G2: pending
 DEBT-GOV-004: blocked
-movement_authorized: false
+movement_authorized_in_branch: true
+merge_authorized: false
 ```
 
 ### Contenido permitido durante esta preparación
@@ -43,12 +44,13 @@ movement_authorized: false
 - este README;
 - referencias a fuentes canónicas;
 - criterios de elegibilidad;
-- planes de lote y reversión.
+- planes de lote y reversión;
+- fuentes movidas en rama aislada con hashes y reversión.
 
 ### Contenido excluido
 
 - copias de las fuentes;
-- movimientos o renombres;
+- movimientos fuera de la rama controlada o sin trazabilidad;
 - código o implementación;
 - arquitectura técnica;
 - seguridad o privacidad técnica;
@@ -69,4 +71,25 @@ La fuente actual seguirá siendo canónica hasta que el movimiento sea aprobado 
 
 ### Gate
 
-Ningún documento puede entrar en esta ruta antes de la aprobación humana de `GATE-CORR-G2`.
+Los documentos pueden existir en una rama aislada para producir evidencia. No pueden fusionarse en `main` antes de la aprobación humana de `GATE-CORR-G2`.
+
+<!-- C3_MIGRATION_STATUS_START -->
+### Estado material en la rama de migración
+
+Documentos presentes en esta frontera:
+
+- `DOC-UX-003`
+- `DOC-UX-002`
+- `DOC-UX-004`
+- `DOC-UX-006`
+- `DOC-UX-005`
+
+```text
+canonical_en_main: no
+GATE-CORR-G2: pending
+merge_authorized: false
+DEBT-GOV-004: blocked
+```
+
+La presencia en esta rama produce evidencia técnica. No cambia todavía la canonicidad de `main`.
+<!-- C3_MIGRATION_STATUS_END -->

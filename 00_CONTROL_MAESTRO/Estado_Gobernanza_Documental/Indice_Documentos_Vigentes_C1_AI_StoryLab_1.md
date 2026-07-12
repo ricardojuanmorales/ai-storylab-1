@@ -138,14 +138,14 @@ No gobiernan el contenido de una spec o instancia ya aprobada.
 
 | ID | Documento | Ruta actual | Función | Estado | Condición de ruta |
 |---|---|---|---|---|---|
-| `DOC-ARQ-001` | Mapa Funcional Preliminar del Ecosistema | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Mapa_Funcional_Preliminar_Ecosistema_AI_StoryLab_v0_6.md` | Arquitectura funcional | `active` | `transitoria`, elevación C3 |
-| `DOC-UX-002` | Modelo de Experiencia de Usuario | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Modelo_Experiencia_Usuario_AI_StoryLab_v0_6.md` | Modelo UX | `active` | `transitoria`, elevación C3 |
-| `DOC-UX-003` | Flujos Funcionales Conceptuales | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Flujos_Funcionales_Conceptuales_AI_StoryLab_v0_6.md` | Diseño funcional | `active` | `transitoria`, elevación C3 |
-| `DOC-UX-004` | Recorridos de Usuario Sintéticos | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Recorridos_Usuario_Sinteticos_AI_StoryLab_v0_6.md` | Recorridos UX | `active` | `transitoria`, elevación C3 |
-| `DOC-UX-005` | Criterios de Accesibilidad y Claridad | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Criterios_Accesibilidad_Claridad_AI_StoryLab_v0_6.md` | Criterios UX | `active` | `transitoria`, elevación C3 |
-| `DOC-UX-006` | Criterios de Interacción Humano-IA | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Criterios_Interaccion_Humano_IA_AI_StoryLab_v0_6.md` | Interacción humano-IA | `active` | `transitoria`, elevación C3 |
-| `DOC-ARQ-002` | Requisitos Funcionales Preliminares | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Requisitos_Funcionales_Preliminares_AI_StoryLab_v0_6.md` | Especificación funcional | `active` | `transitoria`, elevación C3 |
-| `DOC-GOB-007` | Marco Estandarizado de Misión | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Marco_Estandarizado_Mision_AI_StoryLab_v0_6.md` | Marco funcional | `active` | `transitoria`, evaluación C3 |
+| `DOC-ARQ-001` | Mapa Funcional Preliminar del Ecosistema | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Mapa_Funcional_Preliminar_Ecosistema_AI_StoryLab_v0_6.md` | Arquitectura funcional | `active` | `candidata_en_rama`, pendiente G2 y merge |
+| `DOC-UX-002` | Modelo de Experiencia de Usuario | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Modelo_Experiencia_Usuario_AI_StoryLab_v0_6.md` | Modelo UX | `active` | `candidata_en_rama`, pendiente G2 y merge |
+| `DOC-UX-003` | Flujos Funcionales Conceptuales | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Flujos_Funcionales_Conceptuales_AI_StoryLab_v0_6.md` | Diseño funcional | `active` | `candidata_en_rama`, pendiente G2 y merge |
+| `DOC-UX-004` | Recorridos de Usuario Sintéticos | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Recorridos_Usuario_Sinteticos_AI_StoryLab_v0_6.md` | Recorridos UX | `active` | `candidata_en_rama`, pendiente G2 y merge |
+| `DOC-UX-005` | Criterios de Accesibilidad y Claridad | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Criterios_Accesibilidad_Claridad_AI_StoryLab_v0_6.md` | Criterios UX | `active` | `candidata_en_rama`, pendiente G2 y merge |
+| `DOC-UX-006` | Criterios de Interacción Humano-IA | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Criterios_Interaccion_Humano_IA_AI_StoryLab_v0_6.md` | Interacción humano-IA | `active` | `candidata_en_rama`, pendiente G2 y merge |
+| `DOC-ARQ-002` | Requisitos Funcionales Preliminares | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Requisitos_Funcionales_Preliminares_AI_StoryLab_v0_6.md` | Especificación funcional | `active` | `candidata_en_rama`, pendiente G2 y merge |
+| `DOC-GOB-007` | Marco Estandarizado de Misión | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Marco_Estandarizado_Mision_AI_StoryLab_v0_6.md` | Marco funcional | `active` | `candidata_en_rama`, pendiente G2 y merge |
 
 La palabra `preliminar` forma parte del nombre histórico del documento.
 

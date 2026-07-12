@@ -2,7 +2,7 @@
 
 **Identificador:** `DOC-DOC-016`
 **Fecha:** 2026-07-12
-**Estado:** Reevaluada post-PR36; pendiente de apertura de migración
+**Estado:** Ejecutada en rama controlada; pendiente de G2 y merge
 **Gate:** `GATE-CORR-G2 · pending`
 
 ---
@@ -85,3 +85,22 @@ aptitud_aprobacion_G2: no_todavia
 La reevaluación habilita recomendar una rama independiente de migración controlada.
 
 No autoriza movimientos ni aprueba el gate.
+
+<!-- C3_EXECUTION_EVIDENCE_START -->
+## 7. Evidencia de ejecución en rama controlada
+
+| Lote | Commit puro | Commit de referencias | Estado |
+|---|---|---|---|
+| `C3-A0` | `169339a273d28bed8cf2df71d171886bb1e6c1d7` | `a5fd5f579bbca2ad452b3dd07748d79880622eb5` | `ejecutado_en_rama_pending_G2` |
+| `C3-C` | `fa18235905b6733a5f67fd99890e0c90726326b1` | `2cbd61054eb244cb6c15f40432c931b4698a13c2` | `ejecutado_en_rama_pending_G2` |
+| `C3-B` | `14ef4ab2ba5711db3a710764e7fb3c943c00cd34` | `99a6b955bd3e56eb4bfc46a320db46bdb33fae5b` | `ejecutado_en_rama_pending_G2` |
+| `C3-A2` | `f1f9bb10e3c8a625ef83ea4f545b0cf6e814b1d9` | `3eba007f32bfaa3aeea4d49d9f7ef1ad2131d841` | `ejecutado_en_rama_pending_G2` |
+
+```text
+GATE-CORR-G2: pending
+merge_authorized: false
+DEBT-GOV-004: blocked
+```
+
+La ejecución en rama produce evidencia. No autoriza el merge.
+<!-- C3_EXECUTION_EVIDENCE_END -->
