@@ -5,7 +5,7 @@
 **Identificador:** `DOC-DOC-015`
 **Fecha:** 2026-07-12
 **Estado:** Inventario reevaluado post-PR36
-**Movimiento autorizado:** No
+**Movimiento autorizado en rama:** Sí · merge no autorizado
 
 ---
 
@@ -52,7 +52,8 @@ lote_UX_C3_B: 4
 lote_cierre_C3_A2: 1
 hold_clasificacion: 0
 hold_compartido_C3_C4: 1
-movidos: 0
+movidos_en_rama: 8
+movidos_en_main: 0
 copiados: 0
 renombrados: 0
 eliminados: 0
