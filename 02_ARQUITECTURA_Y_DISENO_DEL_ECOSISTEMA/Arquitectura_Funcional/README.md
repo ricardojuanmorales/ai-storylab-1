@@ -69,6 +69,7 @@ Documentos presentes en esta frontera:
 
 - `DOC-ARQ-001`
 - `DOC-GOB-007`
+- `DOC-ARQ-002`
 
 ```text
 canonical_en_main: no

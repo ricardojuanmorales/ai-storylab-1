@@ -234,7 +234,7 @@ Su ubicación en `18_DOCUMENTACION_ACTIVA` se considera transitoria. La elevaci�
 | `DOC-UX-004` | Recorridos de Usuario Sintéticos | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Recorridos_Usuario_Sinteticos_AI_StoryLab_v0_6.md` | UX | `active` | `yes` | Rama de migración; pendiente G2 y merge |
 | `DOC-UX-005` | Criterios de Accesibilidad y Claridad | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Criterios_Accesibilidad_Claridad_AI_StoryLab_v0_6.md` | Criterios UX | `active` | `yes` | Rama de migración; pendiente G2 y merge |
 | `DOC-UX-006` | Criterios de Interacción Humano-IA | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Criterios_Interaccion_Humano_IA_AI_StoryLab_v0_6.md` | Criterios de interacción | `active` | `yes` | Rama de migración; pendiente G2 y merge |
-| `DOC-ARQ-002` | Requisitos Funcionales Preliminares      | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Requisitos_Funcionales_Preliminares_AI_StoryLab_v0_6.md`  | Especificación funcional | `active` | `yes`    | C3                 |
+| `DOC-ARQ-002` | Requisitos Funcionales Preliminares | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Requisitos_Funcionales_Preliminares_AI_StoryLab_v0_6.md` | Especificación funcional | `active` | `yes` | Rama de migración; pendiente G2 y merge |
 | `DOC-GOB-007` | Marco Estandarizado de Misión | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Marco_Estandarizado_Mision_AI_StoryLab_v0_6.md` | Marco funcional | `active` | `yes` | Rama de migración; pendiente G2 y merge |
 
 Reglas aplicables:
