@@ -91,30 +91,32 @@ contenido.
 
 <!-- C3_PREPARATION_BOUNDARY_UPDATE -->
 
-### Estado vigente
+### Estado vigente post-G2
 
 ```text
 C2: cerrado
 GATE-CORR-G1: approved / fulfilled
 DEBT-GOV-003: resolved
-C3: preparación documental iniciada
-migración funcional: no iniciada
-GATE-CORR-G2: pending / future
-DEBT-GOV-004: blocked
+C3: migración funcional integrada
+GATE-CORR-G2: approved / fulfilled
+PR de integración: #38
+merge: c1ebf74408716846f9eb2c131ce989b7a188fa1c
+DEBT-GOV-004: blocked · decisión de resolución pendiente
+cierre formal C3: pendiente
 C4: no iniciado
 v0.8.0: no abierto
 implementación: no autorizada
 ```
 
-### Subfronteras preparadas
+### Subfronteras integradas
 
 - `Arquitectura_Funcional/`
 - `Diseno_Funcional_UX/`
 
-Estas subfronteras contienen únicamente README de preparación.
+Estas subfronteras contienen ocho fuentes sustantivas v0.6 integradas y sus README de alcance.
 
-No contienen fuentes sustantivas y no autorizan movimientos.
+### Límites preservados
 
-### Regla de activación
+`DOC-UX-007` permanece fuera de la migración y conserva su dependencia compartida C3–C4.
 
-La migración funcional requerirá una operación independiente, revisión por lotes y aprobación humana explícita de `GATE-CORR-G2`.
+La integración de C3 no abre C4, no abre v0.8.0 y no autoriza implementación.

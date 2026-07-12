@@ -430,7 +430,7 @@ Los gates G0–G6 definidos por la auditoría se normalizan para evitar colision
 |---|---|---|---|---|---|
 | `GATE-CORR-G0` | G0 · Autoridad | Confirmar qué documentos gobiernan | `approved` | `fulfilled` | C0 |
 | `GATE-CORR-G1` | G1 · Estructura objetivo | Aprobar nuevo `02` y fronteras principales | `approved` | `fulfilled` | C2 |
-| `GATE-CORR-G2` | G2 · Migración funcional | Aprobar arquitectura funcional y UX por lote | `pending` | `future` | C3 |
+| `GATE-CORR-G2` | G2 · Migración funcional | Aprobar arquitectura funcional y UX por lote | `approved` | `fulfilled` | C3 |
 | `GATE-CORR-G3` | G3 · Migración técnica | Aprobar arquitectura técnica y decisiones | `pending` | `future` | C4 |
 | `GATE-CORR-G4` | G4 · Integridad referencial | Confirmar enlaces, gates y decisiones | `pending` | `future` | C5–C7 y C10 |
 | `GATE-CORR-G5` | G5 · Continuidad histórica | Confirmar navegación de historia v0.6–v0.7 | `pending` | `future` | C8–C9 |
@@ -507,6 +507,61 @@ La aprobación de G1 reconoce las fronteras estructurales.
 
 No autoriza poblarlas con documentos sustantivos.
 
+
+## 11.3 Gate G2 cumplido
+
+<!-- C3_POST_G2_GATE_UPDATE -->
+
+```yaml
+gate_id: GATE-CORR-G2
+label: G2 · Migración funcional
+phase: C3
+scope:
+  - aprobar los lotes C3-A0, C3-C, C3-B y C3-A2
+  - elevar ocho fuentes v0.6 hacia Arquitectura_Funcional y Diseno_Funcional_UX
+  - preservar document_id, contenido y trazabilidad
+status: approved
+lifecycle: fulfilled
+date:
+  decision: 2026-07-12
+  integration: 2026-07-12
+authority: aprobación humana explícita fijada al head del PR #38
+evidence:
+  - PR #38
+  - head aprobado eb0de9b22611f7f8677216c0d77e0a75b84da8e6
+  - merge c1ebf74408716846f9eb2c131ce989b7a188fa1c
+  - DOC-DOC-026
+  - DOC-DOC-027
+  - ocho movimientos con hash equivalente
+  - cuatro ensayos de reversión
+dependencies:
+  - GATE-CORR-G1
+  - PR #37
+affected_documents:
+  - DOC-ARQ-001
+  - DOC-ARQ-002
+  - DOC-GOB-007
+  - DOC-UX-002
+  - DOC-UX-003
+  - DOC-UX-004
+  - DOC-UX-005
+  - DOC-UX-006
+allowed_result:
+  - reconocer las rutas integradas en 02 como estables dentro de su alcance
+  - preparar la decisión separada de resolución de DEBT-GOV-004
+  - preparar el cierre formal de C3
+blocked_result:
+  - cierre automático de DEBT-GOV-004
+  - apertura automática de C4
+  - movimiento de DOC-UX-007
+  - apertura de v0.8.0
+  - implementación
+next_gate: GATE-CORR-G3
+```
+
+La integración de G2 completa la migración funcional autorizada.
+
+No resuelve por sí sola `DEBT-GOV-004` ni cierra formalmente C3.
 ---
 
 # 12. Gates internos de la fase C1
@@ -750,7 +805,8 @@ implementación no está autorizada
 | `GATE-V07-CLOSE-001` | `approved` | `fulfilled` | Cierre v0.7 con deuda |
 | `GATE-CORR-G0` | `approved` | `fulfilled` | Autoridad ratificada |
 | `GATE-CORR-G1` | `approved` | `fulfilled` | Estructura objetivo aprobada mediante PR #32 |
-| `GATE-CORR-G2`–`G6` | `pending` | `future` | Corrección estructural posterior |
+| `GATE-CORR-G2` | `approved` | `fulfilled` | Migración funcional integrada mediante PR #38 |
+| `GATE-CORR-G3`–`G6` | `pending` | `future` | Corrección estructural posterior |
 | `GATE-C1-1` | `approved` | `fulfilled` | Esquema C1 vigente |
 | `GATE-C1-A` | `approved` | `fulfilled` | Plan operativo |
 | `GATE-C1-B1` | `approved` | `fulfilled` | Registro rector |
@@ -777,7 +833,8 @@ Antes de aprobar debe confirmarse que:
 - C1-C.2 permanece pendiente;
 - el gate final de C1 permanece pendiente;
 - G1 se presenta como aprobado y cumplido mediante evidencia de C2;
-- G2–G6 permanecen pendientes y no se presentan como aprobados;
+- G2 se presenta como aprobado y cumplido mediante PR #38;
+- G3–G6 permanecen pendientes y no se presentan como aprobados;
 - el gate de v0.8.0 permanece pendiente;
 - no se autoriza implementación.
 

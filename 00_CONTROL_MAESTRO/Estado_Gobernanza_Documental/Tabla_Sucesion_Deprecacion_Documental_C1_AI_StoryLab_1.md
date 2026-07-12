@@ -109,6 +109,8 @@ La primera elevación de una fuente no elimina la ruta anterior dentro del mismo
 
 Primero se establece la nueva ruta, luego se valida y finalmente se decide el destino de la copia anterior.
 
+Excepción aprobada C3: PR #38 ejecutó movimientos puros `git mv`, con equivalencia SHA-256, reversión ensayada y aprobación humana de `GATE-CORR-G2`. En esta excepción no existe copia física anterior; la ruta de origen se conserva como memoria histórica en esta tabla.
+
 ---
 
 # 4. Relaciones rectoras complementarias
@@ -146,27 +148,27 @@ sucesión documental: none_declared
 
 ---
 
-# 6. Elevación futura de fuentes v0.6
+# 6. Elevación cumplida de fuentes v0.6
 
-Todos los documentos de esta sección conservan identidad durante C3.
+Todos los documentos de esta sección conservaron identidad durante la elevación C3.
 
 | ID | Estado de relación | Ruta actual | Fase de elevación | Predecessor ID | Successor ID |
 |---|---|---|---|---|---|
-| `DOC-ARQ-001` | `elevation_in_draft` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Mapa_Funcional_Preliminar_Ecosistema_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
-| `DOC-UX-002` | `elevation_in_draft` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Modelo_Experiencia_Usuario_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
-| `DOC-UX-003` | `elevation_in_draft` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Flujos_Funcionales_Conceptuales_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
-| `DOC-UX-004` | `elevation_in_draft` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Recorridos_Usuario_Sinteticos_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
-| `DOC-UX-005` | `elevation_in_draft` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Criterios_Accesibilidad_Claridad_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
-| `DOC-UX-006` | `elevation_in_draft` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Criterios_Interaccion_Humano_IA_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
-| `DOC-ARQ-002` | `elevation_in_draft` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Requisitos_Funcionales_Preliminares_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
-| `DOC-GOB-007` | `elevation_in_draft` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Marco_Estandarizado_Mision_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
+| `DOC-ARQ-001` | `elevated_same_identity` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Mapa_Funcional_Preliminar_Ecosistema_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
+| `DOC-UX-002` | `elevated_same_identity` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Modelo_Experiencia_Usuario_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
+| `DOC-UX-003` | `elevated_same_identity` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Flujos_Funcionales_Conceptuales_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
+| `DOC-UX-004` | `elevated_same_identity` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Recorridos_Usuario_Sinteticos_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
+| `DOC-UX-005` | `elevated_same_identity` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Criterios_Accesibilidad_Claridad_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
+| `DOC-UX-006` | `elevated_same_identity` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Criterios_Interaccion_Humano_IA_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
+| `DOC-ARQ-002` | `elevated_same_identity` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Requisitos_Funcionales_Preliminares_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
+| `DOC-GOB-007` | `elevated_same_identity` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Marco_Estandarizado_Mision_AI_StoryLab_v0_6.md` | C3 | `none_declared` | `none_declared` |
 
 <!-- C3_HISTORICAL_ORIGINS_START -->
-## 6.1 Orígenes históricos preservados durante la migración C3
+## 6.1 Orígenes históricos preservados tras la migración C3
 
 La elevación cambia la ubicación del mismo documento. No crea sucesor ni borra la memoria de su ruta anterior.
 
-| ID | Origen histórico preservado | Ruta candidata en la rama |
+| ID | Origen histórico preservado | Ruta integrada en `main` |
 |---|---|---|
 | `DOC-ARQ-001` | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Mapa_Funcional_Preliminar_Ecosistema_AI_StoryLab_v0_6.md` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Mapa_Funcional_Preliminar_Ecosistema_AI_StoryLab_v0_6.md` |
 | `DOC-GOB-007` | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/PR_NUEVO/Marco_Estandarizado_Mision_AI_StoryLab_v0_6.md` | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Marco_Estandarizado_Mision_AI_StoryLab_v0_6.md` |
@@ -181,10 +183,10 @@ La elevación cambia la ubicación del mismo documento. No crea sucesor ni borra
 Regla de transición:
 
 ```text
-la ruta podrá cambiar;
-el document_id no cambia;
-la elevación no crea sucesor;
-la ruta anterior no se elimina en la primera elevación.
+la ruta cambió mediante movimiento puro aprobado;
+el document_id no cambió;
+la elevación no creó sucesor;
+la ruta anterior queda registrada como origen histórico, sin copia física competidora.
 ```
 
 ---

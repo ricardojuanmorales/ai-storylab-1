@@ -222,29 +222,29 @@ No sustituyen specs o instancias aprobadas.
 
 # 8. Fuentes sustantivas de diseño funcional y UX · v0.6
 
-Los documentos siguientes fueron integrados mediante PR #20.
+Los documentos siguientes fueron integrados inicialmente mediante PR #20.
 
-Su ubicación en `18_DOCUMENTACION_ACTIVA` se considera transitoria. La elevación funcional se trabajará en C3.
+Su elevación funcional hacia `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA` fue aprobada por `GATE-CORR-G2` e integrada mediante PR #38.
 
 | ID            | Documento                                | Ruta actual                                                                                                    | Tipo                     | Estado   | Canónica | Elevación prevista |
 | ------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- | -------- | ------------------ |
-| `DOC-ARQ-001` | Mapa Funcional Preliminar del Ecosistema | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Mapa_Funcional_Preliminar_Ecosistema_AI_StoryLab_v0_6.md` | Arquitectura funcional | `active` | `yes` | Rama de migración; pendiente G2 y merge |
-| `DOC-UX-002` | Modelo de Experiencia de Usuario | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Modelo_Experiencia_Usuario_AI_StoryLab_v0_6.md` | Modelo UX | `active` | `yes` | Rama de migración; pendiente G2 y merge |
-| `DOC-UX-003` | Flujos Funcionales Conceptuales | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Flujos_Funcionales_Conceptuales_AI_StoryLab_v0_6.md` | Diseño funcional | `active` | `yes` | Rama de migración; pendiente G2 y merge |
-| `DOC-UX-004` | Recorridos de Usuario Sintéticos | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Recorridos_Usuario_Sinteticos_AI_StoryLab_v0_6.md` | UX | `active` | `yes` | Rama de migración; pendiente G2 y merge |
-| `DOC-UX-005` | Criterios de Accesibilidad y Claridad | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Criterios_Accesibilidad_Claridad_AI_StoryLab_v0_6.md` | Criterios UX | `active` | `yes` | Rama de migración; pendiente G2 y merge |
-| `DOC-UX-006` | Criterios de Interacción Humano-IA | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Criterios_Interaccion_Humano_IA_AI_StoryLab_v0_6.md` | Criterios de interacción | `active` | `yes` | Rama de migración; pendiente G2 y merge |
-| `DOC-ARQ-002` | Requisitos Funcionales Preliminares | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Requisitos_Funcionales_Preliminares_AI_StoryLab_v0_6.md` | Especificación funcional | `active` | `yes` | Rama de migración; pendiente G2 y merge |
-| `DOC-GOB-007` | Marco Estandarizado de Misión | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Marco_Estandarizado_Mision_AI_StoryLab_v0_6.md` | Marco funcional | `active` | `yes` | Rama de migración; pendiente G2 y merge |
+| `DOC-ARQ-001` | Mapa Funcional Preliminar del Ecosistema | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Mapa_Funcional_Preliminar_Ecosistema_AI_StoryLab_v0_6.md` | Arquitectura funcional | `active` | `yes` | Integrada en `02` mediante PR #38 y `GATE-CORR-G2` |
+| `DOC-UX-002` | Modelo de Experiencia de Usuario | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Modelo_Experiencia_Usuario_AI_StoryLab_v0_6.md` | Modelo UX | `active` | `yes` | Integrada en `02` mediante PR #38 y `GATE-CORR-G2` |
+| `DOC-UX-003` | Flujos Funcionales Conceptuales | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Flujos_Funcionales_Conceptuales_AI_StoryLab_v0_6.md` | Diseño funcional | `active` | `yes` | Integrada en `02` mediante PR #38 y `GATE-CORR-G2` |
+| `DOC-UX-004` | Recorridos de Usuario Sintéticos | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Recorridos_Usuario_Sinteticos_AI_StoryLab_v0_6.md` | UX | `active` | `yes` | Integrada en `02` mediante PR #38 y `GATE-CORR-G2` |
+| `DOC-UX-005` | Criterios de Accesibilidad y Claridad | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Criterios_Accesibilidad_Claridad_AI_StoryLab_v0_6.md` | Criterios UX | `active` | `yes` | Integrada en `02` mediante PR #38 y `GATE-CORR-G2` |
+| `DOC-UX-006` | Criterios de Interacción Humano-IA | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Diseno_Funcional_UX/Criterios_Interaccion_Humano_IA_AI_StoryLab_v0_6.md` | Criterios de interacción | `active` | `yes` | Integrada en `02` mediante PR #38 y `GATE-CORR-G2` |
+| `DOC-ARQ-002` | Requisitos Funcionales Preliminares | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Requisitos_Funcionales_Preliminares_AI_StoryLab_v0_6.md` | Especificación funcional | `active` | `yes` | Integrada en `02` mediante PR #38 y `GATE-CORR-G2` |
+| `DOC-GOB-007` | Marco Estandarizado de Misión | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Funcional/Marco_Estandarizado_Mision_AI_StoryLab_v0_6.md` | Marco funcional | `active` | `yes` | Integrada en `02` mediante PR #38 y `GATE-CORR-G2` |
 
 Reglas aplicables:
 
 ```text
-current_path: transitoria
+current_path: estable dentro de la frontera funcional de 02
 document_id: estable
 canonical: yes dentro de su alcance aprobado
-movement_authorized: no
-target_path: pendiente de C2 y C3
+movement_status: completed_by_PR_38
+gate: GATE-CORR-G2 approved / fulfilled
 ```
 
 Las bitácoras, auditorías, kits, actas, planes de trabajo y cierres del PR #20 no se registran como fuentes sustantivas activas en esta sección.
