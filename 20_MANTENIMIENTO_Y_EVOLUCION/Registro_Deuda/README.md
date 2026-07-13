@@ -84,3 +84,25 @@ Después del merge, revertir el commit de C2.
 
 No será necesario restaurar documentos sustantivos porque C2 no traslada
 contenido.
+
+<!-- C7_REGISTRY_ACTIVATION -->
+
+## Activación C7
+
+La frontera preparada en C2 queda activa mediante:
+
+- `20_MANTENIMIENTO_Y_EVOLUCION/Registro_Deuda/Registro_Primario_Deuda_Activa_C7_AI_StoryLab_1.md`
+- `20_MANTENIMIENTO_Y_EVOLUCION/Registro_Deuda/Registro_Primario_Deuda_Activa_C7_AI_StoryLab_1.csv`
+- `20_MANTENIMIENTO_Y_EVOLUCION/Registro_Deuda/Indice_Fuentes_Historicas_Deuda_C7_AI_StoryLab_1.md`
+
+Estado operativo:
+
+```text
+primary_active_debt_authority: 20
+active_unique_ids: 69
+historical_sources_indexed: 33
+DEBT-GOV-008: resolved
+DEBT-C1-007: resolved
+GATE-CORR-G4: pending
+C8: not open
+```

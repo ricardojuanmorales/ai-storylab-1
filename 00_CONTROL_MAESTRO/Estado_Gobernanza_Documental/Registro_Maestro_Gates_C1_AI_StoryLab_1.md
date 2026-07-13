@@ -1015,3 +1015,30 @@ historical_continuity_gate:
 ```
 
 C6 no cumple G4 por sí sola y no abre G5.
+
+<!-- C7_G4_CONTRIBUTION -->
+
+## Contribución C7 a `GATE-CORR-G4`
+
+```yaml
+phase: C7
+gate_id: GATE-CORR-G4
+contribution_status: complete_pending_C10
+gate_status: pending
+date: 2026-07-13
+evidence:
+  - DOC-DOC-036
+  - DOC-DOC-037
+  - DOC-DOC-038
+validation:
+  primary_active_debt_source_created: true
+  active_unique_ids: 69
+  duplicate_active_ids: 0
+  historical_sources_indexed: 33
+  global_referential_integrity_complete: false
+next_dependency:
+  - C10
+```
+
+C7 completa la contribución prevista de C5–C7, pero G4 requiere validación
+global en C10.

@@ -313,3 +313,13 @@ implementation: not authorized
 - las copias y materiales de continuidad no adquieren canonicidad por ruta;
 - las veinte fuentes elevadas en C3 y C4 se consultan mediante
   `18_DOCUMENTACION_ACTIVA/Continuidad/Indice_Referencias_Canonicas/Indice_Referencias_Canonicas_C6_AI_StoryLab_1.md`.
+
+<!-- C7_PRIMARY_DEBT_INDEX -->
+
+## Enmienda C7 · Registro primario de deuda activa
+
+| ID | Documento | Ruta | Estado | Autoridad |
+|---|---|---|---|---|
+| `DOC-DOC-036` | Registro Primario de Deuda Activa C7 | `20_MANTENIMIENTO_Y_EVOLUCION/Registro_Deuda/Registro_Primario_Deuda_Activa_C7_AI_StoryLab_1.md` | `active` después del merge | Fuente primaria de estado activo |
+| `DOC-DOC-037` | Índice de Fuentes Históricas de Deuda C7 | `20_MANTENIMIENTO_Y_EVOLUCION/Registro_Deuda/Indice_Fuentes_Historicas_Deuda_C7_AI_StoryLab_1.md` | `active` después del merge | Trazabilidad de fuentes no primarias |
+| `DOC-DOC-008` | Registro Maestro de Deuda de Gobernanza C1 | `00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Registro_Maestro_Deuda_Gobernanza_C1_AI_StoryLab_1.md` | `active` en alcance acotado | Identidad, normalización, resoluciones e historia |
