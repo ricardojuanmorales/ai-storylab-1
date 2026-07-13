@@ -283,3 +283,21 @@ C2: no iniciado
 movimientos: ninguno
 v0.8.0: no abierto
 ```
+
+## Enmienda de integración y cierre C4
+
+<!-- C4_CLOSURE_INDEX_UPDATE -->
+
+```text
+C4-A merge: d522065bca7232758934558293c0942532babfab
+C4-B elevation commit: a37fc82bc0f617ab3f0a4eff1440911d8116a9b1
+GATE-CORR-G3: approved / fulfilled
+DEBT-GOV-005: resolved
+C4: closed / integrated
+fuentes técnicas elevadas: 12
+DOC-REF-002: deferred to C9
+DOC-UX-007: HOLD
+DEBT-GOV-012: blocked
+v0.8.0: not open
+implementation: not authorized
+```

@@ -484,6 +484,39 @@ implementación: no autorizada
 ```
 ---
 
+## 11.2 Decisiones de cierre C4
+
+<!-- C4_CLOSURE_DECISIONS -->
+
+```yaml
+decision_date: 2026-07-13
+authority: autorización humana explícita “Adelante con C4-B consolidado”
+evidence:
+  - PR #41
+  - merge d522065bca7232758934558293c0942532babfab
+  - commit de elevación residual a37fc82bc0f617ab3f0a4eff1440911d8116a9b1
+  - GATE-CORR-G3 approved / fulfilled
+  - DOC-DOC-031
+status: ratified
+successor_decision: none_declared
+```
+
+| Decision ID | Título | Ciclo | Documentos afectados |
+|---|---|---|---|
+| `DEC-C4-001` | Elevar el corpus técnico residual aprobado | `fulfilled` | `DOC-SEG-002`, `DOC-ARQ-004`, `DOC-OPS-001`, `DOC-OPS-002`, `DOC-GOB-008`, `DOC-GOB-009` |
+| `DEC-C4-002` | Diferir `DOC-REF-002` a C9 y mantener `DOC-UX-007` en HOLD | `active` | `DOC-REF-002`, `DOC-UX-007`, `DFUX-FAC-v0.6-001` |
+| `DEC-C4-003` | Cerrar C4 y resolver `DEBT-GOV-005` sin abrir v0.8.0 | `fulfilled` | `DEBT-GOV-005`, `GATE-CORR-G3`, `process:C4` |
+
+Límites:
+
+```text
+DEBT-GOV-012: blocked
+DOC-UX-007: HOLD
+DFUX-FAC-v0.6-001: active
+v0.8.0: not open
+implementation: not authorized
+```
+
 # 12. Decisiones no explotadas en IDs individuales durante C1
 
 Los documentos sustantivos de v0.7 contienen subdecisiones internas sobre:
