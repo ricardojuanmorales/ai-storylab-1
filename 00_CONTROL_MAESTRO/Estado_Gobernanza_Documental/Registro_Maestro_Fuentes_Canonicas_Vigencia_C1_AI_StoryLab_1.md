@@ -482,3 +482,29 @@ DEBT-GOV-012: blocked
 v0.8.0: not open
 implementation: not authorized
 ```
+
+<!-- C5_AUDIT_AUTHORITY_UPDATE -->
+
+## Enmienda C5 · Autoridad de productos de auditoría
+
+```text
+DOC-AUD-001 y DOC-AUD-002:
+  resultados finales en 15
+  autoridad evidencial final dentro del alcance PR #25
+
+DOC-AUD-003 y DOC-AUD-004:
+  método, plan e inventario en 00
+  autoridad metodológica o histórica
+
+DOC-AUD-005:
+  evidencia intermedia histórica en 00
+  no compite con el informe final en 15
+
+DOC-AUD-006:
+  índice de transferencia 00 → 15
+
+DOC-AUD-007:
+  índice de resultados finales en 15
+```
+
+La separación C5 preserva identidad y trazabilidad sin ejecutar movimientos.

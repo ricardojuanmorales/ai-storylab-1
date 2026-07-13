@@ -61,3 +61,18 @@
 ## Regla de navegación
 
 Los documentos de trabajo explican la evidencia. El informe final explica el dictamen. Las matrices explican las decisiones. B6 explica la estructura objetivo. B7 explica cómo corregirla.
+
+<!-- C5_AUTHORITY_CLARIFICATION -->
+
+## Aclaración de autoridad C5
+
+Los productos finales enumerados en este índice constituyen la salida
+autoritativa de la auditoría PR #25 dentro de su alcance.
+
+Los documentos B0–B7 conservados en
+`00_CONTROL_MAESTRO/Auditorias_Estructurales/` explican método, evidencia,
+simulación y corrección. No compiten como informe final.
+
+Referencia cruzada:
+
+`00_CONTROL_MAESTRO/Auditorias_Estructurales/Indice_Transferencia_a_15_AI_StoryLab_1.md`

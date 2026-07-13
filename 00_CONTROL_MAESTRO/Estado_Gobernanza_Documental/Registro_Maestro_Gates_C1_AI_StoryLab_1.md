@@ -2,14 +2,14 @@
 
 ## AI StoryLab 1
 
-**Identificador:** `DOC-DOC-009`  
-**Fase:** C1-C · Decisiones, deuda y gates  
-**Estado:** Borrador para aprobación humana  
-**Fecha:** 2026-07-11  
-**PR de trabajo:** PR #30  
-**Rama:** `docs/c1-completar-indices-metadatos`  
-**Documento rector relacionado:** `Registro_Maestro_Decisiones_C1_AI_StoryLab_1.md`  
-**Alcance:** Gates constitucionales, versionados, estructurales y parciales de C1  
+**Identificador:** `DOC-DOC-009`
+**Fase:** C1-C · Decisiones, deuda y gates
+**Estado:** Borrador para aprobación humana
+**Fecha:** 2026-07-11
+**PR de trabajo:** PR #30
+**Rama:** `docs/c1-completar-indices-metadatos`
+**Documento rector relacionado:** `Registro_Maestro_Decisiones_C1_AI_StoryLab_1.md`
+**Alcance:** Gates constitucionales, versionados, estructurales y parciales de C1
 **Restricciones:** Este registro identifica y relaciona gates. No ejecuta gates, no autoriza transiciones nuevas, no modifica dictámenes previos, no mueve documentos, no inicia C2 y no abre v0.8.0.
 
 ---
@@ -958,3 +958,30 @@ GATE-V08-OPEN-001: pending / future
 ```
 
 El cierre de G1 no abre C3, C4 ni v0.8.0.
+
+<!-- C5_G4_CONTRIBUTION -->
+
+## Contribución C5 a `GATE-CORR-G4`
+
+```yaml
+phase: C5
+gate_id: GATE-CORR-G4
+contribution_status: complete_pending_later_phases
+gate_status: pending
+date: 2026-07-13
+evidence:
+  - DOC-DOC-032
+  - DOC-AUD-006
+  - DOC-AUD-007
+  - PR C5 pending integration
+validation:
+  method_results_separated: true
+  cross_navigation_created: true
+  global_referential_integrity_complete: false
+next_dependencies:
+  - C6
+  - C7
+  - C10
+```
+
+C5 aporta una frontera verificable, pero no cumple G4 por sí sola.
