@@ -696,3 +696,20 @@ C2: no iniciado
 movimientos: ninguno
 v0.8.0: no abierto
 ```
+
+<!-- C5_CLOSURE_DECISIONS -->
+
+## Decisiones de cierre C5
+
+| Decision ID | Título | Ciclo | Documentos afectados |
+|---|---|---|---|
+| `DEC-C5-001` | Separar método de auditoría y resultados finales por autoridad, no mediante mudanza masiva | `fulfilled` | `00_CONTROL_MAESTRO/Auditorias_Estructurales`, `15_EVALUACION_CALIDAD_Y_AUDITORIA` |
+| `DEC-C5-002` | Crear índices cruzados de transferencia y resultados | `fulfilled` | `DOC-AUD-006`, `DOC-AUD-007` |
+| `DEC-C5-003` | Resolver `DEBT-GOV-006` y mantener `GATE-CORR-G4` pendiente | `fulfilled` | `DEBT-GOV-006`, `GATE-CORR-G4`, `process:C5` |
+
+```text
+C6: not opened
+GATE-CORR-G4: pending
+v0.8.0: not open
+implementation: not authorized
+```

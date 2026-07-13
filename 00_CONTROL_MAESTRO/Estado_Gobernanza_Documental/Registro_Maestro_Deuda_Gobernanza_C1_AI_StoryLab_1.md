@@ -2,14 +2,14 @@
 
 ## AI StoryLab 1
 
-**Identificador:** `DOC-DOC-008`  
-**Fase:** C1-C · Decisiones, deuda y gates  
-**Estado:** Borrador para aprobación humana  
-**Fecha:** 2026-07-11  
-**PR de trabajo:** PR #30  
-**Rama:** `docs/c1-completar-indices-metadatos`  
-**Documento rector relacionado:** `Registro_Maestro_Decisiones_C1_AI_StoryLab_1.md`  
-**Alcance:** Deuda documental, estructural, funcional, UX, técnica, ética y de gobernanza prioritaria  
+**Identificador:** `DOC-DOC-008`
+**Fase:** C1-C · Decisiones, deuda y gates
+**Estado:** Borrador para aprobación humana
+**Fecha:** 2026-07-11
+**PR de trabajo:** PR #30
+**Rama:** `docs/c1-completar-indices-metadatos`
+**Documento rector relacionado:** `Registro_Maestro_Decisiones_C1_AI_StoryLab_1.md`
+**Alcance:** Deuda documental, estructural, funcional, UX, técnica, ética y de gobernanza prioritaria
 **Restricciones:** Este registro identifica, normaliza y relaciona deuda. No cierra deudas por declaración, no ejecuta soluciones, no mueve documentos, no inicia C2 y no abre v0.8.0.
 
 ---
@@ -210,7 +210,7 @@ La deuda de C8 es una obligación nueva y más amplia.
 | `DEBT-GOV-003` | Crear contenedor funcional estable para arquitectura y diseño | P1 | `resolved` | C2 | `DEC-AUD25-003` |
 | `DEBT-GOV-004` | Elevar arquitectura funcional y UX desde rutas de continuidad | P1 | `resolved` | C3 | `DEC-AUD25-003`, `DEC-C1-009`, `DEC-C3-001`, `DEC-C3-002` |
 | `DEBT-GOV-005` | Elevar arquitectura técnica, datos, seguridad y privacidad | P1 | `resolved` | C4 | `DEC-AUD25-003`, `DEC-C1-009` |
-| `DEBT-GOV-006` | Separar método de `00` y resultados de `15` | P1 | `open` | C5 | `DEC-AUD25-005` |
+| `DEBT-GOV-006` | Separar método de `00` y resultados de `15` | P1 | `resolved` | C5 | `DEC-AUD25-005` |
 | `DEBT-GOV-007` | Formalizar ciclo de vida de `18_DOCUMENTACION_ACTIVA` | P1 | `open` | C6 | `DEC-AUD25-006` |
 | `DEBT-GOV-008` | Consolidar deuda activa en `20` mediante IDs únicos | P1 | `open` | C7 | `DEC-AUD25-007` |
 | `DEBT-GOV-009` | Formalizar archivo histórico, manifiestos y no vigencia | P1 | `open` | C8 | `DEC-AUD25-008` |
@@ -670,4 +670,37 @@ C3: no iniciado
 C4: no iniciado
 v0.8.0: no abierto
 implementación: no autorizada
+```
+
+<!-- C5_CLOSURE_DEBT_UPDATE -->
+
+### Resolución C5 de `DEBT-GOV-006`
+
+```yaml
+debt_id: DEBT-GOV-006
+status: resolved
+resolution_date: 2026-07-13
+decision_reference:
+  - DEC-C5-001
+  - DEC-C5-002
+  - DEC-C5-003
+  - autorización humana explícita “Adelante con C5 consolidado”
+resolution_reference:
+  - DOC-DOC-032
+  - DOC-AUD-006
+  - DOC-AUD-007
+  - PR C5 pending integration
+validation:
+  method_boundary_in_00: true
+  authoritative_results_in_15: true
+  cross_indexes_created: 2
+  movements: 0
+  renames: 0
+  deletions: 0
+  duplicated_evidence: 0
+notes:
+  - GATE-CORR-G4 permanece pending
+  - C6 no se abre automáticamente
+  - v0.8.0 no está abierto
+  - implementación no está autorizada
 ```
