@@ -212,7 +212,7 @@ La deuda de C8 es una obligación nueva y más amplia.
 | `DEBT-GOV-005` | Elevar arquitectura técnica, datos, seguridad y privacidad | P1 | `resolved` | C4 | `DEC-AUD25-003`, `DEC-C1-009` |
 | `DEBT-GOV-006` | Separar método de `00` y resultados de `15` | P1 | `resolved` | C5 | `DEC-AUD25-005` |
 | `DEBT-GOV-007` | Formalizar ciclo de vida de `18_DOCUMENTACION_ACTIVA` | P1 | `resolved` | C6 | `DEC-AUD25-006` |
-| `DEBT-GOV-008` | Consolidar deuda activa en `20` mediante IDs únicos | P1 | `open` | C7 | `DEC-AUD25-007` |
+| `DEBT-GOV-008` | Consolidar deuda activa en `20` mediante IDs únicos | P1 | `resolved` | C7 | `DEC-AUD25-007` |
 | `DEBT-GOV-009` | Formalizar archivo histórico, manifiestos y no vigencia | P1 | `open` | C8 | `DEC-AUD25-008` |
 | `DEBT-GOV-010` | Alinear Wiki y documentación humana con fuentes canónicas | P2 | `open` | C9 | `DEC-AUD25-009` |
 | `DEBT-GOV-011` | Validar integridad estructural completa | P1 | `blocked` | C10 | `DEC-AUD25-010` |
@@ -572,7 +572,7 @@ Ninguna de estas deudas autoriza la capacidad que describe.
 | `DEBT-C1-004` | Verificar unicidad de IDs de gates | P1 | `open` | C1-D |
 | `DEBT-C1-005` | Confirmar que ninguna fuente activa duplicada quedó omitida | P1 | `open` | C1-D |
 | `DEBT-C1-006` | Confirmar que el PR #30 contiene cero movimientos y eliminaciones | P1 | `open` | C1-D |
-| `DEBT-C1-007` | Consolidar fuente primaria de deuda en C7 | P1 | `deferred` | C7 |
+| `DEBT-C1-007` | Consolidar fuente primaria de deuda en C7 | P1 | `resolved` | C7 |
 | `DEBT-C1-008` | Automatizar validación de registros | P2 | `deferred` | Posterior a C10 |
 
 ---
@@ -737,3 +737,51 @@ notes:
   - v0.8.0 no está abierto
   - implementación no está autorizada
 ```
+
+<!-- C7_PRIMARY_SOURCE_TRANSITION -->
+
+## Transición de autoridad C7
+
+Después del merge de C7:
+
+```text
+estado activo vigente:
+  20_MANTENIMIENTO_Y_EVOLUCION/Registro_Deuda/Registro_Primario_Deuda_Activa_C7_AI_StoryLab_1.md
+
+identidad, normalización, resoluciones e historia:
+  00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Registro_Maestro_Deuda_Gobernanza_C1_AI_StoryLab_1.md
+```
+
+### Resolución de `DEBT-GOV-008`
+
+```yaml
+debt_id: DEBT-GOV-008
+status: resolved
+resolution_date: 2026-07-13
+resolution_reference:
+  - DOC-DOC-036
+  - DOC-DOC-037
+  - DOC-DOC-038
+validation:
+  primary_source_in_20: true
+  active_unique_ids: 69
+  historical_sources_indexed: 33
+  uniform_closure_criteria: true
+  movements: 0
+  renames: 0
+  deletions: 0
+```
+
+### Resolución de `DEBT-C1-007`
+
+```yaml
+debt_id: DEBT-C1-007
+status: resolved
+resolution_date: 2026-07-13
+resolution_reference:
+  - DEBT-GOV-008
+  - DOC-DOC-036
+  - DOC-DOC-037
+```
+
+`GATE-CORR-G4` permanece pendiente hasta C10.

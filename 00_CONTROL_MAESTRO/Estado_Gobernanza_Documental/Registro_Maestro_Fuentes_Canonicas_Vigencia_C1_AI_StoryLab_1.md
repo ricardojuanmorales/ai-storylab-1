@@ -538,3 +538,26 @@ DOC-REF-002:
 
 Las fuentes elevadas en C3 y C4 conservan sus IDs y autoridad en `02`.
 El índice aplicable es `18_DOCUMENTACION_ACTIVA/Continuidad/Indice_Referencias_Canonicas/Indice_Referencias_Canonicas_C6_AI_StoryLab_1.md`.
+
+<!-- C7_DEBT_AUTHORITY_MODEL -->
+
+## Enmienda C7 · Autoridad de deuda
+
+```text
+DOC-DOC-036:
+  role: primary_active_debt_registry
+  path: 20_MANTENIMIENTO_Y_EVOLUCION/Registro_Deuda/Registro_Primario_Deuda_Activa_C7_AI_StoryLab_1.md
+  canonical: yes
+
+DOC-DOC-008:
+  role: debt_identity_resolution_history
+  path: 00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Registro_Maestro_Deuda_Gobernanza_C1_AI_StoryLab_1.md
+  canonical: yes within historical and normalization scope
+
+distributed debt records:
+  role: historical_or_continuity_evidence
+  canonical_for_active_status: no
+```
+
+La identidad de cada deuda se preserva. La autoridad sobre su estado activo se
+consulta en `DOC-DOC-036`.

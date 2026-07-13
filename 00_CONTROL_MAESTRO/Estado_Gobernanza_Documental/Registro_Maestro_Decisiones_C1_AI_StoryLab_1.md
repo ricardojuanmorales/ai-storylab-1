@@ -732,3 +732,24 @@ C7: not opened
 v0.8.0: not open
 implementation: not authorized
 ```
+
+<!-- C7_CLOSURE_DECISIONS -->
+
+## Decisiones de cierre C7
+
+| Decision ID | Título | Ciclo | Documentos afectados |
+|---|---|---|---|
+| `DEC-C7-001` | Establecer `20` como fuente primaria de deuda activa | `fulfilled` | `DOC-DOC-036`, `DOC-DOC-037` |
+| `DEC-C7-002` | Conservar `00` como registro de identidad, resoluciones e historia | `fulfilled` | `DOC-DOC-008` |
+| `DEC-C7-003` | Preservar registros distribuidos como fuentes no primarias con hash | `fulfilled` | `33 fuentes heredadas` |
+| `DEC-C7-004` | Resolver `DEBT-GOV-008` y `DEBT-C1-007` sin cerrar G4 | `fulfilled` | `GATE-CORR-G4`, `process:C7` |
+
+```text
+active_unique_ids: 69
+DEBT-GOV-009: open
+DEBT-GOV-011: blocked
+DEBT-GOV-012: blocked
+C8: not opened
+v0.8.0: not open
+implementation: not authorized
+```
