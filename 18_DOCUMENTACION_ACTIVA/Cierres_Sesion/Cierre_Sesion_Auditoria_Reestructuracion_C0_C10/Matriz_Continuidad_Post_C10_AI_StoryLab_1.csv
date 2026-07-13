@@ -1,0 +1,14 @@
+stage,pull_requests,purpose,result,gate_or_decision,debt_effect,status
+Auditoría B0-B7,#25,"Diagnóstico, taxonomía, Tree objetivo y plan reversible",Auditoría completada,Diagnóstico aprobado,Programa C0-C10,closed_integrated
+C0,#26-#28,Autoridad y precedencia,Gobernanza ratificada,G0-C0 fulfilled,DEBT-GOV-002 resolved,closed_integrated
+C1,#29-#31,"Índices, fuentes, decisiones, deuda y gates",Infraestructura registral,GATE-C1-FINAL fulfilled,Deuda identificada,closed_integrated
+C2,#32-#33,Contenedores y fronteras,Estructura objetivo habilitada,GATE-CORR-G1 fulfilled,DEBT-GOV-003 resolved,closed_integrated
+C3,#34-#40,Arquitectura funcional y UX,8 fuentes integradas,GATE-CORR-G2 fulfilled,DEBT-GOV-004 resolved,closed_integrated
+C4,#41-#42,Arquitectura técnica y decisiones,Elevación técnica integrada,GATE-CORR-G3 fulfilled,DEBT-GOV-005 resolved,closed_integrated
+C5,#43,Separación 00-15,Método y resultados separados,Aporte G4,DEBT-GOV-006 resolved,closed_integrated
+C6,#44,Ciclo de vida de 18,20 referencias y 5 excepciones,Aporte G4,DEBT-GOV-007 resolved,closed_integrated
+C7,#45,Deuda activa en 20,Registro Markdown y CSV,Aporte G4,DEBT-GOV-008 y DEBT-C1-007 resolved,closed_integrated
+C8,#46,Archivo histórico,91 acervos y 91 hashes,Aporte G5,DEBT-GOV-009 resolved,closed_integrated
+C9,#47,Navegación humana,"32 archivos, 11 rutas, 11 .specify, 12 Base SDD",G5 fulfilled,"DEBT-GOV-010, 012 y 013 resolved",closed_integrated
+C10,#48,Validación y cierre,"215 referencias, 0 fallas",G4 y G6 fulfilled,8 deudas estructurales resolved,closed_integrated
+Post-C10,docs/post-c10-compendio-cierre,"Reflexión, compendio y continuidad",Tree realizado documentado,No crea gates,No altera deuda,prepared_for_review

@@ -1,0 +1,43 @@
+{
+  "active_debt": {
+    "accepted": 41,
+    "blocked": 1,
+    "blocked_id": "DFUX-TRZ-005",
+    "deferred": 15,
+    "open": 0,
+    "total": 57
+  },
+  "artifacts": {
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/Cierre_Sesion_Auditoria_Reestructuracion_C0_C10/Bitacora_Sesion_Reflexion_Cierre_C0_C10_AI_StoryLab_1.md": "ab228e06136fcdff66898d8e42d902d2193d9247b6d9c721f1d3e393577778b1",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/Cierre_Sesion_Auditoria_Reestructuracion_C0_C10/Bitacora_Transferencia_Simetrica_Post_C10_AI_StoryLab_1.md": "c43ee219cc523f79d35836f66decf04bf47eb77fc8abe1920ac26f98ed3725b8",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/Cierre_Sesion_Auditoria_Reestructuracion_C0_C10/Compendio_Ejecutivo_Auditoria_Reestructuracion_C0_C10_AI_StoryLab_1.md": "a2edbe97cfc5bd6e3e2deb37f2726d353d1ab4acd149bcdf9b1fa66dccb0f694",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/Cierre_Sesion_Auditoria_Reestructuracion_C0_C10/Indice_Referencias_Clave_Post_C10_AI_StoryLab_1.md": "f3dbc1dc4795163f9d81c633bc03da9f2931d84f16f14463594032e2058854b4",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/Cierre_Sesion_Auditoria_Reestructuracion_C0_C10/Matriz_Continuidad_Post_C10_AI_StoryLab_1.csv": "c91a3900913c74b7f265366330203edf654accb29bc633cdb1cb17c752f09715",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/Cierre_Sesion_Auditoria_Reestructuracion_C0_C10/README.md": "e217ff46d1419c0fea84b7dcc1dc642c3bafbad9e4a8dbf8bf3f0266e43af3ab",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/Cierre_Sesion_Auditoria_Reestructuracion_C0_C10/Registro_Decisiones_Pendientes_Post_C10_AI_StoryLab_1.md": "c3235850c4ef6af97bd7c9f35f343459abee7a93a61d551deb6e1fff3eb24c95",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/Cierre_Sesion_Auditoria_Reestructuracion_C0_C10/Tree_Repositorio_Realizado_Post_C10_AI_StoryLab_1.md": "47ca035ba2403c53b412cb2712485bac71d6b211f4cf242b25a0e56dd6c02c0b",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/Cierre_Sesion_Auditoria_Reestructuracion_C0_C10/Tree_Repositorio_Realizado_Post_C10_AI_StoryLab_1.txt": "daf680bc74c3423fd107aacb07b9f30c6fac1d17b436e8ed4bab313d3bea309e"
+  },
+  "boundaries": {
+    "authorizes_implementation": false,
+    "changes_architecture": false,
+    "changes_debt": false,
+    "changes_gates": false,
+    "changes_governance_registries": false,
+    "changes_implementation": false,
+    "merge_performed": false,
+    "opens_v0_8_0": false
+  },
+  "branch": "docs/post-c10-compendio-cierre",
+  "c10_added_files": 8,
+  "c10_input_tracked_files": 989,
+  "canonical_substantive_source": false,
+  "date": "2026-07-13",
+  "package": "Post-C10 session closure",
+  "project": "AI StoryLab 1",
+  "repository": "ricardojuanmorales/ai-storylab-1",
+  "snapshot_role": "derived_navigation_and_continuity",
+  "source_baseline": "2e4c0a218251382111adce83ce494cbe24b2f8db",
+  "source_of_truth": "git",
+  "source_tracked_files": 997
+}
