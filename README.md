@@ -9,7 +9,7 @@
 
 ## Estado actual del proyecto
 
-AI StoryLab 1 se encuentra en **v0.4.9**, fase de **Gobernanza de Transición y Preparación de Fase Mayor**, posterior al merge de **PR #15** y al cierre documental de **v0.4.9** como fase estrictamente documental.
+AI StoryLab 1 se encuentra en la secuencia de **corrección estructural C0–C9**, posterior al cierre documental de v0.7.0. C0–C8 están integradas y C9 queda preparada para revisión mediante este bloque.
 
 La fase mayor futura **no está activada**. Permanece condicionada a autorización humana explícita, gate independiente y confirmación canónica posterior.
 
@@ -59,7 +59,7 @@ mantenimiento y deuda documentada.
 
 La implementación funcional futura permanece bloqueada hasta que un gate documental futuro la autorice explícitamente.
 
-En **v0.4.9** no se autoriza:
+En el estado documental actual no se autoriza:
 
 ```text
 implementacion_funcional,
@@ -216,3 +216,26 @@ AI StoryLab 1 conserva una brújula documental deliberada:
 Mapa sí.
 Motor no.
 ```
+
+<!-- C9_CURRENT_NAVIGATION -->
+
+## Navegación vigente · C9
+
+La puerta humana de navegación es:
+
+`21_WIKI_DOCUMENTACION_HUMANA/Mapa_Navegacion_Canonica_C9_AI_StoryLab_1.md`
+
+Fuentes de estado:
+
+```text
+decisiones y gates: 00_CONTROL_MAESTRO
+arquitectura y diseño: 02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA
+resultados finales de auditoría: 15_EVALUACION_CALIDAD_Y_AUDITORIA
+memoria y continuidad: 18_DOCUMENTACION_ACTIVA
+deuda activa: 20_MANTENIMIENTO_Y_EVOLUCION
+traducción y navegación humana: 21_WIKI_DOCUMENTACION_HUMANA
+archivo no vigente: 99_ARCHIVO_HISTORICO
+```
+
+La Wiki explica y orienta. No sustituye la autoridad de las fuentes enlazadas.
+C10 y v0.8.0 permanecen cerrados.

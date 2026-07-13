@@ -80,3 +80,15 @@ Esta base no autoriza backend, cloud, APIs externas, autenticación, analíticas
 ## 5. Dictamen
 
 Esta base convierte SDD en conocimiento operacional reproducible para el Programador Humanista. La metodología deja de depender de memoria de sesión y se vuelve una caja de herramientas documental, con cierres, alarmas, brújulas, objetos conceptuales, permisos humanos situados y espacio real para crear sin jaulas.
+
+<!-- C9_BASE_SDD_INDEX -->
+
+## Índice interno C9
+
+La colección cuenta con índice unitario en:
+
+- `05_COMPETENCIAS_Y_PERFILES/Programador_Humanista/Base_Conocimiento_SDD/Indice_Interno_Base_Conocimiento_SDD_C9_AI_StoryLab_1.md`
+- `05_COMPETENCIAS_Y_PERFILES/Programador_Humanista/Base_Conocimiento_SDD/Indice_Interno_Base_Conocimiento_SDD_C9_AI_StoryLab_1.csv`
+
+Los identificadores `KB-SDD-*` son claves de navegación internas. No son
+`document_id` canónicos y no transmiten autoridad por herencia.

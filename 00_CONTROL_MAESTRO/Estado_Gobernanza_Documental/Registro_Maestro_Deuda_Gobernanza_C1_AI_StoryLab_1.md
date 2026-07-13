@@ -214,10 +214,10 @@ La deuda de C8 es una obligación nueva y más amplia.
 | `DEBT-GOV-007` | Formalizar ciclo de vida de `18_DOCUMENTACION_ACTIVA` | P1 | `resolved` | C6 | `DEC-AUD25-006` |
 | `DEBT-GOV-008` | Consolidar deuda activa en `20` mediante IDs únicos | P1 | `resolved` | C7 | `DEC-AUD25-007` |
 | `DEBT-GOV-009` | Formalizar archivo histórico, manifiestos y no vigencia | P1 | `resolved` | C8 | `DEC-AUD25-008` |
-| `DEBT-GOV-010` | Alinear Wiki y documentación humana con fuentes canónicas | P2 | `open` | C9 | `DEC-AUD25-009` |
+| `DEBT-GOV-010` | Alinear Wiki y documentación humana con fuentes canónicas | P2 | `resolved` | C9 | `DEC-AUD25-009` |
 | `DEBT-GOV-011` | Validar integridad estructural completa | P1 | `blocked` | C10 | `DEC-AUD25-010` |
-| `DEBT-GOV-012` | Revisar individualmente specs de `.specify` | P1 | `blocked` | C4 o C9 | `DEC-C0-003`, `DEC-C1-008` |
-| `DEBT-GOV-013` | Crear índice interno de la Base de Conocimiento SDD | P2 | `open` | C9 | `DEC-C0-005`, `DEC-C1-008` |
+| `DEBT-GOV-012` | Revisar individualmente specs de `.specify` | P1 | `resolved` | C4 o C9 | `DEC-C0-003`, `DEC-C1-008` |
+| `DEBT-GOV-013` | Crear índice interno de la Base de Conocimiento SDD | P2 | `resolved` | C9 | `DEC-C0-005`, `DEC-C1-008` |
 | `DEBT-GOV-014` | Automatizar índices y comprobaciones documentales | P2 | `deferred` | Posterior a C10 | `DEC-AUD25-010` |
 
 ## 6.1 Criterios de cierre destacados
@@ -821,4 +821,43 @@ notes:
   - C9 no se abre automáticamente
   - v0.8.0 no está abierto
   - implementación no está autorizada
+```
+
+<!-- C9_CLOSURE_DEBT_UPDATE -->
+
+## Resoluciones C9
+
+```yaml
+resolved_debts:
+  - debt_id: DEBT-GOV-010
+    evidence:
+      - DOC-DOC-042
+      - Indice_Documentacion_Humana_C9
+    validation:
+      wiki_files_indexed: 32
+      canonical_routes_linked: 11
+  - debt_id: DEBT-GOV-012
+    evidence:
+      - DOC-DOC-043
+    validation:
+      specify_artifacts_reviewed: 11
+      active_specs_verified: 0
+      canonical_specs_declared: 0
+  - debt_id: DEBT-GOV-013
+    evidence:
+      - DOC-DOC-044
+    validation:
+      knowledge_units_indexed: 12
+      inherited_canonicity_declared: false
+resolution_date: 2026-07-13
+movements: 0
+renames: 0
+deletions: 0
+implementation_files_modified: 0
+notes:
+  - DOC-REF-002 queda como controlled_exception_C9
+  - DOC-UX-007 permanece HOLD
+  - GATE-CORR-G5 será efectivo con el merge humano de C9
+  - C10 no se abre automáticamente
+  - v0.8.0 no está abierto
 ```

@@ -1070,3 +1070,46 @@ next_dependency:
 
 C8 preserva continuidad histórica, pero G5 requiere navegación humana en C9.
 `GATE-CORR-G4` permanece pendiente hasta C10.
+
+<!-- C9_G5_COMPLETION -->
+
+## Cierre C9 de `GATE-CORR-G5`
+
+```yaml
+phase: C9
+gate_id: GATE-CORR-G5
+status: approved
+lifecycle: fulfilled_effective_on_merge
+date: 2026-07-13
+authority:
+  - autorización humana explícita “Adelante con C9 consolidado”
+  - decisión humana de merge del PR C9
+evidence:
+  - DOC-DOC-039
+  - DOC-DOC-040
+  - DOC-DOC-041
+  - DOC-DOC-042
+  - DOC-DOC-043
+  - DOC-DOC-044
+  - DOC-DOC-045
+validation:
+  archive_governance_active: true
+  human_navigation_aligned: true
+  wiki_files_indexed: 32
+  canonical_routes_linked: 11
+  specify_artifacts_reviewed: 11
+  base_sdd_units_indexed: 12
+  DOC_REF_002_route_resolved: controlled_exception_C9
+  historical_continuity_complete: true
+allowed_result:
+  - cerrar C9 después del merge
+blocked_result:
+  - apertura automática de C10
+  - apertura de v0.8.0
+  - implementación
+next_gate:
+  - GATE-CORR-G6
+  - GATE-CORR-G4 final validation in C10
+```
+
+El merge humano de C9 hace efectivo el ciclo `fulfilled`.

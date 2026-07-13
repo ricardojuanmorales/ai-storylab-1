@@ -586,3 +586,35 @@ archived_holdings:
 ```
 
 La ubicación en `99` no transmite autoridad vigente.
+
+<!-- C9_HUMAN_AUTHORITY_MODEL -->
+
+## Enmienda C9 · Autoridad humana, `.specify` y Base SDD
+
+```text
+DOC-DOC-042:
+  role: canonical_navigation_map
+  canonical: yes for navigation only
+
+Wiki documents:
+  role: derived_human_explanation
+  canonical_for_substance: no
+
+DOC-REF-002:
+  path: 18_DOCUMENTACION_ACTIVA/Continuidad/v0_7_0/Arquitectura_Tecnica_Seguridad/Glosario_Operativo/Glosario_Operativo_Lenguaje_Canonico_Ayudas_Contextuales_v0_7_AI_StoryLab.md
+  status: active
+  canonical: yes within language/reference scope
+  route_status: controlled_exception_C9
+  human_gateway: 21_WIKI_DOCUMENTACION_HUMANA/Glosario_Operativo/README.md
+
+.specify:
+  artifacts_reviewed: 11
+  active_specs_verified: 0
+  canonical: no
+  role: historical_workspace_scaffold
+
+Base_Conocimiento_SDD:
+  units_indexed: 12
+  collection_status: approved_collection
+  unit_canonicality: derived_not_inherited
+```

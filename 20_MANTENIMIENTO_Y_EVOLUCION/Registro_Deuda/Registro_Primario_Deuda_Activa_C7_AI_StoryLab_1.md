@@ -70,10 +70,7 @@ criterios generales de cierre.
 | `DEBT-DATA-EXPORT` | Exportación por propósito | P1 | `accepted` | C4 y v0.8 | 16. Deudas activas preservadas al cierre de v0.7 |
 | `DEBT-GALLERY` | Galería pública | P1 | `deferred` | Gate posterior | 16. Deudas activas preservadas al cierre de v0.7 |
 | `DEBT-GOV-001` | Formalizar una sola fuente activa por alcance | P1 | `accepted` | C1 | 6. Deuda estructural y de gobernanza derivada de PR #25 |
-| `DEBT-GOV-010` | Alinear Wiki y documentación humana con fuentes canónicas | P2 | `open` | C9 | 6. Deuda estructural y de gobernanza derivada de PR #25 |
 | `DEBT-GOV-011` | Validar integridad estructural completa | P1 | `blocked` | C10 | 6. Deuda estructural y de gobernanza derivada de PR #25 |
-| `DEBT-GOV-012` | Revisar individualmente specs de .specify | P1 | `blocked` | C4 o C9 | 6. Deuda estructural y de gobernanza derivada de PR #25 |
-| `DEBT-GOV-013` | Crear índice interno de la Base de Conocimiento SDD | P2 | `open` | C9 | 6. Deuda estructural y de gobernanza derivada de PR #25 |
 | `DEBT-GOV-014` | Automatizar índices y comprobaciones documentales | P2 | `deferred` | Posterior a C10 | 6. Deuda estructural y de gobernanza derivada de PR #25 |
 | `DEBT-GROUP-PROGRESS` | group_progress bajo auditoría | P1 | `accepted` | C3–C4 y v0.8 | 16. Deudas activas preservadas al cierre de v0.7 |
 | `DEBT-IMPORT` | Importación validada | P1 | `accepted` | C4 y v0.8 | 16. Deudas activas preservadas al cierre de v0.7 |
@@ -132,10 +129,10 @@ criterios generales de cierre.
 ## 5. Resumen
 
 ```text
-deudas activas únicas: 68
+deudas activas únicas: 65
 accepted: 42
-open: 8
-blocked: 3
+open: 6
+blocked: 2
 deferred: 15
 fuentes heredadas inventariadas: 33
 DEBT-GOV-008: resolved
@@ -157,12 +154,34 @@ implementation: not authorized
 manifiesto, declaración de no vigencia y regla de no edición verificables.
 
 ```text
-deudas activas únicas: 68
+deudas activas únicas: 65
 accepted: 42
-open: 8
-blocked: 3
+open: 6
+blocked: 2
 deferred: 15
 DEBT-GOV-009: resolved
 GATE-CORR-G5: pending / contribution C8 complete
-C9: not open
+C9: prepared for integration
 ```
+
+<!-- C9_ACTIVE_DEBT_TRANSITION -->
+
+## Transición C9
+
+Se retiran del registro activo:
+
+- `DEBT-GOV-010`;
+- `DEBT-GOV-012`;
+- `DEBT-GOV-013`.
+
+```text
+deudas activas únicas: 65
+accepted: 42
+open: 6
+blocked: 2
+deferred: 15
+GATE-CORR-G5: approved / effective on merge
+C10: not open
+```
+
+Las deudas funcionales, técnicas y de v0.8 conservan su estado.

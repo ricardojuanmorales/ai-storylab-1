@@ -166,7 +166,7 @@ No implica que el documento carezca de vigencia dentro del alcance aprobado en v
 | `DOC-FOR-001` | Trazabilidad Formativa No Vigilante | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/Trazabilidad_Formativa/Trazabilidad_Formativa_No_Vigilante_v0_7_AI_StoryLab.md` | Trazabilidad formativa | `active` | `estable`, integrada C4 |
 | `DOC-OPS-001` | Prompts, Documentación e IA No Embebida | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/Prompts_IA_No_Embebida/Prompts_Documentacion_IA_No_Embebida_v0_7_AI_StoryLab.md` | Operación de IA | `active` | `estable`, integrada C4 |
 | `DOC-OPS-002` | Ecosistema de Herramientas, Recursos Externos y Notas Institucionales | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/Herramientas_Recursos_Externos/Ecosistema_Herramientas_Recursos_Externos_Notas_Institucionales_v0_7_AI_StoryLab.md` | Herramientas y fronteras externas | `active` | `estable`, integrada C4 |
-| `DOC-REF-002` | Glosario Operativo, Lenguaje Canónico y Ayudas Contextuales | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_7_0/Arquitectura_Tecnica_Seguridad/Glosario_Operativo/Glosario_Operativo_Lenguaje_Canonico_Ayudas_Contextuales_v0_7_AI_StoryLab.md` | Lenguaje y referencia | `active` | `transitoria`, diferida a C9 |
+| `DOC-REF-002` | Glosario Operativo, Lenguaje Canónico y Ayudas Contextuales | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_7_0/Arquitectura_Tecnica_Seguridad/Glosario_Operativo/Glosario_Operativo_Lenguaje_Canonico_Ayudas_Contextuales_v0_7_AI_StoryLab.md` | Lenguaje y referencia | `active` | `excepción_controlada_C9`, acceso humano en `21` |
 | `DOC-DAT-002` | Entrega, Portafolio, Metadatos y Exportabilidad Local-First | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/Entrega_Portafolio_Exportabilidad/Entrega_Portafolio_Metadatos_Exportabilidad_Local_First_v0_7_AI_StoryLab.md` | Datos, entrega y exportabilidad | `active` | `estable`, integrada C4 |
 | `DOC-ARQ-004` | Arquitectura Modular, Objetos de Dominio, POO y SOLID | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/Arquitectura_Modular_Dominio/Arquitectura_Modular_Objetos_Dominio_POO_SOLID_v0_7_AI_StoryLab.md` | Arquitectura técnica modular | `active` | `estable`, integrada C4 |
 | `DOC-GOB-008` | Gobernanza Técnica hacia v1.0.0 | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/Gobernanza_Tecnica/Gobernanza_Tecnica_Hacia_v1_0_0_AI_StoryLab.md` | Gobernanza técnica | `active` | `estable`, integrada C4 |
@@ -335,3 +335,23 @@ implementation: not authorized
 | `DOC-DOC-041` | Acta de Cierre Consolidado C8 | `00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Acta_Cierre_Consolidado_C8_Archivo_Historico_AI_StoryLab_1.md` | `active` después del merge | Evidencia de cierre C8 |
 
 Los payloads inventariados en `DOC-DOC-040` son no vigentes y no canónicos.
+
+<!-- C9_NAVIGATION_DOCUMENT_INDEX -->
+
+## Enmienda C9 · Navegación humana y colecciones revisadas
+
+| ID | Documento | Ruta | Estado | Autoridad |
+|---|---|---|---|---|
+| `DOC-DOC-042` | Mapa de Navegación Canónica C9 | `21_WIKI_DOCUMENTACION_HUMANA/Mapa_Navegacion_Canonica_C9_AI_StoryLab_1.md` | `active` después del merge | Navegación, no sustancia |
+| `DOC-DOC-043` | Revisión Individual de `.specify` C9 | `00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Revision_Individual_Specify_C9_AI_StoryLab_1.md` | `active` después del merge | Dictamen de revisión |
+| `DOC-DOC-044` | Índice Interno Base de Conocimiento SDD C9 | `05_COMPETENCIAS_Y_PERFILES/Programador_Humanista/Base_Conocimiento_SDD/Indice_Interno_Base_Conocimiento_SDD_C9_AI_StoryLab_1.md` | `active` después del merge | Navegación interna |
+| `DOC-DOC-045` | Acta de Cierre Consolidado C9 | `00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Acta_Cierre_Consolidado_C9_Navegacion_Humana_AI_StoryLab_1.md` | `active` después del merge | Evidencia de cierre |
+
+Colecciones pendientes actualizadas:
+
+```text
+.specify: reviewed_individually / canonical no
+Base_Conocimiento_SDD: indexed / derived_not_inherited
+Wiki: aligned / derived_human_navigation
+DOC-REF-002: controlled_exception_C9
+```
