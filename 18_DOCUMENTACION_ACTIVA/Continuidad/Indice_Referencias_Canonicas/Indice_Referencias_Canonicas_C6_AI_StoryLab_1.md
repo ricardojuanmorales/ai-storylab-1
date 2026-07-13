@@ -69,3 +69,26 @@ C7: not open
 v0.8.0: not open
 implementation: not authorized
 ```
+
+<!-- C9_DOC_REF_002_DECISION -->
+
+## Decisión C9 sobre `DOC-REF-002`
+
+`DOC-REF-002` permanece en su ruta actual como excepción controlada.
+
+Razones:
+
+- cruza lenguaje, UX, seguridad y arquitectura técnica;
+- ya cuenta con identidad y aprobación;
+- moverlo a la Wiki convertiría una capa derivada en contenedor sustantivo;
+- copiarlo crearía competencia documental.
+
+Acceso humano:
+
+`21_WIKI_DOCUMENTACION_HUMANA/Glosario_Operativo/README.md`
+
+```text
+route_status: controlled_exception_C9
+canonical_source_count: 1
+competing_copies: 0
+```

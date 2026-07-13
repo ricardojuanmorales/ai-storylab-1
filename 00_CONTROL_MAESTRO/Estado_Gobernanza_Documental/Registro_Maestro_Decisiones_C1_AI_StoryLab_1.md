@@ -772,3 +772,22 @@ GATE-CORR-G5: pending / contribution C8 complete
 v0.8.0: not open
 implementation: not authorized
 ```
+
+<!-- C9_CLOSURE_DECISIONS -->
+
+## Decisiones de cierre C9
+
+| Decision ID | Título | Ciclo | Documentos afectados |
+|---|---|---|---|
+| `DEC-C9-001` | Alinear navegación humana con fuentes canónicas | `fulfilled` | `DOC-DOC-042`, Wiki |
+| `DEC-C9-002` | Mantener `DOC-REF-002` como fuente única y excepción controlada | `fulfilled` | `DOC-REF-002`, puerta humana |
+| `DEC-C9-003` | Resolver revisión individual de `.specify` sin activación masiva | `fulfilled` | `DOC-DOC-043`, 11 artefactos |
+| `DEC-C9-004` | Crear índice interno de la Base SDD sin canonicidad heredada | `fulfilled` | `DOC-DOC-044`, 12 unidades |
+| `DEC-C9-005` | Aprobar G5 con efectividad condicionada al merge | `awaiting_merge` | `GATE-CORR-G5`, C9 |
+
+```text
+DOC-UX-007: HOLD
+C10: not opened
+v0.8.0: not open
+implementation: not authorized
+```

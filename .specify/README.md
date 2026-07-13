@@ -36,3 +36,26 @@ Si una decisión o documento afecta a estudiantes, facilitadores, docentes, fami
 ## Última revisión
 
 Pendiente.
+
+<!-- C9_SPECIFY_REVIEW -->
+
+## Revisión individual C9
+
+Los once artefactos versionados de `.specify` fueron revisados individualmente.
+
+Resultado:
+
+```text
+specs activas verificadas: 0
+artefactos canónicos: 0
+stubs de workspace: 9
+semillas históricas: 2
+implementación autorizada: no
+```
+
+Informe:
+
+`00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Revision_Individual_Specify_C9_AI_StoryLab_1.md`
+
+`.specify` permanece como workspace histórico y de preparación. No sustituye
+la Constitución SDD ni las specs operativas aprobadas en `00_CONTROL_MAESTRO`.
