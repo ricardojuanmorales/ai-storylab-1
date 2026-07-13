@@ -508,3 +508,33 @@ DOC-AUD-007:
 ```
 
 La separación C5 preserva identidad y trazabilidad sin ejecutar movimientos.
+
+<!-- C6_18_AUTHORITY_MODEL -->
+
+## Enmienda C6 · Modelo de autoridad de `18`
+
+```text
+memoria, bitácoras, kits, cierres, transferencias y copias:
+  canonical: no
+
+DOC-GOB-004:
+  canonical: yes
+  authority: decisión humana activa
+  route_status: controlled_exception_C6
+
+DOC-GOB-005 y DOC-GOB-006:
+  canonical: yes dentro de su función derivada
+  authority: soporte de decisión activa
+  route_status: controlled_exception_C6
+
+DOC-UX-007:
+  status: on_hold
+  canonical: pending
+
+DOC-REF-002:
+  status: active
+  route_status: deferred_to_C9
+```
+
+Las fuentes elevadas en C3 y C4 conservan sus IDs y autoridad en `02`.
+El índice aplicable es `18_DOCUMENTACION_ACTIVA/Continuidad/Indice_Referencias_Canonicas/Indice_Referencias_Canonicas_C6_AI_StoryLab_1.md`.

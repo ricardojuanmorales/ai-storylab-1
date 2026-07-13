@@ -211,7 +211,7 @@ La deuda de C8 es una obligación nueva y más amplia.
 | `DEBT-GOV-004` | Elevar arquitectura funcional y UX desde rutas de continuidad | P1 | `resolved` | C3 | `DEC-AUD25-003`, `DEC-C1-009`, `DEC-C3-001`, `DEC-C3-002` |
 | `DEBT-GOV-005` | Elevar arquitectura técnica, datos, seguridad y privacidad | P1 | `resolved` | C4 | `DEC-AUD25-003`, `DEC-C1-009` |
 | `DEBT-GOV-006` | Separar método de `00` y resultados de `15` | P1 | `resolved` | C5 | `DEC-AUD25-005` |
-| `DEBT-GOV-007` | Formalizar ciclo de vida de `18_DOCUMENTACION_ACTIVA` | P1 | `open` | C6 | `DEC-AUD25-006` |
+| `DEBT-GOV-007` | Formalizar ciclo de vida de `18_DOCUMENTACION_ACTIVA` | P1 | `resolved` | C6 | `DEC-AUD25-006` |
 | `DEBT-GOV-008` | Consolidar deuda activa en `20` mediante IDs únicos | P1 | `open` | C7 | `DEC-AUD25-007` |
 | `DEBT-GOV-009` | Formalizar archivo histórico, manifiestos y no vigencia | P1 | `open` | C8 | `DEC-AUD25-008` |
 | `DEBT-GOV-010` | Alinear Wiki y documentación humana con fuentes canónicas | P2 | `open` | C9 | `DEC-AUD25-009` |
@@ -701,6 +701,39 @@ validation:
 notes:
   - GATE-CORR-G4 permanece pending
   - C6 no se abre automáticamente
+  - v0.8.0 no está abierto
+  - implementación no está autorizada
+```
+
+<!-- C6_CLOSURE_DEBT_UPDATE -->
+
+### Resolución C6 de `DEBT-GOV-007`
+
+```yaml
+debt_id: DEBT-GOV-007
+status: resolved
+resolution_date: 2026-07-13
+decision_reference:
+  - DEC-C6-001
+  - DEC-C6-002
+  - DEC-C6-003
+  - DEC-C6-004
+resolution_reference:
+  - DOC-DOC-033
+  - DOC-DOC-034
+  - DOC-DOC-035
+validation:
+  lifecycle_policy_created: true
+  canonical_reference_index_populated: true
+  controlled_exceptions_registered: 5
+  canonical_references_registered: 20
+  movements: 0
+  renames: 0
+  deletions: 0
+notes:
+  - GATE-CORR-G4 permanece pending
+  - GATE-CORR-G5 permanece future
+  - C7 no se abre automáticamente
   - v0.8.0 no está abierto
   - implementación no está autorizada
 ```

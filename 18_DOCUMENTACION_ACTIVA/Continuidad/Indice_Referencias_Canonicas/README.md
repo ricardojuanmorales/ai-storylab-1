@@ -84,3 +84,24 @@ Después del merge, revertir el commit de C2.
 
 No será necesario restaurar documentos sustantivos porque C2 no traslada
 contenido.
+
+<!-- C6_INDEX_ACTIVATION -->
+
+## Activación C6
+
+La frontera preparada en C2 queda poblada y activa mediante:
+
+- `18_DOCUMENTACION_ACTIVA/Continuidad/Indice_Referencias_Canonicas/Indice_Referencias_Canonicas_C6_AI_StoryLab_1.md`
+- `18_DOCUMENTACION_ACTIVA/Continuidad/Indice_Referencias_Canonicas/Matriz_Ciclo_Vida_Documentacion_Activa_C6_AI_StoryLab_1.csv`
+- `18_DOCUMENTACION_ACTIVA/Politica_Ciclo_Vida_Documentacion_Activa_C6_AI_StoryLab_1.md`
+
+El texto C2 anterior se conserva como registro histórico de preparación.
+El estado operativo actual es:
+
+```text
+active_in_C6
+GATE-CORR-G1: approved / fulfilled
+DEBT-GOV-007: resolved pending merge
+GATE-CORR-G4: pending
+GATE-CORR-G5: pending / future
+```

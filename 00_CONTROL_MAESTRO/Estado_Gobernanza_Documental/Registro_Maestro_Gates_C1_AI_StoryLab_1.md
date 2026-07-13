@@ -985,3 +985,33 @@ next_dependencies:
 ```
 
 C5 aporta una frontera verificable, pero no cumple G4 por sí sola.
+
+<!-- C6_G4_CONTRIBUTION -->
+
+## Contribución C6 a `GATE-CORR-G4`
+
+```yaml
+phase: C6
+gate_id: GATE-CORR-G4
+contribution_status: complete_pending_later_phases
+gate_status: pending
+date: 2026-07-13
+evidence:
+  - DOC-DOC-033
+  - DOC-DOC-034
+  - DOC-DOC-035
+validation:
+  lifecycle_of_18_formalized: true
+  canonical_references_populated: 20
+  controlled_exceptions_registered: 5
+  global_referential_integrity_complete: false
+next_dependencies:
+  - C7
+  - C10
+historical_continuity_gate:
+  gate_id: GATE-CORR-G5
+  status: pending
+  phase: C8-C9
+```
+
+C6 no cumple G4 por sí sola y no abre G5.
