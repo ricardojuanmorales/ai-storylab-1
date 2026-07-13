@@ -130,7 +130,7 @@ Este documento no:
 | Glosario | `src/data/glossary.json` |
 | Constitución SDD v0.4.4 | `00_CONTROL_MAESTRO/Spec_Driven_Development/Constitucion_SDD_AI_StoryLab_1_v0_4_4.md` |
 | Documentos PR #21 sobre deuda Vista Facilitador | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_6_0/Auditoria_Integridad_Post_Cierre/` |
-| Mapa de Decisiones Técnicas v0.7.0 | `18_DOCUMENTACION_ACTIVA/Continuidad/v0_7_0/Arquitectura_Tecnica_Seguridad/Mapas_Decision/Mapa_Decisiones_Tecnicas_v0_7_AI_StoryLab.md` |
+| Mapa de Decisiones Técnicas v0.7.0 | `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/Mapas_Decision/Mapa_Decisiones_Tecnicas_v0_7_AI_StoryLab.md` |
 
 ---
 
