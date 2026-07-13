@@ -58,3 +58,11 @@ arquitectura técnica.
 
 Este mapa no cambia autoridad, no abre implementación y no convierte la Wiki
 en fuente normativa.
+
+<!-- C10_NAVIGATION_ENTRY -->
+
+## Validación estructural final
+
+| Tema | Audiencia | Fuente canónica | Función |
+|---|---|---|---|
+| Validación C0–C10 | equipo documental, institución y revisores | `15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Informe_Validacion_Integral_C10_AI_StoryLab_1.md` | dictamen final de corrección |

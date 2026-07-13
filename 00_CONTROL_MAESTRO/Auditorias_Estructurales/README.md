@@ -56,3 +56,14 @@ autoridad en `15`.
 Esta frontera no mueve, duplica, reescribe ni invalida evidencia histórica.
 No abre C6, no cumple `GATE-CORR-G4`, no abre v0.8.0 y no autoriza
 implementación.
+
+<!-- C10_METHOD_CLOSURE -->
+
+## Cierre metodológico C10
+
+La validación final de la corrección se publica en:
+
+`15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Informe_Validacion_Integral_C10_AI_StoryLab_1.md`
+
+Los materiales B0–B7 conservan función metodológica e histórica. C10 no los
+reescribe ni los convierte en resultados nuevos.

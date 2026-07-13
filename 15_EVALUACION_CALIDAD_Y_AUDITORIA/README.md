@@ -61,3 +61,14 @@ El método, inventarios, mapas de trabajo, simulaciones y planes permanecen en
 
 Esta separación no duplica autoridad ni mueve evidencia histórica.
 `GATE-CORR-G4` permanece pendiente.
+
+<!-- C10_RESULTS_ENTRY -->
+
+## Resultados finales C10
+
+- `15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Informe_Validacion_Integral_C10_AI_StoryLab_1.md`
+- `15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Matriz_Validacion_Integral_C10_AI_StoryLab_1.csv`
+- `15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Inventario_Integridad_Referencial_C10_AI_StoryLab_1.csv`
+- `15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Resumen_Validacion_C10_AI_StoryLab_1.json`
+
+C10 valida la estructura corregida. No abre v0.8.0.

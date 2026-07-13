@@ -34,3 +34,14 @@ existentes y declara su relación con la evidencia metodológica conservada en
 
 No mueve archivos, no duplica resultados, no cumple `GATE-CORR-G4`, no abre
 v0.8.0 y no autoriza implementación.
+
+<!-- C10_RESULTS_INDEX -->
+
+## Validación final de la corrección C0–C10
+
+| ID | Producto | Ruta | Autoridad |
+|---|---|---|---|
+| `DOC-AUD-008` | Informe de Validación Integral C10 | `15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Informe_Validacion_Integral_C10_AI_StoryLab_1.md` | Dictamen final |
+| `DOC-AUD-009` | Matriz de Validación Integral C10 | `15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Matriz_Validacion_Integral_C10_AI_StoryLab_1.csv` | Evidencia estructurada |
+| `DOC-AUD-010` | Inventario de Integridad Referencial C10 | `15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Inventario_Integridad_Referencial_C10_AI_StoryLab_1.csv` | Evidencia de rutas y hashes |
+| `DOC-AUD-011` | Resumen de Validación C10 | `15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Resumen_Validacion_C10_AI_StoryLab_1.json` | Resultado reproducible |
