@@ -1042,3 +1042,31 @@ next_dependency:
 
 C7 completa la contribución prevista de C5–C7, pero G4 requiere validación
 global en C10.
+
+<!-- C8_G5_CONTRIBUTION -->
+
+## Contribución C8 a `GATE-CORR-G5`
+
+```yaml
+phase: C8
+gate_id: GATE-CORR-G5
+contribution_status: complete_pending_C9
+gate_status: pending
+date: 2026-07-13
+evidence:
+  - DOC-DOC-039
+  - DOC-DOC-040
+  - DOC-DOC-041
+validation:
+  archive_governance_active: true
+  holdings_inventoried: 91
+  hashes_recorded: 91
+  non_vigency_declared: true
+  no_edit_rule_declared: true
+  navigation_alignment_complete: false
+next_dependency:
+  - C9
+```
+
+C8 preserva continuidad histórica, pero G5 requiere navegación humana en C9.
+`GATE-CORR-G4` permanece pendiente hasta C10.

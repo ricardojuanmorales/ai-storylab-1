@@ -753,3 +753,22 @@ C8: not opened
 v0.8.0: not open
 implementation: not authorized
 ```
+
+<!-- C8_CLOSURE_DECISIONS -->
+
+## Decisiones de cierre C8
+
+| Decision ID | Título | Ciclo | Documentos afectados |
+|---|---|---|---|
+| `DEC-C8-001` | Activar `99` como archivo histórico gobernado | `fulfilled` | `DOC-DOC-039`, `99_ARCHIVO_HISTORICO` |
+| `DEC-C8-002` | Declarar no vigencia y ausencia de autoridad del acervo | `fulfilled` | `91 acervos inventariados` |
+| `DEC-C8-003` | Adoptar inmutabilidad y corrección por addendum | `fulfilled` | `DOC-DOC-039`, `DOC-DOC-040` |
+| `DEC-C8-004` | Resolver `DEBT-GOV-009` y mantener G5 pendiente | `fulfilled` | `DEBT-GOV-009`, `GATE-CORR-G5` |
+
+```text
+C9: not opened
+GATE-CORR-G4: pending / C10
+GATE-CORR-G5: pending / contribution C8 complete
+v0.8.0: not open
+implementation: not authorized
+```

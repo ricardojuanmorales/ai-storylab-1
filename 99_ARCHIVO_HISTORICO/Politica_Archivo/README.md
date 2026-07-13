@@ -84,3 +84,12 @@ Después del merge, revertir el commit de C2.
 
 No será necesario restaurar documentos sustantivos porque C2 no traslada
 contenido.
+
+<!-- C8_POLICY_ACTIVATION -->
+
+## Activación C8
+
+La política vigente es `99_ARCHIVO_HISTORICO/Politica_Archivo/Politica_Archivo_Historico_C8_AI_StoryLab_1.md`.
+
+El texto C2 anterior se conserva como historia de preparación. El estado
+operativo actual es `active_in_C8`.
