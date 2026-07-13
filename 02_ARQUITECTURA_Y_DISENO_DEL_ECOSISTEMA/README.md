@@ -123,3 +123,34 @@ Estas subfronteras contienen ocho fuentes sustantivas v0.6 integradas y sus READ
 `DOC-UX-007` permanece fuera de la migración y conserva su dependencia compartida C3–C4.
 
 El cierre de C3 no abre C4, no aprueba `GATE-CORR-G3`, no abre v0.8.0 y no autoriza implementación.
+
+## Enmienda de integración y cierre C4
+
+<!-- C4_TECHNICAL_BOUNDARY_UPDATE -->
+
+### Estado vigente post-G3
+
+```text
+C3: closed / integrated
+C4: closed / integrated
+GATE-CORR-G3: approved / fulfilled
+PR C4-A: #41
+merge C4-A: d522065bca7232758934558293c0942532babfab
+commit elevación residual C4-B: a37fc82bc0f617ab3f0a4eff1440911d8116a9b1
+DEBT-GOV-005: resolved
+DOC-REF-002: deferred to C9
+DOC-UX-007: HOLD
+DEBT-GOV-012: blocked
+v0.8.0: not open
+implementation: not authorized
+```
+
+### Subfrontera técnica integrada
+
+`Arquitectura_Tecnica_Referencia/` contiene las doce fuentes técnicas
+elevadas en C4-A y C4-B.
+
+### Límites preservados
+
+El cierre C4 no abre implementación ni la fase v0.8.0. La continuidad hacia
+C5 requiere una decisión consolidada independiente.

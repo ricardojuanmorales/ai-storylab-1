@@ -209,7 +209,7 @@ La deuda de C8 es una obligación nueva y más amplia.
 | `DEBT-GOV-002` | Ratificar autoridad distribuida de SDD | P1 | `resolved` | C0 | `DEC-AUD25-002`, `DEC-C0-002`–`005` |
 | `DEBT-GOV-003` | Crear contenedor funcional estable para arquitectura y diseño | P1 | `resolved` | C2 | `DEC-AUD25-003` |
 | `DEBT-GOV-004` | Elevar arquitectura funcional y UX desde rutas de continuidad | P1 | `resolved` | C3 | `DEC-AUD25-003`, `DEC-C1-009`, `DEC-C3-001`, `DEC-C3-002` |
-| `DEBT-GOV-005` | Elevar arquitectura técnica, datos, seguridad y privacidad | P1 | `blocked` | C4 | `DEC-AUD25-003`, `DEC-C1-009` |
+| `DEBT-GOV-005` | Elevar arquitectura técnica, datos, seguridad y privacidad | P1 | `resolved` | C4 | `DEC-AUD25-003`, `DEC-C1-009` |
 | `DEBT-GOV-006` | Separar método de `00` y resultados de `15` | P1 | `open` | C5 | `DEC-AUD25-005` |
 | `DEBT-GOV-007` | Formalizar ciclo de vida de `18_DOCUMENTACION_ACTIVA` | P1 | `open` | C6 | `DEC-AUD25-006` |
 | `DEBT-GOV-008` | Consolidar deuda activa en `20` mediante IDs únicos | P1 | `open` | C7 | `DEC-AUD25-007` |
@@ -325,6 +325,44 @@ notes:
 
 La resolución de `DEBT-GOV-004` no resuelve automáticamente `DEBT-GOV-005`
 ni inicia C4.
+### Resolución C4 de `DEBT-GOV-005`
+
+<!-- C4_CLOSURE_DEBT_UPDATE -->
+
+```yaml
+debt_id: DEBT-GOV-005
+status: resolved
+resolution_date: 2026-07-13
+decision_reference:
+  - DEC-C4-001
+  - DEC-C4-002
+  - DEC-C4-003
+  - autorización humana explícita “Adelante con C4-B consolidado”
+resolution_reference:
+  - PR #41
+  - merge d522065bca7232758934558293c0942532babfab
+  - commit de elevación residual a37fc82bc0f617ab3f0a4eff1440911d8116a9b1
+  - GATE-CORR-G3 approved / fulfilled
+  - DOC-DOC-031
+validation:
+  sources_elevated: 12
+  residual_sources_elevated: 6
+  historical_references_preserved: true
+  DOC_REF_002_deferred_to_C9: true
+  DOC_UX_007_modified: false
+  implementation_files_modified: 0
+notes:
+  - C4 queda cerrado
+  - DOC-REF-002 queda diferido a C9
+  - DOC-UX-007 permanece en HOLD
+  - DEBT-GOV-012 permanece blocked
+  - v0.8.0 no está abierto
+  - implementación no está autorizada
+```
+
+La resolución de `DEBT-GOV-005` no resuelve deudas de implementación
+local-first, seguridad, evidencia, IA o facilitador.
+
 ### `DEBT-GOV-008`
 
 Requiere:

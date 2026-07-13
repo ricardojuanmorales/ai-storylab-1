@@ -431,7 +431,7 @@ Los gates G0–G6 definidos por la auditoría se normalizan para evitar colision
 | `GATE-CORR-G0` | G0 · Autoridad | Confirmar qué documentos gobiernan | `approved` | `fulfilled` | C0 |
 | `GATE-CORR-G1` | G1 · Estructura objetivo | Aprobar nuevo `02` y fronteras principales | `approved` | `fulfilled` | C2 |
 | `GATE-CORR-G2` | G2 · Migración funcional | Aprobar arquitectura funcional y UX por lote | `approved` | `fulfilled` | C3 |
-| `GATE-CORR-G3` | G3 · Migración técnica | Aprobar arquitectura técnica y decisiones | `pending` | `future` | C4 |
+| `GATE-CORR-G3` | G3 · Migración técnica | Aprobar arquitectura técnica y decisiones | `approved` | `fulfilled` | C4 |
 | `GATE-CORR-G4` | G4 · Integridad referencial | Confirmar enlaces, gates y decisiones | `pending` | `future` | C5–C7 y C10 |
 | `GATE-CORR-G5` | G5 · Continuidad histórica | Confirmar navegación de historia v0.6–v0.7 | `pending` | `future` | C8–C9 |
 | `GATE-CORR-G6` | G6 · Cierre estructural | Confirmar ausencia de bloqueantes P1 | `pending` | `future` | C10 |
@@ -563,6 +563,50 @@ La integración de G2 completa la migración funcional autorizada.
 
 No resuelve por sí sola `DEBT-GOV-004` ni cierra formalmente C3.
 ---
+
+## 11.4 Gate G3 cumplido
+
+<!-- C4_POST_G3_GATE_UPDATE -->
+
+```yaml
+gate_id: GATE-CORR-G3
+label: G3 · Migración técnica
+phase: C4
+status: approved
+lifecycle: fulfilled
+date:
+  decision: 2026-07-13
+  integration_pending: PR C4-B
+authority: autorización humana explícita “Adelante con C4-B consolidado”
+evidence:
+  - PR #41
+  - merge d522065bca7232758934558293c0942532babfab
+  - commit de elevación residual a37fc82bc0f617ab3f0a4eff1440911d8116a9b1
+  - DOC-DOC-031
+affected_documents:
+  - DOC-ARQ-003
+  - DOC-ARQ-004
+  - DOC-DAT-001
+  - DOC-DAT-002
+  - DOC-SEG-002
+  - DOC-SEG-003
+  - DOC-SEG-004
+  - DOC-FOR-001
+  - DOC-OPS-001
+  - DOC-OPS-002
+  - DOC-GOB-008
+  - DOC-GOB-009
+allowed_result:
+  - cerrar C4
+  - resolver DEBT-GOV-005
+  - preparar C5 mediante decisión independiente
+blocked_result:
+  - mover DOC-UX-007
+  - resolver DEBT-GOV-012
+  - abrir v0.8.0
+  - implementación
+next_gate: GATE-CORR-G4
+```
 
 # 12. Gates internos de la fase C1
 
