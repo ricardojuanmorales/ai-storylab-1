@@ -205,7 +205,7 @@ La deuda de C8 es una obligación nueva y más amplia.
 
 | Debt ID | Título | Prioridad | Estado | Fase objetivo | Decisiones relacionadas |
 |---|---|---:|---|---|---|
-| `DEBT-GOV-001` | Formalizar una sola fuente activa por alcance | P1 | `accepted` | C1 | `DEC-AUD25-001`, `DEC-C1-004` |
+| `DEBT-GOV-001` | Formalizar una sola fuente activa por alcance | P1 | `resolved` | C1 | `DEC-AUD25-001`, `DEC-C1-004` |
 | `DEBT-GOV-002` | Ratificar autoridad distribuida de SDD | P1 | `resolved` | C0 | `DEC-AUD25-002`, `DEC-C0-002`–`005` |
 | `DEBT-GOV-003` | Crear contenedor funcional estable para arquitectura y diseño | P1 | `resolved` | C2 | `DEC-AUD25-003` |
 | `DEBT-GOV-004` | Elevar arquitectura funcional y UX desde rutas de continuidad | P1 | `resolved` | C3 | `DEC-AUD25-003`, `DEC-C1-009`, `DEC-C3-001`, `DEC-C3-002` |
@@ -215,7 +215,7 @@ La deuda de C8 es una obligación nueva y más amplia.
 | `DEBT-GOV-008` | Consolidar deuda activa en `20` mediante IDs únicos | P1 | `resolved` | C7 | `DEC-AUD25-007` |
 | `DEBT-GOV-009` | Formalizar archivo histórico, manifiestos y no vigencia | P1 | `resolved` | C8 | `DEC-AUD25-008` |
 | `DEBT-GOV-010` | Alinear Wiki y documentación humana con fuentes canónicas | P2 | `resolved` | C9 | `DEC-AUD25-009` |
-| `DEBT-GOV-011` | Validar integridad estructural completa | P1 | `blocked` | C10 | `DEC-AUD25-010` |
+| `DEBT-GOV-011` | Validar integridad estructural completa | P1 | `resolved` | C10 | `DEC-AUD25-010` |
 | `DEBT-GOV-012` | Revisar individualmente specs de `.specify` | P1 | `resolved` | C4 o C9 | `DEC-C0-003`, `DEC-C1-008` |
 | `DEBT-GOV-013` | Crear índice interno de la Base de Conocimiento SDD | P2 | `resolved` | C9 | `DEC-C0-005`, `DEC-C1-008` |
 | `DEBT-GOV-014` | Automatizar índices y comprobaciones documentales | P2 | `deferred` | Posterior a C10 | `DEC-AUD25-010` |
@@ -566,12 +566,12 @@ Ninguna de estas deudas autoriza la capacidad que describe.
 
 | Debt ID | Título | Prioridad | Estado | Fase objetivo |
 |---|---|---:|---|---|
-| `DEBT-C1-001` | Verificar todos los IDs documentales contra el árbol completo | P1 | `open` | C1-D |
-| `DEBT-C1-002` | Verificar unicidad de IDs de decisiones | P1 | `open` | C1-D |
-| `DEBT-C1-003` | Verificar unicidad de IDs de deuda | P1 | `open` | C1-D |
-| `DEBT-C1-004` | Verificar unicidad de IDs de gates | P1 | `open` | C1-D |
-| `DEBT-C1-005` | Confirmar que ninguna fuente activa duplicada quedó omitida | P1 | `open` | C1-D |
-| `DEBT-C1-006` | Confirmar que el PR #30 contiene cero movimientos y eliminaciones | P1 | `open` | C1-D |
+| `DEBT-C1-001` | Verificar todos los IDs documentales contra el árbol completo | P1 | `resolved` | C1-D |
+| `DEBT-C1-002` | Verificar unicidad de IDs de decisiones | P1 | `resolved` | C1-D |
+| `DEBT-C1-003` | Verificar unicidad de IDs de deuda | P1 | `resolved` | C1-D |
+| `DEBT-C1-004` | Verificar unicidad de IDs de gates | P1 | `resolved` | C1-D |
+| `DEBT-C1-005` | Confirmar que ninguna fuente activa duplicada quedó omitida | P1 | `resolved` | C1-D |
+| `DEBT-C1-006` | Confirmar que el PR #30 contiene cero movimientos y eliminaciones | P1 | `resolved` | C1-D |
 | `DEBT-C1-007` | Consolidar fuente primaria de deuda en C7 | P1 | `resolved` | C7 |
 | `DEBT-C1-008` | Automatizar validación de registros | P2 | `deferred` | Posterior a C10 |
 
@@ -860,4 +860,43 @@ notes:
   - GATE-CORR-G5 será efectivo con el merge humano de C9
   - C10 no se abre automáticamente
   - v0.8.0 no está abierto
+```
+
+<!-- C10_CLOSURE_DEBT_UPDATE -->
+
+## Resoluciones C10
+
+```yaml
+resolution_date: 2026-07-13
+evidence:
+  - DOC-AUD-008
+  - DOC-AUD-009
+  - DOC-AUD-010
+  - DOC-AUD-011
+  - DOC-DOC-046
+resolved:
+  - DEBT-C1-001
+  - DEBT-C1-002
+  - DEBT-C1-003
+  - DEBT-C1-004
+  - DEBT-C1-005
+  - DEBT-C1-006
+  - DEBT-GOV-001
+  - DEBT-GOV-011
+validation:
+  tracked_files: 989
+  reference_records: 215
+  reference_failures: 0
+  document_id_conflicts: 0
+  structural_P1_blockers_after: 0
+  active_debt_after: 57
+  movements: 0
+  renames: 0
+  deletions: 0
+reservation:
+  - DFUX-TRZ-005 permanece blocked para el gate futuro de v0.8
+limits:
+  - GATE-V08-OPEN-001 permanece pending
+  - v0.8.0 no está abierto
+  - implementación no está autorizada
 ```

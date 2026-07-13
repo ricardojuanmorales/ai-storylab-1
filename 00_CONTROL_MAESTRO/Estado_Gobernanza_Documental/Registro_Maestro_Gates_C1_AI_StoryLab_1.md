@@ -432,9 +432,9 @@ Los gates G0–G6 definidos por la auditoría se normalizan para evitar colision
 | `GATE-CORR-G1` | G1 · Estructura objetivo | Aprobar nuevo `02` y fronteras principales | `approved` | `fulfilled` | C2 |
 | `GATE-CORR-G2` | G2 · Migración funcional | Aprobar arquitectura funcional y UX por lote | `approved` | `fulfilled` | C3 |
 | `GATE-CORR-G3` | G3 · Migración técnica | Aprobar arquitectura técnica y decisiones | `approved` | `fulfilled` | C4 |
-| `GATE-CORR-G4` | G4 · Integridad referencial | Confirmar enlaces, gates y decisiones | `pending` | `future` | C5–C7 y C10 |
-| `GATE-CORR-G5` | G5 · Continuidad histórica | Confirmar navegación de historia v0.6–v0.7 | `pending` | `future` | C8–C9 |
-| `GATE-CORR-G6` | G6 · Cierre estructural | Confirmar ausencia de bloqueantes P1 | `pending` | `future` | C10 |
+| `GATE-CORR-G4` | G4 · Integridad referencial | Confirmar enlaces, gates y decisiones | `approved` | `fulfilled_effective_on_merge` | C5–C7 y C10 |
+| `GATE-CORR-G5` | G5 · Continuidad histórica | Confirmar navegación de historia v0.6–v0.7 | `approved` | `fulfilled` | C8–C9 |
+| `GATE-CORR-G6` | G6 · Cierre estructural | Confirmar ausencia de bloqueantes P1 | `approved_with_reservations` | `fulfilled_effective_on_merge` | C10 |
 
 ## 11.1 Gate G0 cumplido
 
@@ -707,7 +707,7 @@ gate_id: GATE-C1-C1
 label: Gate parcial C1-C.1
 phase: C1-C
 status: approved
-lifecycle: awaiting_integration
+lifecycle: fulfilled
 date: 2026-07-11
 authority: aprobación humana de sesión
 evidence:
@@ -728,8 +728,8 @@ next_gate: GATE-C1-C2
 gate_id: GATE-C1-C2
 label: Gate conjunto C1-C.2
 phase: C1-C
-status: pending
-lifecycle: active_phase_gate
+status: approved
+lifecycle: fulfilled
 authority: persona responsable de AI StoryLab 1
 evidence:
   - DOC-DOC-008
@@ -753,8 +753,8 @@ next_gate: GATE-C1-D
 gate_id: GATE-C1-D
 label: Gate de validación y cierre documental C1-D
 phase: C1-D
-status: pending
-lifecycle: future
+status: approved_with_reservations
+lifecycle: fulfilled
 authority: persona responsable de AI StoryLab 1
 dependencies:
   - GATE-C1-C2
@@ -774,8 +774,8 @@ next_gate: GATE-C1-FINAL
 gate_id: GATE-C1-FINAL
 label: Gate Humano Final de la Fase C1
 phase: C1
-status: pending
-lifecycle: future
+status: approved_with_reservations
+lifecycle: fulfilled
 authority: persona responsable de AI StoryLab 1
 dependencies:
   - GATE-C1-D
@@ -850,7 +850,10 @@ implementación no está autorizada
 | `GATE-CORR-G0` | `approved` | `fulfilled` | Autoridad ratificada |
 | `GATE-CORR-G1` | `approved` | `fulfilled` | Estructura objetivo aprobada mediante PR #32 |
 | `GATE-CORR-G2` | `approved` | `fulfilled` | Migración funcional integrada mediante PR #38 |
-| `GATE-CORR-G3`–`G6` | `pending` | `future` | Corrección estructural posterior |
+| `GATE-CORR-G3` | `approved` | `fulfilled` | Migración técnica integrada |
+| `GATE-CORR-G4` | `approved` | `fulfilled_effective_on_merge` | Integridad referencial C10 |
+| `GATE-CORR-G5` | `approved` | `fulfilled` | Continuidad histórica C8–C9 |
+| `GATE-CORR-G6` | `approved_with_reservations` | `fulfilled_effective_on_merge` | Cierre estructural C10 |
 | `GATE-C1-1` | `approved` | `fulfilled` | Esquema C1 vigente |
 | `GATE-C1-A` | `approved` | `fulfilled` | Plan operativo |
 | `GATE-C1-B1` | `approved` | `fulfilled` | Registro rector |
@@ -1113,3 +1116,39 @@ next_gate:
 ```
 
 El merge humano de C9 hace efectivo el ciclo `fulfilled`.
+
+<!-- C10_FINAL_GATES -->
+
+## Gates finales de C10
+
+```yaml
+GATE-CORR-G4:
+  status: approved
+  lifecycle: fulfilled_effective_on_merge
+  evidence:
+    - DOC-AUD-008
+    - DOC-AUD-009
+    - DOC-AUD-010
+  reference_failures: 0
+
+GATE-CORR-G5:
+  status: approved
+  lifecycle: fulfilled
+  evidence:
+    - C8
+    - C9
+    - PR #47
+
+GATE-CORR-G6:
+  status: approved_with_reservations
+  lifecycle: fulfilled_effective_on_merge
+  structural_P1_blockers: 0
+  remaining_out_of_scope_blocker:
+    - DFUX-TRZ-005
+
+GATE-V08-OPEN-001:
+  status: pending
+  lifecycle: future
+```
+
+El cierre de C10 no ejecuta el gate de v0.8.0.

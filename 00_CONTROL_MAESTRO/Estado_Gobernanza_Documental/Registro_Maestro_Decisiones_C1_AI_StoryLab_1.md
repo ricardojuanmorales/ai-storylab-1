@@ -791,3 +791,21 @@ C10: not opened
 v0.8.0: not open
 implementation: not authorized
 ```
+
+<!-- C10_CLOSURE_DECISIONS -->
+
+## Decisiones de cierre C10
+
+| Decision ID | Título | Ciclo | Resultado |
+|---|---|---|---|
+| `DEC-C10-001` | Aprobar la validación integral reproducible | `fulfilled_effective_on_merge` | G4 aprobado |
+| `DEC-C10-002` | Reconciliar C1-D y su gate final | `fulfilled` | PR #30 reconocido como cierre C1 |
+| `DEC-C10-003` | Resolver ocho deudas estructurales | `fulfilled_effective_on_merge` | 57 deudas activas |
+| `DEC-C10-004` | Aprobar G6 con reserva controlada | `fulfilled_effective_on_merge` | cero bloqueantes estructurales |
+| `DEC-C10-005` | Cerrar la secuencia C0–C10 sin abrir v0.8 | `fulfilled_effective_on_merge` | cierre documental |
+
+```text
+DFUX-TRZ-005: blocked / future v0.8 gate
+GATE-V08-OPEN-001: pending
+implementation: not authorized
+```

@@ -355,3 +355,15 @@ Base_Conocimiento_SDD: indexed / derived_not_inherited
 Wiki: aligned / derived_human_navigation
 DOC-REF-002: controlled_exception_C9
 ```
+
+<!-- C10_VALIDATION_DOCUMENT_INDEX -->
+
+## Enmienda C10 · Productos de validación final
+
+| ID | Documento | Ruta | Estado | Autoridad |
+|---|---|---|---|---|
+| `DOC-AUD-008` | Informe de Validación Integral C10 | `15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Informe_Validacion_Integral_C10_AI_StoryLab_1.md` | `active` después del merge | Dictamen final |
+| `DOC-AUD-009` | Matriz de Validación Integral C10 | `15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Matriz_Validacion_Integral_C10_AI_StoryLab_1.csv` | `active` después del merge | Evidencia estructurada |
+| `DOC-AUD-010` | Inventario de Integridad Referencial C10 | `15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Inventario_Integridad_Referencial_C10_AI_StoryLab_1.csv` | `active` después del merge | Evidencia de rutas y hashes |
+| `DOC-AUD-011` | Resumen de Validación C10 | `15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Resumen_Validacion_C10_AI_StoryLab_1.json` | `active` después del merge | Resultado reproducible |
+| `DOC-DOC-046` | Acta de Cierre Consolidado C10 | `00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Acta_Cierre_Consolidado_C10_Correccion_Estructural_AI_StoryLab_1.md` | `active` después del merge | Evidencia de cierre |

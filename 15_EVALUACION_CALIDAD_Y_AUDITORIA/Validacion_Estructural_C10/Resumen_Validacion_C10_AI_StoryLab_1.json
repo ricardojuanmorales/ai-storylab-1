@@ -1,0 +1,195 @@
+{
+  "active_debt_after": 57,
+  "active_debt_before": 65,
+  "active_debt_counts_after": {
+    "accepted": 41,
+    "blocked": 1,
+    "deferred": 15,
+    "open": 0
+  },
+  "active_debt_counts_before": {
+    "accepted": 42,
+    "blocked": 2,
+    "deferred": 15,
+    "open": 6
+  },
+  "base_sha": "adfc16fb75698d74308cc43642c6aaa9700cf4df",
+  "checks": [
+    {
+      "check_id": "C10-001",
+      "criterion": "Base fija de C10",
+      "evidence": "adfc16fb75698d74308cc43642c6aaa9700cf4df",
+      "result": "PASS",
+      "severity": "critical"
+    },
+    {
+      "check_id": "C10-002",
+      "criterion": "Registro activo C9: 65 IDs únicos",
+      "evidence": "rows=65 counts={'deferred': 15, 'blocked': 2, 'open': 6, 'accepted': 42}",
+      "result": "PASS",
+      "severity": "critical"
+    },
+    {
+      "check_id": "C10-003",
+      "criterion": "Sincronía Markdown/CSV de deuda activa",
+      "evidence": "md=65 csv=65",
+      "result": "PASS",
+      "severity": "critical"
+    },
+    {
+      "check_id": "C10-C8_ARCHIVE-HASH",
+      "criterion": "C8_ARCHIVE: rutas y hashes",
+      "evidence": "rows=91 failures=0",
+      "result": "PASS",
+      "severity": "critical"
+    },
+    {
+      "check_id": "C10-C9_WIKI-HASH",
+      "criterion": "C9_WIKI: rutas y hashes",
+      "evidence": "rows=32 failures=0",
+      "result": "PASS",
+      "severity": "critical"
+    },
+    {
+      "check_id": "C10-C9_SPECIFY-HASH",
+      "criterion": "C9_SPECIFY: rutas y hashes",
+      "evidence": "rows=11 failures=0",
+      "result": "PASS",
+      "severity": "critical"
+    },
+    {
+      "check_id": "C10-C9_BASE_SDD-HASH",
+      "criterion": "C9_BASE_SDD: rutas y hashes",
+      "evidence": "rows=12 failures=0",
+      "result": "PASS",
+      "severity": "critical"
+    },
+    {
+      "check_id": "C10-C7-HISTORY",
+      "criterion": "C7: 33 fuentes históricas preservadas",
+      "evidence": "rows=33 failures=0",
+      "result": "PASS",
+      "severity": "critical"
+    },
+    {
+      "check_id": "C10-C6_CANONICAL-PATHS",
+      "criterion": "C6_CANONICAL: rutas actuales",
+      "evidence": "unique_paths=25 failures=0",
+      "result": "PASS",
+      "severity": "critical"
+    },
+    {
+      "check_id": "C10-C9_NAVIGATION-PATHS",
+      "criterion": "C9_NAVIGATION: rutas actuales",
+      "evidence": "unique_paths=11 failures=0",
+      "result": "PASS",
+      "severity": "critical"
+    },
+    {
+      "check_id": "C10-004",
+      "criterion": "Ausencia de marcadores de conflicto",
+      "evidence": "text_files=979 conflicts=0",
+      "result": "PASS",
+      "severity": "critical"
+    },
+    {
+      "check_id": "C10-005",
+      "criterion": "IDs documentales sin definiciones autoritativas competidoras",
+      "evidence": "ids=44 conflicts=0",
+      "result": "PASS",
+      "severity": "critical"
+    },
+    {
+      "check_id": "C10-006",
+      "criterion": "Referencias de decisiones reconocidas",
+      "evidence": "known=117 unknown_tokens=1",
+      "result": "PASS_WITH_RESERVATION",
+      "severity": "warning"
+    },
+    {
+      "check_id": "C10-007",
+      "criterion": "Referencias de gates reconocidas",
+      "evidence": "known=22 unknown_tokens=0",
+      "result": "PASS",
+      "severity": "warning"
+    },
+    {
+      "check_id": "C10-008",
+      "criterion": "PR #30: cero movimientos, renombres y eliminaciones",
+      "evidence": "files=9 operations=['A']",
+      "result": "PASS",
+      "severity": "critical"
+    },
+    {
+      "check_id": "C10-009",
+      "criterion": "Cadena de merges documentales preservada",
+      "evidence": "checked=7 failures=0",
+      "result": "PASS",
+      "severity": "critical"
+    },
+    {
+      "check_id": "C10-010",
+      "criterion": "Bloqueantes P1 estructurales después de C10",
+      "evidence": "before=['DEBT-GOV-011'] after=[]",
+      "result": "PASS",
+      "severity": "critical"
+    },
+    {
+      "check_id": "C10-011",
+      "criterion": "Bloqueantes fuera del alcance estructural",
+      "evidence": "remaining=['DFUX-TRZ-005']",
+      "result": "PASS_WITH_RESERVATION",
+      "severity": "warning"
+    },
+    {
+      "check_id": "C10-012",
+      "criterion": "Ocho deudas estructurales elegibles para resolución",
+      "evidence": "{\"DEBT-C1-001\": \"open\", \"DEBT-C1-002\": \"open\", \"DEBT-C1-003\": \"open\", \"DEBT-C1-004\": \"open\", \"DEBT-C1-005\": \"open\", \"DEBT-C1-006\": \"open\", \"DEBT-GOV-001\": \"accepted\", \"DEBT-GOV-011\": \"blocked\"}",
+      "result": "PASS",
+      "severity": "critical"
+    }
+  ],
+  "critical_reference_failures": 0,
+  "critical_reference_records": 215,
+  "date": "2026-07-13",
+  "document_header_conflicts": 0,
+  "document_header_ids": 44,
+  "document_id": "DOC-AUD-011",
+  "gate_corr_g4": "approved_effective_on_merge",
+  "gate_corr_g5": "approved_fulfilled",
+  "gate_corr_g6": "approved_with_reservations_effective_on_merge",
+  "gate_v08_open": "pending",
+  "implementation": "not_authorized",
+  "known_decision_ids": 117,
+  "known_gate_ids": 22,
+  "merge_performed": false,
+  "phase": "C10",
+  "pr30_files": 9,
+  "pr30_operations": [
+    "A"
+  ],
+  "project": "AI StoryLab 1",
+  "remaining_blockers": [
+    "DFUX-TRZ-005"
+  ],
+  "resolved_debts": [
+    "DEBT-C1-001",
+    "DEBT-C1-002",
+    "DEBT-C1-003",
+    "DEBT-C1-004",
+    "DEBT-C1-005",
+    "DEBT-C1-006",
+    "DEBT-GOV-001",
+    "DEBT-GOV-011"
+  ],
+  "structural_blockers_after": [],
+  "structural_blockers_before": [
+    "DEBT-GOV-011"
+  ],
+  "text_files_scanned": 979,
+  "tracked_files": 989,
+  "unknown_decision_tokens": [
+    "DEC-001"
+  ],
+  "unknown_gate_tokens": []
+}

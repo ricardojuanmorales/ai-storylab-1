@@ -9,7 +9,7 @@
 
 ## Estado actual del proyecto
 
-AI StoryLab 1 se encuentra en la secuencia de **corrección estructural C0–C9**, posterior al cierre documental de v0.7.0. C0–C8 están integradas y C9 queda preparada para revisión mediante este bloque.
+AI StoryLab 1 se encuentra en la secuencia de **corrección estructural C0–C10**, posterior al cierre documental de v0.7.0. C0–C9 están integradas y C10 queda preparada para validación final y decisión humana de merge.
 
 La fase mayor futura **no está activada**. Permanece condicionada a autorización humana explícita, gate independiente y confirmación canónica posterior.
 
@@ -239,3 +239,21 @@ archivo no vigente: 99_ARCHIVO_HISTORICO
 
 La Wiki explica y orienta. No sustituye la autoridad de las fuentes enlazadas.
 C10 y v0.8.0 permanecen cerrados.
+
+<!-- C10_FINAL_VALIDATION -->
+
+## Validación final C10
+
+Resultado principal:
+
+`15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Informe_Validacion_Integral_C10_AI_StoryLab_1.md`
+
+```text
+GATE-CORR-G4: approved / effective on merge
+GATE-CORR-G5: approved / fulfilled
+GATE-CORR-G6: approved_with_reservations / effective on merge
+C0-C10: closed after merge
+GATE-V08-OPEN-001: pending
+v0.8.0: not open
+implementation: not authorized
+```

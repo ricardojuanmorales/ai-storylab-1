@@ -1,0 +1,20 @@
+check_id,criterion,result,evidence,severity
+C10-001,Base fija de C10,PASS,adfc16fb75698d74308cc43642c6aaa9700cf4df,critical
+C10-002,Registro activo C9: 65 IDs únicos,PASS,"rows=65 counts={'deferred': 15, 'blocked': 2, 'open': 6, 'accepted': 42}",critical
+C10-003,Sincronía Markdown/CSV de deuda activa,PASS,md=65 csv=65,critical
+C10-C8_ARCHIVE-HASH,C8_ARCHIVE: rutas y hashes,PASS,rows=91 failures=0,critical
+C10-C9_WIKI-HASH,C9_WIKI: rutas y hashes,PASS,rows=32 failures=0,critical
+C10-C9_SPECIFY-HASH,C9_SPECIFY: rutas y hashes,PASS,rows=11 failures=0,critical
+C10-C9_BASE_SDD-HASH,C9_BASE_SDD: rutas y hashes,PASS,rows=12 failures=0,critical
+C10-C7-HISTORY,C7: 33 fuentes históricas preservadas,PASS,rows=33 failures=0,critical
+C10-C6_CANONICAL-PATHS,C6_CANONICAL: rutas actuales,PASS,unique_paths=25 failures=0,critical
+C10-C9_NAVIGATION-PATHS,C9_NAVIGATION: rutas actuales,PASS,unique_paths=11 failures=0,critical
+C10-004,Ausencia de marcadores de conflicto,PASS,text_files=979 conflicts=0,critical
+C10-005,IDs documentales sin definiciones autoritativas competidoras,PASS,ids=44 conflicts=0,critical
+C10-006,Referencias de decisiones reconocidas,PASS_WITH_RESERVATION,known=117 unknown_tokens=1,warning
+C10-007,Referencias de gates reconocidas,PASS,known=22 unknown_tokens=0,warning
+C10-008,"PR #30: cero movimientos, renombres y eliminaciones",PASS,files=9 operations=['A'],critical
+C10-009,Cadena de merges documentales preservada,PASS,checked=7 failures=0,critical
+C10-010,Bloqueantes P1 estructurales después de C10,PASS,before=['DEBT-GOV-011'] after=[],critical
+C10-011,Bloqueantes fuera del alcance estructural,PASS_WITH_RESERVATION,remaining=['DFUX-TRZ-005'],warning
+C10-012,Ocho deudas estructurales elegibles para resolución,PASS,"{""DEBT-C1-001"": ""open"", ""DEBT-C1-002"": ""open"", ""DEBT-C1-003"": ""open"", ""DEBT-C1-004"": ""open"", ""DEBT-C1-005"": ""open"", ""DEBT-C1-006"": ""open"", ""DEBT-GOV-001"": ""accepted"", ""DEBT-GOV-011"": ""blocked""}",critical

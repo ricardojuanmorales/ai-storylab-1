@@ -618,3 +618,33 @@ Base_Conocimiento_SDD:
   collection_status: approved_collection
   unit_canonicality: derived_not_inherited
 ```
+
+<!-- C10_VALIDATION_AUTHORITY -->
+
+## Enmienda C10 · Autoridad de validación final
+
+```text
+DOC-AUD-008:
+  role: final_structural_validation_report
+  path: 15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Informe_Validacion_Integral_C10_AI_StoryLab_1.md
+  canonical: yes within C0-C10 validation scope
+
+DOC-AUD-009:
+  role: validation_matrix
+  path: 15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Matriz_Validacion_Integral_C10_AI_StoryLab_1.csv
+  canonical: yes as structured evidence
+
+DOC-AUD-010:
+  role: referential_integrity_inventory
+  path: 15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Inventario_Integridad_Referencial_C10_AI_StoryLab_1.csv
+  canonical: yes as hash and path evidence
+
+DOC-AUD-011:
+  role: reproducible_validation_summary
+  path: 15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Resumen_Validacion_C10_AI_StoryLab_1.json
+  canonical: yes as machine-readable result
+
+DOC-DOC-046:
+  role: C10 closure act
+  path: 00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Acta_Cierre_Consolidado_C10_Correccion_Estructural_AI_StoryLab_1.md
+```
