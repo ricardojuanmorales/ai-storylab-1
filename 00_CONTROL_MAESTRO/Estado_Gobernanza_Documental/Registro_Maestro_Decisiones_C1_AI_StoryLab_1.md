@@ -713,3 +713,22 @@ GATE-CORR-G4: pending
 v0.8.0: not open
 implementation: not authorized
 ```
+
+<!-- C6_CLOSURE_DECISIONS -->
+
+## Decisiones de cierre C6
+
+| Decision ID | Título | Ciclo | Documentos afectados |
+|---|---|---|---|
+| `DEC-C6-001` | Formalizar el ciclo de vida de `18_DOCUMENTACION_ACTIVA` | `fulfilled` | `DOC-DOC-033`, `18_DOCUMENTACION_ACTIVA` |
+| `DEC-C6-002` | Declarar memoria no canónica por defecto y autoridad acotada para decisiones | `fulfilled` | `DOC-GOB-004`–`006`, continuidad |
+| `DEC-C6-003` | Poblar el índice de referencias canónicas sin eliminar memoria | `fulfilled` | `DOC-DOC-034`, veinte fuentes C3–C4 |
+| `DEC-C6-004` | Resolver `DEBT-GOV-007` y mantener G4 y G5 pendientes | `fulfilled` | `DEBT-GOV-007`, `GATE-CORR-G4`, `GATE-CORR-G5` |
+
+```text
+DOC-UX-007: HOLD
+DOC-REF-002: deferred to C9
+C7: not opened
+v0.8.0: not open
+implementation: not authorized
+```

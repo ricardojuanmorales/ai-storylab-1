@@ -99,9 +99,9 @@ No se incluyen como fuentes activas:
 
 | ID | Documento | Ruta actual | Función | Estado | Condición de ruta |
 |---|---|---|---|---|---|
-| `DOC-GOB-004` | Decisión de Corrección Ruta v1.0.0 como Ecosistema Funcional | `18_DOCUMENTACION_ACTIVA/Decisiones/Decision_Correccion_Ruta_v1_0_0_Ecosistema_Funcional_v0_5_0_AI_StoryLab.md` | Decidir la interpretación de v1.0.0 | `active` | `transitoria` |
-| `DOC-GOB-005` | Mapa de Ruta v0.5 a v1.0 Ecosistema Funcional | `18_DOCUMENTACION_ACTIVA/Mapas/Mapa_Ruta_v0_5_a_v1_0_Ecosistema_Funcional_AI_StoryLab.md` | Representar la ruta versionada | `active` | `transitoria` |
-| `DOC-GOB-006` | Matriz de Fases v0.5 a v1.0 | `18_DOCUMENTACION_ACTIVA/Matrices/Matriz_Fases_v0_5_a_v1_0_AI_StoryLab.md` | Operacionalizar fases y transiciones | `active` | `transitoria` |
+| `DOC-GOB-004` | Decisión de Corrección Ruta v1.0.0 como Ecosistema Funcional | `18_DOCUMENTACION_ACTIVA/Decisiones/Decision_Correccion_Ruta_v1_0_0_Ecosistema_Funcional_v0_5_0_AI_StoryLab.md` | Decidir la interpretación de v1.0.0 | `active` | `excepción_controlada_C6` |
+| `DOC-GOB-005` | Mapa de Ruta v0.5 a v1.0 Ecosistema Funcional | `18_DOCUMENTACION_ACTIVA/Mapas/Mapa_Ruta_v0_5_a_v1_0_Ecosistema_Funcional_AI_StoryLab.md` | Representar la ruta versionada | `active` | `excepción_controlada_C6` |
+| `DOC-GOB-006` | Matriz de Fases v0.5 a v1.0 | `18_DOCUMENTACION_ACTIVA/Matrices/Matriz_Fases_v0_5_a_v1_0_AI_StoryLab.md` | Operacionalizar fases y transiciones | `active` | `excepción_controlada_C6` |
 
 Relación de consulta:
 
@@ -301,3 +301,15 @@ DEBT-GOV-012: blocked
 v0.8.0: not open
 implementation: not authorized
 ```
+
+<!-- C6_18_CONTROLLED_EXCEPTIONS -->
+
+## Enmienda C6 · Interpretación de `18_DOCUMENTACION_ACTIVA`
+
+- `DOC-GOB-004`, `DOC-GOB-005` y `DOC-GOB-006` son excepciones controladas
+  ligadas a una decisión activa.
+- `DOC-UX-007` permanece en HOLD.
+- `DOC-REF-002` permanece diferido a C9.
+- las copias y materiales de continuidad no adquieren canonicidad por ruta;
+- las veinte fuentes elevadas en C3 y C4 se consultan mediante
+  `18_DOCUMENTACION_ACTIVA/Continuidad/Indice_Referencias_Canonicas/Indice_Referencias_Canonicas_C6_AI_StoryLab_1.md`.

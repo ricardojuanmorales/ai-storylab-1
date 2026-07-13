@@ -1,0 +1,10 @@
+tipo_documental,criterio_entrada,estado_permanencia,criterio_cierre,regla_referencia,accion_salida,destino,autoridad_sustantiva
+bitacora,sesion o bloque activo,memoria activa,cierre del bloque,referenciar decisiones y fuentes,retener en 18,18/Bitacoras,no
+cierre,fin de sesion o fase,memoria cerrada,al emitirse,enlazar fuentes vigentes,retener hasta C8,18/Cierres o Continuidad,no
+transferencia,cambio de sesion o agente,memoria activa,al consumirse y actualizarse,apuntar a fuentes canónicas,retener en 18,18/Bitacoras o Transferencias,no
+kit_prompt_primer,inicio de sesion,instrumento temporal,al quedar obsoleto,no copiar autoridad,retener como memoria,18/Continuidad,no
+decision_registrada,aprobacion humana,activa o cumplida,segun ciclo decisional,usar Decision ID,retener en 18,18/Decisiones,"si, alcance acotado"
+mapa_matriz_decision,derivacion de decision activa,excepcion controlada,cuando tenga sucesor,enlazar decision,retener hasta C9,18/Mapas o 18/Matrices,derivada
+copia_continuidad,solo por necesidad historica,memoria no canonica,al existir fuente estable,sustituir autoridad por referencia,no eliminar en C6,18/Continuidad,no
+fuente_sustantiva,solo con excepcion registrada,hold o diferida,segun gate humano,declarar ID y estado,mover solo en fase autorizada,ruta funcional futura,pendiente
+changelog,cambio integrado,registro cronologico,al cerrar version,enlazar PR y commit,retener en 18,18/Changelog,no

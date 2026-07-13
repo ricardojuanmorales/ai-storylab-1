@@ -83,3 +83,26 @@ cierre de versión.
 ## 6. Dictamen
 
 `18_DOCUMENTACION_ACTIVA/` queda activado como memoria viva trazable, no como depósito sin frontera.
+
+<!-- C6_LIFECYCLE_BOUNDARY -->
+
+## Enmienda C6 · Ciclo de vida y autoridad
+
+La política operativa vigente es:
+
+`18_DOCUMENTACION_ACTIVA/Politica_Ciclo_Vida_Documentacion_Activa_C6_AI_StoryLab_1.md`
+
+El índice de referencias aplicable es:
+
+`18_DOCUMENTACION_ACTIVA/Continuidad/Indice_Referencias_Canonicas/Indice_Referencias_Canonicas_C6_AI_StoryLab_1.md`
+
+Regla de autoridad:
+
+```text
+memoria y continuidad en 18: no canónicas por defecto
+decisiones registradas: autoridad acotada
+mapas y matrices decisionales: autoridad derivada controlada
+fuentes funcionales estables: autoridad en su ruta canónica
+```
+
+C6 no ejecuta movimientos, renombres, eliminaciones o archivo.
