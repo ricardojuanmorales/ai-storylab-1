@@ -213,7 +213,7 @@ La deuda de C8 es una obligación nueva y más amplia.
 | `DEBT-GOV-006` | Separar método de `00` y resultados de `15` | P1 | `resolved` | C5 | `DEC-AUD25-005` |
 | `DEBT-GOV-007` | Formalizar ciclo de vida de `18_DOCUMENTACION_ACTIVA` | P1 | `resolved` | C6 | `DEC-AUD25-006` |
 | `DEBT-GOV-008` | Consolidar deuda activa en `20` mediante IDs únicos | P1 | `resolved` | C7 | `DEC-AUD25-007` |
-| `DEBT-GOV-009` | Formalizar archivo histórico, manifiestos y no vigencia | P1 | `open` | C8 | `DEC-AUD25-008` |
+| `DEBT-GOV-009` | Formalizar archivo histórico, manifiestos y no vigencia | P1 | `resolved` | C8 | `DEC-AUD25-008` |
 | `DEBT-GOV-010` | Alinear Wiki y documentación humana con fuentes canónicas | P2 | `open` | C9 | `DEC-AUD25-009` |
 | `DEBT-GOV-011` | Validar integridad estructural completa | P1 | `blocked` | C10 | `DEC-AUD25-010` |
 | `DEBT-GOV-012` | Revisar individualmente specs de `.specify` | P1 | `blocked` | C4 o C9 | `DEC-C0-003`, `DEC-C1-008` |
@@ -785,3 +785,40 @@ resolution_reference:
 ```
 
 `GATE-CORR-G4` permanece pendiente hasta C10.
+
+<!-- C8_CLOSURE_DEBT_UPDATE -->
+
+### Resolución C8 de `DEBT-GOV-009`
+
+```yaml
+debt_id: DEBT-GOV-009
+status: resolved
+resolution_date: 2026-07-13
+decision_reference:
+  - DEC-C8-001
+  - DEC-C8-002
+  - DEC-C8-003
+  - DEC-C8-004
+resolution_reference:
+  - DOC-DOC-039
+  - DOC-DOC-040
+  - DOC-DOC-041
+validation:
+  archive_policy_created: true
+  manifest_created: true
+  archived_holdings_inventoried: 91
+  sha256_entries: 91
+  non_vigency_declared: true
+  no_edit_rule_declared: true
+  active_debt_registry_updated: true
+  movements: 0
+  renames: 0
+  deletions: 0
+  archived_payload_edits: 0
+notes:
+  - GATE-CORR-G5 permanece pending hasta C9
+  - GATE-CORR-G4 permanece pending hasta C10
+  - C9 no se abre automáticamente
+  - v0.8.0 no está abierto
+  - implementación no está autorizada
+```

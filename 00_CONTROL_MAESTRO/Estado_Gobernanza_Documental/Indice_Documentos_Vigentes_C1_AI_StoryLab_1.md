@@ -323,3 +323,15 @@ implementation: not authorized
 | `DOC-DOC-036` | Registro Primario de Deuda Activa C7 | `20_MANTENIMIENTO_Y_EVOLUCION/Registro_Deuda/Registro_Primario_Deuda_Activa_C7_AI_StoryLab_1.md` | `active` después del merge | Fuente primaria de estado activo |
 | `DOC-DOC-037` | Índice de Fuentes Históricas de Deuda C7 | `20_MANTENIMIENTO_Y_EVOLUCION/Registro_Deuda/Indice_Fuentes_Historicas_Deuda_C7_AI_StoryLab_1.md` | `active` después del merge | Trazabilidad de fuentes no primarias |
 | `DOC-DOC-008` | Registro Maestro de Deuda de Gobernanza C1 | `00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Registro_Maestro_Deuda_Gobernanza_C1_AI_StoryLab_1.md` | `active` en alcance acotado | Identidad, normalización, resoluciones e historia |
+
+<!-- C8_ARCHIVE_DOCUMENT_INDEX -->
+
+## Enmienda C8 · Plano de control del archivo
+
+| ID | Documento | Ruta | Estado | Autoridad |
+|---|---|---|---|---|
+| `DOC-DOC-039` | Política de Archivo Histórico C8 | `99_ARCHIVO_HISTORICO/Politica_Archivo/Politica_Archivo_Historico_C8_AI_StoryLab_1.md` | `active` después del merge | Regla canónica de archivo |
+| `DOC-DOC-040` | Manifiesto Maestro del Archivo Histórico C8 | `99_ARCHIVO_HISTORICO/Manifiestos/Manifiesto_Maestro_Archivo_Historico_C8_AI_StoryLab_1.md` | `active` después del merge | Inventario humano y declaración de no vigencia |
+| `DOC-DOC-041` | Acta de Cierre Consolidado C8 | `00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Acta_Cierre_Consolidado_C8_Archivo_Historico_AI_StoryLab_1.md` | `active` después del merge | Evidencia de cierre C8 |
+
+Los payloads inventariados en `DOC-DOC-040` son no vigentes y no canónicos.

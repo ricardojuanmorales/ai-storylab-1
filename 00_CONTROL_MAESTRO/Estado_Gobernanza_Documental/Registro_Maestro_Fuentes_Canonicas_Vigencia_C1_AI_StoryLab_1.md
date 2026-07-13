@@ -561,3 +561,28 @@ distributed debt records:
 
 La identidad de cada deuda se preserva. La autoridad sobre su estado activo se
 consulta en `DOC-DOC-036`.
+
+<!-- C8_ARCHIVE_AUTHORITY_MODEL -->
+
+## Enmienda C8 · Autoridad del archivo histórico
+
+```text
+DOC-DOC-039:
+  role: archive_policy
+  canonical: yes
+  path: 99_ARCHIVO_HISTORICO/Politica_Archivo/Politica_Archivo_Historico_C8_AI_StoryLab_1.md
+
+DOC-DOC-040:
+  role: archive_master_manifest
+  canonical: yes
+  path: 99_ARCHIVO_HISTORICO/Manifiestos/Manifiesto_Maestro_Archivo_Historico_C8_AI_StoryLab_1.md
+
+archived_holdings:
+  count: 91
+  current: no
+  canonical: no
+  authority: none
+  edit_rule: immutable_annotation_only
+```
+
+La ubicación en `99` no transmite autoridad vigente.

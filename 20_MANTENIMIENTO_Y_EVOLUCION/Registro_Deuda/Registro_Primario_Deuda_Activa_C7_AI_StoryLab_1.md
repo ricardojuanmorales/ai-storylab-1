@@ -70,7 +70,6 @@ criterios generales de cierre.
 | `DEBT-DATA-EXPORT` | Exportación por propósito | P1 | `accepted` | C4 y v0.8 | 16. Deudas activas preservadas al cierre de v0.7 |
 | `DEBT-GALLERY` | Galería pública | P1 | `deferred` | Gate posterior | 16. Deudas activas preservadas al cierre de v0.7 |
 | `DEBT-GOV-001` | Formalizar una sola fuente activa por alcance | P1 | `accepted` | C1 | 6. Deuda estructural y de gobernanza derivada de PR #25 |
-| `DEBT-GOV-009` | Formalizar archivo histórico, manifiestos y no vigencia | P1 | `open` | C8 | 6. Deuda estructural y de gobernanza derivada de PR #25 |
 | `DEBT-GOV-010` | Alinear Wiki y documentación humana con fuentes canónicas | P2 | `open` | C9 | 6. Deuda estructural y de gobernanza derivada de PR #25 |
 | `DEBT-GOV-011` | Validar integridad estructural completa | P1 | `blocked` | C10 | 6. Deuda estructural y de gobernanza derivada de PR #25 |
 | `DEBT-GOV-012` | Revisar individualmente specs de .specify | P1 | `blocked` | C4 o C9 | 6. Deuda estructural y de gobernanza derivada de PR #25 |
@@ -133,9 +132,9 @@ criterios generales de cierre.
 ## 5. Resumen
 
 ```text
-deudas activas únicas: 69
+deudas activas únicas: 68
 accepted: 42
-open: 9
+open: 8
 blocked: 3
 deferred: 15
 fuentes heredadas inventariadas: 33
@@ -145,7 +144,25 @@ movimientos: 0
 renombres: 0
 eliminaciones: 0
 GATE-CORR-G4: pending / contribution C7 complete
-C8: not open
+C8: prepared for integration
 v0.8.0: not open
 implementation: not authorized
+```
+
+<!-- C8_ACTIVE_DEBT_TRANSITION -->
+
+## Transición C8
+
+`DEBT-GOV-009` se retira del registro de deuda activa al contar con política,
+manifiesto, declaración de no vigencia y regla de no edición verificables.
+
+```text
+deudas activas únicas: 68
+accepted: 42
+open: 8
+blocked: 3
+deferred: 15
+DEBT-GOV-009: resolved
+GATE-CORR-G5: pending / contribution C8 complete
+C9: not open
 ```

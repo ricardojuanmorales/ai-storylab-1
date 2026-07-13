@@ -84,3 +84,15 @@ Después del merge, revertir el commit de C2.
 
 No será necesario restaurar documentos sustantivos porque C2 no traslada
 contenido.
+
+<!-- C8_MANIFEST_ACTIVATION -->
+
+## Activación C8
+
+Los instrumentos vigentes son:
+
+- `99_ARCHIVO_HISTORICO/Manifiestos/Manifiesto_Maestro_Archivo_Historico_C8_AI_StoryLab_1.md`
+- `99_ARCHIVO_HISTORICO/Manifiestos/Inventario_Archivo_Historico_C8_AI_StoryLab_1.csv`
+
+Los manifiestos declaran identidad, hash, no vigencia, autoridad, sucesor o
+razón de ausencia y regla de edición.

@@ -36,3 +36,26 @@ Si una decisión o documento afecta a estudiantes, facilitadores, docentes, fami
 ## Última revisión
 
 Pendiente.
+
+<!-- C8_ARCHIVE_ACTIVATION -->
+
+## Activación C8
+
+`99_ARCHIVO_HISTORICO` queda activado como archivo histórico gobernado.
+
+Plano de control:
+
+- `99_ARCHIVO_HISTORICO/Politica_Archivo/Politica_Archivo_Historico_C8_AI_StoryLab_1.md`
+- `99_ARCHIVO_HISTORICO/Manifiestos/Manifiesto_Maestro_Archivo_Historico_C8_AI_StoryLab_1.md`
+- `99_ARCHIVO_HISTORICO/Manifiestos/Inventario_Archivo_Historico_C8_AI_StoryLab_1.csv`
+
+Regla principal:
+
+```text
+estar en 99 = no vigencia y no autoridad
+excepto el plano de control activo
+payload archivado = inmutable
+corrección = addendum, nunca edición directa
+```
+
+C8 no ejecuta movimientos, renombres, eliminaciones ni restauraciones.
