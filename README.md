@@ -257,3 +257,17 @@ GATE-V08-OPEN-001: pending
 v0.8.0: not open
 implementation: not authorized
 ```
+
+<!-- POST_C10_SESSION_CLOSURE -->
+
+## Cierre reflexivo post-C10
+
+La auditoría B0-B7 y la corrección C0-C10 están cerradas e integradas.
+
+Compendio y Tree realizado: `18_DOCUMENTACION_ACTIVA/Cierres_Sesion/Cierre_Sesion_Auditoria_Reestructuracion_C0_C10/`
+
+```text
+v0.8.0: not open
+implementation: not authorized
+next: independent readiness evaluation for v0.8.0
+```
