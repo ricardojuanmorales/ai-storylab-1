@@ -1,0 +1,9 @@
+trace_id,principle_or_family,module,domain_object,use_case,acceptance,test,risk,status
+TR-V08-001,Agencia humana,Núcleo creativo,DecisionHumana,Revisar y confirmar evidencia antes de incorporarla,Ninguna evidencia se incorpora automáticamente,unit + integration,automatización indebida,candidate
+TR-V08-002,Aprendizaje lúdico,Actividad creativa,ActividadCreativa,Completar una actividad sin una ruta rígida,"La persona puede explorar, editar y omitir rutas opcionales",unit + interaction,rigidez pedagógica,candidate
+TR-V08-003,Local-first,Persistencia local,Portafolio,Guardar trabajo localmente,No existe dependencia de red para el flujo principal,unit + offline integration,pérdida o exposición local,candidate
+TR-V08-004,Privacidad por defecto,Evidencia,Evidencia,Crear evidencia con datos mínimos,No se solicita identidad real ni datos innecesarios,schema + privacy assertions,sobrecaptura,candidate
+TR-V08-005,Reflexión ética,Reflexión,Reflexion,Registrar una reflexión editable,La reflexión permanece privada hasta decisión humana,unit + state transition,exposición involuntaria,candidate
+TR-V08-006,Portafolio local-first,Portafolio,Portafolio,Curar una evidencia para el portafolio,Curaduría explícita y reversible,unit + integration,portafolio como carpeta pasiva,candidate
+TR-V08-007,Exportabilidad revisable,Exportación,PaqueteExportacion,Exportar un paquete JSON revisado,Vista previa y confirmación antes de descargar,schema + roundtrip,exportación excesiva,candidate
+TR-V08-008,No vigilancia,Límites del MVP,N/A,Excluir dashboard y seguimiento grupal,No existen métricas grupales ni perfiles reales,scope audit,deriva hacia vigilancia,candidate

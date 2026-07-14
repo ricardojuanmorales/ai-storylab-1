@@ -1,0 +1,9 @@
+risk_id,risk,likelihood,impact,mitigation,reversal,owner,gate
+R-V08-001,Reconstruir el MVP v0.3 por nostalgia,medium,high,"Usar v0.3 como memoria funcional, no como arquitectura",Revertir incremento y conservar fixtures,PH,scope
+R-V08-002,Comenzar por infraestructura sin valor visible,medium,medium,H08-1 breve y H08-2 como corte vertical,Mantener esqueleto mínimo sin expandir plataforma,PH,milestone
+R-V08-003,Fragmentación excesiva de PR,high,high,"Un PR por corte vertical o decisión, no por archivo",Reagrupar backlog antes de abrir nuevas ramas,human_responsible,protocol
+R-V08-004,Baseline o métricas desactualizadas,medium,high,"Derivar Git, hashes y conteos en preflight",Detener antes del commit y recalcular,machine,preflight
+R-V08-005,Parser general aplicado a formatos distintos,medium,medium,Validadores específicos por esquema,Corregir función mínima y ejecutar regresión,AI_orchestrator,validation
+R-V08-006,Exposición de reflexión o evidencia,low,high,"Privado por defecto, datos sintéticos y confirmación",Eliminar estado local sintético y revertir,PH+IT,privacy
+R-V08-007,Deriva hacia vigilancia,low,critical,Vista Facilitador fuera del MVP y auditoría de alcance,Bloquear feature flag y revertir capacidad,human_responsible,no_surveillance
+R-V08-008,Dependencia excesiva de IA,medium,high,"Explicaciones, decisiones legibles y scripts reproducibles","Continuar desde bitácora, matrices y comandos explícitos",AI_tutor,continuity

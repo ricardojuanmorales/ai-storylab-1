@@ -1,0 +1,88 @@
+{
+  "alignment": {
+    "H1": [
+      "C",
+      "D"
+    ],
+    "H2": [
+      "C",
+      "A"
+    ],
+    "H3": "D",
+    "M1": "A",
+    "M2": "D",
+    "M3": "C",
+    "P1": "A_with_B_C_D_relationship",
+    "P2": "D",
+    "P3": "C_sensitive_to_D",
+    "T1": "C",
+    "T2": "A",
+    "T3": "C"
+  },
+  "artifacts": {
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Acta_Decision_Humana_GATE_V08_OPEN_001_APROBADA_CON_RESERVAS_AI_StoryLab_1.md": "09c7295e81640073b43739526235b7dd607d3ac1edf81e6ce80d8943d19dba99",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Backlog_Incremental_Inicial_v0_8_0_AI_StoryLab_1.csv": "bcb880418bf94dccfb1374746e474e09bee9054100c4d909f87ef94bcf6c90d6",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Bitacora_Sesion_Preparacion_Gate_v0_8_0_AI_StoryLab_1.md": "e29897e4258ba6652b5310e2bc95f8892ef3a012d765bfedd0a4e56a1eaac4b6",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Bitacora_Transferencia_Simetrica_Pre_Gate_v0_8_0_AI_StoryLab_1.md": "0a60afd03eef8c6f5c033b9f4d560d77a26a8491919d1e98420a616e1e6e51f2",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Definicion_MVP_Tecnico_Nucleo_Creativo_Local_First_v0_8_0_AI_StoryLab_1.md": "34997c924ec139e9e2b4726ef5c029a46b71013264287d02bbaba6c39cb073aa",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Instrumento_Preparacion_GATE_V08_OPEN_001_AI_StoryLab_1.md": "fc2e6199c60dacb63967a8f43e7ba2be0a402c770e8f4020c25ae543f35290ac",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Marco_Estrategico_Apertura_v0_8_0_AI_StoryLab_1.md": "c720ccbd6a1f2c0b65244aff74d820cb155ed0e135c78746b60e15c4e125db6d",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Matriz_Criterios_Gate_Apertura_v0_8_0_AI_StoryLab_1.csv": "52eb122827626980adb459a7b00d323bedbee96df4b0e17fd82523179c542ff9",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Matriz_Impacto_PH_IT_AT_MVP_v0_8_0_AI_StoryLab_1.csv": "76f68ee1cef9e0b029c14b9b86331fdf5b995f45c2fefd6f24ae03d7399b8d26",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Matriz_Trazabilidad_SDD_MVP_v0_8_0_AI_StoryLab_1.csv": "4853dc3a20898fad507052db2e64ca9d0cfcbb88fb09ad6c0d8d0d2a7f1d20d0",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Plan_Datos_Sinteticos_Pruebas_v0_8_0_AI_StoryLab_1.md": "1cad0dc93e5f3addfe84a9ddb359be54fefd6f9e5c3e0e1ec5fc9f90f44bad9d",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Plan_Hitos_Implementacion_Incremental_v0_8_0_AI_StoryLab_1.md": "4575610d218ab8e75ec212b4649477579ac22cea11ff1041b7e05ee7d82c4e51",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Prompt_Continuidad_Evaluacion_Gate_v0_8_0_AI_StoryLab_1.md": "e125a431035c7934b80e30458fd21a0536cd029435eb834f57712267fb28b401",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Protocolo_Optimizado_Sesion_Implementacion_v0_8_0_AI_StoryLab_1.md": "9c01c2b3faff32ec7425a4cd9df9e81026e4076eb2c47916967d72bedadaa30e",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/README.md": "5aec2fec42a7b1741ae8e84faeed8be5471335819ebd48dcdaf9a65ed4d5d074",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Registro_Riesgos_Reversibilidad_v0_8_0_AI_StoryLab_1.csv": "2b1bae2cf322c99fa814da1de904d1422a6e09be2fdba626e41e4db37129529c"
+  },
+  "baseline": "a3a3aba6e6e26d005f78caa63bfef1f2bd378f17",
+  "baseline_files": 1008,
+  "boundaries": {
+    "authorization_effective_on_merge_pr": 50,
+    "authorization_scope": "H08-1_only",
+    "authorizes_implementation": true,
+    "changes_active_debt": true,
+    "changes_canonical_decision_registry": true,
+    "changes_canonical_gate_registry": true,
+    "contains_functional_code": false,
+    "opening_mode": "limited",
+    "opens_v0_8_0": true,
+    "performs_merge": true,
+    "selects_final_stack": false,
+    "uses_real_data": false
+  },
+  "branch": "docs/v0.8-preparacion-gate-apertura",
+  "date": "2026-07-13",
+  "debt": {
+    "DFUX-TRZ-005": "resolved_effective_on_merge_PR_50",
+    "active_blocked_after_merge": 0,
+    "active_total_after_merge": 56,
+    "modified_by_closure": true,
+    "modified_by_kit": false
+  },
+  "gate": {
+    "authority": "responsable humano de AI StoryLab 1",
+    "decision_date": "2026-07-14",
+    "decision_id": "DEC-V08-OPEN-001",
+    "effective_on_merge_pr": 50,
+    "executed_by_kit": false,
+    "id": "GATE-V08-OPEN-001",
+    "status": "approved_with_reservations"
+  },
+  "hito": "H08-0",
+  "mvp": {
+    "id": "MVP-SDD-08-01",
+    "implementation_included": false,
+    "name": "Núcleo Creativo Local-First",
+    "status": "approved_with_reservations_effective_on_merge_PR_50"
+  },
+  "project": "AI StoryLab 1",
+  "repository": "ricardojuanmorales/ai-storylab-1",
+  "session_closure": {
+    "hito": "H08-0",
+    "next_hito": "H08-1",
+    "status": "completed_effective_on_merge_PR_50"
+  }
+}

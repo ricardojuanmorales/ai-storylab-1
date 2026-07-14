@@ -809,3 +809,51 @@ DFUX-TRZ-005: blocked / future v0.8 gate
 GATE-V08-OPEN-001: pending
 implementation: not authorized
 ```
+
+
+---
+
+# Decisión de apertura limitada v0.8.0
+
+<!-- H08_0_DECISION_V08_OPEN_001 -->
+
+```yaml
+decision_id: DEC-V08-OPEN-001
+title: Aprobar con reservas la apertura limitada de v0.8.0
+decision_date: 2026-07-14
+authority: responsable humano de AI StoryLab 1
+status: ratified_awaiting_integration
+effective_on: merge_PR_50
+gate: GATE-V08-OPEN-001
+mvp: MVP-SDD-08-01
+evidence:
+  - PR #50
+  - 18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Acta_Decision_Humana_GATE_V08_OPEN_001_APROBADA_CON_RESERVAS_AI_StoryLab_1.md
+  - comentario de hito H08-0
+allowed_result:
+  - cerrar H08-0
+  - abrir v0.8.0 de manera limitada
+  - iniciar H08-1
+  - resolver DFUX-TRZ-005
+blocked_result:
+  - implementación fuera de H08-1
+  - datos reales
+  - backend, cloud o autenticación
+  - IA embebida
+  - vigilancia, dashboard, analíticas o seguimiento grupal
+  - galería pública, marketplace o publicación estable
+  - selección irreversible del stack
+reservations:
+  - fixtures exclusivamente sintéticos
+  - feature flags desactivados por defecto
+  - contratos, schemas y pruebas reproducibles en H08-1
+  - controles mínimos de seguridad y accesibilidad desde H08-1
+  - revisión PH-IT-AT documentada
+  - checkpoint humano antes de H08-2
+successor_decision:
+  - decisión humana de transición H08-1 → H08-2
+```
+
+| Decision ID | Título | Ciclo | Documentos afectados |
+|---|---|---|---|
+| `DEC-V08-OPEN-001` | Aprobar con reservas la apertura limitada de v0.8.0 | `effective_on_merge_PR_50` | `GATE-V08-OPEN-001`, `MVP-SDD-08-01`, `DFUX-TRZ-005`, `process:H08-0`, `process:H08-1` |

@@ -488,7 +488,7 @@ La implementación verificable permanece pendiente.
 | `DFUX-TRZ-002` | Checklist de no regresión documental | P1 | `accepted` | C1-D y C10 |
 | `DFUX-TRZ-003` | Trazabilidad longitudinal | P1 | `accepted` | C3–C4 |
 | `DFUX-TRZ-004` | Gate humano antes de activar fases | P1 | `accepted` | Todas |
-| `DFUX-TRZ-005` | Definir alcance de MVP técnico | P1 | `blocked` | Gate de v0.8 |
+| `DFUX-TRZ-005` | Definir alcance de MVP técnico | P1 | `resolved` | Gate de v0.8 |
 
 ---
 
@@ -899,4 +899,39 @@ limits:
   - GATE-V08-OPEN-001 permanece pending
   - v0.8.0 no está abierto
   - implementación no está autorizada
+```
+---
+
+## Resolución H08-0 de `DFUX-TRZ-005`
+
+<!-- H08_0_DFUX_TRZ_005_RESOLUTION -->
+
+```yaml
+debt_id: DFUX-TRZ-005
+title: Definir alcance de MVP técnico
+previous_status: blocked
+status: resolved
+resolution_date: 2026-07-14
+effective_on: merge_PR_50
+decision_reference:
+  - DEC-V08-OPEN-001
+  - GATE-V08-OPEN-001
+  - aprobación humana explícita `approved_with_reservations`
+resolution_reference:
+  - PR #50
+  - 18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Acta_Decision_Humana_GATE_V08_OPEN_001_APROBADA_CON_RESERVAS_AI_StoryLab_1.md
+  - 18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Definicion_MVP_Tecnico_Nucleo_Creativo_Local_First_v0_8_0_AI_StoryLab_1.md
+validation:
+  mvp_id: MVP-SDD-08-01
+  flow_delimited: true
+  inclusions_defined: true
+  exclusions_defined: true
+  invariants_defined: true
+  acceptance_criteria_defined: true
+  data_real_prohibited: true
+  H08_1_only_authorized: true
+notes:
+  - la resolución define el alcance, no declara construido el MVP
+  - H08-2 permanece condicionado a completar H08-1 y a un checkpoint humano
+  - ninguna otra deuda cambia por inferencia
 ```

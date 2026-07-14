@@ -2,7 +2,7 @@
 
 ## Constructor Ético de Historias Multimedia con IA Responsable
 
-> *Tú tienes la historia. La IA tiene herramientas. Juntos crean algo que no existía antes.*  
+> *Tú tienes la historia. La IA tiene herramientas. Juntos crean algo que no existía antes.*
 > — **Profesor Aión**, Mentor Transdisciplinario
 
 ---
@@ -270,4 +270,18 @@ Compendio y Tree realizado: `18_DOCUMENTACION_ACTIVA/Cierres_Sesion/Cierre_Sesio
 v0.8.0: not open
 implementation: not authorized
 next: independent readiness evaluation for v0.8.0
+```
+
+<!-- V08_PRE_GATE_KIT -->
+
+## Preparación del Gate de Apertura v0.8.0
+
+Kit pre-gate:
+
+`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/`
+
+```text
+GATE-V08-OPEN-001: approved_with_reservations / effective_on_merge_PR_50
+v0.8.0: open_limited / effective_on_merge_PR_50
+implementation: authorized_for_H08-1_only / effective_on_merge_PR_50
 ```

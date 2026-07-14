@@ -1,0 +1,7 @@
+item_id,hito,priority,deliverable,dependency,acceptance,excluded,status
+H08-0,Preparación del gate,P0,Kit pre-gate y decisión humana,PR #49 merged,Kit revisado; gate aprobado con reservas; registros canónicos y cierre integrados al fusionarse PR #50,implementación,completed_effective_on_merge_PR_50
+H08-1,Baseline técnico,P0,"Esqueleto modular, pruebas base y feature flags",GATE-V08-OPEN-001 approved_with_reservations / merge PR #50,Compila; tests base; no capacidad sensible activa,flujo funcional completo,authorized_after_merge_PR_50
+H08-2,MVP Núcleo Creativo Local-First,P0,Un corte vertical completo,H08-1,Misión a exportación con datos sintéticos,Vista Facilitador; nueve misiones; cloud,blocked_by_gate
+H08-3,Extensibilidad,P1,Segundo tipo de actividad o misión,H08-2,Extensión sin reescribir el núcleo,cobertura total del prototipo histórico,future
+H08-4,Fortalecimiento,P1,"Refactor, deuda, accesibilidad y documentación técnica",H08-2,Riesgos revisados y deuda actualizada,marketplace readiness,future
+H08-5,Cierre v0.8.0,P0,Validación de alcance y acta de cierre,H08-2 to H08-4,"Pruebas, bitácoras, deuda y límites verificados",declarar v0.9.0 abierta,future
