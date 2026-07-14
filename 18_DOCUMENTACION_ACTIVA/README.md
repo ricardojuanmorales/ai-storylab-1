@@ -116,3 +116,14 @@ Compendio, bitácoras, matriz de continuidad y Tree realizado:
 `18_DOCUMENTACION_ACTIVA/Cierres_Sesion/Cierre_Sesion_Auditoria_Reestructuracion_C0_C10/`
 
 Este paquete preserva continuidad y no sustituye fuentes canónicas.
+
+<!-- V08_PRE_GATE_CONTINUITY_KIT -->
+
+## Kit pre-gate v0.8.0
+
+Marco estratégico, MVP candidato, matrices, protocolo, bitácoras y acta
+pendiente:
+
+`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/`
+
+El kit prepara la decisión y no ejecuta el gate.

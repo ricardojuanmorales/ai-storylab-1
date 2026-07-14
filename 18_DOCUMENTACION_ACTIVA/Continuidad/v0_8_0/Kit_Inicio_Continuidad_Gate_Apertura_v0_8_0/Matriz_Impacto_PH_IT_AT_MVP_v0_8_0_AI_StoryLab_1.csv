@@ -1,0 +1,5 @@
+impact_id,capability,pedagogical,creative,research,ethical,data,privacy,security,accessibility,surveillance,rigidity,PH_action,IT_action,AT_action,decision_authority
+IMP-V08-001,Misión y actividad creativa,high,high,medium,medium,low,low,low,medium,low,high,lead,consult,consult,human_responsible
+IMP-V08-002,Evidencia y reflexión,high,high,high,high,medium,high,medium,medium,medium,medium,lead,required_consult,required_consult,human_responsible
+IMP-V08-003,Persistencia local,medium,medium,medium,high,high,high,high,low,low,low,lead,required_consult,inform,human_responsible
+IMP-V08-004,Portafolio y exportación,high,high,high,high,high,high,high,medium,medium,medium,lead,required_consult,required_consult,human_responsible

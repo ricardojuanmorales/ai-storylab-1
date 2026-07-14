@@ -271,3 +271,17 @@ v0.8.0: not open
 implementation: not authorized
 next: independent readiness evaluation for v0.8.0
 ```
+
+<!-- V08_PRE_GATE_KIT -->
+
+## Preparación del Gate de Apertura v0.8.0
+
+Kit pre-gate:
+
+`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/`
+
+```text
+GATE-V08-OPEN-001: pending
+v0.8.0: not open
+implementation: not authorized
+```
