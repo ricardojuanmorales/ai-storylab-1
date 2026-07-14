@@ -1152,3 +1152,78 @@ GATE-V08-OPEN-001:
 ```
 
 El cierre de C10 no ejecuta el gate de v0.8.0.
+
+
+---
+
+# Enmienda H08-0 · Apertura limitada de v0.8.0
+
+<!-- H08_0_GATE_V08_OPEN_001_DECISION -->
+
+Esta enmienda actualiza el estado operativo posterior a la fotografía histórica
+de C10. No reescribe el hecho de que el gate estaba pendiente al cierre de C10.
+
+```yaml
+gate_id: GATE-V08-OPEN-001
+label: Gate de Apertura Limitada v0.8.0
+phase: v0.8.0
+scope:
+  - abrir la fase de implementación incremental bajo alcance controlado
+  - autorizar exclusivamente H08-1
+  - adoptar MVP-SDD-08-01 como MVP técnico inicial
+status: approved_with_reservations
+lifecycle: awaiting_integration
+date:
+  decision: 2026-07-14
+  effective_on: merge_PR_50
+authority: decisión humana explícita del responsable de AI StoryLab 1
+evidence:
+  - PR #50
+  - 18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/Acta_Decision_Humana_GATE_V08_OPEN_001_APROBADA_CON_RESERVAS_AI_StoryLab_1.md
+  - comentario de hito H08-0
+  - Instrumento_Preparacion_GATE_V08_OPEN_001_AI_StoryLab_1.md
+  - Matriz_Criterios_Gate_Apertura_v0_8_0_AI_StoryLab_1.csv
+dependencies:
+  - GATE-SDD-001
+  - GATE-V07-CLOSE-001
+  - GATE-CORR-G4
+  - GATE-CORR-G5
+  - GATE-CORR-G6
+  - cierre post-C10
+affected_documents:
+  - DEC-V08-OPEN-001
+  - MVP-SDD-08-01
+  - DFUX-TRZ-005
+allowed_result:
+  - cerrar H08-0 al fusionarse PR #50
+  - abrir v0.8.0 en modo limited
+  - iniciar H08-1
+  - crear esqueleto modular, contratos, schemas, fixtures sintéticos y pruebas base
+blocked_result:
+  - iniciar H08-2 sin checkpoint humano
+  - datos reales
+  - backend
+  - cloud
+  - autenticación
+  - IA embebida
+  - Vista del Facilitador
+  - dashboard, analíticas o seguimiento grupal
+  - galería pública
+  - marketplace
+  - publicación estable
+  - selección irreversible de stack
+reservations:
+  - capacidades sensibles desactivadas mediante feature flags
+  - revisión PH-IT-AT documentada durante H08-1
+  - seguridad y accesibilidad mínimas incorporadas desde H08-1
+  - todo hito posterior requiere autorización propia
+next_gate:
+  - checkpoint humano H08-1 → H08-2
+```
+
+Efectividad:
+
+```text
+antes del merge de PR #50: awaiting_integration
+después del merge de PR #50: approved_with_reservations / fulfilled
+```

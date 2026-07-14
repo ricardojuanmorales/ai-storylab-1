@@ -200,3 +200,27 @@ GATE-CORR-G4: approved / effective on merge
 GATE-CORR-G6: approved_with_reservations / effective on merge
 GATE-V08-OPEN-001: pending
 ```
+
+
+---
+
+## Actualización efectiva al fusionarse PR #50
+
+<!-- H08_0_ACTIVE_DEBT_UPDATE -->
+
+```yaml
+decision: DEC-V08-OPEN-001
+resolved:
+  - DFUX-TRZ-005
+active_debt:
+  previous_total: 57
+  total: 56
+  accepted: 41
+  open: 0
+  blocked: 0
+  deferred: 15
+effective_on: merge_PR_50
+```
+
+La salida de `DFUX-TRZ-005` del registro primario activo no altera ninguna otra
+deuda y no declara completado el MVP.

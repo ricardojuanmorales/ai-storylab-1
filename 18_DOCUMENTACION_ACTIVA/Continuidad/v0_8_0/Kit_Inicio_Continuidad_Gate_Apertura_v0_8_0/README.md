@@ -35,3 +35,21 @@ rejected
 ```
 
 Solo una decisión humana explícita podrá cambiar el estado operativo del gate.
+
+
+## Decisión y cierre
+
+<!-- H08_0_KIT_CLOSED -->
+
+```text
+decision: approved_with_reservations
+gate: GATE-V08-OPEN-001
+effective_on: merge_PR_50
+H08-0: completed
+v0.8.0: open_limited
+implementation: authorized_for_H08-1_only
+next_hito: H08-1
+```
+
+El kit deja de ser únicamente pre-gate y pasa a conservar el expediente
+completo de preparación, decisión y transferencia.

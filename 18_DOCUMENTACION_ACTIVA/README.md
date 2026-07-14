@@ -1,10 +1,10 @@
 # README — 18_DOCUMENTACION_ACTIVA
 
-**Proyecto:** AI StoryLab 1  
-**Cartapacio:** `18_DOCUMENTACION_ACTIVA/`  
-**Estado:** Activo  
-**Versión de referencia:** v0.4.4  
-**Última revisión:** 2026-07-03  
+**Proyecto:** AI StoryLab 1
+**Cartapacio:** `18_DOCUMENTACION_ACTIVA/`
+**Estado:** Activo
+**Versión de referencia:** v0.4.4
+**Última revisión:** 2026-07-03
 
 ---
 
@@ -126,4 +126,4 @@ pendiente:
 
 `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/`
 
-El kit prepara la decisión y no ejecuta el gate.
+El kit conserva preparación, decisión humana y cierre. La apertura limitada y la autorización de H08-1 se hacen efectivas al fusionarse el PR #50.

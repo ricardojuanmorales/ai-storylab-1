@@ -33,3 +33,12 @@ rejected
 
 Explica qué se permite, qué continúa bloqueado, qué deuda cambia y qué
 documentos canónicos deben actualizarse después de la decisión.
+
+
+## Estado posterior
+
+<!-- H08_0_PROMPT_SUPERSEDED -->
+
+Este prompt cumplió su función de preparar la evaluación. La decisión humana
+fue `approved_with_reservations` el 2026-07-14. Después del merge del PR
+#50, el punto de continuidad pasa a H08-1.

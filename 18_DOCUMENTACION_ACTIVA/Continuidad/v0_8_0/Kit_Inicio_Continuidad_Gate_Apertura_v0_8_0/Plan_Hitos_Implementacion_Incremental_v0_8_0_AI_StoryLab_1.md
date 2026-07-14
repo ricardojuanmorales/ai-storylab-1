@@ -64,3 +64,17 @@ PR-F: H08-5, cierre
 
 La cantidad de PR puede cambiar mediante decisión explícita. El hito y sus
 criterios no deben diluirse para acomodar la mecánica de Git.
+
+
+## Decisión de activación
+
+<!-- H08_0_MILESTONE_DECISION -->
+
+```yaml
+H08_0:
+  status: completed_effective_on_merge_PR_50
+H08_1:
+  status: authorized_after_merge_PR_50
+H08_2:
+  status: blocked_pending_H08_1_and_human_checkpoint
+```

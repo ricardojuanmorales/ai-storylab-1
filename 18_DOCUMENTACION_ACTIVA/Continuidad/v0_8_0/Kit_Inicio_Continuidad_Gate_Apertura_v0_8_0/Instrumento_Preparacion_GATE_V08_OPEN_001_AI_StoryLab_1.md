@@ -1,7 +1,7 @@
 # Instrumento de Preparación · GATE-V08-OPEN-001
 
 **Gate:** `GATE-V08-OPEN-001`
-**Estado actual:** `pending`
+**Estado actual:** `approved_with_reservations / awaiting_integration`
 **Baseline:** `a3a3aba6e6e26d005f78caa63bfef1f2bd378f17`
 **Este documento:** prepara la decisión, no la ejecuta
 
@@ -60,3 +60,22 @@ funciones mayores: requieren gate específico
 
 El gate solo cambia de estado mediante el acta de decisión humana y la
 actualización posterior de los registros canónicos.
+
+
+## Decisión humana H08-0
+
+<!-- H08_0_INSTRUMENT_DECISION -->
+
+```yaml
+decision: approved_with_reservations
+decision_id: DEC-V08-OPEN-001
+date: 2026-07-14
+effective_on: merge_PR_50
+allowed_result:
+  - abrir v0.8.0 de manera limitada
+  - iniciar H08-1
+blocked_result:
+  - iniciar H08-2 por inferencia
+  - datos reales
+  - backend, cloud, autenticación, IA embebida o vigilancia
+```

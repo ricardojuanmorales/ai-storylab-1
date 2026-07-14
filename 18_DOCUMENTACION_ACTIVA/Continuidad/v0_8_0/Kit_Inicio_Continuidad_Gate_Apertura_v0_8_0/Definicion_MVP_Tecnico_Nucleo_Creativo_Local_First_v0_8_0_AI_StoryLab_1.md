@@ -1,7 +1,7 @@
 # Definición Candidata del MVP Técnico · Núcleo Creativo Local-First
 
 **Código provisional:** `MVP-SDD-08-01`
-**Estado:** candidato para decisión humana
+**Estado:** aprobado con reservas, efectivo al fusionarse PR #50
 **Relación con v0.8.0:** primer hito funcional, no totalidad de la fase
 
 ## 1. Tesis
