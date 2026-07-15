@@ -1,0 +1,13 @@
+risk_id,risk,likelihood,impact,mitigation,reversal,owner,status
+R-H08-001,ejecutar r2 obsoleto,low,critical,bloquear por baseline y archivar r2,no ejecutar kit,IT,mitigated
+R-H08-002,colisión semántica H08-1A,medium,critical,reservar H08-1A y usar unidades decimales,renombrar artefactos,PH_IT,open
+R-H08-003,heredar App.jsx monolítico,medium,high,frontera legacy y ADR,retirar imports,IT,open
+R-H08-004,seleccionar stack irreversible,medium,high,ADR provisional y criterios de reversibilidad,reabrir decisión,IT,open
+R-H08-005,crear infraestructura antes de contratos,medium,high,orden H08-1.1 a 1.4,eliminar scaffolding no justificado,IT,open
+R-H08-006,adelantar H08-2,medium,critical,gate obligatorio y validación de paths,revertir PR,PH_IT_AT,open
+R-H08-007,usar datos reales,low,critical,fixtures sintéticos y auditoría,eliminar datos y detener fase,PH_IT,open
+R-H08-008,dependencia de red,medium,high,prueba offline y adaptadores locales,sustituir dependencia,IT,open
+R-H08-009,accesibilidad tardía,medium,high,criterios desde H08-1,detener cierre,AT,open
+R-H08-010,seguridad solamente documental,medium,high,pruebas de importación y límites,detener cierre,IT,open
+R-H08-011,documentación sin evidencia,medium,medium,Definition of Done verificable,reabrir hito,PH_IT_AT,open
+R-H08-012,PR demasiado amplio,medium,medium,separar por unidad semántica,cerrar y reabrir PRs,IT,open

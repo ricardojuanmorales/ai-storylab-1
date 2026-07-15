@@ -1,0 +1,12 @@
+consultation_id,unit,area,PH_role,IT_role,AT_role,question,status,resolution
+PHITAT-001,H08-1.1,frontera legacy,lead,lead,consult,¿La reutilización preserva agencia sin heredar arquitectura obsoleta?,pending,
+PHITAT-002,H08-1.1,ADR,consult,lead,consult,¿La decisión técnica es reversible y proporcional?,pending,
+PHITAT-003,H08-1.2,contratos,lead,lead,consult,¿Los contratos representan decisiones humanas y privacidad?,pending,
+PHITAT-004,H08-1.2,datos sintéticos,lead,required,consult,¿La minimización evita identidad y sobrecaptura?,pending,
+PHITAT-005,H08-1.3,pruebas,lead,lead,consult,¿Las pruebas verifican sin puntuar creatividad?,pending,
+PHITAT-006,H08-1.3,CI,consult,lead,consult,¿El pipeline funciona sin secretos ni servicios externos?,pending,
+PHITAT-007,H08-1.4,estructura,consult,lead,required,¿La arquitectura permite experiencia accesible y no rígida?,pending,
+PHITAT-008,H08-1.4,feature flags,lead,lead,consult,¿Las capacidades sensibles permanecen realmente inactivas?,pending,
+PHITAT-009,H08-1.5,seguridad,consult,lead,consult,¿La importación se trata como no confiable?,pending,
+PHITAT-010,H08-1.5,accesibilidad,consult,consult,lead,¿Teclado foco semántica y errores permiten completar el flujo?,pending,
+PHITAT-011,H08-1.5,cierre,lead,lead,lead,¿Existe evidencia suficiente para transferir a H08-1A?,pending,

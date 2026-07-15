@@ -127,3 +127,24 @@ pendiente:
 `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/`
 
 El kit conserva preparación, decisión humana y cierre. La apertura limitada y la autorización de H08-1 se hacen efectivas al fusionarse el PR #50.
+
+<!-- V08_H08_1_R3_2_ACTIVE_CONTINUITY -->
+
+## Continuidad activa · PO-H08-1
+
+El expediente realineado está en:
+
+`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Operacionalizacion_H08_1_Realineada_r3_2/`
+
+Secuencia:
+
+```text
+PO-H08-1
+→ H08-1
+→ H08-1A
+→ GATE-H08-1-READY-TO-CODE
+→ H08-2
+```
+
+H08-2 permanece bloqueado. El kit r2 se conserva como memoria histórica y no se
+ejecuta.

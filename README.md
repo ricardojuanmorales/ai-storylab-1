@@ -285,3 +285,23 @@ GATE-V08-OPEN-001: approved_with_reservations / effective_on_merge_PR_50
 v0.8.0: open_limited / effective_on_merge_PR_50
 implementation: authorized_for_H08-1_only / effective_on_merge_PR_50
 ```
+
+<!-- V08_H08_1_R3_2_OPERATIONALIZATION -->
+
+## Operacionalización realineada de H08-1
+
+> Estado posterior al merge del PR #51. Esta entrada no ejecuta H08-1 ni autoriza
+> H08-2.
+
+Expediente PO-H08-1 y kit r3:
+
+`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Operacionalizacion_H08_1_Realineada_r3_2/`
+
+```text
+baseline: 24407e6abe0aba4f269b0bb3aeea4a247018869e
+v1.0.0: ecosistema mínimo estable
+v0.8.0: open_limited
+H08-1: authorized_with_reservations
+H08-1A: Implementation Readiness required
+H08-2: blocked
+```
