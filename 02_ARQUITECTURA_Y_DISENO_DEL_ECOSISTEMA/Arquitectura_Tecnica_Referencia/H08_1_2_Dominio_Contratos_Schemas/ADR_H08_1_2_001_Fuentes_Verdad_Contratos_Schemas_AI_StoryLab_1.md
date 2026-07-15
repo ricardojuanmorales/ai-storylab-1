@@ -1,8 +1,9 @@
 # ADR-H08-1.2-001 · Fuentes de Verdad para Dominio y Fronteras Serializadas
 
-**Estado:** `PROPOSED`
+**Estado:** `ACCEPTED_PROVISIONAL`
 **Fecha:** 2026-07-15
 **Baseline:** `5a5c4f9231ef092b3496a0019de1940fb19c14e6`
+**Integración:** merge PR #54 · `5b04c711127d9dc3197b016289f10c457fd56576`
 **Revisión obligatoria:** H08-1A · Implementation Readiness
 
 ## Contexto

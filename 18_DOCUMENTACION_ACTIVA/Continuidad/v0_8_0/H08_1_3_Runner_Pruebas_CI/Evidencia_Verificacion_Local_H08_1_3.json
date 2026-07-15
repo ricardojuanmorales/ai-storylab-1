@@ -1,0 +1,32 @@
+{
+  "project": "AI StoryLab 1",
+  "unit": "H08-1.3",
+  "date": "2026-07-15",
+  "baseline": "5b04c711127d9dc3197b016289f10c457fd56576",
+  "environment": {
+    "node": "v22.16.0",
+    "npm": "10.9.2",
+    "os": "linux"
+  },
+  "commands": [
+    "npm ci --ignore-scripts",
+    "npm run verify",
+    "npm audit --audit-level=high --json"
+  ],
+  "results": {
+    "typescript_strict": "PASS",
+    "architecture_audit": "PASS",
+    "architecture_scanned_files": 11,
+    "secret_audit": "PASS",
+    "secret_scanned_files": 37,
+    "test_files": 4,
+    "tests": 20,
+    "tests_passed": 20,
+    "npm_high_or_critical_vulnerabilities": 0
+  },
+  "limits": {
+    "node_24_CI": "pending_future_PR_run",
+    "functional_vertical_slice": false,
+    "H08_2_authorized": false
+  }
+}

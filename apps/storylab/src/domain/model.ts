@@ -1,6 +1,8 @@
+
 import type {
   ActivityResponseId,
   EvidenceId,
+  EvidenceKind,
   EvidenceStatus,
   HumanDecisionId,
   HumanDecisionValue,
@@ -8,10 +10,11 @@ import type {
   MissionId,
   MissionStatus,
   PortfolioItemId,
-  PrivacyClass,
   ProjectId,
   ProjectStatus,
   ReflectionId,
+  ReflectionPrivacyClass,
+  TextScale,
 } from "./types";
 
 export const CURRENT_SCHEMA_VERSION = "0.8.0-alpha.1" as const;
@@ -20,7 +23,7 @@ export type SchemaVersion = typeof CURRENT_SCHEMA_VERSION;
 export interface AccessibilityPreferences {
   readonly reducedMotion: boolean;
   readonly highContrast: boolean;
-  readonly textScale: "default" | "large" | "extra_large";
+  readonly textScale: TextScale;
 }
 
 export interface LocalProfile {
@@ -47,7 +50,7 @@ export interface Evidence {
   readonly id: EvidenceId;
   readonly missionId: MissionId;
   readonly title: string;
-  readonly kind: "text" | "image_metadata" | "audio_metadata" | "video_metadata" | "link_metadata";
+  readonly kind: EvidenceKind;
   readonly summary: string;
   readonly status: EvidenceStatus;
   readonly createdAt: ISODateTime;
@@ -57,7 +60,7 @@ export interface Reflection {
   readonly id: ReflectionId;
   readonly missionId: MissionId;
   readonly text: string;
-  readonly privacyClass: Extract<PrivacyClass, "private" | "shareable_with_purpose" | "exportable_after_review" | "high_care">;
+  readonly privacyClass: ReflectionPrivacyClass;
   readonly selectedForExport: boolean;
   readonly createdAt: ISODateTime;
 }

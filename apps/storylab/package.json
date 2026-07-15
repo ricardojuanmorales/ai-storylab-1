@@ -1,0 +1,28 @@
+{
+  "name": "@ai-storylab/storylab-baseline",
+  "private": true,
+  "version": "0.8.0-alpha.1",
+  "type": "module",
+  "description": "Baseline técnico verificable de AI StoryLab 1, sin vertical slice funcional.",
+  "engines": {
+    "node": ">=22 <27"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:domain": "vitest run src/tests/domain.invariants.test.ts",
+    "test:schemas": "vitest run src/tests/schemas.contract.test.ts",
+    "test:parity": "vitest run src/tests/parity.test.ts",
+    "test:offline": "vitest run src/tests/offline.guard.test.ts",
+    "audit:architecture": "node tools/audit-architecture.mjs",
+    "audit:secrets": "node tools/audit-secrets.mjs",
+    "verify": "npm run typecheck && npm run audit:architecture && npm run audit:secrets && npm run test"
+  },
+  "devDependencies": {
+    "@types/node": "26.1.1",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "typescript": "7.0.2",
+    "vitest": "4.1.10"
+  }
+}

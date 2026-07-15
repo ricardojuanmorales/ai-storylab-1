@@ -1,3 +1,4 @@
+
 import type { DomainError } from "./errors";
 import {
   CURRENT_SCHEMA_VERSION,
@@ -19,7 +20,10 @@ const error = (
   path: string,
   safeMessage: string,
   details?: Readonly<Record<string, unknown>>,
-): DomainError => ({ code, path, safeMessage, details });
+): DomainError => {
+  const base = { code, path, safeMessage };
+  return details === undefined ? base : { ...base, details };
+};
 
 export const canTransitionMission = (
   from: MissionStatus,
@@ -86,6 +90,7 @@ export const validateProjectInvariants = (
 
   const identifiers = [
     project.id as string,
+    ...project.missions.map((item) => item.missionId as string),
     ...project.activityResponses.map((item) => item.id as string),
     ...project.evidence.map((item) => item.id as string),
     ...project.reflections.map((item) => item.id as string),
@@ -139,10 +144,7 @@ export const validateProjectInvariants = (
   });
 
   project.reflections.forEach((reflection, index) => {
-    if (
-      reflection.selectedForExport &&
-      reflection.privacyClass === "private"
-    ) {
+    if (reflection.selectedForExport && reflection.privacyClass === "private") {
       errors.push(
         error(
           "EXPORT_SELECTION_REQUIRED",
@@ -166,7 +168,13 @@ export const validateProjectInvariants = (
     );
   }
 
-  if (Date.parse(project.updatedAt) < Date.parse(project.createdAt)) {
+  const createdAt = Date.parse(project.createdAt);
+  const updatedAt = Date.parse(project.updatedAt);
+  if (
+    !Number.isFinite(createdAt) ||
+    !Number.isFinite(updatedAt) ||
+    updatedAt < createdAt
+  ) {
     errors.push(
       error(
         "TIMESTAMP_ORDER_INVALID",

@@ -341,3 +341,16 @@ H08-2 permanece bloqueado.
 - `apps/storylab/`
 
 Estado: baseline técnico propuesto. H08-2 permanece bloqueado.
+
+---
+
+<!-- H08_1_3_RUNNER_TESTS_CI -->
+
+## H08-1.3 · Runner, pruebas y CI
+
+- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_3_Runner_Pruebas_CI/`
+- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_3_Runner_Pruebas_CI/`
+- `apps/storylab/`
+- `.github/workflows/h08-1-3-baseline.yml`
+
+Estado: baseline verificable propuesto. H08-2 permanece bloqueado.
