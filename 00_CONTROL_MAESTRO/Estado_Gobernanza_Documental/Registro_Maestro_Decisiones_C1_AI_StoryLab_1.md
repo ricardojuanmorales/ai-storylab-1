@@ -919,3 +919,37 @@ blocked_result:
   - real_data
   - backend_auth_cloud_embedded_AI
 ```
+
+---
+
+<!-- H08_1_1_CLOSE_H08_1_2_OPEN_DECISION_UPDATE -->
+
+# Enmienda decisional post-merge H08-1.1 y apertura H08-1.2
+
+```yaml
+DEC_V08_H08_1_1_001:
+  lifecycle: fulfilled
+  effective_since: merge_PR_53
+  merge_commit: 5a5c4f9231ef092b3496a0019de1940fb19c14e6
+  result:
+    - architecture_provisional_in_force
+    - legacy_boundary_in_force
+    - H08_1_2_enabled
+
+DEC_V08_H08_1_2_001:
+  title: Fuentes de verdad complementarias para dominio y serialización
+  status: ratified
+  lifecycle: awaiting_integration
+  effective_on: merge_PR_H08_1_2
+  decision:
+    domain_semantics: TypeScript
+    serialized_boundaries: JSON_Schema_2020_12
+    runtime_validator_library: deferred
+    parity_tests: required_in_H08_1_3
+    schema_version: 0.8.0-alpha.1
+  blocked_result:
+    - H08_2
+    - direct_legacy_import
+    - real_data
+    - adapters_or_presentation
+```

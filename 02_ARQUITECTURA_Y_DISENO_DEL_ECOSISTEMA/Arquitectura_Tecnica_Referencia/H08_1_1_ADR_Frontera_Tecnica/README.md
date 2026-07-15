@@ -3,7 +3,7 @@
 **Proyecto:** AI StoryLab 1
 **Fecha:** 2026-07-15
 **Baseline:** `4327758c66b3dd36f49400c1fc8fad92777d90e4`
-**Estado:** `PROPOSED_AWAITING_HUMAN_REVIEW`
+**Estado:** `INTEGRATED_ACCEPTED_PROVISIONAL`
 **Unidad:** `H08-1.1`
 
 ## Propósito
@@ -37,4 +37,4 @@ schema_library: deferred
 H08_2: blocked
 ```
 
-La decisión solo se vuelve efectiva al fusionarse el PR tras revisión humana.
+La decisión quedó efectiva mediante el merge de PR #53 y permanece provisional hasta H08-1A.

@@ -1,0 +1,11 @@
+domain,input,technical_translation,evidence,return_to
+PH,agencia humana,HumanDecision actor human; no auto acceptance,types invariants schema,IT_AT
+PH,curaduría reversible,Portfolio references accepted evidence and supports removal,model test vectors,IT_AT
+PH,reflexión privada,privacyClass private by default; explicit export flag,schema fixtures,IT_AT
+PH,no equivalencia numérica de misiones,missionId opaque and configuration-driven,domain model,IT
+IT,dominio independiente,zero imports React DOM storage network,static audit,PH_AT
+IT,fronteras no confiables,additionalProperties false and two-stage validation,schemas policy,PH_AT
+IT,reversibilidad,validator library deferred; JSON Schema standard,ADR parity matrix,PH_AT
+AT,preferencias de accesibilidad mínimas,AccessibilityPreferences in LocalProfile,types schema fixture,PH_IT
+AT,mensajes comprensibles,safeMessage separated from technical details,error catalog,PH_IT
+AT,carga cognitiva,bounded strings and explicit statuses,schemas invariants,PH_IT

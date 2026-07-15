@@ -170,3 +170,13 @@ Estado: PR #52 draft, pendiente de decisión humana de merge.
 `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_1_ADR_Frontera_Tecnica/`
 
 Estado: PR draft documental. H08-1.2 depende de aprobación humana.
+
+---
+
+<!-- H08_1_2_ACTIVE_CONTINUITY -->
+
+## Continuidad activa H08-1.2
+
+`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_2_Dominio_Contratos_Schemas/`
+
+Estado: PR draft técnico-documental pendiente de revisión humana.

@@ -165,3 +165,14 @@ C5 requiere una decisión consolidada independiente.
 
 Contiene ADR provisional, comparación de alternativas, frontera legacy,
 reversibilidad, capas, dependencias, riesgos y evidencia PH-IT-AT.
+
+---
+
+<!-- H08_1_2_ARCHITECTURE_REFERENCE -->
+
+## Referencia H08-1.2
+
+`02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_2_Dominio_Contratos_Schemas/`
+
+Define dominio mínimo, invariantes, errores, schemas, migración, riesgos y
+paridad TypeScript–JSON Schema.
