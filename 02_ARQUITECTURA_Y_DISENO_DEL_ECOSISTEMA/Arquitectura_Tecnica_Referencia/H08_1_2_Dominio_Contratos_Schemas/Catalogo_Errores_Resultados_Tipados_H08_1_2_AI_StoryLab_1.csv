@@ -1,0 +1,19 @@
+code,category,meaning,default_severity,safe_message
+PROFILE_PSEUDONYM_REQUIRED,validation,missing or blank pseudonym,error,Se requiere un seudónimo local.
+PROFILE_CONTEXT_TOO_LONG,validation,optional context exceeds limit,error,El contexto excede el límite permitido.
+PROJECT_TITLE_REQUIRED,validation,missing or blank project title,error,Se requiere un título de proyecto.
+SCHEMA_VERSION_UNSUPPORTED,schema,unsupported schema version,error,La versión del paquete no es compatible.
+DUPLICATE_IDENTIFIER,integrity,duplicate ID in aggregate,error,El proyecto contiene identificadores duplicados.
+INVALID_STATE_TRANSITION,state,transition not permitted,error,La transición solicitada no está permitida.
+BINARY_CONTENT_PROHIBITED,privacy,binary content embedded in domain,error,El paquete no puede contener archivos binarios.
+HUMAN_DECISION_REQUIRED,agency,portfolio action lacks explicit decision,error,La curaduría requiere una decisión humana.
+PORTFOLIO_EVIDENCE_NOT_FOUND,integrity,portfolio references missing evidence,error,Una entrada de portafolio no encuentra su evidencia.
+PORTFOLIO_DUPLICATE_EVIDENCE,integrity,same evidence repeated,error,La evidencia ya está en el portafolio.
+REFLECTION_PRIVACY_INVALID,privacy,reflection privacy class invalid,error,La privacidad de la reflexión no es válida.
+EXPORT_SELECTION_REQUIRED,privacy,private content selected without review,error,Revise y seleccione el contenido antes de exportarlo.
+DEFERRED_CAPABILITY_ENABLED,scope,blocked feature enabled,critical,La capacidad solicitada permanece bloqueada.
+IMPORT_UNEXPECTED_FIELD,security,unknown serialized field,error,El archivo contiene campos no reconocidos.
+LEGACY_MIGRATION_REQUIRED,migration,legacy package needs migration,warning,El paquete requiere una migración explícita.
+GROUP_DATA_PROHIBITED,scope,group or cohort data present,critical,Los datos grupales no están autorizados.
+TIMESTAMP_ORDER_INVALID,integrity,updated time precedes creation,error,Las fechas del proyecto son inconsistentes.
+AUTOMATED_DECISION_PROHIBITED,agency,decision attributed to automation,critical,La decisión debe pertenecer a una persona.

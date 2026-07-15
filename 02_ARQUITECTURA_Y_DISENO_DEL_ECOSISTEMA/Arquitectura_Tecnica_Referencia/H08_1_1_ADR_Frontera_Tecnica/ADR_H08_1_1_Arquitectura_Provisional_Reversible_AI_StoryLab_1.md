@@ -1,9 +1,9 @@
 # ADR-H08-1.1-001 · Arquitectura Provisional y Reversible
 
-**Estado:** `PROPOSED`
+**Estado:** `ACCEPTED_PROVISIONAL`
 **Fecha:** 2026-07-15
 **Baseline:** `4327758c66b3dd36f49400c1fc8fad92777d90e4`
-**Decisión efectiva:** al merge humano del PR de H08-1.1
+**Decisión efectiva:** merge PR #53 · `5a5c4f9231ef092b3496a0019de1940fb19c14e6`
 **Revisión obligatoria:** H08-1A · Implementation Readiness
 
 ## 1. Contexto

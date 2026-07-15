@@ -1,0 +1,10 @@
+risk_id,risk,probability,impact,control,status
+R-H0812-001,drift TypeScript JSON Schema,high,high,mandatory parity tests in H08-1.3,open_controlled
+R-H0812-002,overmodeling before vertical slice,medium,high,minimal objects and explicit exclusions,open_controlled
+R-H0812-003,schema treated as domain truth,medium,high,two-stage validation rule,open_controlled
+R-H0812-004,legacy fields leak into new model,medium,critical,additionalProperties false and no legacy imports,open_controlled
+R-H0812-005,private reflection exported,medium,critical,private default plus selectedForExport invariant,open_controlled
+R-H0812-006,automated portfolio acceptance,low,critical,HumanDecision required,open_controlled
+R-H0812-007,schema version mistaken for release,medium,medium,explicit no product equivalence,accepted
+R-H0812-008,validator library lock-in,medium,medium,library deferred and replacement criterion,open_controlled
+R-H0812-009,fixtures resemble real users,low,high,synthetic names and no real identifiers,controlled

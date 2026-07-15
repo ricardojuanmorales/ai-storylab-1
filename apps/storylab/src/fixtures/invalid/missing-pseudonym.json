@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "0.8.0-alpha.1",
+  "id": "project-invalid-001",
+  "title": "La isla de los ecos",
+  "status": "active",
+  "profile": {
+    "pseudonym": "",
+    "context": "Taller creativo sintético",
+    "accessibility": {
+      "reducedMotion": false,
+      "highContrast": false,
+      "textScale": "default"
+    }
+  },
+  "missions": [
+    {
+      "missionId": "mission-intention",
+      "status": "in_progress",
+      "startedAt": "2026-07-15T12:00:00Z"
+    }
+  ],
+  "activityResponses": [],
+  "evidence": [],
+  "reflections": [],
+  "decisions": [],
+  "portfolio": {
+    "items": []
+  },
+  "featureFlags": {
+    "facilitatorView": false,
+    "groupDashboard": false,
+    "embeddedAI": false,
+    "cloudSync": false,
+    "analytics": false,
+    "autoPublish": false,
+    "realData": false
+  },
+  "createdAt": "2026-07-15T12:00:00Z",
+  "updatedAt": "2026-07-15T12:05:00Z"
+}

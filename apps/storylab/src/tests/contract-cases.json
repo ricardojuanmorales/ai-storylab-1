@@ -1,0 +1,41 @@
+[
+  {
+    "id": "CASE-001",
+    "fixture": "../fixtures/valid/minimal-project.json",
+    "schema": "../schemas/project.schema.json",
+    "expectedSchemaValid": true,
+    "expectedDomainErrors": []
+  },
+  {
+    "id": "CASE-002",
+    "fixture": "../fixtures/valid/completed-project.json",
+    "schema": "../schemas/project.schema.json",
+    "expectedSchemaValid": true,
+    "expectedDomainErrors": []
+  },
+  {
+    "id": "CASE-003",
+    "fixture": "../fixtures/invalid/missing-pseudonym.json",
+    "schema": "../schemas/project.schema.json",
+    "expectedSchemaValid": false,
+    "expectedDomainErrors": [
+      "PROFILE_PSEUDONYM_REQUIRED"
+    ]
+  },
+  {
+    "id": "CASE-004",
+    "fixture": "../fixtures/invalid/portfolio-without-human-decision.json",
+    "schema": "../schemas/project.schema.json",
+    "expectedSchemaValid": true,
+    "expectedDomainErrors": [
+      "HUMAN_DECISION_REQUIRED"
+    ]
+  },
+  {
+    "id": "CASE-005",
+    "fixture": "../fixtures/legacy/v0.3-student-progress.synthetic.json",
+    "schema": "../schemas/import-candidate.schema.json",
+    "wrappedSource": "legacy_v0_3",
+    "expectedMigrationStatus": "LEGACY_MIGRATION_REQUIRED"
+  }
+]

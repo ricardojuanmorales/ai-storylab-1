@@ -1,0 +1,13 @@
+{
+  "export_type": "student_progress",
+  "schema_version": "0.3.0",
+  "profile": {
+    "student_code": "SYN-001",
+    "display_name": "Persona Sintética"
+  },
+  "sessions": [],
+  "progress": {
+    "last_updated": "2026-07-15T10:00:00Z"
+  },
+  "note": "Fixture sintético para probar LEGACY_MIGRATION_REQUIRED."
+}

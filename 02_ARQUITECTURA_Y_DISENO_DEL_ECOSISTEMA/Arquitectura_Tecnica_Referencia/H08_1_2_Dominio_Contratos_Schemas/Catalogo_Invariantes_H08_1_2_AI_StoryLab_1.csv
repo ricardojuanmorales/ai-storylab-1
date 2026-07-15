@@ -1,0 +1,19 @@
+invariant_id,scope,rule,error_code,schema_capable,domain_required
+INV-001,LocalProfile,pseudonym trimmed length 1..80,PROFILE_PSEUDONYM_REQUIRED,yes,yes
+INV-002,LocalProfile,context optional length <=120,PROFILE_CONTEXT_TOO_LONG,yes,yes
+INV-003,CreativeProject,title trimmed length 1..120,PROJECT_TITLE_REQUIRED,yes,yes
+INV-004,CreativeProject,schemaVersion exact supported value,SCHEMA_VERSION_UNSUPPORTED,yes,yes
+INV-005,CreativeProject,all identifiers unique within aggregate,DUPLICATE_IDENTIFIER,no,yes
+INV-006,MissionProgress,status transition must be allowed,INVALID_STATE_TRANSITION,no,yes
+INV-007,Evidence,binary content prohibited,BINARY_CONTENT_PROHIBITED,yes,yes
+INV-008,Evidence,portfolio acceptance requires HumanDecision accept,HUMAN_DECISION_REQUIRED,no,yes
+INV-009,PortfolioItem,evidence reference must exist,PORTFOLIO_EVIDENCE_NOT_FOUND,no,yes
+INV-010,Portfolio,no duplicate evidence references,PORTFOLIO_DUPLICATE_EVIDENCE,no,yes
+INV-011,Reflection,privacyClass defaults private,REFLECTION_PRIVACY_INVALID,yes,yes
+INV-012,Reflection,exportable reflection requires selectedForExport true,EXPORT_SELECTION_REQUIRED,no,yes
+INV-013,FeatureFlags,all deferred capabilities false,DEFERRED_CAPABILITY_ENABLED,yes,yes
+INV-014,ImportCandidate,unknown fields rejected after schema selection,IMPORT_UNEXPECTED_FIELD,yes,yes
+INV-015,ImportCandidate,legacy v0.3 never accepted directly,LEGACY_MIGRATION_REQUIRED,no,yes
+INV-016,Project,no group dashboard or cohort data,GROUP_DATA_PROHIBITED,yes,yes
+INV-017,Project,updatedAt not earlier than createdAt,TIMESTAMP_ORDER_INVALID,no,yes
+INV-018,HumanDecision,decision actor is local human user,AUTOMATED_DECISION_PROHIBITED,yes,yes

@@ -13,19 +13,19 @@
 
 ## Validación
 
-- [ ] revisión humana del ADR;
-- [ ] confirmar que no existe código funcional;
-- [ ] confirmar cero imports nuevos desde v0.3;
-- [ ] confirmar que React/Vite/TypeScript son provisionales;
-- [ ] confirmar persistencia y schemas concretos diferidos;
-- [ ] confirmar H08-2 bloqueado;
-- [ ] confirmar datos reales prohibidos;
-- [ ] confirmar working tree y checksums;
-- [ ] registrar decisión de cierre.
+- [x] revisión humana del ADR;
+- [x] confirmar que no existe código funcional;
+- [x] confirmar cero imports nuevos desde v0.3;
+- [x] confirmar que React/Vite/TypeScript son provisionales;
+- [x] confirmar persistencia y schemas concretos diferidos;
+- [x] confirmar H08-2 bloqueado;
+- [x] confirmar datos reales prohibidos;
+- [x] confirmar working tree y checksums;
+- [x] registrar decisión de cierre.
 
 ## Decisión humana
 
-- [ ] approved;
+- [x] approved;
 - [ ] approved_with_reservations;
 - [ ] changes_required;
 - [ ] rejected.

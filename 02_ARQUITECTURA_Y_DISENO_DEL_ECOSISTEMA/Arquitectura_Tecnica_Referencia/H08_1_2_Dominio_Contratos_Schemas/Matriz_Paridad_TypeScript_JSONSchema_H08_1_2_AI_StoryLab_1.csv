@@ -1,0 +1,12 @@
+concept,typescript_contract,json_schema_location,parity_rule,H08_1_3_test
+schemaVersion,CURRENT_SCHEMA_VERSION,project.properties.schemaVersion.const,exact equality,required
+LocalProfile,LocalProfile,$defs.localProfile,required and max lengths,required
+MissionProgress,MissionProgress,$defs.missionProgress,enum and required parity,required
+Evidence,Evidence,$defs.evidence,no binary fields and enums,required
+Reflection,Reflection,$defs.reflection,privacy enum and export flag,required
+HumanDecision,HumanDecision,$defs.humanDecision,actor human and decision enum,required
+FeatureFlags,FeatureFlags,$defs.featureFlags,all const false,required
+CreativeProject,CreativeProject,schema root,required arrays and no extra fields,required
+ExportPackage,ExportPackage,export schema root,envelope version parity,required
+ImportCandidate,ImportCandidate,import schema root,source classification parity,required
+cross_reference_invariants,validateProjectInvariants,not expressible fully,domain-only test,required

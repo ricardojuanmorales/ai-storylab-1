@@ -329,3 +329,15 @@ No abre H08-2.
 
 Estado: propuesta arquitectónica provisional pendiente de integración humana.
 H08-2 permanece bloqueado.
+
+---
+
+<!-- H08_1_2_DOMAIN_CONTRACTS_SCHEMAS -->
+
+## H08-1.2 · Dominio, contratos y schemas
+
+- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_2_Dominio_Contratos_Schemas/`
+- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_2_Dominio_Contratos_Schemas/`
+- `apps/storylab/`
+
+Estado: baseline técnico propuesto. H08-2 permanece bloqueado.
