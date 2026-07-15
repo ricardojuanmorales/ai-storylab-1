@@ -1,0 +1,6 @@
+risk,likelihood,impact,mitigation,status
+use_case_becomes_vertical_slice,medium,high,no presentation or mission flow,controlled
+in_memory_adapter_mistaken_for_final_storage,medium,medium,explicitly provisional documentation,controlled
+adapter_leaks_into_application,low,high,architecture audit,controlled
+runtime_dependency_creep,low,medium,zero runtime dependency audit,controlled
+H08_2_scope_leak,low,critical,feature flags false and no presentation,controlled

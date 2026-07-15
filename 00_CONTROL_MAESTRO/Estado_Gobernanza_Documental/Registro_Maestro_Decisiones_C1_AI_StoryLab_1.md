@@ -990,3 +990,26 @@ DEC_V08_H08_1_3_001:
     - application_adapters_presentation
     - real_data
 ```
+
+---
+
+<!-- H08_1_3_CLOSE_H08_1_4_OPEN_DECISION_UPDATE -->
+
+# Enmienda decisional post-merge H08-1.3 y apertura H08-1.4
+
+```yaml
+DEC_V08_H08_1_3_001:
+  lifecycle: fulfilled
+  merge_commit: cb934b7bb795ce022d4d3f34f70ad4461399b25f
+DEC_V08_H08_1_4_001:
+  lifecycle: awaiting_integration
+  decision:
+    application: use_case_functions
+    persistence: in_memory_behind_port
+    localStorage: not_selected
+    presentation: absent
+  blocked:
+    - H08_2
+    - real_data
+    - facilitator_view
+```

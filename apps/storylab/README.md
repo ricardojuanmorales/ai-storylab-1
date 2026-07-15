@@ -1,8 +1,8 @@
 # AI StoryLab · Nueva raíz modular provisional
 
-**Unidad de origen:** H08-1.2
+**Unidad vigente:** H08-1.4
 **Schema:** `0.8.0-alpha.1`
-**Estado:** contratos, schemas, runner y CI, sin flujo funcional
+**Estado:** esqueleto modular y adaptadores locales, sin vertical slice funcional
 
 ## Capas presentes
 
@@ -10,19 +10,29 @@
 src/
   domain/
   ports/
+  application/
+  adapters/
   schemas/
   fixtures/
   tests/
-  tools/
 ```
 
-## Capas todavía ausentes
+## Dirección autorizada
 
-- `application/`;
-- `adapters/`;
-- `presentation/`;
-- persistencia concreta;
-- flujo H08-2.
+```text
+application → domain
+application → ports
+adapters → domain
+adapters → ports
+domain ↛ application/adapters
+ports ↛ application/adapters
+```
 
-H08-1.3 añadió compilación, pruebas, auditorías y CI. H08-1.4 añadirá el
-esqueleto de aplicación y adaptadores sin abrir H08-2.
+## Adaptadores provisionales
+
+- `InMemoryProjectRepository`;
+- `SystemClock`;
+- `RandomUuidGenerator`.
+
+No se selecciona persistencia durable. `localStorage`, IndexedDB, nube, backend,
+autenticación, presentación e H08-2 permanecen fuera de alcance.

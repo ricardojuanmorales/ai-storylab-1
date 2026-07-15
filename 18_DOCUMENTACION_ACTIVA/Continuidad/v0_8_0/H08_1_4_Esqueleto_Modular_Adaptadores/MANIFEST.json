@@ -1,0 +1,9 @@
+{
+  "unit": "H08-1.4",
+  "baseline": "cb934b7bb795ce022d4d3f34f70ad4461399b25f",
+  "branch": "arch/v0.8-h08-1-4-modular-skeleton-adapters",
+  "schemaVersion": "0.8.0-alpha.1",
+  "expectedTests": 35,
+  "functionalVerticalSlice": false,
+  "H08_2_authorized": false
+}
