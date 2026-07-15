@@ -1,0 +1,47 @@
+{
+  "project": "AI StoryLab 1",
+  "date": "2026-07-14",
+  "block": "PO-H08-1 post execution continuity",
+  "baseline": "24407e6abe0aba4f269b0bb3aeea4a247018869e",
+  "PR": 52,
+  "state": "POST_EXECUTION_PRE_MERGE",
+  "H08_2_authorized": false,
+  "active_debt_changes": 0,
+  "files": [
+    {
+      "file": "Acta_Cierre_Operacional_PO_H08_1_PR52_AI_StoryLab_1.md",
+      "sha256": "29075d2f613d092aa78fb800cc37fbfdb85077b0d455ff1ed5ebaead47fddde1",
+      "size": 1281
+    },
+    {
+      "file": "Bitacora_Sesion_Cierre_PO_H08_1_PR52_AI_StoryLab_1.md",
+      "sha256": "d984da30ba4c00370b620efd3dd2599906a92a563500cd6aae57aadfdaeb0273",
+      "size": 1188
+    },
+    {
+      "file": "Bitacora_Transferencia_Simetrica_PO_H08_1_a_H08_1_AI_StoryLab_1.md",
+      "sha256": "1bbf79b07f7c3179aeeb35923c04ebf9e00988187d314dbe849b43591c04ae5b",
+      "size": 1242
+    },
+    {
+      "file": "Ficha_Estado_Post_Ejecucion_Pre_Merge_PR52_AI_StoryLab_1.md",
+      "sha256": "32f0e5a91b0f18096a68b411f360d844e5bffaf44097dc08a772a5d061dfb597",
+      "size": 938
+    },
+    {
+      "file": "Kit_Inicio_Continuidad_H08_1_Post_PO_H08_1_AI_StoryLab_1.md",
+      "sha256": "01a48d923661aef14f34209d3664844f42566b084c108bbad05d39024fb03e99",
+      "size": 988
+    },
+    {
+      "file": "Prompt_Continuidad_H08_1_Post_PR52_AI_StoryLab_1.md",
+      "sha256": "a465d8f4088e65bd653ddf36efa67b791789bab699c0d67464597581d347c783",
+      "size": 989
+    },
+    {
+      "file": "README.md",
+      "sha256": "e09d092b83399446cc138ebe68cc115aef4f9aa5f0266085cd9f1d952089d4bf",
+      "size": 1034
+    }
+  ]
+}

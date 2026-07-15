@@ -1,0 +1,19 @@
+criterion_id,unit,criterion,evidence,status,blocking,human_review
+H08-1-01,H08-1.1,ADR provisional y reversible,ADR versionado,pending,yes,yes
+H08-1-02,H08-1.1,Frontera legacy explícita,Matriz legacy y reglas,pending,yes,yes
+H08-1-03,H08-1.1,Arquitectura por capas,Diagrama y decisión,pending,yes,yes
+H08-1-04,H08-1.2,Objetos e invariantes,Specs de dominio,pending,yes,yes
+H08-1-05,H08-1.2,Schemas versionados,Archivos y validación,pending,yes,yes
+H08-1-06,H08-1.2,Fixtures exclusivamente sintéticos,Inventario auditado,pending,yes,yes
+H08-1-07,H08-1.3,Runner reproducible,Comando y salida,pending,yes,yes
+H08-1-08,H08-1.3,Pruebas unitarias y de contrato,Suite ejecutada,pending,yes,yes
+H08-1-09,H08-1.3,CI mínimo sin secretos,Workflow y evidencia,pending,yes,yes
+H08-1-10,H08-1.3,Cero red obligatoria,Prueba offline,pending,yes,yes
+H08-1-11,H08-1.4,Esqueleto modular,Tree y explicación,pending,yes,yes
+H08-1-12,H08-1.4,Puertos y adaptadores,Interfaces y tests,pending,yes,yes
+H08-1-13,H08-1.4,Feature flags sensibles false,Config y tests,pending,yes,yes
+H08-1-14,H08-1.5,Seguridad baseline,Threat checks,pending,yes,yes
+H08-1-15,H08-1.5,Accesibilidad baseline,Checklist y pruebas,pending,yes,yes
+H08-1-16,H08-1.5,Revisión PH-IT-AT,Matriz resuelta,pending,yes,yes
+H08-1-17,H08-1.5,Deuda y riesgos actualizados,Registros,pending,yes,yes
+H08-1-18,H08-1.5,Acta de cierre y transferencia,Acta y prompt,pending,yes,yes

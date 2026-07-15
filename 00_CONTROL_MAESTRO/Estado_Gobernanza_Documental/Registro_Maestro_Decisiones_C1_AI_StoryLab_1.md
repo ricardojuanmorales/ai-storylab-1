@@ -857,3 +857,38 @@ successor_decision:
 | Decision ID | Título | Ciclo | Documentos afectados |
 |---|---|---|---|
 | `DEC-V08-OPEN-001` | Aprobar con reservas la apertura limitada de v0.8.0 | `effective_on_merge_PR_50` | `GATE-V08-OPEN-001`, `MVP-SDD-08-01`, `DFUX-TRZ-005`, `process:H08-0`, `process:H08-1` |
+
+---
+
+<!-- V08_PO_H08_1_PR52_DECISION_UPDATE -->
+
+# Enmienda decisional PO-H08-1 · PR #52
+
+```yaml
+DEC_V08_REALIGN_001:
+  assignment: retrospective_for_traceability
+  status: ratified
+  lifecycle: fulfilled
+  effective_on: merge_PR_51
+  result: v1_0_minimum_stable_ecosystem
+
+DEC_V08_PO_H08_1_001:
+  assignment: retrospective_for_traceability
+  status: ratified
+  lifecycle: awaiting_integration
+  effective_on: merge_PR_52
+  allowed_result:
+    - integrate_PO_H08_1
+    - begin_H08_1_with_reservations
+  blocked_result:
+    - complete_H08_1_by_inference
+    - approve_Ready_to_Code_by_inference
+    - open_H08_2
+    - modify_active_debt_by_inference
+```
+
+La sucesión operativa vigente es:
+
+```text
+H08-1 → H08-1A → GATE-H08-1-READY-TO-CODE → H08-2
+```

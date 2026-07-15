@@ -1,0 +1,15 @@
+legacy_id,elemento,clasificacion,accion_permitida,accion_prohibida,evidencia_requerida,status
+LEG-001,flujo completo de misiones,transformar,convertir comportamientos en escenarios y specs,copiar navegación monolítica,matriz de comportamiento,pending
+LEG-002,persistencia local,preservar_transformar,extraer requisitos y diseñar puerto nuevo,acoplar dominio directamente a localStorage,ADR y pruebas,pending
+LEG-003,exportación e importación JSON,preservar_transformar,crear roundtrip y schemas versionados,aceptar archivos sin validar,tests de contrato,pending
+LEG-004,perfil de usuario,transformar,minimizar a seudónimo y contexto opcional,requerir identidad real,spec de minimización,pending
+LEG-005,portafolio,transformar,orientar a curaduría humana reversible,incorporar evidencias automáticamente,criterios Given When Then,pending
+LEG-006,prompts externos,preservar,usar como orientación no vinculante,convertir la IA en autoridad creativa,guía de uso,pending
+LEG-007,contenidos pedagógicos,reutilizar_auditado,adaptar con procedencia y revisión,copiar sin revisión,registro de procedencia,pending
+LEG-008,utilidades puras,reutilizar_auditado,extraer probar adaptar e incorporar,importar módulos legacy completos,unit tests,pending
+LEG-009,insignias,diferir,registrar como opcional post baseline,volverlas requisito de progreso,decisión de alcance,deferred
+LEG-010,group dashboard,bloquear,no incorporar en v1.0 inicial,introducir seguimiento grupal,feature flag false,blocked
+LEG-011,Vista del Facilitador,diferir,mantener fuera de alcance obligatorio,activar interfaz o vigilancia,gate futuro,deferred
+LEG-012,nueve misiones,retirar_como_requisito,usar como memoria de contenido,imponer equivalencia numérica,validación pedagógica,retired
+LEG-013,App.jsx monolítico,retirar_como_arquitectura,usar como oráculo de experiencia,heredarlo como raíz nueva,ADR legacy,retired
+LEG-014,acoplamiento UI localStorage,retirar,sustituir por puerto y adaptador,repetir acoplamiento,pruebas de adaptador,retired
