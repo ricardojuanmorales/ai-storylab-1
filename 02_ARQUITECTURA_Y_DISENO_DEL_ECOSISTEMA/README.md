@@ -154,3 +154,14 @@ elevadas en C4-A y C4-B.
 
 El cierre C4 no abre implementación ni la fase v0.8.0. La continuidad hacia
 C5 requiere una decisión consolidada independiente.
+
+---
+
+<!-- H08_1_1_ARCHITECTURE_REFERENCE -->
+
+## Referencia H08-1.1
+
+`02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_1_ADR_Frontera_Tecnica/`
+
+Contiene ADR provisional, comparación de alternativas, frontera legacy,
+reversibilidad, capas, dependencias, riesgos y evidencia PH-IT-AT.

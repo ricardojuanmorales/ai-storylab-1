@@ -1,0 +1,9 @@
+decision,status,reversal_trigger,reversal_mechanism,evidence_required
+same_repository_isolated_root,provisional,conflicto build o distribución,mover app o separar repo sin cambiar dominio,build tests migration plan
+React_shell,provisional,barrera de accesibilidad o producto,sustituir presentation conservando application/domain,prototype comparison
+Vite_build,provisional,limitación de packaging o seguridad,reemplazar build adapter/config,reproducible build evidence
+TypeScript_contracts,provisional,costo desproporcionado o tooling incompatible,preservar contratos en lenguaje alterno,contract tests
+ports_adapters,accepted_principle,evidencia de complejidad innecesaria,simplificar manteniendo fronteras,dependency audit
+no_legacy_import_default,accepted_principle,utilidad pura justificada,excepción documentada y auditada,provenance characterization tests
+persistence_technology,deferred,H08-1.4,ADR específico,adapter tests
+schema_library,deferred,H08-1.2/H08-1A,comparación y ADR,schema tests

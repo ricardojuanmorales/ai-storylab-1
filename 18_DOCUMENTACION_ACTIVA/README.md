@@ -160,3 +160,13 @@ Ruta activa:
 `Continuidad/v0_8_0/Continuidad_Post_Ejecucion_PO_H08_1_PR52/`
 
 Estado: PR #52 draft, pendiente de decisión humana de merge.
+
+---
+
+<!-- H08_1_1_ACTIVE_CONTINUITY -->
+
+## Continuidad activa H08-1.1
+
+`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_1_ADR_Frontera_Tecnica/`
+
+Estado: PR draft documental. H08-1.2 depende de aprobación humana.
