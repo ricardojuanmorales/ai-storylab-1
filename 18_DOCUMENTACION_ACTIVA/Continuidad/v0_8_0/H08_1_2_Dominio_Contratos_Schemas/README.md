@@ -2,7 +2,7 @@
 
 **Fecha:** 2026-07-15
 **Baseline:** `5a5c4f9231ef092b3496a0019de1940fb19c14e6`
-**Estado:** `START_AUTHORIZED_AWAITING_PR_INTEGRATION`
+**Estado:** `INTEGRATED_CLOSED`
 
 ## Entrada
 

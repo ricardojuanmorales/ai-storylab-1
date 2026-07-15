@@ -953,3 +953,40 @@ DEC_V08_H08_1_2_001:
     - real_data
     - adapters_or_presentation
 ```
+
+---
+
+<!-- H08_1_2_CLOSE_H08_1_3_OPEN_DECISION_UPDATE -->
+
+# Enmienda decisional post-merge H08-1.2 y apertura H08-1.3
+
+```yaml
+DEC_V08_H08_1_2_001:
+  lifecycle: fulfilled
+  effective_since: merge_PR_54
+  merge_commit: 5b04c711127d9dc3197b016289f10c457fd56576
+  result:
+    - domain_contracts_integrated
+    - schemas_integrated
+    - H08_1_3_enabled
+
+DEC_V08_H08_1_3_001:
+  title: Runner, validador y CI del baseline
+  status: ratified
+  lifecycle: awaiting_integration
+  effective_on: merge_PR_H08_1_3
+  decision:
+    Node_primary: 24_LTS
+    Node_compatibility: 22_LTS
+    TypeScript: 7.0.2_strict
+    Vitest: 4.1.10
+    Ajv2020: 8.20.0
+    ajv_formats: 3.0.1
+    npm_ci_lockfile: required
+    CI_permissions: contents_read
+  blocked_result:
+    - H08_2
+    - functional_vertical_slice
+    - application_adapters_presentation
+    - real_data
+```

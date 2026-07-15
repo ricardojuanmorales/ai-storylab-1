@@ -1,0 +1,54 @@
+
+name: H08-1.3 Baseline
+
+on:
+  pull_request:
+    paths:
+      - "apps/storylab/**"
+      - ".github/workflows/h08-1-3-baseline.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "apps/storylab/**"
+      - ".github/workflows/h08-1-3-baseline.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: h08-1-3-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Verify Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        node:
+          - 22
+          - 24
+
+    defaults:
+      run:
+        working-directory: apps/storylab
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+          cache-dependency-path: apps/storylab/package-lock.json
+
+      - name: Install locked dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Verify baseline
+        run: npm run verify

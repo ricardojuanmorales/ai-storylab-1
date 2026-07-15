@@ -176,3 +176,13 @@ reversibilidad, capas, dependencias, riesgos y evidencia PH-IT-AT.
 
 Define dominio mínimo, invariantes, errores, schemas, migración, riesgos y
 paridad TypeScript–JSON Schema.
+
+---
+
+<!-- H08_1_3_ARCHITECTURE_REFERENCE -->
+
+## Referencia H08-1.3
+
+`02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_3_Runner_Pruebas_CI/`
+
+Define runner, validación, pruebas, paridad, reproducibilidad y CI.

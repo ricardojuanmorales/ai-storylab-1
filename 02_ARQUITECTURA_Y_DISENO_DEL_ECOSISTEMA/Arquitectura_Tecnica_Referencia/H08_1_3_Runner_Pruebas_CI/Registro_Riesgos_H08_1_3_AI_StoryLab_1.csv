@@ -1,0 +1,10 @@
+risk_id,risk,probability,impact,control,status
+R-H0813-001,TypeScript and schema drift,medium,high,runtime constants and parity tests,controlled
+R-H0813-002,test runner becomes product dependency,low,high,devDependencies only,controlled
+R-H0813-003,CI differs from local command,medium,medium,single npm run verify entrypoint,controlled
+R-H0813-004,network hidden in domain,low,critical,fetch guard and static import audit,controlled
+R-H0813-005,false confidence from schema-only validation,medium,high,two-stage schema plus invariants tests,controlled
+R-H0813-006,secret pattern false positives,medium,low,small documented pattern set,accepted
+R-H0813-007,Node version flakiness,medium,medium,matrix 22 and 24 plus exact lock,controlled
+R-H0813-008,overexpansion into application layer,medium,high,directory absence asserted,controlled
+R-H0813-009,dependency vulnerability after merge,medium,high,H08-1A recheck and lock review,open

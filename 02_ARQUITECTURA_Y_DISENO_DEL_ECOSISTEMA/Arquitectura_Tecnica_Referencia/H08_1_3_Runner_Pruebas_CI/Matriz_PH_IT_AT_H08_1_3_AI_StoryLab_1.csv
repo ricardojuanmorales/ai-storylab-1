@@ -1,0 +1,10 @@
+domain,principle,executable_evidence,return_to
+PH,human agency,portfolio test requires human_user accept,IT_AT
+PH,private reflection,private selected export fails invariant,IT_AT
+PH,reversibility,tools dev-only and vectors framework-neutral,IT_AT
+IT,domain independence,architecture audit scans imports and globals,PH_AT
+IT,contract-schema parity,parity tests compare runtime constants and schema,PH_AT
+IT,reproducibility,npm ci lockfile Node matrix,PH_AT
+AT,understandable errors,tests assert stable safe messages and codes,PH_IT
+AT,preferences remain data not diagnosis,schema parity covers text scale and booleans,PH_IT
+AT,reduced environmental variance,Node matrix and deterministic fixtures,PH_IT

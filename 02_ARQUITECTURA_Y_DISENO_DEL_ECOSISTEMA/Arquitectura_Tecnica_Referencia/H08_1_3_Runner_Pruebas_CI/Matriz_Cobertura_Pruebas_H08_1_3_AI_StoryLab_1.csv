@@ -1,0 +1,16 @@
+requirement,evidence,command,status
+strict_typescript,tsconfig strict plus tsc noEmit,npm run typecheck,implemented
+schema_project,valid invalid unknown field tests,npm run test:schemas,implemented
+schema_export,export package test with referenced project schema,npm run test:schemas,implemented
+schema_import,legacy candidate wrapper test,npm run test:schemas,implemented
+domain_invariants,fixtures and synthetic mutations,npm run test:domain,implemented
+mission_transitions,transition table tests,npm run test:domain,implemented
+human_agency,portfolio requires human accept decision,npm run test:domain,implemented
+privacy,private reflection cannot export,npm run test:domain,implemented
+feature_flags,all deferred flags false,npm run test:domain,implemented
+parity,runtime constants versus JSON Schema,npm run test:parity,implemented
+offline_guard,fetch denied and network imports scanned,npm run test:offline,implemented
+architecture_boundary,domain and ports import audit,npm run audit:architecture,implemented
+secret_audit,token and private key patterns,npm run audit:secrets,implemented
+reproducibility,exact versions and package-lock,npm ci,implemented
+CI_matrix,Node 22 and 24,GitHub Actions,implemented

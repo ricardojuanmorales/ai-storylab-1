@@ -180,3 +180,13 @@ Estado: PR draft documental. H08-1.2 depende de aprobación humana.
 `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_2_Dominio_Contratos_Schemas/`
 
 Estado: PR draft técnico-documental pendiente de revisión humana.
+
+---
+
+<!-- H08_1_3_ACTIVE_CONTINUITY -->
+
+## Continuidad activa H08-1.3
+
+`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_3_Runner_Pruebas_CI/`
+
+Estado: PR draft técnico pendiente de revisión humana y checks.
