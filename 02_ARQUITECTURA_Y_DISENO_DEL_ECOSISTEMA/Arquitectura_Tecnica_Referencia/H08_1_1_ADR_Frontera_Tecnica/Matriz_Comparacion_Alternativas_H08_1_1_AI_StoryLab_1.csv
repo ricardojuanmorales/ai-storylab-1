@@ -1,0 +1,11 @@
+criterio,peso,A_refactor_in_place,B_rebuild_aislado_mismo_repo,C_nuevo_framework,D_core_sin_shell,justificacion_B
+aislamiento_legacy,5,1,5,4,5,raíz nueva y prohibición de imports legacy
+reversibilidad,5,2,5,3,4,shell y lenguaje declarados provisionales
+tiempo_baseline,4,4,4,2,2,reutiliza toolchain conocida sin copiar arquitectura
+contratos_y_pruebas,5,2,5,4,5,TypeScript provisional y capas explícitas
+local_first,5,4,5,3,5,dominio sin red y persistencia por puerto
+evidencia_experiencial,4,5,5,3,2,React facilita comparar con el oráculo v0.3
+accesibilidad_temprana,4,3,4,3,1,shell disponible sin adelantar flujo funcional
+complejidad_operacional,3,4,4,2,3,sin metaframework ni workspace pesado
+alineacion_gobernanza,5,2,5,3,4,respeta H08-1/H08-1A/gate
+resultado_ponderado,,87,184,119,139,alternativa B recomendada

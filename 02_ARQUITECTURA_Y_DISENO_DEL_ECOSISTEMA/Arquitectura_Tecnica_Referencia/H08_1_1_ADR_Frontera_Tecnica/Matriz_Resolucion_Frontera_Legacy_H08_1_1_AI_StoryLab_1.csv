@@ -1,0 +1,15 @@
+legacy_id,elemento,decision_h08_1_1,ruta,condicion,status
+LEG-001,flujo completo de misiones,transformar,scenarios/characterization,no copiar navegación,resolved
+LEG-002,persistencia local,preservar_principio_transformar_mecanismo,port_nuevo,sin acceso directo desde dominio,resolved
+LEG-003,export/import JSON,preservar_transformar,schema_versionado,input no confiable,resolved
+LEG-004,perfil,transformar,LocalProfile_minimizado,sin identidad real requerida,resolved
+LEG-005,portafolio,transformar,curaduria_humana,sin incorporación automática,resolved
+LEG-006,prompts externos,preservar,documentacion_externa,sin autoridad creativa,resolved
+LEG-007,contenidos pedagógicos,reutilizar_auditado,content_inventory,procedencia y revisión,resolved
+LEG-008,utilidades puras,reutilizar_auditado,new_contract_adapter,tests y aprobación,conditional
+LEG-009,insignias,diferir,post_baseline,no requisito de progreso,deferred
+LEG-010,group dashboard,bloquear,none,feature ausente,blocked
+LEG-011,Vista Facilitador,diferir,future_gate,sin interfaz activa,deferred
+LEG-012,nueve misiones,retirar_requisito,behavior_memory,validación pedagógica futura,retired
+LEG-013,App.jsx monolítico,oraculo_no_importable,characterization_only,no raíz nueva,retired
+LEG-014,UI_acoplada_localStorage,retirar,port_adapter,pruebas de adaptador,retired

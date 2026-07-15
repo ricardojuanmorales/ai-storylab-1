@@ -317,3 +317,15 @@ H08-2: blocked
 
 Este bloque registra la ejecución de r3.2 y la transferencia hacia H08-1.
 No abre H08-2.
+
+---
+
+<!-- H08_1_1_ADR_FRONTERA_TECNICA -->
+
+## H08-1.1 · ADR y frontera técnica
+
+- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_1_ADR_Frontera_Tecnica/`
+- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_1_ADR_Frontera_Tecnica/`
+
+Estado: propuesta arquitectónica provisional pendiente de integración humana.
+H08-2 permanece bloqueado.

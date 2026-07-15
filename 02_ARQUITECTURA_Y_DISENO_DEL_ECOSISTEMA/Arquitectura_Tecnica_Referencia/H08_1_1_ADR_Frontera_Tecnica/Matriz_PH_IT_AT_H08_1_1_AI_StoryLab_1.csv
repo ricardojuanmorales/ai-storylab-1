@@ -1,0 +1,10 @@
+domain,input,architectural_effect,evidence,return_to
+PH,agencia humana y arco creativo,HumanDecision como concepto explícito; curaduría reversible,ADR y legacy matrix,IT_AT
+PH,cuatro misiones candidatas no requisito fijo,misión configurable; no nueve por herencia,scope statement,IT
+PH,reflexión privada,zona privada y exportación selectiva,data boundary,IT_AT
+IT,dominio independiente,dirección de imports y puertos,dependency model,PH_AT
+IT,local-first,cero red y persistencia detrás de puerto,ADR,PH_AT
+IT,reversibilidad,shell y lenguaje provisionales,reversibility matrix,PH_AT
+AT,teclado foco semántica,presentation no puede cerrar criterios sin evidencia AT,acceptance checklist,PH_IT
+AT,preferencias locales,AccessibilityPreferences en dominio/aplicación sin vigilancia,architecture model,PH_IT
+AT,carga cognitiva,sin metaframework ni UI kit antes de pruebas,dependency policy,PH_IT

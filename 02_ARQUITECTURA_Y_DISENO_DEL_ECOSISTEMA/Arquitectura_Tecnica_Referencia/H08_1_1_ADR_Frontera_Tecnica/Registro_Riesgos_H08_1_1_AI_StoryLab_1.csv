@@ -1,0 +1,9 @@
+risk_id,riesgo,probabilidad,impacto,control,owner,status
+R-H0811-001,sobrearquitectura,media,alta,capas mínimas y evidencia antes de abstracción,IT,open_controlled
+R-H0811-002,contaminación legacy,alta,alta,prohibición de imports y auditoría,IT,open_controlled
+R-H0811-003,dos apps confunden navegación,media,media,README y scripts inequívocos,IT,open_controlled
+R-H0811-004,TypeScript retrasa baseline,media,media,adopción incremental y revisión H08-1A,IT,accepted_provisional
+R-H0811-005,framework dicta dominio,media,alta,dependency rules y tests,IT,open_controlled
+R-H0811-006,accesibilidad se posterga,media,alta,AT desde criterios y shell,AT,open_controlled
+R-H0811-007,agencia humana se diluye,baja,crítica,invariantes y revisión PH,PH,open_controlled
+R-H0811-008,capacidad diferida reaparece,media,alta,feature ausente y gate independiente,PH_IT_AT,open_controlled

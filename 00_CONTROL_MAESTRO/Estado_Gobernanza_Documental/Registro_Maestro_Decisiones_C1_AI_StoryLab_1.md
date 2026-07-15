@@ -892,3 +892,30 @@ La sucesión operativa vigente es:
 ```text
 H08-1 → H08-1A → GATE-H08-1-READY-TO-CODE → H08-2
 ```
+
+---
+
+<!-- H08_1_1_ADR_DECISION_UPDATE -->
+
+# Enmienda decisional H08-1.1
+
+```yaml
+decision_id: DEC-V08-H08-1-1-001
+title: Adoptar arquitectura modular aislada provisional y frontera legacy
+status: ratified
+lifecycle: awaiting_integration
+effective_on: merge_PR_H08_1_1
+review_required_on: H08-1A
+decision:
+  - same_repository_isolated_app_root
+  - React_Vite_provisional
+  - TypeScript_contracts_provisional
+  - domain_framework_independent
+  - persistence_behind_ports
+  - no_legacy_import_by_default
+blocked_result:
+  - irreversible_stack
+  - H08_2
+  - real_data
+  - backend_auth_cloud_embedded_AI
+```
