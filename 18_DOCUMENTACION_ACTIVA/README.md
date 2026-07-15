@@ -148,3 +148,15 @@ PO-H08-1
 
 H08-2 permanece bloqueado. El kit r2 se conserva como memoria histórica y no se
 ejecuta.
+
+---
+
+<!-- V08_PO_H08_1_PR52_ACTIVE_CONTINUITY -->
+
+## Continuidad post-ejecución PO-H08-1
+
+Ruta activa:
+
+`Continuidad/v0_8_0/Continuidad_Post_Ejecucion_PO_H08_1_PR52/`
+
+Estado: PR #52 draft, pendiente de decisión humana de merge.

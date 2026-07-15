@@ -1227,3 +1227,31 @@ Efectividad:
 antes del merge de PR #50: awaiting_integration
 después del merge de PR #50: approved_with_reservations / fulfilled
 ```
+
+---
+
+<!-- V08_PO_H08_1_PR52_GATE_UPDATE -->
+
+# Enmienda de gates PO-H08-1 · PR #52
+
+```yaml
+GATE_V08_OPEN_001:
+  status: approved_with_reservations
+  lifecycle: fulfilled
+  effective_since: merge_PR_50
+
+GATE_H08_1_READY_TO_CODE:
+  status: pending
+  lifecycle: future_required
+  authority: future_human_decision
+  prerequisites:
+    - H08_1_closed
+    - H08_1A_completed
+    - PH_IT_AT_reviewed
+    - risks_and_debt_visible
+  allowed_result_while_pending: none
+  blocked_result:
+    - H08_2
+```
+
+PR #52 no ejecuta ni aprueba el gate Ready-to-Code.
