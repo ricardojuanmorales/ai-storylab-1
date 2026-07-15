@@ -1,0 +1,8 @@
+requirement,evidence,status
+application_uses_ports,application tests,pass_expected
+feature_flags_false,create-project test,pass_expected
+persistence_behind_port,in-memory repository tests,pass_expected
+domain_environment_independent,architecture audit,pass_expected
+adapters_replaceable,port implementations and tests,pass_expected
+no_H08_2_flow,absence audit,pass_expected
+no_real_data,synthetic fixtures only,pass_expected

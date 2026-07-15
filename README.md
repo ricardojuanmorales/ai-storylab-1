@@ -354,3 +354,16 @@ Estado: baseline técnico propuesto. H08-2 permanece bloqueado.
 - `.github/workflows/h08-1-3-baseline.yml`
 
 Estado: baseline verificable propuesto. H08-2 permanece bloqueado.
+
+---
+
+<!-- H08_1_4_MODULAR_SKELETON_ADAPTERS -->
+
+## H08-1.4 · Esqueleto modular y adaptadores
+
+- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_4_Esqueleto_Modular_Adaptadores/`
+- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_4_Esqueleto_Modular_Adaptadores/`
+- `apps/storylab/src/application/`
+- `apps/storylab/src/adapters/`
+
+Estado: PR draft técnico. H08-2 permanece bloqueado.

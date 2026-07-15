@@ -190,3 +190,11 @@ Estado: PR draft técnico-documental pendiente de revisión humana.
 `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_3_Runner_Pruebas_CI/`
 
 Estado: PR draft técnico pendiente de revisión humana y checks.
+
+---
+
+<!-- H08_1_4_ACTIVE_CONTINUITY -->
+
+## Continuidad activa H08-1.4
+
+`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_4_Esqueleto_Modular_Adaptadores/`

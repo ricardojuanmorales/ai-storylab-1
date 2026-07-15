@@ -186,3 +186,11 @@ paridad TypeScript–JSON Schema.
 `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_3_Runner_Pruebas_CI/`
 
 Define runner, validación, pruebas, paridad, reproducibilidad y CI.
+
+---
+
+<!-- H08_1_4_ARCHITECTURE_REFERENCE -->
+
+## Referencia H08-1.4
+
+`02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_4_Esqueleto_Modular_Adaptadores/`

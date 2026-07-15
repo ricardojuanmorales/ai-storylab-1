@@ -1,0 +1,4 @@
+dimension,evidence,interpretation
+PH,HumanDecision and feature flags remain governed,human agency preserved
+IT,application depends on ports only,technical substitution remains possible
+AT,tests and audit cover dependency direction,architecture is observable

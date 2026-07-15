@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.8.0-alpha.1",
   "type": "module",
-  "description": "Baseline técnico verificable de AI StoryLab 1, sin vertical slice funcional.",
+  "description": "Baseline modular verificable de AI StoryLab 1, sin vertical slice funcional.",
   "engines": {
     "node": ">=22 <27"
   },
@@ -14,6 +14,8 @@
     "test:schemas": "vitest run src/tests/schemas.contract.test.ts",
     "test:parity": "vitest run src/tests/parity.test.ts",
     "test:offline": "vitest run src/tests/offline.guard.test.ts",
+    "test:application": "vitest run src/tests/application.*.test.ts",
+    "test:adapters": "vitest run src/tests/adapters.*.test.ts",
     "audit:architecture": "node tools/audit-architecture.mjs",
     "audit:secrets": "node tools/audit-secrets.mjs",
     "verify": "npm run typecheck && npm run audit:architecture && npm run audit:secrets && npm run test"
