@@ -1,0 +1,20 @@
+{
+  "unit": "H08-1.5",
+  "baseline": "ec09193d8797f7ce429c2a8ddccd158a886a8a25",
+  "branch": "chore/v0.8-h08-1-5-security-accessibility-closure",
+  "schemaVersion": "0.8.0-alpha.1",
+  "expectedTestFiles": 11,
+  "expectedTests": 48,
+  "functionalVerticalSlice": false,
+  "presentation": false,
+  "durablePersistence": false,
+  "next": "H08-1A",
+  "H08_2_authorized": false,
+  "documentaryClosure": "complete_pending_merge",
+  "documentaryClosurePaths": 23,
+  "archiveSnapshot": "99_ARCHIVO_HISTORICO/Snapshots_README_Raiz/README_AI_StoryLab_1_Pre_Cierre_H08_1_5_2026-07-15.md",
+  "archiveSnapshotSha256": "55beeb28cefd2e7cd2655f04065fcbddd3389b26f33b283456c59eeb13d2ff28",
+  "postMergeCurrentConversation": "prepare_H08_1A_kit_only",
+  "H08_1AActivationConversation": "new_conversation",
+  "H08_1AStarted": false
+}

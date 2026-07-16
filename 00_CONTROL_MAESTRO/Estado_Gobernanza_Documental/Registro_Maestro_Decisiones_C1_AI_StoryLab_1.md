@@ -1013,3 +1013,57 @@ DEC_V08_H08_1_4_001:
     - real_data
     - facilitator_view
 ```
+
+
+---
+
+<!-- H08_1_5_CLOSE_AND_H08_1A_DEFERRED_ACTIVATION -->
+
+# Enmienda decisional de cierre H08-1.5 y activación diferida de H08-1A
+
+```yaml
+DEC_V08_H08_1_4_001:
+  lifecycle: fulfilled
+  effective_since: merge_PR_56
+  merge_commit: ec09193d8797f7ce429c2a8ddccd158a886a8a25
+
+DEC_V08_H08_1_5_001:
+  title: Integrar seguridad, accesibilidad y evidencia de cierre de H08-1
+  status: ratified
+  lifecycle: awaiting_integration
+  effective_on: merge_PR_57
+  evidence:
+    - PR_57
+    - 48_tests
+    - architecture_secret_privacy_audits
+    - security_and_accessibility_reviews
+    - documentary_closure_block
+  allowed_result:
+    - close_H08_1_5
+    - close_H08_1
+    - enable_H08_1A_kit_preparation
+  blocked_result:
+    - infer_H08_1A_completion
+    - infer_READY_TO_CODE
+    - open_H08_2
+    - activate_real_data
+    - select_durable_persistence
+
+DEC_V08_H08_1A_PREP_001:
+  title: Separar preparación y activación del checkpoint H08-1A
+  status: ratified
+  lifecycle: blocked_until_merge_PR_57
+  preparation:
+    moment: after_merge_PR_57
+    conversation: current_conversation
+    result: kit_only
+  activation:
+    conversation: new_conversation
+    nature: independent_checkpoint
+  blocked_result:
+    - execute_H08_1A_in_current_conversation
+    - open_H08_2
+```
+
+Fuente específica:
+`00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Enmienda_Gobernanza_Cierre_H08_1_5_PR57_AI_StoryLab_1.md`
