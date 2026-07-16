@@ -1,7 +1,7 @@
-
 import { describe, expect, it } from "vitest";
 import {
   canTransitionMission,
+  validateMissionTransition,
   validateProjectInvariants,
 } from "../domain/invariants";
 import type { CreativeProject } from "../domain/model";
@@ -29,6 +29,16 @@ describe("mission transitions", () => {
     expect(canTransitionMission("not_started", "completed")).toBe(false);
     expect(canTransitionMission("in_progress", "completed")).toBe(false);
   });
+
+  it("emite un error tipado para una transición inválida", () => {
+    expect(validateMissionTransition("not_started", "completed")).toEqual([
+      expect.objectContaining({
+        code: "INVALID_STATE_TRANSITION",
+        path: "mission.status",
+        safeMessage: "La transición solicitada no está permitida.",
+      }),
+    ]);
+  });
 });
 
 describe("project invariants", () => {
@@ -45,12 +55,46 @@ describe("project invariants", () => {
     expect(errorCodes(project)).toContain("PROFILE_PSEUDONYM_REQUIRED");
   });
 
+  it("aplica el límite al seudónimo serializado completo", () => {
+    const project = clone(minimal) as unknown as {
+      profile: { pseudonym: string };
+    };
+    project.profile.pseudonym = ` ${"x".repeat(80)}`;
+    expect(
+      errorCodes(project as unknown as CreativeProject),
+    ).toContain("PROFILE_PSEUDONYM_TOO_LONG");
+  });
+
+  it("aplica el límite al título serializado completo", () => {
+    const project = {
+      ...clone(minimal),
+      title: ` ${"x".repeat(120)}`,
+    } as CreativeProject;
+    expect(errorCodes(project)).toContain("PROJECT_TITLE_TOO_LONG");
+  });
+
   it("requiere decisión humana para el portafolio", () => {
     const project = clone(completed) as CreativeProject & {
       decisions: [];
     };
     project.decisions = [];
     expect(errorCodes(project)).toContain("HUMAN_DECISION_REQUIRED");
+  });
+
+  it("rechaza clases de privacidad fuera del enum", () => {
+    const project = clone(completed) as unknown as {
+      reflections: Array<{
+        privacyClass: string;
+        selectedForExport: boolean;
+      }>;
+    };
+    const reflection = project.reflections[0];
+    if (!reflection) throw new Error("SYNTHETIC_REFLECTION_MISSING");
+    reflection.privacyClass = "public";
+    reflection.selectedForExport = false;
+    expect(
+      errorCodes(project as unknown as CreativeProject),
+    ).toContain("REFLECTION_PRIVACY_INVALID");
   });
 
   it("protege reflexiones privadas", () => {

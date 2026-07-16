@@ -19,13 +19,13 @@ activa, pruebas reproducibles, revisiones humanas y gates independientes.
 ```yaml
 version_line: v0.8.0
 opening_mode: open_limited
-current_unit: H08-1.5
-current_PR: 57
-PR_state: draft_pending_human_review_and_merge
+current_unit: H08-1A_remediation_R2
+current_PR: 58
+PR_state: draft_under_independent_rereview
 
 schema_version: 0.8.0-alpha.1
-test_files: 11
-tests: 48
+test_files: 12
+tests: 63
 runtime_dependencies: 0
 
 architecture:
@@ -54,15 +54,17 @@ data:
   mode: synthetic_only
   real_data: prohibited
 
-H08_1: in_progress_until_merge_PR_57
-H08_1A: blocked_until_merge_and_new_conversation
-GATE_H08_1_READY_TO_CODE: pending
+H08_1: fulfilled
+H08_1A: remediation_R2_pending_re_review
+GATE_H08_1_READY_TO_CODE: pending_hold_recommended
 H08_2: blocked
 ```
 
-La fase H08-1.5 dispone de implementación, pruebas y cierre documental. Su
-integración solo se hará efectiva mediante decisión humana de merge sobre PR
-#57.
+PR #57 fue fusionado en el baseline canónico
+`965f53e04eecc0a9d6dc17cd89dbacee6797a5f6`. El checkpoint H08-1A concluyó
+`remediate_and_re_review`. La re-review de R1 cerró F-003 y F-006 y
+mantuvo F-001 F-002 F-004 y F-005 como bloqueantes. La remediación R2
+se ejecuta en PR #58 Draft; el gate permanece en `hold` y H08-2 bloqueado.
 
 ---
 
@@ -178,6 +180,8 @@ No están autorizados:
 - `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_3_Runner_Pruebas_CI/`
 - `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_4_Esqueleto_Modular_Adaptadores/`
 - `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_5_Seguridad_Accesibilidad_Cierre/`
+- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1A_Remediacion_R1/`
+- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1A_Remediacion_R2/`
 
 ### Gobernanza
 
@@ -187,18 +191,16 @@ No están autorizados:
 
 ---
 
-## Protocolo posterior a PR #57
+## Estado posterior a H08-1A
 
-Después del merge de PR #57 se seguirá esta secuencia exacta:
+La secuencia vigente es:
 
-1. En esta misma conversación se verificará el merge y el nuevo baseline.
-2. En esta misma conversación se preparará el kit de inicio y continuidad de
-   H08-1A.
-3. H08-1A no se ejecutará en esta conversación.
-4. El checkpoint H08-1A se activará en una conversación nueva.
-5. El gate `GATE-H08-1-READY-TO-CODE` permanecerá pendiente hasta recibir el
-   dictamen independiente.
-6. H08-2 permanecerá bloqueado.
+1. H08-1 permanece cerrado.
+2. H08-1A requiere remediación R2 y re-review focalizada del nuevo SHA.
+3. La recomendación del gate es `hold`; no constituye decisión humana efectiva.
+4. La remediación no selecciona persistencia durable ni crea presentación.
+5. Una ejecución fresca con Node 22 y Node 24 es condición de re-review.
+6. H08-2 permanece bloqueado.
 
 ---
 

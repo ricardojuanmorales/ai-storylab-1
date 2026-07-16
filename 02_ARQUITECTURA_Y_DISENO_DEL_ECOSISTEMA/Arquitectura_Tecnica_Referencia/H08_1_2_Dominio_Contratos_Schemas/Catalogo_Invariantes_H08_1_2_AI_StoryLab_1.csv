@@ -1,19 +1,19 @@
-invariant_id,scope,rule,error_code,schema_capable,domain_required
-INV-001,LocalProfile,pseudonym trimmed length 1..80,PROFILE_PSEUDONYM_REQUIRED,yes,yes
-INV-002,LocalProfile,context optional length <=120,PROFILE_CONTEXT_TOO_LONG,yes,yes
-INV-003,CreativeProject,title trimmed length 1..120,PROJECT_TITLE_REQUIRED,yes,yes
-INV-004,CreativeProject,schemaVersion exact supported value,SCHEMA_VERSION_UNSUPPORTED,yes,yes
-INV-005,CreativeProject,all identifiers unique within aggregate,DUPLICATE_IDENTIFIER,no,yes
-INV-006,MissionProgress,status transition must be allowed,INVALID_STATE_TRANSITION,no,yes
-INV-007,Evidence,binary content prohibited,BINARY_CONTENT_PROHIBITED,yes,yes
-INV-008,Evidence,portfolio acceptance requires HumanDecision accept,HUMAN_DECISION_REQUIRED,no,yes
-INV-009,PortfolioItem,evidence reference must exist,PORTFOLIO_EVIDENCE_NOT_FOUND,no,yes
-INV-010,Portfolio,no duplicate evidence references,PORTFOLIO_DUPLICATE_EVIDENCE,no,yes
-INV-011,Reflection,privacyClass defaults private,REFLECTION_PRIVACY_INVALID,yes,yes
-INV-012,Reflection,exportable reflection requires selectedForExport true,EXPORT_SELECTION_REQUIRED,no,yes
-INV-013,FeatureFlags,all deferred capabilities false,DEFERRED_CAPABILITY_ENABLED,yes,yes
-INV-014,ImportCandidate,unknown fields rejected after schema selection,IMPORT_UNEXPECTED_FIELD,yes,yes
-INV-015,ImportCandidate,legacy v0.3 never accepted directly,LEGACY_MIGRATION_REQUIRED,no,yes
-INV-016,Project,no group dashboard or cohort data,GROUP_DATA_PROHIBITED,yes,yes
-INV-017,Project,updatedAt not earlier than createdAt,TIMESTAMP_ORDER_INVALID,no,yes
-INV-018,HumanDecision,decision actor is local human user,AUTOMATED_DECISION_PROHIBITED,yes,yes
+invariant_id,scope,rule,error_code,schema_capable,domain_required,mechanism,evidence_status
+INV-001,LocalProfile,pseudonym not blank after trim and stored length 1..80,PROFILE_PSEUDONYM_REQUIRED+PROFILE_PSEUDONYM_TOO_LONG,yes,yes,validateProjectInvariants+project.schema.json+saveProject,domain.invariants.test.ts::requiere_seudonimo+limite_seudonimo_serializado | application.contract-limits.test.ts::seudonimo_serializado
+INV-002,LocalProfile,context optional stored length <=120,PROFILE_CONTEXT_TOO_LONG,yes,yes,validateProjectInvariants+project.schema.json,application.contract-limits.test.ts::contexto_mayor_120
+INV-003,CreativeProject,title not blank after trim and stored length 1..120,PROJECT_TITLE_REQUIRED+PROJECT_TITLE_TOO_LONG,yes,yes,validateProjectInvariants+project.schema.json+saveProject,domain.invariants.test.ts::limite_titulo_serializado | application.contract-limits.test.ts::titulo_serializado
+INV-004,CreativeProject,schemaVersion exact supported value,SCHEMA_VERSION_UNSUPPORTED,yes,yes,validateProjectInvariants+project.schema.json,parity.test.ts::mantiene_una_sola_version_efectiva
+INV-005,CreativeProject,all identifiers unique within aggregate,DUPLICATE_IDENTIFIER,no,yes,validateProjectInvariants,domain.invariants.test.ts::detecta_identificadores_duplicados
+INV-006,MissionProgress,status transition must be allowed,INVALID_STATE_TRANSITION,no,yes,validateMissionTransition,domain.invariants.test.ts::emite_error_tipado_transicion_invalida
+INV-007,Evidence,binary content prohibited,BINARY_CONTENT_PROHIBITED,yes,no,closed TypeScript shape+JSON Schema additionalProperties false,parity.test.ts::objetos_cerrados_y_campos_requeridos
+INV-008,Evidence,portfolio acceptance requires HumanDecision accept,HUMAN_DECISION_REQUIRED,no,yes,validateProjectInvariants,domain.invariants.test.ts::requiere_decision_humana
+INV-009,PortfolioItem,evidence reference must exist,PORTFOLIO_EVIDENCE_NOT_FOUND,no,yes,validateProjectInvariants,covered_by_existing_domain_fixture_contract
+INV-010,Portfolio,no duplicate evidence references,PORTFOLIO_DUPLICATE_EVIDENCE,no,yes,validateProjectInvariants,covered_by_existing_domain_fixture_contract
+INV-011,Reflection,privacyClass belongs to approved enum,REFLECTION_PRIVACY_INVALID,yes,yes,validateProjectInvariants+project.schema.json,domain.invariants.test.ts::rechaza_privacidad_fuera_enum
+INV-012,Reflection,private reflection cannot be selected for export,EXPORT_SELECTION_REQUIRED,no,yes,validateProjectInvariants,domain.invariants.test.ts::protege_reflexiones_privadas
+INV-013,FeatureFlags,all deferred capabilities false,DEFERRED_CAPABILITY_ENABLED,yes,yes,validateProjectInvariants+project.schema.json,parity.test.ts::capacidades_diferidas | domain.invariants.test.ts::mantiene_capacidades_desactivadas
+INV-014,ImportCandidate,unknown envelope fields rejected,IMPORT_UNEXPECTED_FIELD,yes,no,import-candidate.schema.json additionalProperties false,parity.test.ts::envelopes_importacion_exportacion
+INV-015,ImportCandidate,legacy v0.3 never accepted as current project,LEGACY_MIGRATION_REQUIRED,no,no,schema contract test+future migration service,schemas.contract.test.ts::legacy_candidato_no_proyecto
+INV-016,Project,no group dashboard or cohort data,GROUP_DATA_PROHIBITED,yes,no,closed project schema+feature flags,parity.test.ts::capacidades_diferidas+objetos_cerrados
+INV-017,Project,updatedAt not earlier than createdAt,TIMESTAMP_ORDER_INVALID,no,yes,validateProjectInvariants,domain.invariants.test.ts::detecta_fechas_invalidas
+INV-018,HumanDecision,decision actor is local human user,AUTOMATED_DECISION_PROHIBITED,yes,yes,validateProjectInvariants+project.schema.json,domain.invariants.test.ts::rechaza_decisiones_automatizadas

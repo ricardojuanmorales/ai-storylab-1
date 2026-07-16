@@ -1,4 +1,3 @@
-
 import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import { describe, expect, it } from "vitest";
@@ -64,6 +63,22 @@ describe("JSON Schema 2020-12", () => {
 
   it("rechaza seudónimo vacío", () => {
     expect(validateProject(missingPseudonym)).toBe(false);
+  });
+
+  it("aplica maxLength al título serializado completo", () => {
+    const project = {
+      ...clone(minimal),
+      title: ` ${"x".repeat(120)}`,
+    };
+    expect(validateProject(project)).toBe(false);
+  });
+
+  it("aplica maxLength al seudónimo serializado completo", () => {
+    const project = clone(minimal) as unknown as {
+      profile: { pseudonym: string };
+    };
+    project.profile.pseudonym = ` ${"x".repeat(80)}`;
+    expect(validateProject(project)).toBe(false);
   });
 
   it("rechaza campos desconocidos", () => {

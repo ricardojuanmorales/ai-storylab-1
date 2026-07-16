@@ -1,4 +1,3 @@
-
 export const PROJECT_STATUSES = [
   "new",
   "active",
@@ -67,3 +66,9 @@ export const FEATURE_FLAG_KEYS = [
   "autoPublish",
   "realData",
 ] as const;
+
+export const DOMAIN_LIMITS = Object.freeze({
+  profilePseudonym: 80,
+  profileContext: 120,
+  projectTitle: 120,
+} as const);

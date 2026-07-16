@@ -1,12 +1,14 @@
-concept,typescript_contract,json_schema_location,parity_rule,H08_1_3_test
-schemaVersion,CURRENT_SCHEMA_VERSION,project.properties.schemaVersion.const,exact equality,required
-LocalProfile,LocalProfile,$defs.localProfile,required and max lengths,required
-MissionProgress,MissionProgress,$defs.missionProgress,enum and required parity,required
-Evidence,Evidence,$defs.evidence,no binary fields and enums,required
-Reflection,Reflection,$defs.reflection,privacy enum and export flag,required
-HumanDecision,HumanDecision,$defs.humanDecision,actor human and decision enum,required
-FeatureFlags,FeatureFlags,$defs.featureFlags,all const false,required
-CreativeProject,CreativeProject,schema root,required arrays and no extra fields,required
-ExportPackage,ExportPackage,export schema root,envelope version parity,required
-ImportCandidate,ImportCandidate,import schema root,source classification parity,required
-cross_reference_invariants,validateProjectInvariants,not expressible fully,domain-only test,required
+concept,typescript_contract,json_schema_location,parity_rule,test_mechanism,coverage_after_R2
+schemaVersion,CURRENT_SCHEMA_VERSION,project.schemaVersion+export.schemaVersion,exact equality,parity.test.ts::mantiene_una_sola_version_efectiva,tested_R2
+LocalProfile,LocalProfile+DOMAIN_LIMITS,$defs.localProfile,blank after trim; raw maxLength; required; closed object,parity.test.ts::limites+objetos_cerrados | domain.invariants.test.ts::limite_seudonimo_serializado | application.contract-limits.test.ts::seudonimo_serializado,tested_R2
+MissionProgress,MissionProgress,$defs.missionProgress,status enum and typed transition guard,parity.test.ts::estados_y_enums | domain.invariants.test.ts::error_tipado_transicion_invalida,tested_R2
+ActivityResponse,ActivityResponse,$defs.activityResponse,required and closed serialized shape,parity.test.ts::objetos_cerrados_y_campos_requeridos,tested_R2
+Evidence,Evidence,$defs.evidence,required; closed shape; kind and status enums,parity.test.ts::estados_y_enums+objetos_cerrados | schemas.contract.test.ts::campos_desconocidos,tested_at_boundary_R2
+Reflection,Reflection,$defs.reflection,privacy enum; required; closed shape; private export rule,parity.test.ts::enums+objetos_cerrados | domain.invariants.test.ts::privacidad_fuera_enum+reflexion_privada,tested_R2
+HumanDecision,HumanDecision,$defs.humanDecision,actor human; decision enum; required; closed shape,parity.test.ts::enums+objetos_cerrados | domain.invariants.test.ts::automatizacion_prohibida,tested_R2
+Portfolio,Portfolio+PortfolioItem,$defs.portfolio+$defs.portfolioItem,required; closed shape; cross references in domain,parity.test.ts::objetos_cerrados | domain.invariants.test.ts::decision_humana+identificadores,tested_R2
+FeatureFlags,FeatureFlags,$defs.featureFlags,all keys required; closed; const false,parity.test.ts::capacidades_diferidas+objetos_cerrados | domain.invariants.test.ts::capacidades_desactivadas,tested_R2
+CreativeProject,CreativeProject,schema root,all root required; root closed; domain invariants,parity.test.ts::objetos_cerrados_y_campos_requeridos | domain.invariants.test.ts | application.contract-limits.test.ts,tested_R2
+ExportPackage,ExportPackage,export schema root,closed; required; version; project ref,parity.test.ts::envelopes_importacion_exportacion | schemas.contract.test.ts::exportacion_valida,tested_R2
+ImportCandidate,ImportCandidate,import schema root,closed; required; source enum; source version limit,parity.test.ts::envelopes_importacion_exportacion | schemas.contract.test.ts::legacy_candidato,tested_R2
+cross_reference_invariants,validateProjectInvariants,not fully expressible in JSON Schema,domain-only and application tests,domain.invariants.test.ts | application.contract-limits.test.ts,tested_current_catalog_R2
