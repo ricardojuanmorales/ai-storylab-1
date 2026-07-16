@@ -3,5 +3,8 @@ R-H08-15-01,filtracion_de_detalles_internos,baja,alta,SafeErrorEnvelope,mitigado
 R-H08-15-02,preferencias_invalidas,media,media,parser_estricto_y_pruebas,mitigado
 R-H08-15-03,persistencia_prematura,media,alta,auditoria_privacidad_y_memoria_efimera,mitigado
 R-H08-15-04,accesibilidad_solo_documental,media,alta,contrato_y_caso_de_uso,parcial
-R-H08-15-05,deriva_hacia_H08_2,media,critica,flags_false_y_gate_independiente,abierto_controlado
+R-H08-15-05,deriva_hacia_H08_2,media,critica,flags_false_gate_y_bloqueo_documental,abierto_controlado
 R-H08-15-06,UI_no_evaluada,alta,alta,presentacion_ausente_y_revision_futura,aceptado_temporal
+R-H08-15-07,activar_H08_1A_en_conversacion_de_cierre,media,alta,separacion_explicita_de_conversaciones,mitigado
+R-H08-15-08,confundir_merge_con_aprobacion_del_gate,media,critica,H08_1A_y_gate_separados,abierto_controlado
+R-H08-15-09,perder_contexto_del_README_reemplazado,baja,media,snapshot_SHA256_manifiesto_e_inventario,mitigado

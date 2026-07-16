@@ -4,21 +4,50 @@
 
 `ec09193d8797f7ce429c2a8ddccd158a886a8a25`
 
-## Resultado esperado de H08-1.5
+## Implementación de H08-1.5
 
-H08-1 dispone de:
+`8ff38859835f6643d718721848d98470314a0b50`
 
-- frontera arquitectónica provisional reversible;
-- dominio, contratos y schemas versionados;
-- runner, pruebas, auditorías y CI;
-- capa de aplicación y adaptadores locales sustituibles;
-- controles de seguridad, privacidad y accesibilidad;
-- documentación activa y transferencia independiente.
+## Evidencia
 
-## Dictamen
+```yaml
+test_files: 11
+tests: 48
+TypeScript_strict: passed
+architecture_audit: passed
+secret_audit: passed
+privacy_audit: passed
+CI_initial_head: passed
+runtime_dependencies: 0
+presentation: absent
+durable_persistence: not_selected
+real_data: prohibited
+```
 
-El futuro merge de H08-1.5 puede declarar `H08_1: fulfilled`, condicionado a
-que TypeScript, auditorías y las 48 pruebas permanezcan en verde.
+## Dictamen pre-merge
 
-Este dictamen no constituye el checkpoint H08-1A y no satisface por sí mismo
-`GATE-H08-1-READY-TO-CODE`.
+H08-1.1 a H08-1.5 reúnen una base arquitectónica, contractual, verificable,
+modular y asegurada suficiente para someter H08-1 a cierre humano mediante
+merge de PR #57.
+
+```yaml
+H08_1:
+  current: in_progress
+  effective_after_merge_PR_57: fulfilled
+
+H08_1A:
+  current: blocked
+  effective_after_merge_PR_57: eligible_for_kit_preparation
+  activation: new_conversation_only
+
+GATE_H08_1_READY_TO_CODE:
+  status: pending
+
+H08_2:
+  status: blocked
+```
+
+## Reserva
+
+Este dictamen no constituye H08-1A, no recomienda todavía el resultado del gate
+y no autoriza H08-2.

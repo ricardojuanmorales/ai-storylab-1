@@ -1,369 +1,222 @@
-# 🎬 AI StoryLab 1
+# AI StoryLab 1
 
-## Constructor Ético de Historias Multimedia con IA Responsable
+## Constructor ético de historias multimedia con IA responsable
 
-> *Tú tienes la historia. La IA tiene herramientas. Juntos crean algo que no existía antes.*
-> — **Profesor Aión**, Mentor Transdisciplinario
+AI StoryLab 1 es un ecosistema transdisciplinario de investigación-creación,
+aprendizaje lúdico y producción multimedia asistida por inteligencia artificial
+responsable.
 
----
+Su evolución se gobierna mediante Spec-Driven Development, documentación
+activa, pruebas reproducibles, revisiones humanas y gates independientes.
 
-## Estado actual del proyecto
-
-AI StoryLab 1 se encuentra en la secuencia de **corrección estructural C0–C10**, posterior al cierre documental de v0.7.0. C0–C9 están integradas y C10 queda preparada para validación final y decisión humana de merge.
-
-La fase mayor futura **no está activada**. Permanece condicionada a autorización humana explícita, gate independiente y confirmación canónica posterior.
-
-```text
-App funcional base histórica: v0.3.0
-Estructura documental y gobernanza base: v0.4.0
-Estabilización post-merge: v0.4.1
-Alineación estratégica: v0.4.2
-Fundamento y continuidad documental: v0.4.3
-Fundación SDD y auditoría estructural: v0.4.4
-Specs Núcleo: v0.4.5
-Arquitectura Conceptual No Funcional: v0.4.6
-Diseño de Experiencia No Funcional: v0.4.7
-Cierre Post-Merge, Consolidación y Reindexación Documental: v0.4.8
-Gobernanza de Transición y Preparación de Fase Mayor: v0.4.9
-Fase mayor futura: condicionada, no activada
-Horizonte: v1.0.0 sistema documentalmente estable y gobernado por gates
-```
+> La persona conserva la agencia. La tecnología amplía posibilidades sin
+> apropiarse del criterio creativo, pedagógico o ético.
 
 ---
 
-## Qué es AI StoryLab 1
+## Estado actual
 
-AI StoryLab 1 es un ecosistema transdisciplinario de investigación-creación, aprendizaje lúdico y producción multimedia asistida por IA responsable.
+```yaml
+version_line: v0.8.0
+opening_mode: open_limited
+current_unit: H08-1.5
+current_PR: 57
+PR_state: draft_pending_human_review_and_merge
 
-No es solamente una aplicación. Integra:
+schema_version: 0.8.0-alpha.1
+test_files: 11
+tests: 48
+runtime_dependencies: 0
 
-```text
-spec-driven development,
-arquitectura local-first,
-seguridad y privacidad por diseño,
-creatividad humana,
-portafolios emergentes,
-documentación activa,
-bitácoras,
-competencias,
-perfiles,
-wiki humana,
-investigación transdisciplinaria,
-gobernanza ética,
-mantenimiento y deuda documentada.
+architecture:
+  domain: integrated
+  ports: integrated
+  application: minimal_use_cases
+  adapters: local_replaceable
+  presentation: absent
+
+security:
+  architecture_audit: passed
+  secret_audit: passed
+  privacy_audit: passed
+  safe_error_boundary: implemented
+
+accessibility:
+  preferences_contract: implemented
+  update_use_case: implemented
+  presentation_review: future_required
+
+persistence:
+  current: ephemeral_in_memory
+  durable_technology: not_selected
+
+data:
+  mode: synthetic_only
+  real_data: prohibited
+
+H08_1: in_progress_until_merge_PR_57
+H08_1A: blocked_until_merge_and_new_conversation
+GATE_H08_1_READY_TO_CODE: pending
+H08_2: blocked
 ```
+
+La fase H08-1.5 dispone de implementación, pruebas y cierre documental. Su
+integración solo se hará efectiva mediante decisión humana de merge sobre PR
+#57.
 
 ---
 
-## Estado de implementación
-
-La implementación funcional futura permanece bloqueada hasta que un gate documental futuro la autorice explícitamente.
-
-En el estado documental actual no se autoriza:
+## Secuencia canónica
 
 ```text
-implementacion_funcional,
-UI_real,
-wireframes_funcionales,
-prototipo,
-backend,
-cloud,
-autenticacion,
-analiticas,
-IA_externa_por_defecto,
-almacenamiento_remoto,
-datos_reales,
-investigacion,
-pruebas_con_personas,
-evaluacion_automatica,
-arquitectura_tecnica,
-automatizacion_funcional,
-publicacion_automatica,
-subida_automatica_de_archivos,
-fase_mayor_automatica.
+PO-H08-1
+→ H08-1
+  → H08-1.1 · ADR y frontera técnica
+  → H08-1.2 · Dominio, contratos y schemas
+  → H08-1.3 · Runner, pruebas y CI
+  → H08-1.4 · Esqueleto modular y adaptadores
+  → H08-1.5 · Seguridad, accesibilidad y cierre
+→ H08-1A · checkpoint independiente
+→ GATE-H08-1-READY-TO-CODE
+→ H08-2
 ```
+
+H08-1A no es una continuación automática de H08-1.5. Requiere su propio kit,
+una conversación nueva y una evaluación independiente.
+
+H08-2 no puede abrirse antes de completar H08-1A y aprobar el gate aplicable.
 
 ---
 
-## Fases de trabajo hacia v1.0.0
+## Qué existe en el baseline técnico
 
-AI StoryLab 1 avanza por documentación, revisión, deuda y gates. La ruta vigente no es una escalera automática hacia implementación.
+La raíz técnica provisional vive en:
+
+`apps/storylab/`
+
+Capas disponibles:
 
 ```text
-v0.4.5:
-  Specs Núcleo
-
-v0.4.6:
-  Arquitectura Conceptual No Funcional
-
-v0.4.7:
-  Diseño de Experiencia No Funcional
-
-v0.4.8:
-  Cierre Post-Merge, Consolidación y Reindexación Documental
-
-v0.4.9:
-  Gobernanza de Transición y Preparación de Fase Mayor
-  estado: cerrada documentalmente por PR #15
-
-fase_mayor_futura:
-  estado: condicionada, no activada
-  requiere: autorizacion_humana_explicita_y_gate_independiente
-
-v1.0.0:
-  sistema documentalmente estable, trazable y gobernado
+src/domain       reglas, tipos, invariantes y contratos de accesibilidad
+src/ports        capacidades requeridas por el núcleo
+src/application  casos de uso mínimos
+src/adapters     mecanismos locales sustituibles
+src/schemas      fronteras serializadas JSON Schema 2020-12
+src/tests        pruebas de dominio, schemas, aplicación y adaptadores
+tools            auditorías arquitectónicas, de secretos y privacidad
 ```
+
+Primeros casos de uso:
+
+- `createProject`;
+- `saveProject`;
+- `loadProject`;
+- `removeProject`;
+- `updateAccessibilityPreferences`.
+
+Primeros adaptadores:
+
+- `InMemoryProjectRepository`;
+- `SystemClock`;
+- `RandomUuidGenerator`.
+
+La aplicación no tiene todavía capa `presentation`.
+
+---
+
+## Principios técnicos vigentes
+
+```text
+dominio independiente del framework
+puertos antes que infraestructura
+adaptadores sustituibles
+persistencia durable diferida
+identificadores opacos y no personales
+errores públicos mínimos
+datos sintéticos
+capacidades diferidas en false
+pruebas antes de integración
+CI como evidencia, no como autoridad humana
+```
+
+La versión histórica v0.3 puede funcionar como oráculo de comportamiento y
+fuente de pruebas, pero no como fundamento arquitectónico automático.
+
+---
+
+## Límites vigentes
+
+No están autorizados:
+
+- interfaz funcional o primera vertical slice;
+- backend, autenticación o nube;
+- persistencia durable;
+- datos reales o grupales;
+- Vista del Facilitador;
+- dashboard o analíticas;
+- IA embebida;
+- publicación automática;
+- importación directa del legacy;
+- H08-2.
+
+---
+
+## Documentación canónica de H08-1
+
+### Arquitectura y especificación técnica
+
+- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_1_ADR_Frontera_Tecnica/`
+- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_2_Dominio_Contratos_Schemas/`
+- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_3_Runner_Pruebas_CI/`
+- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_4_Esqueleto_Modular_Adaptadores/`
+- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_5_Seguridad_Accesibilidad_Cierre/`
+
+### Memoria y continuidad
+
+- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_1_ADR_Frontera_Tecnica/`
+- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_2_Dominio_Contratos_Schemas/`
+- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_3_Runner_Pruebas_CI/`
+- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_4_Esqueleto_Modular_Adaptadores/`
+- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_5_Seguridad_Accesibilidad_Cierre/`
+
+### Gobernanza
+
+- `00_CONTROL_MAESTRO/Spec_Driven_Development/`
+- `00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/`
+- `18_DOCUMENTACION_ACTIVA/Gates/`
+
+---
+
+## Protocolo posterior a PR #57
+
+Después del merge de PR #57 se seguirá esta secuencia exacta:
+
+1. En esta misma conversación se verificará el merge y el nuevo baseline.
+2. En esta misma conversación se preparará el kit de inicio y continuidad de
+   H08-1A.
+3. H08-1A no se ejecutará en esta conversación.
+4. El checkpoint H08-1A se activará en una conversación nueva.
+5. El gate `GATE-H08-1-READY-TO-CODE` permanecerá pendiente hasta recibir el
+   dictamen independiente.
+6. H08-2 permanecerá bloqueado.
+
+---
+
+## Archivo del README anterior
+
+La versión del README reemplazada durante este cierre se conserva como evidencia
+histórica no vigente en:
+
+`99_ARCHIVO_HISTORICO/Snapshots_README_Raiz/README_AI_StoryLab_1_Pre_Cierre_H08_1_5_2026-07-15.md`
+
+Su ingreso cumple la política de `99_ARCHIVO_HISTORICO`: hash SHA-256,
+inventario, manifiesto, sucesor canónico y declaración de no autoridad.
+
+---
+
+## Regla de oro
 
 ```text
 Nada avanza por entusiasmo.
-Todo avanza por gate.
+Todo avanza por evidencia, revisión humana y gate.
 ```
-
----
-
-## Perfiles principales
-
-AI StoryLab 1 considera cuatro perfiles de usuario:
-
-```text
-estudiante de escuela superior,
-estudiante universitario,
-docente,
-investigador.
-```
-
-Y tres perfiles creadores/documentales:
-
-```text
-PH = Programador Humanista
-IT = Investigador Transdisciplinario
-AT = Artista Transdisciplinario
-```
-
-PH puede operar como piloto, pero todo avance relevante debe sostener transferibilidad simétrica reversible hacia IT y AT.
-
----
-
-## Documentos rectores actuales
-
-Rutas críticas vigentes:
-
-```text
-00_CONTROL_MAESTRO/Spec_Driven_Development/
-00_CONTROL_MAESTRO/Reglas_Colocacion_Documental/
-00_CONTROL_MAESTRO/Mapas_Repositorio/
-00_CONTROL_MAESTRO/Tablas_Ubicacion_Documental/
-15_EVALUACION_CALIDAD_Y_AUDITORIA/
-18_DOCUMENTACION_ACTIVA/
-18_DOCUMENTACION_ACTIVA/Continuidad/v0_4_9/
-18_DOCUMENTACION_ACTIVA/Continuidad/v0_4_9/Post_Merge_PR15/
-18_DOCUMENTACION_ACTIVA/Gates/
-18_DOCUMENTACION_ACTIVA/Bitacoras/
-18_DOCUMENTACION_ACTIVA/Transferencias/
-20_MANTENIMIENTO_Y_EVOLUCION/
-21_WIKI_DOCUMENTACION_HUMANA/
-```
-
----
-
-## Estado de PR recientes
-
-```text
-PR #12:
-  fase: v0.4.6
-  resultado: cierre por merge
-  naturaleza: arquitectura conceptual no funcional
-
-PR #13:
-  fase: v0.4.7
-  resultado: cierre por merge
-  naturaleza: diseño de experiencia no funcional
-
-PR #14:
-  fase: v0.4.8
-  resultado: cierre por merge
-  naturaleza: cierre post-merge, consolidación y reindexación documental
-
-PR #15:
-  fase: v0.4.9
-  resultado: cierre por merge
-  naturaleza: gobernanza de transición y preparación de fase mayor
-  fase_mayor: no activada
-```
-
----
-
-## Regla de oro documental
-
-```text
-Un documento completo vive en una sola ruta canónica.
-Otros lugares lo invocan mediante referencias lógicas.
-Las carpetas organizan ubicación.
-Los metadatos organizan significado.
-Los índices organizan navegación.
-Las decisiones organizan autoridad.
-Las bitácoras preservan continuidad.
-Los gates autorizan cierres, no motores.
-```
-
----
-
-## Nota de navegación
-
-AI StoryLab 1 conserva una brújula documental deliberada:
-
-```text
-Mapa sí.
-Motor no.
-```
-
-<!-- C9_CURRENT_NAVIGATION -->
-
-## Navegación vigente · C9
-
-La puerta humana de navegación es:
-
-`21_WIKI_DOCUMENTACION_HUMANA/Mapa_Navegacion_Canonica_C9_AI_StoryLab_1.md`
-
-Fuentes de estado:
-
-```text
-decisiones y gates: 00_CONTROL_MAESTRO
-arquitectura y diseño: 02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA
-resultados finales de auditoría: 15_EVALUACION_CALIDAD_Y_AUDITORIA
-memoria y continuidad: 18_DOCUMENTACION_ACTIVA
-deuda activa: 20_MANTENIMIENTO_Y_EVOLUCION
-traducción y navegación humana: 21_WIKI_DOCUMENTACION_HUMANA
-archivo no vigente: 99_ARCHIVO_HISTORICO
-```
-
-La Wiki explica y orienta. No sustituye la autoridad de las fuentes enlazadas.
-C10 y v0.8.0 permanecen cerrados.
-
-<!-- C10_FINAL_VALIDATION -->
-
-## Validación final C10
-
-Resultado principal:
-
-`15_EVALUACION_CALIDAD_Y_AUDITORIA/Validacion_Estructural_C10/Informe_Validacion_Integral_C10_AI_StoryLab_1.md`
-
-```text
-GATE-CORR-G4: approved / effective on merge
-GATE-CORR-G5: approved / fulfilled
-GATE-CORR-G6: approved_with_reservations / effective on merge
-C0-C10: closed after merge
-GATE-V08-OPEN-001: pending
-v0.8.0: not open
-implementation: not authorized
-```
-
-<!-- POST_C10_SESSION_CLOSURE -->
-
-## Cierre reflexivo post-C10
-
-La auditoría B0-B7 y la corrección C0-C10 están cerradas e integradas.
-
-Compendio y Tree realizado: `18_DOCUMENTACION_ACTIVA/Cierres_Sesion/Cierre_Sesion_Auditoria_Reestructuracion_C0_C10/`
-
-```text
-v0.8.0: not open
-implementation: not authorized
-next: independent readiness evaluation for v0.8.0
-```
-
-<!-- V08_PRE_GATE_KIT -->
-
-## Preparación del Gate de Apertura v0.8.0
-
-Kit pre-gate:
-
-`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_Gate_Apertura_v0_8_0/`
-
-```text
-GATE-V08-OPEN-001: approved_with_reservations / effective_on_merge_PR_50
-v0.8.0: open_limited / effective_on_merge_PR_50
-implementation: authorized_for_H08-1_only / effective_on_merge_PR_50
-```
-
-<!-- V08_H08_1_R3_2_OPERATIONALIZATION -->
-
-## Operacionalización realineada de H08-1
-
-> Estado posterior al merge del PR #51. Esta entrada no ejecuta H08-1 ni autoriza
-> H08-2.
-
-Expediente PO-H08-1 y kit r3:
-
-`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Operacionalizacion_H08_1_Realineada_r3_2/`
-
-```text
-baseline: 24407e6abe0aba4f269b0bb3aeea4a247018869e
-v1.0.0: ecosistema mínimo estable
-v0.8.0: open_limited
-H08-1: authorized_with_reservations
-H08-1A: Implementation Readiness required
-H08-2: blocked
-```
-
----
-
-<!-- V08_PO_H08_1_PR52_CONTINUITY -->
-
-## Continuidad PO-H08-1 · PR #52
-
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Continuidad_Post_Ejecucion_PO_H08_1_PR52/`
-- `00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Enmienda_Gobernanza_PO_H08_1_PR52_AI_StoryLab_1.md`
-
-Este bloque registra la ejecución de r3.2 y la transferencia hacia H08-1.
-No abre H08-2.
-
----
-
-<!-- H08_1_1_ADR_FRONTERA_TECNICA -->
-
-## H08-1.1 · ADR y frontera técnica
-
-- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_1_ADR_Frontera_Tecnica/`
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_1_ADR_Frontera_Tecnica/`
-
-Estado: propuesta arquitectónica provisional pendiente de integración humana.
-H08-2 permanece bloqueado.
-
----
-
-<!-- H08_1_2_DOMAIN_CONTRACTS_SCHEMAS -->
-
-## H08-1.2 · Dominio, contratos y schemas
-
-- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_2_Dominio_Contratos_Schemas/`
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_2_Dominio_Contratos_Schemas/`
-- `apps/storylab/`
-
-Estado: baseline técnico propuesto. H08-2 permanece bloqueado.
-
----
-
-<!-- H08_1_3_RUNNER_TESTS_CI -->
-
-## H08-1.3 · Runner, pruebas y CI
-
-- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_3_Runner_Pruebas_CI/`
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_3_Runner_Pruebas_CI/`
-- `apps/storylab/`
-- `.github/workflows/h08-1-3-baseline.yml`
-
-Estado: baseline verificable propuesto. H08-2 permanece bloqueado.
-
----
-
-<!-- H08_1_4_MODULAR_SKELETON_ADAPTERS -->
-
-## H08-1.4 · Esqueleto modular y adaptadores
-
-- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_4_Esqueleto_Modular_Adaptadores/`
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_4_Esqueleto_Modular_Adaptadores/`
-- `apps/storylab/src/application/`
-- `apps/storylab/src/adapters/`
-
-Estado: PR draft técnico. H08-2 permanece bloqueado.

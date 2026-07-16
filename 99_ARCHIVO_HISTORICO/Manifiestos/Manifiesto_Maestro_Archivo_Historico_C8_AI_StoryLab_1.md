@@ -14,10 +14,10 @@ Este manifiesto cubre todos los archivos versionados bajo
 ## 2. Resumen
 
 ```text
-acervos inventariados: 91
-colecciones: 10
-bytes inventariados: 471947
-hashes SHA-256: 91
+acervos inventariados: 92
+colecciones: 11
+bytes inventariados: 481466
+hashes SHA-256: 92
 payloads modificados por C8: 0
 movimientos: 0
 renombres: 0
@@ -154,3 +154,23 @@ documentales sin evidencia.
 El CSV asociado es la representación primaria para comprobación automatizada.
 Este Markdown ofrece lectura humana. Ambos se generan desde el mismo conjunto
 de rutas versionadas y hashes.
+
+
+---
+
+<!-- H08_1_5_README_ROOT_ARCHIVE_ENTRY -->
+
+## Addendum de ingreso posterior a C8 · README raíz pre-cierre H08-1.5
+
+- colección: `Snapshots_README_Raiz`
+- ruta: `99_ARCHIVO_HISTORICO/Snapshots_README_Raiz/README_AI_StoryLab_1_Pre_Cierre_H08_1_5_2026-07-15.md`
+- SHA-256: `55beeb28cefd2e7cd2655f04065fcbddd3389b26f33b283456c59eeb13d2ff28`
+- bytes: `9519`
+- estado: `archived_by_decision`
+- autoridad: `non_current_non_authoritative`
+- sucesor: `README.md`
+- regla de edición: `immutable_annotation_only`
+- manifiesto específico: `99_ARCHIVO_HISTORICO/Manifiestos/Manifiesto_Ingreso_README_Raiz_Pre_Cierre_H08_1_5_2026-07-15.md`
+
+Este addendum registra un ingreso posterior a C8 sin modificar el payload
+archivado.
