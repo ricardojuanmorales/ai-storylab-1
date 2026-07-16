@@ -39,6 +39,65 @@ const importSchema = loadJson<SchemaNode>(
   "../schemas/import-candidate.schema.json",
 );
 
+const ROOT_REQUIRED_FIELDS = [
+  "schemaVersion",
+  "id",
+  "title",
+  "status",
+  "profile",
+  "missions",
+  "activityResponses",
+  "evidence",
+  "reflections",
+  "decisions",
+  "portfolio",
+  "featureFlags",
+  "createdAt",
+  "updatedAt",
+] as const;
+
+const DEFINITION_REQUIRED_FIELDS: Readonly<
+  Record<string, readonly string[]>
+> = {
+  accessibilityPreferences: [
+    "reducedMotion",
+    "highContrast",
+    "textScale",
+  ],
+  localProfile: ["pseudonym", "accessibility"],
+  missionProgress: ["missionId", "status"],
+  activityResponse: ["id", "missionId", "text", "updatedAt"],
+  evidence: [
+    "id",
+    "missionId",
+    "title",
+    "kind",
+    "summary",
+    "status",
+    "createdAt",
+  ],
+  reflection: [
+    "id",
+    "missionId",
+    "text",
+    "privacyClass",
+    "selectedForExport",
+    "createdAt",
+  ],
+  humanDecision: ["id", "evidenceId", "actor", "value", "decidedAt"],
+  portfolioItem: ["id", "evidenceId", "title", "order", "includedAt"],
+  portfolio: ["items"],
+  featureFlags: [
+    "facilitatorView",
+    "groupDashboard",
+    "embeddedAI",
+    "cloudSync",
+    "analytics",
+    "autoPublish",
+    "realData",
+  ],
+};
+
 const propertiesOf = (node: SchemaNode): Readonly<Record<string, SchemaNode>> => {
   if (!node.properties) throw new Error("SCHEMA_PROPERTIES_MISSING");
   return node.properties;
@@ -107,33 +166,20 @@ describe("TypeScript and JSON Schema parity", () => {
     ).toBe(DOMAIN_LIMITS.profileContext);
   });
 
-  it("mantiene objetos cerrados y campos requeridos", () => {
+  it("mantiene cerrados todos los objetos y sus campos requeridos", () => {
     expect(schema.additionalProperties).toBe(false);
-    expect(schema.required).toEqual([
-      "schemaVersion",
-      "id",
-      "title",
-      "status",
-      "profile",
-      "missions",
-      "activityResponses",
-      "evidence",
-      "reflections",
-      "decisions",
-      "portfolio",
-      "featureFlags",
-      "createdAt",
-      "updatedAt",
-    ]);
-    expect(definition("localProfile").additionalProperties).toBe(false);
-    expect(definition("localProfile").required).toEqual([
-      "pseudonym",
-      "accessibility",
-    ]);
-    expect(definition("accessibilityPreferences").additionalProperties).toBe(
-      false,
+    expect(schema.required).toEqual([...ROOT_REQUIRED_FIELDS]);
+    expect(Object.keys(schema.$defs ?? {})).toEqual(
+      Object.keys(DEFINITION_REQUIRED_FIELDS),
     );
-    expect(definition("featureFlags").additionalProperties).toBe(false);
+
+    for (const [key, required] of Object.entries(
+      DEFINITION_REQUIRED_FIELDS,
+    )) {
+      const node = definition(key);
+      expect(node.additionalProperties).toBe(false);
+      expect(node.required).toEqual([...required]);
+    }
   });
 
   it("mantiene todas las capacidades diferidas en false", () => {
@@ -146,12 +192,23 @@ describe("TypeScript and JSON Schema parity", () => {
 
   it("mantiene paridad de envelopes de importación y exportación", () => {
     expect(exportSchema.additionalProperties).toBe(false);
+    expect(exportSchema.required).toEqual([
+      "exportType",
+      "schemaVersion",
+      "exportedAt",
+      "project",
+    ]);
     expect(propertyAt(exportSchema, "exportType").const).toBe(
       "storylab_project",
     );
     expect(propertyAt(exportSchema, "project").$ref).toBe(schema.$id);
 
     expect(importSchema.additionalProperties).toBe(false);
+    expect(importSchema.required).toEqual([
+      "source",
+      "sourceSchemaVersion",
+      "payload",
+    ]);
     expect(propertyAt(importSchema, "source").enum).toEqual([
       "storylab",
       "legacy_v0_3",

@@ -61,9 +61,9 @@ export const validateProjectInvariants = (
   project: CreativeProject,
 ): readonly DomainError[] => {
   const errors: DomainError[] = [];
-  const pseudonymLength = project.profile.pseudonym.trim().length;
+  const pseudonym = project.profile.pseudonym;
 
-  if (pseudonymLength === 0) {
+  if (pseudonym.trim().length === 0) {
     errors.push(
       error(
         "PROFILE_PSEUDONYM_REQUIRED",
@@ -71,7 +71,7 @@ export const validateProjectInvariants = (
         "Se requiere un seudónimo local.",
       ),
     );
-  } else if (pseudonymLength > DOMAIN_LIMITS.profilePseudonym) {
+  } else if (pseudonym.length > DOMAIN_LIMITS.profilePseudonym) {
     errors.push(
       error(
         "PROFILE_PSEUDONYM_TOO_LONG",
@@ -95,8 +95,8 @@ export const validateProjectInvariants = (
     );
   }
 
-  const titleLength = project.title.trim().length;
-  if (titleLength === 0) {
+  const title = project.title;
+  if (title.trim().length === 0) {
     errors.push(
       error(
         "PROJECT_TITLE_REQUIRED",
@@ -104,7 +104,7 @@ export const validateProjectInvariants = (
         "Se requiere un título de proyecto.",
       ),
     );
-  } else if (titleLength > DOMAIN_LIMITS.projectTitle) {
+  } else if (title.length > DOMAIN_LIMITS.projectTitle) {
     errors.push(
       error(
         "PROJECT_TITLE_TOO_LONG",

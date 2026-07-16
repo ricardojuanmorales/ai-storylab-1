@@ -19,13 +19,13 @@ activa, pruebas reproducibles, revisiones humanas y gates independientes.
 ```yaml
 version_line: v0.8.0
 opening_mode: open_limited
-current_unit: H08-1A_remediation_R1
-current_PR: not_created
-PR_state: remediation_branch_local_pending_draft_PR
+current_unit: H08-1A_remediation_R2
+current_PR: 58
+PR_state: draft_under_independent_rereview
 
 schema_version: 0.8.0-alpha.1
 test_files: 12
-tests: 55
+tests: 63
 runtime_dependencies: 0
 
 architecture:
@@ -55,15 +55,16 @@ data:
   real_data: prohibited
 
 H08_1: fulfilled
-H08_1A: remediation_R1_pending_re_review
+H08_1A: remediation_R2_pending_re_review
 GATE_H08_1_READY_TO_CODE: pending_hold_recommended
 H08_2: blocked
 ```
 
 PR #57 fue fusionado en el baseline canónico
 `965f53e04eecc0a9d6dc17cd89dbacee6797a5f6`. El checkpoint H08-1A concluyó
-`remediate_and_re_review`; la remediación R1 está pendiente de integración y
-re-review. La recomendación del gate permanece en `hold` y H08-2 bloqueado.
+`remediate_and_re_review`. La re-review de R1 cerró F-003 y F-006 y
+mantuvo F-001 F-002 F-004 y F-005 como bloqueantes. La remediación R2
+se ejecuta en PR #58 Draft; el gate permanece en `hold` y H08-2 bloqueado.
 
 ---
 
@@ -180,6 +181,7 @@ No están autorizados:
 - `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_4_Esqueleto_Modular_Adaptadores/`
 - `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_5_Seguridad_Accesibilidad_Cierre/`
 - `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1A_Remediacion_R1/`
+- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1A_Remediacion_R2/`
 
 ### Gobernanza
 
@@ -194,7 +196,7 @@ No están autorizados:
 La secuencia vigente es:
 
 1. H08-1 permanece cerrado.
-2. H08-1A requiere remediación R1 y re-review independiente.
+2. H08-1A requiere remediación R2 y re-review focalizada del nuevo SHA.
 3. La recomendación del gate es `hold`; no constituye decisión humana efectiva.
 4. La remediación no selecciona persistencia durable ni crea presentación.
 5. Una ejecución fresca con Node 22 y Node 24 es condición de re-review.

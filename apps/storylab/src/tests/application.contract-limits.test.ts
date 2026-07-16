@@ -7,7 +7,7 @@ import { loadJson } from "./helpers";
 
 const fixedTime = "2026-07-15T21:45:00.000Z" as ISODateTime;
 const clock = { now: () => fixedTime };
-const ids = { next: (namespace: string) => `${namespace}:synthetic-r1` };
+const ids = { next: (namespace: string) => `${namespace}:synthetic-r2` };
 const minimal = loadJson<CreativeProject>(
   "../fixtures/valid/minimal-project.json",
 );
@@ -56,6 +56,43 @@ describe("H08-1A remediation contract guards", () => {
     expect(result).toMatchObject({
       ok: false,
       error: { code: "PROJECT_TITLE_TOO_LONG" },
+    });
+    expect(await repository.load(project.id)).toMatchObject({
+      ok: true,
+      value: null,
+    });
+  });
+
+  it("rechaza y no guarda un título con longitud serializada mayor al schema", async () => {
+    const repository = new InMemoryProjectRepository();
+    const project = {
+      ...minimal,
+      title: ` ${"x".repeat(120)}`,
+    } as CreativeProject;
+    const result = await saveProject(project, repository);
+    expect(result).toMatchObject({
+      ok: false,
+      error: { code: "PROJECT_TITLE_TOO_LONG" },
+    });
+    expect(await repository.load(project.id)).toMatchObject({
+      ok: true,
+      value: null,
+    });
+  });
+
+  it("rechaza y no guarda un seudónimo con longitud serializada mayor al schema", async () => {
+    const repository = new InMemoryProjectRepository();
+    const project = {
+      ...minimal,
+      profile: {
+        ...minimal.profile,
+        pseudonym: ` ${"x".repeat(80)}`,
+      },
+    } as CreativeProject;
+    const result = await saveProject(project, repository);
+    expect(result).toMatchObject({
+      ok: false,
+      error: { code: "PROFILE_PSEUDONYM_TOO_LONG" },
     });
     expect(await repository.load(project.id)).toMatchObject({
       ok: true,

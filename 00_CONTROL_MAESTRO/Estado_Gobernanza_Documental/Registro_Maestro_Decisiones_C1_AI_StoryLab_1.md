@@ -1111,3 +1111,39 @@ DEC_V08_H08_1A_REMEDIATION_R1_001:
 
 Fuente específica:
 `00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Enmienda_Gobernanza_Resultado_H08_1A_Remediacion_R1_AI_StoryLab_1.md`
+
+---
+
+<!-- DEC_V08_H08_1A_REMEDIATION_R2_001 -->
+
+# Enmienda decisional · H08-1A Remediación R2
+
+```yaml
+DEC_V08_H08_1A_REMEDIATION_R2_001:
+  title: Cerrar bloqueantes de la re-review R1 en PR 58
+  status: authorized_to_execute
+  source_head: ff4008c2c44140c7e901980d32f9944e8cd8251e
+  lifecycle: awaiting_CI_and_focused_rereview
+  blocking_findings:
+    - F-001
+    - F-002
+    - F-004
+    - F-005
+  preserved_evidence:
+    F-003: closed
+    F-006: closed_with_residual_risk
+  required_result:
+    - raw_length_schema_parity
+    - direct_typed_error_tests
+    - honest_test_traceability
+    - living_documentation_reconciliation
+    - fresh_Node_22_24_CI
+  blocked_result:
+    - mark_PR_ready_before_verdict
+    - merge_without_human_authorization
+    - approve_gate_by_inference
+    - open_H08_2
+```
+
+Fuente específica:
+`00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Enmienda_Gobernanza_H08_1A_Remediacion_R2_PR58_AI_StoryLab_1.md`
