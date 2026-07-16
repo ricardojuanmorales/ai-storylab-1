@@ -1,0 +1,8 @@
+control,evidencia,resultado_esperado
+accesibilidad_objeto_cerrado,domain.accessibility.test.ts,PASS
+actualizacion_preferencias,application.accessibility.test.ts,PASS
+errores_publicos_minimos,application.safe-error.test.ts,PASS
+direccion_dependencias,audit-architecture.mjs,PASS
+secretos,audit-secrets.mjs,PASS
+privacidad_minimizacion,audit-privacy.mjs,PASS
+regresion_total,vitest,48_PASS

@@ -1,0 +1,7 @@
+id,riesgo,probabilidad,impacto,mitigacion,estado
+R-H08-15-01,filtracion_de_detalles_internos,baja,alta,SafeErrorEnvelope,mitigado
+R-H08-15-02,preferencias_invalidas,media,media,parser_estricto_y_pruebas,mitigado
+R-H08-15-03,persistencia_prematura,media,alta,auditoria_privacidad_y_memoria_efimera,mitigado
+R-H08-15-04,accesibilidad_solo_documental,media,alta,contrato_y_caso_de_uso,parcial
+R-H08-15-05,deriva_hacia_H08_2,media,critica,flags_false_y_gate_independiente,abierto_controlado
+R-H08-15-06,UI_no_evaluada,alta,alta,presentacion_ausente_y_revision_futura,aceptado_temporal
