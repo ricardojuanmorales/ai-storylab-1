@@ -1,4 +1,4 @@
-
+import { DOMAIN_LIMITS, REFLECTION_PRIVACY_CLASSES } from "./constants";
 import type { DomainError } from "./errors";
 import {
   CURRENT_SCHEMA_VERSION,
@@ -30,6 +30,21 @@ export const canTransitionMission = (
   to: MissionStatus,
 ): boolean => transitionMap[from].includes(to);
 
+export const validateMissionTransition = (
+  from: MissionStatus,
+  to: MissionStatus,
+): readonly DomainError[] =>
+  canTransitionMission(from, to)
+    ? []
+    : [
+        error(
+          "INVALID_STATE_TRANSITION",
+          "mission.status",
+          "La transición solicitada no está permitida.",
+          { from, to },
+        ),
+      ];
+
 const acceptedEvidenceIds = (
   decisions: readonly HumanDecision[],
 ): ReadonlySet<string> =>
@@ -46,8 +61,9 @@ export const validateProjectInvariants = (
   project: CreativeProject,
 ): readonly DomainError[] => {
   const errors: DomainError[] = [];
+  const pseudonymLength = project.profile.pseudonym.trim().length;
 
-  if (project.profile.pseudonym.trim().length === 0) {
+  if (pseudonymLength === 0) {
     errors.push(
       error(
         "PROFILE_PSEUDONYM_REQUIRED",
@@ -55,24 +71,46 @@ export const validateProjectInvariants = (
         "Se requiere un seudónimo local.",
       ),
     );
+  } else if (pseudonymLength > DOMAIN_LIMITS.profilePseudonym) {
+    errors.push(
+      error(
+        "PROFILE_PSEUDONYM_TOO_LONG",
+        "profile.pseudonym",
+        "El seudónimo excede el límite permitido.",
+        { maxLength: DOMAIN_LIMITS.profilePseudonym },
+      ),
+    );
   }
 
-  if ((project.profile.context?.length ?? 0) > 120) {
+  if (
+    (project.profile.context?.length ?? 0) > DOMAIN_LIMITS.profileContext
+  ) {
     errors.push(
       error(
         "PROFILE_CONTEXT_TOO_LONG",
         "profile.context",
         "El contexto excede el límite permitido.",
+        { maxLength: DOMAIN_LIMITS.profileContext },
       ),
     );
   }
 
-  if (project.title.trim().length === 0) {
+  const titleLength = project.title.trim().length;
+  if (titleLength === 0) {
     errors.push(
       error(
         "PROJECT_TITLE_REQUIRED",
         "title",
         "Se requiere un título de proyecto.",
+      ),
+    );
+  } else if (titleLength > DOMAIN_LIMITS.projectTitle) {
+    errors.push(
+      error(
+        "PROJECT_TITLE_TOO_LONG",
+        "title",
+        "El título excede el límite permitido.",
+        { maxLength: DOMAIN_LIMITS.projectTitle },
       ),
     );
   }
@@ -144,6 +182,19 @@ export const validateProjectInvariants = (
   });
 
   project.reflections.forEach((reflection, index) => {
+    if (
+      !(REFLECTION_PRIVACY_CLASSES as readonly string[]).includes(
+        reflection.privacyClass as string,
+      )
+    ) {
+      errors.push(
+        error(
+          "REFLECTION_PRIVACY_INVALID",
+          `reflections.${index}.privacyClass`,
+          "La privacidad de la reflexión no es válida.",
+        ),
+      );
+    }
     if (reflection.selectedForExport && reflection.privacyClass === "private") {
       errors.push(
         error(

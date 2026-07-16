@@ -1,7 +1,8 @@
 
 # ADR-H08-1.3-001 · Runner, Validador y CI del Baseline
 
-**Estado:** `PROPOSED`
+**Estado:** `ACCEPTED_PROVISIONAL`
+**Baseline efectivo:** `965f53e04eecc0a9d6dc17cd89dbacee6797a5f6`
 **Fecha:** 2026-07-15
 **Baseline:** `5b04c711127d9dc3197b016289f10c457fd56576`
 **Revisión obligatoria:** H08-1A

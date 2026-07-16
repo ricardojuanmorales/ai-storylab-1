@@ -1,19 +1,19 @@
-invariant_id,scope,rule,error_code,schema_capable,domain_required
-INV-001,LocalProfile,pseudonym trimmed length 1..80,PROFILE_PSEUDONYM_REQUIRED,yes,yes
-INV-002,LocalProfile,context optional length <=120,PROFILE_CONTEXT_TOO_LONG,yes,yes
-INV-003,CreativeProject,title trimmed length 1..120,PROJECT_TITLE_REQUIRED,yes,yes
-INV-004,CreativeProject,schemaVersion exact supported value,SCHEMA_VERSION_UNSUPPORTED,yes,yes
-INV-005,CreativeProject,all identifiers unique within aggregate,DUPLICATE_IDENTIFIER,no,yes
-INV-006,MissionProgress,status transition must be allowed,INVALID_STATE_TRANSITION,no,yes
-INV-007,Evidence,binary content prohibited,BINARY_CONTENT_PROHIBITED,yes,yes
-INV-008,Evidence,portfolio acceptance requires HumanDecision accept,HUMAN_DECISION_REQUIRED,no,yes
-INV-009,PortfolioItem,evidence reference must exist,PORTFOLIO_EVIDENCE_NOT_FOUND,no,yes
-INV-010,Portfolio,no duplicate evidence references,PORTFOLIO_DUPLICATE_EVIDENCE,no,yes
-INV-011,Reflection,privacyClass defaults private,REFLECTION_PRIVACY_INVALID,yes,yes
-INV-012,Reflection,exportable reflection requires selectedForExport true,EXPORT_SELECTION_REQUIRED,no,yes
-INV-013,FeatureFlags,all deferred capabilities false,DEFERRED_CAPABILITY_ENABLED,yes,yes
-INV-014,ImportCandidate,unknown fields rejected after schema selection,IMPORT_UNEXPECTED_FIELD,yes,yes
-INV-015,ImportCandidate,legacy v0.3 never accepted directly,LEGACY_MIGRATION_REQUIRED,no,yes
-INV-016,Project,no group dashboard or cohort data,GROUP_DATA_PROHIBITED,yes,yes
-INV-017,Project,updatedAt not earlier than createdAt,TIMESTAMP_ORDER_INVALID,no,yes
-INV-018,HumanDecision,decision actor is local human user,AUTOMATED_DECISION_PROHIBITED,yes,yes
+invariant_id,scope,rule,error_code,schema_capable,domain_required,mechanism,evidence_status
+INV-001,LocalProfile,pseudonym trimmed length 1..80,PROFILE_PSEUDONYM_REQUIRED+PROFILE_PSEUDONYM_TOO_LONG,yes,yes,validateProjectInvariants+project.schema.json,covered_after_R1
+INV-002,LocalProfile,context optional length <=120,PROFILE_CONTEXT_TOO_LONG,yes,yes,validateProjectInvariants+project.schema.json,covered
+INV-003,CreativeProject,title trimmed length 1..120,PROJECT_TITLE_REQUIRED+PROJECT_TITLE_TOO_LONG,yes,yes,validateProjectInvariants+project.schema.json,covered_after_R1
+INV-004,CreativeProject,schemaVersion exact supported value,SCHEMA_VERSION_UNSUPPORTED,yes,yes,validateProjectInvariants+project.schema.json,covered
+INV-005,CreativeProject,all identifiers unique within aggregate,DUPLICATE_IDENTIFIER,no,yes,validateProjectInvariants,covered
+INV-006,MissionProgress,status transition must be allowed,INVALID_STATE_TRANSITION,no,yes,validateMissionTransition,covered_after_R1
+INV-007,Evidence,binary content prohibited,BINARY_CONTENT_PROHIBITED,yes,no,closed TypeScript shape+JSON Schema additionalProperties false,boundary_covered
+INV-008,Evidence,portfolio acceptance requires HumanDecision accept,HUMAN_DECISION_REQUIRED,no,yes,validateProjectInvariants,covered
+INV-009,PortfolioItem,evidence reference must exist,PORTFOLIO_EVIDENCE_NOT_FOUND,no,yes,validateProjectInvariants,covered
+INV-010,Portfolio,no duplicate evidence references,PORTFOLIO_DUPLICATE_EVIDENCE,no,yes,validateProjectInvariants,covered
+INV-011,Reflection,privacyClass belongs to approved enum,REFLECTION_PRIVACY_INVALID,yes,yes,validateProjectInvariants+project.schema.json,covered_after_R1
+INV-012,Reflection,private reflection cannot be selected for export,EXPORT_SELECTION_REQUIRED,no,yes,validateProjectInvariants,covered
+INV-013,FeatureFlags,all deferred capabilities false,DEFERRED_CAPABILITY_ENABLED,yes,yes,validateProjectInvariants+project.schema.json,covered
+INV-014,ImportCandidate,unknown fields rejected after schema selection,IMPORT_UNEXPECTED_FIELD,yes,no,import-candidate.schema.json additionalProperties false,boundary_covered
+INV-015,ImportCandidate,legacy v0.3 never accepted as current project,LEGACY_MIGRATION_REQUIRED,no,no,schema contract test+future migration service,boundary_covered
+INV-016,Project,no group dashboard or cohort data,GROUP_DATA_PROHIBITED,yes,no,closed project schema+feature flags,structurally_covered
+INV-017,Project,updatedAt not earlier than createdAt,TIMESTAMP_ORDER_INVALID,no,yes,validateProjectInvariants,covered
+INV-018,HumanDecision,decision actor is local human user,AUTOMATED_DECISION_PROHIBITED,yes,yes,validateProjectInvariants+project.schema.json,covered

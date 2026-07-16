@@ -2,7 +2,7 @@
 
 ## Estado
 
-Propuesto para integración mediante PR draft.
+Aceptado provisionalmente dentro del baseline canónico `965f53e04eecc0a9d6dc17cd89dbacee6797a5f6`.
 
 ## Contexto
 
