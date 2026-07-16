@@ -2,10 +2,13 @@
   "compilerOptions": {
     "target": "ES2022",
     "lib": [
-      "ES2022"
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
     ],
     "module": "ESNext",
     "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
     "strict": true,
     "noEmit": true,
     "verbatimModuleSyntax": true,
@@ -17,14 +20,18 @@
     "skipLibCheck": true,
     "types": [
       "node",
+      "vite/client",
       "vitest/globals"
     ]
   },
   "include": [
     "src/**/*.ts",
+    "src/**/*.tsx",
+    "vite.config.ts",
     "vitest.config.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }

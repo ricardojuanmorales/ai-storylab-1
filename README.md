@@ -18,9 +18,9 @@ activa, pruebas reproducibles, revisión humana y gates independientes.
 
 ```yaml
 version_line: v0.8.0
-opening_mode: contract_readiness
-current_unit: H08-2.1
-current_process: H08_2_contract_readiness
+opening_mode: accessible_shell
+current_unit: H08-2.2
+current_process: H08_2_accessible_shell
 current_branch: feat/v0.8-h08-2-consolidated-vertical-slice
 current_PR: 59
 PR_mode: consolidated_draft
@@ -28,22 +28,29 @@ PR_mode: consolidated_draft
 baseline:
   main_sha: 9b941f185feb1e59f7a774ad07c976c415537dae
   H08_2_0_head: 46a3c05b3535e917b4681b4947794f058aa03de1
+  H08_2_1_head: a237b1882ad27e17480d51b524038d996793d6fa
 
 schema_version: 0.8.0-alpha.1
-test_files: 12
-tests: 65
-runtime_dependencies: 0
+test_files: 13
+tests: 72
+runtime_dependencies: 2
 
 architecture:
   domain: integrated
   ports: integrated
   application: contract_ready
   adapters: local_replaceable
-  presentation: absent
+  presentation: accessible_shell
+
+presentation:
+  framework: React_19_2_7
+  build_tool: Vite_8_1_4
+  visible_shell: true
+  creative_cycle_connected: false
 
 persistence:
   current: ephemeral_in_memory
-  H08_2_candidate: localStorage_behind_port
+  durable_adapter: not_implemented
   decision_status: proposed_before_H08_2_4
 
 data:
@@ -62,27 +69,24 @@ GATE_H08_1_READY_TO_CODE:
   status: approved_with_reservations
 
 H08_2:
-  lifecycle: contract_readiness_active
-  current_block: H08_2_1
-  functional_implementation: not_started
+  lifecycle: accessible_shell_active
+  current_block: H08_2_2
+  creative_cycle_implementation: not_started
   PR_strategy: one_consolidated_PR
 ```
 
-H08-2 se desarrolla en el PR Draft #59 mediante bloques de commits
-verificables. H08-2.0 abrió la planificación estratégica. H08-2.1 cierra las
-reservas de contratos antes de crear presentación o persistencia.
+H08-2 se desarrolla en el PR Draft #59 mediante bloques verificables. H08-2.1
+cerró el readiness de contratos. H08-2.2 incorpora la primera interfaz visible,
+sin adelantar la implementación del ciclo creativo ni la persistencia.
 
 ---
 
 ## Secuencia canónica
 
 ```text
-H08-1 cumplido
-→ H08-1A cumplido con reservas
-→ GATE-H08-1-READY-TO-CODE aprobado con reservas
-→ H08-2.0 · apertura estratégica cumplida
-→ H08-2.1 · readiness de contratos activa
-→ H08-2.2 · shell accesible
+H08-2.0 · apertura estratégica cumplida
+→ H08-2.1 · readiness de contratos cumplida
+→ H08-2.2 · shell accesible activa
 → H08-2.3 · ciclo creativo integrado
 → H08-2.4 · recuperación local y export preview
 → H08-2A · checkpoint independiente
@@ -93,47 +97,57 @@ antes de H08-2A.
 
 ---
 
-## Readiness H08-2.1
+## Alineación estratégica ratificada
 
-Este bloque incorpora:
+```yaml
+v0_8_close: complete_canonical_experience
+missions:
+  - M1_intencion_creadora
+  - M2_arquitectura_narrativa
+  - M3_produccion_multimodal
+  - M4_curaduria_y_cierre
+experience_model: guided_iterative_arc
+implementation:
+  H08_2_3: M1_and_reusable_engine
+  H08_3: persistence
+  H08_4: M2_M3_M4
+  H08_5: portfolio_and_roundtrip
+```
 
-- pruebas nominales para INV-009 e INV-010;
-- contrato no serializado `MissionDefinition`;
-- contratos de casos de uso de la vertical slice;
-- ADR provisional de presentación;
-- ADR propuesto de persistencia;
-- criterios Given/When/Then;
-- wireframes textuales;
-- threat model proporcional;
-- matriz de trazabilidad.
-
-No incorpora React, Vite, DOM, `localStorage` ni funcionalidad visible.
+H08-2A revisa la primera vertical slice, pero no sustituye
+`GATE-V08-CLOSE`.
 
 ---
 
-## Primera vertical slice
+## Shell accesible H08-2.2
 
-```text
-perfil sintético
-→ crear proyecto
-→ abrir una misión configurable
-→ completar actividad textual
-→ crear evidencia
-→ escribir reflexión privada
-→ registrar decisión humana
-→ incorporar o retirar del portafolio
-→ recuperar estado local
-→ previsualizar paquete de exportación validado
-```
+Este bloque incorpora:
+
+- React y React DOM como únicas dependencias runtime;
+- Vite como herramienta de construcción;
+- landmarks semánticos y enlace de salto;
+- navegación por teclado;
+- foco visible;
+- contraste alto;
+- reducción de movimiento;
+- escala de texto;
+- región viva para anunciar cambios;
+- mapa visible del ciclo creativo;
+- pruebas de presentación con JSDOM y Testing Library;
+- auditorías ampliadas a `.tsx` y a la capa `presentation`.
+
+El shell no crea proyectos, misiones, evidencias, reflexiones ni portafolios.
+Esas operaciones permanecen gobernadas por los contratos de H08-2.1 y se
+implementarán en H08-2.3.
 
 ---
 
 ## Límites vigentes
 
 - datos reales prohibidos;
+- persistencia durable ausente;
 - importación y roundtrip diferidos;
 - migración v0.3 diferida;
-- múltiples misiones diferidas;
 - almacenamiento binario prohibido;
 - Vista del Facilitador bloqueada;
 - funciones grupales bloqueadas;
@@ -146,12 +160,13 @@ perfil sintético
 
 - `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_2_Apertura_Estrategica/`
 - `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_2_1_Readiness_Contratos/`
+- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_2_2_Shell_Accesible/`
 
 ---
 
 ## Regla de oro
 
 ```text
-Nada avanza por entusiasmo.
-Todo avanza por evidencia, revisión humana y gate.
+La interfaz hace visible el sistema.
+No reemplaza sus contratos ni decide por la persona.
 ```

@@ -1,8 +1,8 @@
-# AI StoryLab · Nueva raíz modular provisional
+# AI StoryLab · Shell accesible provisional
 
-**Unidad vigente:** H08-2.1
+**Unidad vigente:** H08-2.2
 **Schema:** `0.8.0-alpha.1`
-**Estado:** readiness de contratos, sin vertical slice funcional
+**Estado:** primera interfaz visible, sin ciclo creativo funcional
 
 ## Capas presentes
 
@@ -12,6 +12,7 @@ src/
   ports/
   application/
   adapters/
+  presentation/
   schemas/
   fixtures/
   tests/
@@ -20,28 +21,32 @@ src/
 ## Dirección autorizada
 
 ```text
+presentation → application
+presentation → domain
 application → domain
 application → ports
 adapters → domain
 adapters → ports
-domain ↛ application/adapters
-ports ↛ application/adapters
+
+domain ↛ presentation
+ports ↛ presentation
+application ↛ presentation
+presentation ↛ adapters
 ```
 
-## Contratos preparados en H08-2.1
+## Shell implementado
 
-- `MissionDefinition`, todavía no serializado en `CreativeProject`;
-- `CreativeCycleUseCases`;
-- inputs tipados para misión, actividad, evidencia, reflexión, decisión,
-  portafolio y export preview;
-- pruebas nominales de INV-009 e INV-010.
+- landmarks semánticos;
+- enlace de salto;
+- navegación principal;
+- preferencias de contraste, movimiento y escala;
+- anuncios mediante `role="status"`;
+- mapa visible de pasos planificados;
+- estilos responsive y `prefers-reduced-motion`;
+- pruebas de interacción con JSDOM.
 
-## Adaptadores provisionales existentes
+## Límites
 
-- `InMemoryProjectRepository`;
-- `SystemClock`;
-- `RandomUuidGenerator`.
-
-No existe capa `presentation`. React, Vite y `localStorage` no se incorporan en
-este bloque. No se selecciona persistencia concreta hasta la decisión
-correspondiente.
+La presentación no importa adaptadores, no usa almacenamiento, no llama a red y
+no implementa todavía `CreativeCycleUseCases`. La misión, evidencia, reflexión,
+decisión humana, portafolio y export preview se activarán en bloques posteriores.

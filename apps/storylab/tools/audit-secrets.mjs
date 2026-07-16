@@ -1,13 +1,23 @@
-
 import { readdirSync, readFileSync } from "node:fs";
 import { basename, extname, join, relative, resolve } from "node:path";
 import process from "node:process";
 
 const root = resolve(new URL("..", import.meta.url).pathname);
-const ignoredDirectories = new Set(["node_modules", ".git"]);
+const ignoredDirectories = new Set(["node_modules", ".git", "dist"]);
 const ignoredFiles = new Set(["package-lock.json"]);
 const textExtensions = new Set([
-  ".ts", ".js", ".mjs", ".json", ".md", ".yml", ".yaml", ".npmrc", "",
+  ".ts",
+  ".tsx",
+  ".js",
+  ".mjs",
+  ".json",
+  ".md",
+  ".css",
+  ".html",
+  ".yml",
+  ".yaml",
+  ".npmrc",
+  "",
 ]);
 const patterns = [
   /-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/,
@@ -48,9 +58,15 @@ for (const file of files) {
   }
 }
 
-console.log(JSON.stringify({
-  status: errors.length === 0 ? "PASS" : "FAIL",
-  scannedFiles: files.length,
-  errors,
-}, null, 2));
+console.log(
+  JSON.stringify(
+    {
+      status: errors.length === 0 ? "PASS" : "FAIL",
+      scannedFiles: files.length,
+      errors,
+    },
+    null,
+    2,
+  ),
+);
 if (errors.length > 0) process.exit(1);

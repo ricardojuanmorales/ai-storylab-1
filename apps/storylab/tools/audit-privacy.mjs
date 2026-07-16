@@ -8,10 +8,11 @@ const scanRoots = [
   "src/ports",
   "src/application",
   "src/adapters",
+  "src/presentation",
   "src/fixtures",
   "src/schemas",
 ];
-const scannedExtensions = new Set([".ts", ".json"]);
+const scannedExtensions = new Set([".ts", ".tsx", ".json"]);
 
 const rules = [
   {
@@ -67,7 +68,9 @@ for (const file of files) {
 }
 
 const fixtureFiles = files.filter((file) =>
-  relative(root, file).startsWith(`src/fixtures${process.platform === "win32" ? "\\" : "/"}`),
+  relative(root, file).startsWith(
+    `src/fixtures${process.platform === "win32" ? "\\" : "/"}`,
+  ),
 );
 const syntheticMarker = /(?:synthetic|sint[eé]tic[oa]s?|SYN-\d+)/i;
 const fixturesWithoutSyntheticMarker = fixtureFiles
@@ -93,6 +96,7 @@ const result = {
   deferredCapabilitiesEnabled: detections.has("deferred_capability"),
   personalIdentifierFieldsDetected: detections.has("personal_identifier"),
   runtimeLoggingDetected: detections.has("runtime_logging"),
+  heuristicLimitAcknowledged: true,
   errors,
 };
 
