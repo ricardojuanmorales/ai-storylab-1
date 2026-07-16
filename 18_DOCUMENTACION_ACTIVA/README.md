@@ -8,51 +8,71 @@ dominio.
 
 ```yaml
 current_version_line: v0.8.0
-current_process: H08-1A_remediation_R2
-current_PR: 58
-current_PR_state: draft_under_independent_rereview
-next_checkpoint: H08-1A_rereview_R2
-GATE_H08_1_READY_TO_CODE: pending_hold_recommended
-H08_2: blocked
+current_process: H08_2_strategic_planning
+effective_baseline: 9b941f185feb1e59f7a774ad07c976c415537dae
+current_branch: feat/v0.8-h08-2-consolidated-vertical-slice
+current_PR: pending_creation
+PR_mode: consolidated_draft
+
+H08_1:
+  lifecycle: fulfilled
+
+H08_1A:
+  lifecycle: fulfilled
+  verdict: pass_with_reservations
+
+GATE_H08_1_READY_TO_CODE:
+  decision: approve_with_reservations
+  status: approved_with_reservations
+
+H08_2:
+  lifecycle: strategic_planning_open
+  implementation: not_started
+  current_block: H08_2_0
 ```
 
 ## Continuidad activa principal
 
-`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1A_Remediacion_R2/`
+`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_2_Apertura_Estrategica/`
 
-Este expediente contiene:
+## Estrategia de integración
 
-- acta de remediación R2;
-- bitácora de sesión;
-- hallazgos transferidos desde la re-review de R1;
-- criterios de prueba para F-001 F-004 y F-005;
-- reconciliación documental para F-002;
-- transferencia a CI y re-review focalizada.
+```yaml
+pull_requests_for_H08_2: 1
+branch: feat/v0.8-h08-2-consolidated-vertical-slice
+mode: draft_until_H08_2A
+commit_blocks:
+  - H08_2_0_strategic_opening
+  - H08_2_1_contract_readiness
+  - H08_2_2_accessible_shell
+  - H08_2_3_creative_cycle
+  - H08_2_4_local_recovery_export_preview
+  - H08_2A_checkpoint_closure
+```
 
-## Secuencia vigente
+Cada bloque requiere:
 
 ```text
-H08-1 cumplido
-→ H08-1A independiente
-→ Remediación R1
-→ re-review del head ff4008c2
-→ Remediación R2 en PR #58 Draft
-→ CI Node 22/24
-→ re-review focalizada del nuevo SHA
-→ Ready y merge solo con pass o pass_with_reservations
-→ decisión humana separada del gate
-→ H08-2 solo con approve o approve_with_reservations
+ZIP
+→ ejecución del script desde Downloads
+→ verificación
+→ git add
+→ git commit
+→ git push
+→ comentario de hito
 ```
 
 ## Límites
 
-La documentación activa no autoriza por inferencia:
+La apertura estratégica no autoriza por inferencia:
 
-- aprobación de H08-1A antes de la re-review del nuevo SHA;
-- marcar PR #58 Ready antes del dictamen permitido;
-- merge automático;
-- aprobación del gate;
-- H08-2;
+- implementación antes de completar H08-2.1;
 - datos reales;
-- persistencia durable;
-- Vista del Facilitador.
+- persistencia concreta sin ADR;
+- importación o migración legacy;
+- Vista del Facilitador;
+- dashboard grupal;
+- IA embebida;
+- analíticas;
+- nube;
+- publicación automática.

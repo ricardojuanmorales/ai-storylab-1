@@ -7,7 +7,7 @@ aprendizaje lúdico y producción multimedia asistida por inteligencia artificia
 responsable.
 
 Su evolución se gobierna mediante Spec-Driven Development, documentación
-activa, pruebas reproducibles, revisiones humanas y gates independientes.
+activa, pruebas reproducibles, revisión humana y gates independientes.
 
 > La persona conserva la agencia. La tecnología amplía posibilidades sin
 > apropiarse del criterio creativo, pedagógico o ético.
@@ -18,10 +18,17 @@ activa, pruebas reproducibles, revisiones humanas y gates independientes.
 
 ```yaml
 version_line: v0.8.0
-opening_mode: open_limited
-current_unit: H08-1A_remediation_R2
-current_PR: 58
-PR_state: draft_under_independent_rereview
+opening_mode: strategic_planning
+current_unit: H08-2.0
+current_process: H08_2_strategic_planning
+current_branch: feat/v0.8-h08-2-consolidated-vertical-slice
+current_PR: pending_creation
+PR_mode: consolidated_draft
+
+baseline:
+  main_sha: 9b941f185feb1e59f7a774ad07c976c415537dae
+  source_PR: 58
+  merged_head_sha: 8469f1fd499309876ea6fc4441ace81227550112
 
 schema_version: 0.8.0-alpha.1
 test_files: 12
@@ -35,184 +42,123 @@ architecture:
   adapters: local_replaceable
   presentation: absent
 
-security:
-  architecture_audit: passed
-  secret_audit: passed
-  privacy_audit: passed
-  safe_error_boundary: implemented
-
-accessibility:
-  preferences_contract: implemented
-  update_use_case: implemented
-  presentation_review: future_required
-
 persistence:
   current: ephemeral_in_memory
-  durable_technology: not_selected
+  concrete_H08_2_adapter: pending_ADR
 
 data:
   mode: synthetic_only
   real_data: prohibited
 
-H08_1: fulfilled
-H08_1A: remediation_R2_pending_re_review
-GATE_H08_1_READY_TO_CODE: pending_hold_recommended
-H08_2: blocked
+H08_1:
+  lifecycle: fulfilled
+
+H08_1A:
+  lifecycle: fulfilled
+  verdict: pass_with_reservations
+
+GATE_H08_1_READY_TO_CODE:
+  decision: approve_with_reservations
+  status: approved_with_reservations
+
+H08_2:
+  lifecycle: strategic_planning_open
+  implementation: not_started
+  PR_strategy: one_consolidated_PR
 ```
 
-PR #57 fue fusionado en el baseline canónico
-`965f53e04eecc0a9d6dc17cd89dbacee6797a5f6`. El checkpoint H08-1A concluyó
-`remediate_and_re_review`. La re-review de R1 cerró F-003 y F-006 y
-mantuvo F-001 F-002 F-004 y F-005 como bloqueantes. La remediación R2
-se ejecuta en PR #58 Draft; el gate permanece en `hold` y H08-2 bloqueado.
+El PR #58 fue fusionado y estableció el baseline canónico
+`9b941f185feb1e59f7a774ad07c976c415537dae`. La verificación posterior al merge pasó localmente y en
+GitHub Actions para Node 22 y Node 24.
+
+H08-2 se desarrollará en un único PR Draft consolidado mediante bloques de
+commits verificables y comentarios de hito. El merge solamente podrá ocurrir
+después del checkpoint H08-2A sobre un SHA congelado.
 
 ---
 
 ## Secuencia canónica
 
 ```text
-PO-H08-1
-→ H08-1
-  → H08-1.1 · ADR y frontera técnica
-  → H08-1.2 · Dominio, contratos y schemas
-  → H08-1.3 · Runner, pruebas y CI
-  → H08-1.4 · Esqueleto modular y adaptadores
-  → H08-1.5 · Seguridad, accesibilidad y cierre
-→ H08-1A · checkpoint independiente
-→ GATE-H08-1-READY-TO-CODE
-→ H08-2
+H08-1 cumplido
+→ H08-1A cumplido con reservas
+→ GATE-H08-1-READY-TO-CODE aprobado con reservas
+→ H08-2.0 · apertura estratégica
+→ H08-2.1 · readiness de contratos
+→ H08-2.2 · shell accesible
+→ H08-2.3 · ciclo creativo integrado
+→ H08-2.4 · recuperación local y export preview
+→ H08-2A · checkpoint independiente
+→ decisión humana de integración
 ```
 
-H08-1A no es una continuación automática de H08-1.5. Requiere su propio kit,
-una conversación nueva y una evaluación independiente.
-
-H08-2 no puede abrirse antes de completar H08-1A y aprobar el gate aplicable.
+Todos los bloques H08-2.0 a H08-2.4 viven en el mismo PR Draft.
 
 ---
 
-## Qué existe en el baseline técnico
-
-La raíz técnica provisional vive en:
-
-`apps/storylab/`
-
-Capas disponibles:
+## Primera vertical slice
 
 ```text
-src/domain       reglas, tipos, invariantes y contratos de accesibilidad
-src/ports        capacidades requeridas por el núcleo
+perfil sintético
+→ crear proyecto
+→ abrir una misión configurable
+→ completar actividad textual
+→ crear evidencia
+→ escribir reflexión privada
+→ registrar decisión humana
+→ incorporar o retirar del portafolio
+→ recuperar estado local
+→ previsualizar un paquete de exportación validado
+```
+
+Quedan diferidos:
+
+- importación y roundtrip completo;
+- migración desde v0.3;
+- múltiples misiones;
+- almacenamiento multimedia binario;
+- endurecimiento de persistencia;
+- Vista del Facilitador;
+- funciones grupales;
+- IA embebida;
+- analíticas;
+- nube;
+- datos reales;
+- publicación automática.
+
+---
+
+## Baseline técnico existente
+
+La raíz técnica provisional vive en `apps/storylab/`.
+
+```text
+src/domain       reglas, tipos e invariantes
+src/ports        capacidades requeridas
 src/application  casos de uso mínimos
 src/adapters     mecanismos locales sustituibles
-src/schemas      fronteras serializadas JSON Schema 2020-12
-src/tests        pruebas de dominio, schemas, aplicación y adaptadores
-tools            auditorías arquitectónicas, de secretos y privacidad
+src/schemas      JSON Schema 2020-12
+src/tests        pruebas reproducibles
+tools            auditorías
 ```
 
-Primeros casos de uso:
-
-- `createProject`;
-- `saveProject`;
-- `loadProject`;
-- `removeProject`;
-- `updateAccessibilityPreferences`.
-
-Primeros adaptadores:
-
-- `InMemoryProjectRepository`;
-- `SystemClock`;
-- `RandomUuidGenerator`.
-
-La aplicación no tiene todavía capa `presentation`.
+La aplicación todavía no tiene capa `presentation`.
 
 ---
 
-## Principios técnicos vigentes
+## Reservas transferidas
 
-```text
-dominio independiente del framework
-puertos antes que infraestructura
-adaptadores sustituibles
-persistencia durable diferida
-identificadores opacos y no personales
-errores públicos mínimos
-datos sintéticos
-capacidades diferidas en false
-pruebas antes de integración
-CI como evidencia, no como autoridad humana
-```
-
-La versión histórica v0.3 puede funcionar como oráculo de comportamiento y
-fuente de pruebas, pero no como fundamento arquitectónico automático.
+1. Crear pruebas nominales para INV-009 e INV-010 antes de expandir portafolio.
+2. Mantener explícita la limitación heurística de la auditoría de privacidad.
+3. Conservar el modelo de gobernanza de mantenedor único.
+4. Seleccionar persistencia concreta solamente mediante ADR.
+5. Mantener todas las capacidades diferidas bloqueadas.
 
 ---
 
-## Límites vigentes
+## Documentación activa H08-2
 
-No están autorizados:
-
-- interfaz funcional o primera vertical slice;
-- backend, autenticación o nube;
-- persistencia durable;
-- datos reales o grupales;
-- Vista del Facilitador;
-- dashboard o analíticas;
-- IA embebida;
-- publicación automática;
-- importación directa del legacy;
-- H08-2.
-
----
-
-## Documentación canónica de H08-1
-
-### Arquitectura y especificación técnica
-
-- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_1_ADR_Frontera_Tecnica/`
-- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_2_Dominio_Contratos_Schemas/`
-- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_3_Runner_Pruebas_CI/`
-- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_4_Esqueleto_Modular_Adaptadores/`
-- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_5_Seguridad_Accesibilidad_Cierre/`
-
-### Memoria y continuidad
-
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_1_ADR_Frontera_Tecnica/`
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_2_Dominio_Contratos_Schemas/`
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_3_Runner_Pruebas_CI/`
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_4_Esqueleto_Modular_Adaptadores/`
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_5_Seguridad_Accesibilidad_Cierre/`
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1A_Remediacion_R1/`
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1A_Remediacion_R2/`
-
-### Gobernanza
-
-- `00_CONTROL_MAESTRO/Spec_Driven_Development/`
-- `00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/`
-- `18_DOCUMENTACION_ACTIVA/Gates/`
-
----
-
-## Estado posterior a H08-1A
-
-La secuencia vigente es:
-
-1. H08-1 permanece cerrado.
-2. H08-1A requiere remediación R2 y re-review focalizada del nuevo SHA.
-3. La recomendación del gate es `hold`; no constituye decisión humana efectiva.
-4. La remediación no selecciona persistencia durable ni crea presentación.
-5. Una ejecución fresca con Node 22 y Node 24 es condición de re-review.
-6. H08-2 permanece bloqueado.
-
----
-
-## Archivo del README anterior
-
-La versión del README reemplazada durante este cierre se conserva como evidencia
-histórica no vigente en:
-
-`99_ARCHIVO_HISTORICO/Snapshots_README_Raiz/README_AI_StoryLab_1_Pre_Cierre_H08_1_5_2026-07-15.md`
-
-Su ingreso cumple la política de `99_ARCHIVO_HISTORICO`: hash SHA-256,
-inventario, manifiesto, sucesor canónico y declaración de no autoridad.
+`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_2_Apertura_Estrategica/`
 
 ---
 

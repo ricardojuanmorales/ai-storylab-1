@@ -1,0 +1,7 @@
+block,priority,deliverable,dependency,acceptance,status
+H08-2.0,P0,Apertura estratégica y gobernanza,none,documentación integrada,ready
+H08-2.1,P0,Readiness de contratos,H08-2.0,"specs, ADRs y pruebas",blocked
+H08-2.2,P0,Shell accesible,H08-2.1,build y navegación accesible,blocked
+H08-2.3,P0,Ciclo creativo,H08-2.2,flujo hasta portafolio,blocked
+H08-2.4,P0,Recuperación y export preview,H08-2.3,recuperación y paquete válido,blocked
+H08-2A,P0,Checkpoint y cierre,H08-2.4,dictamen y SHA congelado,blocked

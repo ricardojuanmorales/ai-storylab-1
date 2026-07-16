@@ -1,0 +1,8 @@
+risk_id,category,risk,level,mitigation,status
+R-H08-2-001,scope,Solapamiento entre roadmaps,high,Alcance ratificado y matriz de diferidos,controlled
+R-H08-2-002,architecture,Lógica de dominio en presentación,high,Auditoría de dependencias,open
+R-H08-2-003,persistence,Acoplamiento a almacenamiento,high,ADR y adaptador detrás de puerto,open
+R-H08-2-004,privacy,Reflexión expuesta sin decisión,high,Privacidad por defecto,open
+R-H08-2-005,agency,Portafolio automático,high,Pruebas INV-008/009/010,open
+R-H08-2-006,accessibility,Flujo no operable por teclado,high,Criterios y pruebas AT,open
+R-H08-2-007,governance,PR grande pierde legibilidad,medium,"Bloques, comentarios y SHA por hito",controlled

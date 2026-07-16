@@ -1147,3 +1147,58 @@ DEC_V08_H08_1A_REMEDIATION_R2_001:
 
 Fuente específica:
 `00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Enmienda_Gobernanza_H08_1A_Remediacion_R2_PR58_AI_StoryLab_1.md`
+
+---
+
+<!-- DEC_V08_GATE_H08_1_READY_TO_CODE_001 -->
+
+# Decisión humana · GATE-H08-1-READY-TO-CODE
+
+```yaml
+DEC_V08_GATE_H08_1_READY_TO_CODE_001:
+  decision_date: 2026-07-16
+  authority: sole_maintainer
+  independence_claimed: false
+  source_PR: 58
+  merged_head_sha: 8469f1fd499309876ea6fc4441ace81227550112
+  effective_main_baseline: 9b941f185feb1e59f7a774ad07c976c415537dae
+
+  H08_1:
+    lifecycle: fulfilled
+
+  H08_1A:
+    lifecycle: fulfilled
+    verdict: pass_with_reservations
+
+  GATE_H08_1_READY_TO_CODE:
+    decision: approve_with_reservations
+    status: approved_with_reservations
+
+  H08_2:
+    lifecycle: strategic_planning_open
+    implementation: not_started
+```
+
+Fuente:
+`Decision_Humana_GATE_H08_1_READY_TO_CODE_AI_StoryLab_1.md`
+
+---
+
+<!-- DEC_V08_H08_2_SCOPE_001 -->
+
+# Decisiones de apertura H08-2
+
+```yaml
+DEC_V08_H08_2_SCOPE_001:
+  status: ratified
+  strategy: thin_coherent_vertical_slice
+
+DEC_V08_H08_2_PR_STRATEGY_001:
+  status: ratified
+  branch: feat/v0.8-h08-2-consolidated-vertical-slice
+  pull_request_count: 1
+  mode: draft_until_H08_2A
+```
+
+Fuente:
+`Enmienda_Gobernanza_Apertura_Estrategica_H08_2_AI_StoryLab_1.md`
