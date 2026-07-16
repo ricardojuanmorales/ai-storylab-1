@@ -7,8 +7,8 @@ INV-005,CreativeProject,all identifiers unique within aggregate,DUPLICATE_IDENTI
 INV-006,MissionProgress,status transition must be allowed,INVALID_STATE_TRANSITION,no,yes,validateMissionTransition,domain.invariants.test.ts::emite_error_tipado_transicion_invalida
 INV-007,Evidence,binary content prohibited,BINARY_CONTENT_PROHIBITED,yes,no,closed TypeScript shape+JSON Schema additionalProperties false,parity.test.ts::objetos_cerrados_y_campos_requeridos
 INV-008,Evidence,portfolio acceptance requires HumanDecision accept,HUMAN_DECISION_REQUIRED,no,yes,validateProjectInvariants,domain.invariants.test.ts::requiere_decision_humana
-INV-009,PortfolioItem,evidence reference must exist,PORTFOLIO_EVIDENCE_NOT_FOUND,no,yes,validateProjectInvariants,covered_by_existing_domain_fixture_contract
-INV-010,Portfolio,no duplicate evidence references,PORTFOLIO_DUPLICATE_EVIDENCE,no,yes,validateProjectInvariants,covered_by_existing_domain_fixture_contract
+INV-009,PortfolioItem,evidence reference must exist,PORTFOLIO_EVIDENCE_NOT_FOUND,no,yes,validateProjectInvariants,domain.invariants.test.ts::rechaza_referencia_portafolio_sin_evidencia
+INV-010,Portfolio,no duplicate evidence references,PORTFOLIO_DUPLICATE_EVIDENCE,no,yes,validateProjectInvariants,domain.invariants.test.ts::rechaza_evidencia_duplicada_portafolio
 INV-011,Reflection,privacyClass belongs to approved enum,REFLECTION_PRIVACY_INVALID,yes,yes,validateProjectInvariants+project.schema.json,domain.invariants.test.ts::rechaza_privacidad_fuera_enum
 INV-012,Reflection,private reflection cannot be selected for export,EXPORT_SELECTION_REQUIRED,no,yes,validateProjectInvariants,domain.invariants.test.ts::protege_reflexiones_privadas
 INV-013,FeatureFlags,all deferred capabilities false,DEFERRED_CAPABILITY_ENABLED,yes,yes,validateProjectInvariants+project.schema.json,parity.test.ts::capacidades_diferidas | domain.invariants.test.ts::mantiene_capacidades_desactivadas

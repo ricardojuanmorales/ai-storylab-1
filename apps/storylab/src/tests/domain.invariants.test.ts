@@ -81,6 +81,57 @@ describe("project invariants", () => {
     expect(errorCodes(project)).toContain("HUMAN_DECISION_REQUIRED");
   });
 
+  it("rechaza referencias de portafolio sin evidencia existente", () => {
+    const project = clone(completed) as unknown as {
+      portfolio: {
+        items: Array<{ evidenceId: string }>;
+      };
+    };
+    const item = project.portfolio.items[0];
+    if (!item) throw new Error("SYNTHETIC_PORTFOLIO_ITEM_MISSING");
+    item.evidenceId = "evidence-synthetic-missing";
+
+    expect(
+      validateProjectInvariants(project as unknown as CreativeProject),
+    ).toContainEqual(
+      expect.objectContaining({
+        code: "PORTFOLIO_EVIDENCE_NOT_FOUND",
+        path: "portfolio.items.0.evidenceId",
+      }),
+    );
+  });
+
+  it("rechaza evidencia duplicada en el portafolio", () => {
+    const project = clone(completed) as unknown as {
+      portfolio: {
+        items: Array<{
+          id: string;
+          evidenceId: string;
+          title: string;
+          order: number;
+          includedAt: string;
+        }>;
+      };
+    };
+    const item = project.portfolio.items[0];
+    if (!item) throw new Error("SYNTHETIC_PORTFOLIO_ITEM_MISSING");
+
+    project.portfolio.items.push({
+      ...item,
+      id: "portfolio-item-synthetic-002",
+      order: 1,
+    });
+
+    expect(
+      validateProjectInvariants(project as unknown as CreativeProject),
+    ).toContainEqual(
+      expect.objectContaining({
+        code: "PORTFOLIO_DUPLICATE_EVIDENCE",
+        path: "portfolio.items.1.evidenceId",
+      }),
+    );
+  });
+
   it("rechaza clases de privacidad fuera del enum", () => {
     const project = clone(completed) as unknown as {
       reflections: Array<{

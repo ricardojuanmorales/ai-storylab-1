@@ -18,33 +18,33 @@ activa, pruebas reproducibles, revisión humana y gates independientes.
 
 ```yaml
 version_line: v0.8.0
-opening_mode: strategic_planning
-current_unit: H08-2.0
-current_process: H08_2_strategic_planning
+opening_mode: contract_readiness
+current_unit: H08-2.1
+current_process: H08_2_contract_readiness
 current_branch: feat/v0.8-h08-2-consolidated-vertical-slice
-current_PR: pending_creation
+current_PR: 59
 PR_mode: consolidated_draft
 
 baseline:
   main_sha: 9b941f185feb1e59f7a774ad07c976c415537dae
-  source_PR: 58
-  merged_head_sha: 8469f1fd499309876ea6fc4441ace81227550112
+  H08_2_0_head: 46a3c05b3535e917b4681b4947794f058aa03de1
 
 schema_version: 0.8.0-alpha.1
 test_files: 12
-tests: 63
+tests: 65
 runtime_dependencies: 0
 
 architecture:
   domain: integrated
   ports: integrated
-  application: minimal_use_cases
+  application: contract_ready
   adapters: local_replaceable
   presentation: absent
 
 persistence:
   current: ephemeral_in_memory
-  concrete_H08_2_adapter: pending_ADR
+  H08_2_candidate: localStorage_behind_port
+  decision_status: proposed_before_H08_2_4
 
 data:
   mode: synthetic_only
@@ -62,18 +62,15 @@ GATE_H08_1_READY_TO_CODE:
   status: approved_with_reservations
 
 H08_2:
-  lifecycle: strategic_planning_open
-  implementation: not_started
+  lifecycle: contract_readiness_active
+  current_block: H08_2_1
+  functional_implementation: not_started
   PR_strategy: one_consolidated_PR
 ```
 
-El PR #58 fue fusionado y estableció el baseline canónico
-`9b941f185feb1e59f7a774ad07c976c415537dae`. La verificación posterior al merge pasó localmente y en
-GitHub Actions para Node 22 y Node 24.
-
-H08-2 se desarrollará en un único PR Draft consolidado mediante bloques de
-commits verificables y comentarios de hito. El merge solamente podrá ocurrir
-después del checkpoint H08-2A sobre un SHA congelado.
+H08-2 se desarrolla en el PR Draft #59 mediante bloques de commits
+verificables. H08-2.0 abrió la planificación estratégica. H08-2.1 cierra las
+reservas de contratos antes de crear presentación o persistencia.
 
 ---
 
@@ -83,16 +80,34 @@ después del checkpoint H08-2A sobre un SHA congelado.
 H08-1 cumplido
 → H08-1A cumplido con reservas
 → GATE-H08-1-READY-TO-CODE aprobado con reservas
-→ H08-2.0 · apertura estratégica
-→ H08-2.1 · readiness de contratos
+→ H08-2.0 · apertura estratégica cumplida
+→ H08-2.1 · readiness de contratos activa
 → H08-2.2 · shell accesible
 → H08-2.3 · ciclo creativo integrado
 → H08-2.4 · recuperación local y export preview
 → H08-2A · checkpoint independiente
-→ decisión humana de integración
 ```
 
-Todos los bloques H08-2.0 a H08-2.4 viven en el mismo PR Draft.
+Todos los bloques viven en el mismo PR Draft. El merge permanece prohibido
+antes de H08-2A.
+
+---
+
+## Readiness H08-2.1
+
+Este bloque incorpora:
+
+- pruebas nominales para INV-009 e INV-010;
+- contrato no serializado `MissionDefinition`;
+- contratos de casos de uso de la vertical slice;
+- ADR provisional de presentación;
+- ADR propuesto de persistencia;
+- criterios Given/When/Then;
+- wireframes textuales;
+- threat model proporcional;
+- matriz de trazabilidad.
+
+No incorpora React, Vite, DOM, `localStorage` ni funcionalidad visible.
 
 ---
 
@@ -108,57 +123,29 @@ perfil sintético
 → registrar decisión humana
 → incorporar o retirar del portafolio
 → recuperar estado local
-→ previsualizar un paquete de exportación validado
+→ previsualizar paquete de exportación validado
 ```
 
-Quedan diferidos:
+---
 
-- importación y roundtrip completo;
-- migración desde v0.3;
-- múltiples misiones;
-- almacenamiento multimedia binario;
-- endurecimiento de persistencia;
-- Vista del Facilitador;
-- funciones grupales;
-- IA embebida;
-- analíticas;
-- nube;
-- datos reales;
-- publicación automática.
+## Límites vigentes
+
+- datos reales prohibidos;
+- importación y roundtrip diferidos;
+- migración v0.3 diferida;
+- múltiples misiones diferidas;
+- almacenamiento binario prohibido;
+- Vista del Facilitador bloqueada;
+- funciones grupales bloqueadas;
+- IA embebida bloqueada;
+- analíticas, nube y publicación automática bloqueadas.
 
 ---
 
-## Baseline técnico existente
+## Documentación activa
 
-La raíz técnica provisional vive en `apps/storylab/`.
-
-```text
-src/domain       reglas, tipos e invariantes
-src/ports        capacidades requeridas
-src/application  casos de uso mínimos
-src/adapters     mecanismos locales sustituibles
-src/schemas      JSON Schema 2020-12
-src/tests        pruebas reproducibles
-tools            auditorías
-```
-
-La aplicación todavía no tiene capa `presentation`.
-
----
-
-## Reservas transferidas
-
-1. Crear pruebas nominales para INV-009 e INV-010 antes de expandir portafolio.
-2. Mantener explícita la limitación heurística de la auditoría de privacidad.
-3. Conservar el modelo de gobernanza de mantenedor único.
-4. Seleccionar persistencia concreta solamente mediante ADR.
-5. Mantener todas las capacidades diferidas bloqueadas.
-
----
-
-## Documentación activa H08-2
-
-`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_2_Apertura_Estrategica/`
+- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_2_Apertura_Estrategica/`
+- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_2_1_Readiness_Contratos/`
 
 ---
 

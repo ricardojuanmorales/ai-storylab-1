@@ -1,8 +1,8 @@
 # AI StoryLab · Nueva raíz modular provisional
 
-**Unidad vigente:** H08-1.4
+**Unidad vigente:** H08-2.1
 **Schema:** `0.8.0-alpha.1`
-**Estado:** esqueleto modular y adaptadores locales, sin vertical slice funcional
+**Estado:** readiness de contratos, sin vertical slice funcional
 
 ## Capas presentes
 
@@ -28,11 +28,20 @@ domain ↛ application/adapters
 ports ↛ application/adapters
 ```
 
-## Adaptadores provisionales
+## Contratos preparados en H08-2.1
+
+- `MissionDefinition`, todavía no serializado en `CreativeProject`;
+- `CreativeCycleUseCases`;
+- inputs tipados para misión, actividad, evidencia, reflexión, decisión,
+  portafolio y export preview;
+- pruebas nominales de INV-009 e INV-010.
+
+## Adaptadores provisionales existentes
 
 - `InMemoryProjectRepository`;
 - `SystemClock`;
 - `RandomUuidGenerator`.
 
-No se selecciona persistencia durable. `localStorage`, IndexedDB, nube, backend,
-autenticación, presentación e H08-2 permanecen fuera de alcance.
+No existe capa `presentation`. React, Vite y `localStorage` no se incorporan en
+este bloque. No se selecciona persistencia concreta hasta la decisión
+correspondiente.
