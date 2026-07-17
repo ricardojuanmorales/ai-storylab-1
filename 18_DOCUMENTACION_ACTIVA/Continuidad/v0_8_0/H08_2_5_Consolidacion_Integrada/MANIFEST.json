@@ -1,0 +1,23 @@
+{
+  "unit": "H08-2.5",
+  "date": "2026-07-16",
+  "repository": "ricardojuanmorales/ai-storylab-1",
+  "PR": 59,
+  "branch": "feat/v0.8-h08-2-consolidated-vertical-slice",
+  "entry_head": "d14fc2382073dd4c32b9ba2ea83cc350f785d327",
+  "classification": "non_expansive_integration_consolidation",
+  "product_changes": false,
+  "schema_changes": false,
+  "runtime_dependency_changes": false,
+  "integration_evidence": {
+    "real_local_repository": true,
+    "recovery_after_remount": true,
+    "privacy_after_recovery": true,
+    "corruption": true,
+    "quota": true,
+    "delete": true
+  },
+  "expected_test_files": 20,
+  "expected_tests": 123,
+  "next_checkpoint": "H08-2A"
+}

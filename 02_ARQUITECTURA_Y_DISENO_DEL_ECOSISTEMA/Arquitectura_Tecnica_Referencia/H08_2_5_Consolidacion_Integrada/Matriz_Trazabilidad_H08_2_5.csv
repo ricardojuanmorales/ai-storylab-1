@@ -1,0 +1,8 @@
+trace_id,dimension,scenario,implementation,evidence
+TR-H08-2.5-001,Integración,App + real repository,integration.local-first.test.tsx,recovery
+TR-H08-2.5-002,Privacidad,preview after recovery,integration.local-first.test.tsx,private excluded
+TR-H08-2.5-003,Resiliencia,corrupted JSON,integration.local-first.test.tsx,blocked and discarded
+TR-H08-2.5-004,Cuota,typed UI message,integration.local-first.test.tsx,no partial write
+TR-H08-2.5-005,Borrado,project + latest keys,integration.local-first.test.tsx,both removed
+TR-H08-2.5-006,Readiness,vertical slice audit,audit-vertical-slice.mjs,machine evidence
+TR-H08-2.5-007,Alcance,deferred capabilities,test + audit,absent

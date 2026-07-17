@@ -1,49 +1,45 @@
-# AI StoryLab · Recuperación local y export preview
+# AI StoryLab · Vertical slice consolidada
 
-**Unidad vigente:** H08-2.4
+**Unidad vigente:** H08-2.5
 **Schema:** `0.8.0-alpha.1`
-**Estado:** primera vertical slice local-first recuperable
+**Clasificación:** consolidación integrada no expansiva
 
-## Capacidades activas
+## Funcionalidad heredada
 
 - proyecto sintético;
-- M1 configurable;
-- borrador editable;
-- evidencia textual;
+- M1 funcional;
+- actividad editable;
+- evidencia;
 - reflexión privada opcional;
 - decisión humana;
 - portafolio reversible;
-- guardado local automático;
-- recuperación validada;
-- descarte de corrupción;
+- recuperación local validada;
 - borrado explícito;
-- export preview validado.
+- export preview.
 
-## Composición
+## Evidencia nueva
+
+`src/tests/integration.local-first.test.tsx` conecta:
 
 ```text
-main.tsx
-→ prueba disponibilidad de storage
-→ LocalStorageProjectRepository
-   OR InMemoryProjectRepository
+App
 → StoryLabUseCases
-→ App
+→ LocalStorageProjectRepository
+→ StorageLike sintético
 ```
 
-## Validación
+La suite demuestra recuperación, privacidad, corrupción, cuota y borrado sin
+usar un repositorio en memoria como sustituto de la persistencia real.
 
-`src/schemas/runtime-validators.ts` utiliza JSON Schema 2020-12 y las invariantes
-del dominio para validar proyectos recuperados y paquetes de exportación.
+## Readiness
 
-## Privacidad
-
-Las reflexiones `private`, `high_care` o no seleccionadas quedan fuera de la
-vista previa.
+```bash
+npm run audit:vertical-slice
+npm run test:integration
+npm run verify
+```
 
 ## Límites
 
-- un proyecto reciente;
-- sin importación;
-- sin roundtrip;
-- sin descarga automática;
-- sin datos reales.
+H08-2.5 no modifica el producto. Importación, roundtrip, descarga, migraciones,
+M2, M3 y M4 permanecen fuera de alcance.

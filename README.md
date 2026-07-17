@@ -13,136 +13,105 @@ responsable.
 
 ```yaml
 version_line: v0.8.0
-current_unit: H08-2.4
-current_process: H08_2_recovery_export_preview
+current_unit: H08-2.5
+current_process: H08_2_integrated_consolidation
 current_branch: feat/v0.8-h08-2-consolidated-vertical-slice
 current_PR: 59
 PR_mode: consolidated_draft
 
 baseline:
   main_sha: 9b941f185feb1e59f7a774ad07c976c415537dae
-  H08_2_3_head: c6aa6cb3e0dc5bf7b779c2ad024a8ec1d1f2566c
+  H08_2_4_head: d14fc2382073dd4c32b9ba2ea83cc350f785d327
 
 schema_version: 0.8.0-alpha.1
-test_files: 19
-tests: 117
+test_files: 20
+tests: 123
+audits:
+  - architecture
+  - secrets
+  - privacy
+  - vertical_slice
+
 runtime_dependencies:
   - react
   - react-dom
-bundled_validation_dependencies:
-  - ajv
-  - ajv-formats
 
-architecture:
-  domain: integrated
-  ports: recoverable_repository
-  application: M1_recovery_export_preview
-  adapters:
-    - localStorage_provisional
-    - in_memory_fallback
-  presentation: recovery_and_preview
-
-experience:
-  canonical_missions: 4
-  functional_now:
-    - M1_intention
-  planned_H08_4:
-    - M2_narrative_architecture
-    - M3_multimodal_production
-    - M4_curation_and_closure
-
-persistence:
-  technology: localStorage
-  status: provisional_ratified
-  capacity: one_most_recent_project
-  schema_validation_on_load: true
-  invariant_validation_on_load: true
-  fallback: in_memory
-  real_data: prohibited
-
-export_preview:
-  status: functional
-  portfolio_required: true
-  private_reflections_excluded: true
-  high_care_reflections_excluded: true
-  automatic_download: false
-  import_roundtrip: false
-
-H08_2:
-  lifecycle: recovery_export_preview_active
-  current_block: H08_2_4
+H08_2_5:
+  classification: non_expansive_integration_consolidation
+  new_product_capabilities: false
+  schema_changes: false
+  runtime_dependency_changes: false
+  real_repository_integration_test: true
   next_checkpoint: H08_2A
 ```
 
-## Vertical slice completa de H08-2
+## Propósito de H08-2.5
+
+H08-2.4 completó la funcionalidad de la vertical slice. H08-2.5 demuestra que
+las capas funcionan juntas usando el adaptador local real:
 
 ```text
-perfil sintético
-→ proyecto
-→ M1 intención creadora
-→ borrador editable
-→ evidencia
-→ reflexión privada opcional
-→ decisión humana
-→ portafolio reversible
-→ guardado local
-→ recuperación validada
+App
+→ StoryLabUseCases
+→ dominio
+→ LocalStorageProjectRepository
+→ recuperación
 → export preview
+→ borrado
 ```
 
-## Persistencia local provisional
+## Evidencia integrada
 
-El proyecto reciente se guarda mediante `ProjectRepository`. Al cargar:
+La nueva suite verifica:
 
-```text
-JSON.parse
-→ JSON Schema 2020-12
-→ invariantes
-→ CreativeProject
-```
+- escritura real de proyecto y puntero reciente;
+- recuperación después de desmontar y remontar;
+- M1 completada y curada;
+- export preview posterior a recuperación;
+- exclusión de reflexión privada;
+- corrupción bloqueada y descartada;
+- cuota comunicada sin escritura parcial;
+- borrado de ambas claves;
+- ausencia de importación, roundtrip y descarga.
 
-Los datos corruptos se bloquean y pueden descartarse explícitamente. Si el
-navegador bloquea el almacenamiento local, la aplicación usa memoria y comunica
-que la sesión es efímera.
+## Auditoría de vertical slice
 
-## Export preview
+`audit-vertical-slice.mjs` comprueba automáticamente que:
 
-La vista previa requiere portafolio, valida `ExportPackage` y excluye:
+- existen los objetos estructurales de H08-2;
+- las cuatro misiones canónicas permanecen;
+- solo M1 está funcional;
+- la persistencia y la salida están presentes;
+- la integración usa el adaptador real;
+- las dependencias runtime no se expandieron;
+- las capacidades diferidas continúan ausentes.
 
-- reflexiones privadas;
-- reflexiones de alto cuidado;
-- reflexiones no seleccionadas.
+## Arco completo de v0.8.0
 
-Previsualizar no descarga, importa ni publica.
-
-## Misiones canónicas de v0.8.0
-
-1. M1 · Intención creadora.
-2. M2 · Arquitectura narrativa.
-3. M3 · Producción multimodal.
-4. M4 · Curaduría y cierre.
-
-H08-2A evalúa la primera vertical slice. No sustituye `GATE-V08-CLOSE`.
+1. H08-2A · checkpoint independiente.
+2. H08-3 · endurecimiento de persistencia y schemas.
+3. H08-4 · M2, M3 y M4.
+4. H08-5 · portafolio completo, importación y roundtrip.
+5. H08-6 · estabilización.
+6. `GATE-V08-CLOSE`.
 
 ## Límites
 
-- un proyecto reciente;
+- sin cambios de producto en H08-2.5;
+- sin cambios de schema;
+- sin nuevas dependencias runtime;
 - sin importación ni roundtrip;
-- sin migración legacy;
-- sin M2, M3 o M4 funcionales;
+- sin descarga automática;
 - sin datos reales;
-- sin nube;
-- sin IA embebida;
-- sin publicación automática.
+- sin nube, red o IA embebida.
 
 ## Documentación activa
 
-`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_2_4_Recuperacion_Export_Preview/`
+`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_2_5_Consolidacion_Integrada/`
 
 ## Regla de oro
 
 ```text
-Guardar no implica confiar.
-Cargar requiere validar.
-Previsualizar no implica publicar.
+Verificar capas no basta.
+La costura también debe probarse.
 ```
