@@ -1,6 +1,15 @@
-import { useMemo, useRef, useState } from "react";
-import type { AccessibilityPreferences } from "../domain/model";
-import { SHELL_STEPS } from "./shell-model";
+import { useRef, useState, type MouseEvent } from "react";
+import type { StoryLabUseCases } from "../application";
+import type {
+  AccessibilityPreferences,
+  CreativeProject,
+} from "../domain/model";
+import { MissionOneWorkspace } from "./MissionOneWorkspace";
+import { ProjectSetup } from "./ProjectSetup";
+import {
+  SHELL_STEPS,
+  shellStepStatusLabel,
+} from "./shell-model";
 import "./styles.css";
 
 const DEFAULT_PREFERENCES: AccessibilityPreferences = {
@@ -17,30 +26,65 @@ const TEXT_SCALE_LABELS: Readonly<
   extra_large: "Extra grande",
 };
 
-export function App() {
+export interface AppProps {
+  readonly useCases: StoryLabUseCases;
+}
+
+export function App({ useCases }: AppProps) {
   const [preferences, setPreferences] =
     useState<AccessibilityPreferences>(DEFAULT_PREFERENCES);
+  const [project, setProject] = useState<CreativeProject | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [statusMessage, setStatusMessage] = useState(
+    "M1 está disponible. Comienza con un perfil sintético.",
+  );
   const mainRef = useRef<HTMLElement>(null);
 
-  const statusMessage = useMemo(() => {
+  const focusMain = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    mainRef.current?.focus();
+  };
+
+  const updatePreferences = (
+    next: AccessibilityPreferences,
+  ) => {
+    setPreferences(next);
     const active: string[] = [];
 
-    if (preferences.highContrast) active.push("contraste alto");
-    if (preferences.reducedMotion) active.push("movimiento reducido");
-    if (preferences.textScale !== "default") {
+    if (next.highContrast) active.push("contraste alto");
+    if (next.reducedMotion) active.push("movimiento reducido");
+    if (next.textScale !== "default") {
       active.push(
-        `texto ${TEXT_SCALE_LABELS[preferences.textScale].toLowerCase()}`,
+        `texto ${TEXT_SCALE_LABELS[next.textScale].toLowerCase()}`,
       );
     }
 
-    return active.length === 0
-      ? "Preferencias de visualización en valores predeterminados."
-      : `Preferencias activas: ${active.join(", ")}.`;
-  }, [preferences]);
+    setStatusMessage(
+      active.length === 0
+        ? "Preferencias de visualización en valores predeterminados."
+        : `Preferencias activas: ${active.join(", ")}.`,
+    );
+  };
 
-  const focusMain = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    mainRef.current?.focus();
+  const createLocalProject = async (
+    input: Parameters<StoryLabUseCases["createProject"]>[0],
+  ) => {
+    setBusy(true);
+    try {
+      const result = await useCases.createProject(input);
+      if (!result.ok) {
+        setStatusMessage(result.error.safeMessage);
+        return;
+      }
+      setProject(result.value);
+      setStatusMessage(
+        "Proyecto local creado. Ahora puedes iniciar M1.",
+      );
+    } catch {
+      setStatusMessage("Ocurrió un error inesperado.");
+    } finally {
+      setBusy(false);
+    }
   };
 
   return (
@@ -64,12 +108,13 @@ export function App() {
           <p className="eyebrow">Investigación-creación local-first</p>
           <p className="brand">AI StoryLab 1</p>
         </div>
-        <p className="status-badge">Shell accesible · H08-2.2</p>
+        <p className="status-badge">M1 funcional · H08-2.3</p>
       </header>
 
       <nav className="primary-nav" aria-label="Navegación principal">
         <a href="#inicio">Inicio</a>
         <a href="#preferencias">Accesibilidad</a>
+        <a href="#experiencia">Experiencia</a>
         <a href="#mapa-ciclo">Mapa del ciclo</a>
       </nav>
 
@@ -81,11 +126,12 @@ export function App() {
       >
         <section id="inicio" className="hero" aria-labelledby="hero-title">
           <div>
-            <p className="eyebrow">Primera interfaz programable</p>
-            <h1 id="hero-title">Tu proceso creativo permanece bajo tu control</h1>
+            <p className="eyebrow">Primera vertical slice funcional</p>
+            <h1 id="hero-title">Tu intención creadora ya puede cerrar un ciclo</h1>
             <p className="hero-copy">
-              Esta versión establece una estructura visible, semántica y
-              operable por teclado. Todavía no crea proyectos ni guarda datos.
+              Crea un proyecto sintético, completa M1, guarda un borrador,
+              prepara evidencia, reflexiona, decide y cura un portafolio
+              reversible.
             </p>
           </div>
 
@@ -94,7 +140,7 @@ export function App() {
             <ul>
               <li>Datos sintéticos únicamente</li>
               <li>Sin conexión de red requerida</li>
-              <li>Sin persistencia durable</li>
+              <li>Estado efímero en memoria</li>
               <li>Sin decisiones automatizadas</li>
             </ul>
           </aside>
@@ -109,8 +155,8 @@ export function App() {
             <p className="eyebrow">Adaptación inmediata</p>
             <h2 id="preferences-title">Preferencias de accesibilidad</h2>
             <p>
-              Estos ajustes modifican solamente la vista actual. No se guardan
-              ni se conectan con un perfil.
+              Estos ajustes modifican solamente la vista actual y no se
+              transmiten.
             </p>
           </div>
 
@@ -122,10 +168,10 @@ export function App() {
               className="preference-button"
               aria-pressed={preferences.highContrast}
               onClick={() =>
-                setPreferences((current) => ({
-                  ...current,
-                  highContrast: !current.highContrast,
-                }))
+                updatePreferences({
+                  ...preferences,
+                  highContrast: !preferences.highContrast,
+                })
               }
             >
               <span>Contraste alto</span>
@@ -139,10 +185,10 @@ export function App() {
               className="preference-button"
               aria-pressed={preferences.reducedMotion}
               onClick={() =>
-                setPreferences((current) => ({
-                  ...current,
-                  reducedMotion: !current.reducedMotion,
-                }))
+                updatePreferences({
+                  ...preferences,
+                  reducedMotion: !preferences.reducedMotion,
+                })
               }
             >
               <span>Reducir movimiento</span>
@@ -157,11 +203,11 @@ export function App() {
                 id="text-scale"
                 value={preferences.textScale}
                 onChange={(event) =>
-                  setPreferences((current) => ({
-                    ...current,
+                  updatePreferences({
+                    ...preferences,
                     textScale: event.target
                       .value as AccessibilityPreferences["textScale"],
-                  }))
+                  })
                 }
               >
                 {Object.entries(TEXT_SCALE_LABELS).map(([value, label]) => (
@@ -172,11 +218,24 @@ export function App() {
               </select>
             </label>
           </fieldset>
-
-          <p className="live-status" role="status" aria-live="polite">
-            {statusMessage}
-          </p>
         </section>
+
+        <p className="live-status" role="status" aria-live="polite">
+          {statusMessage}
+        </p>
+
+        <div id="experiencia">
+          {project ? (
+            <MissionOneWorkspace
+              project={project}
+              useCases={useCases}
+              onProjectChange={setProject}
+              onMessage={setStatusMessage}
+            />
+          ) : (
+            <ProjectSetup busy={busy} onCreate={createLocalProject} />
+          )}
+        </div>
 
         <section
           id="mapa-ciclo"
@@ -187,8 +246,8 @@ export function App() {
             <p className="eyebrow">Ruta gobernada</p>
             <h2 id="cycle-title">Mapa del arco creativo completo de v0.8.0</h2>
             <p>
-              Solo la preparación visual está activa. Las cuatro misiones y el cierre
-              completo se implementarán progresivamente hasta GATE-V08-CLOSE.
+              M1 demuestra el motor reutilizable. M2, M3 y M4 permanecen
+              planificadas para H08-4.
             </p>
           </div>
 
@@ -207,40 +266,40 @@ export function App() {
                   <p>{step.description}</p>
                 </div>
                 <span className="step-state">
-                  {step.status === "current" ? "Disponible" : "Planificado"}
+                  {shellStepStatusLabel(step.status)}
                 </span>
               </li>
             ))}
           </ol>
         </section>
 
-        <section className="assurance-grid" aria-label="Garantías del shell">
+        <section className="assurance-grid" aria-label="Garantías del ciclo">
           <article>
             <h2>Agencia humana</h2>
             <p>
-              Ninguna opción creativa está preseleccionada ni puede ejecutarse
-              automáticamente.
+              La evidencia requiere una decisión explícita antes de entrar al
+              portafolio.
             </p>
           </article>
           <article>
             <h2>Privacidad por defecto</h2>
             <p>
-              El shell no solicita identificadores personales ni transmite
-              información.
+              La reflexión es opcional, editable y privada. No se selecciona
+              para exportación.
             </p>
           </article>
           <article>
-            <h2>Arquitectura reversible</h2>
+            <h2>Iteración real</h2>
             <p>
-              La presentación consume contratos, sin importar adaptadores ni
-              modificar directamente el dominio.
+              M1 puede reabrirse. Borrador, evidencia y reflexión se conservan
+              mientras la curaduría anterior se invalida.
             </p>
           </article>
         </section>
       </main>
 
       <footer className="site-footer">
-        <p>PR #59 · Shell accesible · Datos sintéticos · Sin publicación</p>
+        <p>PR #59 · M1 funcional · Datos sintéticos · Sin persistencia</p>
       </footer>
     </div>
   );

@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.8.0-alpha.1",
   "type": "module",
-  "description": "Shell accesible y local-first de AI StoryLab 1, gobernado por contratos SDD y sin ciclo creativo funcional ni persistencia durable.",
+  "description": "Primera vertical slice funcional de AI StoryLab 1 con M1, motor creativo reutilizable, agencia humana y portafolio reversible en memoria.",
   "engines": {
     "node": ">=22 <27"
   },
@@ -25,7 +25,8 @@
     "audit:architecture": "node tools/audit-architecture.mjs",
     "audit:secrets": "node tools/audit-secrets.mjs",
     "audit:privacy": "node tools/audit-privacy.mjs",
-    "verify": "npm run typecheck && npm run build && npm run audit:architecture && npm run audit:secrets && npm run audit:privacy && npm run test"
+    "verify": "npm run typecheck && npm run build && npm run audit:architecture && npm run audit:secrets && npm run audit:privacy && npm run test",
+    "test:cycle": "vitest run src/tests/application.creative-cycle.test.ts src/tests/presentation.m1-cycle.test.tsx"
   },
   "dependencies": {
     "react": "19.2.7",

@@ -2,14 +2,14 @@ export const SHELL_STEPS = [
   {
     id: "preparation",
     label: "Preparación local",
-    description: "Ajusta la vista y conoce los límites de esta versión.",
-    status: "current",
+    description: "Ajusta la vista y crea un proyecto sintético.",
+    status: "complete",
   },
   {
     id: "mission-intention",
     label: "M1 · Intención creadora",
     description: "Propósito, audiencia, premisa y límites de la creación.",
-    status: "planned",
+    status: "current",
   },
   {
     id: "mission-architecture",
@@ -44,3 +44,13 @@ export const SHELL_STEPS = [
 ] as const;
 
 export type ShellStep = (typeof SHELL_STEPS)[number];
+export type ShellStepStatus = ShellStep["status"];
+
+export const shellStepStatusLabel = (
+  status: ShellStepStatus,
+): string =>
+  status === "complete"
+    ? "Preparado"
+    : status === "current"
+      ? "Disponible"
+      : "Planificado";

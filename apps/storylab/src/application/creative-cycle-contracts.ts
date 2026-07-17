@@ -20,6 +20,11 @@ export interface StartMissionInput {
   readonly definition: MissionDefinition;
 }
 
+export interface ReopenMissionInput {
+  readonly projectId: ProjectId;
+  readonly missionId: MissionId;
+}
+
 export interface SaveTextActivityInput {
   readonly projectId: ProjectId;
   readonly missionId: MissionId;
@@ -70,6 +75,9 @@ export interface CreativeCycleUseCases {
   readonly startMission: (
     input: StartMissionInput,
   ) => Promise<CreativeCycleProjectResult>;
+  readonly reopenMission: (
+    input: ReopenMissionInput,
+  ) => Promise<CreativeCycleProjectResult>;
   readonly saveTextActivity: (
     input: SaveTextActivityInput,
   ) => Promise<CreativeCycleProjectResult>;
@@ -92,3 +100,8 @@ export interface CreativeCycleUseCases {
     input: PreviewExportInput,
   ) => Promise<ExportPreviewResult>;
 }
+
+export type CreativeCycleMutationUseCases = Omit<
+  CreativeCycleUseCases,
+  "previewExport"
+>;

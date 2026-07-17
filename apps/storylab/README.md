@@ -1,52 +1,37 @@
-# AI StoryLab · Shell accesible provisional
+# AI StoryLab · M1 funcional
 
-**Unidad vigente:** H08-2.2
+**Unidad vigente:** H08-2.3
 **Schema:** `0.8.0-alpha.1`
-**Estado:** primera interfaz visible, sin ciclo creativo funcional
+**Estado:** primera vertical slice funcional sobre repositorio en memoria
 
-## Capas presentes
-
-```text
-src/
-  domain/
-  ports/
-  application/
-  adapters/
-  presentation/
-  schemas/
-  fixtures/
-  tests/
-```
-
-## Dirección autorizada
+## Capas
 
 ```text
-presentation → application
-presentation → domain
-application → domain
-application → ports
-adapters → domain
-adapters → ports
-
-domain ↛ presentation
-ports ↛ presentation
-application ↛ presentation
-presentation ↛ adapters
+presentation
+→ application
+→ domain + ports
+→ adapters
 ```
 
-## Shell implementado
+La composición ocurre en `src/main.tsx`.
 
-- landmarks semánticos;
-- enlace de salto;
-- navegación principal;
-- preferencias de contraste, movimiento y escala;
-- anuncios mediante `role="status"`;
-- mapa visible de pasos planificados;
-- estilos responsive y `prefers-reduced-motion`;
-- pruebas de interacción con JSDOM.
+## Capacidades activas
+
+- proyecto sintético;
+- M1 configurable;
+- borrador editable;
+- evidencia textual;
+- reflexión privada opcional;
+- decisión humana;
+- portafolio reversible;
+- reapertura.
+
+## Misiones canónicas
+
+El catálogo contiene M1, M2, M3 y M4. Solamente M1 está conectada a la interfaz
+en H08-2.3.
 
 ## Límites
 
-La presentación no importa adaptadores, no usa almacenamiento, no llama a red y
-no implementa todavía `CreativeCycleUseCases`. La misión, evidencia, reflexión,
-decisión humana, portafolio y export preview se activarán en bloques posteriores.
+Al recargar, el estado se pierde. No existe `localStorage`, importación,
+roundtrip ni export preview.

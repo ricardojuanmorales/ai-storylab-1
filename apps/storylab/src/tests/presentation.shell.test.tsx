@@ -4,14 +4,18 @@ import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it } from "vitest";
 import { App } from "../presentation/App";
+import { createTestStoryLabUseCases } from "./storylab-test-runtime";
 
 afterEach(() => {
   cleanup();
 });
 
+const renderApp = () =>
+  render(<App useCases={createTestStoryLabUseCases()} />);
+
 describe("accessible shell", () => {
   it("expone landmarks y navegación semántica", () => {
-    render(<App />);
+    renderApp();
 
     expect(screen.getByRole("banner")).toBeTruthy();
     expect(
@@ -22,14 +26,14 @@ describe("accessible shell", () => {
     expect(
       screen.getByRole("heading", {
         level: 1,
-        name: "Tu proceso creativo permanece bajo tu control",
+        name: "Tu intención creadora ya puede cerrar un ciclo",
       }),
     ).toBeTruthy();
   });
 
   it("mueve el foco al contenido mediante el enlace de salto", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderApp();
 
     await user.click(
       screen.getByRole("link", { name: "Saltar al contenido principal" }),
@@ -40,7 +44,7 @@ describe("accessible shell", () => {
 
   it("activa y anuncia el contraste alto", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderApp();
 
     const shell = screen.getByTestId("app-shell");
     const button = screen.getByRole("button", { name: /Contraste alto/i });
@@ -55,7 +59,7 @@ describe("accessible shell", () => {
 
   it("activa la reducción de movimiento sin persistir datos", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderApp();
 
     const shell = screen.getByTestId("app-shell");
     const button = screen.getByRole("button", {
@@ -70,7 +74,7 @@ describe("accessible shell", () => {
 
   it("cambia la escala de texto mediante un control etiquetado", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderApp();
 
     const shell = screen.getByTestId("app-shell");
     const select = screen.getByRole("combobox", { name: "Escala de texto" });
@@ -83,18 +87,20 @@ describe("accessible shell", () => {
     );
   });
 
-  it("hace alcanzables por teclado los controles de preferencias", async () => {
+  it("hace alcanzables por teclado los controles iniciales", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderApp();
 
     const expectedControls = [
       screen.getByRole("button", { name: /Contraste alto/i }),
       screen.getByRole("button", { name: /Reducir movimiento/i }),
       screen.getByRole("combobox", { name: "Escala de texto" }),
+      screen.getByRole("textbox", { name: "Seudónimo local" }),
+      screen.getByRole("textbox", { name: "Título del proyecto" }),
     ];
     const reached = new Set<Element>();
 
-    for (let index = 0; index < 12; index += 1) {
+    for (let index = 0; index < 20; index += 1) {
       await user.tab();
       if (document.activeElement) reached.add(document.activeElement);
     }
@@ -104,19 +110,15 @@ describe("accessible shell", () => {
     }
   });
 
-  it("mantiene los pasos creativos como planificación no ejecutable", () => {
-    render(<App />);
+  it("muestra M1 disponible y conserva el resto del arco", () => {
+    renderApp();
 
     expect(screen.getByText("M1 · Intención creadora")).toBeTruthy();
     expect(screen.getByText("M2 · Arquitectura narrativa")).toBeTruthy();
     expect(screen.getByText("M3 · Producción multimodal")).toBeTruthy();
     expect(screen.getByText("M4 · Curaduría y cierre")).toBeTruthy();
-    expect(screen.getAllByText("Planificado").length).toBe(6);
-    expect(
-      screen.queryByRole("button", { name: /Crear proyecto/i }),
-    ).toBeNull();
-    expect(
-      screen.queryByRole("button", { name: /Guardar misión/i }),
-    ).toBeNull();
+    expect(screen.getAllByText("Planificado").length).toBe(5);
+    expect(screen.getByText("Disponible")).toBeTruthy();
+    expect(screen.getByText("Preparado")).toBeTruthy();
   });
 });

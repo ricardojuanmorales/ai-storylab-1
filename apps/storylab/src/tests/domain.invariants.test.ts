@@ -209,4 +209,61 @@ describe("project invariants", () => {
       errorCodes(project as unknown as CreativeProject),
     ).toContain("AUTOMATED_DECISION_PROHIBITED");
   });
+
+  it("rechaza una actividad que referencia una misión inexistente", () => {
+    const project = clone(minimal) as unknown as {
+      activityResponses: Array<{
+        id: string;
+        missionId: string;
+        text: string;
+        updatedAt: string;
+      }>;
+    };
+    project.activityResponses.push({
+      id: "activity-synthetic-missing",
+      missionId: "mission-synthetic-missing",
+      text: "Borrador sintético",
+      updatedAt: "2026-07-15T12:05:00Z",
+    });
+    expect(
+      errorCodes(project as unknown as CreativeProject),
+    ).toContain("MISSION_NOT_FOUND");
+  });
+
+  it("rechaza evidencia que referencia una misión inexistente", () => {
+    const project = clone(completed) as unknown as {
+      evidence: Array<{ missionId: string }>;
+    };
+    const evidence = project.evidence[0];
+    if (!evidence) throw new Error("SYNTHETIC_EVIDENCE_MISSING");
+    evidence.missionId = "mission-synthetic-missing";
+    expect(
+      errorCodes(project as unknown as CreativeProject),
+    ).toContain("MISSION_NOT_FOUND");
+  });
+
+  it("rechaza reflexión que referencia una misión inexistente", () => {
+    const project = clone(completed) as unknown as {
+      reflections: Array<{ missionId: string }>;
+    };
+    const reflection = project.reflections[0];
+    if (!reflection) throw new Error("SYNTHETIC_REFLECTION_MISSING");
+    reflection.missionId = "mission-synthetic-missing";
+    expect(
+      errorCodes(project as unknown as CreativeProject),
+    ).toContain("MISSION_NOT_FOUND");
+  });
+
+  it("rechaza decisión que referencia una evidencia inexistente", () => {
+    const project = clone(completed) as unknown as {
+      decisions: Array<{ evidenceId: string }>;
+    };
+    const decision = project.decisions[0];
+    if (!decision) throw new Error("SYNTHETIC_DECISION_MISSING");
+    decision.evidenceId = "evidence-synthetic-missing";
+    expect(
+      errorCodes(project as unknown as CreativeProject),
+    ).toContain("EVIDENCE_NOT_FOUND");
+  });
+
 });
