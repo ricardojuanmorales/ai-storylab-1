@@ -1,0 +1,2 @@
+finding_id,dimension,description,severity,evidence,disposition,blocks_gate,target,owner
+H08-2A-PENDING,checkpoint,Pendiente de revisión humana,unclassified,GUIA_REVISION_HUMANA_H08_2A,pending,pending,pending,responsible_human
