@@ -9,8 +9,16 @@ const requiredDirectories = [
   "src/application",
   "src/adapters",
   "src/presentation",
+  "src/schemas",
 ];
-const layers = ["domain", "ports", "application", "adapters", "presentation"];
+const layers = [
+  "domain",
+  "ports",
+  "application",
+  "adapters",
+  "presentation",
+  "schemas",
+];
 const sourceExtensions = new Set([".ts", ".tsx"]);
 
 const dependencyRules = {
@@ -19,12 +27,14 @@ const dependencyRules = {
     /\.\.\/application/,
     /\.\.\/adapters/,
     /\.\.\/presentation/,
+    /\.\.\/schemas/,
     /from\s+["']react(?:-dom)?(?:\/[^"']*)?["']/,
   ],
   ports: [
     /\.\.\/application/,
     /\.\.\/adapters/,
     /\.\.\/presentation/,
+    /\.\.\/schemas/,
     /from\s+["']react(?:-dom)?(?:\/[^"']*)?["']/,
   ],
   application: [
@@ -37,24 +47,31 @@ const dependencyRules = {
     /\.\.\/presentation/,
     /from\s+["']react(?:-dom)?(?:\/[^"']*)?["']/,
   ],
-  presentation: [/\.\.\/adapters/, /\.\.\/schemas/],
+  presentation: [
+    /\.\.\/adapters/,
+    /\.\.\/schemas/,
+  ],
+  schemas: [
+    /\.\.\/application/,
+    /\.\.\/adapters/,
+    /\.\.\/presentation/,
+    /from\s+["']react(?:-dom)?(?:\/[^"']*)?["']/,
+  ],
 };
 
-const coreEnvironmentPatterns = [
+const storagePatterns = [
   /\blocalStorage\b/,
   /\bsessionStorage\b/,
   /\bindexedDB\b/,
-  /\bwindow\./,
-  /\bdocument\./,
-  /\bfetch\s*\(/,
-  /\bXMLHttpRequest\b/,
-  /\bWebSocket\b/,
 ];
 
-const presentationProhibitedPatterns = [
-  /\blocalStorage\b/,
-  /\bsessionStorage\b/,
-  /\bindexedDB\b/,
+const browserEnvironmentPatterns = [
+  ...storagePatterns,
+  /\bwindow\./,
+  /\bdocument\./,
+];
+
+const networkPatterns = [
   /\bfetch\s*\(/,
   /\bXMLHttpRequest\b/,
   /\bWebSocket\b/,
@@ -81,34 +98,62 @@ for (const layer of layers) {
   if (existsSync(directory)) visit(directory, layer);
 }
 
+const mainPath = join(root, "src/main.tsx");
+if (!existsSync(mainPath)) {
+  errors.push("COMPOSITION_ROOT_MISSING:src/main.tsx");
+} else {
+  files.push({ path: mainPath, layer: "composition" });
+}
+
+const authorizedStoragePaths = new Set([
+  "src/main.tsx",
+  "src/adapters/storage/local-storage-project-repository.ts",
+]);
+
 for (const { path, layer } of files) {
   const text = readFileSync(path, "utf8");
+  const file = relative(root, path);
   const patterns = dependencyRules[layer] ?? [];
 
   for (const pattern of patterns) {
     if (pattern.test(text)) {
       errors.push(
-        `DEPENDENCY_DIRECTION:${layer}:${relative(root, path)}:${String(pattern)}`,
+        `DEPENDENCY_DIRECTION:${layer}:${file}:${String(pattern)}`,
       );
     }
   }
 
-  const environmentPatterns =
-    layer === "presentation"
-      ? presentationProhibitedPatterns
-      : coreEnvironmentPatterns;
-
-  for (const pattern of environmentPatterns) {
+  for (const pattern of networkPatterns) {
     if (pattern.test(text)) {
-      errors.push(
-        `ENVIRONMENT_LEAK:${layer}:${relative(root, path)}:${String(pattern)}`,
-      );
+      errors.push(`NETWORK_ACCESS:${layer}:${file}:${String(pattern)}`);
+    }
+  }
+
+  if (["domain", "ports", "application", "presentation", "schemas"].includes(layer)) {
+    for (const pattern of browserEnvironmentPatterns) {
+      if (pattern.test(text)) {
+        errors.push(
+          `ENVIRONMENT_LEAK:${layer}:${file}:${String(pattern)}`,
+        );
+      }
+    }
+  }
+
+  for (const pattern of storagePatterns) {
+    if (pattern.test(text) && !authorizedStoragePaths.has(file)) {
+      errors.push(`STORAGE_OUTSIDE_ADAPTER_BOUNDARY:${file}:${String(pattern)}`);
     }
   }
 
   if (/src\/App\.jsx|from\s+["'][^"']*legacy[^"']*["']/.test(text)) {
-    errors.push(`LEGACY_IMPORT:${relative(root, path)}`);
+    errors.push(`LEGACY_IMPORT:${file}`);
   }
+}
+
+const requiredPersistenceAdapter =
+  "src/adapters/storage/local-storage-project-repository.ts";
+if (!existsSync(join(root, requiredPersistenceAdapter))) {
+  errors.push(`PERSISTENCE_ADAPTER_MISSING:${requiredPersistenceAdapter}`);
 }
 
 const packageJson = JSON.parse(
@@ -116,6 +161,8 @@ const packageJson = JSON.parse(
 );
 const runtimeDependencies = Object.keys(packageJson.dependencies ?? {}).sort();
 const allowedRuntimeDependencies = ["react", "react-dom"];
+const bundledValidationDependencies = ["ajv", "ajv-formats"];
+const devDependencies = packageJson.devDependencies ?? {};
 
 if (
   runtimeDependencies.length !== allowedRuntimeDependencies.length ||
@@ -128,6 +175,12 @@ if (
   );
 }
 
+for (const dependency of bundledValidationDependencies) {
+  if (!(dependency in devDependencies)) {
+    errors.push(`VALIDATION_DEPENDENCY_MISSING:${dependency}`);
+  }
+}
+
 const result = {
   status: errors.length === 0 ? "PASS" : "FAIL",
   scannedFiles: files.length,
@@ -135,6 +188,8 @@ const result = {
   requiredDirectories,
   runtimeDependencies,
   allowedRuntimeDependencies,
+  bundledValidationDependencies,
+  authorizedStoragePaths: [...authorizedStoragePaths],
   errors,
 };
 

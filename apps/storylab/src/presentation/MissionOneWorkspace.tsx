@@ -1,13 +1,19 @@
 import { useState, type FormEvent } from "react";
 import type { StoryLabUseCases } from "../application";
 import { M1_INTENTION_DEFINITION } from "../domain/mission-catalog";
-import type { CreativeProject } from "../domain/model";
+import type {
+  CreativeProject,
+  ExportPackage,
+} from "../domain/model";
 import type { HumanDecisionValue } from "../domain/types";
+import type { PersistenceMode } from "./persistence-mode";
 
 export interface MissionOneWorkspaceProps {
   readonly project: CreativeProject;
   readonly useCases: StoryLabUseCases;
+  readonly persistenceMode: PersistenceMode;
   readonly onProjectChange: (project: CreativeProject) => void;
+  readonly onProjectDeleted: () => void;
   readonly onMessage: (message: string) => void;
 }
 
@@ -41,7 +47,9 @@ const DECISION_OPTIONS: readonly {
 export function MissionOneWorkspace({
   project,
   useCases,
+  persistenceMode,
   onProjectChange,
+  onProjectDeleted,
   onMessage,
 }: MissionOneWorkspaceProps) {
   const mission = project.missions.find(
@@ -74,11 +82,12 @@ export function MissionOneWorkspace({
     HumanDecisionValue | ""
   >("");
   const [rationale, setRationale] = useState("");
+  const [exportPreview, setExportPreview] =
+    useState<ExportPackage | null>(null);
+  const [deleteArmed, setDeleteArmed] = useState(false);
 
   const apply = async (
-    operation: () => Promise<
-      Awaited<ReturnType<StoryLabUseCases["startMission"]>>
-    >,
+    operation: () => ReturnType<StoryLabUseCases["startMission"]>,
     successMessage: string,
   ) => {
     setBusy(true);
@@ -88,6 +97,7 @@ export function MissionOneWorkspace({
         onMessage(result.error.safeMessage);
         return;
       }
+      setExportPreview(null);
       onProjectChange(result.value);
       onMessage(successMessage);
     } catch {
@@ -117,7 +127,9 @@ export function MissionOneWorkspace({
           ...(activity ? { responseId: activity.id } : {}),
           text: activityText,
         }),
-      "El borrador quedó guardado en memoria y permanece editable.",
+      persistenceMode === "local"
+        ? "El borrador quedó guardado localmente y permanece editable."
+        : "El borrador quedó guardado en memoria y permanece editable.",
     );
   };
 
@@ -207,11 +219,54 @@ export function MissionOneWorkspace({
     setRationale("");
   };
 
+  const prepareExportPreview = async () => {
+    setBusy(true);
+    try {
+      const result = await useCases.previewExport({
+        projectId: project.id,
+      });
+      if (!result.ok) {
+        onMessage(result.error.safeMessage);
+        return;
+      }
+      setExportPreview(result.value);
+      onMessage(
+        "Vista previa validada. No se descargó ni publicó ningún archivo.",
+      );
+    } catch {
+      onMessage("Ocurrió un error inesperado.");
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const deleteProject = async () => {
+    setBusy(true);
+    try {
+      const result = await useCases.removeProject(project.id);
+      if (!result.ok) {
+        onMessage(result.error.safeMessage);
+        return;
+      }
+      setExportPreview(null);
+      setDeleteArmed(false);
+      onProjectDeleted();
+    } catch {
+      onMessage("Ocurrió un error inesperado.");
+    } finally {
+      setBusy(false);
+    }
+  };
+
   return (
     <section className="workspace" aria-labelledby="workspace-title">
       <header className="workspace-header">
         <div>
-          <p className="eyebrow">Proyecto activo en memoria</p>
+          <p className="eyebrow">
+            {persistenceMode === "local"
+              ? "Proyecto guardado localmente"
+              : "Proyecto activo en memoria"}
+          </p>
           <h2 id="workspace-title">{project.title}</h2>
           <p>
             Seudónimo: <strong>{project.profile.pseudonym}</strong>
@@ -433,6 +488,54 @@ export function MissionOneWorkspace({
               </article>
             ) : null}
 
+            {portfolioItem ? (
+              <article className="cycle-card export-card">
+                <p className="step-kicker">6 · Previsualizar</p>
+                <h4>Vista previa de exportación</h4>
+                <p>
+                  La operación valida el paquete y excluye reflexiones privadas
+                  o de alto cuidado. No inicia una descarga.
+                </p>
+                <button
+                  type="button"
+                  className="primary-action"
+                  onClick={prepareExportPreview}
+                  disabled={busy}
+                >
+                  Preparar vista previa validada
+                </button>
+
+                {exportPreview ? (
+                  <div className="export-preview" aria-live="polite">
+                    <dl className="preview-summary">
+                      <div>
+                        <dt>Tipo</dt>
+                        <dd>{exportPreview.exportType}</dd>
+                      </div>
+                      <div>
+                        <dt>Schema</dt>
+                        <dd>{exportPreview.schemaVersion}</dd>
+                      </div>
+                      <div>
+                        <dt>Portafolio</dt>
+                        <dd>
+                          {exportPreview.project.portfolio.items.length} elemento
+                        </dd>
+                      </div>
+                      <div>
+                        <dt>Reflexiones incluidas</dt>
+                        <dd>{exportPreview.project.reflections.length}</dd>
+                      </div>
+                    </dl>
+                    <details>
+                      <summary>Ver JSON validado</summary>
+                      <pre>{JSON.stringify(exportPreview, null, 2)}</pre>
+                    </details>
+                  </div>
+                ) : null}
+              </article>
+            ) : null}
+
             {mission.status === "completed" ? (
               <article className="cycle-card reopening-card">
                 <p className="step-kicker">Iteración protegida</p>
@@ -455,10 +558,55 @@ export function MissionOneWorkspace({
         )}
       </article>
 
-      <aside className="memory-warning" aria-label="Límite de almacenamiento">
-        <strong>Sesión en memoria:</strong> al recargar la página, este proyecto
-        desaparece. La recuperación local se implementará en H08-2.4.
+      <aside className="storage-assurance" aria-label="Estado de persistencia">
+        <strong>
+          {persistenceMode === "local"
+            ? "Guardado local automático:"
+            : "Modo de sesión:"}
+        </strong>{" "}
+        {persistenceMode === "local"
+          ? "cada operación válida actualiza el proyecto de este navegador."
+          : "el proyecto desaparecerá al recargar porque el almacenamiento local no está disponible."}
       </aside>
+
+      <section className="danger-zone" aria-labelledby="delete-project-title">
+        <p className="eyebrow">Borrado explícito</p>
+        <h3 id="delete-project-title">Eliminar el proyecto local</h3>
+        <p>
+          Esta acción elimina el proyecto guardado en este navegador. No existe
+          sincronización remota ni copia en la nube.
+        </p>
+
+        {deleteArmed ? (
+          <div className="confirmation-row" role="group" aria-label="Confirmar borrado local">
+            <button
+              type="button"
+              className="danger-action"
+              onClick={deleteProject}
+              disabled={busy}
+            >
+              Confirmar borrado local
+            </button>
+            <button
+              type="button"
+              className="secondary-action"
+              onClick={() => setDeleteArmed(false)}
+              disabled={busy}
+            >
+              Cancelar
+            </button>
+          </div>
+        ) : (
+          <button
+            type="button"
+            className="danger-action"
+            onClick={() => setDeleteArmed(true)}
+            disabled={busy}
+          >
+            Preparar borrado local
+          </button>
+        )}
+      </section>
     </section>
   );
 }

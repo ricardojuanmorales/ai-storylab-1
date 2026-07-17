@@ -13,29 +13,34 @@ responsable.
 
 ```yaml
 version_line: v0.8.0
-current_unit: H08-2.3
-current_process: H08_2_M1_functional_cycle
+current_unit: H08-2.4
+current_process: H08_2_recovery_export_preview
 current_branch: feat/v0.8-h08-2-consolidated-vertical-slice
 current_PR: 59
 PR_mode: consolidated_draft
 
 baseline:
   main_sha: 9b941f185feb1e59f7a774ad07c976c415537dae
-  H08_2_2_head: 203f52fec38afd35821a579d054b4b1fc2260e9b
+  H08_2_3_head: c6aa6cb3e0dc5bf7b779c2ad024a8ec1d1f2566c
 
 schema_version: 0.8.0-alpha.1
-test_files: 15
-tests: 92
+test_files: 19
+tests: 117
 runtime_dependencies:
   - react
   - react-dom
+bundled_validation_dependencies:
+  - ajv
+  - ajv-formats
 
 architecture:
   domain: integrated
-  ports: integrated
-  application: functional_M1_engine
-  adapters: in_memory_and_browser_composition
-  presentation: M1_functional
+  ports: recoverable_repository
+  application: M1_recovery_export_preview
+  adapters:
+    - localStorage_provisional
+    - in_memory_fallback
+  presentation: recovery_and_preview
 
 experience:
   canonical_missions: 4
@@ -47,20 +52,29 @@ experience:
     - M4_curation_and_closure
 
 persistence:
-  current: ephemeral_in_memory
-  durable: not_implemented
-
-data:
-  mode: synthetic_only
+  technology: localStorage
+  status: provisional_ratified
+  capacity: one_most_recent_project
+  schema_validation_on_load: true
+  invariant_validation_on_load: true
+  fallback: in_memory
   real_data: prohibited
 
+export_preview:
+  status: functional
+  portfolio_required: true
+  private_reflections_excluded: true
+  high_care_reflections_excluded: true
+  automatic_download: false
+  import_roundtrip: false
+
 H08_2:
-  lifecycle: M1_functional_cycle_active
-  current_block: H08_2_3
-  export_preview: not_started
+  lifecycle: recovery_export_preview_active
+  current_block: H08_2_4
+  next_checkpoint: H08_2A
 ```
 
-## Flujo funcional H08-2.3
+## Vertical slice completa de H08-2
 
 ```text
 perfil sintético
@@ -71,42 +85,64 @@ perfil sintético
 → reflexión privada opcional
 → decisión humana
 → portafolio reversible
-→ reapertura
+→ guardado local
+→ recuperación validada
+→ export preview
 ```
 
-## Motor reutilizable
+## Persistencia local provisional
 
-La misión se recibe como `MissionDefinition`. Las operaciones funcionales viven
-en aplicación y la presentación recibe servicios inyectados desde `main.tsx`.
+El proyecto reciente se guarda mediante `ProjectRepository`. Al cargar:
 
-## Arco completo de v0.8.0
+```text
+JSON.parse
+→ JSON Schema 2020-12
+→ invariantes
+→ CreativeProject
+```
+
+Los datos corruptos se bloquean y pueden descartarse explícitamente. Si el
+navegador bloquea el almacenamiento local, la aplicación usa memoria y comunica
+que la sesión es efímera.
+
+## Export preview
+
+La vista previa requiere portafolio, valida `ExportPackage` y excluye:
+
+- reflexiones privadas;
+- reflexiones de alto cuidado;
+- reflexiones no seleccionadas.
+
+Previsualizar no descarga, importa ni publica.
+
+## Misiones canónicas de v0.8.0
 
 1. M1 · Intención creadora.
 2. M2 · Arquitectura narrativa.
 3. M3 · Producción multimodal.
 4. M4 · Curaduría y cierre.
 
-M2, M3 y M4 permanecen planificadas para H08-4. H08-2A no sustituye
-`GATE-V08-CLOSE`.
+H08-2A evalúa la primera vertical slice. No sustituye `GATE-V08-CLOSE`.
 
 ## Límites
 
-- sin persistencia durable;
-- sin recuperación después de recargar;
-- sin export preview;
-- sin importación o roundtrip;
+- un proyecto reciente;
+- sin importación ni roundtrip;
+- sin migración legacy;
+- sin M2, M3 o M4 funcionales;
 - sin datos reales;
+- sin nube;
 - sin IA embebida;
 - sin publicación automática.
 
 ## Documentación activa
 
-`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_2_3_M1_Motor_Creativo/`
+`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_2_4_Recuperacion_Export_Preview/`
 
 ## Regla de oro
 
 ```text
-Crear no equivale a evidenciar.
-Evidenciar no equivale a curar.
-Curar requiere decisión humana.
+Guardar no implica confiar.
+Cargar requiere validar.
+Previsualizar no implica publicar.
 ```

@@ -1,13 +1,16 @@
 import { useState, type FormEvent } from "react";
 import type { CreateProjectInput } from "../application";
+import type { PersistenceMode } from "./persistence-mode";
 
 export interface ProjectSetupProps {
   readonly busy: boolean;
+  readonly persistenceMode: PersistenceMode;
   readonly onCreate: (input: CreateProjectInput) => Promise<void>;
 }
 
 export function ProjectSetup({
   busy,
+  persistenceMode,
   onCreate,
 }: ProjectSetupProps) {
   const [pseudonym, setPseudonym] = useState("");
@@ -31,6 +34,11 @@ export function ProjectSetup({
         <p>
           Usa un seudónimo. No escribas nombre, correo, número estudiantil ni
           otros identificadores personales.
+        </p>
+        <p className="storage-mode-note">
+          {persistenceMode === "local"
+            ? "El proyecto se guardará automáticamente en este navegador."
+            : "El almacenamiento local no está disponible; el proyecto durará solamente esta sesión."}
         </p>
       </div>
 

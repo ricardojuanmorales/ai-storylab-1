@@ -22,9 +22,16 @@ class SequentialClock implements Clock {
   }
 }
 
-export const createTestStoryLabUseCases = () =>
-  createStoryLabUseCases({
-    repository: new InMemoryProjectRepository(),
+export const createTestStoryLabRuntime = () => {
+  const repository = new InMemoryProjectRepository();
+  const useCases = createStoryLabUseCases({
+    repository,
     clock: new SequentialClock(),
     ids: new SequentialIdGenerator(),
   });
+
+  return { repository, useCases };
+};
+
+export const createTestStoryLabUseCases = () =>
+  createTestStoryLabRuntime().useCases;

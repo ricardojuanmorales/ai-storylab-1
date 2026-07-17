@@ -602,3 +602,115 @@ small {
     flex-direction: column;
   }
 }
+
+
+.storage-mode-note,
+.storage-assurance,
+.recovery-panel,
+.danger-zone,
+.export-preview {
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--surface-muted);
+}
+
+.storage-mode-note {
+  padding: 0.75rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.recovery-panel {
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.recovery-panel h2,
+.recovery-panel p {
+  margin-top: 0;
+}
+
+.storage-assurance {
+  padding: 1rem;
+  color: var(--muted);
+}
+
+.export-card {
+  border-color: var(--accent);
+}
+
+.export-preview {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--surface);
+}
+
+.preview-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.preview-summary div {
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.55rem;
+  background: var(--surface-muted);
+}
+
+.preview-summary dt {
+  color: var(--muted);
+  font-size: 0.82em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.preview-summary dd {
+  margin: 0.25rem 0 0;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.export-preview details {
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+}
+
+.export-preview summary {
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.export-preview pre {
+  max-height: 28rem;
+  overflow: auto;
+  padding: 1rem;
+  border-radius: 0.55rem;
+  background: var(--ink);
+  color: var(--surface);
+  font-size: 0.82em;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.danger-zone {
+  padding: 1.25rem;
+  border-style: dashed;
+}
+
+.danger-zone h3 {
+  margin-top: 0;
+}
+
+.confirmation-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+@media (max-width: 48rem) {
+  .preview-summary {
+    grid-template-columns: 1fr;
+  }
+}

@@ -26,7 +26,7 @@ describe("accessible shell", () => {
     expect(
       screen.getByRole("heading", {
         level: 1,
-        name: "Tu intención creadora ya puede cerrar un ciclo",
+        name: "Tu ciclo creativo puede continuar después de recargar",
       }),
     ).toBeTruthy();
   });
@@ -57,7 +57,7 @@ describe("accessible shell", () => {
     expect(screen.getByRole("status").textContent).toContain("contraste alto");
   });
 
-  it("activa la reducción de movimiento sin persistir datos", async () => {
+  it("activa la reducción de movimiento", async () => {
     const user = userEvent.setup();
     renderApp();
 
@@ -91,16 +91,19 @@ describe("accessible shell", () => {
     const user = userEvent.setup();
     renderApp();
 
+    const pseudonym = await screen.findByRole("textbox", {
+      name: "Seudónimo local",
+    });
     const expectedControls = [
       screen.getByRole("button", { name: /Contraste alto/i }),
       screen.getByRole("button", { name: /Reducir movimiento/i }),
       screen.getByRole("combobox", { name: "Escala de texto" }),
-      screen.getByRole("textbox", { name: "Seudónimo local" }),
+      pseudonym,
       screen.getByRole("textbox", { name: "Título del proyecto" }),
     ];
     const reached = new Set<Element>();
 
-    for (let index = 0; index < 20; index += 1) {
+    for (let index = 0; index < 22; index += 1) {
       await user.tab();
       if (document.activeElement) reached.add(document.activeElement);
     }
@@ -110,15 +113,17 @@ describe("accessible shell", () => {
     }
   });
 
-  it("muestra M1 disponible y conserva el resto del arco", () => {
+  it("muestra el avance de H08-2.4 sin habilitar importación", () => {
     renderApp();
 
     expect(screen.getByText("M1 · Intención creadora")).toBeTruthy();
     expect(screen.getByText("M2 · Arquitectura narrativa")).toBeTruthy();
     expect(screen.getByText("M3 · Producción multimodal")).toBeTruthy();
     expect(screen.getByText("M4 · Curaduría y cierre")).toBeTruthy();
-    expect(screen.getAllByText("Planificado").length).toBe(5);
+    expect(screen.getByText("Recuperación local y export preview")).toBeTruthy();
+    expect(screen.getByText("Importación y roundtrip")).toBeTruthy();
+    expect(screen.getAllByText("Planificado")).toHaveLength(4);
+    expect(screen.getAllByText("Preparado")).toHaveLength(3);
     expect(screen.getByText("Disponible")).toBeTruthy();
-    expect(screen.getByText("Preparado")).toBeTruthy();
   });
 });

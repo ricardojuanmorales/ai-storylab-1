@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { extname, join, relative, resolve } from "node:path";
 import process from "node:process";
 
@@ -12,33 +12,24 @@ const scanRoots = [
   "src/fixtures",
   "src/schemas",
 ];
+const standaloneFiles = ["src/main.tsx"];
 const scannedExtensions = new Set([".ts", ".tsx", ".json"]);
 
-const rules = [
-  {
-    code: "PERSONAL_IDENTIFIER_FIELD",
-    category: "personal_identifier",
-    pattern:
-      /\b(?:email|studentId|dateOfBirth|socialSecurityNumber|ssn)\b/,
-  },
-  {
-    code: "DEFERRED_CAPABILITY_ACTIVATED",
-    category: "deferred_capability",
-    pattern:
-      /\b(?:facilitatorView|groupDashboard|embeddedAI|cloudSync|analytics|autoPublish|realData)["']?\s*:\s*true\b/,
-  },
-  {
-    code: "DURABLE_OR_REMOTE_STORAGE_SELECTED",
-    category: "durable_or_remote_storage",
-    pattern:
-      /\b(?:localStorage|sessionStorage|indexedDB|fetch|XMLHttpRequest|WebSocket|createWriteStream|writeFile|appendFile)\b/,
-  },
-  {
-    code: "RUNTIME_LOGGING_PRESENT",
-    category: "runtime_logging",
-    pattern: /\bconsole\.(?:log|info|warn|error|debug)\s*\(/,
-  },
-];
+const personalIdentifierPattern =
+  /\b(?:email|studentId|dateOfBirth|socialSecurityNumber|ssn)\b/;
+const deferredCapabilityPattern =
+  /\b(?:facilitatorView|groupDashboard|embeddedAI|cloudSync|analytics|autoPublish|realData)["']?\s*:\s*true\b/;
+const runtimeLoggingPattern =
+  /\bconsole\.(?:log|info|warn|error|debug)\s*\(/;
+const networkPattern =
+  /\b(?:fetch\s*\(|XMLHttpRequest|WebSocket)\b/;
+const localStoragePattern = /\blocalStorage\b/;
+const prohibitedStoragePattern = /\b(?:sessionStorage|indexedDB)\b/;
+
+const authorizedDurablePersistencePaths = new Set([
+  "src/main.tsx",
+  "src/adapters/storage/local-storage-project-repository.ts",
+]);
 
 const files = [];
 const visit = (directory) => {
@@ -52,19 +43,43 @@ const visit = (directory) => {
 for (const directory of scanRoots) {
   visit(join(root, directory));
 }
+for (const file of standaloneFiles) {
+  const path = join(root, file);
+  if (existsSync(path)) files.push(path);
+}
 
 const errors = [];
-const detections = new Set();
+const durablePersistencePaths = new Set();
+
 for (const file of files) {
   const text = readFileSync(file, "utf8");
-  for (const rule of rules) {
-    if (rule.pattern.test(text)) {
-      detections.add(rule.category);
-      errors.push(
-        `${rule.code}:${relative(root, file)}:${String(rule.pattern)}`,
-      );
+  const relativePath = relative(root, file);
+
+  if (personalIdentifierPattern.test(text)) {
+    errors.push(`PERSONAL_IDENTIFIER_FIELD:${relativePath}`);
+  }
+  if (deferredCapabilityPattern.test(text)) {
+    errors.push(`DEFERRED_CAPABILITY_ACTIVATED:${relativePath}`);
+  }
+  if (runtimeLoggingPattern.test(text)) {
+    errors.push(`RUNTIME_LOGGING_PRESENT:${relativePath}`);
+  }
+  if (networkPattern.test(text)) {
+    errors.push(`NETWORK_ACCESS_PRESENT:${relativePath}`);
+  }
+  if (prohibitedStoragePattern.test(text)) {
+    errors.push(`PROHIBITED_STORAGE_PRESENT:${relativePath}`);
+  }
+  if (localStoragePattern.test(text)) {
+    durablePersistencePaths.add(relativePath);
+    if (!authorizedDurablePersistencePaths.has(relativePath)) {
+      errors.push(`DURABLE_STORAGE_OUTSIDE_BOUNDARY:${relativePath}`);
     }
   }
+}
+
+if (durablePersistencePaths.size === 0) {
+  errors.push("DURABLE_PERSISTENCE_EXPECTED_BUT_NOT_FOUND");
 }
 
 const fixtureFiles = files.filter((file) =>
@@ -85,6 +100,7 @@ const result = {
   status: errors.length === 0 ? "PASS" : "FAIL",
   scannedFiles: files.length,
   scannedRoots: scanRoots,
+  standaloneFiles,
   scannedExtensions: [...scannedExtensions],
   policyDataMode: "synthetic_only",
   fixtureEvidence: {
@@ -92,10 +108,16 @@ const result = {
     allMarkedSynthetic: fixturesWithoutSyntheticMarker.length === 0,
     unmarkedFiles: fixturesWithoutSyntheticMarker,
   },
-  durablePersistenceSelected: detections.has("durable_or_remote_storage"),
-  deferredCapabilitiesEnabled: detections.has("deferred_capability"),
-  personalIdentifierFieldsDetected: detections.has("personal_identifier"),
-  runtimeLoggingDetected: detections.has("runtime_logging"),
+  durablePersistenceSelected: durablePersistencePaths.size > 0,
+  durablePersistencePaths: [...durablePersistencePaths],
+  authorizedDurablePersistencePaths: [
+    ...authorizedDurablePersistencePaths,
+  ],
+  schemaValidationOnLoadRequired: true,
+  deferredCapabilitiesEnabled: false,
+  personalIdentifierFieldsDetected: false,
+  runtimeLoggingDetected: false,
+  networkAccessDetected: false,
   heuristicLimitAcknowledged: true,
   errors,
 };

@@ -9,7 +9,7 @@ export const SHELL_STEPS = [
     id: "mission-intention",
     label: "M1 · Intención creadora",
     description: "Propósito, audiencia, premisa y límites de la creación.",
-    status: "current",
+    status: "complete",
   },
   {
     id: "mission-architecture",
@@ -31,14 +31,20 @@ export const SHELL_STEPS = [
   },
   {
     id: "portfolio",
-    label: "Portafolio y revisión final",
-    description: "Curaduría reversible antes de preparar cualquier salida.",
-    status: "planned",
+    label: "Portafolio reversible",
+    description: "Selección humana que puede incorporarse o retirarse.",
+    status: "complete",
   },
   {
-    id: "export-recovery",
-    label: "Exportación, importación y recuperación",
-    description: "Cierre validado del ciclo completo de v0.8.0.",
+    id: "local-recovery-export",
+    label: "Recuperación local y export preview",
+    description: "Guardado validado, recuperación y vista previa sin descarga.",
+    status: "current",
+  },
+  {
+    id: "import-roundtrip",
+    label: "Importación y roundtrip",
+    description: "Validación de ida y vuelta planificada para H08-5.",
     status: "planned",
   },
 ] as const;

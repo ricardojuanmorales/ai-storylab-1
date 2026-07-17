@@ -1,10 +1,16 @@
-import { useRef, useState, type MouseEvent } from "react";
+import {
+  useEffect,
+  useRef,
+  useState,
+  type MouseEvent,
+} from "react";
 import type { StoryLabUseCases } from "../application";
 import type {
   AccessibilityPreferences,
   CreativeProject,
 } from "../domain/model";
 import { MissionOneWorkspace } from "./MissionOneWorkspace";
+import type { PersistenceMode } from "./persistence-mode";
 import { ProjectSetup } from "./ProjectSetup";
 import {
   SHELL_STEPS,
@@ -26,19 +32,68 @@ const TEXT_SCALE_LABELS: Readonly<
   extra_large: "Extra grande",
 };
 
+type RecoveryState = "checking" | "ready";
+
 export interface AppProps {
   readonly useCases: StoryLabUseCases;
+  readonly persistenceMode?: PersistenceMode;
 }
 
-export function App({ useCases }: AppProps) {
+export function App({
+  useCases,
+  persistenceMode = "memory",
+}: AppProps) {
   const [preferences, setPreferences] =
     useState<AccessibilityPreferences>(DEFAULT_PREFERENCES);
   const [project, setProject] = useState<CreativeProject | null>(null);
   const [busy, setBusy] = useState(false);
+  const [recoveryState, setRecoveryState] =
+    useState<RecoveryState>("checking");
+  const [recoveryIssue, setRecoveryIssue] = useState(false);
   const [statusMessage, setStatusMessage] = useState(
-    "M1 está disponible. Comienza con un perfil sintético.",
+    "Comprobando si existe un proyecto local recuperable.",
   );
   const mainRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    let active = true;
+
+    const recover = async () => {
+      try {
+        const result = await useCases.recoverProject();
+        if (!active) return;
+
+        if (!result.ok) {
+          setRecoveryIssue(true);
+          setStatusMessage(result.error.safeMessage);
+          setRecoveryState("ready");
+          return;
+        }
+
+        setRecoveryIssue(false);
+        setProject(result.value);
+        setStatusMessage(
+          result.value
+            ? "Proyecto local recuperado y validado."
+            : persistenceMode === "local"
+              ? "No se encontró un proyecto guardado. Puedes crear uno."
+              : "El almacenamiento local no está disponible. Puedes trabajar durante esta sesión.",
+        );
+        setRecoveryState("ready");
+      } catch {
+        if (!active) return;
+        setRecoveryIssue(true);
+        setRecoveryState("ready");
+        setStatusMessage("Ocurrió un error inesperado durante la recuperación.");
+      }
+    };
+
+    void recover();
+
+    return () => {
+      active = false;
+    };
+  }, [persistenceMode, useCases]);
 
   const focusMain = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
@@ -78,7 +133,29 @@ export function App({ useCases }: AppProps) {
       }
       setProject(result.value);
       setStatusMessage(
-        "Proyecto local creado. Ahora puedes iniciar M1.",
+        persistenceMode === "local"
+          ? "Proyecto creado y guardado automáticamente en este navegador."
+          : "Proyecto creado para esta sesión.",
+      );
+    } catch {
+      setStatusMessage("Ocurrió un error inesperado.");
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const clearBrokenRecovery = async () => {
+    setBusy(true);
+    try {
+      const result = await useCases.clearRecovery();
+      if (!result.ok) {
+        setStatusMessage(result.error.safeMessage);
+        return;
+      }
+      setRecoveryIssue(false);
+      setProject(null);
+      setStatusMessage(
+        "Los datos locales dañados fueron descartados. Puedes comenzar de nuevo.",
       );
     } catch {
       setStatusMessage("Ocurrió un error inesperado.");
@@ -108,7 +185,9 @@ export function App({ useCases }: AppProps) {
           <p className="eyebrow">Investigación-creación local-first</p>
           <p className="brand">AI StoryLab 1</p>
         </div>
-        <p className="status-badge">M1 funcional · H08-2.3</p>
+        <p className="status-badge">
+          Recuperación y export preview · H08-2.4
+        </p>
       </header>
 
       <nav className="primary-nav" aria-label="Navegación principal">
@@ -126,12 +205,14 @@ export function App({ useCases }: AppProps) {
       >
         <section id="inicio" className="hero" aria-labelledby="hero-title">
           <div>
-            <p className="eyebrow">Primera vertical slice funcional</p>
-            <h1 id="hero-title">Tu intención creadora ya puede cerrar un ciclo</h1>
+            <p className="eyebrow">Vertical slice local-first recuperable</p>
+            <h1 id="hero-title">
+              Tu ciclo creativo puede continuar después de recargar
+            </h1>
             <p className="hero-copy">
-              Crea un proyecto sintético, completa M1, guarda un borrador,
-              prepara evidencia, reflexiona, decide y cura un portafolio
-              reversible.
+              El proyecto sintético se valida antes de recuperarse. La vista
+              previa de exportación requiere portafolio y nunca descarga ni
+              publica automáticamente.
             </p>
           </div>
 
@@ -139,8 +220,8 @@ export function App({ useCases }: AppProps) {
             <h2 id="boundary-title">Límites activos</h2>
             <ul>
               <li>Datos sintéticos únicamente</li>
-              <li>Sin conexión de red requerida</li>
-              <li>Estado efímero en memoria</li>
+              <li>Persistencia local de un proyecto reciente</li>
+              <li>Sin importación ni roundtrip</li>
               <li>Sin decisiones automatizadas</li>
             </ul>
           </aside>
@@ -155,8 +236,8 @@ export function App({ useCases }: AppProps) {
             <p className="eyebrow">Adaptación inmediata</p>
             <h2 id="preferences-title">Preferencias de accesibilidad</h2>
             <p>
-              Estos ajustes modifican solamente la vista actual y no se
-              transmiten.
+              Estos ajustes modifican la vista actual. La integración de estas
+              preferencias al perfil persistente permanece fuera de H08-2.4.
             </p>
           </div>
 
@@ -225,15 +306,57 @@ export function App({ useCases }: AppProps) {
         </p>
 
         <div id="experiencia">
-          {project ? (
+          {recoveryState === "checking" ? (
+            <section className="panel recovery-panel" aria-live="polite">
+              <p className="eyebrow">Validación local</p>
+              <h2>Buscando un proyecto recuperable</h2>
+              <p>
+                El sistema comprueba el JSON, el schema y las invariantes antes
+                de aceptar datos guardados.
+              </p>
+            </section>
+          ) : recoveryIssue ? (
+            <section
+              className="panel recovery-panel"
+              aria-labelledby="recovery-issue-title"
+            >
+              <p className="eyebrow">Recuperación detenida</p>
+              <h2 id="recovery-issue-title">
+                El proyecto local no puede recuperarse
+              </h2>
+              <p>
+                Los datos no se cargarán silenciosamente. Puedes descartarlos
+                y comenzar con un proyecto sintético nuevo.
+              </p>
+              <button
+                type="button"
+                className="danger-action"
+                onClick={clearBrokenRecovery}
+                disabled={busy}
+              >
+                Descartar datos locales dañados
+              </button>
+            </section>
+          ) : project ? (
             <MissionOneWorkspace
               project={project}
               useCases={useCases}
+              persistenceMode={persistenceMode}
               onProjectChange={setProject}
+              onProjectDeleted={() => {
+                setProject(null);
+                setStatusMessage(
+                  "El proyecto local fue borrado explícitamente.",
+                );
+              }}
               onMessage={setStatusMessage}
             />
           ) : (
-            <ProjectSetup busy={busy} onCreate={createLocalProject} />
+            <ProjectSetup
+              busy={busy}
+              persistenceMode={persistenceMode}
+              onCreate={createLocalProject}
+            />
           )}
         </div>
 
@@ -246,8 +369,8 @@ export function App({ useCases }: AppProps) {
             <p className="eyebrow">Ruta gobernada</p>
             <h2 id="cycle-title">Mapa del arco creativo completo de v0.8.0</h2>
             <p>
-              M1 demuestra el motor reutilizable. M2, M3 y M4 permanecen
-              planificadas para H08-4.
+              H08-2.4 completa recuperación y export preview. M2, M3, M4,
+              importación y roundtrip continúan en bloques posteriores.
             </p>
           </div>
 
@@ -275,31 +398,33 @@ export function App({ useCases }: AppProps) {
 
         <section className="assurance-grid" aria-label="Garantías del ciclo">
           <article>
-            <h2>Agencia humana</h2>
+            <h2>Validación al cargar</h2>
             <p>
-              La evidencia requiere una decisión explícita antes de entrar al
-              portafolio.
+              Un proyecto guardado debe superar JSON Schema e invariantes antes
+              de regresar a la interfaz.
             </p>
           </article>
           <article>
-            <h2>Privacidad por defecto</h2>
+            <h2>Privacidad de exportación</h2>
             <p>
-              La reflexión es opcional, editable y privada. No se selecciona
-              para exportación.
+              Las reflexiones privadas o de alto cuidado no aparecen en la
+              vista previa.
             </p>
           </article>
           <article>
-            <h2>Iteración real</h2>
+            <h2>Control humano</h2>
             <p>
-              M1 puede reabrirse. Borrador, evidencia y reflexión se conservan
-              mientras la curaduría anterior se invalida.
+              Guardar, borrar, curar y previsualizar son acciones separadas y
+              reversibles.
             </p>
           </article>
         </section>
       </main>
 
       <footer className="site-footer">
-        <p>PR #59 · M1 funcional · Datos sintéticos · Sin persistencia</p>
+        <p>
+          PR #59 · Recuperación local · Export preview · Sin importación
+        </p>
       </footer>
     </div>
   );

@@ -1,19 +1,8 @@
-# AI StoryLab · M1 funcional
+# AI StoryLab · Recuperación local y export preview
 
-**Unidad vigente:** H08-2.3
+**Unidad vigente:** H08-2.4
 **Schema:** `0.8.0-alpha.1`
-**Estado:** primera vertical slice funcional sobre repositorio en memoria
-
-## Capas
-
-```text
-presentation
-→ application
-→ domain + ports
-→ adapters
-```
-
-La composición ocurre en `src/main.tsx`.
+**Estado:** primera vertical slice local-first recuperable
 
 ## Capacidades activas
 
@@ -24,14 +13,37 @@ La composición ocurre en `src/main.tsx`.
 - reflexión privada opcional;
 - decisión humana;
 - portafolio reversible;
-- reapertura.
+- guardado local automático;
+- recuperación validada;
+- descarte de corrupción;
+- borrado explícito;
+- export preview validado.
 
-## Misiones canónicas
+## Composición
 
-El catálogo contiene M1, M2, M3 y M4. Solamente M1 está conectada a la interfaz
-en H08-2.3.
+```text
+main.tsx
+→ prueba disponibilidad de storage
+→ LocalStorageProjectRepository
+   OR InMemoryProjectRepository
+→ StoryLabUseCases
+→ App
+```
+
+## Validación
+
+`src/schemas/runtime-validators.ts` utiliza JSON Schema 2020-12 y las invariantes
+del dominio para validar proyectos recuperados y paquetes de exportación.
+
+## Privacidad
+
+Las reflexiones `private`, `high_care` o no seleccionadas quedan fuera de la
+vista previa.
 
 ## Límites
 
-Al recargar, el estado se pierde. No existe `localStorage`, importación,
-roundtrip ni export preview.
+- un proyecto reciente;
+- sin importación;
+- sin roundtrip;
+- sin descarga automática;
+- sin datos reales.

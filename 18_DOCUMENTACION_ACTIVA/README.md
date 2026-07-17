@@ -7,40 +7,45 @@ StoryLab 1.
 
 ```yaml
 current_version_line: v0.8.0
-current_process: H08_2_M1_functional_cycle
+current_process: H08_2_recovery_export_preview
 effective_baseline: 9b941f185feb1e59f7a774ad07c976c415537dae
 current_branch: feat/v0.8-h08-2-consolidated-vertical-slice
 current_PR: 59
 PR_mode: consolidated_draft
 
 H08_2:
-  lifecycle: M1_functional_cycle_active
-  current_block: H08_2_3
+  lifecycle: recovery_export_preview_active
+  current_block: H08_2_4
   canonical_missions: 4
   functional_missions: 1
-  persistence_implementation: not_started
-  export_preview: not_started
+  local_recovery: functional
+  export_preview: functional
+  import_roundtrip: not_started
+  next_checkpoint: H08_2A
 ```
 
 ## Continuidad activa principal
 
-`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_2_3_M1_Motor_Creativo/`
+`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_2_4_Recuperacion_Export_Preview/`
 
-## Evidencia requerida para cerrar H08-2.3
+## Evidencia requerida para cerrar H08-2.4
 
-- M1 completa;
-- motor reutilizable;
-- actividad editable;
-- evidencia no automática;
-- reflexión privada opcional;
-- decisión humana;
-- portafolio reversible;
-- reapertura;
-- integridad referencial;
-- build, auditorías y 92 pruebas;
-- CI Node 22 y 24 verde.
+- ADR ratificado;
+- claves versionadas;
+- guardado local;
+- recuperación tras recarga;
+- JSON Schema e invariantes al cargar;
+- corrupción bloqueada;
+- cuota tipada;
+- fallback en memoria;
+- borrado en dos pasos;
+- portafolio requerido para preview;
+- reflexión privada excluida;
+- ausencia de descarga, importación y red;
+- build, auditorías y 117 pruebas;
+- CI Node 22 y Node 24 verde.
 
-## Próximo bloque
+## Próximo paso
 
-H08-2.4 añadirá recuperación local y export preview validado. El PR permanece
-Draft.
+Congelar el SHA de H08-2.4 y ejecutar H08-2A como checkpoint independiente. El
+PR permanece Draft y el merge continúa prohibido.

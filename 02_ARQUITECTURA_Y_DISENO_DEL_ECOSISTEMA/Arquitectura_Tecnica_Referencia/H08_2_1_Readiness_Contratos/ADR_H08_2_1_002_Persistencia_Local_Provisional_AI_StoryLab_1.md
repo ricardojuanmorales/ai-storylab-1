@@ -1,26 +1,31 @@
 # ADR-H08-2.1-002 · Persistencia local provisional
 
-**Estado:** `PROPOSED_FOR_HUMAN_RATIFICATION`  
-**Aplicación más temprana:** H08-2.4
+**Estado:** `ACCEPTED_FOR_H08_2_4`
+**Ratificación humana:** 2026-07-16
+**Aplicación:** H08-2.4
 
 ## Contexto
 
-H08-2 requiere recuperación local básica. El dominio y la aplicación ya
-dependen de `ProjectRepository`, por lo que la tecnología concreta puede
-permanecer detrás de un adaptador.
+H08-2 requiere recuperación local básica. El dominio y la aplicación dependen
+de `ProjectRepository`, por lo que la tecnología concreta permanece detrás de
+un adaptador reemplazable.
 
-## Propuesta
+## Decisión ratificada
 
 ```yaml
 technology: localStorage
 scope: synthetic_JSON_projects_only
+project_capacity: one_most_recent_project
 access: ProjectRepository_adapter_only
 schema_validation_on_load: required
+domain_invariants_on_load: required
 network: prohibited
 binary_content: prohibited
 real_data: prohibited
 migration: deferred
 quota_strategy: typed_error_required
+corruption_strategy: block_and_explicit_discard
+delete_strategy: explicit_two_step_action
 ```
 
 ## Razones
@@ -28,22 +33,30 @@ quota_strategy: typed_error_required
 - complejidad operacional mínima;
 - funcionamiento offline;
 - facilidad de reemplazo;
-- suficiente para demostrar recuperación básica.
+- suficiente para demostrar recuperación básica;
+- alineación con la vertical slice de H08-2.
 
-## Riesgos
+## Riesgos aceptados
 
 - cuota pequeña;
 - almacenamiento compartido por origen;
 - ausencia de transacciones;
-- exposición a scripts del mismo origen.
+- exposición a scripts del mismo origen;
+- soporte limitado a un proyecto reciente.
 
 ## Salvaguardas
 
 - datos sintéticos solamente;
-- validación antes de aceptar;
 - claves versionadas;
+- JSON Schema y invariantes antes de aceptar datos;
+- errores tipados de cuota, corrupción e indisponibilidad;
 - borrado explícito;
-- ninguna reflexión privada en exportación automática;
-- ADR separado para endurecimiento o migración.
+- fallback en memoria cuando el navegador bloquea storage;
+- ninguna reflexión privada o de alto cuidado en export preview;
+- ADR separado para endurecimiento, migración o almacenamiento alternativo.
 
-Esta propuesta no instala ni usa `localStorage` durante H08-2.1.
+## Consecuencia
+
+H08-2.4 puede utilizar `localStorage` únicamente desde el composition root y el
+adaptador autorizado. H08-3 deberá endurecer persistencia, políticas de schema
+y evolución de datos. Esta decisión no autoriza importación ni roundtrip.

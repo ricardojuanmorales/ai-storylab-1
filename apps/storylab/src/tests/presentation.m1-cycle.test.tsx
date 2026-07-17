@@ -15,7 +15,7 @@ const openMission = async () => {
   render(<App useCases={createTestStoryLabUseCases()} />);
 
   await user.type(
-    screen.getByRole("textbox", { name: "Seudónimo local" }),
+    await screen.findByRole("textbox", { name: "Seudónimo local" }),
     "Brisa",
   );
   await user.type(
@@ -201,11 +201,11 @@ describe("M1 functional experience", () => {
     ).toBeNull();
   });
 
-  it("explica que la sesión todavía es efímera", async () => {
+  it("explica el fallback efímero cuando no existe storage", async () => {
     await openMission();
 
     expect(
-      screen.getByText(/al recargar la página, este proyecto desaparece/i),
+      screen.getByText(/el proyecto desaparecerá al recargar/i),
     ).toBeTruthy();
   });
 });
