@@ -1,15 +1,17 @@
-# Registro de riesgos · H08-2A
+# Registro final de riesgos · H08-2A
 
-| Riesgo | Estado | Nivel provisional | Control |
-|---|---|---:|---|
-| pruebas verdes pero experiencia confusa | abierto | medio | recorrido humano |
-| accesibilidad no cubierta por JSDOM | abierto | medio | teclado, foco y revisión visual |
-| `localStorage` provisional | aceptado temporal | medio | H08-3 |
-| un solo proyecto reciente | aceptado temporal | bajo | H08-3 |
-| auditorías heurísticas | residual | medio-bajo | revisión manual |
-| metadata del PR desactualizada | aceptado temporal | bajo | actualizar solo al cierre |
-| gate aprobado por inferencia | controlado | alto | decisión humana separada |
-| expansión silenciosa durante checkpoint | controlado | alto | aplicador documental |
-| H08-3 abierto prematuramente | controlado | alto | gate de entrada bloqueado |
+| Riesgo | Resultado H08-2A | Disposición |
+|---|---|---|
+| costura rota entre capas | no observado | cerrado por prueba integrada y recorrido |
+| pérdida de privacidad | no observada | cerrado para H08-2 |
+| pérdida de agencia | no observada | cerrado para H08-2 |
+| accesibilidad básica insuficiente | no observada | aceptada dentro del alcance |
+| `localStorage` provisional | conocido | transferido a H08-3 |
+| un solo proyecto reciente | conocido | transferido a H08-3 |
+| migraciones ausentes | fuera de alcance | transferido a H08-3 |
+| importación y roundtrip ausentes | diferido | H08-5 |
+| M2, M3 y M4 no funcionales | esperado | H08-4 |
+| validación externa independiente | no reclamada | transparencia de gobernanza |
 
-La disposición final depende de la revisión humana y del dictamen H08-2A.
+No existen reservas de cierre para H08-2. Los riesgos transferidos son
+compromisos de roadmap, no defectos bloqueantes del alcance evaluado.

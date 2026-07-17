@@ -13,88 +13,85 @@ artificial responsable.
 
 ```yaml
 version_line: v0.8.0
-current_unit: H08-2A
-current_process: H08_2_independent_checkpoint
+current_process: H08_2_closed_pre_merge
 current_branch: feat/v0.8-h08-2-consolidated-vertical-slice
 current_PR: 59
-PR_mode: consolidated_draft
 
-baseline:
-  main_sha: 9b941f185feb1e59f7a774ad07c976c415537dae
-  functional_head_under_review: 0e9dc75bb8dd71600616365b14e894a2151594af
+baselines:
+  main_before_H08_2: 9b941f185feb1e59f7a774ad07c976c415537dae
+  functional_head_reviewed: 0e9dc75bb8dd71600616365b14e894a2151594af
+  checkpoint_head: 1bba15a27c6217d9defefe278aa6ed2142d9c041
+  closure_commit: pending
 
-schema_version: 0.8.0-alpha.1
-test_files: 20
-tests: 123
-
-automated_evidence:
-  typecheck: pending_local_checkpoint_run
-  vite_build: pending_local_checkpoint_run
-  architecture_audit: pending_local_checkpoint_run
-  secrets_audit: pending_local_checkpoint_run
-  privacy_audit: pending_local_checkpoint_run
-  vertical_slice_audit: pending_local_checkpoint_run
+verification:
+  test_files: 20
+  tests: 123
+  typecheck: PASS
+  vite_build: PASS
+  architecture_audit: PASS
+  secrets_audit: PASS
+  privacy_audit: PASS
+  vertical_slice_audit: PASS
   CI_Node_22: PASS
   CI_Node_24: PASS
 
-H08_2:
-  implementation: complete
-  integrated_consolidation: complete
-  formal_closure: pending
+human_review:
+  browser: Chrome_V149
+  operating_system: macOS
+  results_PASS: 15
+  findings: 0
+  reservations: 0
+  verdict: PASS
 
 H08_2A:
-  lifecycle: active
-  mode: structured_self_review
-  independence_claimed: false
-  product_changes: prohibited
-  gate_recommendation: hold_pending_human_review
+  lifecycle: fulfilled
+  verdict: PASS
 
 GATE_H08_2_EXIT:
-  status: pending
-  human_decision_required: true
+  status: approved
+  lifecycle: fulfilled_effective_on_closure_commit_and_PR_merge
+
+H08_2:
+  lifecycle: fulfilled
+  formal_result: PASS_without_reservations
+
+PR_59:
+  state_until_closure_commit_CI: draft
+  final_description: pending_post_closure_commit
+  merge: authorized_after_final_CI_and_human_action
 
 H08_3:
-  status: blocked_until_gate
+  entry_kit_preparation: authorized_after_PR59_merge
+  implementation: blocked_until_GATE_H08_3_ENTRY
 ```
 
-## Propósito de H08-2A
+## Resultado de H08-2
 
-Evaluar la primera vertical slice completa sin ampliar el producto:
+La primera vertical slice local-first permite:
 
 ```text
-especificaciones
-→ contratos
-→ M1 funcional
-→ persistencia local
-→ recuperación
-→ export preview
-→ integración
-→ evidencia automatizada
-→ revisión humana
-→ decisión del gate
+perfil sintético
+→ proyecto
+→ M1
+→ borrador editable
+→ evidencia
+→ reflexión privada opcional
+→ decisión humana
+→ portafolio reversible
+→ guardado local
+→ recuperación validada
+→ export preview validado
+→ borrado explícito
 ```
 
-## Regla del checkpoint
+## Cierre
 
-H08-2A evalúa. No implementa.
+H08-2A confirmó la trayectoria en revisión humana y automatizada. No se
+registraron hallazgos ni reservas. El gate de salida queda aprobado.
 
-Un hallazgo material debe producir una reserva o un bloque correctivo
-separado. No se permite resolverlo silenciosamente dentro del checkpoint.
+## Próxima fase
 
-## Estado del PR
+Después del commit documental final, CI verde, actualización definitiva del
+PR y merge humano, se preparará el kit de inicio y continuidad de H08-3.
 
-El PR #59 permanece Draft. Su descripción no se actualizará hasta que
-H08-2A emita dictamen, se registre la decisión humana y finalice la
-documentación de cierre.
-
-## Próximos actos
-
-1. ejecutar la verificación automatizada de H08-2A;
-2. registrar el commit documental de apertura;
-3. realizar la revisión humana guiada;
-4. clasificar hallazgos y reservas;
-5. emitir dictamen;
-6. obtener decisión humana del gate;
-7. actualizar gobernanza y continuidad;
-8. cerrar el PR o abrir remediación;
-9. preparar el kit completo de H08-3.
+El cierre de H08-2 no activa automáticamente la implementación de H08-3.

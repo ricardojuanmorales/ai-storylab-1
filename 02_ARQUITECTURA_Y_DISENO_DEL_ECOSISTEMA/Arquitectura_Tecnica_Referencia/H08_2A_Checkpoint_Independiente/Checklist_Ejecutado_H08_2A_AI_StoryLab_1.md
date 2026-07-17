@@ -1,17 +1,11 @@
 # Checklist ejecutado · H08-2A
 
-## Leyenda
-
-- `[x]` confirmado;
-- `[~]` parcial o con reserva;
-- `[ ]` pendiente o no satisfecho.
-
 ## Preflight
 
 - [x] Autorización explícita para abrir H08-2A.
-- [x] PR #59 permanece Draft.
+- [x] PR #59 permaneció Draft durante el checkpoint.
 - [x] Head funcional identificado: `0e9dc75bb8dd71600616365b14e894a2151594af`.
-- [x] H08-3 permanece bloqueado.
+- [x] H08-3 permaneció bloqueado.
 - [x] Cambios funcionales prohibidos.
 
 ## Evidencia automatizada
@@ -27,44 +21,46 @@
 - [x] Auditoría de privacidad.
 - [x] Auditoría de vertical slice.
 - [x] 20 archivos de prueba.
-- [x] Suite completa.
-- [x] CI Node 22 del head funcional.
-- [x] CI Node 24 del head funcional.
+- [x] 123 pruebas.
+- [x] CI Node 22.
+- [x] CI Node 24.
 - [x] Sin cambios en código, schemas o package-lock.
 
 ## Revisión humana
 
-- [ ] Crear proyecto desde cero.
-- [ ] Completar M1.
-- [ ] Recargar y recuperar.
-- [ ] Reabrir y revisar.
-- [ ] Confirmar reflexión privada fuera del preview.
-- [ ] Confirmar decisión humana antes de portafolio.
-- [ ] Confirmar borrado en dos pasos.
-- [ ] Confirmar comunicación del modo local o efímero.
-- [ ] Revisar teclado y foco.
-- [ ] Revisar preferencias visuales.
-- [ ] Confirmar ausencia de importación, roundtrip y descarga.
-- [ ] Confirmar M2, M3 y M4 no funcionales.
+- [x] Crear proyecto desde cero.
+- [x] Completar M1.
+- [x] Recargar y recuperar.
+- [x] Reabrir y revisar.
+- [x] Confirmar reflexión privada fuera del preview.
+- [x] Confirmar decisión humana antes de portafolio.
+- [x] Confirmar borrado en dos pasos.
+- [x] Confirmar comunicación del almacenamiento local.
+- [x] Revisar teclado y foco.
+- [x] Revisar preferencias visuales.
+- [x] Confirmar ausencia de importación, roundtrip y descarga.
+- [x] Confirmar M2, M3 y M4 no funcionales.
 
 ## Gobernanza
 
-- [ ] Hallazgos clasificados.
-- [ ] Riesgos actualizados.
-- [ ] Matriz PH-IT-AT completada.
-- [ ] Dictamen H08-2A emitido.
-- [ ] Recomendación separada del gate emitida.
-- [ ] Reservas con propietario, prioridad y destino.
-- [ ] Decisión humana efectiva.
-- [ ] Bitácoras y gobernanza actualizadas.
-- [ ] Descripción final del PR preparada.
-- [ ] Kit de entrada H08-3 autorizado o bloqueado.
+- [x] Hallazgos clasificados.
+- [x] Riesgos actualizados.
+- [x] Matriz PH-IT-AT completada.
+- [x] Dictamen H08-2A emitido.
+- [x] Recomendación separada del gate emitida.
+- [x] Reservas registradas: ninguna.
+- [x] Decisión humana efectiva.
+- [x] Bitácoras y gobernanza actualizadas.
+- [x] Descripción final del PR preparada.
+- [x] Preparación del kit H08-3 autorizada después del merge.
 
-## Estado provisional
+## Resultado
 
 ```yaml
-H08_2A: active
-checkpoint_verdict: pending_human_review
-GATE_H08_2_EXIT: hold
-H08_3: blocked
+H08_2A: fulfilled
+checkpoint_verdict: PASS
+findings: 0
+reservations: 0
+GATE_H08_2_EXIT: approved
+H08_2: fulfilled
 ```
