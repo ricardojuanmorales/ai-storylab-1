@@ -50,3 +50,18 @@ SDD:
 
 El documento no ejecuta el gate. La decisión efectiva requiere aprobación
 humana explícita.
+
+## Resultado efectivo
+
+```yaml
+decision_date: 2026-07-18
+PR: 60
+verdict: approved_with_reservations
+reservation:
+  - confirmar CI Node 22 y Node 24 en el primer commit que active workflows
+H08_3_0: fulfilled
+H08_3_1: not_open
+```
+
+La decisión efectiva está registrada en
+`Decision_Humana_GATE_H08_3_ENTRY_APROBADA_CON_RESERVA_PR60_AI_StoryLab_1.md`.

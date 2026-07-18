@@ -13,10 +13,11 @@ artificial responsable.
 
 ```yaml
 version_line: v0.8.0
-current_process: H08_3_entry_gate_preparation
+current_process: H08_3_0_gate_approved_waiting_H08_3_1_opening
 baseline_main: 7c783aa4f55df0aeeec1e0ad7e65f58149d43e16
 current_branch: feat/v0.8-h08-3-persistence-schema-hardening
-PR_mode: consolidated_draft_planned
+current_PR: 60
+PR_mode: consolidated_draft
 
 H08_2:
   lifecycle: fulfilled
@@ -25,14 +26,16 @@ H08_2:
 
 H08_3:
   title: Persistencia y schemas endurecidos
-  current_block: H08_3_0_entry_readiness
-  entry_kit: prepared
-  entry_gate: pending_human_decision
-  implementation: blocked
+  H08_3_0: fulfilled
+  H08_3_1: not_open
+  entry_gate: approved_with_reservations
+  implementation: blocked_until_explicit_H08_3_1_opening
 
 GATE_H08_3_ENTRY:
-  status: pending
-  human_decision_required: true
+  status: approved_with_reservations
+  reservation:
+    - RES-H08-3-ENTRY-CI-001
+  human_decision_required: false
 
 fresh_branch_verification:
   npm_ci: PASS
@@ -74,9 +77,9 @@ schema alpha.1
 → validación
 ```
 
-## Regla de entrada
+## Regla de transición
 
-Este kit prepara el gate. No lo aprueba.
+El gate de entrada está aprobado con una reserva procedural de CI remoto.
 
-Ningún cambio funcional en `apps/storylab` queda autorizado hasta una
-decisión humana explícita sobre `GATE-H08-3-ENTRY`.
+H08-3.0 queda cerrado. Ningún cambio funcional en `apps/storylab` comienza
+hasta una apertura humana explícita de H08-3.1.

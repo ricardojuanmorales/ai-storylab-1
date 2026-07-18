@@ -7,7 +7,7 @@ AI StoryLab 1.
 
 ```yaml
 current_version_line: v0.8.0
-current_process: H08_3_entry_gate_preparation
+current_process: H08_3_0_gate_approved_waiting_H08_3_1_opening
 effective_baseline: 7c783aa4f55df0aeeec1e0ad7e65f58149d43e16
 current_branch: feat/v0.8-h08-3-persistence-schema-hardening
 
@@ -16,10 +16,11 @@ H08_2:
   gate: approved
 
 H08_3:
-  current_block: H08_3_0
-  classification: entry_readiness_only
-  implementation: blocked
-  proposed_PR_mode: consolidated_draft
+  H08_3_0: fulfilled
+  H08_3_1: not_open
+  implementation: blocked_until_explicit_H08_3_1_opening
+  PR: 60
+  PR_mode: consolidated_draft
 
 fresh_branch_verification:
   npm_ci: PASS
@@ -30,24 +31,27 @@ fresh_branch_verification:
   CI_after_first_commit: pending
 
 GATE_H08_3_ENTRY:
-  status: pending_human_decision
+  status: approved_with_reservations
+  reservation:
+    - RES-H08-3-ENTRY-CI-001
 ```
 
 ## Continuidad activa principal
 
 `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_H08_3/`
 
-## Decisiones pendientes
+## Decisiones ratificadas
 
-- tecnología de almacenamiento para H08-3;
-- versión objetivo del schema;
-- política de migración;
-- envelope e integridad;
-- estrategia de atomicidad;
-- índice de proyectos;
-- tratamiento de datos futuros y legacy;
-- bloques y checkpoint de H08-3.
+- `localStorage` endurecido y reemplazable;
+- schema objetivo `0.8.0-alpha.2`;
+- migración explícita alpha.1 → alpha.2;
+- rechazo seguro de versiones futuras y legacy v0.3;
+- envelope, índice mínimo y escritura recuperable;
+- soporte interno para múltiples proyectos;
+- UI completa e IndexedDB diferidos;
+- bloques H08-3 y checkpoint H08-3A.
 
 ## Restricción
 
-H08-3 permanece sin implementación hasta aprobar su gate de entrada.
+La aprobación del gate no abre automáticamente H08-3.1. La implementación
+permanece bloqueada hasta una instrucción humana separada.

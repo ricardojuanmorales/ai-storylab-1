@@ -34,3 +34,16 @@ reservations: []
 
 `GATE-H08-3-ENTRY` recibe esta transferencia. H08-3 no comienza hasta la
 decisión humana.
+
+## Recepción y disposición del gate
+
+```yaml
+received_on: 2026-07-18
+GATE_H08_3_ENTRY: approved_with_reservations
+H08_3_0: fulfilled
+H08_3_1: not_open
+```
+
+La deuda transferida queda aceptada dentro de la arquitectura ratificada.
+La transferencia de cierre se registra en
+`Transferencia_Simetrica_Cierre_H08_3_0_AI_StoryLab_1.md`.

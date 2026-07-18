@@ -46,3 +46,27 @@ implementation: blocked
 
 Evidencia detallada:
 `Evidencia_Verificacion_Fresca_H08_3_0_AI_StoryLab_1.md`.
+
+## Decisión humana efectiva del gate
+
+```yaml
+date: 2026-07-18
+source_statement: "Apruebo GATE-H08-3-ENTRY con la reserva procedural indicada."
+PR: 60
+entry_commit: 6acb252af57ffdf5c585ae8540ddd5c18b9c1d43
+
+GATE_H08_3_ENTRY:
+  decision: approve_with_reservations
+  status: approved_with_reservations
+
+reservation:
+  id: RES-H08-3-ENTRY-CI-001
+  requirement: confirmar CI Node 22 y Node 24 en el primer commit que active workflows
+
+H08_3_0:
+  lifecycle: fulfilled
+
+H08_3_1:
+  lifecycle: not_open
+  implementation: blocked_until_explicit_human_opening
+```

@@ -10,15 +10,15 @@
 
 ## Decisiones humanas
 
-- [ ] Tecnología de almacenamiento aprobada.
-- [ ] Versión objetivo aprobada.
-- [ ] Migración alpha.1 → alpha.2 aprobada.
-- [ ] Política legacy v0.3 aprobada.
-- [ ] Envelope e integridad aprobados.
-- [ ] Escritura recuperable aprobada.
-- [ ] Índice de proyectos aprobado.
-- [ ] Frontera de UI aprobada.
-- [ ] Bloques H08-3 aprobados.
+- [x] Tecnología de almacenamiento aprobada.
+- [x] Versión objetivo aprobada.
+- [x] Migración alpha.1 → alpha.2 aprobada.
+- [x] Política legacy v0.3 aprobada.
+- [x] Envelope e integridad aprobados.
+- [x] Escritura recuperable aprobada.
+- [x] Índice de proyectos aprobado.
+- [x] Frontera de UI aprobada.
+- [x] Bloques H08-3 aprobados.
 
 ## SDD
 
@@ -28,12 +28,14 @@
 - [x] Plan de pruebas presente.
 - [x] Riesgos visibles.
 - [x] Trazabilidad inicial presente.
-- [ ] Dictamen de readiness.
-- [ ] Decisión efectiva del gate.
+- [x] Dictamen de readiness.
+- [x] Decisión efectiva del gate.
 
 ## Estado
 
 ```yaml
-GATE_H08_3_ENTRY: pending
-H08_3_implementation: blocked
+GATE_H08_3_ENTRY: approved_with_reservations
+H08_3_0: fulfilled
+H08_3_1: not_open
+H08_3_implementation: blocked_until_explicit_H08_3_1_opening
 ```

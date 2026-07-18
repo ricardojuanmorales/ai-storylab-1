@@ -12,8 +12,13 @@
   },
   "gate": {
     "id": "GATE-H08-3-ENTRY",
-    "status": "pending",
-    "human_decision_required": true
+    "decision": "approve_with_reservations",
+    "status": "approved_with_reservations",
+    "human_decision_required": false,
+    "decision_date": "2026-07-18",
+    "reservation_ids": [
+      "RES-H08-3-ENTRY-CI-001"
+    ]
   },
   "recommendation": {
     "storage": "hardened_localStorage",
@@ -24,7 +29,7 @@
     "legacyV03": "reject",
     "indexedDB": "deferred_with_triggers"
   },
-  "implementation": "blocked",
+  "implementation": "blocked_until_explicit_H08_3_1_opening",
   "fresh_verification": {
     "date": "2026-07-17",
     "npm_ci": "PASS",
@@ -41,5 +46,22 @@
     "schema_changes": false,
     "runtime_dependency_changes": false,
     "package_lock_changes": false
+  },
+  "PR": 60,
+  "entry_commit": "6acb252af57ffdf5c585ae8540ddd5c18b9c1d43",
+  "reservation": {
+    "id": "RES-H08-3-ENTRY-CI-001",
+    "type": "procedural",
+    "requirement": "confirmar CI Node 22 y Node 24 en el primer commit que active workflows",
+    "disposition": "verify_on_first_workflow_activating_commit"
+  },
+  "blocks": {
+    "H08_3_0": {
+      "lifecycle": "fulfilled"
+    },
+    "H08_3_1": {
+      "lifecycle": "not_open",
+      "implementation": "blocked_until_explicit_human_opening"
+    }
   }
 }
