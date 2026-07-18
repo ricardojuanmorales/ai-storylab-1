@@ -1,0 +1,11 @@
+block,item,priority,depends_on,product_capability
+H08-3.0,Approve entry gate,P0,H08-2,false
+H08-3.1,Define schema registry and alpha.1 migrator,P0,gate,false
+H08-3.1,Add source and target fixtures,P0,schema registry,false
+H08-3.2,Define persistence envelope,P0,schema policy,false
+H08-3.2,Add metadata-only project index,P1,envelope,false
+H08-3.2,Implement staged recoverable writes,P0,envelope,false
+H08-3.3,Fault injection for quota and interruption,P0,staged writes,false
+H08-3.3,Corruption and future-version recovery,P0,migration,false
+H08-3.4,Integrated recovery of H08-2 project,P0,all prior,false
+H08-3A,Independent checkpoint,P0,H08-3.4,false

@@ -1,0 +1,67 @@
+{
+  "unit": "H08-3-entry-kit",
+  "date": "2026-07-17",
+  "repository": "ricardojuanmorales/ai-storylab-1",
+  "baseline": "7c783aa4f55df0aeeec1e0ad7e65f58149d43e16",
+  "planned_branch": "feat/v0.8-h08-3-persistence-schema-hardening",
+  "source": {
+    "phase": "H08-2",
+    "gate": "GATE-H08-2-EXIT",
+    "status": "approved",
+    "reservations": []
+  },
+  "gate": {
+    "id": "GATE-H08-3-ENTRY",
+    "decision": "approve_with_reservations",
+    "status": "approved_with_reservations",
+    "human_decision_required": false,
+    "decision_date": "2026-07-18",
+    "reservation_ids": [
+      "RES-H08-3-ENTRY-CI-001"
+    ]
+  },
+  "recommendation": {
+    "storage": "hardened_localStorage",
+    "targetSchema": "0.8.0-alpha.2",
+    "migration": [
+      "0.8.0-alpha.1_to_0.8.0-alpha.2"
+    ],
+    "legacyV03": "reject",
+    "indexedDB": "deferred_with_triggers"
+  },
+  "implementation": "blocked_until_explicit_H08_3_1_opening",
+  "fresh_verification": {
+    "date": "2026-07-17",
+    "npm_ci": "PASS",
+    "npm_verify": "PASS",
+    "test_files": 20,
+    "tests": 123,
+    "typecheck": "PASS",
+    "vite_build": "PASS",
+    "architecture_audit": "PASS",
+    "secrets_audit": "PASS",
+    "privacy_audit": "PASS",
+    "vertical_slice_audit": "PASS",
+    "product_code_changes": false,
+    "schema_changes": false,
+    "runtime_dependency_changes": false,
+    "package_lock_changes": false
+  },
+  "PR": 60,
+  "entry_commit": "6acb252af57ffdf5c585ae8540ddd5c18b9c1d43",
+  "reservation": {
+    "id": "RES-H08-3-ENTRY-CI-001",
+    "type": "procedural",
+    "requirement": "confirmar CI Node 22 y Node 24 en el primer commit que active workflows",
+    "disposition": "verify_on_first_workflow_activating_commit"
+  },
+  "blocks": {
+    "H08_3_0": {
+      "lifecycle": "fulfilled"
+    },
+    "H08_3_1": {
+      "lifecycle": "not_open",
+      "implementation": "blocked_until_explicit_human_opening"
+    }
+  }
+}

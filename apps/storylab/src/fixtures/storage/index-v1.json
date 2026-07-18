@@ -1,0 +1,15 @@
+
+{
+  "storageFormat": "ai-storylab-project-index",
+  "storageFormatVersion": 1,
+  "updatedAt": "2026-07-18T07:00:00.000Z",
+  "entries": [
+    {
+      "projectId": "project:synthetic-minimal",
+      "title": "Proyecto mínimo",
+      "projectSchemaVersion": "0.8.0-alpha.2",
+      "updatedAt": "2026-07-17T02:00:00.000Z",
+      "writeState": "committed"
+    }
+  ]
+}

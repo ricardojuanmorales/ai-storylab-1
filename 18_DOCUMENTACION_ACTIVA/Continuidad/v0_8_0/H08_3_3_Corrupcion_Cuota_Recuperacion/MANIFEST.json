@@ -1,0 +1,61 @@
+{
+  "block": "H08_3_3",
+  "title": "Corrupción, cuota y recuperación",
+  "date": "2026-07-18",
+  "repository": "ricardojuanmorales/ai-storylab-1",
+  "pr": 60,
+  "branch": "feat/v0.8-h08-3-persistence-schema-hardening",
+  "opening_parent": "6d46255b4f56ee134ffd554ae04afbcd63c9eba5",
+  "lifecycle": "open",
+  "contract_definition": "frozen",
+  "implementation": "verified_local",
+  "source_block": {
+    "id": "H08_3_2",
+    "lifecycle": "fulfilled",
+    "commit": "6d46255b4f56ee134ffd554ae04afbcd63c9eba5",
+    "local_verification": "PASS",
+    "remote_ci": "PASS",
+    "remote_ci_run": 29638079120
+  },
+  "reservations": [
+    {
+      "id": "RES-H08-3.1-STORAGE-NAMESPACE-001",
+      "status": "resolved"
+    }
+  ],
+  "scope": {
+    "fault_injection": true,
+    "quota_policy": true,
+    "corruption_classification": true,
+    "logical_quarantine": true,
+    "metadata_only_repair": true,
+    "future_version_rejection": true,
+    "storage_unavailable": true,
+    "ui_changes": false,
+    "network_cloud": false,
+    "indexed_db": false,
+    "runtime_dependencies": false,
+    "h08_3_4": false
+  },
+  "pr_mode": "draft",
+  "merge": "blocked",
+  "next": {
+    "action": "request_publication_authorization",
+    "H08_3_4": "not_open"
+  },
+  "local_verification": {
+    "npm_verify": "PASS",
+    "test_files": 23,
+    "tests": 160
+  },
+  "implementation_scope": {
+    "storage_adapter": true,
+    "storage_contracts": true,
+    "quarantine_schema": true,
+    "fault_injection_tests": true,
+    "presentation": false,
+    "application": false,
+    "runtime_dependencies": false,
+    "package_changes": false
+  }
+}

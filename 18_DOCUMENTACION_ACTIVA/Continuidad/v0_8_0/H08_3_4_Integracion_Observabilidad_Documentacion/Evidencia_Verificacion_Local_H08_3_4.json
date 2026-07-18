@@ -1,0 +1,49 @@
+{
+  "block": "H08_3_4",
+  "parent": "80879e8fdeec1ed36bb8a484a50d5ffbb2bd80b3",
+  "status": "VERIFIED_LOCAL",
+  "protocol": {
+    "preflight": "PASS",
+    "autonomous_package": true,
+    "idempotent_resume_scope": true,
+    "extended_comment_publication": "manual_by_captain",
+    "final_governance_commit": "deferred"
+  },
+  "verification": {
+    "focused_suite": "PASS",
+    "npm_verify": "PASS",
+    "test_files": 24,
+    "tests": 164,
+    "typecheck": "PASS",
+    "build": "PASS",
+    "architecture_audit": "PASS",
+    "secrets_audit": "PASS",
+    "privacy_audit": "PASS",
+    "vertical_slice_audit": "PASS"
+  },
+  "integration": {
+    "h08_2_project_recovery": "PASS",
+    "alpha1_to_alpha2_to_envelope": "PASS",
+    "staging_roll_forward": "PASS",
+    "metadata_coherence": "PASS",
+    "safe_local_observability": "PASS",
+    "metadata_only_privacy": "PASS"
+  },
+  "scope": {
+    "production_code_changed": false,
+    "runtime_dependencies_changed": false,
+    "package_files_changed": false,
+    "presentation_changed": false,
+    "application_changed": false,
+    "backend_cloud_network": false,
+    "telemetry_analytics": false,
+    "indexed_db": false,
+    "H08_3A": "NOT_OPEN"
+  },
+  "git": {
+    "staging": "NONE",
+    "commit": "NONE",
+    "push": "NONE",
+    "comment": "NONE"
+  }
+}

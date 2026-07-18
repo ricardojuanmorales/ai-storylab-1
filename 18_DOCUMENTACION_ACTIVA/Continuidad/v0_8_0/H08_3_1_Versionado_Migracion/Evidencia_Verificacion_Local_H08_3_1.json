@@ -1,0 +1,58 @@
+{
+  "date": "2026-07-18",
+  "repository": "ricardojuanmorales/ai-storylab-1",
+  "branch": "feat/v0.8-h08-3-persistence-schema-hardening",
+  "parent_commit": "b45bf8fb61665f52904aeb90c5cfab2c30d23be0",
+  "block": "H08_3_1",
+  "candidate": "local_uncommitted",
+  "node": "v24.18.0",
+  "npm": "11.16.0",
+  "schema": {
+    "source": "0.8.0-alpha.1",
+    "target": "0.8.0-alpha.2",
+    "payload_delta": "schema_version_only"
+  },
+  "verification": {
+    "targeted_migration_tests": "PASS",
+    "npm_verify": "PASS",
+    "typecheck": "PASS",
+    "vite_build": "PASS",
+    "architecture_audit": "PASS",
+    "secrets_audit": "PASS",
+    "privacy_audit": "PASS",
+    "vertical_slice_audit": "PASS",
+    "test_files": 21,
+    "tests": 132,
+    "targeted_output_sha256": "d8bd36caac939aa500da59f5fc1797e49c5905d666e887dc46696bc3ca55d5bc",
+    "verify_output_sha256": "43240331aaf24d44d8cf4069703c9afe16087f9cac86783831541b5b4017daf7"
+  },
+  "scope": {
+    "persistent_write": false,
+    "storage_adapter_changes": false,
+    "runtime_dependency_changes": false,
+    "package_lock_changes": false,
+    "H08_3_2_open": false
+  },
+  "reservation": {
+    "id": "RES-H08-3-ENTRY-CI-001",
+    "status": "open",
+    "reason": "remote_Node_22_and_Node_24_not_yet_observed"
+  },
+  "transitional_effects": {
+    "storage_namespace": {
+      "status": "known_and_non_destructive",
+      "cause": "local_storage_keys_derive_from_current_schema_version",
+      "effect": "alpha_1_snapshots_remain_preserved_under_previous_keys_but_are_not_discovered_by_the_alpha_2_runtime",
+      "resolution_block": "H08_3_2",
+      "merge_blocking": true
+    }
+  },
+  "block_reservations": [
+    {
+      "id": "RES-H08-3.1-STORAGE-NAMESPACE-001",
+      "status": "open",
+      "requirement": "restore_alpha_1_snapshot_discovery_and_route_valid_sources_through_migration_before_H08_3_merge",
+      "disposition_block": "H08_3_2"
+    }
+  ]
+}

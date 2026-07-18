@@ -1,0 +1,15 @@
+id,requirement,evidence,status
+H08_3_3_R01,Clasificación tipada de fallos,storage-runtime-validators y pruebas,PASS
+H08_3_3_R02,Preservar último snapshot válido,fault injection de cuota e interrupción,PASS
+H08_3_3_R03,No sobrescribir fuente corrupta,adaptador y prueba de conflicto,PASS
+H08_3_3_R04,Cuota sin borrado automático,errores tipados y pruebas por etapa,PASS
+H08_3_3_R05,Cuarentena metadata-only,schema y auditoría de contenido,PASS
+H08_3_3_R06,Versión futura rechazada,validator y prueba de preservación,PASS
+H08_3_3_R07,Reparación limitada a metadatos,reconstrucción de índice,PASS
+H08_3_3_R08,Roll-forward solo de staging válido,validación y recuperación,PASS
+H08_3_3_R09,Fault injection exhaustivo,adapters.storage-recovery.test.ts,PASS
+H08_3_3_R10,Idempotencia de recuperación,prueba de reintento y deduplicación,PASS
+H08_3_3_R11,Privacidad de clasificación,cuarentena sin payload ni pseudónimo,PASS
+H08_3_3_R12,Sin expansión de producto,allowlist y auditorías,PASS
+H08_3_3_R13,Regresión completa,npm verify,LOCAL_PASS_PENDING_REMOTE_CI
+H08_3_3_R14,Implementación funcional,autorización humana y candidato local,PASS

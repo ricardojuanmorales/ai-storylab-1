@@ -1,7 +1,8 @@
+
 import type { DomainError } from "../domain/errors";
 import type { CreativeProject } from "../domain/model";
 import type { Result } from "../domain/result";
-import type { ProjectId } from "../domain/types";
+import type { ISODateTime, ProjectId } from "../domain/types";
 
 export interface ProjectRepository {
   load(
@@ -14,4 +15,17 @@ export interface ProjectRepository {
 export interface RecoverableProjectRepository extends ProjectRepository {
   loadMostRecent(): Promise<Result<CreativeProject | null, DomainError>>;
   clearMostRecent(): Promise<Result<void, DomainError>>;
+}
+
+export interface ProjectMetadata {
+  readonly projectId: ProjectId;
+  readonly title: string;
+  readonly schemaVersion: string;
+  readonly updatedAt: ISODateTime;
+}
+
+export interface IndexedProjectRepository extends RecoverableProjectRepository {
+  listProjectMetadata(): Promise<
+    Result<readonly ProjectMetadata[], DomainError>
+  >;
 }

@@ -1,0 +1,8 @@
+trace_id,requirement,implementation_candidate,evidence,gate
+TR-H08-3-001,schema evolution,migration registry,schema tests,pending
+TR-H08-3-002,source preservation,staging pipeline,fault injection,pending
+TR-H08-3-003,future rejection,version classifier,contract tests,pending
+TR-H08-3-004,project index,metadata-only index,privacy audit,pending
+TR-H08-3-005,quota safety,typed rollback,adapter tests,pending
+TR-H08-3-006,corruption safety,block and explicit discard,integration tests,pending
+TR-H08-3-007,scope protection,negative audit,audit tests,pending

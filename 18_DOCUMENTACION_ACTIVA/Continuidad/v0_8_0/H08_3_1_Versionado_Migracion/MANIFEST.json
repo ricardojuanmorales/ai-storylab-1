@@ -1,0 +1,69 @@
+{
+  "unit": "H08-3.1-versionado-migracion",
+  "date": "2026-07-18",
+  "repository": "ricardojuanmorales/ai-storylab-1",
+  "PR": 60,
+  "branch": "feat/v0.8-h08-3-persistence-schema-hardening",
+  "baseline_main": "7c783aa4f55df0aeeec1e0ad7e65f58149d43e16",
+  "opening_parent_commit": "12ca182e99ad66515cf860d7cad876414d16ecf1",
+  "source": {
+    "block": "H08_3_0",
+    "lifecycle": "fulfilled",
+    "gate": "approved_with_reservations"
+  },
+  "current": {
+    "block": "H08_3_1",
+    "lifecycle": "open",
+    "implementation": "implemented_locally_pending_human_review"
+  },
+  "schema": {
+    "source": "0.8.0-alpha.1",
+    "target": "0.8.0-alpha.2",
+    "payload_delta": "schema_version_only"
+  },
+  "reservation": {
+    "id": "RES-H08-3-ENTRY-CI-001",
+    "status": "open",
+    "disposition": "verify_on_first_workflow_activating_commit"
+  },
+  "next": {
+    "block": "H08_3_2",
+    "lifecycle": "open",
+    "implementation": "authorized_within_defined_scope"
+  },
+  "verification": {
+    "targeted_tests": "PASS",
+    "npm_verify": "PASS",
+    "test_files": 21,
+    "tests": 132
+  },
+  "block_reservations": [
+    {
+      "id": "RES-H08-3.1-STORAGE-NAMESPACE-001",
+      "status": "open",
+      "type": "transitional_merge_blocker",
+      "disposition_block": "H08_3_2"
+    }
+  ],
+  "closure": {
+    "date": "2026-07-18",
+    "commit": "e42277138bab3d052c2b182de2394de5f2a18aee",
+    "lifecycle": "fulfilled",
+    "implementation": "published",
+    "local_verification": "PASS",
+    "remote_ci": {
+      "status": "PASS",
+      "node_22": "success",
+      "node_24": "success",
+      "run_id": 29633603603
+    }
+  },
+  "transferred_reservations": [
+    {
+      "id": "RES-H08-3.1-STORAGE-NAMESPACE-001",
+      "status": "open",
+      "destination_block": "H08_3_2",
+      "merge_blocking": true
+    }
+  ]
+}

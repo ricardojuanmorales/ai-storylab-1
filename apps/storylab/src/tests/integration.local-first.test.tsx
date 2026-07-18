@@ -1,5 +1,6 @@
 // @vitest-environment jsdom
 
+import { createHash } from "node:crypto";
 import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it } from "vitest";
@@ -20,6 +21,14 @@ afterEach(() => {
 class IntegratedStorage implements StorageLike {
   readonly values = new Map<string, string>();
   failSetWithQuota = false;
+
+  get length(): number {
+    return this.values.size;
+  }
+
+  key(index: number): string | null {
+    return Array.from(this.values.keys())[index] ?? null;
+  }
 
   getItem(key: string): string | null {
     return this.values.get(key) ?? null;
@@ -56,8 +65,13 @@ class IntegratedClock implements Clock {
   }
 }
 
+const nodeIntegrity = async (value: string): Promise<string> =>
+  createHash("sha256").update(value).digest("hex");
+
 const createRuntime = (storage = new IntegratedStorage()) => {
-  const repository = new LocalStorageProjectRepository(storage);
+  const repository = new LocalStorageProjectRepository(storage, {
+    integrity: nodeIntegrity,
+  });
   const useCases = createStoryLabUseCases({
     repository,
     clock: new IntegratedClock(),
@@ -146,13 +160,25 @@ describe("local-first integrated acceptance", () => {
     const runtime = createRuntime();
     const first = await createProjectThroughUi(runtime);
 
-    const latestId = runtime.storage.values.get(LOCAL_STORAGE_KEYS.latest);
+    const recentRaw = runtime.storage.values.get(
+      LOCAL_STORAGE_KEYS.recent,
+    );
+    expect(recentRaw).toBeTruthy();
+    const latestId = (
+      JSON.parse(recentRaw ?? "{}") as { projectId?: string }
+    ).projectId;
     expect(latestId).toBeTruthy();
     expect(
       runtime.storage.values.has(
         `${LOCAL_STORAGE_KEYS.projectPrefix}${latestId}`,
       ),
     ).toBe(true);
+    expect(runtime.storage.values.has(LOCAL_STORAGE_KEYS.index)).toBe(true);
+    expect(
+      Array.from(runtime.storage.values.keys()).some((key) =>
+        key.startsWith(LOCAL_STORAGE_KEYS.stagingPrefix),
+      ),
+    ).toBe(false);
 
     first.view.unmount();
 
@@ -200,7 +226,11 @@ describe("local-first integrated acceptance", () => {
   it("borra el proyecto y limpia las dos claves persistentes", async () => {
     const runtime = createRuntime();
     const { user } = await createProjectThroughUi(runtime);
-    const projectId = runtime.storage.values.get(LOCAL_STORAGE_KEYS.latest);
+    const projectId = (
+      JSON.parse(
+        runtime.storage.values.get(LOCAL_STORAGE_KEYS.recent) ?? "{}",
+      ) as { projectId?: string }
+    ).projectId;
 
     await user.click(
       screen.getByRole("button", { name: "Preparar borrado local" }),
@@ -209,12 +239,19 @@ describe("local-first integrated acceptance", () => {
       screen.getByRole("button", { name: "Confirmar borrado local" }),
     );
 
-    expect(runtime.storage.values.has(LOCAL_STORAGE_KEYS.latest)).toBe(false);
+    expect(runtime.storage.values.has(LOCAL_STORAGE_KEYS.recent)).toBe(false);
     expect(
       runtime.storage.values.has(
         `${LOCAL_STORAGE_KEYS.projectPrefix}${projectId}`,
       ),
     ).toBe(false);
+    expect(
+      (
+        JSON.parse(
+          runtime.storage.values.get(LOCAL_STORAGE_KEYS.index) ?? "{}",
+        ) as { entries?: readonly unknown[] }
+      ).entries,
+    ).toEqual([]);
     expect(
       await screen.findByRole("textbox", { name: "Seudónimo local" }),
     ).toBeTruthy();
@@ -223,7 +260,15 @@ describe("local-first integrated acceptance", () => {
   it("bloquea JSON corrupto y lo descarta mediante el adaptador real", async () => {
     const storage = new IntegratedStorage();
     const projectId = "project:integration-corrupted" as ProjectId;
-    storage.values.set(LOCAL_STORAGE_KEYS.latest, projectId as string);
+    storage.values.set(
+      LOCAL_STORAGE_KEYS.recent,
+      JSON.stringify({
+        storageFormat: "ai-storylab-recent-pointer",
+        storageFormatVersion: 1,
+        projectId,
+        updatedAt: "2026-07-18T07:00:00.000Z",
+      }),
+    );
     storage.values.set(
       `${LOCAL_STORAGE_KEYS.projectPrefix}${projectId as string}`,
       "{invalid-json",
@@ -245,7 +290,7 @@ describe("local-first integrated acceptance", () => {
       }),
     );
 
-    expect(storage.values.has(LOCAL_STORAGE_KEYS.latest)).toBe(false);
+    expect(storage.values.has(LOCAL_STORAGE_KEYS.recent)).toBe(false);
     expect(
       storage.values.has(
         `${LOCAL_STORAGE_KEYS.projectPrefix}${projectId as string}`,

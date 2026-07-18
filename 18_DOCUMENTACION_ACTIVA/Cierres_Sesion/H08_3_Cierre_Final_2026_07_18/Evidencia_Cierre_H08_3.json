@@ -1,0 +1,98 @@
+{
+  "closure": "H08_3",
+  "date": "2026-07-18",
+  "status": "PUBLISHED_AND_CI_PASSED",
+  "baseline": "7c783aa4f55df0aeeec1e0ad7e65f58149d43e16",
+  "checkpoint_head": "a8f6c379d5397a376d35855d85fe161d4f9201c6",
+  "pre_closure_commits": 11,
+  "verification": {
+    "npm_verify": "PASS",
+    "test_files": 24,
+    "tests": 164,
+    "typecheck": "PASS",
+    "build": "PASS",
+    "architecture_audit": "PASS",
+    "secrets_audit": "PASS",
+    "privacy_audit": "PASS",
+    "vertical_slice_audit": "PASS",
+    "checkpoint_CI": {
+      "run": 29661139961,
+      "url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/29661139961",
+      "Node_22": "PASS",
+      "Node_24": "PASS"
+    },
+    "closure_publication_CI": {
+      "run": 29662093574,
+      "url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/29662093574",
+      "Node_22": "PASS",
+      "Node_24": "PASS"
+    }
+  },
+  "governance": {
+    "H08_3A_human_verdict": "PASS",
+    "global_closure_authorized": true,
+    "PR_body_update_authorized": true,
+    "PR_mode": "DRAFT",
+    "ready_for_review": "NOT_AUTHORIZED",
+    "merge": "BLOCKED"
+  },
+  "scope": {
+    "runtime_dependencies_changed": false,
+    "package_files_changed": false,
+    "backend": false,
+    "cloud": false,
+    "network": false,
+    "telemetry": false,
+    "analytics": false,
+    "IndexedDB": false,
+    "full_multi_project_UI": false,
+    "import_roundtrip": false,
+    "automatic_download": false,
+    "M2_M3_M4_expansion": false
+  },
+  "findings": {
+    "blocking": 0,
+    "resolved_reservations": [
+      "RES-H08-3-ENTRY-CI-001"
+    ],
+    "open_non_blocking_debt": [
+      "DEBT-H08-3A-CI-ACTIONS-001"
+    ]
+  },
+  "protocol": {
+    "name": "Doble canal y tres ritmos",
+    "status": "CANDIDATE_STANDARD",
+    "validated_in": "H08_3",
+    "SDD_inclusion": "DEFERRED_PENDING_GENERALIZATION"
+  },
+  "observed_PR_before_closure": {
+    "commits": 11,
+    "changed_files": 164,
+    "additions": 9243,
+    "deletions": 298,
+    "commit_ledger": "Ledger_Commits_H08_3.csv"
+  },
+  "comment_count_observed": 15,
+  "workflow_runs_observed": 8,
+  "closure_publication": {
+    "commit": "236593cf00356dc12ee31259f6380edc149e7075",
+    "CI": {
+      "workflow": "H08-1.3 Baseline",
+      "run": 29662093574,
+      "url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/29662093574",
+      "Node_22": "PASS",
+      "Node_24": "PASS"
+    },
+    "PR_body_updated": true,
+    "PR_mode": "DRAFT",
+    "ready_for_review": "PENDING_SEPARATE_HUMAN_AUTHORIZATION",
+    "merge": "BLOCKED"
+  },
+  "observed_PR_after_closure": {
+    "head": "236593cf00356dc12ee31259f6380edc149e7075",
+    "commits": 12,
+    "changed_files": 185,
+    "additions": 10388,
+    "deletions": 301
+  }
+}

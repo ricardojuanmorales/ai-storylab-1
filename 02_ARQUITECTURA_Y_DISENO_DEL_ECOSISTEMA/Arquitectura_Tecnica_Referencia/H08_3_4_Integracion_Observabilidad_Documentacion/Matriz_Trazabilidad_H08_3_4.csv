@@ -1,0 +1,8 @@
+requirement,evidence,test,status
+integrated_h08_2_recovery,integration.persistence-hardening.test.ts,recupera integralmente un proyecto H08-2,VERIFIED_LOCAL
+alpha1_to_envelope,integration.persistence-hardening.test.ts,migra y promueve alpha.1,VERIFIED_LOCAL
+staging_roll_forward,integration.persistence-hardening.test.ts,completa roll-forward después de una interrupción,VERIFIED_LOCAL
+metadata_coherence,integration.persistence-hardening.test.ts,snapshot índice recent coherentes,VERIFIED_LOCAL
+safe_local_observability,integration.persistence-hardening.test.ts,observabilidad local segura,VERIFIED_LOCAL
+private_data_minimization,integration.persistence-hardening.test.ts,índice y cuarentena sin contenido privado,VERIFIED_LOCAL
+scope_preservation,git diff and package checks,H08-3.4 only,VERIFIED_LOCAL

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ai-storylab.local/schemas/import-candidate/0.8.0-alpha.1",
+  "$id": "https://ai-storylab.local/schemas/import-candidate/0.8.0-alpha.2",
   "title": "AI StoryLab ImportCandidate",
   "type": "object",
   "additionalProperties": false,

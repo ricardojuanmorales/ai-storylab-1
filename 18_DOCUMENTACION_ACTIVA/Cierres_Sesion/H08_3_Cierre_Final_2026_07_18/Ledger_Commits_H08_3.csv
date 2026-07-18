@@ -1,0 +1,12 @@
+sequence,sha,short,date,subject
+1,6acb252af57ffdf5c585ae8540ddd5c18b9c1d43,6acb252,2026-07-17T23:25:15-04:00,Prepara gate de entrada H08-3
+2,12ca182e99ad66515cf860d7cad876414d16ecf1,12ca182,2026-07-18T00:37:34-04:00,Registra aprobación de GATE-H08-3-ENTRY
+3,b45bf8fb61665f52904aeb90c5cfab2c30d23be0,b45bf8f,2026-07-18T01:15:46-04:00,Abre H08-3.1 versionado y migración
+4,e42277138bab3d052c2b182de2394de5f2a18aee,e422771,2026-07-18T02:03:43-04:00,Implementa versionado y migración H08-3.1
+5,78fa443ed73396d414dfa985e9e032a03c234389,78fa443,2026-07-18T02:53:57-04:00,"Abre H08-3.2 envelope, índice y escritura recuperable"
+6,f51df006d986c8f97814cfb57b3df4dfb86b8579,f51df00,2026-07-18T04:10:09-04:00,"Implementa envelope, índice y escritura recuperable H08-3.2"
+7,6d46255b4f56ee134ffd554ae04afbcd63c9eba5,6d46255,2026-07-18T04:48:22-04:00,Cierra H08-3.2 y resuelve reserva de namespace
+8,011cd1776dc25b6f29a70aa7d4f2d5a60510e5c5,011cd17,2026-07-18T05:12:44-04:00,"Abre H08-3.3 corrupción, cuota y recuperación"
+9,80879e8fdeec1ed36bb8a484a50d5ffbb2bd80b3,80879e8,2026-07-18T13:57:46-04:00,"Implementa H08-3.3 corrupción, cuota y recuperación"
+10,6c2f63ac0128be330f8c743366b9e2e5886ba3d7,6c2f63a,2026-07-18T16:45:27-04:00,Integra H08-3.4 observabilidad local y documentación
+11,a8f6c379d5397a376d35855d85fe161d4f9201c6,a8f6c37,2026-07-18T17:11:22-04:00,Publica checkpoint independiente H08-3A

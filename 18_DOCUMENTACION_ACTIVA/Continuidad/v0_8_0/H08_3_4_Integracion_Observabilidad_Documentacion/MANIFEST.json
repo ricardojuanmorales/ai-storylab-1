@@ -1,0 +1,14 @@
+{
+  "block": "H08_3_4",
+  "status": "VERIFIED_LOCAL",
+  "parent": "80879e8fdeec1ed36bb8a484a50d5ffbb2bd80b3",
+  "files": [
+    "Bitacora_Apertura_H08_3_4_AI_StoryLab_1.md",
+    "CHECKSUMS.sha256",
+    "Evidencia_Verificacion_Local_H08_3_4.json",
+    "README.md",
+    "Transferencia_Recepcion_H08_3_3_a_H08_3_4_AI_StoryLab_1.md"
+  ],
+  "final_session_governance": "DEFERRED",
+  "H08_3A": "NOT_OPEN"
+}

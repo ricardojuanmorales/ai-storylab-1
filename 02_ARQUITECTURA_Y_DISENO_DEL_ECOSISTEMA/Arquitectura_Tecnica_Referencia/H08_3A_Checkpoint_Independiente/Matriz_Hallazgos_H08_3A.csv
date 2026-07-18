@@ -1,0 +1,11 @@
+id,dimension,status,finding,disposition
+"H08-3A-F01","migration","PASS","Migración alpha.1 → alpha.2 determinista, idempotente y no destructiva.","none"
+"H08-3A-F02","source_preservation","PASS","Fuentes raw y snapshots corruptos se preservan.","none"
+"H08-3A-F03","envelope_integrity","PASS","Envelope v1 valida formato, payload e integridad SHA-256.","none"
+"H08-3A-F04","metadata_minimization","PASS","Índice y cuarentena permanecen metadata-only.","none"
+"H08-3A-F05","staging_recovery","PASS","Roll-forward determinista deja snapshot, índice y recent coherentes.","none"
+"H08-3A-F06","quota","PASS","Cuota preserva el último snapshot confirmado y permite recuperación.","none"
+"H08-3A-F07","corruption_future_version","PASS","Corrupción y versiones futuras se bloquean sin alterar la fuente.","none"
+"H08-3A-F08","integration_h08_2","PASS","Proyecto H08-2 se recupera integralmente sin ampliar producto.","none"
+"H08-3A-F09","deferred_scope","PASS","Red, nube, telemetría, IndexedDB, importación y expansión narrativa ausentes.","none"
+"H08-3A-F10","ci_actions_runtime","OBSERVATION","GitHub fuerza actions/checkout@v4 y setup-node@v4 de Node 20 a Node 24.","non_blocking_debt"

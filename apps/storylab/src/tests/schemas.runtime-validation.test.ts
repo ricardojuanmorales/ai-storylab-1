@@ -53,7 +53,7 @@ describe("runtime schema validators", () => {
   it("rechaza una exportación sin proyecto válido", () => {
     const candidate = {
       ...clone(exportPackage),
-      project: { schemaVersion: "0.8.0-alpha.1" },
+      project: { schemaVersion: "0.8.0-alpha.2" },
     };
     expect(validateExportPackageSnapshot(candidate)).toMatchObject({
       ok: false,
