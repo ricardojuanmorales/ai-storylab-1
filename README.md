@@ -13,17 +13,30 @@ artificial responsable.
 
 ```yaml
 version_line: v0.8.0
-current_process: H08_2_closed_pre_merge
-current_branch: feat/v0.8-h08-2-consolidated-vertical-slice
-current_PR: 59
+current_process: H08_3_entry_gate_preparation
+baseline_main: 7c783aa4f55df0aeeec1e0ad7e65f58149d43e16
+current_branch: feat/v0.8-h08-3-persistence-schema-hardening
+PR_mode: consolidated_draft_planned
 
-baselines:
-  main_before_H08_2: 9b941f185feb1e59f7a774ad07c976c415537dae
-  functional_head_reviewed: 0e9dc75bb8dd71600616365b14e894a2151594af
-  checkpoint_head: 1bba15a27c6217d9defefe278aa6ed2142d9c041
-  closure_commit: pending
+H08_2:
+  lifecycle: fulfilled
+  gate: approved
+  reservations: []
 
-verification:
+H08_3:
+  title: Persistencia y schemas endurecidos
+  current_block: H08_3_0_entry_readiness
+  entry_kit: prepared
+  entry_gate: pending_human_decision
+  implementation: blocked
+
+GATE_H08_3_ENTRY:
+  status: pending
+  human_decision_required: true
+
+fresh_branch_verification:
+  npm_ci: PASS
+  npm_verify: PASS
   test_files: 20
   tests: 123
   typecheck: PASS
@@ -32,66 +45,38 @@ verification:
   secrets_audit: PASS
   privacy_audit: PASS
   vertical_slice_audit: PASS
+  CI_after_first_commit: pending
+
+inherited_verification:
+  test_files: 20
+  tests: 123
+  typecheck: PASS
+  build: PASS
+  audits: PASS
   CI_Node_22: PASS
   CI_Node_24: PASS
-
-human_review:
-  browser: Chrome_V149
-  operating_system: macOS
-  results_PASS: 15
-  findings: 0
-  reservations: 0
-  verdict: PASS
-
-H08_2A:
-  lifecycle: fulfilled
-  verdict: PASS
-
-GATE_H08_2_EXIT:
-  status: approved
-  lifecycle: fulfilled_effective_on_closure_commit_and_PR_merge
-
-H08_2:
-  lifecycle: fulfilled
-  formal_result: PASS_without_reservations
-
-PR_59:
-  state_until_closure_commit_CI: draft
-  final_description: pending_post_closure_commit
-  merge: authorized_after_final_CI_and_human_action
-
-H08_3:
-  entry_kit_preparation: authorized_after_PR59_merge
-  implementation: blocked_until_GATE_H08_3_ENTRY
 ```
 
-## Resultado de H08-2
+## Propósito de H08-3
 
-La primera vertical slice local-first permite:
+Endurecer la persistencia local y la evolución de datos sin ampliar todavía
+el arco narrativo:
 
 ```text
-perfil sintético
-→ proyecto
-→ M1
-→ borrador editable
-→ evidencia
-→ reflexión privada opcional
-→ decisión humana
-→ portafolio reversible
-→ guardado local
-→ recuperación validada
-→ export preview validado
-→ borrado explícito
+schema alpha.1
+→ política de versiones
+→ migración explícita
+→ envelope persistente
+→ índice de proyectos
+→ escritura recuperable
+→ corrupción controlada
+→ cuota segura
+→ validación
 ```
 
-## Cierre
+## Regla de entrada
 
-H08-2A confirmó la trayectoria en revisión humana y automatizada. No se
-registraron hallazgos ni reservas. El gate de salida queda aprobado.
+Este kit prepara el gate. No lo aprueba.
 
-## Próxima fase
-
-Después del commit documental final, CI verde, actualización definitiva del
-PR y merge humano, se preparará el kit de inicio y continuidad de H08-3.
-
-El cierre de H08-2 no activa automáticamente la implementación de H08-3.
+Ningún cambio funcional en `apps/storylab` queda autorizado hasta una
+decisión humana explícita sobre `GATE-H08-3-ENTRY`.
