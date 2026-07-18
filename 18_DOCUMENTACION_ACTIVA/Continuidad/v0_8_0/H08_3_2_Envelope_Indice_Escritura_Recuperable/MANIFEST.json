@@ -23,6 +23,12 @@
     {
       "id": "RES-H08-3.1-STORAGE-NAMESPACE-001",
       "status": "open",
+      "technical_status": "satisfied_locally",
+      "canonical_resolution_requires": [
+        "implementation_publication",
+        "remote_CI_Node_22_PASS",
+        "remote_CI_Node_24_PASS"
+      ],
       "resolution_block": "H08_3_2",
       "merge_blocking": true
     }
@@ -40,5 +46,16 @@
     "h08_3_3": false
   },
   "pr_mode": "draft",
-  "merge": "blocked"
+  "merge": "blocked",
+  "implementation_candidate": {
+    "status": "verified_local",
+    "parent": "78fa443ed73396d414dfa985e9e032a03c234389",
+    "functional_changes": true,
+    "verification": "PASS",
+    "publication": "pending_human_authorization"
+  },
+  "next": {
+    "action": "review_local_candidate",
+    "H08_3_3": "not_open"
+  }
 }

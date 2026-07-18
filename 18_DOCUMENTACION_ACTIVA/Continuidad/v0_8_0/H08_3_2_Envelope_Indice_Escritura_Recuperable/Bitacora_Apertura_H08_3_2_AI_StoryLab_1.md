@@ -42,3 +42,41 @@ Antes del staging documental se resolvieron dos ambigüedades:
 
 También quedaron congeladas las claves raw alpha.1/alpha.2 y la precedencia de
 descubrimiento. H08-3.3 permanece cerrado.
+
+## Implementación funcional local
+
+```yaml
+parent: 78fa443ed73396d414dfa985e9e032a03c234389
+candidate: verified_local
+tests: PASS
+staging: none
+commit: none
+push: none
+```
+
+Se implementaron envelope, índice mínimo, recent separado, staging,
+roll-forward y compatibilidad raw alpha.1/alpha.2. La reserva de namespace está
+técnicamente satisfecha en local, pero permanece abierta hasta publicación y CI
+remota. H08-3.3 no se abrió.
+
+## Rectificación de estados previa al staging
+
+La verificación local concluyó en PASS, pero no equivale a publicación ni a CI
+remota. Se corrigieron los estados para conservar la separación entre evidencia
+observada y evidencia pendiente:
+
+```yaml
+RES-H08-3.1-STORAGE-NAMESPACE-001:
+  technical_status: satisfied_locally
+  canonical_status: open
+  pending:
+    - implementation_publication
+    - remote_CI_Node_22_PASS
+    - remote_CI_Node_24_PASS
+
+regression:
+  local_verify: PASS
+  remote_CI: PENDING
+```
+
+H08-3.3 permanece cerrado y el merge continúa bloqueado.

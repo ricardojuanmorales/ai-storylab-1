@@ -1,0 +1,12 @@
+
+{
+  "storageFormat": "ai-storylab-staged-write",
+  "storageFormatVersion": 1,
+  "operationId": "write:synthetic-invalid",
+  "startedAt": "2026-07-18T07:00:00.000Z",
+  "makeRecent": true,
+  "envelope": {
+    "storageFormat": "ai-storylab-project",
+    "storageFormatVersion": 1
+  }
+}

@@ -19,3 +19,13 @@ RES-H08-3.1-STORAGE-NAMESPACE-001:
   resolution_block: H08_3_2
   merge_blocking: true
 ```
+
+## Estado del candidato
+
+```yaml
+implementation_candidate: verified_local
+publication: pending_human_authorization
+RES-H08-3.1-STORAGE-NAMESPACE-001: technically_satisfied_locally
+H08_3_3: not_open
+merge: blocked
+```

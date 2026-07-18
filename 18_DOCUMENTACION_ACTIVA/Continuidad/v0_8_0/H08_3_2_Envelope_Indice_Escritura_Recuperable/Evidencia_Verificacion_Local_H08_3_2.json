@@ -1,0 +1,48 @@
+{
+  "opening_parent": "78fa443ed73396d414dfa985e9e032a03c234389",
+  "commands": {
+    "test_persistence": {
+      "status": "PASS",
+      "test_files": null,
+      "tests": null
+    },
+    "test_integration": {
+      "status": "PASS",
+      "test_files": null,
+      "tests": null
+    },
+    "verify": {
+      "status": "PASS",
+      "test_files": null,
+      "tests": null
+    }
+  },
+  "status": "PASS",
+  "scope": {
+    "functional_changes": true,
+    "runtime_dependencies_changed": false,
+    "package_lock_changed": false,
+    "presentation_changed": false,
+    "application_changed": false,
+    "indexed_db": false,
+    "network": false,
+    "h08_3_3": false
+  },
+  "contracts": {
+    "envelope_v1": "PASS",
+    "metadata_only_index": "PASS",
+    "recent_separate": "PASS",
+    "staging_roll_forward": "PASS",
+    "alpha_2_promotion": "PASS",
+    "alpha_1_migration_promotion": "PASS",
+    "raw_source_preservation": "PASS"
+  },
+  "reservation": {
+    "id": "RES-H08-3.1-STORAGE-NAMESPACE-001",
+    "technical_status": "SATISFIED_LOCALLY",
+    "canonical_status": "OPEN_UNTIL_PUBLICATION_AND_REMOTE_CI"
+  },
+  "staging": "NONE",
+  "commit": "NONE",
+  "push": "NONE"
+}

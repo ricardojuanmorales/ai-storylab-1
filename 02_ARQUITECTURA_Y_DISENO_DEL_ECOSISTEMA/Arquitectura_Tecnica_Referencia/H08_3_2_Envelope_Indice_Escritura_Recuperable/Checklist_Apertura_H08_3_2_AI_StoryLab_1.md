@@ -12,25 +12,26 @@
 
 ## Contratos antes de implementar
 
-- [ ] Congelar schemas de envelope, staging e índice.
-- [ ] Congelar namespace `storage:v1`.
-- [ ] Definir serialización canónica.
-- [ ] Definir política exacta de roll-forward.
-- [ ] Definir extensión mínima del puerto de metadatos.
-- [ ] Extender `StorageLike` con `length` y `key(index)`.
-- [ ] Congelar claves raw exactas alpha.1 y alpha.2.
-- [ ] Congelar precedencia de `load` y `loadMostRecent`.
-- [ ] Confirmar que `recent` no se duplica dentro del índice.
-- [ ] Definir errores tipados mínimos.
-- [ ] Crear fixtures de estados interrumpidos.
-- [ ] Confirmar que no se modifica el payload creativo.
+- [x] Congelar schemas de envelope, staging e índice.
+- [x] Congelar namespace `storage:v1`.
+- [x] Definir serialización canónica.
+- [x] Definir política exacta de roll-forward.
+- [x] Definir extensión mínima del puerto de metadatos.
+- [x] Extender `StorageLike` con `length` y `key(index)`.
+- [x] Congelar claves raw exactas alpha.1 y alpha.2.
+- [x] Congelar precedencia de `load` y `loadMostRecent`.
+- [x] Confirmar que `recent` no se duplica dentro del índice.
+- [x] Definir errores tipados mínimos.
+- [x] Crear fixtures de estados interrumpidos.
+- [x] Confirmar que no se modifica el payload creativo.
 
 ## Bloqueadores de cierre
 
-- [ ] Resolver `RES-H08-3.1-STORAGE-NAMESPACE-001`.
-- [ ] Preservar fuentes raw alpha.1 y alpha.2.
-- [ ] Demostrar ausencia de proyectos parciales.
-- [ ] Mantener índice libre de contenido privado.
-- [ ] `npm run verify` en PASS.
+- [x] Satisfacer técnicamente `RES-H08-3.1-STORAGE-NAMESPACE-001` en local.
+- [ ] Resolver canónicamente `RES-H08-3.1-STORAGE-NAMESPACE-001` tras publicación y CI remota.
+- [x] Preservar fuentes raw alpha.1 y alpha.2.
+- [x] Demostrar ausencia de proyectos parciales.
+- [x] Mantener índice libre de contenido privado.
+- [x] `npm run verify` en PASS.
 - [ ] CI Node 22 y 24 en PASS.
 - [ ] Revisión humana separada antes de H08-3.3.
