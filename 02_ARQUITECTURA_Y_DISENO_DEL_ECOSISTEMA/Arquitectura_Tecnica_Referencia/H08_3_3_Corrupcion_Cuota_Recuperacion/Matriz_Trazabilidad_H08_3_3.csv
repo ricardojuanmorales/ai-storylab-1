@@ -1,0 +1,15 @@
+id,requirement,evidence,status
+H08_3_3_R01,Clasificación tipada de fallos,SPEC y política,DEFINED
+H08_3_3_R02,Preservar último snapshot válido,criterios y fault injection,DEFINED
+H08_3_3_R03,No sobrescribir fuente corrupta,política operacional,DEFINED
+H08_3_3_R04,Cuota sin borrado automático,política y pruebas,DEFINED
+H08_3_3_R05,Cuarentena metadata-only,SPEC y política,DEFINED
+H08_3_3_R06,Versión futura rechazada,criterios de aceptación,DEFINED
+H08_3_3_R07,Reparación limitada a metadatos,política y pruebas,DEFINED
+H08_3_3_R08,Roll-forward solo de staging válido,criterios y pruebas,DEFINED
+H08_3_3_R09,Fault injection exhaustivo,plan de pruebas,DEFINED
+H08_3_3_R10,Idempotencia de recuperación,criterios y pruebas,DEFINED
+H08_3_3_R11,Privacidad de clasificación,auditoría de privacidad,DEFINED
+H08_3_3_R12,Sin expansión de producto,mapa de alcance,DEFINED
+H08_3_3_R13,Regresión completa,npm verify y CI matrix,PENDING
+H08_3_3_R14,Implementación funcional,autorización humana,PENDING_AUTHORIZATION
