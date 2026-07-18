@@ -1,0 +1,16 @@
+{
+  "block": "H08_3A",
+  "status": "HUMAN_PASS_AUTHORIZED",
+  "head_reviewed": "6c2f63ac0128be330f8c743366b9e2e5886ba3d7",
+  "human_verdict": "PASS",
+  "files": [
+    "Bitacora_Apertura_H08_3A_AI_StoryLab_1.md",
+    "CHECKSUMS.sha256",
+    "Evidencia_Verificacion_H08_3A.json",
+    "MANIFEST.json",
+    "README.md",
+    "Transferencia_Recepcion_H08_3_4_a_H08_3A_AI_StoryLab_1.md"
+  ],
+  "publication": "AUTHORIZED",
+  "global_H08_3_closure": "PENDING"
+}
