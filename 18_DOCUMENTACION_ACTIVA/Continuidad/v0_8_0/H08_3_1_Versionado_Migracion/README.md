@@ -18,3 +18,24 @@ reservation:
 
 La continuidad de este bloque se centra en contratos de versión, schemas
 históricos y actuales, migración pura, validación y pruebas.
+
+## Estado del candidato local
+
+```yaml
+implementation: implemented_locally_pending_review
+verification: PASS
+test_files: 21
+tests: 132
+remote_CI: pending
+```
+
+## Bloqueador transicional · RES-H08-3.1-STORAGE-NAMESPACE-001
+
+```yaml
+status: open
+data_loss: false
+source_preserved: true
+alpha_1_discovery: deferred
+resolution_block: H08_3_2
+merge_blocking: true
+```

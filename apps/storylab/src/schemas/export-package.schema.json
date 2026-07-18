@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ai-storylab.local/schemas/export-package/0.8.0-alpha.1",
+  "$id": "https://ai-storylab.local/schemas/export-package/0.8.0-alpha.2",
   "title": "AI StoryLab ExportPackage",
   "type": "object",
   "additionalProperties": false,
@@ -15,14 +15,14 @@
       "const": "storylab_project"
     },
     "schemaVersion": {
-      "const": "0.8.0-alpha.1"
+      "const": "0.8.0-alpha.2"
     },
     "exportedAt": {
       "type": "string",
       "format": "date-time"
     },
     "project": {
-      "$ref": "https://ai-storylab.local/schemas/project/0.8.0-alpha.1"
+      "$ref": "https://ai-storylab.local/schemas/project/0.8.0-alpha.2"
     }
   }
 }

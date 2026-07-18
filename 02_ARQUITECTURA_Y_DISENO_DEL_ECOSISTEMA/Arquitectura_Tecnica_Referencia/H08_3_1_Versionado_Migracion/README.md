@@ -17,3 +17,20 @@ H08_3_2: not_open
 
 La migración transforma una copia, valida el resultado y nunca destruye ni
 sobrescribe la fuente.
+
+## Candidato local implementado
+
+```yaml
+implementation: implemented_locally_pending_review
+targeted_tests: PASS
+npm_verify: PASS
+test_files: 21
+tests: 132
+H08_3_2: not_open
+```
+
+## Reserva de namespace · RES-H08-3.1-STORAGE-NAMESPACE-001
+
+El cambio de versión efectiva mueve el namespace derivado de almacenamiento.
+No destruye snapshots alpha.1, pero difiere su descubrimiento y migración a
+H08-3.2. Esta reserva bloquea el merge, no la revisión del candidato H08-3.1.

@@ -21,14 +21,17 @@
 
 ## Implementación
 
-- [ ] Pruebas iniciales rojas.
-- [ ] Registro de schemas.
-- [ ] Schemas versionados.
-- [ ] Migrador puro.
-- [ ] Orquestador a versión actual.
-- [ ] Validación de destino.
-- [ ] Pruebas nominales y adversariales.
-- [ ] Suite heredada verde.
+- [x] Pruebas de contrato incorporadas al candidato local.
+- [x] Registro de schemas.
+- [x] Schemas versionados.
+- [x] Migrador puro.
+- [x] Orquestador a versión actual.
+- [x] Validación de destino.
+- [x] Pruebas nominales y adversariales.
+- [x] Suite heredada verde.
+- [ ] Resolver `RES-H08-3.1-STORAGE-NAMESPACE-001` en H08-3.2:
+      descubrir snapshots alpha.1, migrarlos mediante copia y preservar la
+      fuente hasta confirmar escritura recuperable.
 - [ ] CI Node 22 y Node 24 confirmado.
 - [ ] Reserva RES-H08-3-ENTRY-CI-001 dispuesta.
 

@@ -32,3 +32,30 @@ documentación de apertura
 → CI
 → cierre humano H08-3.1
 ```
+
+## Implementación local candidata
+
+```yaml
+date: 2026-07-18
+parent_commit: b45bf8fb61665f52904aeb90c5cfab2c30d23be0
+schema_registry: complete
+migration_alpha_1_to_alpha_2: complete
+targeted_tests: PASS
+npm_verify: PASS
+test_files: 21
+tests: 132
+CI_reservation: open
+```
+
+No se modificaron adaptadores de almacenamiento, dependencias runtime ni
+`package-lock.json`. H08-3.2 permanece cerrado.
+
+## Reserva transicional registrada · RES-H08-3.1-STORAGE-NAMESPACE-001
+
+Durante la revisión previa al staging se identificó que
+`LocalStorageProjectRepository` deriva sus claves de la versión actual. El
+candidato alpha.2 conserva los datos alpha.1 en sus claves anteriores, pero no
+los descubre todavía.
+
+La disposición obligatoria corresponde a H08-3.2. El PR debe permanecer Draft
+y no puede fusionarse mientras esta reserva esté abierta.

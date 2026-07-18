@@ -1,9 +1,9 @@
 {
   "exportType": "storylab_project",
-  "schemaVersion": "0.8.0-alpha.1",
+  "schemaVersion": "0.8.0-alpha.2",
   "exportedAt": "2026-07-15T14:00:00Z",
   "project": {
-    "schemaVersion": "0.8.0-alpha.1",
+    "schemaVersion": "0.8.0-alpha.2",
     "id": "project-synthetic-002",
     "title": "Cartas desde la luna verde",
     "status": "completed",

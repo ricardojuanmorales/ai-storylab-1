@@ -16,7 +16,7 @@ import type {
   TextScale,
 } from "./types";
 
-export const CURRENT_SCHEMA_VERSION = "0.8.0-alpha.1" as const;
+export const CURRENT_SCHEMA_VERSION = "0.8.0-alpha.2" as const;
 export type SchemaVersion = typeof CURRENT_SCHEMA_VERSION;
 
 export interface AccessibilityPreferences {

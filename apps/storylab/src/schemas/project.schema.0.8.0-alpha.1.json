@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ai-storylab.local/schemas/project/0.8.0-alpha.2",
+  "$id": "https://ai-storylab.local/schemas/project/0.8.0-alpha.1",
   "title": "AI StoryLab CreativeProject",
   "type": "object",
   "additionalProperties": false,
@@ -22,7 +22,7 @@
   ],
   "properties": {
     "schemaVersion": {
-      "const": "0.8.0-alpha.2"
+      "const": "0.8.0-alpha.1"
     },
     "id": {
       "type": "string",

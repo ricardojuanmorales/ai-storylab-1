@@ -14,7 +14,7 @@
   "current": {
     "block": "H08_3_1",
     "lifecycle": "open",
-    "implementation": "authorized_within_defined_scope"
+    "implementation": "implemented_locally_pending_human_review"
   },
   "schema": {
     "source": "0.8.0-alpha.1",
@@ -28,6 +28,21 @@
   },
   "next": {
     "block": "H08_3_2",
-    "lifecycle": "not_open"
-  }
+    "lifecycle": "not_open",
+    "entry_condition": "resolve_storage_namespace_discovery_gap_before_merge"
+  },
+  "verification": {
+    "targeted_tests": "PASS",
+    "npm_verify": "PASS",
+    "test_files": 21,
+    "tests": 132
+  },
+  "block_reservations": [
+    {
+      "id": "RES-H08-3.1-STORAGE-NAMESPACE-001",
+      "status": "open",
+      "type": "transitional_merge_blocker",
+      "disposition_block": "H08_3_2"
+    }
+  ]
 }

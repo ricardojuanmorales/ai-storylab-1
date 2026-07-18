@@ -1,11 +1,12 @@
 requirement,acceptance,test_evidence,code_area,status
-H08_3_1_R1,Reconocer alpha.2,current-version tests,schemas/schema-version.ts,planned
-H08_3_1_R2,Migrar alpha.1 a alpha.2,migration nominal tests,schemas/migrations,planned
-H08_3_1_R3,No mutar fuente,deep-freeze and clone tests,schemas/migrations,planned
-H08_3_1_R4,Determinismo,repeated migration tests,schemas/migrations,planned
-H08_3_1_R5,Idempotencia del orquestador,current no-op tests,schemas/migrate-project.ts,planned
-H08_3_1_R6,Rechazar futura,future-version tests,domain/errors.ts,planned
-H08_3_1_R7,Rechazar legacy,legacy tests,domain/errors.ts,planned
-H08_3_1_R8,Validar fuente y destino,AJV plus invariant tests,schemas/runtime-validators.ts,planned
-H08_3_1_R9,No persistir,negative dependency test,application boundary,planned
-H08_3_1_R10,Preservar privacidad,full fixture equality tests,domain model,planned
+H08_3_1_R1,Reconocer alpha.2,current-version tests,schemas/schema-version.ts,PASS_LOCAL
+H08_3_1_R2,Migrar alpha.1 a alpha.2,migration nominal tests,schemas/migrations,PASS_LOCAL
+H08_3_1_R3,No mutar fuente,deep-freeze and clone tests,schemas/migrations,PASS_LOCAL
+H08_3_1_R4,Determinismo,repeated migration tests,schemas/migrations,PASS_LOCAL
+H08_3_1_R5,Idempotencia del orquestador,current no-op tests,schemas/migrate-project.ts,PASS_LOCAL
+H08_3_1_R6,Rechazar futura,future-version tests,domain/errors.ts,PASS_LOCAL
+H08_3_1_R7,Rechazar legacy,legacy tests,domain/errors.ts,PASS_LOCAL
+H08_3_1_R8,Validar fuente y destino,AJV plus invariant tests,schemas/runtime-validators.ts,PASS_LOCAL
+H08_3_1_R9,No persistir,negative dependency test,application boundary,PASS_LOCAL
+H08_3_1_R10,Preservar privacidad,full fixture equality tests,domain model,PASS_LOCAL
+H08_3_1_R11,Registrar transición de namespace,negative persistence boundary evidence,local-storage key derivation,RES-H08-3.1-STORAGE-NAMESPACE-001_OPEN

@@ -93,7 +93,7 @@ describe("LocalStorageProjectRepository", () => {
     storage.values.set(LOCAL_STORAGE_KEYS.latest, minimal.id as string);
     storage.values.set(
       keyFor(minimal.id),
-      JSON.stringify({ schemaVersion: "0.8.0-alpha.1" }),
+      JSON.stringify({ schemaVersion: "0.8.0-alpha.2" }),
     );
     const repository = new LocalStorageProjectRepository(storage);
 

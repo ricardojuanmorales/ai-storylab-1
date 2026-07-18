@@ -1,3 +1,4 @@
+import type { ValidateFunction } from "ajv";
 import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import type { DomainError } from "../domain/errors";
@@ -8,9 +9,22 @@ import type {
 } from "../domain/model";
 import { err, ok, type Result } from "../domain/result";
 import exportPackageSchema from "./export-package.schema.json";
-import projectSchema from "./project.schema.json";
+import {
+  PROJECT_SCHEMA_REGISTRY,
+  type ProjectJsonSchema,
+} from "./schema-registry";
+import {
+  CURRENT_SCHEMA_VERSION,
+  PREVIOUS_SCHEMA_VERSION,
+  type KnownSchemaVersion,
+} from "./schema-version";
 
 type JsonSchema = Record<string, unknown>;
+
+export type HistoricalCreativeProjectAlpha1 =
+  Omit<CreativeProject, "schemaVersion"> & {
+    readonly schemaVersion: typeof PREVIOUS_SCHEMA_VERSION;
+  };
 
 const ajv = new Ajv2020({
   allErrors: true,
@@ -19,19 +33,26 @@ const ajv = new Ajv2020({
 });
 addFormats(ajv);
 
-const projectSchemaValue = projectSchema as unknown as JsonSchema;
-const exportSchemaValue = exportPackageSchema as unknown as JsonSchema;
-
-ajv.addSchema(projectSchemaValue);
-
-const validateProjectSchema = ajv.getSchema(
-  String(projectSchemaValue.$id),
-);
-if (!validateProjectSchema) {
-  throw new Error("PROJECT_SCHEMA_NOT_REGISTERED");
+for (const schema of Object.values(PROJECT_SCHEMA_REGISTRY)) {
+  ajv.addSchema(schema as JsonSchema);
 }
 
-const validateExportSchema = ajv.compile(exportSchemaValue);
+const validatorFor = (version: KnownSchemaVersion): ValidateFunction => {
+  const schema = PROJECT_SCHEMA_REGISTRY[version] as ProjectJsonSchema;
+  const validator = ajv.getSchema(String(schema.$id));
+  if (!validator) {
+    throw new Error(`PROJECT_SCHEMA_NOT_REGISTERED:${version}`);
+  }
+  return validator;
+};
+
+const validateCurrentProjectSchema = validatorFor(CURRENT_SCHEMA_VERSION);
+const validateHistoricalProjectSchema = validatorFor(
+  PREVIOUS_SCHEMA_VERSION,
+);
+const validateExportSchema = ajv.compile(
+  exportPackageSchema as unknown as JsonSchema,
+);
 
 const validationError = (
   code: Extract<
@@ -48,27 +69,38 @@ const validationError = (
   details: { errorCount },
 });
 
-export const validateProjectSnapshot = (
+const validateProjectShape = <
+  ProjectType extends { readonly schemaVersion: string },
+>(
   input: unknown,
-): Result<CreativeProject, DomainError> => {
-  if (!validateProjectSchema(input)) {
+  validator: ValidateFunction,
+  path: string,
+  formatMessage: string,
+  invariantMessage: string,
+): Result<ProjectType, DomainError> => {
+  if (!validator(input)) {
     return err(
       validationError(
         "PERSISTENCE_DATA_CORRUPTED",
-        "storage.project",
-        "El proyecto local no supera la validación de formato.",
-        validateProjectSchema.errors?.length ?? 0,
+        path,
+        formatMessage,
+        validator.errors?.length ?? 0,
       ),
     );
   }
 
-  const project = structuredClone(input) as CreativeProject;
-  const invariantErrors = validateProjectInvariants(project);
+  const project = structuredClone(input) as ProjectType;
+  const invariantCandidate = {
+    ...structuredClone(project),
+    schemaVersion: CURRENT_SCHEMA_VERSION,
+  } as unknown as CreativeProject;
+  const invariantErrors = validateProjectInvariants(invariantCandidate);
+
   if (invariantErrors.length > 0) {
     return err({
       code: "PERSISTENCE_DATA_CORRUPTED",
-      path: "storage.project",
-      safeMessage: "El proyecto local contiene relaciones inconsistentes.",
+      path,
+      safeMessage: invariantMessage,
       details: {
         errorCount: invariantErrors.length,
         firstInvariant: invariantErrors[0]?.code ?? "UNKNOWN",
@@ -78,6 +110,28 @@ export const validateProjectSnapshot = (
 
   return ok(project);
 };
+
+export const validateProjectSnapshot = (
+  input: unknown,
+): Result<CreativeProject, DomainError> =>
+  validateProjectShape<CreativeProject>(
+    input,
+    validateCurrentProjectSchema,
+    "storage.project",
+    "El proyecto local no supera la validación de formato.",
+    "El proyecto local contiene relaciones inconsistentes.",
+  );
+
+export const validateHistoricalProjectAlpha1Snapshot = (
+  input: unknown,
+): Result<HistoricalCreativeProjectAlpha1, DomainError> =>
+  validateProjectShape<HistoricalCreativeProjectAlpha1>(
+    input,
+    validateHistoricalProjectSchema,
+    "migration.source",
+    "El proyecto fuente no supera la validación de su versión.",
+    "El proyecto fuente contiene relaciones inconsistentes.",
+  );
 
 export const validateExportPackageSnapshot = (
   input: unknown,
