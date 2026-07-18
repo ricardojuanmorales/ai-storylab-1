@@ -13,6 +13,7 @@ import projectSchema from "./project.schema.json";
 import storageEnvelopeSchema from "./storage-envelope.schema.json";
 import storageIndexSchema from "./storage-index.schema.json";
 import { canonicalStringify } from "./storage-integrity";
+import storageQuarantineSchema from "./storage-quarantine.schema.json";
 import storageRecentSchema from "./storage-recent.schema.json";
 import storageStagingSchema from "./storage-staging.schema.json";
 import { validateProjectSnapshot } from "./runtime-validators";
@@ -24,7 +25,29 @@ export const STORAGE_FORMATS = Object.freeze({
   index: "ai-storylab-project-index",
   recent: "ai-storylab-recent-pointer",
   staging: "ai-storylab-staged-write",
+  quarantine: "ai-storylab-storage-quarantine",
 } as const);
+
+export const STORAGE_FAILURE_KINDS = Object.freeze([
+  "storage_unavailable",
+  "quota_exceeded",
+  "malformed_json",
+  "invalid_envelope",
+  "integrity_mismatch",
+  "unsupported_future_version",
+  "invalid_payload",
+  "invalid_staging",
+  "invalid_index",
+  "invalid_recent_pointer",
+  "invalid_quarantine",
+  "orphan_recent_pointer",
+  "orphan_index_entry",
+  "snapshot_without_index",
+  "interrupted_write",
+] as const);
+
+export type StorageFailureKind =
+  (typeof STORAGE_FAILURE_KINDS)[number];
 
 export interface ProjectEnvelopeV1 {
   readonly storageFormat: typeof STORAGE_FORMATS.project;
@@ -70,9 +93,28 @@ export interface StagedProjectWriteV1 {
   readonly envelope: ProjectEnvelopeV1;
 }
 
+export interface StorageQuarantineEntryV1 {
+  readonly sourceKey: string;
+  readonly classification: StorageFailureKind;
+  readonly detectedAt: ISODateTime;
+  readonly action: "preserve_source";
+  readonly reviewState: "pending_human_review";
+}
+
+export interface StorageQuarantineV1 {
+  readonly storageFormat: typeof STORAGE_FORMATS.quarantine;
+  readonly storageFormatVersion: typeof STORAGE_FORMAT_VERSION;
+  readonly updatedAt: ISODateTime;
+  readonly entries: readonly StorageQuarantineEntryV1[];
+}
+
 export type IntegrityProvider = (value: string) => Promise<string>;
 
 type JsonSchema = Record<string, unknown>;
+type JsonRecord = Record<string, unknown>;
+
+const isRecord = (value: unknown): value is JsonRecord =>
+  typeof value === "object" && value !== null && !Array.isArray(value);
 
 const ajv = new Ajv2020({
   allErrors: true,
@@ -87,6 +129,7 @@ for (const schema of [
   storageIndexSchema,
   storageRecentSchema,
   storageStagingSchema,
+  storageQuarantineSchema,
 ]) {
   ajv.addSchema(schema as unknown as JsonSchema);
 }
@@ -111,25 +154,31 @@ const validateRecentShape = validatorFor(
 const validateStagingShape = validatorFor(
   "https://ai-storylab.local/schemas/storage/staged-write/v1",
 );
+const validateQuarantineShape = validatorFor(
+  "https://ai-storylab.local/schemas/storage/quarantine/v1",
+);
 
 const storageContractError = (
   path: string,
   safeMessage: string,
+  kind: StorageFailureKind,
   details?: Readonly<Record<string, unknown>>,
-): DomainError => {
-  const base = {
-    code: "PERSISTENCE_DATA_CORRUPTED" as const,
-    path,
-    safeMessage,
-  };
-  return details === undefined ? base : { ...base, details };
-};
+): DomainError => ({
+  code: "PERSISTENCE_DATA_CORRUPTED",
+  path,
+  safeMessage,
+  details: {
+    kind,
+    ...(details ?? {}),
+  },
+});
 
 const integrityUnavailable = (path: string): DomainError => ({
   code: "PERSISTENCE_UNAVAILABLE",
   path,
   safeMessage:
     "El navegador no puede verificar la integridad del proyecto local.",
+  details: { kind: "storage_unavailable" },
 });
 
 const validateShape = <Value>(
@@ -137,10 +186,11 @@ const validateShape = <Value>(
   validator: ValidateFunction,
   path: string,
   safeMessage: string,
+  kind: StorageFailureKind,
 ): Result<Value, DomainError> => {
   if (!validator(input)) {
     return err(
-      storageContractError(path, safeMessage, {
+      storageContractError(path, safeMessage, kind, {
         errorCount: validator.errors?.length ?? 0,
       }),
     );
@@ -149,15 +199,48 @@ const validateShape = <Value>(
   return ok(structuredClone(input) as Value);
 };
 
+const declaredEnvelopeVersion = (input: unknown): string | null => {
+  if (!isRecord(input)) return null;
+  if (typeof input.projectSchemaVersion === "string") {
+    return input.projectSchemaVersion;
+  }
+  if (
+    isRecord(input.payload) &&
+    typeof input.payload.schemaVersion === "string"
+  ) {
+    return input.payload.schemaVersion;
+  }
+  return null;
+};
+
 export const validateProjectEnvelopeV1 = async (
   input: unknown,
   integrity: IntegrityProvider,
 ): Promise<Result<ProjectEnvelopeV1, DomainError>> => {
+  const declaredVersion = declaredEnvelopeVersion(input);
+  if (
+    declaredVersion !== null &&
+    declaredVersion !== CURRENT_SCHEMA_VERSION
+  ) {
+    return err(
+      storageContractError(
+        "storage.envelope.projectSchemaVersion",
+        "La versión del snapshot local no es compatible.",
+        "unsupported_future_version",
+        {
+          observedVersion: declaredVersion,
+          currentVersion: CURRENT_SCHEMA_VERSION,
+        },
+      ),
+    );
+  }
+
   const shape = validateShape<ProjectEnvelopeV1>(
     input,
     validateEnvelopeShape,
     "storage.envelope",
     "El envelope local no supera la validación de formato.",
+    "invalid_envelope",
   );
   if (!shape.ok) return err(shape.error);
 
@@ -167,6 +250,7 @@ export const validateProjectEnvelopeV1 = async (
       storageContractError(
         "storage.envelope.payload",
         "El envelope contiene un proyecto inválido.",
+        "invalid_payload",
         { sourceCode: project.error.code },
       ),
     );
@@ -180,6 +264,7 @@ export const validateProjectEnvelopeV1 = async (
       storageContractError(
         "storage.envelope",
         "El envelope no coincide con la identidad o versión de su proyecto.",
+        "invalid_envelope",
       ),
     );
   }
@@ -196,6 +281,7 @@ export const validateProjectEnvelopeV1 = async (
       storageContractError(
         "storage.envelope.integrity",
         "La verificación de integridad del proyecto local falló.",
+        "integrity_mismatch",
       ),
     );
   }
@@ -214,6 +300,7 @@ export const validateProjectIndexV1 = (
     validateIndexShape,
     "storage.index",
     "El índice local no supera la validación de formato.",
+    "invalid_index",
   );
   if (!shape.ok) return err(shape.error);
 
@@ -225,6 +312,7 @@ export const validateProjectIndexV1 = (
         storageContractError(
           "storage.index.entries",
           "El índice local contiene identificadores duplicados.",
+          "invalid_index",
           { projectId: id },
         ),
       );
@@ -243,6 +331,7 @@ export const validateRecentProjectPointerV1 = (
     validateRecentShape,
     "storage.recent",
     "El puntero de proyecto reciente no supera la validación.",
+    "invalid_recent_pointer",
   );
 
 export const validateStagedProjectWriteV1 = async (
@@ -254,6 +343,7 @@ export const validateStagedProjectWriteV1 = async (
     validateStagingShape,
     "storage.staging",
     "La escritura en staging no supera la validación de formato.",
+    "invalid_staging",
   );
   if (!shape.ok) return err(shape.error);
 
@@ -267,4 +357,34 @@ export const validateStagedProjectWriteV1 = async (
     ...shape.value,
     envelope: envelope.value,
   });
+};
+
+export const validateStorageQuarantineV1 = (
+  input: unknown,
+): Result<StorageQuarantineV1, DomainError> => {
+  const shape = validateShape<StorageQuarantineV1>(
+    input,
+    validateQuarantineShape,
+    "storage.quarantine",
+    "La cuarentena local no supera la validación de formato.",
+    "invalid_quarantine",
+  );
+  if (!shape.ok) return err(shape.error);
+
+  const seen = new Set<string>();
+  for (const entry of shape.value.entries) {
+    const identity = `${entry.sourceKey}\u0000${entry.classification}`;
+    if (seen.has(identity)) {
+      return err(
+        storageContractError(
+          "storage.quarantine.entries",
+          "La cuarentena local contiene entradas duplicadas.",
+          "invalid_quarantine",
+        ),
+      );
+    }
+    seen.add(identity);
+  }
+
+  return ok(shape.value);
 };

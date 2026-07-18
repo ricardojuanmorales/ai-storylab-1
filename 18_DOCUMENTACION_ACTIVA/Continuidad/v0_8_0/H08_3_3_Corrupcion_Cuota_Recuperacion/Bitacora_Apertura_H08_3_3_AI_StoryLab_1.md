@@ -32,3 +32,24 @@ merge: blocked
 
 La apertura separa la definición contractual de la implementación. No se
 autoriza código funcional hasta recibir una instrucción humana explícita.
+
+
+## Implementación autorizada y verificada
+
+```yaml
+instruction: "Implementa H08-3.3 dentro del alcance definido"
+source_commit: 011cd1776dc25b6f29a70aa7d4f2d5a60510e5c5
+contract_definition: frozen
+implementation_candidate: verified_local
+npm_verify: PASS
+test_files: observed
+tests: observed
+staging: none
+commit: none
+push: none
+comment: none
+```
+
+La implementación se limitó al adaptador de persistencia, contratos de
+almacenamiento, schema de cuarentena, pruebas y documentación. No se abrió
+H08-3.4.

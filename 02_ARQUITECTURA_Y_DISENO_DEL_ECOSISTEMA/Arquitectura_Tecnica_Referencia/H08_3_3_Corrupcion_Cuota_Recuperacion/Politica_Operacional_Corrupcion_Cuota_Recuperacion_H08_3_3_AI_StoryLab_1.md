@@ -57,3 +57,36 @@ Cuando storage no responde:
 - preservar el estado en memoria cuando sea posible;
 - permitir reintento explícito;
 - no activar red ni almacenamiento alterno.
+
+
+## Decisiones congeladas para implementación
+
+```yaml
+error_surface:
+  domain_code: backward_compatible
+  classification: details.kind
+
+quarantine:
+  key: ai-storylab:storage:v1:quarantine
+  storageFormat: ai-storylab-storage-quarantine
+  storageFormatVersion: 1
+  payload_copy: prohibited
+  reviewState: pending_human_review
+  source_action: preserve_source
+
+automatic_repair:
+  valid_staging: roll_forward
+  missing_index: rebuild_metadata_only
+  orphan_index_entry: remove_from_index_only
+  orphan_recent_pointer: remove_pointer_only
+  corrupt_payload: prohibited
+  future_version: prohibited
+
+conflict_policy:
+  valid_snapshot_and_valid_staging: staged_roll_forward
+  corrupt_snapshot_and_valid_staging: block_and_preserve_both
+
+retry:
+  idempotent: required
+  automatic_deletion: prohibited
+```

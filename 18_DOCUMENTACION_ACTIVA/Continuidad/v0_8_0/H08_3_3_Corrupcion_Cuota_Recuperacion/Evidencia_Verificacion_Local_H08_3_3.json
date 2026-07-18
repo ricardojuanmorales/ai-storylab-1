@@ -1,0 +1,40 @@
+{
+  "block": "H08_3_3",
+  "date": "2026-07-18",
+  "repository": "ricardojuanmorales/ai-storylab-1",
+  "pr": 60,
+  "branch": "feat/v0.8-h08-3-persistence-schema-hardening",
+  "parent": "011cd1776dc25b6f29a70aa7d4f2d5a60510e5c5",
+  "authorization": "Implementa H08-3.3 dentro del alcance definido",
+  "npm_verify": "PASS",
+  "test_files": 23,
+  "tests": 160,
+  "capabilities": {
+    "typed_failure_classification": "PASS",
+    "metadata_only_quarantine": "PASS",
+    "quota_preserves_confirmed_snapshot": "PASS",
+    "corrupt_source_preserved": "PASS",
+    "future_version_rejected": "PASS",
+    "index_repair": "PASS",
+    "orphan_recent_cleanup": "PASS",
+    "roll_forward_idempotent": "PASS",
+    "fault_injection": "PASS"
+  },
+  "scope_guards": {
+    "runtime_dependencies_changed": false,
+    "package_files_changed": false,
+    "presentation_changed": false,
+    "application_changed": false,
+    "network_cloud_added": false,
+    "indexed_db_added": false,
+    "H08_3_4": "not_open"
+  },
+  "git": {
+    "staging": "none",
+    "commit": "none",
+    "push": "none",
+    "comment": "none"
+  },
+  "pr_mode": "draft",
+  "merge": "blocked"
+}

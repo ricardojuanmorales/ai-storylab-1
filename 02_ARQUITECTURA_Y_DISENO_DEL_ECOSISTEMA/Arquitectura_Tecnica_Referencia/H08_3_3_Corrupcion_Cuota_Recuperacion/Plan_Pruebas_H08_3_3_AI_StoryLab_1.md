@@ -67,3 +67,26 @@ Para cada punto comprobar:
 - sin dependencias;
 - sin red;
 - sin importación, roundtrip o descarga.
+
+
+## Evidencia de ejecución local
+
+```yaml
+npm_verify: PASS
+test_files: observed
+tests: observed
+fault_injection:
+  staging: PASS
+  snapshot: PASS
+  index: PASS
+  recent: PASS
+  staging_cleanup: PASS
+corruption:
+  malformed_json: PASS
+  integrity_mismatch: PASS
+  future_version: PASS
+metadata_repair:
+  missing_index: PASS
+  orphan_index_entry: PASS
+  orphan_recent_pointer: PASS
+```

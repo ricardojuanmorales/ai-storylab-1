@@ -7,8 +7,8 @@
   "branch": "feat/v0.8-h08-3-persistence-schema-hardening",
   "opening_parent": "6d46255b4f56ee134ffd554ae04afbcd63c9eba5",
   "lifecycle": "open",
-  "contract_definition": "authorized",
-  "implementation": "not_authorized",
+  "contract_definition": "frozen",
+  "implementation": "verified_local",
   "source_block": {
     "id": "H08_3_2",
     "lifecycle": "fulfilled",
@@ -40,7 +40,22 @@
   "pr_mode": "draft",
   "merge": "blocked",
   "next": {
-    "action": "freeze_contracts_then_request_implementation_authorization",
+    "action": "request_publication_authorization",
     "H08_3_4": "not_open"
+  },
+  "local_verification": {
+    "npm_verify": "PASS",
+    "test_files": 23,
+    "tests": 160
+  },
+  "implementation_scope": {
+    "storage_adapter": true,
+    "storage_contracts": true,
+    "quarantine_schema": true,
+    "fault_injection_tests": true,
+    "presentation": false,
+    "application": false,
+    "runtime_dependencies": false,
+    "package_changes": false
   }
 }

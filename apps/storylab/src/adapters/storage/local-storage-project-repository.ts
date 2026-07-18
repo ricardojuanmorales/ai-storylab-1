@@ -26,13 +26,18 @@ import {
   STORAGE_FORMAT_VERSION,
   type IntegrityProvider,
   type ProjectEnvelopeV1,
+  type ProjectIndexEntryV1,
   type ProjectIndexV1,
   type RecentProjectPointerV1,
   type StagedProjectWriteV1,
+  type StorageFailureKind,
+  type StorageQuarantineEntryV1,
+  type StorageQuarantineV1,
   validateProjectEnvelopeV1,
   validateProjectIndexV1,
   validateRecentProjectPointerV1,
   validateStagedProjectWriteV1,
+  validateStorageQuarantineV1,
 } from "../../schemas/storage-runtime-validators";
 
 export interface StorageLike {
@@ -55,6 +60,7 @@ export const LOCAL_STORAGE_KEYS = Object.freeze({
   stagingPrefix: `${STORAGE_PREFIX}staging:`,
   index: `${STORAGE_PREFIX}index`,
   recent: `${STORAGE_PREFIX}recent`,
+  quarantine: `${STORAGE_PREFIX}quarantine`,
   latest: `${STORAGE_PREFIX}recent`,
 });
 
@@ -80,6 +86,16 @@ const legacyProjectKey = (
   projectId: ProjectId,
 ): string => `${prefix}${projectId as string}`;
 
+const isRecord = (
+  value: unknown,
+): value is Readonly<Record<string, unknown>> =>
+  typeof value === "object" && value !== null && !Array.isArray(value);
+
+const schemaVersionOf = (value: unknown): string | null =>
+  isRecord(value) && typeof value.schemaVersion === "string"
+    ? value.schemaVersion
+    : null;
+
 const storageFailure = (
   failure: unknown,
   path: string,
@@ -101,6 +117,7 @@ const storageFailure = (
       path,
       safeMessage:
         "El navegador no tiene espacio suficiente para guardar el proyecto.",
+      details: { kind: "quota_exceeded" },
     };
   }
 
@@ -108,6 +125,7 @@ const storageFailure = (
     code: "PERSISTENCE_UNAVAILABLE",
     path,
     safeMessage: "El almacenamiento local no está disponible.",
+    details: { kind: "storage_unavailable" },
   };
 };
 
@@ -115,14 +133,15 @@ const corrupted = (
   path: string,
   safeMessage: string,
   details?: Readonly<Record<string, unknown>>,
-): DomainError => {
-  const base = {
-    code: "PERSISTENCE_DATA_CORRUPTED" as const,
-    path,
-    safeMessage,
-  };
-  return details === undefined ? base : { ...base, details };
-};
+): DomainError => ({
+  code: "PERSISTENCE_DATA_CORRUPTED",
+  path,
+  safeMessage,
+  details: {
+    kind: "invalid_payload",
+    ...(details ?? {}),
+  },
+});
 
 const defaultNow = (): ISODateTime =>
   new Date().toISOString() as ISODateTime;
@@ -139,6 +158,119 @@ export class LocalStorageProjectRepository
   ) {
     this.#integrity = options.integrity ?? sha256Hex;
     this.#now = options.now ?? defaultNow;
+  }
+
+  #failureKind(error: DomainError): StorageFailureKind {
+    const candidate = error.details?.kind;
+    return typeof candidate === "string"
+      ? (candidate as StorageFailureKind)
+      : error.code === "PERSISTENCE_QUOTA_EXCEEDED"
+        ? "quota_exceeded"
+        : error.code === "PERSISTENCE_UNAVAILABLE"
+          ? "storage_unavailable"
+          : "invalid_payload";
+  }
+
+  #recordQuarantine(
+    sourceKey: string,
+    classification: StorageFailureKind,
+  ): boolean {
+    const storage = this.storage;
+    if (!storage || sourceKey === LOCAL_STORAGE_KEYS.quarantine) {
+      return false;
+    }
+
+    try {
+      const detectedAt = this.#now();
+      const raw = storage.getItem(LOCAL_STORAGE_KEYS.quarantine);
+      let current: StorageQuarantineV1 = {
+        storageFormat: STORAGE_FORMATS.quarantine,
+        storageFormatVersion: STORAGE_FORMAT_VERSION,
+        updatedAt: detectedAt,
+        entries: [],
+      };
+
+      if (raw !== null) {
+        let parsed: unknown;
+        try {
+          parsed = JSON.parse(raw) as unknown;
+        } catch {
+          return false;
+        }
+        const validated = validateStorageQuarantineV1(parsed);
+        if (!validated.ok) return false;
+        current = validated.value;
+      }
+
+      const entry: StorageQuarantineEntryV1 = {
+        sourceKey,
+        classification,
+        detectedAt,
+        action: "preserve_source",
+        reviewState: "pending_human_review",
+      };
+      const entries = [
+        ...current.entries.filter(
+          (candidate) =>
+            !(
+              candidate.sourceKey === sourceKey &&
+              candidate.classification === classification
+            ),
+        ),
+        entry,
+      ].sort((left, right) =>
+        `${left.sourceKey}:${left.classification}`.localeCompare(
+          `${right.sourceKey}:${right.classification}`,
+        ),
+      );
+
+      const next = validateStorageQuarantineV1({
+        storageFormat: STORAGE_FORMATS.quarantine,
+        storageFormatVersion: STORAGE_FORMAT_VERSION,
+        updatedAt: detectedAt,
+        entries,
+      });
+      if (!next.ok) return false;
+
+      storage.setItem(
+        LOCAL_STORAGE_KEYS.quarantine,
+        JSON.stringify(next.value),
+      );
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  #quarantineFailure(
+    sourceKey: string,
+    error: DomainError,
+  ): DomainError {
+    if (
+      error.code !== "PERSISTENCE_DATA_CORRUPTED" &&
+      error.code !== "SCHEMA_VERSION_UNSUPPORTED"
+    ) {
+      return error;
+    }
+
+    const kind = this.#failureKind(error);
+    const quarantineRecorded = this.#recordQuarantine(sourceKey, kind);
+    return {
+      ...error,
+      details: {
+        ...(error.details ?? {}),
+        kind,
+        sourceKey,
+        quarantineRecorded,
+      },
+    };
+  }
+
+  #recordClassification(
+    sourceKey: string,
+    classification: StorageFailureKind,
+  ): void {
+    this.#recordQuarantine(sourceKey, classification);
   }
 
   #readItem(
@@ -188,7 +320,11 @@ export class LocalStorageProjectRepository
     try {
       return ok(JSON.parse(raw) as unknown);
     } catch {
-      return err(corrupted(path, safeMessage));
+      return err(
+        corrupted(path, safeMessage, {
+          kind: "malformed_json",
+        }),
+      );
     }
   }
 
@@ -204,21 +340,36 @@ export class LocalStorageProjectRepository
     }
   }
 
-  #stagingKeys(): Result<readonly string[], DomainError> {
+  #keysWithPrefix(
+    prefix: string,
+    path: string,
+  ): Result<readonly string[], DomainError> {
     if (!this.storage) return err(storageFailure(null, "storage"));
     try {
       const keys: string[] = [];
       const length = this.storage.length;
       for (let index = 0; index < length; index += 1) {
         const key = this.storage.key(index);
-        if (key?.startsWith(LOCAL_STORAGE_KEYS.stagingPrefix)) {
-          keys.push(key);
-        }
+        if (key?.startsWith(prefix)) keys.push(key);
       }
       return ok(keys.sort());
     } catch (failure) {
-      return err(storageFailure(failure, "storage.enumerate"));
+      return err(storageFailure(failure, path));
     }
+  }
+
+  #stagingKeys(): Result<readonly string[], DomainError> {
+    return this.#keysWithPrefix(
+      LOCAL_STORAGE_KEYS.stagingPrefix,
+      "storage.staging.enumerate",
+    );
+  }
+
+  #projectKeys(): Result<readonly string[], DomainError> {
+    return this.#keysWithPrefix(
+      LOCAL_STORAGE_KEYS.projectPrefix,
+      "storage.snapshot.enumerate",
+    );
   }
 
   #emptyIndex(updatedAt: ISODateTime): ProjectIndexV1 {
@@ -245,8 +396,25 @@ export class LocalStorageProjectRepository
       "storage.index",
       "El índice local no contiene JSON válido.",
     );
-    if (!parsed.ok) return err(parsed.error);
-    return validateProjectIndexV1(parsed.value);
+    if (!parsed.ok) {
+      return err(
+        this.#quarantineFailure(
+          LOCAL_STORAGE_KEYS.index,
+          parsed.error,
+        ),
+      );
+    }
+
+    const validated = validateProjectIndexV1(parsed.value);
+    if (!validated.ok) {
+      return err(
+        this.#quarantineFailure(
+          LOCAL_STORAGE_KEYS.index,
+          validated.error,
+        ),
+      );
+    }
+    return validated;
   }
 
   #nextIndex(
@@ -291,10 +459,260 @@ export class LocalStorageProjectRepository
     });
   }
 
+  async #readEnvelopeByStorageKey(
+    key: string,
+  ): Promise<Result<ProjectEnvelopeV1 | null, DomainError>> {
+    const raw = this.#readItem(key, "storage.snapshot.read");
+    if (!raw.ok) return err(raw.error);
+    if (raw.value === null) return ok(null);
+
+    const parsed = this.#parseJson(
+      raw.value,
+      "storage.snapshot",
+      "El snapshot local no contiene JSON válido.",
+    );
+    if (!parsed.ok) {
+      return err(this.#quarantineFailure(key, parsed.error));
+    }
+
+    const envelope = await validateProjectEnvelopeV1(
+      parsed.value,
+      this.#integrity,
+    );
+    if (!envelope.ok) {
+      return err(this.#quarantineFailure(key, envelope.error));
+    }
+
+    const keyProjectId = key.slice(
+      LOCAL_STORAGE_KEYS.projectPrefix.length,
+    );
+    if ((envelope.value.projectId as string) !== keyProjectId) {
+      return err(
+        this.#quarantineFailure(
+          key,
+          corrupted(
+            "storage.snapshot.projectId",
+            "La clave local no coincide con la identidad del proyecto.",
+            { kind: "invalid_envelope" },
+          ),
+        ),
+      );
+    }
+
+    return envelope;
+  }
+
+  async #indexEntriesFromSnapshots(): Promise<
+    Result<readonly ProjectIndexEntryV1[], DomainError>
+  > {
+    const keys = this.#projectKeys();
+    if (!keys.ok) return err(keys.error);
+
+    const entries: ProjectIndexEntryV1[] = [];
+    for (const key of keys.value) {
+      const envelope = await this.#readEnvelopeByStorageKey(key);
+      if (!envelope.ok) {
+        if (
+          envelope.error.code === "PERSISTENCE_DATA_CORRUPTED" ||
+          envelope.error.code === "SCHEMA_VERSION_UNSUPPORTED"
+        ) {
+          continue;
+        }
+        return err(envelope.error);
+      }
+      if (envelope.value === null) continue;
+      entries.push({
+        projectId: envelope.value.projectId,
+        title: envelope.value.payload.title,
+        projectSchemaVersion: envelope.value.projectSchemaVersion,
+        updatedAt: envelope.value.payload.updatedAt,
+        writeState: "committed",
+      });
+    }
+
+    return ok(
+      entries.sort((left, right) =>
+        (left.projectId as string).localeCompare(
+          right.projectId as string,
+        ),
+      ),
+    );
+  }
+
+  #persistIndex(
+    entries: readonly ProjectIndexEntryV1[],
+    updatedAt: ISODateTime,
+  ): Result<void, DomainError> {
+    const next = validateProjectIndexV1({
+      storageFormat: STORAGE_FORMATS.index,
+      storageFormatVersion: STORAGE_FORMAT_VERSION,
+      updatedAt,
+      entries,
+    });
+    if (!next.ok) return err(next.error);
+
+    const serialized = this.#serialize(
+      next.value,
+      "storage.index",
+      "El índice no puede convertirse a JSON local.",
+    );
+    if (!serialized.ok) return err(serialized.error);
+    return this.#writeItem(
+      LOCAL_STORAGE_KEYS.index,
+      serialized.value,
+      "storage.index.write",
+    );
+  }
+
+  async #repairIndex(): Promise<Result<void, DomainError>> {
+    const expected = await this.#indexEntriesFromSnapshots();
+    if (!expected.ok) return err(expected.error);
+
+    const raw = this.#readItem(
+      LOCAL_STORAGE_KEYS.index,
+      "storage.index.read",
+    );
+    if (!raw.ok) return err(raw.error);
+
+    if (raw.value === null) {
+      if (expected.value.length === 0) return ok(undefined);
+      for (const entry of expected.value) {
+        this.#recordClassification(
+          projectKey(entry.projectId),
+          "snapshot_without_index",
+        );
+      }
+      return this.#persistIndex(expected.value, this.#now());
+    }
+
+    const parsed = this.#parseJson(
+      raw.value,
+      "storage.index",
+      "El índice local no contiene JSON válido.",
+    );
+    if (!parsed.ok) {
+      this.#quarantineFailure(
+        LOCAL_STORAGE_KEYS.index,
+        parsed.error,
+      );
+      return this.#persistIndex(expected.value, this.#now());
+    }
+
+    const current = validateProjectIndexV1(parsed.value);
+    if (!current.ok) {
+      this.#quarantineFailure(
+        LOCAL_STORAGE_KEYS.index,
+        current.error,
+      );
+      return this.#persistIndex(expected.value, this.#now());
+    }
+
+    const expectedIds = new Set(
+      expected.value.map((entry) => entry.projectId as string),
+    );
+    const currentIds = new Set(
+      current.value.entries.map((entry) => entry.projectId as string),
+    );
+
+    for (const entry of current.value.entries) {
+      if (!expectedIds.has(entry.projectId as string)) {
+        this.#recordClassification(
+          `${LOCAL_STORAGE_KEYS.index}#${entry.projectId as string}`,
+          "orphan_index_entry",
+        );
+      }
+    }
+    for (const entry of expected.value) {
+      if (!currentIds.has(entry.projectId as string)) {
+        this.#recordClassification(
+          projectKey(entry.projectId),
+          "snapshot_without_index",
+        );
+      }
+    }
+
+    if (
+      canonicalStringify(current.value.entries) ===
+      canonicalStringify(expected.value)
+    ) {
+      return ok(undefined);
+    }
+
+    return this.#persistIndex(expected.value, this.#now());
+  }
+
+  async #repairRecent(): Promise<Result<void, DomainError>> {
+    const raw = this.#readItem(
+      LOCAL_STORAGE_KEYS.recent,
+      "storage.recent.read",
+    );
+    if (!raw.ok) return err(raw.error);
+    if (raw.value === null) return ok(undefined);
+
+    const parsed = this.#parseJson(
+      raw.value,
+      "storage.recent",
+      "El puntero reciente no contiene JSON válido.",
+    );
+    if (!parsed.ok) {
+      return err(
+        this.#quarantineFailure(
+          LOCAL_STORAGE_KEYS.recent,
+          parsed.error,
+        ),
+      );
+    }
+
+    const pointer = validateRecentProjectPointerV1(parsed.value);
+    if (!pointer.ok) {
+      return err(
+        this.#quarantineFailure(
+          LOCAL_STORAGE_KEYS.recent,
+          pointer.error,
+        ),
+      );
+    }
+
+    const target = this.#readItem(
+      projectKey(pointer.value.projectId),
+      "storage.recent.target.read",
+    );
+    if (!target.ok) return err(target.error);
+    if (target.value !== null) return ok(undefined);
+
+    this.#recordClassification(
+      LOCAL_STORAGE_KEYS.recent,
+      "orphan_recent_pointer",
+    );
+    return this.#removeItem(
+      LOCAL_STORAGE_KEYS.recent,
+      "storage.recent.cleanup",
+    );
+  }
+
+  async #recoverRepositoryState(): Promise<
+    Result<void, DomainError>
+  > {
+    const repairBefore = await this.#repairIndex();
+    if (!repairBefore.ok) return err(repairBefore.error);
+
+    const pending = await this.#recoverPendingWritesOnly();
+    if (!pending.ok) return err(pending.error);
+
+    const repairAfter = await this.#repairIndex();
+    if (!repairAfter.ok) return err(repairAfter.error);
+
+    return this.#repairRecent();
+  }
+
   async #promoteStagedWrite(
     staged: StagedProjectWriteV1,
     sourceStagingKey: string,
   ): Promise<Result<void, DomainError>> {
+    const targetKey = projectKey(staged.envelope.projectId);
+    const existing = await this.#readEnvelopeByStorageKey(targetKey);
+    if (!existing.ok) return err(existing.error);
+
     const index = this.#readIndex(staged.envelope.writtenAt);
     if (!index.ok) return err(index.error);
 
@@ -332,22 +750,26 @@ export class LocalStorageProjectRepository
     if (!recentText.ok) return err(recentText.error);
 
     const writeProject = this.#writeItem(
-      projectKey(staged.envelope.projectId),
+      targetKey,
       envelopeText.value,
       "storage.snapshot.write",
     );
     if (!writeProject.ok) return err(writeProject.error);
 
     const readback = this.#readItem(
-      projectKey(staged.envelope.projectId),
+      targetKey,
       "storage.snapshot.verify",
     );
     if (!readback.ok) return err(readback.error);
     if (readback.value === null) {
       return err(
-        corrupted(
-          "storage.snapshot.verify",
-          "El snapshot definitivo no pudo verificarse.",
+        this.#quarantineFailure(
+          targetKey,
+          corrupted(
+            "storage.snapshot.verify",
+            "El snapshot definitivo no pudo verificarse.",
+            { kind: "interrupted_write" },
+          ),
         ),
       );
     }
@@ -357,13 +779,17 @@ export class LocalStorageProjectRepository
       "storage.snapshot.verify",
       "El snapshot definitivo no contiene JSON válido.",
     );
-    if (!parsed.ok) return err(parsed.error);
+    if (!parsed.ok) {
+      return err(this.#quarantineFailure(targetKey, parsed.error));
+    }
 
     const verified = await validateProjectEnvelopeV1(
       parsed.value,
       this.#integrity,
     );
-    if (!verified.ok) return err(verified.error);
+    if (!verified.ok) {
+      return err(this.#quarantineFailure(targetKey, verified.error));
+    }
 
     const writeIndex = this.#writeItem(
       LOCAL_STORAGE_KEYS.index,
@@ -387,7 +813,9 @@ export class LocalStorageProjectRepository
     );
   }
 
-  async #recoverPendingWrites(): Promise<Result<void, DomainError>> {
+  async #recoverPendingWritesOnly(): Promise<
+    Result<void, DomainError>
+  > {
     const keys = this.#stagingKeys();
     if (!keys.ok) return err(keys.error);
 
@@ -401,15 +829,22 @@ export class LocalStorageProjectRepository
         "storage.staging",
         "La escritura en staging no contiene JSON válido.",
       );
-      if (!parsed.ok) return err(parsed.error);
+      if (!parsed.ok) {
+        return err(this.#quarantineFailure(key, parsed.error));
+      }
 
       const staged = await validateStagedProjectWriteV1(
         parsed.value,
         this.#integrity,
       );
-      if (!staged.ok) return err(staged.error);
+      if (!staged.ok) {
+        return err(this.#quarantineFailure(key, staged.error));
+      }
 
-      const promoted = await this.#promoteStagedWrite(staged.value, key);
+      const promoted = await this.#promoteStagedWrite(
+        staged.value,
+        key,
+      );
       if (!promoted.ok) return err(promoted.error);
     }
     return ok(undefined);
@@ -488,9 +923,13 @@ export class LocalStorageProjectRepository
     if (!readback.ok) return err(readback.error);
     if (readback.value === null) {
       return err(
-        corrupted(
-          "storage.staging.verify",
-          "La escritura en staging no pudo verificarse.",
+        this.#quarantineFailure(
+          key,
+          corrupted(
+            "storage.staging.verify",
+            "La escritura en staging no pudo verificarse.",
+            { kind: "interrupted_write" },
+          ),
         ),
       );
     }
@@ -500,13 +939,17 @@ export class LocalStorageProjectRepository
       "storage.staging.verify",
       "La escritura verificada no contiene JSON válido.",
     );
-    if (!parsed.ok) return err(parsed.error);
+    if (!parsed.ok) {
+      return err(this.#quarantineFailure(key, parsed.error));
+    }
 
     const verified = await validateStagedProjectWriteV1(
       parsed.value,
       this.#integrity,
     );
-    if (!verified.ok) return err(verified.error);
+    if (!verified.ok) {
+      return err(this.#quarantineFailure(key, verified.error));
+    }
 
     return this.#promoteStagedWrite(verified.value, key);
   }
@@ -514,47 +957,21 @@ export class LocalStorageProjectRepository
   async #loadEnvelopeProject(
     projectId: ProjectId,
   ): Promise<Result<CreativeProject | null, DomainError>> {
-    const raw = this.#readItem(
+    const envelope = await this.#readEnvelopeByStorageKey(
       projectKey(projectId),
-      "storage.snapshot.read",
-    );
-    if (!raw.ok) return err(raw.error);
-    if (raw.value === null) return ok(null);
-
-    const parsed = this.#parseJson(
-      raw.value,
-      "storage.snapshot",
-      "El snapshot local no contiene JSON válido.",
-    );
-    if (!parsed.ok) return err(parsed.error);
-
-    const envelope = await validateProjectEnvelopeV1(
-      parsed.value,
-      this.#integrity,
     );
     if (!envelope.ok) return err(envelope.error);
-
-    if (envelope.value.projectId !== projectId) {
-      return err(
-        corrupted(
-          "storage.snapshot.projectId",
-          "La clave local no coincide con la identidad del proyecto.",
-        ),
-      );
-    }
-    return ok(envelope.value.payload);
+    return ok(envelope.value?.payload ?? null);
   }
 
   #loadRawAlpha2Project(
     projectId: ProjectId,
   ): Result<CreativeProject | null, DomainError> {
-    const raw = this.#readItem(
-      legacyProjectKey(
-        LEGACY_LOCAL_STORAGE_KEYS.alpha2.projectPrefix,
-        projectId,
-      ),
-      "storage.raw.alpha2.read",
+    const key = legacyProjectKey(
+      LEGACY_LOCAL_STORAGE_KEYS.alpha2.projectPrefix,
+      projectId,
     );
+    const raw = this.#readItem(key, "storage.raw.alpha2.read");
     if (!raw.ok) return err(raw.error);
     if (raw.value === null) return ok(null);
 
@@ -563,15 +980,43 @@ export class LocalStorageProjectRepository
       "storage.raw.alpha2",
       "El snapshot raw alpha.2 no contiene JSON válido.",
     );
-    if (!parsed.ok) return err(parsed.error);
+    if (!parsed.ok) {
+      return err(this.#quarantineFailure(key, parsed.error));
+    }
+
+    const observedVersion = schemaVersionOf(parsed.value);
+    if (
+      observedVersion !== null &&
+      observedVersion !== CURRENT_SCHEMA_VERSION
+    ) {
+      return err(
+        this.#quarantineFailure(
+          key,
+          corrupted(
+            "storage.raw.alpha2.schemaVersion",
+            "La versión del snapshot raw no es compatible.",
+            {
+              kind: "unsupported_future_version",
+              observedVersion,
+            },
+          ),
+        ),
+      );
+    }
 
     const project = validateProjectSnapshot(parsed.value);
-    if (!project.ok) return err(project.error);
+    if (!project.ok) {
+      return err(this.#quarantineFailure(key, project.error));
+    }
     if (project.value.id !== projectId) {
       return err(
-        corrupted(
-          "storage.raw.alpha2.id",
-          "El snapshot raw alpha.2 no coincide con su clave.",
+        this.#quarantineFailure(
+          key,
+          corrupted(
+            "storage.raw.alpha2.id",
+            "El snapshot raw alpha.2 no coincide con su clave.",
+            { kind: "invalid_payload" },
+          ),
         ),
       );
     }
@@ -581,13 +1026,11 @@ export class LocalStorageProjectRepository
   #loadRawAlpha1Project(
     projectId: ProjectId,
   ): Result<CreativeProject | null, DomainError> {
-    const raw = this.#readItem(
-      legacyProjectKey(
-        LEGACY_LOCAL_STORAGE_KEYS.alpha1.projectPrefix,
-        projectId,
-      ),
-      "storage.raw.alpha1.read",
+    const key = legacyProjectKey(
+      LEGACY_LOCAL_STORAGE_KEYS.alpha1.projectPrefix,
+      projectId,
     );
+    const raw = this.#readItem(key, "storage.raw.alpha1.read");
     if (!raw.ok) return err(raw.error);
     if (raw.value === null) return ok(null);
 
@@ -596,15 +1039,43 @@ export class LocalStorageProjectRepository
       "storage.raw.alpha1",
       "El snapshot raw alpha.1 no contiene JSON válido.",
     );
-    if (!parsed.ok) return err(parsed.error);
+    if (!parsed.ok) {
+      return err(this.#quarantineFailure(key, parsed.error));
+    }
+
+    const observedVersion = schemaVersionOf(parsed.value);
+    if (
+      observedVersion !== null &&
+      observedVersion !== PREVIOUS_SCHEMA_VERSION
+    ) {
+      return err(
+        this.#quarantineFailure(
+          key,
+          corrupted(
+            "storage.raw.alpha1.schemaVersion",
+            "La versión del snapshot raw no es compatible.",
+            {
+              kind: "unsupported_future_version",
+              observedVersion,
+            },
+          ),
+        ),
+      );
+    }
 
     const project = migrateAlpha1ToAlpha2(parsed.value);
-    if (!project.ok) return err(project.error);
+    if (!project.ok) {
+      return err(this.#quarantineFailure(key, project.error));
+    }
     if (project.value.id !== projectId) {
       return err(
-        corrupted(
-          "storage.raw.alpha1.id",
-          "El snapshot raw alpha.1 no coincide con su clave.",
+        this.#quarantineFailure(
+          key,
+          corrupted(
+            "storage.raw.alpha1.id",
+            "El snapshot raw alpha.1 no coincide con su clave.",
+            { kind: "invalid_payload" },
+          ),
         ),
       );
     }
@@ -628,7 +1099,7 @@ export class LocalStorageProjectRepository
   ): Promise<Result<CreativeProject | null, DomainError>> {
     if (!this.storage) return err(storageFailure(null, "storage"));
 
-    const recovery = await this.#recoverPendingWrites();
+    const recovery = await this.#recoverRepositoryState();
     if (!recovery.ok) return err(recovery.error);
 
     const current = await this.#loadEnvelopeProject(projectId);
@@ -718,7 +1189,7 @@ export class LocalStorageProjectRepository
   > {
     if (!this.storage) return err(storageFailure(null, "storage"));
 
-    const recovery = await this.#recoverPendingWrites();
+    const recovery = await this.#recoverRepositoryState();
     if (!recovery.ok) return err(recovery.error);
 
     const current = await this.#loadCurrentMostRecent();
@@ -741,7 +1212,7 @@ export class LocalStorageProjectRepository
   ): Promise<Result<void, DomainError>> {
     if (!this.storage) return err(storageFailure(null, "storage"));
 
-    const recovery = await this.#recoverPendingWrites();
+    const recovery = await this.#recoverRepositoryState();
     if (!recovery.ok) return err(recovery.error);
 
     const validated = validateProjectSnapshot(project);
@@ -754,7 +1225,7 @@ export class LocalStorageProjectRepository
   > {
     if (!this.storage) return err(storageFailure(null, "storage"));
 
-    const recovery = await this.#recoverPendingWrites();
+    const recovery = await this.#recoverRepositoryState();
     if (!recovery.ok) return err(recovery.error);
 
     const index = this.#readIndex(this.#now());
@@ -775,7 +1246,7 @@ export class LocalStorageProjectRepository
   ): Promise<Result<void, DomainError>> {
     if (!this.storage) return err(storageFailure(null, "storage"));
 
-    const recovery = await this.#recoverPendingWrites();
+    const recovery = await this.#recoverRepositoryState();
     if (!recovery.ok) return err(recovery.error);
 
     const now = this.#now();
@@ -869,7 +1340,7 @@ export class LocalStorageProjectRepository
   async clearMostRecent(): Promise<Result<void, DomainError>> {
     if (!this.storage) return err(storageFailure(null, "storage"));
 
-    const recovery = await this.#recoverPendingWrites();
+    const recovery = await this.#recoverRepositoryState();
     if (!recovery.ok) return err(recovery.error);
 
     const current = this.#readItem(

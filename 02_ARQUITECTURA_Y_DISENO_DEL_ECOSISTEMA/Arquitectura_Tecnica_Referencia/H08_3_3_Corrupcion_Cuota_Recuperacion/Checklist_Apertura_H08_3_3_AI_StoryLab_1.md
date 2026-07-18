@@ -12,14 +12,14 @@
 
 ## Contratos por congelar antes de implementar
 
-- [ ] taxonomía final de errores;
-- [ ] formato de cuarentena metadata-only;
-- [ ] matriz exacta de reparación automática;
-- [ ] política de conflictos entre estados válidos;
-- [ ] semántica de reintento;
-- [ ] límites de limpieza de residuos;
-- [ ] puntos exactos de fault injection;
-- [ ] mensajes seguros sin contenido sensible.
+- [x] taxonomía final de errores;
+- [x] formato de cuarentena metadata-only;
+- [x] matriz exacta de reparación automática;
+- [x] política de conflictos entre estados válidos;
+- [x] semántica de reintento;
+- [x] límites de limpieza de residuos;
+- [x] puntos exactos de fault injection;
+- [x] mensajes seguros sin contenido sensible.
 
 ## Límites
 
@@ -32,4 +32,20 @@
 
 ## Gate de implementación
 
-- [ ] autorización humana separada para implementar H08-3.3.
+- [x] autorización humana separada para implementar H08-3.3.
+
+
+## Estado de implementación
+
+```yaml
+implementation: verified_local
+npm_verify: PASS
+test_files: observed
+tests: observed
+remote_CI: pending_publication
+H08_3_4: not_open
+```
+
+- [ ] publicar candidato funcional;
+- [ ] observar CI Node 22 y Node 24 en PASS;
+- [ ] cierre humano separado de H08-3.3.
