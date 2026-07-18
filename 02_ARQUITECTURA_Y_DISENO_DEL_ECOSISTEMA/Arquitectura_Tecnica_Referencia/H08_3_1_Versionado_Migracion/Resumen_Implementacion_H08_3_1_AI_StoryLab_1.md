@@ -65,3 +65,12 @@ merge_blocking: true
 H08-3.2 deberá descubrir el namespace alpha.1, validar la fuente, ejecutar el
 migrador puro y completar la escritura recuperable antes de que H08-3 pueda
 salir de Draft o fusionarse.
+
+## Cierre del bloque y transferencia
+
+H08-3.1 se declara cumplido tras la publicación de `e42277138bab3d052c2b182de2394de5f2a18aee`, la
+verificación local completa y CI remota exitosa en Node 22 y Node 24.
+
+La reserva `RES-H08-3.1-STORAGE-NAMESPACE-001` se transfiere, sin cerrarse, a H08-3.2. Su resolución
+requiere descubrimiento alpha.1, migración no destructiva y promoción
+recuperable a envelope v1.

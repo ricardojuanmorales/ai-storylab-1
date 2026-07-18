@@ -1,0 +1,16 @@
+id,requirement,evidence,status
+H08_3_2_R01,Envelope v1 versionado,schemas and contract tests,OPEN
+H08_3_2_R02,Namespace estable storage:v1,key tests,OPEN
+H08_3_2_R03,Checksum nativo accidental,canonicalization and integrity tests,OPEN
+H08_3_2_R04,Índice metadata-only,privacy assertions,OPEN
+H08_3_2_R05,Staging verificable,write sequence tests,OPEN
+H08_3_2_R06,Roll-forward determinista,recovery state fixtures,OPEN
+H08_3_2_R07,Promoción raw alpha.2,compatibility tests,OPEN
+H08_3_2_R08,Migración raw alpha.1,migration integration tests,OPEN
+H08_3_2_R09,Preservación de fuente,non-destruction assertions,OPEN
+H08_3_2_R10,Resolver reserva namespace,RES-H08-3.1-STORAGE-NAMESPACE-001,OPEN
+H08_3_2_R11,Sin expansión de producto,scope audit,OPEN
+H08_3_2_R12,Regresión completa,npm verify and CI matrix,OPEN
+H08_3_2_R13,Recent separado del índice,index and pointer schemas,OPEN
+H08_3_2_R14,Claves raw y precedencia,compatibility key tests,OPEN
+H08_3_2_R15,Enumeración controlada de staging,StorageLike enumeration tests,OPEN

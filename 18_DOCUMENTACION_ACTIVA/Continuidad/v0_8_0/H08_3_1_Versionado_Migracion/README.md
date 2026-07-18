@@ -39,3 +39,12 @@ alpha_1_discovery: deferred
 resolution_block: H08_3_2
 merge_blocking: true
 ```
+
+## Transferencia efectiva a H08-3.2
+
+```yaml
+H08_3_1: fulfilled
+implementation_commit: e42277138bab3d052c2b182de2394de5f2a18aee
+H08_3_2: open
+RES-H08-3.1-STORAGE-NAMESPACE-001: transferred_open
+```

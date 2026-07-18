@@ -59,3 +59,11 @@ los descubre todavía.
 
 La disposición obligatoria corresponde a H08-3.2. El PR debe permanecer Draft
 y no puede fusionarse mientras esta reserva esté abierta.
+
+## Cierre efectivo y transferencia a H08-3.2
+
+Por instrucción humana explícita del 2026-07-18, H08-3.1 queda cumplido y H08-3.2
+queda abierto. La implementación publicada permanece en `e42277138bab3d052c2b182de2394de5f2a18aee`.
+
+`RES-H08-3.1-STORAGE-NAMESPACE-001` conserva estado abierto y bloquea el merge hasta su resolución
+en H08-3.2.
