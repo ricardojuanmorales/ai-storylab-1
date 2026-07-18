@@ -41,3 +41,16 @@ PR_mode: DRAFT
 ready_for_review: PENDING_HUMAN_DECISION
 merge: BLOCKED
 ```
+
+## Atestación de publicación
+
+```yaml
+publication_attestation:
+  closure_commit: 236593cf00356dc12ee31259f6380edc149e7075
+  CI_run: 29662093574
+  Node_22: PASS
+  Node_24: PASS
+  PR_body_updated: true
+  PR_mode: DRAFT
+  merge: BLOCKED
+```

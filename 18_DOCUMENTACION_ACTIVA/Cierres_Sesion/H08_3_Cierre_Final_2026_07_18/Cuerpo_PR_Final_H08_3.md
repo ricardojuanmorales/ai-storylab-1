@@ -1,12 +1,12 @@
 # H08-3 · Persistencia y schemas endurecidos
 
-## Estado final
+## Estado final atestiguado
 
 ```yaml
 baseline: 7c783aa4f55df0aeeec1e0ad7e65f58149d43e16
 branch: feat/v0.8-h08-3-persistence-schema-hardening
 checkpoint_commit: a8f6c379d5397a376d35855d85fe161d4f9201c6
-closure_commit: RESOLVED_AFTER_PUBLICATION
+closure_commit: 236593cf00356dc12ee31259f6380edc149e7075
 
 H08_3:
   lifecycle: CLOSED_DOCUMENTALLY
@@ -17,12 +17,12 @@ H08_3A:
   human_verdict: PASS
   publication: COMPLETE
 
-final_CI:
+closure_CI:
   workflow: H08-1.3 Baseline
-  run: RESOLVED_AFTER_PUBLICATION
+  run: 29662093574
   Node_22: PASS
   Node_24: PASS
-  url: RESOLVED_AFTER_PUBLICATION
+  url: https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/29662093574
 
 PR_mode: DRAFT
 ready_for_review: PENDING_SEPARATE_HUMAN_AUTHORIZATION
@@ -32,10 +32,10 @@ merge: BLOCKED
 ## Propósito alcanzado
 
 H08-3 endurece la persistencia local y la evolución de schemas sin
-ampliar el arco funcional de AI StoryLab 1. El resultado conserva la
-experiencia local-first de H08-2 y añade contratos verificables para
-migración, integridad, escritura recuperable, corrupción, cuota,
-reparación y observabilidad local segura.
+ampliar el arco funcional de AI StoryLab 1. Conserva la experiencia
+local-first de H08-2 y añade contratos verificables para migración,
+integridad, escritura recuperable, corrupción, cuota, reparación y
+observabilidad local segura.
 
 ## Bloques completados
 
@@ -115,36 +115,32 @@ package_files_changed: false
 - `RES-H08-3-ENTRY-CI-001`: **resuelta**, con evidencia Node 22/24.
 - Riesgos de destrucción de fuente, escrituras parciales, corrupción,
   cuota y filtración de metadatos: **mitigados y probados**.
-- `DEBT-H08-3A-CI-ACTIONS-001`: **abierta y no bloqueante**. GitHub
-  fuerza `actions/checkout@v4` y `actions/setup-node@v4` desde Node 20
-  hacia Node 24.
+- `DEBT-H08-3A-CI-ACTIONS-001`: **abierta y no bloqueante**.
 - IndexedDB permanece diferido hasta existir detonantes verificables.
 
-## Gobernanza y método
+## Protocolo candidato
 
-Se formalizó el protocolo candidato **Doble canal y tres ritmos**:
+**Doble canal y tres ritmos** fue validado como protocolo candidato.
+Su entrada al SDD sigue diferida hasta demostrar generalización en otro
+ciclo independiente.
 
-- canal técnico-operacional;
-- canal narrativo y de gobernanza;
-- ritmo técnico reproducible;
-- ritmo narrativo humanamente aprobado;
-- ritmo canónico consolidado al cierre.
-
-El protocolo fue validado en H08-3, pero no entra todavía al SDD como
-estándar general. Su generalización requiere evidencia en otro ciclo
-independiente.
-
-## Tamaño consolidado del PR
+## Snapshot del cierre canónico
 
 ```yaml
-commits: [{'authoredDate': '2026-07-18T03:25:15Z', 'authors': [{'email': 'ricardo.morales1@upr.edu', 'id': 'U_kgDOCsDeFQ', 'login': 'ricardojuanmorales', 'name': 'Ricardo Juan Morales'}], 'committedDate': '2026-07-18T03:25:15Z', 'messageBody': '', 'messageHeadline': 'Prepara gate de entrada H08-3', 'oid': '6acb252af57ffdf5c585ae8540ddd5c18b9c1d43'}, {'authoredDate': '2026-07-18T04:37:34Z', 'authors': [{'email': 'ricardo.morales1@upr.edu', 'id': 'U_kgDOCsDeFQ', 'login': 'ricardojuanmorales', 'name': 'Ricardo Juan Morales'}], 'committedDate': '2026-07-18T04:37:34Z', 'messageBody': '', 'messageHeadline': 'Registra aprobación de GATE-H08-3-ENTRY', 'oid': '12ca182e99ad66515cf860d7cad876414d16ecf1'}, {'authoredDate': '2026-07-18T05:15:46Z', 'authors': [{'email': 'ricardo.morales1@upr.edu', 'id': 'U_kgDOCsDeFQ', 'login': 'ricardojuanmorales', 'name': 'Ricardo Juan Morales'}], 'committedDate': '2026-07-18T05:15:46Z', 'messageBody': '', 'messageHeadline': 'Abre H08-3.1 versionado y migración', 'oid': 'b45bf8fb61665f52904aeb90c5cfab2c30d23be0'}, {'authoredDate': '2026-07-18T06:03:43Z', 'authors': [{'email': 'ricardo.morales1@upr.edu', 'id': 'U_kgDOCsDeFQ', 'login': 'ricardojuanmorales', 'name': 'Ricardo Juan Morales'}], 'committedDate': '2026-07-18T06:03:43Z', 'messageBody': '', 'messageHeadline': 'Implementa versionado y migración H08-3.1', 'oid': 'e42277138bab3d052c2b182de2394de5f2a18aee'}, {'authoredDate': '2026-07-18T06:53:57Z', 'authors': [{'email': 'ricardo.morales1@upr.edu', 'id': 'U_kgDOCsDeFQ', 'login': 'ricardojuanmorales', 'name': 'Ricardo Juan Morales'}], 'committedDate': '2026-07-18T06:53:57Z', 'messageBody': '', 'messageHeadline': 'Abre H08-3.2 envelope, índice y escritura recuperable', 'oid': '78fa443ed73396d414dfa985e9e032a03c234389'}, {'authoredDate': '2026-07-18T08:10:09Z', 'authors': [{'email': 'ricardo.morales1@upr.edu', 'id': 'U_kgDOCsDeFQ', 'login': 'ricardojuanmorales', 'name': 'Ricardo Juan Morales'}], 'committedDate': '2026-07-18T08:10:09Z', 'messageBody': '', 'messageHeadline': 'Implementa envelope, índice y escritura recuperable H08-3.2', 'oid': 'f51df006d986c8f97814cfb57b3df4dfb86b8579'}, {'authoredDate': '2026-07-18T08:48:22Z', 'authors': [{'email': 'ricardo.morales1@upr.edu', 'id': 'U_kgDOCsDeFQ', 'login': 'ricardojuanmorales', 'name': 'Ricardo Juan Morales'}], 'committedDate': '2026-07-18T08:48:22Z', 'messageBody': '', 'messageHeadline': 'Cierra H08-3.2 y resuelve reserva de namespace', 'oid': '6d46255b4f56ee134ffd554ae04afbcd63c9eba5'}, {'authoredDate': '2026-07-18T09:12:44Z', 'authors': [{'email': 'ricardo.morales1@upr.edu', 'id': 'U_kgDOCsDeFQ', 'login': 'ricardojuanmorales', 'name': 'Ricardo Juan Morales'}], 'committedDate': '2026-07-18T09:12:44Z', 'messageBody': '', 'messageHeadline': 'Abre H08-3.3 corrupción, cuota y recuperación', 'oid': '011cd1776dc25b6f29a70aa7d4f2d5a60510e5c5'}, {'authoredDate': '2026-07-18T17:57:46Z', 'authors': [{'email': 'ricardo.morales1@upr.edu', 'id': 'U_kgDOCsDeFQ', 'login': 'ricardojuanmorales', 'name': 'Ricardo Juan Morales'}], 'committedDate': '2026-07-18T17:57:46Z', 'messageBody': '', 'messageHeadline': 'Implementa H08-3.3 corrupción, cuota y recuperación', 'oid': '80879e8fdeec1ed36bb8a484a50d5ffbb2bd80b3'}, {'authoredDate': '2026-07-18T20:45:27Z', 'authors': [{'email': 'ricardo.morales1@upr.edu', 'id': 'U_kgDOCsDeFQ', 'login': 'ricardojuanmorales', 'name': 'Ricardo Juan Morales'}], 'committedDate': '2026-07-18T20:45:27Z', 'messageBody': '', 'messageHeadline': 'Integra H08-3.4 observabilidad local y documentación', 'oid': '6c2f63ac0128be330f8c743366b9e2e5886ba3d7'}, {'authoredDate': '2026-07-18T21:11:22Z', 'authors': [{'email': 'ricardo.morales1@upr.edu', 'id': 'U_kgDOCsDeFQ', 'login': 'ricardojuanmorales', 'name': 'Ricardo Juan Morales'}], 'committedDate': '2026-07-18T21:11:22Z', 'messageBody': '', 'messageHeadline': 'Publica checkpoint independiente H08-3A', 'oid': 'a8f6c379d5397a376d35855d85fe161d4f9201c6'}]
-changed_files: 164
-additions: 9243
-deletions: 298
+commits: 12
+changed_files: 185
+additions: 10388
+deletions: 301
+snapshot_commit: 236593cf00356dc12ee31259f6380edc149e7075
 ```
+
+## Regla de atestación
+
+Este documento registra el cierre publicado y su CI. La atestación
+post-publicación vive en un commit posterior para evitar una referencia
+circular al hash del propio commit.
 
 ## Frontera final
 
 H08-3 está cerrado documental y técnicamente. El PR permanece Draft.
-Cambiarlo a Ready for Review y autorizar merge son decisiones humanas
-separadas y continúan bloqueadas.
+Ready for Review y merge requieren decisiones humanas separadas.
