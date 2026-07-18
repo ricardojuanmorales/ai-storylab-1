@@ -1,11 +1,11 @@
 # Resumen de implementación · H08-3.2
 
 ```yaml
-opening_parent: 78fa443ed73396d414dfa985e9e032a03c234389
-implementation_candidate: local_verified
-staging: none
-commit: none
-push: none
+opening_commit: 78fa443ed73396d414dfa985e9e032a03c234389
+implementation_commit: f51df006d986c8f97814cfb57b3df4dfb86b8579
+implementation: published
+local_verification: PASS
+remote_CI: PASS
 ```
 
 ## Componentes implementados
@@ -41,11 +41,29 @@ raw alpha.1
 → preservar raw alpha.1
 ```
 
-La reserva permanece documentalmente abierta hasta que el candidato sea
-publicado y su CI remota resulte verde.
+La reserva `RES-H08-3.1-STORAGE-NAMESPACE-001` queda resuelta canónicamente: el candidato fue
+publicado y la CI remota concluyó en PASS para Node 22 y Node 24.
 
 ## Límites preservados
 
 No se añadieron dependencias, IndexedDB, UI de múltiples proyectos,
 importación, roundtrip, descarga, red, nube ni políticas avanzadas de
 corrupción y cuota. H08-3.3 permanece cerrado.
+
+## Evidencia final de cierre
+
+```yaml
+local:
+  test_files: 22
+  tests: 145
+  npm_verify: PASS
+
+remote:
+  run_id: 29637274649
+  Node_22: PASS
+  Node_24: PASS
+
+H08_3_2: fulfilled
+RES-H08-3.1-STORAGE-NAMESPACE-001: resolved
+H08_3_3: not_open
+```

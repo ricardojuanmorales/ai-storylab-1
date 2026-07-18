@@ -8,9 +8,10 @@ H08_3_2_R06,Roll-forward determinista,recovery state fixtures,PASS
 H08_3_2_R07,Promoción raw alpha.2,compatibility tests,PASS
 H08_3_2_R08,Migración raw alpha.1,migration integration tests,PASS
 H08_3_2_R09,Preservación de fuente,non-destruction assertions,PASS
-H08_3_2_R10,Resolver reserva namespace,RES-H08-3.1-STORAGE-NAMESPACE-001,LOCAL_PASS_PENDING_PUBLICATION_CI
+H08_3_2_R10,Resolver reserva namespace,RES-H08-3.1-STORAGE-NAMESPACE-001,PASS
 H08_3_2_R11,Sin expansión de producto,scope audit,PASS
-H08_3_2_R12,Regresión completa,npm verify and CI matrix,LOCAL_PASS_PENDING_REMOTE_CI
+H08_3_2_R12,Regresión completa,npm verify and CI matrix,PASS
 H08_3_2_R13,Recent separado del índice,index and pointer schemas,PASS
 H08_3_2_R14,Claves raw y precedencia,compatibility key tests,PASS
 H08_3_2_R15,Enumeración controlada de staging,StorageLike enumeration tests,PASS
+H08_3_2_R16,Cierre documental humano,decision de cierre y evidencia remota,PASS

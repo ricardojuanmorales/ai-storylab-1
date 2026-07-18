@@ -1,4 +1,4 @@
-# Checklist de apertura · H08-3.2
+# Checklist de apertura y cierre · H08-3.2
 
 ## Precondiciones
 
@@ -28,10 +28,25 @@
 ## Bloqueadores de cierre
 
 - [x] Satisfacer técnicamente `RES-H08-3.1-STORAGE-NAMESPACE-001` en local.
-- [ ] Resolver canónicamente `RES-H08-3.1-STORAGE-NAMESPACE-001` tras publicación y CI remota.
+- [x] Resolver canónicamente `RES-H08-3.1-STORAGE-NAMESPACE-001` tras publicación y CI remota.
 - [x] Preservar fuentes raw alpha.1 y alpha.2.
 - [x] Demostrar ausencia de proyectos parciales.
 - [x] Mantener índice libre de contenido privado.
 - [x] `npm run verify` en PASS.
-- [ ] CI Node 22 y 24 en PASS.
+- [x] CI Node 22 y 24 en PASS.
 - [ ] Revisión humana separada antes de H08-3.3.
+
+## Dictamen de cierre
+
+```yaml
+implementation_commit: f51df006d986c8f97814cfb57b3df4dfb86b8579
+local_tests: 145_PASS
+remote_CI_Node_22: PASS
+remote_CI_Node_24: PASS
+RES-H08-3.1-STORAGE-NAMESPACE-001: resolved
+H08_3_2: fulfilled
+H08_3_3: not_open
+```
+
+La casilla de revisión humana antes de H08-3.3 permanece abierta porque este
+cierre no autoriza el bloque siguiente.

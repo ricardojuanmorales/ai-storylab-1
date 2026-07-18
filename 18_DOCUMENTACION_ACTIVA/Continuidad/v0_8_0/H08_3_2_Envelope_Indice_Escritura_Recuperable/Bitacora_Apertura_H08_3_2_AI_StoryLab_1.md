@@ -80,3 +80,31 @@ regression:
 ```
 
 H08-3.3 permanece cerrado y el merge continúa bloqueado.
+
+## Cierre documental y resolución canónica
+
+La implementación fue publicada en `f51df006d986c8f97814cfb57b3df4dfb86b8579` y el workflow
+remoto `29637274649` concluyó en `success`.
+
+```yaml
+local_verification:
+  npm_verify: PASS
+  test_files: 22
+  tests: 145
+
+remote_CI:
+  Node_22: PASS
+  Node_24: PASS
+
+RES-H08-3.1-STORAGE-NAMESPACE-001:
+  status: resolved
+  resolution_block: H08_3_2
+
+H08_3_2: fulfilled
+H08_3_3: not_open
+PR_mode: draft
+merge: blocked
+```
+
+La reserva deja de bloquear por sí misma, pero el PR consolidado permanece
+bloqueado y Draft. H08-3.3 requiere una decisión humana separada.

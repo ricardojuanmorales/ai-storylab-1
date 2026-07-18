@@ -6,8 +6,8 @@
   "pr": 60,
   "branch": "feat/v0.8-h08-3-persistence-schema-hardening",
   "opening_parent": "e42277138bab3d052c2b182de2394de5f2a18aee",
-  "lifecycle": "open",
-  "implementation": "authorized_within_defined_scope",
+  "lifecycle": "fulfilled",
+  "implementation": "published",
   "source_block": {
     "id": "H08_3_1",
     "lifecycle": "fulfilled",
@@ -22,15 +22,18 @@
     },
     {
       "id": "RES-H08-3.1-STORAGE-NAMESPACE-001",
-      "status": "open",
-      "technical_status": "satisfied_locally",
-      "canonical_resolution_requires": [
-        "implementation_publication",
-        "remote_CI_Node_22_PASS",
-        "remote_CI_Node_24_PASS"
-      ],
+      "status": "resolved",
+      "technical_status": "fulfilled",
+      "canonical_status": "resolved",
       "resolution_block": "H08_3_2",
-      "merge_blocking": true
+      "resolution_evidence": {
+        "implementation_commit": "f51df006d986c8f97814cfb57b3df4dfb86b8579",
+        "implementation_publication": "PASS",
+        "remote_CI_run": 29637274649,
+        "remote_CI_Node_22": "PASS",
+        "remote_CI_Node_24": "PASS"
+      },
+      "merge_blocking": false
     }
   ],
   "scope": {
@@ -48,14 +51,26 @@
   "pr_mode": "draft",
   "merge": "blocked",
   "implementation_candidate": {
-    "status": "verified_local",
-    "parent": "78fa443ed73396d414dfa985e9e032a03c234389",
+    "status": "published",
+    "opening_commit": "78fa443ed73396d414dfa985e9e032a03c234389",
+    "implementation_commit": "f51df006d986c8f97814cfb57b3df4dfb86b8579",
     "functional_changes": true,
-    "verification": "PASS",
-    "publication": "pending_human_authorization"
+    "local_verification": "PASS",
+    "local_test_files": 22,
+    "local_tests": 145,
+    "publication": "complete",
+    "remote_ci": "PASS",
+    "remote_ci_run": 29637274649
   },
   "next": {
-    "action": "review_local_candidate",
+    "action": "await_human_authorization_to_open_H08_3_3",
     "H08_3_3": "not_open"
+  },
+  "closure": {
+    "date": "2026-07-18",
+    "decision": "Cierra documentalmente H08-3.2 y resuelve RES-H08-3.1-STORAGE-NAMESPACE-001",
+    "status": "PASS",
+    "decision_document": "00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Decision_Cierre_H08_3_2_Envelope_Indice_Escritura_Recuperable_2026_07_18.md",
+    "evidence_document": "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_3_2_Envelope_Indice_Escritura_Recuperable/Evidencia_Cierre_H08_3_2.json"
   }
 }
