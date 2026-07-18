@@ -7,7 +7,7 @@ AI StoryLab 1.
 
 ```yaml
 current_version_line: v0.8.0
-current_process: H08_3_0_gate_approved_waiting_H08_3_1_opening
+current_process: H08_3_1_versionado_migracion_open
 effective_baseline: 7c783aa4f55df0aeeec1e0ad7e65f58149d43e16
 current_branch: feat/v0.8-h08-3-persistence-schema-hardening
 
@@ -17,8 +17,9 @@ H08_2:
 
 H08_3:
   H08_3_0: fulfilled
-  H08_3_1: not_open
-  implementation: blocked_until_explicit_H08_3_1_opening
+  H08_3_1: open
+  H08_3_2: not_open
+  implementation: authorized_within_H08_3_1_scope
   PR: 60
   PR_mode: consolidated_draft
 
@@ -38,7 +39,10 @@ GATE_H08_3_ENTRY:
 
 ## Continuidad activa principal
 
-`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_H08_3/`
+`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_3_1_Versionado_Migracion/`
+
+La evidencia de entrada permanece en
+`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_H08_3/`.
 
 ## Decisiones ratificadas
 
@@ -53,5 +57,6 @@ GATE_H08_3_ENTRY:
 
 ## Restricción
 
-La aprobación del gate no abre automáticamente H08-3.1. La implementación
-permanece bloqueada hasta una instrucción humana separada.
+La implementación está autorizada únicamente dentro de H08-3.1: registro de
+schemas, migración pura, validación, fixtures y pruebas. Persistencia, envelope,
+índice, recovery y H08-3.2 permanecen cerrados.

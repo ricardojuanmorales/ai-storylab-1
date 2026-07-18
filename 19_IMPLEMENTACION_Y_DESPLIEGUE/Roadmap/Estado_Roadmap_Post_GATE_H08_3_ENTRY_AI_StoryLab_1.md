@@ -32,3 +32,8 @@ remaining_sequence:
 
 El gate aprobado vuelve elegible H08-3.1 para una decisión de apertura
 separada. No convierte la elegibilidad en autorización automática.
+
+## Continuidad posterior
+
+H08-3.1 fue abierto por decisión humana separada. El estado vigente se registra
+en `Estado_Roadmap_Apertura_H08_3_1_AI_StoryLab_1.md`.

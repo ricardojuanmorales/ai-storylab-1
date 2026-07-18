@@ -1,0 +1,34 @@
+# Bitácora de apertura · H08-3.1
+
+```yaml
+date: 2026-07-18
+source_instruction: "Adelante"
+authority: repository_owner_and_responsible_human
+PR: 60
+opening_parent_commit: 12ca182e99ad66515cf860d7cad876414d16ecf1
+```
+
+## Decisiones
+
+- abrir H08-3.1 como único bloque funcional activo;
+- tratar alpha.2 como hardening sin campos nuevos;
+- congelar alpha.1 como schema histórico;
+- implementar solo alpha.1 → alpha.2;
+- mantener migración pura y no persistente;
+- conservar futuras, legacy, envelope, índice y recovery en sus fronteras;
+- requerir pruebas antes de código funcional;
+- usar el primer commit que active workflows para disponer la reserva CI.
+
+## Secuencia de trabajo
+
+```text
+documentación de apertura
+→ pruebas rojas
+→ registro y schemas versionados
+→ migrador puro
+→ orquestador
+→ validación e invariantes
+→ suite completa
+→ CI
+→ cierre humano H08-3.1
+```

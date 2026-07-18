@@ -13,7 +13,7 @@ artificial responsable.
 
 ```yaml
 version_line: v0.8.0
-current_process: H08_3_0_gate_approved_waiting_H08_3_1_opening
+current_process: H08_3_1_versionado_migracion_open
 baseline_main: 7c783aa4f55df0aeeec1e0ad7e65f58149d43e16
 current_branch: feat/v0.8-h08-3-persistence-schema-hardening
 current_PR: 60
@@ -27,9 +27,10 @@ H08_2:
 H08_3:
   title: Persistencia y schemas endurecidos
   H08_3_0: fulfilled
-  H08_3_1: not_open
+  H08_3_1: open
+  H08_3_2: not_open
   entry_gate: approved_with_reservations
-  implementation: blocked_until_explicit_H08_3_1_opening
+  implementation: authorized_within_H08_3_1_scope
 
 GATE_H08_3_ENTRY:
   status: approved_with_reservations
@@ -77,9 +78,11 @@ schema alpha.1
 → validación
 ```
 
-## Regla de transición
+## Bloque activo
 
-El gate de entrada está aprobado con una reserva procedural de CI remoto.
+H08-3.1 está abierto para versionado y migración pura. Alpha.2 no introduce
+campos nuevos de usuario. Persistencia, envelope, índice y recovery permanecen
+fuera de alcance hasta H08-3.2 y H08-3.3.
 
-H08-3.0 queda cerrado. Ningún cambio funcional en `apps/storylab` comienza
-hasta una apertura humana explícita de H08-3.1.
+La reserva procedural exige confirmar CI Node 22 y Node 24 en el primer commit
+que active workflows. El cierre de H08-3.1 no abrirá automáticamente H08-3.2.
