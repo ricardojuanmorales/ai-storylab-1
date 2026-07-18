@@ -1,0 +1,8 @@
+block,scope,evidence_commit,result,notes
+H08-3.0,gate y contratos,12ca182e99ad66515cf860d7cad876414d16ecf1,PASS,CI reservation resolved
+H08-3.1,versionado y migración,e42277138bab3d052c2b182de2394de5f2a18aee,PASS,explicit alpha1 to alpha2
+H08-3.2,envelope índice staging,f51df006d986c8f97814cfb57b3df4dfb86b8579,PASS,closure 6d46255
+H08-3.3,corrupción cuota recuperación,80879e8fdeec1ed36bb8a484a50d5ffbb2bd80b3,PASS,canonical close in final commit
+H08-3.4,integración observabilidad,6c2f63ac0128be330f8c743366b9e2e5886ba3d7,PASS,24 files 164 tests
+H08-3A,checkpoint independiente,a8f6c379d5397a376d35855d85fe161d4f9201c6,HUMAN_PASS,0 blocking findings
+H08-3 final,gobernanza y continuidad,this_closure_commit,AUTHORIZED,PR remains Draft

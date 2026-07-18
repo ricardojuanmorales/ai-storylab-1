@@ -1,0 +1,237 @@
+{
+  "closure": "H08_3",
+  "date": "2026-07-18",
+  "status": "AUTHORIZED_FOR_PUBLICATION",
+  "baseline": "7c783aa4f55df0aeeec1e0ad7e65f58149d43e16",
+  "checkpoint_head": "a8f6c379d5397a376d35855d85fe161d4f9201c6",
+  "pre_closure_commits": 11,
+  "verification": {
+    "npm_verify": "PASS",
+    "test_files": 24,
+    "tests": 164,
+    "typecheck": "PASS",
+    "build": "PASS",
+    "architecture_audit": "PASS",
+    "secrets_audit": "PASS",
+    "privacy_audit": "PASS",
+    "vertical_slice_audit": "PASS",
+    "checkpoint_CI": {
+      "run": 29661139961,
+      "url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/29661139961",
+      "Node_22": "PASS",
+      "Node_24": "PASS"
+    },
+    "closure_publication_CI": "REQUIRED_AFTER_COMMIT"
+  },
+  "governance": {
+    "H08_3A_human_verdict": "PASS",
+    "global_closure_authorized": true,
+    "PR_body_update_authorized": true,
+    "PR_mode": "DRAFT",
+    "ready_for_review": "NOT_AUTHORIZED",
+    "merge": "BLOCKED"
+  },
+  "scope": {
+    "runtime_dependencies_changed": false,
+    "package_files_changed": false,
+    "backend": false,
+    "cloud": false,
+    "network": false,
+    "telemetry": false,
+    "analytics": false,
+    "IndexedDB": false,
+    "full_multi_project_UI": false,
+    "import_roundtrip": false,
+    "automatic_download": false,
+    "M2_M3_M4_expansion": false
+  },
+  "findings": {
+    "blocking": 0,
+    "resolved_reservations": [
+      "RES-H08-3-ENTRY-CI-001"
+    ],
+    "open_non_blocking_debt": [
+      "DEBT-H08-3A-CI-ACTIONS-001"
+    ]
+  },
+  "protocol": {
+    "name": "Doble canal y tres ritmos",
+    "status": "CANDIDATE_STANDARD",
+    "validated_in": "H08_3",
+    "SDD_inclusion": "DEFERRED_PENDING_GENERALIZATION"
+  },
+  "observed_PR_before_closure": {
+    "commits": [
+      {
+        "authoredDate": "2026-07-18T03:25:15Z",
+        "authors": [
+          {
+            "email": "ricardo.morales1@upr.edu",
+            "id": "U_kgDOCsDeFQ",
+            "login": "ricardojuanmorales",
+            "name": "Ricardo Juan Morales"
+          }
+        ],
+        "committedDate": "2026-07-18T03:25:15Z",
+        "messageBody": "",
+        "messageHeadline": "Prepara gate de entrada H08-3",
+        "oid": "6acb252af57ffdf5c585ae8540ddd5c18b9c1d43"
+      },
+      {
+        "authoredDate": "2026-07-18T04:37:34Z",
+        "authors": [
+          {
+            "email": "ricardo.morales1@upr.edu",
+            "id": "U_kgDOCsDeFQ",
+            "login": "ricardojuanmorales",
+            "name": "Ricardo Juan Morales"
+          }
+        ],
+        "committedDate": "2026-07-18T04:37:34Z",
+        "messageBody": "",
+        "messageHeadline": "Registra aprobación de GATE-H08-3-ENTRY",
+        "oid": "12ca182e99ad66515cf860d7cad876414d16ecf1"
+      },
+      {
+        "authoredDate": "2026-07-18T05:15:46Z",
+        "authors": [
+          {
+            "email": "ricardo.morales1@upr.edu",
+            "id": "U_kgDOCsDeFQ",
+            "login": "ricardojuanmorales",
+            "name": "Ricardo Juan Morales"
+          }
+        ],
+        "committedDate": "2026-07-18T05:15:46Z",
+        "messageBody": "",
+        "messageHeadline": "Abre H08-3.1 versionado y migración",
+        "oid": "b45bf8fb61665f52904aeb90c5cfab2c30d23be0"
+      },
+      {
+        "authoredDate": "2026-07-18T06:03:43Z",
+        "authors": [
+          {
+            "email": "ricardo.morales1@upr.edu",
+            "id": "U_kgDOCsDeFQ",
+            "login": "ricardojuanmorales",
+            "name": "Ricardo Juan Morales"
+          }
+        ],
+        "committedDate": "2026-07-18T06:03:43Z",
+        "messageBody": "",
+        "messageHeadline": "Implementa versionado y migración H08-3.1",
+        "oid": "e42277138bab3d052c2b182de2394de5f2a18aee"
+      },
+      {
+        "authoredDate": "2026-07-18T06:53:57Z",
+        "authors": [
+          {
+            "email": "ricardo.morales1@upr.edu",
+            "id": "U_kgDOCsDeFQ",
+            "login": "ricardojuanmorales",
+            "name": "Ricardo Juan Morales"
+          }
+        ],
+        "committedDate": "2026-07-18T06:53:57Z",
+        "messageBody": "",
+        "messageHeadline": "Abre H08-3.2 envelope, índice y escritura recuperable",
+        "oid": "78fa443ed73396d414dfa985e9e032a03c234389"
+      },
+      {
+        "authoredDate": "2026-07-18T08:10:09Z",
+        "authors": [
+          {
+            "email": "ricardo.morales1@upr.edu",
+            "id": "U_kgDOCsDeFQ",
+            "login": "ricardojuanmorales",
+            "name": "Ricardo Juan Morales"
+          }
+        ],
+        "committedDate": "2026-07-18T08:10:09Z",
+        "messageBody": "",
+        "messageHeadline": "Implementa envelope, índice y escritura recuperable H08-3.2",
+        "oid": "f51df006d986c8f97814cfb57b3df4dfb86b8579"
+      },
+      {
+        "authoredDate": "2026-07-18T08:48:22Z",
+        "authors": [
+          {
+            "email": "ricardo.morales1@upr.edu",
+            "id": "U_kgDOCsDeFQ",
+            "login": "ricardojuanmorales",
+            "name": "Ricardo Juan Morales"
+          }
+        ],
+        "committedDate": "2026-07-18T08:48:22Z",
+        "messageBody": "",
+        "messageHeadline": "Cierra H08-3.2 y resuelve reserva de namespace",
+        "oid": "6d46255b4f56ee134ffd554ae04afbcd63c9eba5"
+      },
+      {
+        "authoredDate": "2026-07-18T09:12:44Z",
+        "authors": [
+          {
+            "email": "ricardo.morales1@upr.edu",
+            "id": "U_kgDOCsDeFQ",
+            "login": "ricardojuanmorales",
+            "name": "Ricardo Juan Morales"
+          }
+        ],
+        "committedDate": "2026-07-18T09:12:44Z",
+        "messageBody": "",
+        "messageHeadline": "Abre H08-3.3 corrupción, cuota y recuperación",
+        "oid": "011cd1776dc25b6f29a70aa7d4f2d5a60510e5c5"
+      },
+      {
+        "authoredDate": "2026-07-18T17:57:46Z",
+        "authors": [
+          {
+            "email": "ricardo.morales1@upr.edu",
+            "id": "U_kgDOCsDeFQ",
+            "login": "ricardojuanmorales",
+            "name": "Ricardo Juan Morales"
+          }
+        ],
+        "committedDate": "2026-07-18T17:57:46Z",
+        "messageBody": "",
+        "messageHeadline": "Implementa H08-3.3 corrupción, cuota y recuperación",
+        "oid": "80879e8fdeec1ed36bb8a484a50d5ffbb2bd80b3"
+      },
+      {
+        "authoredDate": "2026-07-18T20:45:27Z",
+        "authors": [
+          {
+            "email": "ricardo.morales1@upr.edu",
+            "id": "U_kgDOCsDeFQ",
+            "login": "ricardojuanmorales",
+            "name": "Ricardo Juan Morales"
+          }
+        ],
+        "committedDate": "2026-07-18T20:45:27Z",
+        "messageBody": "",
+        "messageHeadline": "Integra H08-3.4 observabilidad local y documentación",
+        "oid": "6c2f63ac0128be330f8c743366b9e2e5886ba3d7"
+      },
+      {
+        "authoredDate": "2026-07-18T21:11:22Z",
+        "authors": [
+          {
+            "email": "ricardo.morales1@upr.edu",
+            "id": "U_kgDOCsDeFQ",
+            "login": "ricardojuanmorales",
+            "name": "Ricardo Juan Morales"
+          }
+        ],
+        "committedDate": "2026-07-18T21:11:22Z",
+        "messageBody": "",
+        "messageHeadline": "Publica checkpoint independiente H08-3A",
+        "oid": "a8f6c379d5397a376d35855d85fe161d4f9201c6"
+      }
+    ],
+    "changed_files": 164,
+    "additions": 9243,
+    "deletions": 298
+  },
+  "comment_count_observed": 15,
+  "workflow_runs_observed": 8
+}

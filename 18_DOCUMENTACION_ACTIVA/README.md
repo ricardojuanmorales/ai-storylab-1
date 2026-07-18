@@ -60,3 +60,12 @@ La evidencia de entrada permanece en
 La implementación está autorizada únicamente dentro de H08-3.1: registro de
 schemas, migración pura, validación, fixtures y pruebas. Persistencia, envelope,
 índice, recovery y H08-3.2 permanecen cerrados.
+
+## Cierre final H08-3
+
+El cierre canónico de persistencia y schemas endurecidos está en:
+
+`18_DOCUMENTACION_ACTIVA/Cierres_Sesion/H08_3_Cierre_Final_2026_07_18/README.md`
+
+Estado: `H08_3_CLOSED_DOCUMENTALLY`, H08-3A con PASS humano, PR #60
+todavía Draft y merge bloqueado.
