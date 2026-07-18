@@ -1,0 +1,9 @@
+trace_id,principle,contract,invariant_or_error,evidence,status
+TR-H08-2-001,Agencia humana,decideEvidence,HUMAN_DECISION_REQUIRED,Gherkin decisión humana,planned
+TR-H08-2-002,Integridad referencial,curatePortfolio,PORTFOLIO_EVIDENCE_NOT_FOUND,domain.invariants.test.ts nominal INV-009,implemented
+TR-H08-2-003,No duplicación,curatePortfolio,PORTFOLIO_DUPLICATE_EVIDENCE,domain.invariants.test.ts nominal INV-010,implemented
+TR-H08-2-004,Privacidad,saveReflection,EXPORT_SELECTION_REQUIRED,Gherkin reflexión privada,planned
+TR-H08-2-005,Reversibilidad,removePortfolioItem,N/A,Gherkin retiro reversible,planned
+TR-H08-2-006,Offline,all,N/A,offline guard,inherited
+TR-H08-2-007,Accesibilidad,presentation,N/A,wireframes + H08-2.2 tests,specified
+TR-H08-2-008,Exportabilidad,previewExport,N/A,Gherkin export preview,specified

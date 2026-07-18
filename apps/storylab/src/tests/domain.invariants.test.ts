@@ -81,6 +81,57 @@ describe("project invariants", () => {
     expect(errorCodes(project)).toContain("HUMAN_DECISION_REQUIRED");
   });
 
+  it("rechaza referencias de portafolio sin evidencia existente", () => {
+    const project = clone(completed) as unknown as {
+      portfolio: {
+        items: Array<{ evidenceId: string }>;
+      };
+    };
+    const item = project.portfolio.items[0];
+    if (!item) throw new Error("SYNTHETIC_PORTFOLIO_ITEM_MISSING");
+    item.evidenceId = "evidence-synthetic-missing";
+
+    expect(
+      validateProjectInvariants(project as unknown as CreativeProject),
+    ).toContainEqual(
+      expect.objectContaining({
+        code: "PORTFOLIO_EVIDENCE_NOT_FOUND",
+        path: "portfolio.items.0.evidenceId",
+      }),
+    );
+  });
+
+  it("rechaza evidencia duplicada en el portafolio", () => {
+    const project = clone(completed) as unknown as {
+      portfolio: {
+        items: Array<{
+          id: string;
+          evidenceId: string;
+          title: string;
+          order: number;
+          includedAt: string;
+        }>;
+      };
+    };
+    const item = project.portfolio.items[0];
+    if (!item) throw new Error("SYNTHETIC_PORTFOLIO_ITEM_MISSING");
+
+    project.portfolio.items.push({
+      ...item,
+      id: "portfolio-item-synthetic-002",
+      order: 1,
+    });
+
+    expect(
+      validateProjectInvariants(project as unknown as CreativeProject),
+    ).toContainEqual(
+      expect.objectContaining({
+        code: "PORTFOLIO_DUPLICATE_EVIDENCE",
+        path: "portfolio.items.1.evidenceId",
+      }),
+    );
+  });
+
   it("rechaza clases de privacidad fuera del enum", () => {
     const project = clone(completed) as unknown as {
       reflections: Array<{
@@ -158,4 +209,61 @@ describe("project invariants", () => {
       errorCodes(project as unknown as CreativeProject),
     ).toContain("AUTOMATED_DECISION_PROHIBITED");
   });
+
+  it("rechaza una actividad que referencia una misión inexistente", () => {
+    const project = clone(minimal) as unknown as {
+      activityResponses: Array<{
+        id: string;
+        missionId: string;
+        text: string;
+        updatedAt: string;
+      }>;
+    };
+    project.activityResponses.push({
+      id: "activity-synthetic-missing",
+      missionId: "mission-synthetic-missing",
+      text: "Borrador sintético",
+      updatedAt: "2026-07-15T12:05:00Z",
+    });
+    expect(
+      errorCodes(project as unknown as CreativeProject),
+    ).toContain("MISSION_NOT_FOUND");
+  });
+
+  it("rechaza evidencia que referencia una misión inexistente", () => {
+    const project = clone(completed) as unknown as {
+      evidence: Array<{ missionId: string }>;
+    };
+    const evidence = project.evidence[0];
+    if (!evidence) throw new Error("SYNTHETIC_EVIDENCE_MISSING");
+    evidence.missionId = "mission-synthetic-missing";
+    expect(
+      errorCodes(project as unknown as CreativeProject),
+    ).toContain("MISSION_NOT_FOUND");
+  });
+
+  it("rechaza reflexión que referencia una misión inexistente", () => {
+    const project = clone(completed) as unknown as {
+      reflections: Array<{ missionId: string }>;
+    };
+    const reflection = project.reflections[0];
+    if (!reflection) throw new Error("SYNTHETIC_REFLECTION_MISSING");
+    reflection.missionId = "mission-synthetic-missing";
+    expect(
+      errorCodes(project as unknown as CreativeProject),
+    ).toContain("MISSION_NOT_FOUND");
+  });
+
+  it("rechaza decisión que referencia una evidencia inexistente", () => {
+    const project = clone(completed) as unknown as {
+      decisions: Array<{ evidenceId: string }>;
+    };
+    const decision = project.decisions[0];
+    if (!decision) throw new Error("SYNTHETIC_DECISION_MISSING");
+    decision.evidenceId = "evidence-synthetic-missing";
+    expect(
+      errorCodes(project as unknown as CreativeProject),
+    ).toContain("EVIDENCE_NOT_FOUND");
+  });
+
 });

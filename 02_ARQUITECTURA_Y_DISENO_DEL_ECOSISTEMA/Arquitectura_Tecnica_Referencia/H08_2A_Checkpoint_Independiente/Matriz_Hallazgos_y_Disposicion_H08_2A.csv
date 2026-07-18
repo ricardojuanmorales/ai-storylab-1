@@ -1,0 +1,2 @@
+finding_id,dimension,description,severity,evidence,disposition,blocks_gate,target,owner
+H08-2A-NONE,checkpoint,No se identificaron hallazgos,none,Reporte_Revision_Humana_H08_2A_AI_StoryLab_1.md,closed_no_action,false,none,repository_owner_and_responsible_human

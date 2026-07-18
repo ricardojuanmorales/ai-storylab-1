@@ -2,57 +2,64 @@
 
 ## Función vigente
 
-Este cartapacio conserva la memoria viva y la continuidad operativa de AI
-StoryLab 1. No sustituye las fuentes canónicas de gobernanza, arquitectura o
-dominio.
+Este cartapacio conserva la memoria viva y la continuidad operativa de
+AI StoryLab 1.
 
 ```yaml
 current_version_line: v0.8.0
-current_process: H08-1A_remediation_R2
-current_PR: 58
-current_PR_state: draft_under_independent_rereview
-next_checkpoint: H08-1A_rereview_R2
-GATE_H08_1_READY_TO_CODE: pending_hold_recommended
-H08_2: blocked
+current_process: H08_2_closed_pre_merge
+effective_main_baseline: 9b941f185feb1e59f7a774ad07c976c415537dae
+functional_head_reviewed: 0e9dc75bb8dd71600616365b14e894a2151594af
+checkpoint_head: 1bba15a27c6217d9defefe278aa6ed2142d9c041
+current_branch: feat/v0.8-h08-2-consolidated-vertical-slice
+current_PR: 59
+
+H08_2:
+  lifecycle: fulfilled
+  verdict: PASS
+  reservations: 0
+
+H08_2A:
+  lifecycle: fulfilled
+  automated_verification: PASS
+  human_review: PASS
+  findings: 0
+
+GATE_H08_2_EXIT:
+  status: approved
+  lifecycle: fulfilled_effective_on_closure_commit_and_PR_merge
+
+H08_3:
+  entry_kit_preparation: authorized_after_PR59_merge
+  implementation: blocked_until_entry_gate
 ```
 
 ## Continuidad activa principal
 
-`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1A_Remediacion_R2/`
+`18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_2A_Cierre_Gate_Salida/`
 
-Este expediente contiene:
+## Evidencia de cierre
 
-- acta de remediación R2;
-- bitácora de sesión;
-- hallazgos transferidos desde la re-review de R1;
-- criterios de prueba para F-001 F-004 y F-005;
-- reconciliación documental para F-002;
-- transferencia a CI y re-review focalizada.
+- head funcional congelado;
+- checkpoint documental publicado;
+- verificación automatizada fresca;
+- CI Node 22 y Node 24 verde;
+- recorrido humano completo;
+- 15 criterios humanos en `PASS`;
+- cero hallazgos;
+- cero reservas;
+- dictamen H08-2A `PASS`;
+- aprobación humana del gate;
+- transferencia simétrica hacia H08-3.
 
-## Secuencia vigente
+## Secuencia final del PR
 
-```text
-H08-1 cumplido
-→ H08-1A independiente
-→ Remediación R1
-→ re-review del head ff4008c2
-→ Remediación R2 en PR #58 Draft
-→ CI Node 22/24
-→ re-review focalizada del nuevo SHA
-→ Ready y merge solo con pass o pass_with_reservations
-→ decisión humana separada del gate
-→ H08-2 solo con approve o approve_with_reservations
-```
-
-## Límites
-
-La documentación activa no autoriza por inferencia:
-
-- aprobación de H08-1A antes de la re-review del nuevo SHA;
-- marcar PR #58 Ready antes del dictamen permitido;
-- merge automático;
-- aprobación del gate;
-- H08-2;
-- datos reales;
-- persistencia durable;
-- Vista del Facilitador.
+1. aplicar este paquete;
+2. registrar el commit documental de cierre;
+3. confirmar CI verde;
+4. actualizar una sola vez la descripción del PR;
+5. publicar el comentario final;
+6. marcar el PR listo para revisión;
+7. ejecutar merge humano;
+8. congelar el nuevo `main`;
+9. construir el kit de entrada H08-3.

@@ -3,222 +3,95 @@
 ## Constructor ético de historias multimedia con IA responsable
 
 AI StoryLab 1 es un ecosistema transdisciplinario de investigación-creación,
-aprendizaje lúdico y producción multimedia asistida por inteligencia artificial
-responsable.
-
-Su evolución se gobierna mediante Spec-Driven Development, documentación
-activa, pruebas reproducibles, revisiones humanas y gates independientes.
+aprendizaje lúdico y producción multimedia asistida por inteligencia
+artificial responsable.
 
 > La persona conserva la agencia. La tecnología amplía posibilidades sin
 > apropiarse del criterio creativo, pedagógico o ético.
-
----
 
 ## Estado actual
 
 ```yaml
 version_line: v0.8.0
-opening_mode: open_limited
-current_unit: H08-1A_remediation_R2
-current_PR: 58
-PR_state: draft_under_independent_rereview
+current_process: H08_2_closed_pre_merge
+current_branch: feat/v0.8-h08-2-consolidated-vertical-slice
+current_PR: 59
 
-schema_version: 0.8.0-alpha.1
-test_files: 12
-tests: 63
-runtime_dependencies: 0
+baselines:
+  main_before_H08_2: 9b941f185feb1e59f7a774ad07c976c415537dae
+  functional_head_reviewed: 0e9dc75bb8dd71600616365b14e894a2151594af
+  checkpoint_head: 1bba15a27c6217d9defefe278aa6ed2142d9c041
+  closure_commit: pending
 
-architecture:
-  domain: integrated
-  ports: integrated
-  application: minimal_use_cases
-  adapters: local_replaceable
-  presentation: absent
+verification:
+  test_files: 20
+  tests: 123
+  typecheck: PASS
+  vite_build: PASS
+  architecture_audit: PASS
+  secrets_audit: PASS
+  privacy_audit: PASS
+  vertical_slice_audit: PASS
+  CI_Node_22: PASS
+  CI_Node_24: PASS
 
-security:
-  architecture_audit: passed
-  secret_audit: passed
-  privacy_audit: passed
-  safe_error_boundary: implemented
+human_review:
+  browser: Chrome_V149
+  operating_system: macOS
+  results_PASS: 15
+  findings: 0
+  reservations: 0
+  verdict: PASS
 
-accessibility:
-  preferences_contract: implemented
-  update_use_case: implemented
-  presentation_review: future_required
+H08_2A:
+  lifecycle: fulfilled
+  verdict: PASS
 
-persistence:
-  current: ephemeral_in_memory
-  durable_technology: not_selected
+GATE_H08_2_EXIT:
+  status: approved
+  lifecycle: fulfilled_effective_on_closure_commit_and_PR_merge
 
-data:
-  mode: synthetic_only
-  real_data: prohibited
+H08_2:
+  lifecycle: fulfilled
+  formal_result: PASS_without_reservations
 
-H08_1: fulfilled
-H08_1A: remediation_R2_pending_re_review
-GATE_H08_1_READY_TO_CODE: pending_hold_recommended
-H08_2: blocked
+PR_59:
+  state_until_closure_commit_CI: draft
+  final_description: pending_post_closure_commit
+  merge: authorized_after_final_CI_and_human_action
+
+H08_3:
+  entry_kit_preparation: authorized_after_PR59_merge
+  implementation: blocked_until_GATE_H08_3_ENTRY
 ```
 
-PR #57 fue fusionado en el baseline canónico
-`965f53e04eecc0a9d6dc17cd89dbacee6797a5f6`. El checkpoint H08-1A concluyó
-`remediate_and_re_review`. La re-review de R1 cerró F-003 y F-006 y
-mantuvo F-001 F-002 F-004 y F-005 como bloqueantes. La remediación R2
-se ejecuta en PR #58 Draft; el gate permanece en `hold` y H08-2 bloqueado.
+## Resultado de H08-2
 
----
-
-## Secuencia canónica
+La primera vertical slice local-first permite:
 
 ```text
-PO-H08-1
-→ H08-1
-  → H08-1.1 · ADR y frontera técnica
-  → H08-1.2 · Dominio, contratos y schemas
-  → H08-1.3 · Runner, pruebas y CI
-  → H08-1.4 · Esqueleto modular y adaptadores
-  → H08-1.5 · Seguridad, accesibilidad y cierre
-→ H08-1A · checkpoint independiente
-→ GATE-H08-1-READY-TO-CODE
-→ H08-2
+perfil sintético
+→ proyecto
+→ M1
+→ borrador editable
+→ evidencia
+→ reflexión privada opcional
+→ decisión humana
+→ portafolio reversible
+→ guardado local
+→ recuperación validada
+→ export preview validado
+→ borrado explícito
 ```
 
-H08-1A no es una continuación automática de H08-1.5. Requiere su propio kit,
-una conversación nueva y una evaluación independiente.
+## Cierre
 
-H08-2 no puede abrirse antes de completar H08-1A y aprobar el gate aplicable.
+H08-2A confirmó la trayectoria en revisión humana y automatizada. No se
+registraron hallazgos ni reservas. El gate de salida queda aprobado.
 
----
+## Próxima fase
 
-## Qué existe en el baseline técnico
+Después del commit documental final, CI verde, actualización definitiva del
+PR y merge humano, se preparará el kit de inicio y continuidad de H08-3.
 
-La raíz técnica provisional vive en:
-
-`apps/storylab/`
-
-Capas disponibles:
-
-```text
-src/domain       reglas, tipos, invariantes y contratos de accesibilidad
-src/ports        capacidades requeridas por el núcleo
-src/application  casos de uso mínimos
-src/adapters     mecanismos locales sustituibles
-src/schemas      fronteras serializadas JSON Schema 2020-12
-src/tests        pruebas de dominio, schemas, aplicación y adaptadores
-tools            auditorías arquitectónicas, de secretos y privacidad
-```
-
-Primeros casos de uso:
-
-- `createProject`;
-- `saveProject`;
-- `loadProject`;
-- `removeProject`;
-- `updateAccessibilityPreferences`.
-
-Primeros adaptadores:
-
-- `InMemoryProjectRepository`;
-- `SystemClock`;
-- `RandomUuidGenerator`.
-
-La aplicación no tiene todavía capa `presentation`.
-
----
-
-## Principios técnicos vigentes
-
-```text
-dominio independiente del framework
-puertos antes que infraestructura
-adaptadores sustituibles
-persistencia durable diferida
-identificadores opacos y no personales
-errores públicos mínimos
-datos sintéticos
-capacidades diferidas en false
-pruebas antes de integración
-CI como evidencia, no como autoridad humana
-```
-
-La versión histórica v0.3 puede funcionar como oráculo de comportamiento y
-fuente de pruebas, pero no como fundamento arquitectónico automático.
-
----
-
-## Límites vigentes
-
-No están autorizados:
-
-- interfaz funcional o primera vertical slice;
-- backend, autenticación o nube;
-- persistencia durable;
-- datos reales o grupales;
-- Vista del Facilitador;
-- dashboard o analíticas;
-- IA embebida;
-- publicación automática;
-- importación directa del legacy;
-- H08-2.
-
----
-
-## Documentación canónica de H08-1
-
-### Arquitectura y especificación técnica
-
-- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_1_ADR_Frontera_Tecnica/`
-- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_2_Dominio_Contratos_Schemas/`
-- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_3_Runner_Pruebas_CI/`
-- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_4_Esqueleto_Modular_Adaptadores/`
-- `02_ARQUITECTURA_Y_DISENO_DEL_ECOSISTEMA/Arquitectura_Tecnica_Referencia/H08_1_5_Seguridad_Accesibilidad_Cierre/`
-
-### Memoria y continuidad
-
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_1_ADR_Frontera_Tecnica/`
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_2_Dominio_Contratos_Schemas/`
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_3_Runner_Pruebas_CI/`
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_4_Esqueleto_Modular_Adaptadores/`
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1_5_Seguridad_Accesibilidad_Cierre/`
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1A_Remediacion_R1/`
-- `18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/H08_1A_Remediacion_R2/`
-
-### Gobernanza
-
-- `00_CONTROL_MAESTRO/Spec_Driven_Development/`
-- `00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/`
-- `18_DOCUMENTACION_ACTIVA/Gates/`
-
----
-
-## Estado posterior a H08-1A
-
-La secuencia vigente es:
-
-1. H08-1 permanece cerrado.
-2. H08-1A requiere remediación R2 y re-review focalizada del nuevo SHA.
-3. La recomendación del gate es `hold`; no constituye decisión humana efectiva.
-4. La remediación no selecciona persistencia durable ni crea presentación.
-5. Una ejecución fresca con Node 22 y Node 24 es condición de re-review.
-6. H08-2 permanece bloqueado.
-
----
-
-## Archivo del README anterior
-
-La versión del README reemplazada durante este cierre se conserva como evidencia
-histórica no vigente en:
-
-`99_ARCHIVO_HISTORICO/Snapshots_README_Raiz/README_AI_StoryLab_1_Pre_Cierre_H08_1_5_2026-07-15.md`
-
-Su ingreso cumple la política de `99_ARCHIVO_HISTORICO`: hash SHA-256,
-inventario, manifiesto, sucesor canónico y declaración de no autoridad.
-
----
-
-## Regla de oro
-
-```text
-Nada avanza por entusiasmo.
-Todo avanza por evidencia, revisión humana y gate.
-```
+El cierre de H08-2 no activa automáticamente la implementación de H08-3.

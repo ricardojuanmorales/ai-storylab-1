@@ -1,0 +1,9 @@
+trace_id,principle,use_case,implementation,evidence
+TR-H08-2.3-001,Agencia humana,decideEvidence,radio sin selección,presentation.m1-cycle.test.tsx
+TR-H08-2.3-002,Derecho al borrador,saveTextActivity,actividad editable,application.creative-cycle.test.ts
+TR-H08-2.3-003,Reflexión no coercitiva,saveReflection,vacío retira u omite,application+presentation tests
+TR-H08-2.3-004,Portafolio vivo,curate/remove,reversible,application+presentation tests
+TR-H08-2.3-005,Iteración,reopenMission,conserva materiales,application+presentation tests
+TR-H08-2.3-006,Arquitectura,dependency injection,main composition root,audit:architecture
+TR-H08-2.3-007,Privacidad,in-memory only,no durable storage,audit:privacy
+TR-H08-2.3-008,Integridad,referential invariants,MISSION/EVIDENCE_NOT_FOUND,domain.invariants.test.ts

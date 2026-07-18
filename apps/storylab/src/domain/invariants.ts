@@ -145,9 +145,93 @@ export const validateProjectInvariants = (
     );
   }
 
-  const evidenceIds = new Set(project.evidence.map((item) => item.id as string));
+  const missionIds = new Set(
+    project.missions.map((item) => item.missionId as string),
+  );
+  const evidenceIds = new Set(
+    project.evidence.map((item) => item.id as string),
+  );
   const accepted = acceptedEvidenceIds(project.decisions);
   const portfolioEvidence = new Set<string>();
+
+  project.activityResponses.forEach((response, index) => {
+    if (!missionIds.has(response.missionId as string)) {
+      errors.push(
+        error(
+          "MISSION_NOT_FOUND",
+          `activityResponses.${index}.missionId`,
+          "La actividad no encuentra su misión.",
+        ),
+      );
+    }
+  });
+
+  project.evidence.forEach((item, index) => {
+    if (!missionIds.has(item.missionId as string)) {
+      errors.push(
+        error(
+          "MISSION_NOT_FOUND",
+          `evidence.${index}.missionId`,
+          "La evidencia no encuentra su misión.",
+        ),
+      );
+    }
+  });
+
+  project.reflections.forEach((reflection, index) => {
+    if (!missionIds.has(reflection.missionId as string)) {
+      errors.push(
+        error(
+          "MISSION_NOT_FOUND",
+          `reflections.${index}.missionId`,
+          "La reflexión no encuentra su misión.",
+        ),
+      );
+    }
+    if (
+      !(REFLECTION_PRIVACY_CLASSES as readonly string[]).includes(
+        reflection.privacyClass as string,
+      )
+    ) {
+      errors.push(
+        error(
+          "REFLECTION_PRIVACY_INVALID",
+          `reflections.${index}.privacyClass`,
+          "La privacidad de la reflexión no es válida.",
+        ),
+      );
+    }
+    if (reflection.selectedForExport && reflection.privacyClass === "private") {
+      errors.push(
+        error(
+          "EXPORT_SELECTION_REQUIRED",
+          `reflections.${index}`,
+          "Revise la privacidad antes de exportar la reflexión.",
+        ),
+      );
+    }
+  });
+
+  project.decisions.forEach((decision, index) => {
+    if (!evidenceIds.has(decision.evidenceId as string)) {
+      errors.push(
+        error(
+          "EVIDENCE_NOT_FOUND",
+          `decisions.${index}.evidenceId`,
+          "La decisión no encuentra su evidencia.",
+        ),
+      );
+    }
+    if (decision.actor !== "human_user") {
+      errors.push(
+        error(
+          "AUTOMATED_DECISION_PROHIBITED",
+          `decisions.${index}.actor`,
+          "La decisión debe pertenecer a una persona.",
+        ),
+      );
+    }
+  });
 
   project.portfolio.items.forEach((item, index) => {
     const evidenceId = item.evidenceId as string;
@@ -181,31 +265,6 @@ export const validateProjectInvariants = (
     portfolioEvidence.add(evidenceId);
   });
 
-  project.reflections.forEach((reflection, index) => {
-    if (
-      !(REFLECTION_PRIVACY_CLASSES as readonly string[]).includes(
-        reflection.privacyClass as string,
-      )
-    ) {
-      errors.push(
-        error(
-          "REFLECTION_PRIVACY_INVALID",
-          `reflections.${index}.privacyClass`,
-          "La privacidad de la reflexión no es válida.",
-        ),
-      );
-    }
-    if (reflection.selectedForExport && reflection.privacyClass === "private") {
-      errors.push(
-        error(
-          "EXPORT_SELECTION_REQUIRED",
-          `reflections.${index}`,
-          "Revise la privacidad antes de exportar la reflexión.",
-        ),
-      );
-    }
-  });
-
   const enabledFlag = Object.entries(project.featureFlags).find(
     ([, value]) => value !== false,
   );
@@ -234,18 +293,6 @@ export const validateProjectInvariants = (
       ),
     );
   }
-
-  project.decisions.forEach((decision, index) => {
-    if (decision.actor !== "human_user") {
-      errors.push(
-        error(
-          "AUTOMATED_DECISION_PROHIBITED",
-          `decisions.${index}.actor`,
-          "La decisión debe pertenecer a una persona.",
-        ),
-      );
-    }
-  });
 
   return errors;
 };

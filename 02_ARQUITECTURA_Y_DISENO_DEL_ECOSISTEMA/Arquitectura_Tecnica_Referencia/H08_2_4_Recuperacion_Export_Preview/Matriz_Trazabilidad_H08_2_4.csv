@@ -1,0 +1,9 @@
+trace_id,dimension,capability,implementation,evidence
+TR-H08-2.4-001,Recuperación,loadMostRecent,LocalStorageProjectRepository,adapter tests
+TR-H08-2.4-002,Validación,validateProjectSnapshot,AJV + invariants,schema tests
+TR-H08-2.4-003,Cuota,typed error,PERSISTENCE_QUOTA_EXCEEDED,adapter tests
+TR-H08-2.4-004,Fallback,storage probe,InMemoryProjectRepository,presentation tests
+TR-H08-2.4-005,Borrado,two-step UI,removeProject,presentation tests
+TR-H08-2.4-006,Privacidad,reflection filter,previewExport,application tests
+TR-H08-2.4-007,No descarga,JSON preview only,details + pre,presentation tests
+TR-H08-2.4-008,Arquitectura,storage boundary,audits,npm run verify

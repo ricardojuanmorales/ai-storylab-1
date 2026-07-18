@@ -1,0 +1,62 @@
+export const SHELL_STEPS = [
+  {
+    id: "preparation",
+    label: "Preparación local",
+    description: "Ajusta la vista y crea un proyecto sintético.",
+    status: "complete",
+  },
+  {
+    id: "mission-intention",
+    label: "M1 · Intención creadora",
+    description: "Propósito, audiencia, premisa y límites de la creación.",
+    status: "complete",
+  },
+  {
+    id: "mission-architecture",
+    label: "M2 · Arquitectura narrativa",
+    description: "Personajes, mundo, conflicto y estructura.",
+    status: "planned",
+  },
+  {
+    id: "mission-production",
+    label: "M3 · Producción multimodal",
+    description: "Evidencias creativas y documentación del proceso.",
+    status: "planned",
+  },
+  {
+    id: "mission-curation",
+    label: "M4 · Curaduría y cierre",
+    description: "Reflexión, selección, revisión y cierre humano.",
+    status: "planned",
+  },
+  {
+    id: "portfolio",
+    label: "Portafolio reversible",
+    description: "Selección humana que puede incorporarse o retirarse.",
+    status: "complete",
+  },
+  {
+    id: "local-recovery-export",
+    label: "Recuperación local y export preview",
+    description: "Guardado validado, recuperación y vista previa sin descarga.",
+    status: "current",
+  },
+  {
+    id: "import-roundtrip",
+    label: "Importación y roundtrip",
+    description: "Validación de ida y vuelta planificada para H08-5.",
+    status: "planned",
+  },
+] as const;
+
+export type ShellStep = (typeof SHELL_STEPS)[number];
+export type ShellStepStatus = ShellStep["status"];
+
+export const shellStepStatusLabel = (
+  status: ShellStepStatus,
+): string =>
+  status === "complete"
+    ? "Preparado"
+    : status === "current"
+      ? "Disponible"
+      : "Planificado";

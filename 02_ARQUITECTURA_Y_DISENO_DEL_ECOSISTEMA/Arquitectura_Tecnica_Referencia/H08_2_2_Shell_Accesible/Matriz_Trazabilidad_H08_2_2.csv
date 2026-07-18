@@ -1,0 +1,8 @@
+trace_id,dimension,capability,implementation,evidence
+TR-H08-2.2-001,Perceptible,high contrast,App.tsx + styles.css,presentation.shell.test.tsx
+TR-H08-2.2-002,Operable,keyboard reachability,semantic controls,presentation.shell.test.tsx
+TR-H08-2.2-003,Operable,skip link,main focus transfer,presentation.shell.test.tsx
+TR-H08-2.2-004,Understandable,live feedback,role=status,presentation.shell.test.tsx
+TR-H08-2.2-005,Robust,landmarks,native HTML,presentation.shell.test.tsx
+TR-H08-2.2-006,Privacy,no identifiers or network,audit-privacy,npm run verify
+TR-H08-2.2-007,Architecture,presentation boundary,audit-architecture,npm run verify

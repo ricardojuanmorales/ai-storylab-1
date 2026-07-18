@@ -1,4 +1,3 @@
-
 import type {
   ActivityResponseId,
   EvidenceId,
@@ -30,6 +29,16 @@ export interface LocalProfile {
   readonly pseudonym: string;
   readonly context?: string;
   readonly accessibility: AccessibilityPreferences;
+}
+
+export interface MissionDefinition {
+  readonly id: MissionId;
+  readonly title: string;
+  readonly purpose: string;
+  readonly instructions: readonly string[];
+  readonly activityKind: "text";
+  readonly evidenceKind: Extract<EvidenceKind, "text">;
+  readonly optional: boolean;
 }
 
 export interface MissionProgress {

@@ -1,38 +1,45 @@
-# AI StoryLab · Nueva raíz modular provisional
+# AI StoryLab · Vertical slice consolidada
 
-**Unidad vigente:** H08-1.4
+**Unidad vigente:** H08-2.5
 **Schema:** `0.8.0-alpha.1`
-**Estado:** esqueleto modular y adaptadores locales, sin vertical slice funcional
+**Clasificación:** consolidación integrada no expansiva
 
-## Capas presentes
+## Funcionalidad heredada
+
+- proyecto sintético;
+- M1 funcional;
+- actividad editable;
+- evidencia;
+- reflexión privada opcional;
+- decisión humana;
+- portafolio reversible;
+- recuperación local validada;
+- borrado explícito;
+- export preview.
+
+## Evidencia nueva
+
+`src/tests/integration.local-first.test.tsx` conecta:
 
 ```text
-src/
-  domain/
-  ports/
-  application/
-  adapters/
-  schemas/
-  fixtures/
-  tests/
+App
+→ StoryLabUseCases
+→ LocalStorageProjectRepository
+→ StorageLike sintético
 ```
 
-## Dirección autorizada
+La suite demuestra recuperación, privacidad, corrupción, cuota y borrado sin
+usar un repositorio en memoria como sustituto de la persistencia real.
 
-```text
-application → domain
-application → ports
-adapters → domain
-adapters → ports
-domain ↛ application/adapters
-ports ↛ application/adapters
+## Readiness
+
+```bash
+npm run audit:vertical-slice
+npm run test:integration
+npm run verify
 ```
 
-## Adaptadores provisionales
+## Límites
 
-- `InMemoryProjectRepository`;
-- `SystemClock`;
-- `RandomUuidGenerator`.
-
-No se selecciona persistencia durable. `localStorage`, IndexedDB, nube, backend,
-autenticación, presentación e H08-2 permanecen fuera de alcance.
+H08-2.5 no modifica el producto. Importación, roundtrip, descarga, migraciones,
+M2, M3 y M4 permanecen fuera de alcance.

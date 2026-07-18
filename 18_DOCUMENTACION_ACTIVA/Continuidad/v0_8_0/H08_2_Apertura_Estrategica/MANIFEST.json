@@ -1,0 +1,10 @@
+{
+  "package": "H08_2_PR_Consolidado_Apertura_2026-07-16",
+  "date": "2026-07-16",
+  "repository": "ricardojuanmorales/ai-storylab-1",
+  "expected_main": "9b941f185feb1e59f7a774ad07c976c415537dae",
+  "branch": "feat/v0.8-h08-2-consolidated-vertical-slice",
+  "strategy": "one_consolidated_PR",
+  "current_block": "H08-2.0",
+  "implementation_started": false
+}
