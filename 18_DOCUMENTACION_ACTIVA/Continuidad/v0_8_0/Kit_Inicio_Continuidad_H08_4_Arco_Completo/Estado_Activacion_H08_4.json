@@ -1,0 +1,40 @@
+{
+  "requested_label": "v0.8.4",
+  "canonical_unit": "H08-4",
+  "release_train": "v0.8.0",
+  "date": "2026-07-18",
+  "baseline": "7fb21b66aaf1f541d99797d582585adcc09b4f55",
+  "branch": "feat/v0.8-h08-4-complete-mission-arc",
+  "entry_gate": "APPROVED",
+  "lifecycle": "ACTIVATED",
+  "local_implementation": "AUTHORIZED_FULL_H08_4_SCOPE",
+  "publication": "HUMAN_GATED",
+  "blocks": {
+    "H08_4_0": "IN_PROGRESS_PREFLIGHT_BLOCKED",
+    "H08_4_1": "PLANNED",
+    "H08_4_2": "PLANNED",
+    "H08_4_3": "PLANNED",
+    "H08_4_4": "PLANNED",
+    "H08_4_5": "PLANNED",
+    "H08_4A": "PLANNED"
+  },
+  "blocked": [
+    "H08_5",
+    "H08_6",
+    "GATE_V08_CLOSE"
+  ],
+  "protocol": {
+    "canonical_status": "CANDIDATE_STANDARD",
+    "working_draft": "v0.2",
+    "second_validation": "OPEN",
+    "SDD_inclusion": "NOT_AUTHORIZED"
+  },
+  "session_state": {
+    "date": "2026-07-18",
+    "origin_main": "MATCH",
+    "cardinality_decision": "RATIFIED_ONLY_M3_MULTIPLE_EVIDENCE",
+    "repository_root": "UNRESOLVED_IN_CURRENT_SANDBOX",
+    "production_modification": "NOT_STARTED",
+    "remote_changes": "NONE"
+  }
+}
