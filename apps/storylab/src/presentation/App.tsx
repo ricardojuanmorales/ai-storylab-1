@@ -186,7 +186,7 @@ export function App({
           <p className="brand">AI StoryLab 1</p>
         </div>
         <p className="status-badge">
-          Recuperación y export preview · H08-2.4
+          Motor reutilizable de misiones · H08-4.1
         </p>
       </header>
 
@@ -237,7 +237,7 @@ export function App({
             <h2 id="preferences-title">Preferencias de accesibilidad</h2>
             <p>
               Estos ajustes modifican la vista actual. La integración de estas
-              preferencias al perfil persistente permanece fuera de H08-2.4.
+              preferencias al perfil persistente permanece fuera de H08-4.1.
             </p>
           </div>
 
@@ -369,8 +369,8 @@ export function App({
             <p className="eyebrow">Ruta gobernada</p>
             <h2 id="cycle-title">Mapa del arco creativo completo de v0.8.0</h2>
             <p>
-              H08-2.4 completa recuperación y export preview. M2, M3, M4,
-              importación y roundtrip continúan en bloques posteriores.
+              H08-4.1 incorpora un motor compartido y navegación accesible. M2,
+              M3 y M4 continúan planificadas para sus bloques funcionales.
             </p>
           </div>
 

@@ -12,7 +12,11 @@ const requiredFiles = [
   "src/adapters/storage/local-storage-project-repository.ts",
   "src/schemas/runtime-validators.ts",
   "src/presentation/App.tsx",
+  "src/presentation/MissionNavigation.tsx",
   "src/presentation/MissionOneWorkspace.tsx",
+  "src/presentation/MissionWorkspace.tsx",
+  "src/presentation/mission-workspace-model.ts",
+  "src/tests/presentation.mission-engine.test.tsx",
   "src/tests/integration.local-first.test.tsx",
 ];
 
@@ -59,9 +63,20 @@ for (const missionId of missionIds) {
   }
 }
 
-const appText = readFileSync(join(root, "src/presentation/App.tsx"), "utf8");
+const appText = readFileSync(
+  join(root, "src/presentation/App.tsx"),
+  "utf8",
+);
 const workspaceText = readFileSync(
-  join(root, "src/presentation/MissionOneWorkspace.tsx"),
+  join(root, "src/presentation/MissionWorkspace.tsx"),
+  "utf8",
+);
+const navigationText = readFileSync(
+  join(root, "src/presentation/MissionNavigation.tsx"),
+  "utf8",
+);
+const workspaceModelText = readFileSync(
+  join(root, "src/presentation/mission-workspace-model.ts"),
   "utf8",
 );
 const previewText = readFileSync(
@@ -81,11 +96,38 @@ const requiredSignals = [
   [appText, "recoverProject", "APP_RECOVERY_SIGNAL_MISSING"],
   [workspaceText, "previewExport", "PREVIEW_UI_SIGNAL_MISSING"],
   [workspaceText, "removeProject", "DELETE_UI_SIGNAL_MISSING"],
+  [
+    workspaceText,
+    "selectMissionWorkspaceSnapshot",
+    "REUSABLE_WORKSPACE_SIGNAL_MISSING",
+  ],
+  [
+    navigationText,
+    "MISSION_WORKSPACE_POLICIES",
+    "MISSION_NAVIGATION_SIGNAL_MISSING",
+  ],
+  [
+    workspaceModelText,
+    '"mission-production"',
+    "MISSION_POLICY_SIGNAL_MISSING",
+  ],
   [previewText, "reflectionCanLeaveDevice", "PRIVACY_FILTER_MISSING"],
   [storageText, "PERSISTENCE_QUOTA_EXCEEDED", "QUOTA_ERROR_MISSING"],
-  [storageText, "PERSISTENCE_DATA_CORRUPTED", "CORRUPTION_ERROR_MISSING"],
-  [integrationText, "LocalStorageProjectRepository", "REAL_ADAPTER_TEST_MISSING"],
-  [integrationText, "REFLEXION_PRIVADA_INTEGRADA", "PRIVACY_REGRESSION_MISSING"],
+  [
+    storageText,
+    "PERSISTENCE_DATA_CORRUPTED",
+    "CORRUPTION_ERROR_MISSING",
+  ],
+  [
+    integrationText,
+    "LocalStorageProjectRepository",
+    "REAL_ADAPTER_TEST_MISSING",
+  ],
+  [
+    integrationText,
+    "REFLEXION_PRIVADA_INTEGRADA",
+    "PRIVACY_REGRESSION_MISSING",
+  ],
 ];
 
 for (const [text, signal, error] of requiredSignals) {
@@ -107,7 +149,7 @@ for (const signal of prohibitedProductSignals) {
 
 const result = {
   status: errors.length === 0 ? "PASS" : "FAIL",
-  checkpointCandidate: "H08-2A",
+  checkpointCandidate: "H08-4.1",
   requiredFiles,
   canonicalMissionCount: missionIds.length,
   functionalMissionCount: 1,
@@ -118,6 +160,8 @@ const result = {
     corruptionHandling: true,
     quotaHandling: true,
     explicitDelete: true,
+    reusableMissionEngine: true,
+    sharedMissionNavigation: true,
   },
   deferredCapabilities: {
     import: false,
