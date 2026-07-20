@@ -16,6 +16,11 @@ const M1_WORKSPACE_COPY: MissionWorkspaceCopy = {
   activityLabel: "Borrador de intención",
   activityHelp:
     "Puedes volver, revisar y recombinar. Guardar no convierte el borrador en evidencia.",
+  evidenceTitle: "Evidencia textual",
+  evidenceHelp:
+    "La evidencia se prepara para revisión, pero nunca entra automáticamente al portafolio.",
+  evidenceTitleLabel: "Título de la evidencia",
+  evidenceSummaryLabel: "Resumen de la evidencia",
 };
 
 export function MissionOneWorkspace(props: MissionOneWorkspaceProps) {

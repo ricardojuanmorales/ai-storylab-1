@@ -47,7 +47,7 @@ const POLICY_BY_ID: Readonly<Record<string, MissionPolicySeed>> = {
   },
   "mission-architecture": {
     label: "M2",
-    availability: "planned",
+    availability: "functional",
     evidenceCardinality: "one_editable",
   },
   "mission-production": {

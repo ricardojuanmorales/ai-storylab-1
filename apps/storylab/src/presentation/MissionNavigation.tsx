@@ -1,24 +1,35 @@
+import type { MouseEvent } from "react";
 import type { MissionId } from "../domain/types";
 import { MISSION_WORKSPACE_POLICIES } from "./mission-workspace-model";
 
 export interface MissionNavigationProps {
   readonly activeMissionId: MissionId;
+  readonly onSelectMission: (missionId: MissionId) => void;
 }
 
 export function MissionNavigation({
   activeMissionId,
+  onSelectMission,
 }: MissionNavigationProps) {
+  const selectMission = (
+    event: MouseEvent<HTMLAnchorElement>,
+    missionId: MissionId,
+  ) => {
+    event.preventDefault();
+    onSelectMission(missionId);
+  };
+
   return (
     <nav
       className="mission-navigation"
       aria-label="Misiones del proyecto"
     >
       <div className="mission-navigation-heading">
-        <p className="eyebrow">Motor compartido</p>
-        <h3>Arco de misiones</h3>
+        <p className="eyebrow">Arco activo</p>
+        <h3>Misiones del proyecto</h3>
         <p>
-          M1 utiliza el motor reutilizable. Las demás misiones permanecen
-          visibles, pero no simulan funcionalidad antes de sus bloques.
+          M1 y M2 están disponibles mediante el motor compartido. M3 y M4
+          permanecen visibles y planificadas para sus bloques.
         </p>
       </div>
 
@@ -47,6 +58,9 @@ export function MissionNavigation({
                 <a
                   href="#mission-workspace"
                   aria-current={active ? "step" : undefined}
+                  onClick={(event) =>
+                    selectMission(event, policy.definition.id)
+                  }
                 >
                   {content}
                 </a>

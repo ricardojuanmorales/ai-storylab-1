@@ -14,8 +14,8 @@ export const SHELL_STEPS = [
   {
     id: "mission-architecture",
     label: "M2 · Arquitectura narrativa",
-    description: "Personajes, mundo, conflicto y estructura.",
-    status: "planned",
+    description: "Personajes, mundo, conflicto y estructura revisable.",
+    status: "current",
   },
   {
     id: "mission-production",
@@ -39,7 +39,7 @@ export const SHELL_STEPS = [
     id: "local-recovery-export",
     label: "Recuperación local y export preview",
     description: "Guardado validado, recuperación y vista previa sin descarga.",
-    status: "current",
+    status: "complete",
   },
   {
     id: "import-roundtrip",

@@ -5,7 +5,10 @@ import type {
   ExportPackage,
   MissionDefinition,
 } from "../domain/model";
-import type { HumanDecisionValue } from "../domain/types";
+import type {
+  HumanDecisionValue,
+  MissionId,
+} from "../domain/types";
 import { MissionNavigation } from "./MissionNavigation";
 import { selectMissionWorkspaceSnapshot } from "./mission-workspace-model";
 import type { PersistenceMode } from "./persistence-mode";
@@ -15,6 +18,10 @@ export interface MissionWorkspaceCopy {
   readonly activityTitle: string;
   readonly activityLabel: string;
   readonly activityHelp: string;
+  readonly evidenceTitle: string;
+  readonly evidenceHelp: string;
+  readonly evidenceTitleLabel: string;
+  readonly evidenceSummaryLabel: string;
 }
 
 export interface MissionWorkspaceProps {
@@ -27,6 +34,7 @@ export interface MissionWorkspaceProps {
   readonly onProjectChange: (project: CreativeProject) => void;
   readonly onProjectDeleted: () => void;
   readonly onMessage: (message: string) => void;
+  readonly onSelectMission: (missionId: MissionId) => void;
 }
 
 const DECISION_OPTIONS: readonly {
@@ -66,6 +74,7 @@ export function MissionWorkspace({
   onProjectChange,
   onProjectDeleted,
   onMessage,
+  onSelectMission,
 }: MissionWorkspaceProps) {
   const {
     mission,
@@ -288,7 +297,10 @@ export function MissionWorkspace({
         </p>
       </header>
 
-      <MissionNavigation activeMissionId={definition.id} />
+      <MissionNavigation
+        activeMissionId={definition.id}
+        onSelectMission={onSelectMission}
+      />
 
       <article className="mission-card" aria-labelledby="mission-title">
         <div className="section-heading">
@@ -344,14 +356,11 @@ export function MissionWorkspace({
               <form className="cycle-card" onSubmit={saveEvidence}>
                 <div>
                   <p className="step-kicker">2 · Documentar</p>
-                  <h4>Evidencia textual</h4>
-                  <p>
-                    La evidencia se prepara para revisión, pero nunca entra
-                    automáticamente al portafolio.
-                  </p>
+                  <h4>{copy.evidenceTitle}</h4>
+                  <p>{copy.evidenceHelp}</p>
                 </div>
                 <label>
-                  <span>Título de la evidencia</span>
+                  <span>{copy.evidenceTitleLabel}</span>
                   <input
                     value={evidenceTitle}
                     onChange={(event) => setEvidenceTitle(event.target.value)}
@@ -359,7 +368,7 @@ export function MissionWorkspace({
                   />
                 </label>
                 <label>
-                  <span>Resumen de la evidencia</span>
+                  <span>{copy.evidenceSummaryLabel}</span>
                   <textarea
                     value={evidenceSummary}
                     onChange={(event) => setEvidenceSummary(event.target.value)}

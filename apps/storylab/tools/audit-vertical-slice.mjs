@@ -14,9 +14,12 @@ const requiredFiles = [
   "src/presentation/App.tsx",
   "src/presentation/MissionNavigation.tsx",
   "src/presentation/MissionOneWorkspace.tsx",
+  "src/presentation/MissionTwoWorkspace.tsx",
   "src/presentation/MissionWorkspace.tsx",
   "src/presentation/mission-workspace-model.ts",
   "src/tests/presentation.mission-engine.test.tsx",
+  "src/tests/presentation.m2-cycle.test.tsx",
+  "src/tests/integration.m2-local-first.test.tsx",
   "src/tests/integration.local-first.test.tsx",
 ];
 
@@ -79,6 +82,18 @@ const workspaceModelText = readFileSync(
   join(root, "src/presentation/mission-workspace-model.ts"),
   "utf8",
 );
+const m2WorkspaceText = readFileSync(
+  join(root, "src/presentation/MissionTwoWorkspace.tsx"),
+  "utf8",
+);
+const m2TestText = readFileSync(
+  join(root, "src/tests/presentation.m2-cycle.test.tsx"),
+  "utf8",
+);
+const m2IntegrationText = readFileSync(
+  join(root, "src/tests/integration.m2-local-first.test.tsx"),
+  "utf8",
+);
 const previewText = readFileSync(
   join(root, "src/application/preview-export.ts"),
   "utf8",
@@ -94,6 +109,7 @@ const integrationText = readFileSync(
 
 const requiredSignals = [
   [appText, "recoverProject", "APP_RECOVERY_SIGNAL_MISSING"],
+  [appText, "MissionTwoWorkspace", "M2_APP_SIGNAL_MISSING"],
   [workspaceText, "previewExport", "PREVIEW_UI_SIGNAL_MISSING"],
   [workspaceText, "removeProject", "DELETE_UI_SIGNAL_MISSING"],
   [
@@ -103,13 +119,28 @@ const requiredSignals = [
   ],
   [
     navigationText,
-    "MISSION_WORKSPACE_POLICIES",
-    "MISSION_NAVIGATION_SIGNAL_MISSING",
+    "onSelectMission",
+    "MISSION_SELECTION_SIGNAL_MISSING",
   ],
   [
     workspaceModelText,
-    '"mission-production"',
+    'availability: "functional"',
     "MISSION_POLICY_SIGNAL_MISSING",
+  ],
+  [
+    m2WorkspaceText,
+    "Mapa narrativo revisable",
+    "M2_WORKSPACE_SIGNAL_MISSING",
+  ],
+  [
+    m2TestText,
+    "actualiza una sola evidencia editable de M2",
+    "M2_CARDINALITY_TEST_MISSING",
+  ],
+  [
+    m2IntegrationText,
+    "M2_RECOVERY_INTEGRATED",
+    "M2_RECOVERY_TEST_MISSING",
   ],
   [previewText, "reflectionCanLeaveDevice", "PRIVACY_FILTER_MISSING"],
   [storageText, "PERSISTENCE_QUOTA_EXCEEDED", "QUOTA_ERROR_MISSING"],
@@ -140,7 +171,12 @@ const prohibitedProductSignals = [
   "downloadExport(",
   "publishProject(",
 ];
-const productFiles = [appText, workspaceText, previewText];
+const productFiles = [
+  appText,
+  workspaceText,
+  m2WorkspaceText,
+  previewText,
+];
 for (const signal of prohibitedProductSignals) {
   if (productFiles.some((text) => text.includes(signal))) {
     errors.push(`DEFERRED_CAPABILITY_PRESENT:${signal}`);
@@ -149,10 +185,10 @@ for (const signal of prohibitedProductSignals) {
 
 const result = {
   status: errors.length === 0 ? "PASS" : "FAIL",
-  checkpointCandidate: "H08-4.1",
+  checkpointCandidate: "H08-4.2",
   requiredFiles,
   canonicalMissionCount: missionIds.length,
-  functionalMissionCount: 1,
+  functionalMissionCount: 2,
   integrationEvidence: {
     realPersistenceAdapter: true,
     recoveryAfterRemount: true,
@@ -162,6 +198,9 @@ const result = {
     explicitDelete: true,
     reusableMissionEngine: true,
     sharedMissionNavigation: true,
+    m2CompleteCycle: true,
+    m2SingularEvidence: true,
+    m2RecoveryAfterRemount: true,
   },
   deferredCapabilities: {
     import: false,

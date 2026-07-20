@@ -40,8 +40,8 @@ const createProject = async () => {
   return user;
 };
 
-describe("H08-4.1 reusable mission engine", () => {
-  it("formaliza la cardinalidad ratificada sin cambiar el schema", () => {
+describe("H08-4 reusable mission engine", () => {
+  it("mantiene la cardinalidad ratificada sin cambiar el schema", () => {
     expect(MISSION_WORKSPACE_POLICIES).toHaveLength(4);
     expect(
       MISSION_WORKSPACE_POLICIES.map(
@@ -67,31 +67,32 @@ describe("H08-4.1 reusable mission engine", () => {
       MISSION_WORKSPACE_POLICIES.filter(
         (policy) => policy.availability === "functional",
       ).map((policy) => policy.definition.id),
-    ).toEqual([MISSION_CATALOG[0].id]);
+    ).toEqual([
+      MISSION_CATALOG[0].id,
+      MISSION_CATALOG[1].id,
+    ]);
     expect(
       getMissionWorkspacePolicy(MISSION_CATALOG[2].id)
         ?.evidenceCardinality,
     ).toBe("multiple");
   });
 
-  it("expone navegación compartida sin fingir M2, M3 o M4", async () => {
-    await createProject();
+  it("navega entre M1 y M2 sin habilitar M3 o M4", async () => {
+    const user = await createProject();
 
     const navigation = screen.getByRole("navigation", {
       name: "Misiones del proyecto",
     });
     const scoped = within(navigation);
-    const currentMission = scoped.getByRole("link", {
+    const m1 = scoped.getByRole("link", {
       name: /M1 · Intención creadora/i,
     });
+    const m2 = scoped.getByRole("link", {
+      name: /M2 · Arquitectura narrativa/i,
+    });
 
-    expect(currentMission.getAttribute("aria-current")).toBe("step");
-    expect(scoped.getAllByText("Planificada")).toHaveLength(3);
-    expect(
-      scoped.queryByRole("link", {
-        name: /M2 · Arquitectura narrativa/i,
-      }),
-    ).toBeNull();
+    expect(m1.getAttribute("aria-current")).toBe("step");
+    expect(scoped.getAllByText("Planificada")).toHaveLength(2);
     expect(
       scoped.queryByRole("link", {
         name: /M3 · Producción multimodal/i,
@@ -103,11 +104,19 @@ describe("H08-4.1 reusable mission engine", () => {
       }),
     ).toBeNull();
 
-    currentMission.focus();
-    expect(document.activeElement).toBe(currentMission);
+    await user.click(m2);
+
+    expect(
+      document.getElementById("mission-title")?.textContent,
+    ).toBe("M2 · Arquitectura narrativa");
+    expect(
+      screen.getByRole("link", {
+        name: /M2 · Arquitectura narrativa/i,
+      }).getAttribute("aria-current"),
+    ).toBe("step");
   });
 
-  it("preserva la entrada funcional de M1 mediante la envoltura", async () => {
+  it("preserva la entrada funcional de M1 mediante su envoltura", async () => {
     const user = await createProject();
 
     await user.click(
