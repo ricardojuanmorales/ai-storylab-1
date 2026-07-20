@@ -15,13 +15,14 @@ export const SHELL_STEPS = [
     id: "mission-architecture",
     label: "M2 · Arquitectura narrativa",
     description: "Personajes, mundo, conflicto y estructura revisable.",
-    status: "current",
+    status: "complete",
   },
   {
     id: "mission-production",
     label: "M3 · Producción multimodal",
-    description: "Evidencias creativas y documentación del proceso.",
-    status: "planned",
+    description:
+      "Múltiples evidencias textuales y metadatos sintéticos de producción.",
+    status: "current",
   },
   {
     id: "mission-curation",

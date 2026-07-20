@@ -412,9 +412,31 @@ export const createCreativeCycleUseCases = (
     );
     if (!transition.ok) return transition;
 
-    const existing = project.evidence.find(
-      (item) => item.missionId === input.missionId,
-    );
+    const cardinality = input.cardinality ?? "one_editable";
+    const explicitEvidence = input.evidenceId
+      ? project.evidence.find((item) => item.id === input.evidenceId)
+      : undefined;
+
+    if (
+      input.evidenceId &&
+      (!explicitEvidence || explicitEvidence.missionId !== input.missionId)
+    ) {
+      return err(
+        domainError(
+          "EVIDENCE_NOT_FOUND",
+          "evidenceId",
+          "No se encontró la evidencia solicitada para esta misión.",
+        ),
+      );
+    }
+
+    const existing =
+      explicitEvidence ??
+      (cardinality === "one_editable"
+        ? project.evidence.find(
+            (item) => item.missionId === input.missionId,
+          )
+        : undefined);
     const now = dependencies.clock.now();
     const evidence: Evidence = existing
       ? {
@@ -582,11 +604,13 @@ export const createCreativeCycleUseCases = (
     };
 
     const missionStatus: MissionStatus =
-      input.value === "accept" || input.value === "reject"
-        ? "completed"
-        : input.value === "revise"
-          ? "in_progress"
-          : "ready_for_review";
+      input.missionDisposition === "keep_open"
+        ? "ready_for_review"
+        : input.value === "accept" || input.value === "reject"
+          ? "completed"
+          : input.value === "revise"
+            ? "in_progress"
+            : "ready_for_review";
 
     const transition = ensureTransition(
       missionResult.value.status,
@@ -629,6 +653,74 @@ export const createCreativeCycleUseCases = (
                 ),
               ),
             },
+        updatedAt: now,
+      },
+      dependencies,
+    );
+  },
+
+  completeMission: async (input) => {
+    const loaded = await loadExistingProject(
+      input.projectId,
+      dependencies.repository,
+    );
+    if (!loaded.ok) return loaded;
+
+    const project = loaded.value;
+    const missionResult = requireMission(project, input.missionId);
+    if (!missionResult.ok) return missionResult;
+
+    if (missionResult.value.status === "completed") {
+      return ok(project);
+    }
+
+    const evidence = project.evidence.filter(
+      (item) => item.missionId === input.missionId,
+    );
+    if (evidence.length === 0) {
+      return err(
+        domainError(
+          "EVIDENCE_NOT_FOUND",
+          "missionId",
+          "Cree al menos una evidencia antes de completar la misión.",
+        ),
+      );
+    }
+
+    const allEvidenceHasFinalDecision = evidence.every((item) =>
+      project.decisions.some(
+        (decision) =>
+          decision.evidenceId === item.id &&
+          decision.actor === "human_user" &&
+          (decision.value === "accept" || decision.value === "reject"),
+      ),
+    );
+
+    if (!allEvidenceHasFinalDecision) {
+      return err(
+        domainError(
+          "HUMAN_DECISION_REQUIRED",
+          "missionId",
+          "Cada evidencia requiere una decisión humana final antes del cierre.",
+        ),
+      );
+    }
+
+    const transition = ensureTransition(
+      missionResult.value.status,
+      "completed",
+    );
+    if (!transition.ok) return transition;
+
+    const now = dependencies.clock.now();
+
+    return persist(
+      {
+        ...project,
+        missions: replaceMission(
+          project.missions,
+          missionWithStatus(missionResult.value, "completed", now),
+        ),
         updatedAt: now,
       },
       dependencies,

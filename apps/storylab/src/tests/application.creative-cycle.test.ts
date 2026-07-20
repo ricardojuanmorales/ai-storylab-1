@@ -4,7 +4,7 @@ import {
   createProject,
 } from "../application";
 import { InMemoryProjectRepository } from "../adapters/memory/in-memory-project-repository";
-import { M1_INTENTION_DEFINITION } from "../domain";
+import { M1_INTENTION_DEFINITION, MISSION_CATALOG } from "../domain";
 import type {
   ISODateTime,
   ProjectId,
@@ -301,6 +301,136 @@ describe("creative cycle engine", () => {
     expect(reopened.value.portfolio.items).toEqual([]);
     expect(reopened.value.activityResponses).toHaveLength(1);
     expect(reopened.value.evidence).toHaveLength(1);
+  });
+
+  it("crea y edita múltiples evidencias identificables para M3", async () => {
+    const context = await setup();
+    const definition = MISSION_CATALOG[2];
+
+    await context.cycle.startMission({
+      projectId: context.project.id,
+      definition,
+    });
+    await context.cycle.saveTextActivity({
+      projectId: context.project.id,
+      missionId: definition.id,
+      text: "Plan de producción sintético",
+    });
+
+    const first = await context.cycle.createTextEvidence({
+      projectId: context.project.id,
+      missionId: definition.id,
+      cardinality: "multiple",
+      title: "Pieza uno",
+      summary: "[medio_sintetico:text_fragment]\nPrimera pieza",
+    });
+    expect(first.ok).toBe(true);
+    if (!first.ok) return;
+
+    const second = await context.cycle.createTextEvidence({
+      projectId: context.project.id,
+      missionId: definition.id,
+      cardinality: "multiple",
+      title: "Pieza dos",
+      summary: "[medio_sintetico:audio_description]\nSegunda pieza",
+    });
+    expect(second.ok).toBe(true);
+    if (!second.ok) return;
+    expect(second.value.evidence).toHaveLength(2);
+
+    const firstEvidence = second.value.evidence.find(
+      (item) => item.title === "Pieza uno",
+    );
+    if (!firstEvidence) throw new Error("M3_FIRST_EVIDENCE_MISSING");
+
+    const updated = await context.cycle.createTextEvidence({
+      projectId: context.project.id,
+      missionId: definition.id,
+      evidenceId: firstEvidence.id,
+      cardinality: "multiple",
+      title: "Pieza uno revisada",
+      summary: "[medio_sintetico:text_fragment]\nPrimera pieza revisada",
+    });
+
+    expect(updated.ok).toBe(true);
+    if (!updated.ok) return;
+    expect(updated.value.evidence).toHaveLength(2);
+    expect(
+      updated.value.evidence.find((item) => item.id === firstEvidence.id)
+        ?.title,
+    ).toBe("Pieza uno revisada");
+  });
+
+  it("mantiene M3 abierta hasta que todas las evidencias tienen decisión final", async () => {
+    const context = await setup();
+    const definition = MISSION_CATALOG[2];
+
+    await context.cycle.startMission({
+      projectId: context.project.id,
+      definition,
+    });
+    await context.cycle.saveTextActivity({
+      projectId: context.project.id,
+      missionId: definition.id,
+      text: "Plan de dos piezas",
+    });
+
+    await context.cycle.createTextEvidence({
+      projectId: context.project.id,
+      missionId: definition.id,
+      cardinality: "multiple",
+      title: "Pieza A",
+      summary: "[medio_sintetico:image_description]\nPieza A",
+    });
+    const created = await context.cycle.createTextEvidence({
+      projectId: context.project.id,
+      missionId: definition.id,
+      cardinality: "multiple",
+      title: "Pieza B",
+      summary: "[medio_sintetico:video_description]\nPieza B",
+    });
+    expect(created.ok).toBe(true);
+    if (!created.ok) return;
+
+    const [firstEvidence, secondEvidence] = created.value.evidence;
+    if (!firstEvidence || !secondEvidence) {
+      throw new Error("M3_EVIDENCE_SET_MISSING");
+    }
+
+    const firstDecision = await context.cycle.decideEvidence({
+      projectId: context.project.id,
+      evidenceId: firstEvidence.id,
+      value: "accept",
+      missionDisposition: "keep_open",
+    });
+    expect(firstDecision.ok).toBe(true);
+    if (!firstDecision.ok) return;
+    expect(firstDecision.value.missions[0]?.status).toBe("ready_for_review");
+
+    const premature = await context.cycle.completeMission({
+      projectId: context.project.id,
+      missionId: definition.id,
+    });
+    expect(premature).toMatchObject({
+      ok: false,
+      error: { code: "HUMAN_DECISION_REQUIRED" },
+    });
+
+    await context.cycle.decideEvidence({
+      projectId: context.project.id,
+      evidenceId: secondEvidence.id,
+      value: "reject",
+      missionDisposition: "keep_open",
+    });
+
+    const completed = await context.cycle.completeMission({
+      projectId: context.project.id,
+      missionId: definition.id,
+    });
+    expect(completed.ok).toBe(true);
+    if (!completed.ok) return;
+    expect(completed.value.missions[0]?.status).toBe("completed");
+    expect(completed.value.decisions).toHaveLength(2);
   });
 
   it("devuelve un error tipado para un proyecto ausente", async () => {

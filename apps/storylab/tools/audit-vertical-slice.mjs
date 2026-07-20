@@ -7,6 +7,7 @@ const root = resolve(new URL("..", import.meta.url).pathname);
 const requiredFiles = [
   "src/domain/mission-catalog.ts",
   "src/application/creative-cycle.ts",
+  "src/application/creative-cycle-contracts.ts",
   "src/application/preview-export.ts",
   "src/application/recover-project.ts",
   "src/adapters/storage/local-storage-project-repository.ts",
@@ -15,11 +16,14 @@ const requiredFiles = [
   "src/presentation/MissionNavigation.tsx",
   "src/presentation/MissionOneWorkspace.tsx",
   "src/presentation/MissionTwoWorkspace.tsx",
+  "src/presentation/MissionThreeWorkspace.tsx",
   "src/presentation/MissionWorkspace.tsx",
   "src/presentation/mission-workspace-model.ts",
   "src/tests/presentation.mission-engine.test.tsx",
   "src/tests/presentation.m2-cycle.test.tsx",
+  "src/tests/presentation.m3-cycle.test.tsx",
   "src/tests/integration.m2-local-first.test.tsx",
+  "src/tests/integration.m3-local-first.test.tsx",
   "src/tests/integration.local-first.test.tsx",
 ];
 
@@ -70,6 +74,14 @@ const appText = readFileSync(
   join(root, "src/presentation/App.tsx"),
   "utf8",
 );
+const cycleText = readFileSync(
+  join(root, "src/application/creative-cycle.ts"),
+  "utf8",
+);
+const cycleContractsText = readFileSync(
+  join(root, "src/application/creative-cycle-contracts.ts"),
+  "utf8",
+);
 const workspaceText = readFileSync(
   join(root, "src/presentation/MissionWorkspace.tsx"),
   "utf8",
@@ -86,12 +98,24 @@ const m2WorkspaceText = readFileSync(
   join(root, "src/presentation/MissionTwoWorkspace.tsx"),
   "utf8",
 );
+const m3WorkspaceText = readFileSync(
+  join(root, "src/presentation/MissionThreeWorkspace.tsx"),
+  "utf8",
+);
 const m2TestText = readFileSync(
   join(root, "src/tests/presentation.m2-cycle.test.tsx"),
   "utf8",
 );
+const m3TestText = readFileSync(
+  join(root, "src/tests/presentation.m3-cycle.test.tsx"),
+  "utf8",
+);
 const m2IntegrationText = readFileSync(
   join(root, "src/tests/integration.m2-local-first.test.tsx"),
+  "utf8",
+);
+const m3IntegrationText = readFileSync(
+  join(root, "src/tests/integration.m3-local-first.test.tsx"),
   "utf8",
 );
 const previewText = readFileSync(
@@ -110,6 +134,9 @@ const integrationText = readFileSync(
 const requiredSignals = [
   [appText, "recoverProject", "APP_RECOVERY_SIGNAL_MISSING"],
   [appText, "MissionTwoWorkspace", "M2_APP_SIGNAL_MISSING"],
+  [appText, "MissionThreeWorkspace", "M3_APP_SIGNAL_MISSING"],
+  [cycleText, "completeMission", "MISSION_COMPLETION_SIGNAL_MISSING"],
+  [cycleContractsText, '"multiple"', "MULTIPLE_EVIDENCE_CONTRACT_MISSING"],
   [workspaceText, "previewExport", "PREVIEW_UI_SIGNAL_MISSING"],
   [workspaceText, "removeProject", "DELETE_UI_SIGNAL_MISSING"],
   [
@@ -133,14 +160,44 @@ const requiredSignals = [
     "M2_WORKSPACE_SIGNAL_MISSING",
   ],
   [
+    m3WorkspaceText,
+    'cardinality: "multiple"',
+    "M3_MULTIPLE_EVIDENCE_SIGNAL_MISSING",
+  ],
+  [
+    m3WorkspaceText,
+    'missionDisposition: "keep_open"',
+    "M3_INDEPENDENT_DECISION_SIGNAL_MISSING",
+  ],
+  [
+    m3WorkspaceText,
+    "medio_sintetico",
+    "M3_SYNTHETIC_METADATA_SIGNAL_MISSING",
+  ],
+  [
     m2TestText,
     "actualiza una sola evidencia editable de M2",
     "M2_CARDINALITY_TEST_MISSING",
   ],
   [
+    m3TestText,
+    "crea y edita múltiples evidencias independientes",
+    "M3_CARDINALITY_TEST_MISSING",
+  ],
+  [
+    m3TestText,
+    "representa multimodalidad sin cargas, binarios ni publicación",
+    "M3_BOUNDARY_TEST_MISSING",
+  ],
+  [
     m2IntegrationText,
     "M2_RECOVERY_INTEGRATED",
     "M2_RECOVERY_TEST_MISSING",
+  ],
+  [
+    m3IntegrationText,
+    "M3_RECOVERY_INTEGRATED",
+    "M3_RECOVERY_TEST_MISSING",
   ],
   [previewText, "reflectionCanLeaveDevice", "PRIVACY_FILTER_MISSING"],
   [storageText, "PERSISTENCE_QUOTA_EXCEEDED", "QUOTA_ERROR_MISSING"],
@@ -170,11 +227,14 @@ const prohibitedProductSignals = [
   "roundtripProject(",
   "downloadExport(",
   "publishProject(",
+  'type="file"',
+  "XMLHttpRequest",
 ];
 const productFiles = [
   appText,
   workspaceText,
   m2WorkspaceText,
+  m3WorkspaceText,
   previewText,
 ];
 for (const signal of prohibitedProductSignals) {
@@ -185,10 +245,10 @@ for (const signal of prohibitedProductSignals) {
 
 const result = {
   status: errors.length === 0 ? "PASS" : "FAIL",
-  checkpointCandidate: "H08-4.2",
+  checkpointCandidate: "H08-4.3",
   requiredFiles,
   canonicalMissionCount: missionIds.length,
-  functionalMissionCount: 2,
+  functionalMissionCount: 3,
   integrationEvidence: {
     realPersistenceAdapter: true,
     recoveryAfterRemount: true,
@@ -201,8 +261,15 @@ const result = {
     m2CompleteCycle: true,
     m2SingularEvidence: true,
     m2RecoveryAfterRemount: true,
+    m3MultipleEvidence: true,
+    m3IndependentDecisions: true,
+    m3SyntheticMetadataOnly: true,
+    m3RecoveryAfterRemount: true,
   },
   deferredCapabilities: {
+    binaryStorage: false,
+    mediaUpload: false,
+    networkAccess: false,
     import: false,
     roundtrip: false,
     automaticDownload: false,

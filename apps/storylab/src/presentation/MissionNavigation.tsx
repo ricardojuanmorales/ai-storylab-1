@@ -28,8 +28,8 @@ export function MissionNavigation({
         <p className="eyebrow">Arco activo</p>
         <h3>Misiones del proyecto</h3>
         <p>
-          M1 y M2 están disponibles mediante el motor compartido. M3 y M4
-          permanecen visibles y planificadas para sus bloques.
+          M1, M2 y M3 están disponibles mediante contratos compartidos. M4
+          permanece visible y planificada para su bloque.
         </p>
       </div>
 

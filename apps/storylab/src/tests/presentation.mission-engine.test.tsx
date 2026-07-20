@@ -70,6 +70,7 @@ describe("H08-4 reusable mission engine", () => {
     ).toEqual([
       MISSION_CATALOG[0].id,
       MISSION_CATALOG[1].id,
+      MISSION_CATALOG[2].id,
     ]);
     expect(
       getMissionWorkspacePolicy(MISSION_CATALOG[2].id)
@@ -77,7 +78,7 @@ describe("H08-4 reusable mission engine", () => {
     ).toBe("multiple");
   });
 
-  it("navega entre M1 y M2 sin habilitar M3 o M4", async () => {
+  it("navega entre M1, M2 y M3 sin habilitar M4", async () => {
     const user = await createProject();
 
     const navigation = screen.getByRole("navigation", {
@@ -92,12 +93,7 @@ describe("H08-4 reusable mission engine", () => {
     });
 
     expect(m1.getAttribute("aria-current")).toBe("step");
-    expect(scoped.getAllByText("Planificada")).toHaveLength(2);
-    expect(
-      scoped.queryByRole("link", {
-        name: /M3 · Producción multimodal/i,
-      }),
-    ).toBeNull();
+    expect(scoped.getAllByText("Planificada")).toHaveLength(1);
     expect(
       scoped.queryByRole("link", {
         name: /M4 · Curaduría y cierre/i,
@@ -105,13 +101,24 @@ describe("H08-4 reusable mission engine", () => {
     ).toBeNull();
 
     await user.click(m2);
-
     expect(
       document.getElementById("mission-title")?.textContent,
     ).toBe("M2 · Arquitectura narrativa");
+
+    const refreshedNavigation = screen.getByRole("navigation", {
+      name: "Misiones del proyecto",
+    });
+    const refreshedM3 = within(refreshedNavigation).getByRole("link", {
+      name: /M3 · Producción multimodal/i,
+    });
+
+    await user.click(refreshedM3);
+    expect(
+      document.getElementById("mission-title")?.textContent,
+    ).toBe("M3 · Producción multimodal");
     expect(
       screen.getByRole("link", {
-        name: /M2 · Arquitectura narrativa/i,
+        name: /M3 · Producción multimodal/i,
       }).getAttribute("aria-current"),
     ).toBe("step");
   });

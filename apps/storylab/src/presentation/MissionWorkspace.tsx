@@ -154,6 +154,8 @@ export function MissionWorkspace({
         useCases.createTextEvidence({
           projectId: project.id,
           missionId: definition.id,
+          ...(evidence ? { evidenceId: evidence.id } : {}),
+          cardinality: "one_editable",
           title: evidenceTitle,
           summary: evidenceSummary,
         }),

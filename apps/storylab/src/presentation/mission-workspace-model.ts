@@ -52,7 +52,7 @@ const POLICY_BY_ID: Readonly<Record<string, MissionPolicySeed>> = {
   },
   "mission-production": {
     label: "M3",
-    availability: "planned",
+    availability: "functional",
     evidenceCardinality: "multiple",
   },
   "mission-curation": {

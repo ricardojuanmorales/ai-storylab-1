@@ -12,6 +12,7 @@ import type {
 } from "../domain/model";
 import type { MissionId } from "../domain/types";
 import { MissionOneWorkspace } from "./MissionOneWorkspace";
+import { MissionThreeWorkspace } from "./MissionThreeWorkspace";
 import { MissionTwoWorkspace } from "./MissionTwoWorkspace";
 import type { PersistenceMode } from "./persistence-mode";
 import { ProjectSetup } from "./ProjectSetup";
@@ -206,7 +207,7 @@ export function App({
           <p className="brand">AI StoryLab 1</p>
         </div>
         <p className="status-badge">
-          M2 · Arquitectura narrativa · H08-4.2
+          M3 · Producción multimodal · H08-4.3
         </p>
       </header>
 
@@ -257,7 +258,7 @@ export function App({
             <h2 id="preferences-title">Preferencias de accesibilidad</h2>
             <p>
               Estos ajustes modifican la vista actual. La integración de estas
-              preferencias al perfil persistente permanece fuera de H08-4.2.
+              preferencias al perfil persistente permanece fuera de H08-4.3.
             </p>
           </div>
 
@@ -358,7 +359,24 @@ export function App({
               </button>
             </section>
           ) : project ? (
-            activeMissionId === MISSION_CATALOG[1].id ? (
+            activeMissionId === MISSION_CATALOG[2].id ? (
+              <MissionThreeWorkspace
+                key={MISSION_CATALOG[2].id as string}
+                project={project}
+                useCases={useCases}
+                persistenceMode={persistenceMode}
+                onProjectChange={setProject}
+                onProjectDeleted={() => {
+                  setProject(null);
+                  setActiveMissionId(MISSION_CATALOG[0].id);
+                  setStatusMessage(
+                    "El proyecto local fue borrado explícitamente.",
+                  );
+                }}
+                onMessage={setStatusMessage}
+                onSelectMission={selectMission}
+              />
+            ) : activeMissionId === MISSION_CATALOG[1].id ? (
               <MissionTwoWorkspace
                 key={MISSION_CATALOG[1].id as string}
                 project={project}
@@ -411,8 +429,8 @@ export function App({
             <p className="eyebrow">Ruta gobernada</p>
             <h2 id="cycle-title">Mapa del arco creativo completo de v0.8.0</h2>
             <p>
-              H08-4.2 habilita M2 sobre el motor compartido. M1 permanece funcional;
-              M3 y M4 continúan planificadas para sus bloques.
+              H08-4.3 habilita M3 con múltiples evidencias textuales y metadatos
+              sintéticos. M1 y M2 permanecen funcionales; M4 sigue planificada.
             </p>
           </div>
 
@@ -465,7 +483,7 @@ export function App({
 
       <footer className="site-footer">
         <p>
-          PR #59 · Recuperación local · Export preview · Sin importación
+          PR #61 · H08-4.3 · M3 local-first · Sin cargas ni publicación
         </p>
       </footer>
     </div>

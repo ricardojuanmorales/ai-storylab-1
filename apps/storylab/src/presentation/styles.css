@@ -795,3 +795,64 @@ small {
     grid-template-columns: 1fr;
   }
 }
+
+/* H08-4.3 · colección múltiple de evidencias */
+.evidence-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.evidence-collection {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.evidence-selector {
+  display: grid;
+  width: 100%;
+  min-height: 8rem;
+  align-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  background: var(--surface);
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.evidence-selector[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 0.12rem var(--accent);
+}
+
+.evidence-selector span,
+.evidence-selector small {
+  color: var(--muted);
+}
+
+.evidence-editor {
+  display: grid;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.completion-card {
+  border-style: dashed;
+}
+
+@media (max-width: 48rem) {
+  .evidence-collection {
+    grid-template-columns: 1fr;
+  }
+}
