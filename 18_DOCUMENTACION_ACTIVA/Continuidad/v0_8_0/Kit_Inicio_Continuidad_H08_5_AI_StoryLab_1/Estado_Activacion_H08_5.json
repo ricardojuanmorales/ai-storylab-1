@@ -21,7 +21,7 @@
     "contract_package": "storylab_portfolio/1.0.0",
     "functional_changes": false
   },
-  "next_internal_milestone": "H08-5.2",
+  "next_internal_milestone": "H08-5.3",
   "ready_for_review": "NOT_AUTHORIZED",
   "merge": "NOT_AUTHORIZED",
   "H08_6": "BLOCKED",
@@ -33,5 +33,17 @@
     "focused_tests": "PASS",
     "typecheck": "PASS",
     "privacy_audit": "PASS"
+  },
+  "H08_5_2": {
+    "status": "IMPLEMENTED_AND_LOCALLY_VERIFIED",
+    "verified_at": "2026-07-21T21:09:25Z",
+    "capability": "HUMAN_CONFIRMED_LOCAL_PORTFOLIO_EXPORT",
+    "package": "storylab_portfolio/1.0.0",
+    "functional_changes": true,
+    "typecheck": "PASS",
+    "focused_tests": "PASS",
+    "architecture_audit": "PASS",
+    "privacy_audit": "PASS",
+    "offline_guard": "PASS"
   }
 }

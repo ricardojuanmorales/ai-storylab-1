@@ -3,6 +3,8 @@ export * from "./creative-cycle";
 export * from "./creative-cycle-contracts";
 export * from "./curation-record";
 export * from "./load-project";
+export * from "./portfolio-export";
+export * from "./portfolio-package-utils";
 export * from "./portfolio-projection";
 export * from "./preview-export";
 export * from "./recover-project";
