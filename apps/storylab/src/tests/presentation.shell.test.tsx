@@ -113,7 +113,7 @@ describe("accessible shell", () => {
     }
   });
 
-  it("muestra el avance de H08-4.3 sin habilitar importación", () => {
+  it("muestra el avance de H08-4.4 sin habilitar importación", () => {
     renderApp();
 
     expect(screen.getByText("M1 · Intención creadora")).toBeTruthy();
@@ -122,8 +122,8 @@ describe("accessible shell", () => {
     expect(screen.getByText("M4 · Curaduría y cierre")).toBeTruthy();
     expect(screen.getByText("Recuperación local y export preview")).toBeTruthy();
     expect(screen.getByText("Importación y roundtrip")).toBeTruthy();
-    expect(screen.getAllByText("Planificado")).toHaveLength(2);
-    expect(screen.getAllByText("Preparado")).toHaveLength(5);
+    expect(screen.getAllByText("Planificado")).toHaveLength(1);
+    expect(screen.getAllByText("Preparado")).toHaveLength(6);
     expect(screen.getByText("Disponible")).toBeTruthy();
   });
 });

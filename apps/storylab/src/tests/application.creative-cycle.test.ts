@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   createCreativeCycleUseCases,
   createProject,
+  parseCurationRecord,
 } from "../application";
 import { InMemoryProjectRepository } from "../adapters/memory/in-memory-project-repository";
 import { M1_INTENTION_DEFINITION, MISSION_CATALOG } from "../domain";
@@ -431,6 +432,179 @@ describe("creative cycle engine", () => {
     if (!completed.ok) return;
     expect(completed.value.missions[0]?.status).toBe("completed");
     expect(completed.value.decisions).toHaveLength(2);
+  });
+
+  it("guarda, ordena y actualiza un solo registro de curaduría", async () => {
+    const context = await setup();
+    const sourceEvidence = [];
+
+    for (const [definition, title] of [
+      [MISSION_CATALOG[0], "Intención fuente"],
+      [MISSION_CATALOG[1], "Arquitectura fuente"],
+    ] as const) {
+      await context.cycle.startMission({
+        projectId: context.project.id,
+        definition,
+      });
+      await context.cycle.saveTextActivity({
+        projectId: context.project.id,
+        missionId: definition.id,
+        text: `Actividad para ${title}`,
+      });
+      const created = await context.cycle.createTextEvidence({
+        projectId: context.project.id,
+        missionId: definition.id,
+        title,
+        summary: `Resumen de ${title}`,
+      });
+      expect(created.ok).toBe(true);
+      if (!created.ok) return;
+
+      const evidence = created.value.evidence.find(
+        (item) => item.missionId === definition.id,
+      );
+      if (!evidence) throw new Error("M4_SOURCE_EVIDENCE_MISSING");
+
+      await context.cycle.decideEvidence({
+        projectId: context.project.id,
+        evidenceId: evidence.id,
+        value: "accept",
+      });
+      sourceEvidence.push(evidence);
+    }
+
+    const definition = MISSION_CATALOG[3];
+    await context.cycle.startMission({
+      projectId: context.project.id,
+      definition,
+    });
+    await context.cycle.saveTextActivity({
+      projectId: context.project.id,
+      missionId: definition.id,
+      text: "Lectura de cierre",
+    });
+
+    const saved = await context.cycle.saveCurationRecord({
+      projectId: context.project.id,
+      missionId: definition.id,
+      title: "Registro final",
+      statement: "La selección representa el proceso.",
+      handoff: "Revisión humana futura.",
+      selectedEvidenceIds: [
+        sourceEvidence[1]!.id,
+        sourceEvidence[0]!.id,
+      ],
+    });
+    expect(saved.ok).toBe(true);
+    if (!saved.ok) return;
+
+    expect(
+      saved.value.portfolio.items.map((item) => item.evidenceId),
+    ).toEqual([sourceEvidence[1]!.id, sourceEvidence[0]!.id]);
+
+    const record = saved.value.evidence.find(
+      (item) => item.missionId === definition.id,
+    );
+    if (!record) throw new Error("M4_RECORD_MISSING");
+
+    expect(
+      parseCurationRecord(record.summary)?.selectedEvidenceIds,
+    ).toEqual([sourceEvidence[1]!.id, sourceEvidence[0]!.id]);
+
+    const updated = await context.cycle.saveCurationRecord({
+      projectId: context.project.id,
+      missionId: definition.id,
+      evidenceId: record.id,
+      title: "Registro final revisado",
+      statement: "La selección revisada conserva una evidencia.",
+      handoff: "Mantener revisión humana.",
+      selectedEvidenceIds: [sourceEvidence[0]!.id],
+    });
+    expect(updated.ok).toBe(true);
+    if (!updated.ok) return;
+
+    expect(
+      updated.value.evidence.filter(
+        (item) => item.missionId === definition.id,
+      ),
+    ).toHaveLength(1);
+    expect(updated.value.portfolio.items).toHaveLength(1);
+
+    const decided = await context.cycle.decideEvidence({
+      projectId: context.project.id,
+      evidenceId: record.id,
+      value: "accept",
+      evidenceDisposition: "record_only",
+    });
+    expect(decided.ok).toBe(true);
+    if (!decided.ok) return;
+
+    expect(
+      decided.value.missions.find(
+        (mission) => mission.missionId === definition.id,
+      )?.status,
+    ).toBe("completed");
+    expect(
+      decided.value.evidence.find((item) => item.id === record.id)?.status,
+    ).toBe("reviewed");
+    expect(
+      decided.value.portfolio.items.some(
+        (item) => item.evidenceId === record.id,
+      ),
+    ).toBe(false);
+  });
+
+  it("rechaza una curaduría basada en evidencia sin aceptación humana", async () => {
+    const context = await setup();
+    const sourceDefinition = MISSION_CATALOG[0];
+
+    await context.cycle.startMission({
+      projectId: context.project.id,
+      definition: sourceDefinition,
+    });
+    await context.cycle.saveTextActivity({
+      projectId: context.project.id,
+      missionId: sourceDefinition.id,
+      text: "Actividad pendiente",
+    });
+    const source = await context.cycle.createTextEvidence({
+      projectId: context.project.id,
+      missionId: sourceDefinition.id,
+      title: "Evidencia pendiente",
+      summary: "Todavía no tiene decisión humana.",
+    });
+    expect(source.ok).toBe(true);
+    if (!source.ok) return;
+
+    const sourceEvidence = source.value.evidence.find(
+      (item) => item.missionId === sourceDefinition.id,
+    );
+    if (!sourceEvidence) throw new Error("M4_PENDING_SOURCE_MISSING");
+
+    const definition = MISSION_CATALOG[3];
+    await context.cycle.startMission({
+      projectId: context.project.id,
+      definition,
+    });
+    await context.cycle.saveTextActivity({
+      projectId: context.project.id,
+      missionId: definition.id,
+      text: "Lectura de cierre pendiente",
+    });
+
+    const result = await context.cycle.saveCurationRecord({
+      projectId: context.project.id,
+      missionId: definition.id,
+      title: "Registro inválido",
+      statement: "No debe guardarse.",
+      handoff: "Pendiente.",
+      selectedEvidenceIds: [sourceEvidence.id],
+    });
+
+    expect(result).toMatchObject({
+      ok: false,
+      error: { code: "HUMAN_DECISION_REQUIRED" },
+    });
   });
 
   it("devuelve un error tipado para un proyecto ausente", async () => {

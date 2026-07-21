@@ -856,3 +856,69 @@ small {
     grid-template-columns: 1fr;
   }
 }
+
+/* H08-4.4 · curaduría y cierre humano */
+.curation-source-list,
+.curation-order-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.curation-source-option {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: start;
+  padding: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  background: var(--surface);
+}
+
+.curation-source-option input {
+  width: auto;
+  margin-top: 0.35rem;
+}
+
+.curation-source-option strong,
+.curation-source-option small {
+  display: block;
+}
+
+.curation-order-list {
+  counter-reset: none;
+}
+
+.curation-order-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem;
+  border: 1px dashed var(--border);
+  border-radius: 0.7rem;
+  background: var(--surface);
+}
+
+.curation-order-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.curation-order-actions .secondary-action {
+  min-height: 2.25rem;
+  padding: 0.45rem 0.7rem;
+}
+
+.conceptual-handoff {
+  border-color: var(--accent);
+}
+
+.conceptual-handoff ol {
+  margin-bottom: 0;
+}

@@ -11,6 +11,7 @@ import type {
   CreativeProject,
 } from "../domain/model";
 import type { MissionId } from "../domain/types";
+import { MissionFourWorkspace } from "./MissionFourWorkspace";
 import { MissionOneWorkspace } from "./MissionOneWorkspace";
 import { MissionThreeWorkspace } from "./MissionThreeWorkspace";
 import { MissionTwoWorkspace } from "./MissionTwoWorkspace";
@@ -207,7 +208,7 @@ export function App({
           <p className="brand">AI StoryLab 1</p>
         </div>
         <p className="status-badge">
-          M3 · Producción multimodal · H08-4.3
+          M4 · Curaduría y cierre · H08-4.4
         </p>
       </header>
 
@@ -258,7 +259,7 @@ export function App({
             <h2 id="preferences-title">Preferencias de accesibilidad</h2>
             <p>
               Estos ajustes modifican la vista actual. La integración de estas
-              preferencias al perfil persistente permanece fuera de H08-4.3.
+              preferencias al perfil persistente permanece fuera de H08-4.4.
             </p>
           </div>
 
@@ -359,7 +360,17 @@ export function App({
               </button>
             </section>
           ) : project ? (
-            activeMissionId === MISSION_CATALOG[2].id ? (
+            activeMissionId === MISSION_CATALOG[3].id ? (
+              <MissionFourWorkspace
+                key={MISSION_CATALOG[3].id as string}
+                project={project}
+                useCases={useCases}
+                persistenceMode={persistenceMode}
+                onProjectChange={setProject}
+                onMessage={setStatusMessage}
+                onSelectMission={selectMission}
+              />
+            ) : activeMissionId === MISSION_CATALOG[2].id ? (
               <MissionThreeWorkspace
                 key={MISSION_CATALOG[2].id as string}
                 project={project}
@@ -429,8 +440,8 @@ export function App({
             <p className="eyebrow">Ruta gobernada</p>
             <h2 id="cycle-title">Mapa del arco creativo completo de v0.8.0</h2>
             <p>
-              H08-4.3 habilita M3 con múltiples evidencias textuales y metadatos
-              sintéticos. M1 y M2 permanecen funcionales; M4 sigue planificada.
+              H08-4.4 habilita M4 con selección, orden y un registro humano
+              de curaduría. Las cuatro misiones quedan funcionales en el arco local.
             </p>
           </div>
 
@@ -483,7 +494,7 @@ export function App({
 
       <footer className="site-footer">
         <p>
-          PR #61 · H08-4.3 · M3 local-first · Sin cargas ni publicación
+          PR #61 · H08-4.4 · M4 local-first · Traspaso conceptual
         </p>
       </footer>
     </div>

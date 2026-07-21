@@ -23,6 +23,10 @@ export type MissionDecisionDisposition =
   | "complete"
   | "keep_open";
 
+export type EvidenceDecisionDisposition =
+  | "portfolio_eligible"
+  | "record_only";
+
 export interface StartMissionInput {
   readonly projectId: ProjectId;
   readonly definition: MissionDefinition;
@@ -54,6 +58,16 @@ export interface CreateTextEvidenceInput {
   readonly summary: string;
 }
 
+export interface SaveCurationRecordInput {
+  readonly projectId: ProjectId;
+  readonly missionId: MissionId;
+  readonly evidenceId?: EvidenceId;
+  readonly title: string;
+  readonly statement: string;
+  readonly handoff: string;
+  readonly selectedEvidenceIds: readonly EvidenceId[];
+}
+
 export interface SaveReflectionInput {
   readonly projectId: ProjectId;
   readonly missionId: MissionId;
@@ -67,6 +81,7 @@ export interface DecideEvidenceInput {
   readonly value: HumanDecisionValue;
   readonly rationale?: string;
   readonly missionDisposition?: MissionDecisionDisposition;
+  readonly evidenceDisposition?: EvidenceDecisionDisposition;
 }
 
 export interface CuratePortfolioInput {
@@ -102,6 +117,9 @@ export interface CreativeCycleUseCases {
   ) => Promise<CreativeCycleProjectResult>;
   readonly createTextEvidence: (
     input: CreateTextEvidenceInput,
+  ) => Promise<CreativeCycleProjectResult>;
+  readonly saveCurationRecord: (
+    input: SaveCurationRecordInput,
   ) => Promise<CreativeCycleProjectResult>;
   readonly saveReflection: (
     input: SaveReflectionInput,

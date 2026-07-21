@@ -67,60 +67,45 @@ describe("H08-4 reusable mission engine", () => {
       MISSION_WORKSPACE_POLICIES.filter(
         (policy) => policy.availability === "functional",
       ).map((policy) => policy.definition.id),
-    ).toEqual([
-      MISSION_CATALOG[0].id,
-      MISSION_CATALOG[1].id,
-      MISSION_CATALOG[2].id,
-    ]);
+    ).toEqual(MISSION_CATALOG.map((definition) => definition.id));
     expect(
-      getMissionWorkspacePolicy(MISSION_CATALOG[2].id)
+      getMissionWorkspacePolicy(MISSION_CATALOG[3].id)
         ?.evidenceCardinality,
-    ).toBe("multiple");
+    ).toBe("one_curation_record");
   });
 
-  it("navega entre M1, M2 y M3 sin habilitar M4", async () => {
+  it("navega por las cuatro misiones funcionales", async () => {
     const user = await createProject();
 
-    const navigation = screen.getByRole("navigation", {
-      name: "Misiones del proyecto",
-    });
-    const scoped = within(navigation);
-    const m1 = scoped.getByRole("link", {
-      name: /M1 · Intención creadora/i,
-    });
-    const m2 = scoped.getByRole("link", {
-      name: /M2 · Arquitectura narrativa/i,
-    });
+    const expectedTitles = [
+      "M2 · Arquitectura narrativa",
+      "M3 · Producción multimodal",
+      "M4 · Curaduría y cierre",
+    ];
 
-    expect(m1.getAttribute("aria-current")).toBe("step");
-    expect(scoped.getAllByText("Planificada")).toHaveLength(1);
-    expect(
-      scoped.queryByRole("link", {
-        name: /M4 · Curaduría y cierre/i,
-      }),
-    ).toBeNull();
+    for (const expectedTitle of expectedTitles) {
+      const navigation = screen.getByRole("navigation", {
+        name: "Misiones del proyecto",
+      });
+      const target = within(navigation).getByRole("link", {
+        name: new RegExp(expectedTitle.replace("·", "\\·"), "i"),
+      });
 
-    await user.click(m2);
-    expect(
-      document.getElementById("mission-title")?.textContent,
-    ).toBe("M2 · Arquitectura narrativa");
+      await user.click(target);
 
-    const refreshedNavigation = screen.getByRole("navigation", {
-      name: "Misiones del proyecto",
-    });
-    const refreshedM3 = within(refreshedNavigation).getByRole("link", {
-      name: /M3 · Producción multimodal/i,
-    });
+      expect(
+        document.getElementById("mission-title")?.textContent,
+      ).toBe(expectedTitle);
+    }
 
-    await user.click(refreshedM3);
-    expect(
-      document.getElementById("mission-title")?.textContent,
-    ).toBe("M3 · Producción multimodal");
     expect(
       screen.getByRole("link", {
-        name: /M3 · Producción multimodal/i,
+        name: /M4 · Curaduría y cierre/i,
       }).getAttribute("aria-current"),
     ).toBe("step");
+    expect(
+      screen.queryByText("Planificada"),
+    ).toBeNull();
   });
 
   it("preserva la entrada funcional de M1 mediante su envoltura", async () => {

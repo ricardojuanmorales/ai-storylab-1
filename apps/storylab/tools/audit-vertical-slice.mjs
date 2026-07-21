@@ -8,6 +8,7 @@ const requiredFiles = [
   "src/domain/mission-catalog.ts",
   "src/application/creative-cycle.ts",
   "src/application/creative-cycle-contracts.ts",
+  "src/application/curation-record.ts",
   "src/application/preview-export.ts",
   "src/application/recover-project.ts",
   "src/adapters/storage/local-storage-project-repository.ts",
@@ -17,13 +18,16 @@ const requiredFiles = [
   "src/presentation/MissionOneWorkspace.tsx",
   "src/presentation/MissionTwoWorkspace.tsx",
   "src/presentation/MissionThreeWorkspace.tsx",
+  "src/presentation/MissionFourWorkspace.tsx",
   "src/presentation/MissionWorkspace.tsx",
   "src/presentation/mission-workspace-model.ts",
   "src/tests/presentation.mission-engine.test.tsx",
   "src/tests/presentation.m2-cycle.test.tsx",
   "src/tests/presentation.m3-cycle.test.tsx",
+  "src/tests/presentation.m4-cycle.test.tsx",
   "src/tests/integration.m2-local-first.test.tsx",
   "src/tests/integration.m3-local-first.test.tsx",
+  "src/tests/integration.m4-local-first.test.tsx",
   "src/tests/integration.local-first.test.tsx",
 ];
 
@@ -82,6 +86,10 @@ const cycleContractsText = readFileSync(
   join(root, "src/application/creative-cycle-contracts.ts"),
   "utf8",
 );
+const curationRecordText = readFileSync(
+  join(root, "src/application/curation-record.ts"),
+  "utf8",
+);
 const workspaceText = readFileSync(
   join(root, "src/presentation/MissionWorkspace.tsx"),
   "utf8",
@@ -102,6 +110,10 @@ const m3WorkspaceText = readFileSync(
   join(root, "src/presentation/MissionThreeWorkspace.tsx"),
   "utf8",
 );
+const m4WorkspaceText = readFileSync(
+  join(root, "src/presentation/MissionFourWorkspace.tsx"),
+  "utf8",
+);
 const m2TestText = readFileSync(
   join(root, "src/tests/presentation.m2-cycle.test.tsx"),
   "utf8",
@@ -110,12 +122,20 @@ const m3TestText = readFileSync(
   join(root, "src/tests/presentation.m3-cycle.test.tsx"),
   "utf8",
 );
+const m4TestText = readFileSync(
+  join(root, "src/tests/presentation.m4-cycle.test.tsx"),
+  "utf8",
+);
 const m2IntegrationText = readFileSync(
   join(root, "src/tests/integration.m2-local-first.test.tsx"),
   "utf8",
 );
 const m3IntegrationText = readFileSync(
   join(root, "src/tests/integration.m3-local-first.test.tsx"),
+  "utf8",
+);
+const m4IntegrationText = readFileSync(
+  join(root, "src/tests/integration.m4-local-first.test.tsx"),
   "utf8",
 );
 const previewText = readFileSync(
@@ -135,8 +155,16 @@ const requiredSignals = [
   [appText, "recoverProject", "APP_RECOVERY_SIGNAL_MISSING"],
   [appText, "MissionTwoWorkspace", "M2_APP_SIGNAL_MISSING"],
   [appText, "MissionThreeWorkspace", "M3_APP_SIGNAL_MISSING"],
+  [appText, "MissionFourWorkspace", "M4_APP_SIGNAL_MISSING"],
   [cycleText, "completeMission", "MISSION_COMPLETION_SIGNAL_MISSING"],
+  [cycleText, "saveCurationRecord", "M4_CURATION_OPERATION_MISSING"],
   [cycleContractsText, '"multiple"', "MULTIPLE_EVIDENCE_CONTRACT_MISSING"],
+  [cycleContractsText, '"record_only"', "RECORD_ONLY_CONTRACT_MISSING"],
+  [
+    curationRecordText,
+    "CURATION_RECORD_PREFIX",
+    "CURATION_RECORD_FORMAT_MISSING",
+  ],
   [workspaceText, "previewExport", "PREVIEW_UI_SIGNAL_MISSING"],
   [workspaceText, "removeProject", "DELETE_UI_SIGNAL_MISSING"],
   [
@@ -175,6 +203,21 @@ const requiredSignals = [
     "M3_SYNTHETIC_METADATA_SIGNAL_MISSING",
   ],
   [
+    m4WorkspaceText,
+    "saveCurationRecord",
+    "M4_SINGLE_RECORD_SIGNAL_MISSING",
+  ],
+  [
+    m4WorkspaceText,
+    'evidenceDisposition: "record_only"',
+    "M4_RECORD_ONLY_DECISION_MISSING",
+  ],
+  [
+    m4WorkspaceText,
+    "Vista conceptual únicamente",
+    "M4_CONCEPTUAL_HANDOFF_MISSING",
+  ],
+  [
     m2TestText,
     "actualiza una sola evidencia editable de M2",
     "M2_CARDINALITY_TEST_MISSING",
@@ -190,6 +233,16 @@ const requiredSignals = [
     "M3_BOUNDARY_TEST_MISSING",
   ],
   [
+    m4TestText,
+    "selecciona, ordena y cierra mediante un registro único",
+    "M4_CURATED_CYCLE_TEST_MISSING",
+  ],
+  [
+    m4TestText,
+    "mantiene el traspaso como vista conceptual sin salida de archivos",
+    "M4_BOUNDARY_TEST_MISSING",
+  ],
+  [
     m2IntegrationText,
     "M2_RECOVERY_INTEGRATED",
     "M2_RECOVERY_TEST_MISSING",
@@ -198,6 +251,11 @@ const requiredSignals = [
     m3IntegrationText,
     "M3_RECOVERY_INTEGRATED",
     "M3_RECOVERY_TEST_MISSING",
+  ],
+  [
+    m4IntegrationText,
+    "M4_RECOVERY_INTEGRATED",
+    "M4_RECOVERY_TEST_MISSING",
   ],
   [previewText, "reflectionCanLeaveDevice", "PRIVACY_FILTER_MISSING"],
   [storageText, "PERSISTENCE_QUOTA_EXCEEDED", "QUOTA_ERROR_MISSING"],
@@ -235,6 +293,7 @@ const productFiles = [
   workspaceText,
   m2WorkspaceText,
   m3WorkspaceText,
+  m4WorkspaceText,
   previewText,
 ];
 for (const signal of prohibitedProductSignals) {
@@ -245,10 +304,10 @@ for (const signal of prohibitedProductSignals) {
 
 const result = {
   status: errors.length === 0 ? "PASS" : "FAIL",
-  checkpointCandidate: "H08-4.3",
+  checkpointCandidate: "H08-4.4",
   requiredFiles,
   canonicalMissionCount: missionIds.length,
-  functionalMissionCount: 3,
+  functionalMissionCount: 4,
   integrationEvidence: {
     realPersistenceAdapter: true,
     recoveryAfterRemount: true,
@@ -265,8 +324,15 @@ const result = {
     m3IndependentDecisions: true,
     m3SyntheticMetadataOnly: true,
     m3RecoveryAfterRemount: true,
+    m4SingleCurationRecord: true,
+    m4AcceptedEvidenceSelection: true,
+    m4PortfolioOrdering: true,
+    m4RecordOnlyDecision: true,
+    m4ConceptualHandoffOnly: true,
+    m4RecoveryAfterRemount: true,
   },
   deferredCapabilities: {
+    actualHandoffFile: false,
     binaryStorage: false,
     mediaUpload: false,
     networkAccess: false,

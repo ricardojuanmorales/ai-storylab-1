@@ -28,8 +28,8 @@ export function MissionNavigation({
         <p className="eyebrow">Arco activo</p>
         <h3>Misiones del proyecto</h3>
         <p>
-          M1, M2 y M3 están disponibles mediante contratos compartidos. M4
-          permanece visible y planificada para su bloque.
+          M1, M2, M3 y M4 están disponibles en el mismo proyecto local. Cada
+          misión conserva su cardinalidad y sus decisiones humanas.
         </p>
       </div>
 

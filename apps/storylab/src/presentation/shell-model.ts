@@ -22,13 +22,14 @@ export const SHELL_STEPS = [
     label: "M3 · Producción multimodal",
     description:
       "Múltiples evidencias textuales y metadatos sintéticos de producción.",
-    status: "current",
+    status: "complete",
   },
   {
     id: "mission-curation",
     label: "M4 · Curaduría y cierre",
-    description: "Reflexión, selección, revisión y cierre humano.",
-    status: "planned",
+    description:
+      "Selección, orden, registro de curaduría y traspaso conceptual.",
+    status: "current",
   },
   {
     id: "portfolio",
