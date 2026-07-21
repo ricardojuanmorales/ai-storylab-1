@@ -113,17 +113,19 @@ describe("accessible shell", () => {
     }
   });
 
-  it("muestra el avance de H08-4.4 sin habilitar importación", () => {
+  it("muestra el avance de H08-4.5 sin habilitar importación", () => {
     renderApp();
 
     expect(screen.getByText("M1 · Intención creadora")).toBeTruthy();
     expect(screen.getByText("M2 · Arquitectura narrativa")).toBeTruthy();
     expect(screen.getByText("M3 · Producción multimodal")).toBeTruthy();
     expect(screen.getByText("M4 · Curaduría y cierre")).toBeTruthy();
-    expect(screen.getByText("Recuperación local y export preview")).toBeTruthy();
+    expect(
+      screen.getByText("Integración transversal del arco"),
+    ).toBeTruthy();
     expect(screen.getByText("Importación y roundtrip")).toBeTruthy();
     expect(screen.getAllByText("Planificado")).toHaveLength(1);
-    expect(screen.getAllByText("Preparado")).toHaveLength(6);
+    expect(screen.getAllByText("Preparado")).toHaveLength(7);
     expect(screen.getByText("Disponible")).toBeTruthy();
   });
 });

@@ -922,3 +922,101 @@ small {
 .conceptual-handoff ol {
   margin-bottom: 0;
 }
+
+/* H08-4.5 · integración transversal del arco */
+.arc-summary {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.arc-summary-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.arc-summary-header > div {
+  max-width: 52rem;
+}
+
+.arc-mission-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.arc-mission-grid article {
+  height: 100%;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  background: var(--surface);
+}
+
+.arc-mission-grid h3 {
+  margin-top: 0;
+}
+
+.arc-mission-status {
+  font-weight: 850;
+  color: var(--accent);
+}
+
+.arc-mission-grid dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+
+.arc-mission-grid dl div {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: var(--surface-soft);
+}
+
+.arc-mission-grid dt {
+  color: var(--muted);
+  font-size: 0.8em;
+  font-weight: 750;
+}
+
+.arc-mission-grid dd {
+  margin: 0;
+  font-weight: 850;
+}
+
+.arc-summary-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.arc-summary-columns > section {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  background: var(--surface);
+}
+
+.arc-final-preview {
+  margin-top: 0;
+}
+
+@media (max-width: 64rem) {
+  .arc-mission-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 42rem) {
+  .arc-mission-grid,
+  .arc-summary-columns {
+    grid-template-columns: 1fr;
+  }
+}

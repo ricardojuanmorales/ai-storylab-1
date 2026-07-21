@@ -2,6 +2,7 @@ import {
   validateMissionTransition,
   validateProjectInvariants,
 } from "../domain/invariants";
+import { MISSION_CATALOG } from "../domain/mission-catalog";
 import type {
   ActivityResponse,
   CreativeProject,
@@ -138,6 +139,56 @@ const findMission = (
 ): MissionProgress | undefined =>
   project.missions.find((mission) => mission.missionId === missionId);
 
+const CURATION_MISSION_ID = MISSION_CATALOG[3].id;
+
+const invalidateDownstreamCurationClosure = (
+  project: CreativeProject,
+  reopenedMissionId: MissionId,
+  now: ISODateTime,
+): Pick<CreativeProject, "missions" | "evidence" | "decisions"> => {
+  if (reopenedMissionId === CURATION_MISSION_ID) {
+    return {
+      missions: project.missions,
+      evidence: project.evidence,
+      decisions: project.decisions,
+    };
+  }
+
+  const curationMission = findMission(project, CURATION_MISSION_ID);
+  if (!curationMission) {
+    return {
+      missions: project.missions,
+      evidence: project.evidence,
+      decisions: project.decisions,
+    };
+  }
+
+  const curationEvidenceIds = missionEvidenceIds(
+    project,
+    CURATION_MISSION_ID,
+  );
+  const missions =
+    curationMission.status === "completed"
+      ? replaceMission(
+          project.missions,
+          missionWithStatus(curationMission, "reopened", now),
+        )
+      : project.missions;
+
+  return {
+    missions,
+    evidence: project.evidence.map((item) =>
+      curationEvidenceIds.has(item.id as string)
+        ? { ...item, status: "draft" }
+        : item,
+    ),
+    decisions: project.decisions.filter(
+      (decision) =>
+        !curationEvidenceIds.has(decision.evidenceId as string),
+    ),
+  };
+};
+
 const requireMission = (
   project: CreativeProject,
   missionId: MissionId,
@@ -246,17 +297,27 @@ export const createCreativeCycleUseCases = (
 
     const now = dependencies.clock.now();
     const invalidated = invalidateMissionOutputs(project, input.missionId);
+    const reopenedProject: CreativeProject = {
+      ...project,
+      status: "active",
+      missions: replaceMission(
+        project.missions,
+        missionWithStatus(missionResult.value, "reopened", now),
+      ),
+      ...invalidated,
+      updatedAt: now,
+    };
+    const downstreamCuration =
+      invalidateDownstreamCurationClosure(
+        reopenedProject,
+        input.missionId,
+        now,
+      );
 
     return persist(
       {
-        ...project,
-        status: "active",
-        missions: replaceMission(
-          project.missions,
-          missionWithStatus(missionResult.value, "reopened", now),
-        ),
-        ...invalidated,
-        updatedAt: now,
+        ...reopenedProject,
+        ...downstreamCuration,
       },
       dependencies,
     );

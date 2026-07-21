@@ -11,6 +11,7 @@ import type {
   CreativeProject,
 } from "../domain/model";
 import type { MissionId } from "../domain/types";
+import { ArcSummary } from "./ArcSummary";
 import { MissionFourWorkspace } from "./MissionFourWorkspace";
 import { MissionOneWorkspace } from "./MissionOneWorkspace";
 import { MissionThreeWorkspace } from "./MissionThreeWorkspace";
@@ -208,7 +209,7 @@ export function App({
           <p className="brand">AI StoryLab 1</p>
         </div>
         <p className="status-badge">
-          M4 · Curaduría y cierre · H08-4.4
+          Arco M1–M4 integrado · H08-4.5
         </p>
       </header>
 
@@ -216,6 +217,7 @@ export function App({
         <a href="#inicio">Inicio</a>
         <a href="#preferencias">Accesibilidad</a>
         <a href="#experiencia">Experiencia</a>
+        <a href="#resumen-arco">Resumen del arco</a>
         <a href="#mapa-ciclo">Mapa del ciclo</a>
       </nav>
 
@@ -259,7 +261,7 @@ export function App({
             <h2 id="preferences-title">Preferencias de accesibilidad</h2>
             <p>
               Estos ajustes modifican la vista actual. La integración de estas
-              preferencias al perfil persistente permanece fuera de H08-4.4.
+              preferencias al perfil persistente permanece fuera de H08-4.5.
             </p>
           </div>
 
@@ -326,6 +328,14 @@ export function App({
         <p className="live-status" role="status" aria-live="polite">
           {statusMessage}
         </p>
+
+        {project ? (
+          <ArcSummary
+            project={project}
+            useCases={useCases}
+            onMessage={setStatusMessage}
+          />
+        ) : null}
 
         <div id="experiencia">
           {recoveryState === "checking" ? (
@@ -440,8 +450,8 @@ export function App({
             <p className="eyebrow">Ruta gobernada</p>
             <h2 id="cycle-title">Mapa del arco creativo completo de v0.8.0</h2>
             <p>
-              H08-4.4 habilita M4 con selección, orden y un registro humano
-              de curaduría. Las cuatro misiones quedan funcionales en el arco local.
+              H08-4.5 integra M1–M4, valida la continuidad local y protege
+              la coherencia curatorial cuando una misión fuente vuelve a abrirse.
             </p>
           </div>
 
@@ -494,7 +504,7 @@ export function App({
 
       <footer className="site-footer">
         <p>
-          PR #61 · H08-4.4 · M4 local-first · Traspaso conceptual
+          PR #61 · H08-4.5 · Arco integrado · Preview final sin descarga
         </p>
       </footer>
     </div>

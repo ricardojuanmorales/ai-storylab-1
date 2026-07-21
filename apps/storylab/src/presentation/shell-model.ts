@@ -29,7 +29,7 @@ export const SHELL_STEPS = [
     label: "M4 · Curaduría y cierre",
     description:
       "Selección, orden, registro de curaduría y traspaso conceptual.",
-    status: "current",
+    status: "complete",
   },
   {
     id: "portfolio",
@@ -42,6 +42,13 @@ export const SHELL_STEPS = [
     label: "Recuperación local y export preview",
     description: "Guardado validado, recuperación y vista previa sin descarga.",
     status: "complete",
+  },
+  {
+    id: "arc-integration",
+    label: "Integración transversal del arco",
+    description:
+      "Continuidad M1–M4, coherencia de reapertura y preview final privado.",
+    status: "current",
   },
   {
     id: "import-roundtrip",

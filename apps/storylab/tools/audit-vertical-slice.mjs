@@ -14,6 +14,8 @@ const requiredFiles = [
   "src/adapters/storage/local-storage-project-repository.ts",
   "src/schemas/runtime-validators.ts",
   "src/presentation/App.tsx",
+  "src/presentation/ArcSummary.tsx",
+  "src/presentation/arc-summary-model.ts",
   "src/presentation/MissionNavigation.tsx",
   "src/presentation/MissionOneWorkspace.tsx",
   "src/presentation/MissionTwoWorkspace.tsx",
@@ -21,6 +23,8 @@ const requiredFiles = [
   "src/presentation/MissionFourWorkspace.tsx",
   "src/presentation/MissionWorkspace.tsx",
   "src/presentation/mission-workspace-model.ts",
+  "src/tests/presentation.arc-summary.test.tsx",
+  "src/tests/integration.full-arc-local-first.test.tsx",
   "src/tests/presentation.mission-engine.test.tsx",
   "src/tests/presentation.m2-cycle.test.tsx",
   "src/tests/presentation.m3-cycle.test.tsx",
@@ -78,6 +82,14 @@ const appText = readFileSync(
   join(root, "src/presentation/App.tsx"),
   "utf8",
 );
+const arcSummaryText = readFileSync(
+  join(root, "src/presentation/ArcSummary.tsx"),
+  "utf8",
+);
+const arcSummaryModelText = readFileSync(
+  join(root, "src/presentation/arc-summary-model.ts"),
+  "utf8",
+);
 const cycleText = readFileSync(
   join(root, "src/application/creative-cycle.ts"),
   "utf8",
@@ -126,6 +138,14 @@ const m4TestText = readFileSync(
   join(root, "src/tests/presentation.m4-cycle.test.tsx"),
   "utf8",
 );
+const fullArcPresentationText = readFileSync(
+  join(root, "src/tests/presentation.arc-summary.test.tsx"),
+  "utf8",
+);
+const fullArcIntegrationText = readFileSync(
+  join(root, "src/tests/integration.full-arc-local-first.test.tsx"),
+  "utf8",
+);
 const m2IntegrationText = readFileSync(
   join(root, "src/tests/integration.m2-local-first.test.tsx"),
   "utf8",
@@ -153,9 +173,25 @@ const integrationText = readFileSync(
 
 const requiredSignals = [
   [appText, "recoverProject", "APP_RECOVERY_SIGNAL_MISSING"],
+  [appText, "ArcSummary", "ARC_SUMMARY_APP_SIGNAL_MISSING"],
   [appText, "MissionTwoWorkspace", "M2_APP_SIGNAL_MISSING"],
   [appText, "MissionThreeWorkspace", "M3_APP_SIGNAL_MISSING"],
   [appText, "MissionFourWorkspace", "M4_APP_SIGNAL_MISSING"],
+  [
+    arcSummaryText,
+    "Preparar vista previa final validada",
+    "FINAL_PREVIEW_UI_MISSING",
+  ],
+  [
+    arcSummaryModelText,
+    "curationNeedsReview",
+    "CURATION_COHERENCE_MODEL_MISSING",
+  ],
+  [
+    cycleText,
+    "invalidateDownstreamCurationClosure",
+    "UPSTREAM_REOPEN_INVALIDATION_MISSING",
+  ],
   [cycleText, "completeMission", "MISSION_COMPLETION_SIGNAL_MISSING"],
   [cycleText, "saveCurationRecord", "M4_CURATION_OPERATION_MISSING"],
   [cycleContractsText, '"multiple"', "MULTIPLE_EVIDENCE_CONTRACT_MISSING"],
@@ -243,6 +279,21 @@ const requiredSignals = [
     "M4_BOUNDARY_TEST_MISSING",
   ],
   [
+    fullArcPresentationText,
+    "previsualiza el arco completo sin reflexiones privadas",
+    "FULL_ARC_PREVIEW_TEST_MISSING",
+  ],
+  [
+    fullArcIntegrationText,
+    "recupera el arco completo y su preview privado después de remontar",
+    "FULL_ARC_RECOVERY_TEST_MISSING",
+  ],
+  [
+    fullArcIntegrationText,
+    "reabrir M2 invalida el cierre de M4 sin borrar su registro",
+    "UPSTREAM_REOPEN_TEST_MISSING",
+  ],
+  [
     m2IntegrationText,
     "M2_RECOVERY_INTEGRATED",
     "M2_RECOVERY_TEST_MISSING",
@@ -290,6 +341,7 @@ const prohibitedProductSignals = [
 ];
 const productFiles = [
   appText,
+  arcSummaryText,
   workspaceText,
   m2WorkspaceText,
   m3WorkspaceText,
@@ -304,7 +356,7 @@ for (const signal of prohibitedProductSignals) {
 
 const result = {
   status: errors.length === 0 ? "PASS" : "FAIL",
-  checkpointCandidate: "H08-4.4",
+  checkpointCandidate: "H08-4.5",
   requiredFiles,
   canonicalMissionCount: missionIds.length,
   functionalMissionCount: 4,
@@ -330,6 +382,13 @@ const result = {
     m4RecordOnlyDecision: true,
     m4ConceptualHandoffOnly: true,
     m4RecoveryAfterRemount: true,
+    fullArcSummary: true,
+    fullArcCompletion: true,
+    fullArcRecoveryAfterRemount: true,
+    finalPreviewFromAnyMission: true,
+    privateReflectionsExcludedFromFinalPreview: true,
+    portfolioOrderPreservedAcrossRecovery: true,
+    upstreamReopenInvalidatesCurationClosure: true,
   },
   deferredCapabilities: {
     actualHandoffFile: false,

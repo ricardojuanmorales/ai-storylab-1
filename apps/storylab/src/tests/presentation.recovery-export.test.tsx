@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 
-import { cleanup, render, screen } from "@testing-library/react";
+import { cleanup, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it } from "vitest";
 import type { StoryLabUseCases } from "../application";
@@ -116,9 +116,18 @@ describe("recovery and export presentation", () => {
       }),
     );
 
-    expect(screen.getByText("storylab_project")).toBeTruthy();
-    expect(screen.getByText("0", { selector: "dd" })).toBeTruthy();
-    const jsonPreview = view.container.querySelector("pre");
+    const exportPreview =
+      view.container.querySelector<HTMLElement>(".export-preview");
+    expect(exportPreview).toBeTruthy();
+    if (!exportPreview) return;
+
+    expect(
+      within(exportPreview).getByText("storylab_project"),
+    ).toBeTruthy();
+    expect(
+      within(exportPreview).getByText("0", { selector: "dd" }),
+    ).toBeTruthy();
+    const jsonPreview = exportPreview.querySelector("pre");
     expect(jsonPreview?.textContent).not.toContain(
       "SECRETO_PRIVADO_SINTETICO",
     );

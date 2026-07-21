@@ -11,6 +11,7 @@ import type {
   ProjectId,
 } from "../domain/types";
 import type { Clock, IdGenerator } from "../ports";
+import { completeFullArc } from "./full-arc-test-support";
 
 const clock: Clock = {
   now: () => "2026-07-16T22:00:00.000Z" as ISODateTime,
@@ -605,6 +606,58 @@ describe("creative cycle engine", () => {
       ok: false,
       error: { code: "HUMAN_DECISION_REQUIRED" },
     });
+  });
+
+  it("reabrir una misión fuente invalida el cierre curatorial aguas abajo", async () => {
+    const context = await setup();
+    const fixture = await completeFullArc(
+      context.cycle,
+      context.project.id,
+    );
+
+    const reopened = await context.cycle.reopenMission({
+      projectId: context.project.id,
+      missionId: MISSION_CATALOG[1].id,
+    });
+    expect(reopened.ok).toBe(true);
+    if (!reopened.ok) return;
+
+    expect(
+      reopened.value.missions.find(
+        (mission) => mission.missionId === MISSION_CATALOG[1].id,
+      )?.status,
+    ).toBe("reopened");
+    expect(
+      reopened.value.missions.find(
+        (mission) => mission.missionId === MISSION_CATALOG[3].id,
+      )?.status,
+    ).toBe("reopened");
+
+    const record = reopened.value.evidence.find(
+      (item) => item.missionId === MISSION_CATALOG[3].id,
+    );
+    expect(record).toBeTruthy();
+    expect(
+      parseCurationRecord(record?.summary ?? "")?.selectedEvidenceIds,
+    ).toEqual(fixture.selectedEvidenceIds);
+    expect(
+      reopened.value.decisions.some(
+        (decision) => decision.evidenceId === record?.id,
+      ),
+    ).toBe(false);
+    expect(
+      reopened.value.reflections.some(
+        (reflection) =>
+          reflection.missionId === MISSION_CATALOG[3].id &&
+          reflection.text === fixture.privateMarkers[3],
+      ),
+    ).toBe(true);
+    expect(
+      reopened.value.portfolio.items.map((item) => item.evidenceId),
+    ).toEqual([
+      fixture.selectedEvidenceIds[0],
+      fixture.selectedEvidenceIds[2],
+    ]);
   });
 
   it("devuelve un error tipado para un proyecto ausente", async () => {
