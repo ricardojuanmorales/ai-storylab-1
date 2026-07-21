@@ -34,5 +34,14 @@ governance:
   H08_5: BLOCKED
 ```
 
-El hash del commit de cierre y su CI se resolverán mediante la atestación
-post-publicación incluida en este mismo cartapacio.
+## Publicación primaria
+
+```yaml
+closure_commit: b9cc91a8e6b3f50763c3c995fcfce42339487970
+closure_CI_run: 29846261187
+closure_CI_url: https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/29846261187
+CI_Node_22: PASS
+CI_Node_24: PASS
+```
+
+La atestación reside en el commit documental que la contiene.

@@ -1,6 +1,6 @@
 {
   "package": "H08_4_Cierre_Final_2026_07_20",
-  "status": "AUTHORIZED_PENDING_PUBLICATION",
+  "status": "PUBLISHED_AND_CI_PASSED",
   "baseline": "7fb21b66aaf1f541d99797d582585adcc09b4f55",
   "checkpoint_head": "fb005c9eded01dec63af9c6c4ca0df7b9ba8fb1c",
   "expected_files": [
@@ -36,11 +36,17 @@
     "merge": "BLOCKED",
     "H08_5": "BLOCKED"
   },
-  "closure_commit": "RESOLVED_AFTER_PUBLICATION",
-  "closure_CI": "RESOLVED_AFTER_PUBLICATION",
+  "closure_commit": "b9cc91a8e6b3f50763c3c995fcfce42339487970",
+  "closure_CI": {
+    "run": 29846261187,
+    "url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/29846261187",
+    "Node_22": "PASS",
+    "Node_24": "PASS"
+  },
   "post_publication_attestation": {
     "required": true,
     "reason": "resolve closure self-reference and CI generated after publication",
-    "file": "Atestacion_Post_Publicacion_Cierre_H08_4_AI_StoryLab_1.md"
+    "file": "Atestacion_Post_Publicacion_Cierre_H08_4_AI_StoryLab_1.md",
+    "status": "CONTAINING_COMMIT"
   }
 }

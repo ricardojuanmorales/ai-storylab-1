@@ -44,3 +44,13 @@ H08_5: BLOCKED
 4. apertura de H08-5.
 
 El cierre global no ejecuta ninguna de esas transiciones.
+
+## Publicación primaria atestiguada
+
+```yaml
+closure_commit: b9cc91a8e6b3f50763c3c995fcfce42339487970
+closure_CI_run: 29846261187
+CI_Node_22: PASS
+CI_Node_24: PASS
+attestation: CONTAINING_COMMIT
+```

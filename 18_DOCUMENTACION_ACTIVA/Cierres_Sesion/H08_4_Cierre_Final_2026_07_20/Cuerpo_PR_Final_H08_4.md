@@ -7,8 +7,9 @@ H08_4: CLOSED_DOCUMENTALLY
 technical_result: PASS
 governance_result: PASS
 checkpoint: H08_4A_PASS
-closure_commit: RESOLVED_AFTER_PUBLICATION
-closure_CI: RESOLVED_AFTER_PUBLICATION
+closure_commit: b9cc91a8e6b3f50763c3c995fcfce42339487970
+closure_CI_run: 29846261187
+closure_CI_url: https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/29846261187
 attestation_commit: CONTAINING_COMMIT
 attestation_CI: RESOLVED_IN_PR
 PR_mode: DRAFT
@@ -30,4 +31,4 @@ privacidad, recuperación local, curaduría reversible y límites diferidos.
 - cero hallazgos bloqueantes;
 - checkpoint independiente con dictamen humano PASS.
 
-Los valores post-publicación serán resueltos mediante atestación.
+Los valores del cierre primario fueron resueltos mediante atestación.

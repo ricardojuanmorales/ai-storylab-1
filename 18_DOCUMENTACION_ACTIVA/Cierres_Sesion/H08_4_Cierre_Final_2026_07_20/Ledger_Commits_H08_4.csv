@@ -6,3 +6,4 @@ order,block,sha,short_sha,authored_at,subject,scope
 5,H08-4.4,e113dccff1ad7476469ac5ab903a75d6038a77db,e113dcc,2026-07-20T20:02:46-04:00,feat(h08-4): add curation and closure mission,M4 curaduría y cierre
 6,H08-4.5,5782c42b35562335e440f7b75cb4cb7fa81ba896,5782c42,2026-07-20T21:17:49-04:00,feat(h08-4): integrate complete mission arc,integración transversal del arco
 7,H08-4A,fb005c9eded01dec63af9c6c4ca0df7b9ba8fb1c,fb005c9,2026-07-20T22:05:18-04:00,docs(h08-4): publish independent checkpoint,checkpoint independiente
+8,H08-4 cierre,b9cc91a8e6b3f50763c3c995fcfce42339487970,b9cc91a,2026-07-21T11:55:38-04:00,docs(h08-4): close complete mission arc,cierre documental global primario
