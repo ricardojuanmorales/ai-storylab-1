@@ -2,14 +2,16 @@ import { describe, expect, it } from "vitest";
 import {
   createCreativeCycleUseCases,
   createProject,
+  parseCurationRecord,
 } from "../application";
 import { InMemoryProjectRepository } from "../adapters/memory/in-memory-project-repository";
-import { M1_INTENTION_DEFINITION } from "../domain";
+import { M1_INTENTION_DEFINITION, MISSION_CATALOG } from "../domain";
 import type {
   ISODateTime,
   ProjectId,
 } from "../domain/types";
 import type { Clock, IdGenerator } from "../ports";
+import { completeFullArc } from "./full-arc-test-support";
 
 const clock: Clock = {
   now: () => "2026-07-16T22:00:00.000Z" as ISODateTime,
@@ -301,6 +303,361 @@ describe("creative cycle engine", () => {
     expect(reopened.value.portfolio.items).toEqual([]);
     expect(reopened.value.activityResponses).toHaveLength(1);
     expect(reopened.value.evidence).toHaveLength(1);
+  });
+
+  it("crea y edita múltiples evidencias identificables para M3", async () => {
+    const context = await setup();
+    const definition = MISSION_CATALOG[2];
+
+    await context.cycle.startMission({
+      projectId: context.project.id,
+      definition,
+    });
+    await context.cycle.saveTextActivity({
+      projectId: context.project.id,
+      missionId: definition.id,
+      text: "Plan de producción sintético",
+    });
+
+    const first = await context.cycle.createTextEvidence({
+      projectId: context.project.id,
+      missionId: definition.id,
+      cardinality: "multiple",
+      title: "Pieza uno",
+      summary: "[medio_sintetico:text_fragment]\nPrimera pieza",
+    });
+    expect(first.ok).toBe(true);
+    if (!first.ok) return;
+
+    const second = await context.cycle.createTextEvidence({
+      projectId: context.project.id,
+      missionId: definition.id,
+      cardinality: "multiple",
+      title: "Pieza dos",
+      summary: "[medio_sintetico:audio_description]\nSegunda pieza",
+    });
+    expect(second.ok).toBe(true);
+    if (!second.ok) return;
+    expect(second.value.evidence).toHaveLength(2);
+
+    const firstEvidence = second.value.evidence.find(
+      (item) => item.title === "Pieza uno",
+    );
+    if (!firstEvidence) throw new Error("M3_FIRST_EVIDENCE_MISSING");
+
+    const updated = await context.cycle.createTextEvidence({
+      projectId: context.project.id,
+      missionId: definition.id,
+      evidenceId: firstEvidence.id,
+      cardinality: "multiple",
+      title: "Pieza uno revisada",
+      summary: "[medio_sintetico:text_fragment]\nPrimera pieza revisada",
+    });
+
+    expect(updated.ok).toBe(true);
+    if (!updated.ok) return;
+    expect(updated.value.evidence).toHaveLength(2);
+    expect(
+      updated.value.evidence.find((item) => item.id === firstEvidence.id)
+        ?.title,
+    ).toBe("Pieza uno revisada");
+  });
+
+  it("mantiene M3 abierta hasta que todas las evidencias tienen decisión final", async () => {
+    const context = await setup();
+    const definition = MISSION_CATALOG[2];
+
+    await context.cycle.startMission({
+      projectId: context.project.id,
+      definition,
+    });
+    await context.cycle.saveTextActivity({
+      projectId: context.project.id,
+      missionId: definition.id,
+      text: "Plan de dos piezas",
+    });
+
+    await context.cycle.createTextEvidence({
+      projectId: context.project.id,
+      missionId: definition.id,
+      cardinality: "multiple",
+      title: "Pieza A",
+      summary: "[medio_sintetico:image_description]\nPieza A",
+    });
+    const created = await context.cycle.createTextEvidence({
+      projectId: context.project.id,
+      missionId: definition.id,
+      cardinality: "multiple",
+      title: "Pieza B",
+      summary: "[medio_sintetico:video_description]\nPieza B",
+    });
+    expect(created.ok).toBe(true);
+    if (!created.ok) return;
+
+    const [firstEvidence, secondEvidence] = created.value.evidence;
+    if (!firstEvidence || !secondEvidence) {
+      throw new Error("M3_EVIDENCE_SET_MISSING");
+    }
+
+    const firstDecision = await context.cycle.decideEvidence({
+      projectId: context.project.id,
+      evidenceId: firstEvidence.id,
+      value: "accept",
+      missionDisposition: "keep_open",
+    });
+    expect(firstDecision.ok).toBe(true);
+    if (!firstDecision.ok) return;
+    expect(firstDecision.value.missions[0]?.status).toBe("ready_for_review");
+
+    const premature = await context.cycle.completeMission({
+      projectId: context.project.id,
+      missionId: definition.id,
+    });
+    expect(premature).toMatchObject({
+      ok: false,
+      error: { code: "HUMAN_DECISION_REQUIRED" },
+    });
+
+    await context.cycle.decideEvidence({
+      projectId: context.project.id,
+      evidenceId: secondEvidence.id,
+      value: "reject",
+      missionDisposition: "keep_open",
+    });
+
+    const completed = await context.cycle.completeMission({
+      projectId: context.project.id,
+      missionId: definition.id,
+    });
+    expect(completed.ok).toBe(true);
+    if (!completed.ok) return;
+    expect(completed.value.missions[0]?.status).toBe("completed");
+    expect(completed.value.decisions).toHaveLength(2);
+  });
+
+  it("guarda, ordena y actualiza un solo registro de curaduría", async () => {
+    const context = await setup();
+    const sourceEvidence = [];
+
+    for (const [definition, title] of [
+      [MISSION_CATALOG[0], "Intención fuente"],
+      [MISSION_CATALOG[1], "Arquitectura fuente"],
+    ] as const) {
+      await context.cycle.startMission({
+        projectId: context.project.id,
+        definition,
+      });
+      await context.cycle.saveTextActivity({
+        projectId: context.project.id,
+        missionId: definition.id,
+        text: `Actividad para ${title}`,
+      });
+      const created = await context.cycle.createTextEvidence({
+        projectId: context.project.id,
+        missionId: definition.id,
+        title,
+        summary: `Resumen de ${title}`,
+      });
+      expect(created.ok).toBe(true);
+      if (!created.ok) return;
+
+      const evidence = created.value.evidence.find(
+        (item) => item.missionId === definition.id,
+      );
+      if (!evidence) throw new Error("M4_SOURCE_EVIDENCE_MISSING");
+
+      await context.cycle.decideEvidence({
+        projectId: context.project.id,
+        evidenceId: evidence.id,
+        value: "accept",
+      });
+      sourceEvidence.push(evidence);
+    }
+
+    const definition = MISSION_CATALOG[3];
+    await context.cycle.startMission({
+      projectId: context.project.id,
+      definition,
+    });
+    await context.cycle.saveTextActivity({
+      projectId: context.project.id,
+      missionId: definition.id,
+      text: "Lectura de cierre",
+    });
+
+    const saved = await context.cycle.saveCurationRecord({
+      projectId: context.project.id,
+      missionId: definition.id,
+      title: "Registro final",
+      statement: "La selección representa el proceso.",
+      handoff: "Revisión humana futura.",
+      selectedEvidenceIds: [
+        sourceEvidence[1]!.id,
+        sourceEvidence[0]!.id,
+      ],
+    });
+    expect(saved.ok).toBe(true);
+    if (!saved.ok) return;
+
+    expect(
+      saved.value.portfolio.items.map((item) => item.evidenceId),
+    ).toEqual([sourceEvidence[1]!.id, sourceEvidence[0]!.id]);
+
+    const record = saved.value.evidence.find(
+      (item) => item.missionId === definition.id,
+    );
+    if (!record) throw new Error("M4_RECORD_MISSING");
+
+    expect(
+      parseCurationRecord(record.summary)?.selectedEvidenceIds,
+    ).toEqual([sourceEvidence[1]!.id, sourceEvidence[0]!.id]);
+
+    const updated = await context.cycle.saveCurationRecord({
+      projectId: context.project.id,
+      missionId: definition.id,
+      evidenceId: record.id,
+      title: "Registro final revisado",
+      statement: "La selección revisada conserva una evidencia.",
+      handoff: "Mantener revisión humana.",
+      selectedEvidenceIds: [sourceEvidence[0]!.id],
+    });
+    expect(updated.ok).toBe(true);
+    if (!updated.ok) return;
+
+    expect(
+      updated.value.evidence.filter(
+        (item) => item.missionId === definition.id,
+      ),
+    ).toHaveLength(1);
+    expect(updated.value.portfolio.items).toHaveLength(1);
+
+    const decided = await context.cycle.decideEvidence({
+      projectId: context.project.id,
+      evidenceId: record.id,
+      value: "accept",
+      evidenceDisposition: "record_only",
+    });
+    expect(decided.ok).toBe(true);
+    if (!decided.ok) return;
+
+    expect(
+      decided.value.missions.find(
+        (mission) => mission.missionId === definition.id,
+      )?.status,
+    ).toBe("completed");
+    expect(
+      decided.value.evidence.find((item) => item.id === record.id)?.status,
+    ).toBe("reviewed");
+    expect(
+      decided.value.portfolio.items.some(
+        (item) => item.evidenceId === record.id,
+      ),
+    ).toBe(false);
+  });
+
+  it("rechaza una curaduría basada en evidencia sin aceptación humana", async () => {
+    const context = await setup();
+    const sourceDefinition = MISSION_CATALOG[0];
+
+    await context.cycle.startMission({
+      projectId: context.project.id,
+      definition: sourceDefinition,
+    });
+    await context.cycle.saveTextActivity({
+      projectId: context.project.id,
+      missionId: sourceDefinition.id,
+      text: "Actividad pendiente",
+    });
+    const source = await context.cycle.createTextEvidence({
+      projectId: context.project.id,
+      missionId: sourceDefinition.id,
+      title: "Evidencia pendiente",
+      summary: "Todavía no tiene decisión humana.",
+    });
+    expect(source.ok).toBe(true);
+    if (!source.ok) return;
+
+    const sourceEvidence = source.value.evidence.find(
+      (item) => item.missionId === sourceDefinition.id,
+    );
+    if (!sourceEvidence) throw new Error("M4_PENDING_SOURCE_MISSING");
+
+    const definition = MISSION_CATALOG[3];
+    await context.cycle.startMission({
+      projectId: context.project.id,
+      definition,
+    });
+    await context.cycle.saveTextActivity({
+      projectId: context.project.id,
+      missionId: definition.id,
+      text: "Lectura de cierre pendiente",
+    });
+
+    const result = await context.cycle.saveCurationRecord({
+      projectId: context.project.id,
+      missionId: definition.id,
+      title: "Registro inválido",
+      statement: "No debe guardarse.",
+      handoff: "Pendiente.",
+      selectedEvidenceIds: [sourceEvidence.id],
+    });
+
+    expect(result).toMatchObject({
+      ok: false,
+      error: { code: "HUMAN_DECISION_REQUIRED" },
+    });
+  });
+
+  it("reabrir una misión fuente invalida el cierre curatorial aguas abajo", async () => {
+    const context = await setup();
+    const fixture = await completeFullArc(
+      context.cycle,
+      context.project.id,
+    );
+
+    const reopened = await context.cycle.reopenMission({
+      projectId: context.project.id,
+      missionId: MISSION_CATALOG[1].id,
+    });
+    expect(reopened.ok).toBe(true);
+    if (!reopened.ok) return;
+
+    expect(
+      reopened.value.missions.find(
+        (mission) => mission.missionId === MISSION_CATALOG[1].id,
+      )?.status,
+    ).toBe("reopened");
+    expect(
+      reopened.value.missions.find(
+        (mission) => mission.missionId === MISSION_CATALOG[3].id,
+      )?.status,
+    ).toBe("reopened");
+
+    const record = reopened.value.evidence.find(
+      (item) => item.missionId === MISSION_CATALOG[3].id,
+    );
+    expect(record).toBeTruthy();
+    expect(
+      parseCurationRecord(record?.summary ?? "")?.selectedEvidenceIds,
+    ).toEqual(fixture.selectedEvidenceIds);
+    expect(
+      reopened.value.decisions.some(
+        (decision) => decision.evidenceId === record?.id,
+      ),
+    ).toBe(false);
+    expect(
+      reopened.value.reflections.some(
+        (reflection) =>
+          reflection.missionId === MISSION_CATALOG[3].id &&
+          reflection.text === fixture.privateMarkers[3],
+      ),
+    ).toBe(true);
+    expect(
+      reopened.value.portfolio.items.map((item) => item.evidenceId),
+    ).toEqual([
+      fixture.selectedEvidenceIds[0],
+      fixture.selectedEvidenceIds[2],
+    ]);
   });
 
   it("devuelve un error tipado para un proyecto ausente", async () => {

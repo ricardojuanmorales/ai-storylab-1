@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 
-import { cleanup, render, screen } from "@testing-library/react";
+import { cleanup, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it } from "vitest";
 import { App } from "../presentation/App";
@@ -77,9 +77,16 @@ describe("M1 functional experience", () => {
       screen.getByRole("button", { name: "Incorporar al portafolio" }),
     );
 
-    expect(screen.getByText("Premisa narrativa")).toBeTruthy();
+    const missionWorkspace = screen.getByRole("region", {
+      name: "La isla de los ecos",
+    });
     expect(
-      screen.getByRole("button", { name: "Retirar del portafolio" }),
+      within(missionWorkspace).getByText("Premisa narrativa"),
+    ).toBeTruthy();
+    expect(
+      within(missionWorkspace).getByRole("button", {
+        name: "Retirar del portafolio",
+      }),
     ).toBeTruthy();
 
     await user.click(

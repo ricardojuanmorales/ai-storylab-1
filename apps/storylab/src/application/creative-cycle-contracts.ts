@@ -15,12 +15,29 @@ import type {
   ReflectionPrivacyClass,
 } from "../domain/types";
 
+export type EvidenceWriteCardinality =
+  | "one_editable"
+  | "multiple";
+
+export type MissionDecisionDisposition =
+  | "complete"
+  | "keep_open";
+
+export type EvidenceDecisionDisposition =
+  | "portfolio_eligible"
+  | "record_only";
+
 export interface StartMissionInput {
   readonly projectId: ProjectId;
   readonly definition: MissionDefinition;
 }
 
 export interface ReopenMissionInput {
+  readonly projectId: ProjectId;
+  readonly missionId: MissionId;
+}
+
+export interface CompleteMissionInput {
   readonly projectId: ProjectId;
   readonly missionId: MissionId;
 }
@@ -35,8 +52,20 @@ export interface SaveTextActivityInput {
 export interface CreateTextEvidenceInput {
   readonly projectId: ProjectId;
   readonly missionId: MissionId;
+  readonly evidenceId?: EvidenceId;
+  readonly cardinality?: EvidenceWriteCardinality;
   readonly title: string;
   readonly summary: string;
+}
+
+export interface SaveCurationRecordInput {
+  readonly projectId: ProjectId;
+  readonly missionId: MissionId;
+  readonly evidenceId?: EvidenceId;
+  readonly title: string;
+  readonly statement: string;
+  readonly handoff: string;
+  readonly selectedEvidenceIds: readonly EvidenceId[];
 }
 
 export interface SaveReflectionInput {
@@ -51,6 +80,8 @@ export interface DecideEvidenceInput {
   readonly evidenceId: EvidenceId;
   readonly value: HumanDecisionValue;
   readonly rationale?: string;
+  readonly missionDisposition?: MissionDecisionDisposition;
+  readonly evidenceDisposition?: EvidenceDecisionDisposition;
 }
 
 export interface CuratePortfolioInput {
@@ -78,11 +109,17 @@ export interface CreativeCycleUseCases {
   readonly reopenMission: (
     input: ReopenMissionInput,
   ) => Promise<CreativeCycleProjectResult>;
+  readonly completeMission: (
+    input: CompleteMissionInput,
+  ) => Promise<CreativeCycleProjectResult>;
   readonly saveTextActivity: (
     input: SaveTextActivityInput,
   ) => Promise<CreativeCycleProjectResult>;
   readonly createTextEvidence: (
     input: CreateTextEvidenceInput,
+  ) => Promise<CreativeCycleProjectResult>;
+  readonly saveCurationRecord: (
+    input: SaveCurationRecordInput,
   ) => Promise<CreativeCycleProjectResult>;
   readonly saveReflection: (
     input: SaveReflectionInput,

@@ -1,0 +1,13 @@
+block,priority,item,area,status,constraint
+H08-4.0,P0,Characterize M1 behavior,tests,completed_read_only,no production change
+H08-4.0,P0,Assess schema impact,decision,completed_no_schema_change,schema bump requires separate decision
+H08-4.0,P0,Ratify mission cardinality policy,decision,completed_human_ratified,only M3 allows multiple evidence
+H08-4.0,P0,Resolve local repository worktree,preflight,blocked_environment,must pass before production edits
+H08-4.1,P0,Generalize mission cycle,domain/application,not_started,preserve M1
+H08-4.1,P0,Implement shared navigation,presentation,not_started,keyboard accessible
+H08-4.2,P0,Implement M2 complete cycle,full stack,not_started,recoverable
+H08-4.3,P0,Implement M3 complete cycle,full stack,not_started,no binaries/network
+H08-4.4,P0,Implement M4 complete cycle,full stack,not_started,no H08-5 roundtrip
+H08-4.5,P0,Integrate full arc,integration,not_started,M1-M4 reversible
+H08-4.5,P1,Accessibility and privacy regression,audit/tests,not_started,blocking
+H08-4A,P0,Independent checkpoint,evidence,not_started,human verdict required

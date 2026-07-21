@@ -1,0 +1,13 @@
+id,dimension,criterion,evidence,status,severity,disposition
+H08-4A-F001,freeze,head funcional congelado,git y PR,PASS,blocking,verified
+H08-4A-F002,branch,adelante de main sin divergencia,"ahead=6;behind=0;merge_base=7fb21b66aaf1f541d99797d582585adcc09b4f55",PASS,blocking,verified
+H08-4A-F003,product,producto inmutable durante checkpoint,solo documentación H08-4A,PASS,blocking,verified
+H08-4A-F004,verification,pruebas focalizadas,"11 archivos;55 pruebas",PASS,blocking,verified
+H08-4A-F005,verification,verify completo,"33 archivos;189 pruebas",PASS,blocking,verified
+H08-4A-F006,agency,decisiones humanas y reapertura,audit vertical y tests,PASS,blocking,verified
+H08-4A-F007,privacy,preview sin reflexiones privadas,audit vertical y tests,PASS,blocking,verified
+H08-4A-F008,recovery,arco y orden recuperables,audit vertical y tests,PASS,blocking,verified
+H08-4A-F009,boundaries,capacidades diferidas ausentes,audit vertical,PASS,blocking,verified
+H08-4A-F010,ci,checks remotos publicados,"Node 22 PASS; Node 24 PASS",PASS,blocking,verified
+H08-4A-F011,review_independence,revisión externa independiente,no registrada,OBSERVATION,non_blocking,accepted_by_human
+H08-4A-F012,human_gate,dictamen humano,autorización explícita,PASS,blocking,publication_authorized

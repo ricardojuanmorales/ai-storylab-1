@@ -5,11 +5,17 @@ import {
   type MouseEvent,
 } from "react";
 import type { StoryLabUseCases } from "../application";
+import { MISSION_CATALOG } from "../domain/mission-catalog";
 import type {
   AccessibilityPreferences,
   CreativeProject,
 } from "../domain/model";
+import type { MissionId } from "../domain/types";
+import { ArcSummary } from "./ArcSummary";
+import { MissionFourWorkspace } from "./MissionFourWorkspace";
 import { MissionOneWorkspace } from "./MissionOneWorkspace";
+import { MissionThreeWorkspace } from "./MissionThreeWorkspace";
+import { MissionTwoWorkspace } from "./MissionTwoWorkspace";
 import type { PersistenceMode } from "./persistence-mode";
 import { ProjectSetup } from "./ProjectSetup";
 import {
@@ -46,6 +52,9 @@ export function App({
   const [preferences, setPreferences] =
     useState<AccessibilityPreferences>(DEFAULT_PREFERENCES);
   const [project, setProject] = useState<CreativeProject | null>(null);
+  const [activeMissionId, setActiveMissionId] = useState<MissionId>(
+    MISSION_CATALOG[0].id,
+  );
   const [busy, setBusy] = useState(false);
   const [recoveryState, setRecoveryState] =
     useState<RecoveryState>("checking");
@@ -132,6 +141,7 @@ export function App({
         return;
       }
       setProject(result.value);
+      setActiveMissionId(MISSION_CATALOG[0].id);
       setStatusMessage(
         persistenceMode === "local"
           ? "Proyecto creado y guardado automáticamente en este navegador."
@@ -144,6 +154,18 @@ export function App({
     }
   };
 
+  const selectMission = (missionId: MissionId) => {
+    const definition = MISSION_CATALOG.find(
+      (candidate) => candidate.id === missionId,
+    );
+    setActiveMissionId(missionId);
+    setStatusMessage(
+      definition
+        ? `${definition.title} seleccionada.`
+        : "Misión seleccionada.",
+    );
+  };
+
   const clearBrokenRecovery = async () => {
     setBusy(true);
     try {
@@ -154,6 +176,7 @@ export function App({
       }
       setRecoveryIssue(false);
       setProject(null);
+      setActiveMissionId(MISSION_CATALOG[0].id);
       setStatusMessage(
         "Los datos locales dañados fueron descartados. Puedes comenzar de nuevo.",
       );
@@ -186,7 +209,7 @@ export function App({
           <p className="brand">AI StoryLab 1</p>
         </div>
         <p className="status-badge">
-          Recuperación y export preview · H08-2.4
+          Arco M1–M4 integrado · H08-4.5
         </p>
       </header>
 
@@ -194,6 +217,7 @@ export function App({
         <a href="#inicio">Inicio</a>
         <a href="#preferencias">Accesibilidad</a>
         <a href="#experiencia">Experiencia</a>
+        <a href="#resumen-arco">Resumen del arco</a>
         <a href="#mapa-ciclo">Mapa del ciclo</a>
       </nav>
 
@@ -237,7 +261,7 @@ export function App({
             <h2 id="preferences-title">Preferencias de accesibilidad</h2>
             <p>
               Estos ajustes modifican la vista actual. La integración de estas
-              preferencias al perfil persistente permanece fuera de H08-2.4.
+              preferencias al perfil persistente permanece fuera de H08-4.5.
             </p>
           </div>
 
@@ -305,6 +329,14 @@ export function App({
           {statusMessage}
         </p>
 
+        {project ? (
+          <ArcSummary
+            project={project}
+            useCases={useCases}
+            onMessage={setStatusMessage}
+          />
+        ) : null}
+
         <div id="experiencia">
           {recoveryState === "checking" ? (
             <section className="panel recovery-panel" aria-live="polite">
@@ -338,19 +370,68 @@ export function App({
               </button>
             </section>
           ) : project ? (
-            <MissionOneWorkspace
-              project={project}
-              useCases={useCases}
-              persistenceMode={persistenceMode}
-              onProjectChange={setProject}
-              onProjectDeleted={() => {
-                setProject(null);
-                setStatusMessage(
-                  "El proyecto local fue borrado explícitamente.",
-                );
-              }}
-              onMessage={setStatusMessage}
-            />
+            activeMissionId === MISSION_CATALOG[3].id ? (
+              <MissionFourWorkspace
+                key={MISSION_CATALOG[3].id as string}
+                project={project}
+                useCases={useCases}
+                persistenceMode={persistenceMode}
+                onProjectChange={setProject}
+                onMessage={setStatusMessage}
+                onSelectMission={selectMission}
+              />
+            ) : activeMissionId === MISSION_CATALOG[2].id ? (
+              <MissionThreeWorkspace
+                key={MISSION_CATALOG[2].id as string}
+                project={project}
+                useCases={useCases}
+                persistenceMode={persistenceMode}
+                onProjectChange={setProject}
+                onProjectDeleted={() => {
+                  setProject(null);
+                  setActiveMissionId(MISSION_CATALOG[0].id);
+                  setStatusMessage(
+                    "El proyecto local fue borrado explícitamente.",
+                  );
+                }}
+                onMessage={setStatusMessage}
+                onSelectMission={selectMission}
+              />
+            ) : activeMissionId === MISSION_CATALOG[1].id ? (
+              <MissionTwoWorkspace
+                key={MISSION_CATALOG[1].id as string}
+                project={project}
+                useCases={useCases}
+                persistenceMode={persistenceMode}
+                onProjectChange={setProject}
+                onProjectDeleted={() => {
+                  setProject(null);
+                  setActiveMissionId(MISSION_CATALOG[0].id);
+                  setStatusMessage(
+                    "El proyecto local fue borrado explícitamente.",
+                  );
+                }}
+                onMessage={setStatusMessage}
+                onSelectMission={selectMission}
+              />
+            ) : (
+              <MissionOneWorkspace
+                key={MISSION_CATALOG[0].id as string}
+                project={project}
+                useCases={useCases}
+                persistenceMode={persistenceMode}
+                onProjectChange={setProject}
+                onProjectDeleted={() => {
+                  setProject(null);
+                  setActiveMissionId(MISSION_CATALOG[0].id);
+                  setStatusMessage(
+                    "El proyecto local fue borrado explícitamente.",
+                  );
+                }}
+                onMessage={setStatusMessage}
+                onSelectMission={selectMission}
+              />
+            )
           ) : (
             <ProjectSetup
               busy={busy}
@@ -369,8 +450,8 @@ export function App({
             <p className="eyebrow">Ruta gobernada</p>
             <h2 id="cycle-title">Mapa del arco creativo completo de v0.8.0</h2>
             <p>
-              H08-2.4 completa recuperación y export preview. M2, M3, M4,
-              importación y roundtrip continúan en bloques posteriores.
+              H08-4.5 integra M1–M4, valida la continuidad local y protege
+              la coherencia curatorial cuando una misión fuente vuelve a abrirse.
             </p>
           </div>
 
@@ -423,7 +504,7 @@ export function App({
 
       <footer className="site-footer">
         <p>
-          PR #59 · Recuperación local · Export preview · Sin importación
+          PR #61 · H08-4.5 · Arco integrado · Preview final sin descarga
         </p>
       </footer>
     </div>

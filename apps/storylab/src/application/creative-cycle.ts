@@ -2,6 +2,7 @@ import {
   validateMissionTransition,
   validateProjectInvariants,
 } from "../domain/invariants";
+import { MISSION_CATALOG } from "../domain/mission-catalog";
 import type {
   ActivityResponse,
   CreativeProject,
@@ -25,6 +26,10 @@ import type {
   CreativeCycleMutationUseCases,
   CreativeCycleProjectResult,
 } from "./creative-cycle-contracts";
+import {
+  CURATION_RECORD_PREFIX,
+  encodeCurationRecord,
+} from "./curation-record";
 
 export interface CreativeCycleDependencies {
   readonly repository: ProjectRepository;
@@ -134,6 +139,56 @@ const findMission = (
 ): MissionProgress | undefined =>
   project.missions.find((mission) => mission.missionId === missionId);
 
+const CURATION_MISSION_ID = MISSION_CATALOG[3].id;
+
+const invalidateDownstreamCurationClosure = (
+  project: CreativeProject,
+  reopenedMissionId: MissionId,
+  now: ISODateTime,
+): Pick<CreativeProject, "missions" | "evidence" | "decisions"> => {
+  if (reopenedMissionId === CURATION_MISSION_ID) {
+    return {
+      missions: project.missions,
+      evidence: project.evidence,
+      decisions: project.decisions,
+    };
+  }
+
+  const curationMission = findMission(project, CURATION_MISSION_ID);
+  if (!curationMission) {
+    return {
+      missions: project.missions,
+      evidence: project.evidence,
+      decisions: project.decisions,
+    };
+  }
+
+  const curationEvidenceIds = missionEvidenceIds(
+    project,
+    CURATION_MISSION_ID,
+  );
+  const missions =
+    curationMission.status === "completed"
+      ? replaceMission(
+          project.missions,
+          missionWithStatus(curationMission, "reopened", now),
+        )
+      : project.missions;
+
+  return {
+    missions,
+    evidence: project.evidence.map((item) =>
+      curationEvidenceIds.has(item.id as string)
+        ? { ...item, status: "draft" }
+        : item,
+    ),
+    decisions: project.decisions.filter(
+      (decision) =>
+        !curationEvidenceIds.has(decision.evidenceId as string),
+    ),
+  };
+};
+
 const requireMission = (
   project: CreativeProject,
   missionId: MissionId,
@@ -242,17 +297,27 @@ export const createCreativeCycleUseCases = (
 
     const now = dependencies.clock.now();
     const invalidated = invalidateMissionOutputs(project, input.missionId);
+    const reopenedProject: CreativeProject = {
+      ...project,
+      status: "active",
+      missions: replaceMission(
+        project.missions,
+        missionWithStatus(missionResult.value, "reopened", now),
+      ),
+      ...invalidated,
+      updatedAt: now,
+    };
+    const downstreamCuration =
+      invalidateDownstreamCurationClosure(
+        reopenedProject,
+        input.missionId,
+        now,
+      );
 
     return persist(
       {
-        ...project,
-        status: "active",
-        missions: replaceMission(
-          project.missions,
-          missionWithStatus(missionResult.value, "reopened", now),
-        ),
-        ...invalidated,
-        updatedAt: now,
+        ...reopenedProject,
+        ...downstreamCuration,
       },
       dependencies,
     );
@@ -412,9 +477,31 @@ export const createCreativeCycleUseCases = (
     );
     if (!transition.ok) return transition;
 
-    const existing = project.evidence.find(
-      (item) => item.missionId === input.missionId,
-    );
+    const cardinality = input.cardinality ?? "one_editable";
+    const explicitEvidence = input.evidenceId
+      ? project.evidence.find((item) => item.id === input.evidenceId)
+      : undefined;
+
+    if (
+      input.evidenceId &&
+      (!explicitEvidence || explicitEvidence.missionId !== input.missionId)
+    ) {
+      return err(
+        domainError(
+          "EVIDENCE_NOT_FOUND",
+          "evidenceId",
+          "No se encontró la evidencia solicitada para esta misión.",
+        ),
+      );
+    }
+
+    const existing =
+      explicitEvidence ??
+      (cardinality === "one_editable"
+        ? project.evidence.find(
+            (item) => item.missionId === input.missionId,
+          )
+        : undefined);
     const now = dependencies.clock.now();
     const evidence: Evidence = existing
       ? {
@@ -457,6 +544,220 @@ export const createCreativeCycleUseCases = (
               (item) => !evidenceIds.has(item.evidenceId as string),
             ),
           ),
+        },
+        updatedAt: now,
+      },
+      dependencies,
+    );
+  },
+
+  saveCurationRecord: async (input) => {
+    const title = input.title.trim();
+    const statement = input.statement.trim();
+    const handoff = input.handoff.trim();
+
+    if (!title) {
+      return err(
+        domainError(
+          "EVIDENCE_TITLE_REQUIRED",
+          "title",
+          "Se requiere un título para el registro de curaduría.",
+        ),
+      );
+    }
+    if (!statement) {
+      return err(
+        domainError(
+          "EVIDENCE_SUMMARY_REQUIRED",
+          "statement",
+          "Se requiere una declaración de curaduría.",
+        ),
+      );
+    }
+    if (!handoff) {
+      return err(
+        domainError(
+          "EVIDENCE_SUMMARY_REQUIRED",
+          "handoff",
+          "Se requiere una nota de traspaso conceptual.",
+        ),
+      );
+    }
+
+    const selectedEvidenceIds = [...new Set(input.selectedEvidenceIds)];
+    if (selectedEvidenceIds.length === 0) {
+      return err(
+        domainError(
+          "EVIDENCE_NOT_FOUND",
+          "selectedEvidenceIds",
+          "Seleccione al menos una evidencia aceptada.",
+        ),
+      );
+    }
+
+    const loaded = await loadExistingProject(
+      input.projectId,
+      dependencies.repository,
+    );
+    if (!loaded.ok) return loaded;
+
+    const project = loaded.value;
+    const missionResult = requireMission(project, input.missionId);
+    if (!missionResult.ok) return missionResult;
+
+    if (missionResult.value.status === "completed") {
+      return err(
+        domainError(
+          "INVALID_STATE_TRANSITION",
+          "mission.status",
+          "Reabra la misión antes de modificar su curaduría.",
+        ),
+      );
+    }
+
+    const activity = project.activityResponses.find(
+      (response) => response.missionId === input.missionId,
+    );
+    if (!activity) {
+      return err(
+        domainError(
+          "ACTIVITY_RESPONSE_NOT_FOUND",
+          "missionId",
+          "Guarde la lectura de cierre antes del registro de curaduría.",
+        ),
+      );
+    }
+
+    const selectedEvidence: Evidence[] = [];
+    for (const evidenceId of selectedEvidenceIds) {
+      const candidate = project.evidence.find(
+        (item) => item.id === evidenceId,
+      );
+
+      if (!candidate || candidate.missionId === input.missionId) {
+        return err(
+          domainError(
+            "EVIDENCE_NOT_FOUND",
+            "selectedEvidenceIds",
+            "Una evidencia seleccionada no está disponible para curaduría.",
+          ),
+        );
+      }
+
+      const accepted = project.decisions.some(
+        (decision) =>
+          decision.evidenceId === candidate.id &&
+          decision.actor === "human_user" &&
+          decision.value === "accept",
+      );
+
+      if (!accepted) {
+        return err(
+          domainError(
+            "HUMAN_DECISION_REQUIRED",
+            "selectedEvidenceIds",
+            "Cada evidencia curada requiere aceptación humana vigente.",
+          ),
+        );
+      }
+
+      selectedEvidence.push(candidate);
+    }
+
+    const transition = ensureTransition(
+      missionResult.value.status,
+      "ready_for_review",
+    );
+    if (!transition.ok) return transition;
+
+    const explicitRecord = input.evidenceId
+      ? project.evidence.find((item) => item.id === input.evidenceId)
+      : undefined;
+
+    if (
+      input.evidenceId &&
+      (!explicitRecord || explicitRecord.missionId !== input.missionId)
+    ) {
+      return err(
+        domainError(
+          "EVIDENCE_NOT_FOUND",
+          "evidenceId",
+          "No se encontró el registro de curaduría solicitado.",
+        ),
+      );
+    }
+
+    const existing =
+      explicitRecord ??
+      project.evidence.find(
+        (item) => item.missionId === input.missionId,
+      );
+    const now = dependencies.clock.now();
+    const record: Evidence = existing
+      ? {
+          ...existing,
+          title,
+          summary: encodeCurationRecord({
+            selectedEvidenceIds,
+            statement,
+            handoff,
+          }),
+          status: "draft",
+        }
+      : {
+          id: dependencies.ids.next("evidence") as Evidence["id"],
+          missionId: input.missionId,
+          title,
+          kind: "text",
+          summary: encodeCurationRecord({
+            selectedEvidenceIds,
+            statement,
+            handoff,
+          }),
+          status: "draft",
+          createdAt: now,
+        };
+
+    const portfolioItems: PortfolioItem[] = selectedEvidence.map(
+      (evidence, order) => {
+        const existingItem = project.portfolio.items.find(
+          (item) => item.evidenceId === evidence.id,
+        );
+
+        return existingItem
+          ? {
+              ...existingItem,
+              title: evidence.title,
+              order,
+            }
+          : {
+              id: dependencies.ids.next("portfolio") as PortfolioItem["id"],
+              evidenceId: evidence.id,
+              title: evidence.title,
+              order,
+              includedAt: now,
+            };
+      },
+    );
+
+    return persist(
+      {
+        ...project,
+        status: "active",
+        missions: replaceMission(
+          project.missions,
+          missionWithStatus(missionResult.value, "ready_for_review", now),
+        ),
+        evidence: existing
+          ? project.evidence.map((item) =>
+              item.id === record.id ? record : item,
+            )
+          : [...project.evidence, record],
+        decisions: project.decisions.filter(
+          (decision) => decision.evidenceId !== record.id,
+        ),
+        portfolio: {
+          items: portfolioItems,
         },
         updatedAt: now,
       },
@@ -581,12 +882,16 @@ export const createCreativeCycleUseCases = (
       decidedAt: now,
     };
 
+    const portfolioEligible =
+      input.evidenceDisposition !== "record_only";
     const missionStatus: MissionStatus =
-      input.value === "accept" || input.value === "reject"
-        ? "completed"
-        : input.value === "revise"
-          ? "in_progress"
-          : "ready_for_review";
+      input.missionDisposition === "keep_open"
+        ? "ready_for_review"
+        : input.value === "accept" || input.value === "reject"
+          ? "completed"
+          : input.value === "revise"
+            ? "in_progress"
+            : "ready_for_review";
 
     const transition = ensureTransition(
       missionResult.value.status,
@@ -594,7 +899,8 @@ export const createCreativeCycleUseCases = (
     );
     if (!transition.ok) return transition;
 
-    const keepPortfolio = input.value === "accept";
+    const keepPortfolio =
+      input.value === "accept" && portfolioEligible;
 
     return persist(
       {
@@ -608,7 +914,7 @@ export const createCreativeCycleUseCases = (
             ? {
                 ...item,
                 status:
-                  input.value === "accept"
+                  input.value === "accept" && portfolioEligible
                     ? "accepted_for_portfolio"
                     : "reviewed",
               }
@@ -635,6 +941,74 @@ export const createCreativeCycleUseCases = (
     );
   },
 
+  completeMission: async (input) => {
+    const loaded = await loadExistingProject(
+      input.projectId,
+      dependencies.repository,
+    );
+    if (!loaded.ok) return loaded;
+
+    const project = loaded.value;
+    const missionResult = requireMission(project, input.missionId);
+    if (!missionResult.ok) return missionResult;
+
+    if (missionResult.value.status === "completed") {
+      return ok(project);
+    }
+
+    const evidence = project.evidence.filter(
+      (item) => item.missionId === input.missionId,
+    );
+    if (evidence.length === 0) {
+      return err(
+        domainError(
+          "EVIDENCE_NOT_FOUND",
+          "missionId",
+          "Cree al menos una evidencia antes de completar la misión.",
+        ),
+      );
+    }
+
+    const allEvidenceHasFinalDecision = evidence.every((item) =>
+      project.decisions.some(
+        (decision) =>
+          decision.evidenceId === item.id &&
+          decision.actor === "human_user" &&
+          (decision.value === "accept" || decision.value === "reject"),
+      ),
+    );
+
+    if (!allEvidenceHasFinalDecision) {
+      return err(
+        domainError(
+          "HUMAN_DECISION_REQUIRED",
+          "missionId",
+          "Cada evidencia requiere una decisión humana final antes del cierre.",
+        ),
+      );
+    }
+
+    const transition = ensureTransition(
+      missionResult.value.status,
+      "completed",
+    );
+    if (!transition.ok) return transition;
+
+    const now = dependencies.clock.now();
+
+    return persist(
+      {
+        ...project,
+        missions: replaceMission(
+          project.missions,
+          missionWithStatus(missionResult.value, "completed", now),
+        ),
+        updatedAt: now,
+      },
+      dependencies,
+    );
+  },
+
   curatePortfolio: async (input) => {
     const loaded = await loadExistingProject(
       input.projectId,
@@ -652,6 +1026,16 @@ export const createCreativeCycleUseCases = (
           "EVIDENCE_NOT_FOUND",
           "evidenceId",
           "No se encontró la evidencia solicitada.",
+        ),
+      );
+    }
+
+    if (evidence.summary.startsWith(CURATION_RECORD_PREFIX)) {
+      return err(
+        domainError(
+          "INVALID_STATE_TRANSITION",
+          "evidenceId",
+          "El registro de curaduría documenta el portafolio y no puede entrar en él.",
         ),
       );
     }

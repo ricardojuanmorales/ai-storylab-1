@@ -1,0 +1,59 @@
+{
+  "unit": "H08-4",
+  "date": "2026-07-20",
+  "repository": "ricardojuanmorales/ai-storylab-1",
+  "PR": 61,
+  "branch": "feat/v0.8-h08-4-complete-mission-arc",
+  "baseline": "7fb21b66aaf1f541d99797d582585adcc09b4f55",
+  "checkpoint_head": "fb005c9eded01dec63af9c6c4ca0df7b9ba8fb1c",
+  "status": "PUBLISHED_AND_CI_PASSED",
+  "lifecycle": "CLOSED_DOCUMENTALLY",
+  "technical_result": "PASS",
+  "governance_result": "PASS",
+  "functional": {
+    "canonical_missions": 4,
+    "functional_missions": 4,
+    "full_arc_recovery": true,
+    "final_preview_from_any_mission": true,
+    "private_reflections_excluded": true,
+    "portfolio_order_preserved": true,
+    "upstream_reopen_invalidates_curation": true
+  },
+  "verification": {
+    "focused_test_files": 11,
+    "focused_tests": 55,
+    "full_test_files": 33,
+    "full_tests": 189,
+    "checkpoint_CI_run": 29794902663,
+    "checkpoint_CI_url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/29794902663",
+    "CI_Node_22": "PASS",
+    "CI_Node_24": "PASS",
+    "blocking_findings": 0,
+    "non_blocking_observations": 1
+  },
+  "scope": {
+    "files_before_closure": 63,
+    "schema_change": false,
+    "storage_format_change": false,
+    "network": false,
+    "import": false,
+    "roundtrip": false,
+    "automatic_download": false,
+    "publish": false
+  },
+  "publication": {
+    "closure_commit": "b9cc91a8e6b3f50763c3c995fcfce42339487970",
+    "closure_CI_run": 29846261187,
+    "closure_CI_url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/29846261187",
+    "CI_Node_22": "PASS",
+    "CI_Node_24": "PASS",
+    "attestation": "CONTAINING_COMMIT",
+    "PR_body_update": "AFTER_ATTESTATION_CI"
+  },
+  "governance": {
+    "PR_mode": "DRAFT",
+    "ready_for_review": "NOT_AUTHORIZED",
+    "merge": "BLOCKED",
+    "H08_5": "BLOCKED"
+  }
+}

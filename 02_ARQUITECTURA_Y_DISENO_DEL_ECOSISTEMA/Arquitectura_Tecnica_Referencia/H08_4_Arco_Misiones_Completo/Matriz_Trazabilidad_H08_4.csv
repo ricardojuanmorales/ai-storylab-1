@@ -1,0 +1,9 @@
+block,requirement,source,evidence_target,status
+H08-4.0,baseline and readiness,post-merge evidence,characterization + cardinality decision + preflight evidence,in_progress_preflight_blocked
+H08-4.0,mission evidence cardinality,human decision 2026-07-18,formal decision + acceptance scenarios,ratified
+H08-4.1,reusable mission engine,M1 current behavior,shared engine + regression,planned
+H08-4.2,M2 narrative architecture,mission catalog M2,functional M2,planned
+H08-4.3,M3 multimodal production,mission catalog M3,functional M3 without binaries,planned
+H08-4.4,M4 curation and closure,mission catalog M4,functional M4 handoff,planned
+H08-4.5,complete arc,M1-M4,integrated recoverable flow,planned
+H08-4A,independent checkpoint,frozen functional head,technical recommendation + human verdict,planned

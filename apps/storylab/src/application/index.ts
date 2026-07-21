@@ -1,6 +1,7 @@
 export * from "./create-project";
 export * from "./creative-cycle";
 export * from "./creative-cycle-contracts";
+export * from "./curation-record";
 export * from "./load-project";
 export * from "./preview-export";
 export * from "./recover-project";
