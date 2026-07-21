@@ -1,0 +1,8 @@
+order,block,sha,short_sha,authored_at,subject,scope
+1,H08-4.0,0c811f0521be56b9f5c8d0aef2757a04af74eef4,0c811f0,2026-07-18T23:41:45-04:00,docs(h08-4): document milestone H08-4.0,base documental y cardinalidad
+2,H08-4.1,07695599f7b9b55c3ecaf773c31a6bdd743987b0,0769559,2026-07-19T17:43:28-04:00,feat(h08-4): add reusable mission engine,motor reutilizable
+3,H08-4.2,882ea1a672e9d8c522e8d045a09b941ce2653d8b,882ea1a,2026-07-20T18:34:15-04:00,feat(h08-4): add narrative architecture mission,M2 arquitectura narrativa
+4,H08-4.3,1a240392b2a79e27eb8101e4816672bf9c403354,1a24039,2026-07-20T19:26:42-04:00,feat(h08-4): add multimodal production mission,M3 producción multimodal
+5,H08-4.4,e113dccff1ad7476469ac5ab903a75d6038a77db,e113dcc,2026-07-20T20:02:46-04:00,feat(h08-4): add curation and closure mission,M4 curaduría y cierre
+6,H08-4.5,5782c42b35562335e440f7b75cb4cb7fa81ba896,5782c42,2026-07-20T21:17:49-04:00,feat(h08-4): integrate complete mission arc,integración transversal del arco
+7,H08-4A,fb005c9eded01dec63af9c6c4ca0df7b9ba8fb1c,fb005c9,2026-07-20T22:05:18-04:00,docs(h08-4): publish independent checkpoint,checkpoint independiente

@@ -69,3 +69,20 @@ El cierre canónico de persistencia y schemas endurecidos está en:
 
 Estado: `H08_3_CLOSED_DOCUMENTALLY`, H08-3A con PASS humano, PR #60
 todavía Draft y merge bloqueado.
+
+## Cierre H08-4 · 2026-07-20
+
+El cierre canónico del arco M1–M4 se conserva en:
+
+`Cierres_Sesion/H08_4_Cierre_Final_2026_07_20/`
+
+Estado:
+
+```yaml
+H08_4: CLOSED_DOCUMENTALLY
+H08_4A: PASS_PUBLISHED
+PR_61: DRAFT
+ready_for_review: NOT_AUTHORIZED
+merge: BLOCKED
+H08_5: BLOCKED
+```

@@ -1,0 +1,9 @@
+block,objective,primary_evidence,commit,result,residual_gate
+H08-4.0,definir arquitectura alcance cardinalidad y protocolo,spec backlog criterios matriz decisión de cardinalidad,0c811f0521be56b9f5c8d0aef2757a04af74eef4,PASS,none_within_H08_4
+H08-4.1,reutilizar el ciclo humano sin romper M1,MissionWorkspace navegación y regresión M1,07695599f7b9b55c3ecaf773c31a6bdd743987b0,PASS,none_within_H08_4
+H08-4.2,habilitar arquitectura narrativa recuperable,ciclo M2 y recuperación local,882ea1a672e9d8c522e8d045a09b941ce2653d8b,PASS,none_within_H08_4
+H08-4.3,habilitar múltiples evidencias multimodales sintéticas,ciclo M3 decisiones independientes y recuperación,1a240392b2a79e27eb8101e4816672bf9c403354,PASS,none_within_H08_4
+H08-4.4,cerrar curaduría con registro único y traspaso conceptual,ciclo M4 orden record_only y recuperación,e113dccff1ad7476469ac5ab903a75d6038a77db,PASS,none_within_H08_4
+H08-4.5,integrar resumen preview recuperación y reapertura coherente,ArcSummary full-arc tests y audit vertical,5782c42b35562335e440f7b75cb4cb7fa81ba896,PASS,none_within_H08_4
+H08-4A,auditar el head congelado y emitir dictamen humano,55 pruebas focalizadas 189 completas CI Node 22 y 24,fb005c9eded01dec63af9c6c4ca0df7b9ba8fb1c,PASS,none_within_H08_4
+H08-4 global,consolidar cierre canónico y continuidad,paquete de cierre y atestación post-publicación,PENDING_PUBLICATION,AUTHORIZED,Ready merge y H08-5 separados
