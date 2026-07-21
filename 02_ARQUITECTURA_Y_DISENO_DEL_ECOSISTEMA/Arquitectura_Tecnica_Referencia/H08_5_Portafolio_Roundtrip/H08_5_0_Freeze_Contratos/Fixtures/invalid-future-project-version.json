@@ -1,0 +1,91 @@
+{
+  "packageType": "storylab_portfolio",
+  "packageVersion": "1.0.0",
+  "exportedAt": "2026-07-21T19:30:00Z",
+  "payload": {
+    "projectSchemaVersion": "0.9.0",
+    "project": {
+      "schemaVersion": "0.9.0",
+      "id": "project-synthetic-h08-5-001",
+      "title": "Cartas desde la luna verde",
+      "status": "completed",
+      "profile": {
+        "pseudonym": "Brisa",
+        "context": "Taller creativo sintético",
+        "accessibility": {
+          "reducedMotion": false,
+          "highContrast": false,
+          "textScale": "default"
+        }
+      },
+      "missions": [
+        {
+          "missionId": "mission-intention",
+          "status": "completed",
+          "startedAt": "2026-07-15T13:00:00Z",
+          "completedAt": "2026-07-15T13:30:00Z"
+        }
+      ],
+      "activityResponses": [],
+      "evidence": [
+        {
+          "id": "evidence-synthetic-h08-5-001",
+          "missionId": "mission-intention",
+          "title": "Premisa narrativa",
+          "kind": "text",
+          "summary": "Una exploradora recibe cartas de una luna que recuerda.",
+          "status": "accepted_for_portfolio",
+          "createdAt": "2026-07-15T13:20:00Z"
+        }
+      ],
+      "reflections": [
+        {
+          "id": "reflection-synthetic-h08-5-001",
+          "missionId": "mission-intention",
+          "text": "Elegí conservar la decisión final y revisar la sugerencia externa.",
+          "privacyClass": "exportable_after_review",
+          "selectedForExport": true,
+          "createdAt": "2026-07-15T13:22:00Z"
+        }
+      ],
+      "decisions": [
+        {
+          "id": "decision-synthetic-h08-5-001",
+          "evidenceId": "evidence-synthetic-h08-5-001",
+          "actor": "human_user",
+          "value": "accept",
+          "rationale": "Representa mi intención creadora.",
+          "decidedAt": "2026-07-15T13:25:00Z"
+        }
+      ],
+      "portfolio": {
+        "items": [
+          {
+            "id": "portfolio-item-synthetic-h08-5-001",
+            "evidenceId": "evidence-synthetic-h08-5-001",
+            "title": "Premisa narrativa",
+            "order": 0,
+            "includedAt": "2026-07-15T13:26:00Z"
+          }
+        ]
+      },
+      "featureFlags": {
+        "facilitatorView": false,
+        "groupDashboard": false,
+        "embeddedAI": false,
+        "cloudSync": false,
+        "analytics": false,
+        "autoPublish": false,
+        "realData": false
+      },
+      "createdAt": "2026-07-15T12:00:00Z",
+      "updatedAt": "2026-07-15T13:30:00Z"
+    }
+  },
+  "integrity": {
+    "algorithm": "SHA-256",
+    "canonicalization": "storylab-canonical-json-v1",
+    "scope": "payload",
+    "digest": "3f1877d1ff8d06bd1dcfca58384693dc94ada7129da7b75d9d4cdd6d4b01d89d"
+  }
+}

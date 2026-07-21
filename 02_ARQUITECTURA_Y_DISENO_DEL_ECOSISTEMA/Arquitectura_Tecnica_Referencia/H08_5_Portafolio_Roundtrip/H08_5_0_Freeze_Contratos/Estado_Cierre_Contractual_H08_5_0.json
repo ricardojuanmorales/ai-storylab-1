@@ -1,0 +1,21 @@
+{
+  "date": "2026-07-21",
+  "milestone": "H08-5.0",
+  "status": "CLOSED_CONTRACTUALLY",
+  "human_ratification": "RATIFIED_BY_RESPONSIBLE_HUMAN",
+  "ratified_at": "2026-07-21T19:30:42Z",
+  "functional_changes": 0,
+  "decisions": {
+    "import_strategy": "ALWAYS_CREATE_COPY",
+    "maximum_file_bytes": 1048576,
+    "checksum": "SHA-256_PAYLOAD_CANONICAL_JSON_V1",
+    "semantic_equivalence": "EXPORT_PROJECTION_VS_RECOVERED_IMPORT",
+    "regenerable_identifiers": [
+      "project.id"
+    ]
+  },
+  "next_internal_milestone": "H08-5.1",
+  "ready_for_review": "NOT_AUTHORIZED",
+  "merge": "NOT_AUTHORIZED",
+  "H08_6": "BLOCKED"
+}
