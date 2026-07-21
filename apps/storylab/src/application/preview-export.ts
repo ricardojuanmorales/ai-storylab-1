@@ -1,9 +1,7 @@
 import type { DomainError } from "../domain/errors";
-import { validateProjectInvariants } from "../domain/invariants";
 import type {
   CreativeProject,
   ExportPackage,
-  Reflection,
 } from "../domain/model";
 import { err, type Result } from "../domain/result";
 import type { ProjectRepository, Clock } from "../ports";
@@ -12,18 +10,12 @@ import type {
   ExportPreviewResult,
   PreviewExportInput,
 } from "./creative-cycle-contracts";
+import { createPortfolioProjection } from "./portfolio-projection";
 
 export interface PreviewExportDependencies {
   readonly repository: ProjectRepository;
   readonly clock: Clock;
 }
-
-const reflectionCanLeaveDevice = (
-  reflection: Reflection,
-): boolean =>
-  reflection.selectedForExport &&
-  (reflection.privacyClass === "shareable_with_purpose" ||
-    reflection.privacyClass === "exportable_after_review");
 
 const loadProject = async (
   input: PreviewExportInput,
@@ -48,31 +40,14 @@ export const previewExport = async (
   const loaded = await loadProject(input, dependencies.repository);
   if (!loaded.ok) return loaded;
 
-  const project = loaded.value;
-  if (project.portfolio.items.length === 0) {
-    return err({
-      code: "EXPORT_SELECTION_REQUIRED",
-      path: "portfolio.items",
-      safeMessage:
-        "Incorpore al menos una evidencia al portafolio antes de previsualizar.",
-    });
-  }
-
-  const exportProject: CreativeProject = {
-    ...structuredClone(project),
-    reflections: project.reflections
-      .filter(reflectionCanLeaveDevice)
-      .map((reflection) => structuredClone(reflection)),
-  };
-
-  const [firstInvariant] = validateProjectInvariants(exportProject);
-  if (firstInvariant) return err(firstInvariant);
+  const projection = createPortfolioProjection(loaded.value);
+  if (!projection.ok) return projection;
 
   const packageValue: ExportPackage = {
     exportType: "storylab_project",
-    schemaVersion: exportProject.schemaVersion,
+    schemaVersion: projection.value.schemaVersion,
     exportedAt: dependencies.clock.now(),
-    project: exportProject,
+    project: projection.value,
   };
 
   return validateExportPackageSnapshot(packageValue);

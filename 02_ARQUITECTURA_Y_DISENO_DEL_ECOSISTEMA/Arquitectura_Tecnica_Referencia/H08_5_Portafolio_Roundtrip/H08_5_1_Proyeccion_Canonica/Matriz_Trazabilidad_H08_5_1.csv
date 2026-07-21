@@ -1,0 +1,7 @@
+criterion,implementation,evidence
+AC-PORT-01,sort portfolio by order then id,application.portfolio-projection.test.ts
+AC-PRIV-01,allowlist selected shareable reflections,application.portfolio-projection.test.ts
+preview_pure,structured clone and repository regression,application.recovery-export.test.ts
+metadata_preserved,retain evidence decisions profile flags and timestamps,application.portfolio-projection.test.ts
+no_download,no browser file APIs introduced,diff review
+no_import,no parsing or repository save introduced,diff review
