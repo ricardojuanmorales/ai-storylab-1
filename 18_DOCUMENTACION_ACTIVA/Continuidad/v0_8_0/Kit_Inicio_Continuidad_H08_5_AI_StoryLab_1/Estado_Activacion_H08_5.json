@@ -1,0 +1,30 @@
+{
+  "date": "2026-07-21",
+  "repository": "ricardojuanmorales/ai-storylab-1",
+  "baseline": "0efd5535cd796cb16b3f77518a6f82614a155a6e",
+  "branch": "feat/v0.8-h08-5-portfolio-roundtrip",
+  "pr_model": "ONE_DRAFT_PR_FOR_ALL_H08_5_CONVERSATIONS",
+  "protocol": {
+    "version": "3.1",
+    "status": "RATIFIED_FOR_THIS_SESSION"
+  },
+  "alignment": {
+    "human_agreement": "SUFFICIENT_TO_OPEN_SESSION",
+    "inherited_attestation_review": "PASS",
+    "kit_manifest": "VALID",
+    "kit_checksums": "PASS_19_OF_19",
+    "remote_baseline": "IDENTICAL"
+  },
+  "first_commit": {
+    "scope": "KIT_AND_ACTIVATION_ONLY",
+    "functional_changes": false,
+    "schema_changes": false,
+    "persistence_changes": false,
+    "functional_tests_added": false,
+    "refactors": false
+  },
+  "next_internal_milestone": "H08-5.0",
+  "ready_for_review": "NOT_AUTHORIZED",
+  "merge": "NOT_AUTHORIZED",
+  "H08_6": "BLOCKED"
+}

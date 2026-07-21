@@ -1,0 +1,13 @@
+id,dado,cuando,entonces,evidencia
+AC-ALIGN-01,kit verificado,se realiza alineamiento,existe acuerdo humano de sesion,acta
+AC-COMMIT-01,acuerdo humano,se crea primer commit,solo contiene kit y activacion,diff
+AC-PORT-01,portafolio ordenado,se prepara preview,orden y metadata se preservan,pruebas
+AC-PRIV-01,hay reflexion privada,se exporta,la reflexion no aparece,auditoria
+AC-EXP-01,paquete valido,humano confirma,se genera archivo y checksum,integracion
+AC-EXP-02,no hay confirmacion,se ofrece exportar,no se genera archivo,integracion
+AC-IMP-01,archivo malformado,se importa,error tipado y estado intacto,seguridad
+AC-IMP-02,archivo excesivo,se importa,se rechaza antes de mutar,seguridad
+AC-COMP-01,version futura,se valida,se rechaza con explicacion,contrato
+AC-RT-01,proyecto valido,se exporta e importa,estado semantico equivalente,roundtrip
+AC-REC-01,roundtrip completo,se remonta,misiones y portafolio se recuperan,integracion
+AC-CLOSE-01,sesion termina,se crea ultimo commit,solo contiene cierre documental,diff

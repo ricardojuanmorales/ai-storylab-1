@@ -1,0 +1,45 @@
+{
+  "kit": "Kit_Inicio_Continuidad_H08_5_AI_StoryLab_1",
+  "date": "2026-07-21",
+  "status": "CANONICAL_STARTUP_KIT_APPROVED",
+  "baseline_merge_commit": "0efd5535cd796cb16b3f77518a6f82614a155a6e",
+  "antecedent_pr": 61,
+  "target_hito": "H08-5",
+  "target_branch": "feat/v0.8-h08-5-portfolio-roundtrip",
+  "PR_model": "ONE_PR_FOR_ALL_H08_5_CONVERSATIONS",
+  "protocol": {
+    "version": "3.1",
+    "status": "APROBADO_PARA_USO_H08",
+    "companion_log_status": "APROBADO_PARA_USO_H08"
+  },
+  "session_contract": {
+    "alignment_before_first_commit": true,
+    "first_commit": "KIT_AND_ACTIVATION_ONLY",
+    "last_commit": "DOCUMENTARY_CLOSURE_ONLY",
+    "attestation": "LAST_ACT_OUTSIDE_REPO_THEN_FIRST_COMMIT_NEXT_SESSION"
+  },
+  "reading_order": [
+    "README.md",
+    "Decision_Aprobacion_Protocolo_v3_1_y_Apertura_H08_5.md",
+    "Estado_Canonico_Entrada_H08_5.md",
+    "Atestacion_Post_Merge_H08_4_para_Revision.md",
+    "Protocolo_Trabajo_v3_1_AI_StoryLab_1.md",
+    "Bitacora_Evolucion_Protocolo_v3_1_AI_StoryLab_1.md",
+    "Momento_Alineamiento_Epistemologico_Estrategico_H08_5.md",
+    "Transferencia_Simetrica_H08_4_a_H08_5.md",
+    "Alcance_Integral_H08_5.md",
+    "Arquitectura_Sesiones_Commits_PR_H08_5.md",
+    "Backlog_Integral_H08_5.csv",
+    "Matriz_Criterios_Aceptacion_H08_5.csv",
+    "Registro_Riesgos_Reservas_Deuda_H08_5.md",
+    "Plan_Pruebas_H08_5.md",
+    "Plan_Primer_Commit_H08_5.md",
+    "Instrucciones_Reanudacion_H08_5.md",
+    "Plantilla_Atestacion_Post_Transicion.md",
+    "Prompt_Activacion_H08_5_AI_StoryLab_1.md"
+  ],
+  "external_prompt_filename": "Prompt_Activacion_H08_5_AI_StoryLab_1.md",
+  "ready_authorized": false,
+  "merge_authorized": false,
+  "H08_6_authorized": false
+}
