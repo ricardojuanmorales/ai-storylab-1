@@ -1,0 +1,54 @@
+{
+  "unit": "H08-4A",
+  "date": "2026-07-20",
+  "executed_at_local": "2026-07-20T21:33:51-0400",
+  "repository": "ricardojuanmorales/ai-storylab-1",
+  "PR": 61,
+  "branch": "feat/v0.8-h08-4-complete-mission-arc",
+  "functional_head_under_review": "5782c42b35562335e440f7b75cb4cb7fa81ba896",
+  "base_under_review": "7fb21b66aaf1f541d99797d582585adcc09b4f55",
+  "review_mode": "structured_self_review",
+  "independence_claimed": false,
+  "product_changes_authorized": false,
+  "product_changes_during_checkpoint": false,
+  "automated_verification_completed": true,
+  "human_review_completed": true,
+  "checkpoint_verdict": "pass",
+  "technical_recommendation": "PASS_CANDIDATE",
+  "publication_authorized": true,
+  "PR_mode": "draft",
+  "merge": "blocked",
+  "H08_5": "blocked",
+  "runtime": {
+    "node": "v22.23.1",
+    "remote_checks_observed": 2,
+    "remote_ci_pass_claimed": true,
+    "checks": {
+      "Verify Node 22": "PASS",
+      "Verify Node 24": "PASS"
+    }
+  },
+  "branch_compare": {
+    "ahead_by": 6,
+    "behind_by": 0,
+    "functional_diff_files": 46
+  },
+  "automated_results": {
+    "focused_test_files": 11,
+    "focused_tests": 55,
+    "full_test_files": 33,
+    "full_tests": 189,
+    "npm_verify": "PASS",
+    "blocking_findings": 0,
+    "non_blocking_observations": 1
+  },
+  "publication_status": "authorized_pending_commit",
+  "global_H08_4_closure": "pending",
+  "ready_for_review": "blocked",
+  "checkpoint_document_routes": 17,
+  "human_decision": {
+    "verdict": "PASS",
+    "publication_authorized": true,
+    "scope": "H08-4A checkpoint documentation only"
+  }
+}

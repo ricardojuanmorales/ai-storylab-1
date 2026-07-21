@@ -1,0 +1,24 @@
+# Checklist ejecutado H08-4A
+
+- [x] Head funcional congelado
+- [x] Rama remota alineada
+- [x] PR #61 abierto y Draft
+- [x] Merge base igual a `main`
+- [x] Rama 6 commits adelante y 0 atrás
+- [x] Inventario funcional de 46 rutas
+- [x] Sin cambios de schema, adapters, dependencias o lockfile
+- [x] Solo documentación nueva durante el checkpoint
+- [x] Pruebas focalizadas: 11 archivos, 55 pruebas
+- [x] Verify completo: 33 archivos, 189 pruebas
+- [x] Typecheck, build y auditorías PASS
+- [x] CI Node 22 y Node 24 PASS
+- [x] Agencia humana preservada
+- [x] Cardinalidades preservadas
+- [x] Privacidad del preview preservada
+- [x] Recuperación y orden del portafolio preservados
+- [x] Reapertura aguas arriba invalida el cierre curatorial
+- [x] Capacidades diferidas ausentes
+- [x] Recomendación técnica emitida
+- [x] Dictamen humano PASS emitido
+- [x] Publicación documental autorizada
+- [x] Cierre global, Ready, merge y H08-5 permanecen bloqueados
