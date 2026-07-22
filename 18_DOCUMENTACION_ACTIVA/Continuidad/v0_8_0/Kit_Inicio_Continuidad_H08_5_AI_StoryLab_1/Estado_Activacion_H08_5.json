@@ -21,7 +21,7 @@
     "contract_package": "storylab_portfolio/1.0.0",
     "functional_changes": false
   },
-  "next_internal_milestone": "H08-5.6",
+  "next_internal_milestone": "H08-5A",
   "ready_for_review": "NOT_AUTHORIZED",
   "merge": "NOT_AUTHORIZED",
   "H08_6": "BLOCKED",
@@ -96,7 +96,7 @@
     "focused_tests": "PASS",
     "full_verify": "PASS"
   },
-  "H08_5A": "BLOCKED_PENDING_H08_5_6",
+  "H08_5A": "READY_FOR_INTERNAL_CHECKPOINT_NOT_STARTED",
   "session_protocol_amendments": {
     "strategic_planning_pause_after_documentary_activation": "REQUIRED",
     "PR_comments": "HUMAN_ONLY",
@@ -106,7 +106,7 @@
   "H08_5_6": {
     "milestone": "H08-5.6",
     "title": "Remediación de CI y realineamiento estratégico",
-    "status": "PUBLISHED_AWAITING_REMOTE_VERIFICATION",
+    "status": "IMPLEMENTED_PUBLISHED_LOCALLY_AND_REMOTELY_VERIFIED",
     "generated_at": "2026-07-22T17:51:12+00:00",
     "entry_head": "0f147c110ac1942957add0f4ba829aaad77d3108",
     "main_sha": "0efd5535cd796cb16b3f77518a6f82614a155a6e",
@@ -114,12 +114,17 @@
     "strategy": "MISSING_PACKAGE_MANIFEST_DEV_DEPENDENCY",
     "functional_scope_expansion": false,
     "local_verify": "PASS",
-    "remote_node_22": "PENDING",
-    "remote_node_24": "PENDING",
+    "remote_node_22": "PASS",
+    "remote_node_24": "PASS",
     "PR_comments": "HUMAN_ONLY",
     "ready_for_review": "NOT_AUTHORIZED",
     "merge": "NOT_AUTHORIZED",
     "H08_6": "BLOCKED",
-    "next_internal_milestone": "H08-5.6"
+    "next_internal_milestone": "H08-5A",
+    "closed_at": "2026-07-22T17:52:48+00:00",
+    "implementation_commit": "a929e7a40ccd868fc0f780700641f0791080a545",
+    "remote_run_id": null,
+    "remote_run_url": null,
+    "remote_conclusion": "success"
   }
 }
