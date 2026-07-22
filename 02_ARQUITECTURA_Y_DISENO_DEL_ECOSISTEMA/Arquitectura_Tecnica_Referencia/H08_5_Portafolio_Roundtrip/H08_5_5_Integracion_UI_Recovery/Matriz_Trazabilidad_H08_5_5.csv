@@ -1,0 +1,12 @@
+criterion,implementation,evidence
+export_preview_before_download,PortfolioTransferPanel two-step export,presentation.portfolio-transfer.test.tsx
+private_reflection_excluded,canonical projection plus downloaded content assertion,presentation.portfolio-transfer.test.tsx
+import_selection_without_save,file input stages only,integration.portfolio-transfer-local-first.test.tsx
+explicit_import_confirmation,separate confirmation button,integration.portfolio-transfer-local-first.test.tsx
+import_as_copy,H08-5.4 import service plus active project update,integration.portfolio-transfer-local-first.test.tsx
+recovery_after_remount,recoverProject on new App mount,integration.portfolio-transfer-local-first.test.tsx
+malformed_safe_rejection,status message and zero save,presentation.portfolio-transfer.test.tsx
+keyboard_accessibility,native controls and labels,presentation.portfolio-transfer.test.tsx
+browser_composition,main creates hasher downloader staging and import services,main.tsx
+vertical_slice_alignment,audit integrated capabilities,audit-vertical-slice.mjs
+offline_privacy,full verify privacy and offline suites,Evidencia_Local_H08_5_5.md

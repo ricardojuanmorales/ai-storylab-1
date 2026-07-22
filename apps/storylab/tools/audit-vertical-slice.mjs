@@ -10,11 +10,17 @@ const requiredFiles = [
   "src/application/creative-cycle-contracts.ts",
   "src/application/curation-record.ts",
   "src/application/preview-export.ts",
+  "src/application/portfolio-projection.ts",
+  "src/application/portfolio-export.ts",
+  "src/application/portfolio-import.ts",
+  "src/application/portfolio-import-staging.ts",
+  "src/application/portfolio-semantic-equivalence.ts",
   "src/application/recover-project.ts",
   "src/adapters/storage/local-storage-project-repository.ts",
   "src/schemas/runtime-validators.ts",
   "src/presentation/App.tsx",
   "src/presentation/ArcSummary.tsx",
+  "src/presentation/PortfolioTransferPanel.tsx",
   "src/presentation/arc-summary-model.ts",
   "src/presentation/MissionNavigation.tsx",
   "src/presentation/MissionOneWorkspace.tsx",
@@ -24,7 +30,9 @@ const requiredFiles = [
   "src/presentation/MissionWorkspace.tsx",
   "src/presentation/mission-workspace-model.ts",
   "src/tests/presentation.arc-summary.test.tsx",
+  "src/tests/presentation.portfolio-transfer.test.tsx",
   "src/tests/integration.full-arc-local-first.test.tsx",
+  "src/tests/integration.portfolio-transfer-local-first.test.tsx",
   "src/tests/presentation.mission-engine.test.tsx",
   "src/tests/presentation.m2-cycle.test.tsx",
   "src/tests/presentation.m3-cycle.test.tsx",
@@ -78,8 +86,24 @@ for (const missionId of missionIds) {
   }
 }
 
+const mainText = readFileSync(
+  join(root, "src/main.tsx"),
+  "utf8",
+);
 const appText = readFileSync(
   join(root, "src/presentation/App.tsx"),
+  "utf8",
+);
+const portfolioTransferText = readFileSync(
+  join(root, "src/presentation/PortfolioTransferPanel.tsx"),
+  "utf8",
+);
+const portfolioTransferPresentationTestText = readFileSync(
+  join(root, "src/tests/presentation.portfolio-transfer.test.tsx"),
+  "utf8",
+);
+const portfolioTransferIntegrationTestText = readFileSync(
+  join(root, "src/tests/integration.portfolio-transfer-local-first.test.tsx"),
   "utf8",
 );
 const arcSummaryText = readFileSync(
@@ -162,6 +186,10 @@ const previewText = readFileSync(
   join(root, "src/application/preview-export.ts"),
   "utf8",
 );
+const portfolioProjectionText = readFileSync(
+  join(root, "src/application/portfolio-projection.ts"),
+  "utf8",
+);
 const storageText = readFileSync(
   join(root, "src/adapters/storage/local-storage-project-repository.ts"),
   "utf8",
@@ -177,6 +205,46 @@ const requiredSignals = [
   [appText, "MissionTwoWorkspace", "M2_APP_SIGNAL_MISSING"],
   [appText, "MissionThreeWorkspace", "M3_APP_SIGNAL_MISSING"],
   [appText, "MissionFourWorkspace", "M4_APP_SIGNAL_MISSING"],
+  [
+    appText,
+    "PortfolioTransferPanel",
+    "PORTFOLIO_TRANSFER_APP_SIGNAL_MISSING",
+  ],
+  [
+    mainText,
+    "createPortfolioExportService",
+    "PORTFOLIO_EXPORT_COMPOSITION_MISSING",
+  ],
+  [
+    mainText,
+    "createPortfolioImportService",
+    "PORTFOLIO_IMPORT_COMPOSITION_MISSING",
+  ],
+  [
+    portfolioTransferText,
+    'type="file"',
+    "PORTFOLIO_FILE_SELECTION_UI_MISSING",
+  ],
+  [
+    portfolioTransferText,
+    "Confirmar y descargar archivo",
+    "CONFIRMED_DOWNLOAD_UI_MISSING",
+  ],
+  [
+    portfolioTransferText,
+    "Confirmar e importar como copia local",
+    "CONFIRMED_IMPORT_UI_MISSING",
+  ],
+  [
+    portfolioTransferPresentationTestText,
+    "previews before download and excludes private reflections",
+    "PORTFOLIO_EXPORT_UI_TEST_MISSING",
+  ],
+  [
+    portfolioTransferIntegrationTestText,
+    "requires confirmation, imports a copy and recovers it after remount",
+    "PORTFOLIO_IMPORT_RECOVERY_TEST_MISSING",
+  ],
   [
     arcSummaryText,
     "Preparar vista previa final validada",
@@ -308,7 +376,16 @@ const requiredSignals = [
     "M4_RECOVERY_INTEGRATED",
     "M4_RECOVERY_TEST_MISSING",
   ],
-  [previewText, "reflectionCanLeaveDevice", "PRIVACY_FILTER_MISSING"],
+  [
+    previewText,
+    "createPortfolioProjection",
+    "PRIVACY_PROJECTION_DELEGATION_MISSING",
+  ],
+  [
+    portfolioProjectionText,
+    "reflectionCanLeaveDevice",
+    "PRIVACY_FILTER_MISSING",
+  ],
   [storageText, "PERSISTENCE_QUOTA_EXCEEDED", "QUOTA_ERROR_MISSING"],
   [
     storageText,
@@ -332,16 +409,13 @@ for (const [text, signal, error] of requiredSignals) {
 }
 
 const prohibitedProductSignals = [
-  "importProject(",
-  "roundtripProject(",
-  "downloadExport(",
   "publishProject(",
-  'type="file"',
   "XMLHttpRequest",
 ];
 const productFiles = [
   appText,
   arcSummaryText,
+  portfolioTransferText,
   workspaceText,
   m2WorkspaceText,
   m3WorkspaceText,
@@ -356,7 +430,7 @@ for (const signal of prohibitedProductSignals) {
 
 const result = {
   status: errors.length === 0 ? "PASS" : "FAIL",
-  checkpointCandidate: "H08-4.5",
+  checkpointCandidate: "H08-5.5",
   requiredFiles,
   canonicalMissionCount: missionIds.length,
   functionalMissionCount: 4,
@@ -389,15 +463,18 @@ const result = {
     privateReflectionsExcludedFromFinalPreview: true,
     portfolioOrderPreservedAcrossRecovery: true,
     upstreamReopenInvalidatesCurationClosure: true,
+    actualHandoffFile: true,
+    confirmedLocalDownload: true,
+    importAsLocalCopy: true,
+    semanticRoundtrip: true,
+    portfolioRecoveryAfterRemount: true,
   },
   deferredCapabilities: {
-    actualHandoffFile: false,
     binaryStorage: false,
     mediaUpload: false,
     networkAccess: false,
-    import: false,
-    roundtrip: false,
     automaticDownload: false,
+    automaticImport: false,
     publish: false,
   },
   errors,

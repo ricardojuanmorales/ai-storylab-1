@@ -1,0 +1,57 @@
+{
+  "package": "H08_5_Cierre_Final_2026_07_22",
+  "status": "PUBLISHED_AND_CI_PASSED",
+  "baseline": "0efd5535cd796cb16b3f77518a6f82614a155a6e",
+  "functional_head": "7b0131393ee0f8428743582c6750e1bb40774e8b",
+  "checkpoint_head": "ee14ee6c5962ff3acdbee1e80ac25ea4df87b182",
+  "expected_files": [
+    "00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Decision_Humana_PASS_H08_5A_2026_07_22.md",
+    "00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Decision_Cierre_Global_H08_5_Portafolio_Roundtrip_2026_07_22.md",
+    "00_CONTROL_MAESTRO/Auditorias_Estrategicas/Auditoria_Estrategica_y_Longitudinal_H08_5_AI_StoryLab_1.md",
+    "00_CONTROL_MAESTRO/Protocolos_Operacion/Evaluacion_Protocolo_Humano_Maquina_IA_H08_5_AI_StoryLab_1.md",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/H08_5_Cierre_Final_2026_07_22/Atestacion_Post_Publicacion_Cierre_H08_5_AI_StoryLab_1.md",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/H08_5_Cierre_Final_2026_07_22/CHECKSUMS.sha256",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/H08_5_Cierre_Final_2026_07_22/Cuerpo_PR_Final_H08_5.md",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/H08_5_Cierre_Final_2026_07_22/Estado_Canonico_Cierre_H08_5_AI_StoryLab_1.md",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/H08_5_Cierre_Final_2026_07_22/Evaluacion_Impacto_Bitacora_Continuidad_H08_5_AI_StoryLab_1.md",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/H08_5_Cierre_Final_2026_07_22/Evidencia_Cierre_H08_5.json",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/H08_5_Cierre_Final_2026_07_22/Indice_Comentarios_PR62_H08_5.md",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/H08_5_Cierre_Final_2026_07_22/Informe_Cierre_H08_5_AI_StoryLab_1.md",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/H08_5_Cierre_Final_2026_07_22/Ledger_Commits_H08_5.csv",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/H08_5_Cierre_Final_2026_07_22/MANIFEST.json",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/H08_5_Cierre_Final_2026_07_22/Matriz_Continuidad_Cierre_H08_5.csv",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/H08_5_Cierre_Final_2026_07_22/Matriz_Trazabilidad_Cierre_H08_5.csv",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/H08_5_Cierre_Final_2026_07_22/README.md",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/H08_5_Cierre_Final_2026_07_22/Registro_Riesgos_Reservas_Deuda_Cierre_H08_5_AI_StoryLab_1.md",
+    "18_DOCUMENTACION_ACTIVA/Cierres_Sesion/H08_5_Cierre_Final_2026_07_22/Transferencia_Simetrica_Cierre_H08_5_AI_StoryLab_1.md",
+    "18_DOCUMENTACION_ACTIVA/README.md",
+    "19_IMPLEMENTACION_Y_DESPLIEGUE/Roadmap/Estado_Roadmap_Cierre_H08_5_AI_StoryLab_1.md",
+    "21_WIKI_DOCUMENTACION_HUMANA/Bitacora_Capitan/Actualizacion_Bitacora_Capitan_Cierre_H08_5_AI_StoryLab_1.md",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_H08_5_AI_StoryLab_1/Estado_Activacion_H08_5.json"
+  ],
+  "file_count": 23,
+  "publication": {
+    "primary_commit_subject": "docs(h08-5): close portfolio roundtrip",
+    "attestation_commit_subject": "docs(h08-5): attest global closure publication",
+    "CI_required_for_each_commit": true,
+    "PR_body_update_required": true,
+    "PR_mode_after_update": "DRAFT",
+    "ready_for_review": "NOT_AUTHORIZED",
+    "merge": "BLOCKED",
+    "H08_6": "BLOCKED",
+    "PR_comments": "HUMAN_ONLY"
+  },
+  "closure_commit": "e251f6fdaa2ace6194deb02d5a163dfa7a5869db",
+  "closure_CI": {
+    "run": 29949166214,
+    "url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/29949166214",
+    "Node_22": "PASS",
+    "Node_24": "PASS"
+  },
+  "post_publication_attestation": {
+    "required": true,
+    "reason": "resolve closure publication and CI generated after primary commit",
+    "file": "Atestacion_Post_Publicacion_Cierre_H08_5_AI_StoryLab_1.md",
+    "status": "CONTAINING_COMMIT"
+  }
+}

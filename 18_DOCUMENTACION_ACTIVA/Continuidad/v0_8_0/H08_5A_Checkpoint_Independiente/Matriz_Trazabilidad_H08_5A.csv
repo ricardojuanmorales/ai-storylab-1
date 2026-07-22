@@ -1,0 +1,14 @@
+criterio,evidencia,resultado
+AC-PORT-01,focused + full verify,PASS
+AC-PRIV-01,privacy audit + tests,PASS
+AC-EXP-01,portfolio export/integration tests,PASS
+AC-EXP-02,confirmation tests,PASS
+AC-IMP-01,preflight/staging tests,PASS
+AC-IMP-02,contract limits tests,PASS
+AC-COMP-01,compatibility tests,PASS
+AC-RT-01,semantic roundtrip tests,PASS
+AC-REC-01,remount recovery integration,PASS
+H08-5A-full-verify,48 files/247 tests,PASS
+H08-5A-CI-22,29944247572,PASS
+H08-5A-CI-24,29944247572,PASS
+H08-5A-no-product-change,7b0131393ee0f8428743582c6750e1bb40774e8b,PASS

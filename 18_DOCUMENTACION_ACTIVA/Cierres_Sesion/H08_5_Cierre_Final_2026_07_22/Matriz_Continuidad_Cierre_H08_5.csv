@@ -1,0 +1,8 @@
+elemento,estado_cierre,fuente_canonica,proxima_accion
+H08-5,CLOSED_DOCUMENTALLY,cierre H08-5,revisión humana del cierre
+H08-5A,PASS,decisión humana,ninguna
+PR #62,DRAFT,GitHub,gate separado Ready
+Ready,NOT_AUTHORIZED,gobernanza,decisión humana
+merge,BLOCKED,gobernanza,decisión humana
+H08-6,BLOCKED,gobernanza,hito separado
+atestación,PENDING_PUBLICATION,cierre H08-5,revisar próxima sesión

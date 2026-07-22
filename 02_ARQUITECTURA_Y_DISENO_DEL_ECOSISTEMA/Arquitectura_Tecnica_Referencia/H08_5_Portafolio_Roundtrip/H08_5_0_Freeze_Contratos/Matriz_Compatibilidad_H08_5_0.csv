@@ -1,0 +1,7 @@
+package_version,project_schema_version,decision,action,mutation_before_confirmation
+1.0.0,0.8.0-alpha.2,ACCEPT,validate_and_stage,NO
+1.0.0,0.8.0-alpha.1,ACCEPT_WITH_MIGRATION,migrate_alpha1_to_alpha2_then_stage,NO
+1.0.0,0.9.0_or_future,REJECT,SCHEMA_VERSION_UNSUPPORTED,NO
+1.0.0,legacy_v0.3,REJECT,LEGACY_MIGRATION_REQUIRED,NO
+future_package,any,REJECT,IMPORT_PACKAGE_INVALID,NO
+unknown,missing,REJECT,IMPORT_PACKAGE_INVALID,NO

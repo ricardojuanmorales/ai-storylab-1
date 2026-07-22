@@ -1,0 +1,10 @@
+requirement,decision,artifact,future_test
+AC-PORT-01,orden de portfolio es semantico,Normalizacion_Equivalencia_Semantica_H08_5_0_AI_StoryLab_1.md,projection_order
+AC-PRIV-01,allowlist de reflexiones,portfolio-package-v1.schema.json,private_reflection_absent
+AC-EXP-01,SHA-256 sobre payload,Contrato_Paquete_Portafolio_v1_AI_StoryLab_1.md,checksum_success
+AC-EXP-02,confirmacion humana,Contrato_Importacion_Staging_H08_5_0_AI_StoryLab_1.md,no_download_without_confirmation
+AC-IMP-01,staging inmutable,Contrato_Importacion_Staging_H08_5_0_AI_StoryLab_1.md,save_not_called_on_reject
+AC-IMP-02,limite 1048576 bytes,Decision_Tecnica_Reservas_H08_5_0_2026_07_21.md,oversized_rejected_before_read
+AC-COMP-01,futuras rechazadas,Matriz_Compatibilidad_H08_5_0.csv,future_version_rejected
+AC-RT-01,ignorar solo project.id,Normalizacion_Equivalencia_Semantica_H08_5_0_AI_StoryLab_1.md,semantic_roundtrip
+AC-REC-01,guardar recargar comparar,SPEC_H08_5_0_Freeze_Contratos_AI_StoryLab_1.md,recovery_roundtrip

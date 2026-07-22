@@ -1,0 +1,11 @@
+criterion,implementation,evidence
+AC-EXP-01,package storylab_portfolio v1,schemas.portfolio-package.test.ts
+AC-EXP-02,canonical JSON and SHA-256,application.portfolio-package-utils.test.ts + adapters.web-crypto-sha256.test.ts
+AC-EXP-03,preview before download,application.portfolio-export.test.ts
+AC-EXP-04,explicit human confirmation,application.portfolio-export.test.ts
+AC-EXP-05,single-use reviewed artifact,application.portfolio-export.test.ts
+AC-EXP-06,safe local filename,application.portfolio-package-utils.test.ts
+AC-EXP-07,maximum 1 MiB,application.portfolio-export.test.ts
+AC-PRIV-01,private and high-care absent,application.portfolio-export.test.ts + schema test
+AC-OFFLINE-01,no network or publication,browser adapter + offline audit
+AC-ERR-01,safe typed failures,adapter and application tests

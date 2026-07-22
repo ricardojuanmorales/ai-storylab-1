@@ -4,5 +4,6 @@ export * from "./errors";
 export * from "./invariants";
 export * from "./mission-catalog";
 export * from "./model";
+export * from "./portfolio-package";
 export * from "./result";
 export * from "./types";

@@ -1,0 +1,13 @@
+id,hito_interno,trabajo,resultado,gate
+H08-5-ACT-01,Activacion,verificar kit y atestacion,continuidad confirmada,alineamiento humano
+H08-5-ACT-02,Activacion,realizar momento epistemologico y estrategico,acuerdo de sesion,humano
+H08-5-ACT-03,Activacion,publicar primer commit exclusivo,kit en rama y PR,publicacion
+H08-5.0-01,H08-5.0,freeze de schema e invariantes,spec y contratos,alcance
+H08-5.0-02,H08-5.0,threat model importacion,controles,riesgo
+H08-5.1-01,H08-5.1,proyeccion portafolio,modelo ordenado,pruebas focalizadas
+H08-5.2-01,H08-5.2,preview y exportacion,archivo humano,publicacion
+H08-5.3-01,H08-5.3,importacion no confiable,rechazo seguro,pruebas focalizadas
+H08-5.4-01,H08-5.4,compatibilidad,migrar o rechazar,contrato
+H08-5.4-02,H08-5.4,roundtrip semantico,equivalencia,verify
+H08-5.5-01,H08-5.5,integracion UI y recovery,flujo completo,verify y CI
+H08-5A-01,H08-5A,checkpoint sin cambios funcionales,dictamen,humano

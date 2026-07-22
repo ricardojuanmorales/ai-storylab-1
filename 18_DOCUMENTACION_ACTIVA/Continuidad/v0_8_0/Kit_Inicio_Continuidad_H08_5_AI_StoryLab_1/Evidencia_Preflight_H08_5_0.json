@@ -1,0 +1,31 @@
+{
+  "observed_at_utc": "2026-07-21T18:15:49Z",
+  "kit": {
+    "archive": "Kit_Inicio_Continuidad_H08_5_AI_StoryLab_1(1).zip",
+    "safe_extraction": "PASS",
+    "files_total": 20,
+    "checksums_declared": 19,
+    "checksums_verified": 19,
+    "manifest_json": "VALID"
+  },
+  "remote": {
+    "repository": "ricardojuanmorales/ai-storylab-1",
+    "default_branch": "main",
+    "main_head": "0efd5535cd796cb16b3f77518a6f82614a155a6e",
+    "baseline_comparison": "IDENTICAL",
+    "antecedent_pr": 61,
+    "antecedent_pr_state": "CLOSED_AND_MERGED",
+    "antecedent_pr_merge_commit": "0efd5535cd796cb16b3f77518a6f82614a155a6e",
+    "target_branch_before_activation": "ABSENT",
+    "open_h08_5_pr_before_activation": "ABSENT"
+  },
+  "human_review": {
+    "inherited_attestation": "CONFIRMED",
+    "temporal_state_reconciliation": "COHERENT",
+    "agreement": "SUFFICIENT_TO_OPEN_SESSION"
+  },
+  "scope_assertion": {
+    "kit_and_activation_only": true,
+    "functional_changes": false
+  }
+}

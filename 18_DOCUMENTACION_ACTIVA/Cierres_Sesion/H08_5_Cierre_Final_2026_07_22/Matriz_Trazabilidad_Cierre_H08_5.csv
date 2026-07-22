@@ -1,0 +1,12 @@
+hito,capacidad,evidencia,resultado
+H08-5.0,contratos y amenaza,freeze contractual,PASS
+H08-5.1,proyección canónica,tests projection/privacy,PASS
+H08-5.2,exportación humana,preview/confirm/download,PASS
+H08-5.3,staging no confiable,preflight/limits/no mutation,PASS
+H08-5.4,compatibilidad/roundtrip,migration/equivalence/recovery,PASS
+H08-5.5,UI y recuperación,integration/presentation tests,PASS
+H08-5.6,paridad CI,clean install + Node 22/24,PASS
+H08-5A,checkpoint independiente,58 focused + 247 full,PASS
+GOV,autoridad humana,human verdict,PASS
+PRIV,reflexiones privadas excluidas,audit + tests,PASS
+LOCAL,cero red/publicación,privacy/vertical audit,PASS
