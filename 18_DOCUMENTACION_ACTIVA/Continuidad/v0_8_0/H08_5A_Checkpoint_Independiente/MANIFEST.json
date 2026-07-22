@@ -1,0 +1,49 @@
+{
+  "unit": "H08-5A",
+  "date": "2026-07-22",
+  "executed_at": "2026-07-22T18:22:34+00:00",
+  "repository": "ricardojuanmorales/ai-storylab-1",
+  "PR": 62,
+  "branch": "feat/v0.8-h08-5-portfolio-roundtrip",
+  "functional_head_under_review": "7b0131393ee0f8428743582c6750e1bb40774e8b",
+  "base_under_review": "0efd5535cd796cb16b3f77518a6f82614a155a6e",
+  "review_mode": "structured_self_review",
+  "independence_claimed": false,
+  "product_changes_authorized": false,
+  "product_changes_during_checkpoint": false,
+  "automated_verification_completed": true,
+  "human_review_completed": false,
+  "checkpoint_verdict": "pending_human",
+  "technical_recommendation": "PASS_CANDIDATE",
+  "publication_authorized": true,
+  "PR_mode": "draft",
+  "ready_for_review": "blocked",
+  "merge": "blocked",
+  "H08_6": "blocked",
+  "runtime": {
+    "node": "v22.23.1",
+    "remote_run": 29944247572,
+    "checks": {
+      "Verify Node 22": "PASS",
+      "Verify Node 24": "PASS"
+    }
+  },
+  "branch_compare": {
+    "ahead_by": 10,
+    "behind_by": 0,
+    "functional_diff_files": 131
+  },
+  "automated_results": {
+    "focused_test_files": 15,
+    "focused_tests": 58,
+    "full_test_files": 48,
+    "full_tests": 247,
+    "npm_verify": "PASS",
+    "blocking_findings": 0,
+    "non_blocking_observations": 1
+  },
+  "human_decision": {
+    "verdict": "PENDING_POST_EVIDENCE",
+    "scope": "H08-5A checkpoint verdict only"
+  }
+}

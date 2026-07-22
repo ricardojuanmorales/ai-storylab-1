@@ -21,7 +21,7 @@
     "contract_package": "storylab_portfolio/1.0.0",
     "functional_changes": false
   },
-  "next_internal_milestone": "H08-5A",
+  "next_internal_milestone": "H08-5A_HUMAN_VERDICT",
   "ready_for_review": "NOT_AUTHORIZED",
   "merge": "NOT_AUTHORIZED",
   "H08_6": "BLOCKED",
@@ -97,13 +97,18 @@
     "full_verify": "PASS"
   },
   "H08_5A": {
-    "status": "AUTHORIZED_AND_ACTIVE",
-    "authorized_at": "2026-07-22T18:16:29+00:00",
+    "status": "AUTOMATED_CHECKPOINT_EXECUTED",
+    "executed_at": "2026-07-22T18:22:34+00:00",
     "functional_head_under_review": "7b0131393ee0f8428743582c6750e1bb40774e8b",
-    "review_mode": "structured_self_review",
-    "independence_claimed": false,
-    "product_changes_authorized": false,
+    "technical_recommendation": "PASS_CANDIDATE",
     "human_verdict": "PENDING_POST_EVIDENCE",
+    "product_changes_during_checkpoint": false,
+    "focused_tests": "PASS",
+    "full_verify": "PASS",
+    "CI_Node_22": "PASS",
+    "CI_Node_24": "PASS",
+    "blocking_findings": 0,
+    "non_blocking_observations": 1,
     "ready_for_review": "NOT_AUTHORIZED",
     "merge": "NOT_AUTHORIZED",
     "H08_6": "BLOCKED"
@@ -134,8 +139,9 @@
     "next_internal_milestone": "H08-5A",
     "closed_at": "2026-07-22T17:52:48+00:00",
     "implementation_commit": "a929e7a40ccd868fc0f780700641f0791080a545",
-    "remote_run_id": null,
-    "remote_run_url": null,
-    "remote_conclusion": "success"
+    "remote_run_id": 29944247572,
+    "remote_run_url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/29944247572",
+    "remote_conclusion": "success",
+    "final_documentary_commit": "7b0131393ee0f8428743582c6750e1bb40774e8b"
   }
 }
