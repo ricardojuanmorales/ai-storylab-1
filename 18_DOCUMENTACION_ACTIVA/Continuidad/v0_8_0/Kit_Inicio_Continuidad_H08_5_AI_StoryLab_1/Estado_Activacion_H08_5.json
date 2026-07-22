@@ -151,12 +151,18 @@
     "technical_result": "PASS",
     "governance_result": "PASS",
     "authorized_at": "2026-07-22T19:00:41+00:00",
-    "closure_publication": "PRIMARY_COMMIT_PENDING",
+    "closure_publication": "PRIMARY_PUBLISHED_AND_CI_PASSED",
     "PR": 62,
     "PR_mode": "DRAFT",
     "ready_for_review": "NOT_AUTHORIZED",
     "merge": "BLOCKED",
     "H08_6": "BLOCKED",
-    "PR_comments": "HUMAN_ONLY"
+    "PR_comments": "HUMAN_ONLY",
+    "closure_commit": "e251f6fdaa2ace6194deb02d5a163dfa7a5869db",
+    "closure_CI_run": 29949166214,
+    "closure_CI_url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/29949166214",
+    "closure_CI_Node_22": "PASS",
+    "closure_CI_Node_24": "PASS",
+    "attestation": "CONTAINING_COMMIT"
   }
 }

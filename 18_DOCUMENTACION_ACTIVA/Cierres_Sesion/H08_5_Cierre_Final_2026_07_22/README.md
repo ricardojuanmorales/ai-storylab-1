@@ -26,3 +26,12 @@ Roundtrip.
 
 H08-5 queda cerrado documentalmente. PR #62 permanece Draft. Ready for Review,
 merge y H08-6 requieren decisiones humanas separadas.
+
+## Publicación primaria
+
+- commit: `e251f6fdaa2ace6194deb02d5a163dfa7a5869db`;
+- CI: `29949166214`;
+- Node 22: PASS;
+- Node 24: PASS;
+- atestación: commit que contiene
+  `Atestacion_Post_Publicacion_Cierre_H08_5_AI_StoryLab_1.md`.

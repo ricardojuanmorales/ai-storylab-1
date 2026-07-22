@@ -26,10 +26,13 @@
     "Node_24": "PASS"
   },
   "publication": {
-    "status": "AUTHORIZED_PENDING_PRIMARY_COMMIT",
-    "closure_commit": null,
-    "closure_run": null,
-    "attestation": "PENDING"
+    "status": "PRIMARY_PUBLISHED_AND_CI_PASSED",
+    "closure_commit": "e251f6fdaa2ace6194deb02d5a163dfa7a5869db",
+    "closure_run": 29949166214,
+    "closure_run_url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/29949166214",
+    "Node_22": "PASS",
+    "Node_24": "PASS",
+    "attestation": "CONTAINING_COMMIT"
   },
   "governance": {
     "PR_mode": "DRAFT",

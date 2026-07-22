@@ -34,3 +34,13 @@ blocking_findings: 0
 PR #62 permanece Draft. Ready for Review, merge y H08-6 requieren
 autorizaciones humanas separadas. Los comentarios continúan bajo revisión y
 publicación humana manual.
+
+### Cierre documental publicado
+
+```yaml
+closure_commit: e251f6fdaa2ace6194deb02d5a163dfa7a5869db
+closure_CI_run: 29949166214
+closure_CI_Node_22: PASS
+closure_CI_Node_24: PASS
+attestation: CONTAINING_COMMIT
+```

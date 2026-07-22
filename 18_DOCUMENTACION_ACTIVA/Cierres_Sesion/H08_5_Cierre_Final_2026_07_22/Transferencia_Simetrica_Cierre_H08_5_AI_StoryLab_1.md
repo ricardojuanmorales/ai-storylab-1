@@ -46,3 +46,13 @@ H08_6: BLOCKED
 4. apertura de H08-6.
 
 El cierre global no ejecuta ninguna de esas transiciones.
+
+## Publicación primaria atestiguada
+
+```yaml
+closure_commit: e251f6fdaa2ace6194deb02d5a163dfa7a5869db
+closure_CI_run: 29949166214
+CI_Node_22: PASS
+CI_Node_24: PASS
+attestation: CONTAINING_COMMIT
+```
