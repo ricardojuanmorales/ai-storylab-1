@@ -14,5 +14,12 @@
   "next_internal_milestone": "H08-5.3",
   "ready_for_review": "NOT_AUTHORIZED",
   "merge": "NOT_AUTHORIZED",
-  "H08_6": "BLOCKED"
+  "H08_6": "BLOCKED",
+  "full_verify": "PASS",
+  "ci_remediation": {
+    "reason": "VERTICAL_SLICE_AUDIT_EXPECTED_PRIVACY_FILTER_IN_OLD_FILE",
+    "resolution": "AUDIT_DELEGATION_AND_PROJECTION_SIGNAL_REALIGNED",
+    "verified_at": "2026-07-22T15:02:50Z",
+    "remote_recheck": "PENDING_AFTER_PUSH"
+  }
 }

@@ -10,6 +10,7 @@ const requiredFiles = [
   "src/application/creative-cycle-contracts.ts",
   "src/application/curation-record.ts",
   "src/application/preview-export.ts",
+  "src/application/portfolio-projection.ts",
   "src/application/recover-project.ts",
   "src/adapters/storage/local-storage-project-repository.ts",
   "src/schemas/runtime-validators.ts",
@@ -162,6 +163,10 @@ const previewText = readFileSync(
   join(root, "src/application/preview-export.ts"),
   "utf8",
 );
+const portfolioProjectionText = readFileSync(
+  join(root, "src/application/portfolio-projection.ts"),
+  "utf8",
+);
 const storageText = readFileSync(
   join(root, "src/adapters/storage/local-storage-project-repository.ts"),
   "utf8",
@@ -308,7 +313,16 @@ const requiredSignals = [
     "M4_RECOVERY_INTEGRATED",
     "M4_RECOVERY_TEST_MISSING",
   ],
-  [previewText, "reflectionCanLeaveDevice", "PRIVACY_FILTER_MISSING"],
+  [
+    previewText,
+    "createPortfolioProjection",
+    "PRIVACY_PROJECTION_DELEGATION_MISSING",
+  ],
+  [
+    portfolioProjectionText,
+    "reflectionCanLeaveDevice",
+    "PRIVACY_FILTER_MISSING",
+  ],
   [storageText, "PERSISTENCE_QUOTA_EXCEEDED", "QUOTA_ERROR_MISSING"],
   [
     storageText,

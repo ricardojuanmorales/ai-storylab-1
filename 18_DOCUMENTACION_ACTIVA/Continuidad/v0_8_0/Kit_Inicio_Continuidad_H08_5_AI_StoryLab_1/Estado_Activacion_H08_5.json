@@ -44,6 +44,12 @@
     "focused_tests": "PASS",
     "architecture_audit": "PASS",
     "privacy_audit": "PASS",
-    "offline_guard": "PASS"
+    "offline_guard": "PASS",
+    "full_verify": "PASS",
+    "ci_remediation": {
+      "status": "LOCALLY_VERIFIED_AWAITING_REMOTE_RECHECK",
+      "verified_at": "2026-07-22T15:02:50Z",
+      "reason": "STALE_VERTICAL_SLICE_AUDIT_LOCATION"
+    }
   }
 }
