@@ -96,7 +96,18 @@
     "focused_tests": "PASS",
     "full_verify": "PASS"
   },
-  "H08_5A": "READY_FOR_INTERNAL_CHECKPOINT_NOT_STARTED",
+  "H08_5A": {
+    "status": "AUTHORIZED_AND_ACTIVE",
+    "authorized_at": "2026-07-22T18:16:29+00:00",
+    "functional_head_under_review": "7b0131393ee0f8428743582c6750e1bb40774e8b",
+    "review_mode": "structured_self_review",
+    "independence_claimed": false,
+    "product_changes_authorized": false,
+    "human_verdict": "PENDING_POST_EVIDENCE",
+    "ready_for_review": "NOT_AUTHORIZED",
+    "merge": "NOT_AUTHORIZED",
+    "H08_6": "BLOCKED"
+  },
   "session_protocol_amendments": {
     "strategic_planning_pause_after_documentary_activation": "REQUIRED",
     "PR_comments": "HUMAN_ONLY",
