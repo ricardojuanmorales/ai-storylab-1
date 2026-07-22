@@ -38,7 +38,7 @@ export function ArcSummary({
 
       setPreview(JSON.stringify(result.value, null, 2));
       onMessage(
-        "La vista previa final fue validada en memoria. No se descargó ni publicó.",
+        "La vista previa final fue validada en memoria. La descarga portátil se prepara por separado en Transferir portafolio.",
       );
     } catch {
       onMessage("Ocurrió un error inesperado al preparar la vista previa.");
@@ -63,12 +63,12 @@ export function ArcSummary({
     >
       <header className="arc-summary-header">
         <div>
-          <p className="eyebrow">Integración transversal · H08-4.5</p>
+          <p className="eyebrow">Integración transversal · H08-5.5</p>
           <h2 id="arc-summary-title">Resumen transversal del arco</h2>
-          <p>
-            Reúne el estado de M1–M4, la curaduría vigente y la vista previa
-            final sin crear archivos ni activar capacidades diferidas.
-          </p>
+            <p>
+              Reúne el estado de M1–M4 y la curaduría vigente. La creación del
+              archivo portátil permanece separada en Transferir portafolio.
+            </p>
         </div>
         <p className="status-badge">
           {snapshot.completedMissionCount} de{" "}
@@ -157,8 +157,8 @@ export function ArcSummary({
             Vista previa final del arco
           </h3>
           <p>
-            El contenido fue validado y permanece en memoria. No existe una
-            acción de descarga o publicación en H08-4.5.
+            El contenido fue validado y permanece en memoria. Para crear el
+            archivo revisable, continúa en Transferir portafolio.
           </p>
           <pre aria-label="Vista previa final validada">{preview}</pre>
         </section>

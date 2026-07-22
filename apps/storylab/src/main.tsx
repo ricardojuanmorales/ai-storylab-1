@@ -1,7 +1,15 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createStoryLabUseCases } from "./application/storylab-use-cases";
+import {
+  createPortfolioExportService,
+  createPortfolioImportService,
+  createPortfolioImportStagingService,
+  createStoryLabUseCases,
+} from "./application";
+import { createBrowserFileDownloader } from "./adapters/browser/browser-file-download";
 import { BrowserSessionIdGenerator } from "./adapters/browser/browser-session-id-generator";
+import { createBrowserUntrustedLocalFile } from "./adapters/browser/browser-untrusted-local-file";
+import { createWebCryptoSha256Hasher } from "./adapters/crypto/web-crypto-sha256";
 import { InMemoryProjectRepository } from "./adapters/memory/in-memory-project-repository";
 import {
   LocalStorageProjectRepository,
@@ -10,6 +18,7 @@ import {
 import { SystemClock } from "./adapters/system/system-clock";
 import { App } from "./presentation/App";
 import type { PersistenceMode } from "./presentation/persistence-mode";
+import type { PortfolioTransferRuntime } from "./presentation/portfolio-transfer-runtime";
 
 const rootElement = document.getElementById("root");
 
@@ -31,21 +40,52 @@ const resolveBrowserStorage = (): StorageLike | null => {
 };
 
 const storage = resolveBrowserStorage();
-const persistenceMode: PersistenceMode = storage ? "local" : "memory";
+const persistenceMode: PersistenceMode = storage
+  ? "local"
+  : "memory";
 const repository = storage
   ? new LocalStorageProjectRepository(storage)
   : new InMemoryProjectRepository();
+const clock = new SystemClock();
+const ids = new BrowserSessionIdGenerator();
+const hasher = createWebCryptoSha256Hasher();
 
 const useCases = createStoryLabUseCases({
   repository,
-  clock: new SystemClock(),
-  ids: new BrowserSessionIdGenerator(),
+  clock,
+  ids,
 });
+
+const exportService = createPortfolioExportService({
+  repository,
+  clock,
+  hasher,
+  downloader: createBrowserFileDownloader(),
+});
+const importStaging =
+  createPortfolioImportStagingService({
+    ids,
+    hasher,
+  });
+const importService = createPortfolioImportService({
+  staging: importStaging,
+  repository,
+  ids,
+});
+
+const portfolioTransfer: PortfolioTransferRuntime = {
+  exportService,
+  importStaging,
+  importService,
+  toUntrustedLocalFile:
+    createBrowserUntrustedLocalFile,
+};
 
 createRoot(rootElement).render(
   <StrictMode>
     <App
       useCases={useCases}
+      portfolioTransfer={portfolioTransfer}
       persistenceMode={persistenceMode}
     />
   </StrictMode>,

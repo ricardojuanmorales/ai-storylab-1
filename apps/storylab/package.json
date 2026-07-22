@@ -20,7 +20,7 @@
     "test:application": "vitest run src/tests/application.*.test.ts",
     "test:adapters": "vitest run src/tests/adapters.*.test.ts",
     "test:presentation": "vitest run src/tests/presentation.*.test.tsx",
-    "test:accessibility": "vitest run src/tests/domain.accessibility.test.ts src/tests/application.accessibility.test.ts src/tests/presentation.shell.test.tsx",
+    "test:accessibility": "vitest run src/tests/domain.accessibility.test.ts src/tests/application.accessibility.test.ts src/tests/presentation.shell.test.tsx src/tests/presentation.portfolio-transfer.test.tsx",
     "test:security": "vitest run src/tests/application.safe-error.test.ts",
     "audit:architecture": "node tools/audit-architecture.mjs",
     "audit:secrets": "node tools/audit-secrets.mjs",
@@ -28,8 +28,8 @@
     "verify": "npm run typecheck && npm run build && npm run audit:architecture && npm run audit:secrets && npm run audit:privacy && npm run audit:vertical-slice && npm run test",
     "test:cycle": "vitest run src/tests/application.creative-cycle.test.ts src/tests/presentation.m1-cycle.test.tsx",
     "test:persistence": "vitest run src/tests/adapters.local-storage.test.ts src/tests/application.recovery-export.test.ts src/tests/schemas.runtime-validation.test.ts",
-    "test:recovery-ui": "vitest run src/tests/presentation.recovery-export.test.tsx",
-    "test:integration": "vitest run src/tests/integration.local-first.test.tsx",
+    "test:recovery-ui": "vitest run src/tests/presentation.recovery-export.test.tsx src/tests/integration.portfolio-transfer-local-first.test.tsx",
+    "test:integration": "vitest run src/tests/integration.local-first.test.tsx src/tests/integration.portfolio-transfer-local-first.test.tsx",
     "audit:vertical-slice": "node tools/audit-vertical-slice.mjs"
   },
   "dependencies": {
@@ -43,7 +43,6 @@
     "@types/node": "26.1.1",
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
-    "@vitejs/plugin-react": "6.0.3",
     "ajv": "8.20.0",
     "ajv-formats": "3.0.1",
     "jsdom": "29.1.1",

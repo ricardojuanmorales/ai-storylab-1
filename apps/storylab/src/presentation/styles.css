@@ -1020,3 +1020,106 @@ small {
     grid-template-columns: 1fr;
   }
 }
+
+/* H08-5.5 · transferencia local confirmada */
+.portfolio-transfer {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.portfolio-transfer-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.portfolio-transfer-header > div {
+  max-width: 52rem;
+}
+
+.portfolio-transfer-header h2,
+.transfer-card h3,
+.transfer-card h4 {
+  margin-top: 0;
+}
+
+.transfer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.transfer-card {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: var(--surface);
+}
+
+.transfer-card > p {
+  margin-top: 0;
+}
+
+.file-control {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px dashed var(--accent);
+  border-radius: 0.7rem;
+  background: var(--surface-muted);
+}
+
+.file-control input {
+  padding: 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.transfer-preview {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid var(--accent);
+  border-radius: 0.75rem;
+  background: var(--surface);
+}
+
+.transfer-preview > p {
+  margin: 0;
+}
+
+.transfer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.checksum-line {
+  padding: 0.75rem;
+  border-radius: 0.55rem;
+  background: var(--surface-muted);
+  overflow-wrap: anywhere;
+}
+
+.checksum-line code {
+  font-size: 0.82em;
+}
+
+.transfer-guidance {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+@media (max-width: 54rem) {
+  .transfer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

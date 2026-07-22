@@ -12,6 +12,8 @@ import type {
 } from "../domain/model";
 import type { MissionId } from "../domain/types";
 import { ArcSummary } from "./ArcSummary";
+import { PortfolioTransferPanel } from "./PortfolioTransferPanel";
+import type { PortfolioTransferRuntime } from "./portfolio-transfer-runtime";
 import { MissionFourWorkspace } from "./MissionFourWorkspace";
 import { MissionOneWorkspace } from "./MissionOneWorkspace";
 import { MissionThreeWorkspace } from "./MissionThreeWorkspace";
@@ -42,11 +44,13 @@ type RecoveryState = "checking" | "ready";
 
 export interface AppProps {
   readonly useCases: StoryLabUseCases;
+  readonly portfolioTransfer?: PortfolioTransferRuntime;
   readonly persistenceMode?: PersistenceMode;
 }
 
 export function App({
   useCases,
+  portfolioTransfer,
   persistenceMode = "memory",
 }: AppProps) {
   const [preferences, setPreferences] =
@@ -209,7 +213,7 @@ export function App({
           <p className="brand">AI StoryLab 1</p>
         </div>
         <p className="status-badge">
-          Arco M1–M4 integrado · H08-4.5
+          Portafolio roundtrip local · H08-5.5
         </p>
       </header>
 
@@ -218,6 +222,7 @@ export function App({
         <a href="#preferencias">Accesibilidad</a>
         <a href="#experiencia">Experiencia</a>
         <a href="#resumen-arco">Resumen del arco</a>
+        <a href="#transferencia-portafolio">Transferir portafolio</a>
         <a href="#mapa-ciclo">Mapa del ciclo</a>
       </nav>
 
@@ -229,14 +234,14 @@ export function App({
       >
         <section id="inicio" className="hero" aria-labelledby="hero-title">
           <div>
-            <p className="eyebrow">Vertical slice local-first recuperable</p>
+            <p className="eyebrow">Ciclo local-first transferible y recuperable</p>
             <h1 id="hero-title">
               Tu ciclo creativo puede continuar después de recargar
             </h1>
             <p className="hero-copy">
-              El proyecto sintético se valida antes de recuperarse. La vista
-              previa de exportación requiere portafolio y nunca descarga ni
-              publica automáticamente.
+              El proyecto se valida antes de recuperarse. El portafolio puede
+              exportarse e importarse localmente mediante previews y
+              confirmaciones humanas separadas, sin publicación automática.
             </p>
           </div>
 
@@ -244,9 +249,9 @@ export function App({
             <h2 id="boundary-title">Límites activos</h2>
             <ul>
               <li>Datos sintéticos únicamente</li>
-              <li>Persistencia local de un proyecto reciente</li>
-              <li>Sin importación ni roundtrip</li>
-              <li>Sin decisiones automatizadas</li>
+              <li>Persistencia local y recuperación validada</li>
+              <li>Exportación e importación como copia local</li>
+              <li>Sin red, publicación ni decisiones automatizadas</li>
             </ul>
           </aside>
         </section>
@@ -260,8 +265,8 @@ export function App({
             <p className="eyebrow">Adaptación inmediata</p>
             <h2 id="preferences-title">Preferencias de accesibilidad</h2>
             <p>
-              Estos ajustes modifican la vista actual. La integración de estas
-              preferencias al perfil persistente permanece fuera de H08-4.5.
+              Estos ajustes modifican la vista actual. Las preferencias que
+              forman parte del proyecto se preservan durante el roundtrip.
             </p>
           </div>
 
@@ -333,6 +338,23 @@ export function App({
           <ArcSummary
             project={project}
             useCases={useCases}
+            onMessage={setStatusMessage}
+          />
+        ) : null}
+
+        {recoveryState === "ready" &&
+        !recoveryIssue &&
+        portfolioTransfer ? (
+          <PortfolioTransferPanel
+            project={project}
+            runtime={portfolioTransfer}
+            persistenceMode={persistenceMode}
+            recoverProject={useCases.recoverProject}
+            onProjectImported={(importedProject) => {
+              setProject(importedProject);
+              setActiveMissionId(MISSION_CATALOG[0].id);
+              setRecoveryIssue(false);
+            }}
             onMessage={setStatusMessage}
           />
         ) : null}
@@ -450,8 +472,8 @@ export function App({
             <p className="eyebrow">Ruta gobernada</p>
             <h2 id="cycle-title">Mapa del arco creativo completo de v0.8.0</h2>
             <p>
-              H08-4.5 integra M1–M4, valida la continuidad local y protege
-              la coherencia curatorial cuando una misión fuente vuelve a abrirse.
+              H08-5.5 conserva M1–M4, integra transferencia local confirmada y
+              recupera las copias importadas después de remontar la aplicación.
             </p>
           </div>
 
@@ -486,17 +508,17 @@ export function App({
             </p>
           </article>
           <article>
-            <h2>Privacidad de exportación</h2>
+            <h2>Privacidad de transferencia</h2>
             <p>
-              Las reflexiones privadas o de alto cuidado no aparecen en la
-              vista previa.
+              Las reflexiones privadas o de alto cuidado no salen del
+              dispositivo ni entran en el paquete portátil.
             </p>
           </article>
           <article>
             <h2>Control humano</h2>
             <p>
-              Guardar, borrar, curar y previsualizar son acciones separadas y
-              reversibles.
+              Preparar, descargar, seleccionar e importar son acciones
+              separadas, revisables y reversibles.
             </p>
           </article>
         </section>
@@ -504,7 +526,7 @@ export function App({
 
       <footer className="site-footer">
         <p>
-          PR #61 · H08-4.5 · Arco integrado · Preview final sin descarga
+          PR #62 · H08-5.5 · Portafolio local · Transferencia confirmada
         </p>
       </footer>
     </div>
