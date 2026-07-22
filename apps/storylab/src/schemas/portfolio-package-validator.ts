@@ -17,11 +17,11 @@ import {
   PREVIOUS_SCHEMA_VERSION,
 } from "./schema-version";
 
-type KnownPortfolioProject =
+export type KnownPortfolioProject =
   | CreativeProject
   | HistoricalCreativeProjectAlpha1;
 
-type KnownPortfolioPackage =
+export type KnownPortfolioPackage =
   PortfolioPackageV1<KnownPortfolioProject>;
 
 type JsonSchema = Record<string, unknown>;

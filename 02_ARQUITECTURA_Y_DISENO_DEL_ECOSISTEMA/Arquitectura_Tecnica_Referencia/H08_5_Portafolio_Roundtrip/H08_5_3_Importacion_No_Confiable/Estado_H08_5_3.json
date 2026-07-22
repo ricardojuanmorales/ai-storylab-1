@@ -1,0 +1,21 @@
+{
+  "date": "2026-07-22",
+  "milestone": "H08-5.3",
+  "status": "IMPLEMENTED_AND_LOCALLY_VERIFIED",
+  "verified_at": "2026-07-22T15:27:04Z",
+  "parent_commit": "fdc54c2e365f3f6392d207965eff1b35c3dce907",
+  "capability": "UNTRUSTED_IMPORT_IMMUTABLE_STAGING",
+  "maximum_file_bytes": 1048576,
+  "maximum_depth": 32,
+  "maximum_structural_nodes": 20000,
+  "repository_dependency": "NONE",
+  "repository_save": "IMPOSSIBLE_BY_CONSTRUCTION",
+  "migration": "DEFERRED_TO_H08_5_4",
+  "human_confirmation": "DEFERRED_TO_H08_5_4",
+  "focused_tests": "PASS",
+  "full_verify": "PASS",
+  "next_internal_milestone": "H08-5.4",
+  "ready_for_review": "NOT_AUTHORIZED",
+  "merge": "NOT_AUTHORIZED",
+  "H08_6": "BLOCKED"
+}

@@ -1,0 +1,12 @@
+criterion,implementation,evidence
+AC-IMP-01,malformed JSON rejected,application.portfolio-import-preflight.test.ts
+AC-IMP-02,declared size checked before read,application.portfolio-import-preflight.test.ts
+T-03,depth 32 and 20000 node limits,application.portfolio-import-preflight.test.ts
+T-04,strict package schema,application.portfolio-import-staging.test.ts
+T-07,SHA-256 before staging,application.portfolio-import-staging.test.ts
+T-08,private reflections rejected,application.portfolio-import-staging.test.ts
+T-10,immutable staging without repository dependency,application.portfolio-import-staging.test.ts
+T-12,local bytes only and no network,adapter test plus privacy and offline audits
+T-13,plain JSON object traversal and cloning,portfolio-import-preflight.ts
+T-14,safe typed messages without local path,preflight tests
+H08-5.4-boundary,alpha1 staged without migration,application.portfolio-import-staging.test.ts
