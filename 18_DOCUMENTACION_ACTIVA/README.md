@@ -86,3 +86,12 @@ ready_for_review: NOT_AUTHORIZED
 merge: BLOCKED
 H08_5: BLOCKED
 ```
+
+
+## Cierre H08-5 · 2026-07-22
+
+- estado: `CLOSED_DOCUMENTALLY`;
+- PR: `#62 DRAFT`;
+- checkpoint: `H08-5A PASS`;
+- Ready, merge y H08-6: bloqueados;
+- próxima lectura: atestación post-publicación H08-5.

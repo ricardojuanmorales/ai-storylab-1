@@ -1,0 +1,41 @@
+{
+  "unit": "H08-5",
+  "date": "2026-07-22",
+  "repository": "ricardojuanmorales/ai-storylab-1",
+  "PR": 62,
+  "base": "0efd5535cd796cb16b3f77518a6f82614a155a6e",
+  "functional_head": "7b0131393ee0f8428743582c6750e1bb40774e8b",
+  "checkpoint_head": "ee14ee6c5962ff3acdbee1e80ac25ea4df87b182",
+  "lifecycle": "CLOSED_DOCUMENTALLY",
+  "technical_result": "PASS",
+  "governance_result": "PASS",
+  "H08_5A": {
+    "technical_recommendation": "PASS_CANDIDATE",
+    "human_verdict": "PASS",
+    "focused_test_files": 15,
+    "focused_tests": 58,
+    "full_test_files": 48,
+    "full_tests": 247,
+    "blocking_findings": 0,
+    "non_blocking_observations": 1
+  },
+  "CI": {
+    "functional_run": 29944247572,
+    "checkpoint_run": 29946389768,
+    "Node_22": "PASS",
+    "Node_24": "PASS"
+  },
+  "publication": {
+    "status": "AUTHORIZED_PENDING_PRIMARY_COMMIT",
+    "closure_commit": null,
+    "closure_run": null,
+    "attestation": "PENDING"
+  },
+  "governance": {
+    "PR_mode": "DRAFT",
+    "ready_for_review": "NOT_AUTHORIZED",
+    "merge": "BLOCKED",
+    "H08_6": "BLOCKED",
+    "PR_comments": "HUMAN_ONLY"
+  }
+}
