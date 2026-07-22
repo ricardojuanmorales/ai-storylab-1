@@ -1,4 +1,5 @@
 import type { DomainError } from "../domain/errors";
+import type { CreativeProject } from "../domain/model";
 import {
   PORTFOLIO_PACKAGE_TYPE,
   PORTFOLIO_PACKAGE_VERSION,
@@ -9,15 +10,21 @@ import type {
   Sha256Hasher,
   UntrustedLocalFile,
 } from "../ports";
+import { migrateProjectToCurrent } from "../schemas/migrate-project";
 import {
   type KnownPortfolioPackage,
   validatePortfolioPackageSnapshot,
 } from "../schemas/portfolio-package-validator";
-import { canonicalizeJson } from "./portfolio-package-utils";
+import { CURRENT_SCHEMA_VERSION } from "../schemas/schema-version";
+import {
+  classifyPortfolioImportCompatibility,
+  type PortfolioCompatibilityDecision,
+} from "./portfolio-import-compatibility";
 import {
   preflightUntrustedPortfolioFile,
   type JsonStructureMetrics,
 } from "./portfolio-import-preflight";
+import { canonicalizeJson } from "./portfolio-package-utils";
 
 export interface PortfolioImportPreview {
   readonly stagingId: string;
@@ -26,6 +33,9 @@ export interface PortfolioImportPreview {
   readonly packageType: typeof PORTFOLIO_PACKAGE_TYPE;
   readonly packageVersion: typeof PORTFOLIO_PACKAGE_VERSION;
   readonly sourceProjectSchemaVersion: string;
+  readonly candidateProjectSchemaVersion:
+    typeof CURRENT_SCHEMA_VERSION;
+  readonly migrationApplied: boolean;
   readonly projectTitle: string;
   readonly portfolioItemCount: number;
   readonly reflectionCount: number;
@@ -36,6 +46,8 @@ export interface PortfolioImportPreview {
 export interface StagedPortfolioImport
   extends PortfolioImportPreview {
   readonly packageValue: KnownPortfolioPackage;
+  readonly candidateProject: CreativeProject;
+  readonly compatibility: PortfolioCompatibilityDecision;
 }
 
 export interface PortfolioImportStagingDependencies {
@@ -64,6 +76,14 @@ const mapPackageError = (
     sourceCode: source.code,
   },
 });
+
+const mapMigrationError = (
+  source: DomainError,
+): DomainError =>
+  source.code === "SCHEMA_VERSION_UNSUPPORTED" ||
+  source.code === "LEGACY_MIGRATION_REQUIRED"
+    ? source
+    : mapPackageError(source);
 
 const deepFreeze = <Value>(value: Value): Value => {
   if (
@@ -95,6 +115,12 @@ export const createPortfolioImportStagingService = (
       const preflight =
         await preflightUntrustedPortfolioFile(file);
       if (!preflight.ok) return preflight;
+
+      const compatibility =
+        classifyPortfolioImportCompatibility(
+          preflight.value.parsed,
+        );
+      if (!compatibility.ok) return compatibility;
 
       const packageResult =
         validatePortfolioPackageSnapshot(
@@ -138,11 +164,24 @@ export const createPortfolioImportStagingService = (
         });
       }
 
+      const migrated = migrateProjectToCurrent(
+        packageResult.value.payload.project,
+      );
+      if (!migrated.ok) {
+        return err(mapMigrationError(migrated.error));
+      }
+
       const stagingId = dependencies.ids.next(
         "portfolio-import-stage",
       );
       const packageValue = immutableClone(
         packageResult.value,
+      );
+      const candidateProject = immutableClone(
+        migrated.value,
+      );
+      const compatibilityValue = immutableClone(
+        compatibility.value,
       );
       const preview: PortfolioImportPreview = {
         stagingId,
@@ -151,12 +190,16 @@ export const createPortfolioImportStagingService = (
         packageType: packageValue.packageType,
         packageVersion: packageValue.packageVersion,
         sourceProjectSchemaVersion:
-          packageValue.payload.projectSchemaVersion,
-        projectTitle: packageValue.payload.project.title,
+          compatibilityValue.sourceProjectSchemaVersion,
+        candidateProjectSchemaVersion:
+          candidateProject.schemaVersion,
+        migrationApplied:
+          compatibilityValue.migrationRequired,
+        projectTitle: candidateProject.title,
         portfolioItemCount:
-          packageValue.payload.project.portfolio.items.length,
+          candidateProject.portfolio.items.length,
         reflectionCount:
-          packageValue.payload.project.reflections.length,
+          candidateProject.reflections.length,
         checksum: packageValue.integrity.digest,
         structure: immutableClone(
           preflight.value.structure,
@@ -166,6 +209,8 @@ export const createPortfolioImportStagingService = (
         immutableClone({
           ...preview,
           packageValue,
+          candidateProject,
+          compatibility: compatibilityValue,
         });
 
       pending.set(stagingId, staged);

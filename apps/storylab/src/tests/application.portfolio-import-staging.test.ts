@@ -1,93 +1,17 @@
-import { createHash } from "node:crypto";
 import { describe, expect, it, vi } from "vitest";
 import {
-  canonicalizeJson,
   createPortfolioImportStagingService,
 } from "../application";
-import type { ExportPackage } from "../domain/model";
-import {
-  PORTFOLIO_PACKAGE_CANONICALIZATION,
-  PORTFOLIO_PACKAGE_INTEGRITY_ALGORITHM,
-  PORTFOLIO_PACKAGE_INTEGRITY_SCOPE,
-  PORTFOLIO_PACKAGE_TYPE,
-  PORTFOLIO_PACKAGE_VERSION,
-} from "../domain/portfolio-package";
-import { ok } from "../domain/result";
-import type { UntrustedLocalFile } from "../ports";
 import {
   CURRENT_SCHEMA_VERSION,
   PREVIOUS_SCHEMA_VERSION,
 } from "../schemas/schema-version";
-import type {
-  KnownPortfolioPackage,
-  KnownPortfolioProject,
-} from "../schemas/portfolio-package-validator";
-import { clone, loadJson } from "./helpers";
-
-const fixture = loadJson<ExportPackage>(
-  "../fixtures/valid/export-package.json",
-);
-
-const hasher = {
-  digestHex: async (value: string) =>
-    ok(
-      createHash("sha256")
-        .update(value, "utf8")
-        .digest("hex"),
-    ),
-};
-
-const packageFor = (
-  version:
-    | typeof CURRENT_SCHEMA_VERSION
-    | typeof PREVIOUS_SCHEMA_VERSION =
-      CURRENT_SCHEMA_VERSION,
-): KnownPortfolioPackage => {
-  const project = {
-    ...clone(fixture.project),
-    schemaVersion: version,
-  } as KnownPortfolioProject;
-  const payload = {
-    projectSchemaVersion: version,
-    project,
-  };
-  const canonical = canonicalizeJson(payload);
-  if (!canonical.ok) {
-    throw new Error(canonical.error.code);
-  }
-
-  return {
-    packageType: PORTFOLIO_PACKAGE_TYPE,
-    packageVersion: PORTFOLIO_PACKAGE_VERSION,
-    exportedAt: fixture.exportedAt,
-    payload,
-    integrity: {
-      algorithm:
-        PORTFOLIO_PACKAGE_INTEGRITY_ALGORITHM,
-      canonicalization:
-        PORTFOLIO_PACKAGE_CANONICALIZATION,
-      scope: PORTFOLIO_PACKAGE_INTEGRITY_SCOPE,
-      digest: createHash("sha256")
-        .update(canonical.value, "utf8")
-        .digest("hex"),
-    },
-  };
-};
-
-const fileFromValue = (
-  value: unknown,
-  name = "../synthetic-import.storylab.json",
-): UntrustedLocalFile => {
-  const bytes = new TextEncoder().encode(
-    JSON.stringify(value),
-  );
-  return {
-    name,
-    size: bytes.byteLength,
-    mediaType: "application/json",
-    readBytes: async () => bytes,
-  };
-};
+import {
+  fileFromValue,
+  nodeHasher,
+  portfolioFixture,
+  portfolioPackageFor,
+} from "./portfolio-import-test-helpers";
 
 const createContext = () => {
   const next = vi.fn(
@@ -96,16 +20,16 @@ const createContext = () => {
   const service =
     createPortfolioImportStagingService({
       ids: { next },
-      hasher,
+      hasher: nodeHasher,
     });
   return { next, service };
 };
 
-describe("H08-5.3 immutable untrusted import staging", () => {
-  it("stages alpha.2 after schema and checksum validation", async () => {
+describe("H08-5.4 compatible immutable import staging", () => {
+  it("stages alpha.2 without migration", async () => {
     const { next, service } = createContext();
     const result = await service.stage(
-      fileFromValue(packageFor()),
+      fileFromValue(portfolioPackageFor()),
     );
 
     expect(result).toMatchObject({
@@ -114,11 +38,12 @@ describe("H08-5.3 immutable untrusted import staging", () => {
         stagingId:
           "portfolio-import-stage:synthetic-001",
         fileName: "synthetic-import.storylab.json",
-        packageType: PORTFOLIO_PACKAGE_TYPE,
-        packageVersion: PORTFOLIO_PACKAGE_VERSION,
         sourceProjectSchemaVersion:
           CURRENT_SCHEMA_VERSION,
-        projectTitle: fixture.project.title,
+        candidateProjectSchemaVersion:
+          CURRENT_SCHEMA_VERSION,
+        migrationApplied: false,
+        projectTitle: portfolioFixture.project.title,
         portfolioItemCount: 1,
         reflectionCount: 1,
       },
@@ -128,11 +53,11 @@ describe("H08-5.3 immutable untrusted import staging", () => {
     );
   });
 
-  it("stages alpha.1 without migrating or persisting", async () => {
+  it("verifies alpha.1 before migrating it into the staged candidate", async () => {
     const { service } = createContext();
     const result = await service.stage(
       fileFromValue(
-        packageFor(PREVIOUS_SCHEMA_VERSION),
+        portfolioPackageFor(PREVIOUS_SCHEMA_VERSION),
       ),
     );
 
@@ -141,6 +66,9 @@ describe("H08-5.3 immutable untrusted import staging", () => {
       value: {
         sourceProjectSchemaVersion:
           PREVIOUS_SCHEMA_VERSION,
+        candidateProjectSchemaVersion:
+          CURRENT_SCHEMA_VERSION,
+        migrationApplied: true,
       },
     });
     if (!result.ok) return;
@@ -161,14 +89,18 @@ describe("H08-5.3 immutable untrusted import staging", () => {
             },
           },
         },
+        candidateProject: {
+          schemaVersion: CURRENT_SCHEMA_VERSION,
+          id: portfolioFixture.project.id,
+        },
       },
     });
   });
 
-  it("keeps the staged package deeply immutable", async () => {
+  it("keeps source package and migrated candidate deeply immutable", async () => {
     const { service } = createContext();
     const result = await service.stage(
-      fileFromValue(packageFor()),
+      fileFromValue(portfolioPackageFor()),
     );
     if (!result.ok) throw new Error(result.error.code);
 
@@ -181,49 +113,90 @@ describe("H08-5.3 immutable untrusted import staging", () => {
 
     expect(Object.isFrozen(inspected.value)).toBe(true);
     expect(
-      Object.isFrozen(
-        inspected.value.packageValue.payload.project,
-      ),
+      Object.isFrozen(inspected.value.packageValue),
+    ).toBe(true);
+    expect(
+      Object.isFrozen(inspected.value.candidateProject),
     ).toBe(true);
     expect(
       Object.isFrozen(
-        inspected.value.packageValue.payload.project
-          .portfolio.items,
+        inspected.value.candidateProject.portfolio.items,
       ),
     ).toBe(true);
 
     const mutable =
-      inspected.value.packageValue as unknown as {
-        payload: {
-          project: { title: string };
-        };
+      inspected.value.candidateProject as unknown as {
+        title: string;
       };
     expect(() => {
-      mutable.payload.project.title = "Alterado";
+      mutable.title = "Alterado";
     }).toThrow(TypeError);
 
-    const readAgain = service.inspect(
-      result.value.stagingId,
-    );
-    expect(readAgain).toMatchObject({
+    expect(
+      service.inspect(result.value.stagingId),
+    ).toMatchObject({
       ok: true,
       value: {
-        projectTitle: fixture.project.title,
-        packageValue: {
-          payload: {
-            project: {
-              title: fixture.project.title,
-            },
-          },
+        projectTitle: portfolioFixture.project.title,
+        candidateProject: {
+          title: portfolioFixture.project.title,
         },
       },
     });
   });
 
+  it("rejects future and legacy versions before creating a stage", async () => {
+    const { next, service } = createContext();
+    const current = portfolioPackageFor();
+
+    const future = {
+      ...current,
+      payload: {
+        ...current.payload,
+        projectSchemaVersion: "0.9.0",
+        project: {
+          ...current.payload.project,
+          schemaVersion: "0.9.0",
+        },
+      },
+    };
+    expect(
+      await service.stage(fileFromValue(future)),
+    ).toMatchObject({
+      ok: false,
+      error: {
+        code: "SCHEMA_VERSION_UNSUPPORTED",
+      },
+    });
+
+    const legacy = {
+      ...current,
+      payload: {
+        ...current.payload,
+        projectSchemaVersion: "legacy_v0.3",
+        project: {
+          ...current.payload.project,
+          source: "legacy_v0_3",
+          schemaVersion: "legacy_v0.3",
+        },
+      },
+    };
+    expect(
+      await service.stage(fileFromValue(legacy)),
+    ).toMatchObject({
+      ok: false,
+      error: {
+        code: "LEGACY_MIGRATION_REQUIRED",
+      },
+    });
+
+    expect(next).not.toHaveBeenCalled();
+  });
+
   it("rejects unexpected fields before integrity work", async () => {
     const { next, service } = createContext();
     const candidate = {
-      ...packageFor(),
+      ...portfolioPackageFor(),
       automaticPublication: true,
     };
 
@@ -238,7 +211,7 @@ describe("H08-5.3 immutable untrusted import staging", () => {
 
   it("rejects a modified payload with checksum mismatch", async () => {
     const { next, service } = createContext();
-    const candidate = packageFor();
+    const candidate = portfolioPackageFor();
     const modified = {
       ...candidate,
       payload: {
@@ -261,9 +234,9 @@ describe("H08-5.3 immutable untrusted import staging", () => {
     expect(next).not.toHaveBeenCalled();
   });
 
-  it("rejects private reflections even when the producer includes them", async () => {
+  it("rejects private reflections", async () => {
     const { service } = createContext();
-    const candidate = packageFor();
+    const candidate = portfolioPackageFor();
     const reflection =
       candidate.payload.project.reflections[0];
     if (reflection === undefined) {
@@ -297,10 +270,10 @@ describe("H08-5.3 immutable untrusted import staging", () => {
     });
   });
 
-  it("discards without persistence and makes the stage unavailable", async () => {
+  it("discards without persistence", async () => {
     const { service } = createContext();
     const result = await service.stage(
-      fileFromValue(packageFor()),
+      fileFromValue(portfolioPackageFor()),
     );
     if (!result.ok) throw new Error(result.error.code);
 

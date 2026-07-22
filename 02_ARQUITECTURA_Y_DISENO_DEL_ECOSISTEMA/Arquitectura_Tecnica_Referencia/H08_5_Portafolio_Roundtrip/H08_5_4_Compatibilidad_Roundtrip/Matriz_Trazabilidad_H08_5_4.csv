@@ -1,0 +1,13 @@
+criterion,implementation,evidence
+alpha2_accepted,compatibility classifier and staging,application.portfolio-import-compatibility.test.ts
+alpha1_migrated,checksum before migrate and current candidate,application.portfolio-import-staging.test.ts
+future_rejected,SCHEMA_VERSION_UNSUPPORTED,application.portfolio-import-compatibility.test.ts
+legacy_rejected,LEGACY_MIGRATION_REQUIRED,application.portfolio-import-compatibility.test.ts
+human_confirmation,HUMAN_IMPORT_CONFIRMATION gate,application.portfolio-import.test.ts
+new_project_id,createLocalCopy only replaces project.id,application.portfolio-import.test.ts
+internal_ids_preserved,semantic comparison and explicit assertions,application.portfolio-import.test.ts
+single_save,one repository.save after confirmation,application.portfolio-import.test.ts
+semantic_positive,normalization removes only project.id,application.portfolio-semantic-equivalence.test.ts
+semantic_negative,typed first difference path,application.portfolio-semantic-equivalence.test.ts
+recovery_after_remount,real local storage adapter,integration.portfolio-roundtrip.test.ts
+offline_privacy,no network and private reflection schema,full verify

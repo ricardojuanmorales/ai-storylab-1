@@ -21,7 +21,7 @@
     "contract_package": "storylab_portfolio/1.0.0",
     "functional_changes": false
   },
-  "next_internal_milestone": "H08-5.4",
+  "next_internal_milestone": "H08-5.5",
   "ready_for_review": "NOT_AUTHORIZED",
   "merge": "NOT_AUTHORIZED",
   "H08_6": "BLOCKED",
@@ -62,6 +62,23 @@
     "repository_dependency": "NONE",
     "repository_save": "IMPOSSIBLE_BY_CONSTRUCTION",
     "migration": "DEFERRED_TO_H08_5_4",
+    "focused_tests": "PASS",
+    "full_verify": "PASS"
+  },
+  "H08_5_4": {
+    "status": "IMPLEMENTED_AND_LOCALLY_VERIFIED",
+    "verified_at": "2026-07-22T15:50:49Z",
+    "capability": "CONFIRMED_COMPATIBLE_SEMANTIC_ROUNDTRIP",
+    "package_version": "1.0.0",
+    "alpha2": "ACCEPT",
+    "alpha1": "ACCEPT_WITH_MIGRATION",
+    "future": "REJECT",
+    "legacy_v0_3": "REJECT",
+    "human_confirmation": "REQUIRED",
+    "new_project_id_only": true,
+    "single_save": true,
+    "semantic_equivalence": "PASS",
+    "recovery_after_remount": "PASS",
     "focused_tests": "PASS",
     "full_verify": "PASS"
   }
