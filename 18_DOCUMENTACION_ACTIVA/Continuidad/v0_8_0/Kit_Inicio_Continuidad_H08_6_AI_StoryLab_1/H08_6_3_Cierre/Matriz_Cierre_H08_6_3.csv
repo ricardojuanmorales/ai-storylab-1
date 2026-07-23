@@ -1,0 +1,4 @@
+id,domain,status_at_close,evidence,blocks_H08_6_3_close,next_route
+SEC_DEP_001,dependency_security,RESOLVED,"fast-uri 3.1.4; npm audit 0",NO,NONE
+TEST_SEC_001,security_regression,RESOLVED,"49 files; 248 tests PASS",NO,NONE
+CI_ACTION_RUNTIME_001,ci_maintenance,ROUTED_NON_BLOCKING,"Node 20 deprecation annotation in GitHub Actions v4",NO,"H08-6.4;H08-6.5"
