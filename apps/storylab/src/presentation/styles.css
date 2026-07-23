@@ -39,6 +39,7 @@ a {
   --accent-soft: #f4ddd3;
   --border: #c8c2b7;
   --focus: #0067c5;
+  --secondary-text-size: 0.875em;
   min-height: 100vh;
   background:
     radial-gradient(circle at 90% 5%, #e8d9c8 0, transparent 28rem),
@@ -124,7 +125,7 @@ a {
 .eyebrow {
   margin: 0 0 0.25rem;
   color: var(--accent);
-  font-size: 0.78em;
+  font-size: var(--secondary-text-size);
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -139,7 +140,7 @@ a {
   border: 1px solid var(--border);
   border-radius: 999px;
   background: var(--surface);
-  font-size: 0.82em;
+  font-size: var(--secondary-text-size);
   font-weight: 700;
 }
 
@@ -536,7 +537,7 @@ small {
 
 .step-kicker {
   color: var(--accent);
-  font-size: 0.78em;
+  font-size: var(--secondary-text-size);
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -661,7 +662,7 @@ small {
 
 .preview-summary dt {
   color: var(--muted);
-  font-size: 0.82em;
+  font-size: var(--secondary-text-size);
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -689,7 +690,7 @@ small {
   border-radius: 0.55rem;
   background: var(--ink);
   color: var(--surface);
-  font-size: 0.82em;
+  font-size: var(--secondary-text-size);
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
@@ -780,7 +781,7 @@ small {
 
 .mission-navigation-state {
   color: var(--muted);
-  font-size: 0.82em;
+  font-size: var(--secondary-text-size);
   font-weight: 800;
 }
 
@@ -982,7 +983,7 @@ small {
 
 .arc-mission-grid dt {
   color: var(--muted);
-  font-size: 0.8em;
+  font-size: var(--secondary-text-size);
   font-weight: 750;
 }
 
@@ -1109,7 +1110,7 @@ small {
 }
 
 .checksum-line code {
-  font-size: 0.82em;
+  font-size: var(--secondary-text-size);
 }
 
 .transfer-guidance {
