@@ -1,8 +1,8 @@
 # Decisión de continuidad post-merge y preparación H08-6
 
-**Fecha:** 2026-07-22  
-**Repositorio:** `ricardojuanmorales/ai-storylab-1`  
-**PR antecedente:** `#62`  
+**Fecha:** 2026-07-22
+**Repositorio:** `ricardojuanmorales/ai-storylab-1`
+**PR antecedente:** `#62`
 **Merge commit:** `ae93ccef94506724559b8df7b1ccdfeb0489a927`
 
 ## Decisión humana registrada

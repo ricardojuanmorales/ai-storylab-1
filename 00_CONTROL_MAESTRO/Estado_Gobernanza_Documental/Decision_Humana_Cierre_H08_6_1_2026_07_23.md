@@ -1,8 +1,8 @@
 # Decisión humana de cierre diagnóstico · H08-6.1
 
-**Fecha:** 2026-07-23  
-**Proyecto:** AI StoryLab 1  
-**Hito:** H08-6.1 · Baseline integrado y auditoría de brechas  
+**Fecha:** 2026-07-23
+**Proyecto:** AI StoryLab 1
+**Hito:** H08-6.1 · Baseline integrado y auditoría de brechas
 **Veredicto humano:** `PASS_WITH_ACCEPTED_ROUTING`
 
 ## Decisión

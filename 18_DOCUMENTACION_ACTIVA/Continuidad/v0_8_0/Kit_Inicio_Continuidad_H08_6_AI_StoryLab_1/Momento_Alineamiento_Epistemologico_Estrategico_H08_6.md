@@ -1,8 +1,8 @@
 # Momento de Alineamiento Epistemológico y Estratégico · H08-6
 
-**Naturaleza:** diálogo humano asistido por IA  
-**Momento:** después de verificar el kit y antes de rama, PR o commit  
-**Resultado:** acuerdo humano suficiente para definir y abrir H08-6  
+**Naturaleza:** diálogo humano asistido por IA
+**Momento:** después de verificar el kit y antes de rama, PR o commit
+**Resultado:** acuerdo humano suficiente para definir y abrir H08-6
 **Duración:** proporcional a la complejidad
 
 ## Propósito

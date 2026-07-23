@@ -1,0 +1,166 @@
+{
+  "hito": "H08-6.5",
+  "authorization_token": "AUTORIZO_H08_6_5",
+  "entry_head": "31d1e9223daaf2502444c6c4368c08a9e1f3703e",
+  "package_version": "0.8.0-alpha.1",
+  "lock_root_version": "0.8.0-alpha.1",
+  "version_synced": true,
+  "history_commit_count": 9,
+  "markdown_files_checked": 41,
+  "blocking_findings": 0,
+  "repairable_findings": 3,
+  "missing_paths": [],
+  "missing_commit_subjects": [],
+  "broken_links": [],
+  "placeholder_hits": [],
+  "trailing_whitespace": [
+    {
+      "path": "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_H08_6_AI_StoryLab_1/Bitacora_Evolucion_Protocolo_v3_1_AI_StoryLab_1.md",
+      "line": 269
+    },
+    {
+      "path": "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_H08_6_AI_StoryLab_1/Bitacora_Evolucion_Protocolo_v3_1_AI_StoryLab_1.md",
+      "line": 270
+    },
+    {
+      "path": "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_H08_6_AI_StoryLab_1/Bitacora_Evolucion_Protocolo_v3_1_AI_StoryLab_1.md",
+      "line": 271
+    },
+    {
+      "path": "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_H08_6_AI_StoryLab_1/Decision_Continuidad_Post_Merge_y_Preparacion_H08_6.md",
+      "line": 3
+    },
+    {
+      "path": "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_H08_6_AI_StoryLab_1/Decision_Continuidad_Post_Merge_y_Preparacion_H08_6.md",
+      "line": 4
+    },
+    {
+      "path": "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_H08_6_AI_StoryLab_1/Decision_Continuidad_Post_Merge_y_Preparacion_H08_6.md",
+      "line": 5
+    },
+    {
+      "path": "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_H08_6_AI_StoryLab_1/Momento_Alineamiento_Epistemologico_Estrategico_H08_6.md",
+      "line": 3
+    },
+    {
+      "path": "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_H08_6_AI_StoryLab_1/Momento_Alineamiento_Epistemologico_Estrategico_H08_6.md",
+      "line": 4
+    },
+    {
+      "path": "18_DOCUMENTACION_ACTIVA/Continuidad/v0_8_0/Kit_Inicio_Continuidad_H08_6_AI_StoryLab_1/Momento_Alineamiento_Epistemologico_Estrategico_H08_6.md",
+      "line": 5
+    },
+    {
+      "path": "00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Decision_Humana_Cierre_H08_6_1_2026_07_23.md",
+      "line": 3
+    },
+    {
+      "path": "00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Decision_Humana_Cierre_H08_6_1_2026_07_23.md",
+      "line": 4
+    },
+    {
+      "path": "00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Decision_Humana_Cierre_H08_6_1_2026_07_23.md",
+      "line": 5
+    }
+  ],
+  "workflow_runtime_surface": [
+    ".github/workflows/h08-1-3-baseline.yml:42:        uses: actions/checkout@v4",
+    ".github/workflows/h08-1-3-baseline.yml:45:        uses: actions/setup-node@v4"
+  ],
+  "findings": [
+    {
+      "id": "DOC_REQUIRED_001",
+      "domain": "documentation",
+      "status": "PASS",
+      "severity": "NONE",
+      "evidence": "all required H08-6 closure artifacts exist",
+      "blocking": false,
+      "repairable_in_operator": false,
+      "route": "NONE"
+    },
+    {
+      "id": "VERSION_SYNC_001",
+      "domain": "versioning",
+      "status": "PASS",
+      "severity": "NONE",
+      "evidence": "package=0.8.0-alpha.1; lock=0.8.0-alpha.1",
+      "blocking": false,
+      "repairable_in_operator": false,
+      "route": "NONE"
+    },
+    {
+      "id": "TRACE_CHAIN_001",
+      "domain": "traceability",
+      "status": "PASS",
+      "severity": "NONE",
+      "evidence": "9 commits inventoried",
+      "blocking": false,
+      "repairable_in_operator": false,
+      "route": "NONE"
+    },
+    {
+      "id": "DOC_LINK_001",
+      "domain": "documentation",
+      "status": "PASS",
+      "severity": "NONE",
+      "evidence": "41 markdown files checked",
+      "blocking": false,
+      "repairable_in_operator": false,
+      "route": "NONE"
+    },
+    {
+      "id": "DOC_PLACEHOLDER_001",
+      "domain": "documentation",
+      "status": "PASS",
+      "severity": "NONE",
+      "evidence": "no unresolved generated placeholders",
+      "blocking": false,
+      "repairable_in_operator": false,
+      "route": "NONE"
+    },
+    {
+      "id": "DOC_WHITESPACE_001",
+      "domain": "documentation",
+      "status": "REPAIR_REQUIRED",
+      "severity": "LOW",
+      "evidence": "12 lines require normalization",
+      "blocking": false,
+      "repairable_in_operator": true,
+      "route": "H08-6.5_REPAIR"
+    },
+    {
+      "id": "TRACE_INDEX_001",
+      "domain": "traceability",
+      "status": "REPAIR_REQUIRED",
+      "severity": "MEDIUM",
+      "evidence": "canonical H08-6 traceability index and matrix not yet closed",
+      "blocking": false,
+      "repairable_in_operator": true,
+      "route": "H08-6.5_REPAIR"
+    },
+    {
+      "id": "CI_ACTION_RUNTIME_001",
+      "domain": "ci_maintenance",
+      "status": "REPAIR_REQUIRED",
+      "severity": "LOW",
+      "evidence": "2 v4/v5 action references",
+      "blocking": false,
+      "repairable_in_operator": true,
+      "route": "H08-6.5_REPAIR"
+    }
+  ],
+  "overall_status": "PASS",
+  "H08_6_6": "CLOSED_PENDING_SEPARATE_HUMAN_AUTHORIZATION",
+  "Ready_for_Review": "NOT_AUTHORIZED",
+  "merge": "NOT_AUTHORIZED",
+  "GATE_V08_CLOSE": "NOT_AUTHORIZED",
+  "authorization_repair_close_token": "REPARAR_Y_CERRAR_H08_6_5_PASS",
+  "repairable_findings_after": 0,
+  "CI_ACTION_RUNTIME_001": "RESOLVED",
+  "TRACE_INDEX_001": "RESOLVED",
+  "DOC_WHITESPACE_001": "RESOLVED",
+  "functional_commit": "e5af2fbfd68cbf365f891d68b3495aa8e823c18e",
+  "functional_CI_run": "30052325825",
+  "functional_CI_url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/30052325825",
+  "H08_6_5": "CLOSED"
+}

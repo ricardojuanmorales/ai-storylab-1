@@ -266,9 +266,9 @@ Al principio de H08-5:
 
 ## Continuación de la evolución durante H08-5
 
-**Periodo:** 2026-07-21 a 2026-07-22  
-**Hito:** H08-5 · Portafolio y Roundtrip  
-**Resultado:** `PASS_WITH_RECORDED_LESSONS`  
+**Periodo:** 2026-07-21 a 2026-07-22
+**Hito:** H08-5 · Portafolio y Roundtrip
+**Resultado:** `PASS_WITH_RECORDED_LESSONS`
 **Versión del protocolo:** `3.1`, sin cambio de número de versión
 
 ### Evaluación longitudinal
