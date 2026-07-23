@@ -1,0 +1,330 @@
+{
+  "hito": "H08-6.6",
+  "authorization_token": "AUTORIZO_APERTURA_H08_6_6",
+  "generated_at": "2026-07-23T23:42:16.473066+00:00",
+  "entry_head": "f88bf774b76ab88f4d540861bb8477561e5a3503",
+  "overall_status": "PASS_PENDING_HUMAN_PH_IT_AT",
+  "required_commands": 16,
+  "required_failures": 0,
+  "blocking_findings": 0,
+  "package_version": "0.8.0-alpha.1",
+  "lock_root_version": "0.8.0-alpha.1",
+  "version_synced": true,
+  "source_tree_clean": true,
+  "missing_closure_paths": [],
+  "language_alerts": [
+    {
+      "path": "apps/storylab/src/presentation/MissionFourWorkspace.tsx",
+      "line": 343,
+      "class": "coercion",
+      "match": "tienes que"
+    }
+  ],
+  "network_surface": [],
+  "findings": [
+    {
+      "id": "REGRESSION_INTEGRAL_001",
+      "domain": "integrated_regression",
+      "status": "PASS",
+      "severity": "NONE",
+      "evidence": "16 required commands executed",
+      "blocking": false,
+      "route": "NONE"
+    },
+    {
+      "id": "VERSION_SYNC_001",
+      "domain": "versioning",
+      "status": "PASS",
+      "severity": "NONE",
+      "evidence": "package=0.8.0-alpha.1; lock=0.8.0-alpha.1",
+      "blocking": false,
+      "route": "NONE"
+    },
+    {
+      "id": "CLOSURE_CHAIN_001",
+      "domain": "traceability",
+      "status": "PASS",
+      "severity": "NONE",
+      "evidence": "H08-6.2 through H08-6.5 closure chain present",
+      "blocking": false,
+      "route": "NONE"
+    },
+    {
+      "id": "SOURCE_TREE_CLEAN_001",
+      "domain": "reproducibility",
+      "status": "PASS",
+      "severity": "NONE",
+      "evidence": "verification commands preserve repository state",
+      "blocking": false,
+      "route": "NONE"
+    },
+    {
+      "id": "PH_REVIEW_001",
+      "domain": "programador_humanista",
+      "status": "HUMAN_CONFIRMATION_REQUIRED",
+      "severity": "REVIEW",
+      "evidence": "static alert matches=1; automated accessibility, recovery and security evidence ready",
+      "blocking": false,
+      "route": "HUMAN_PH_REVIEW"
+    },
+    {
+      "id": "IT_REVIEW_001",
+      "domain": "investigador_transdisciplinario",
+      "status": "HUMAN_CONFIRMATION_REQUIRED",
+      "severity": "REVIEW",
+      "evidence": "network surface matches=0; privacy, offline and untrusted-import evidence ready",
+      "blocking": false,
+      "route": "HUMAN_IT_REVIEW"
+    },
+    {
+      "id": "AT_REVIEW_001",
+      "domain": "artista_transdisciplinario",
+      "status": "HUMAN_CONFIRMATION_REQUIRED",
+      "severity": "REVIEW",
+      "evidence": "creative-cycle, presentation, accessibility and portfolio evidence ready",
+      "blocking": false,
+      "route": "HUMAN_AT_REVIEW"
+    }
+  ],
+  "review_rows": [
+    {
+      "role": "PH",
+      "criterion_id": "PH-01",
+      "criterion": "agencia humana y salida legítima",
+      "automated_evidence": "recovery UI, lifecycle and accessibility tests",
+      "machine_status": "SUPPORTED",
+      "human_status": "PENDING"
+    },
+    {
+      "role": "PH",
+      "criterion_id": "PH-02",
+      "criterion": "pausa, retiro y reversibilidad",
+      "automated_evidence": "recovery, import staging and confirmation flows",
+      "machine_status": "SUPPORTED",
+      "human_status": "PENDING"
+    },
+    {
+      "role": "PH",
+      "criterion_id": "PH-03",
+      "criterion": "lenguaje no coercitivo ni productividad forzada",
+      "automated_evidence": "static alert matches=1",
+      "machine_status": "REVIEW_MATCHES",
+      "human_status": "PENDING"
+    },
+    {
+      "role": "IT",
+      "criterion_id": "IT-01",
+      "criterion": "ficción diferenciada de dato real",
+      "automated_evidence": "privacy and safe-error audits",
+      "machine_status": "SUPPORTED",
+      "human_status": "PENDING"
+    },
+    {
+      "role": "IT",
+      "criterion_id": "IT-02",
+      "criterion": "no investigación, medición o clasificación implícita",
+      "automated_evidence": "measurement-language matches=0",
+      "machine_status": "SUPPORTED_WITH_HUMAN_REVIEW",
+      "human_status": "PENDING"
+    },
+    {
+      "role": "IT",
+      "criterion_id": "IT-03",
+      "criterion": "trazabilidad y límites local-first",
+      "automated_evidence": "network surface matches=0; offline and security tests",
+      "machine_status": "SUPPORTED_WITH_HUMAN_REVIEW",
+      "human_status": "PENDING"
+    },
+    {
+      "role": "AT",
+      "criterion_id": "AT-01",
+      "criterion": "apertura creativa y multiplicidad de ritmos",
+      "automated_evidence": "creative-cycle and M1-M4 presentation tests",
+      "machine_status": "SUPPORTED",
+      "human_status": "PENDING"
+    },
+    {
+      "role": "AT",
+      "criterion_id": "AT-02",
+      "criterion": "derecho a borrador e incompletitud",
+      "automated_evidence": "persistence, recovery and portfolio tests",
+      "machine_status": "SUPPORTED",
+      "human_status": "PENDING"
+    },
+    {
+      "role": "AT",
+      "criterion_id": "AT-03",
+      "criterion": "accesibilidad expresiva y error como material recuperable",
+      "automated_evidence": "accessibility, safe-error and recovery tests",
+      "machine_status": "SUPPORTED",
+      "human_status": "PENDING"
+    }
+  ],
+  "commands": [
+    {
+      "name": "npm_ci",
+      "exit_code": 0,
+      "duration_seconds": 2,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_6_Evidencia_20260723_234113/logs/01_npm_ci.log"
+    },
+    {
+      "name": "npm_audit",
+      "exit_code": 0,
+      "duration_seconds": 1,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_6_Evidencia_20260723_234113/logs/02_npm_audit.log"
+    },
+    {
+      "name": "verify_integrated",
+      "exit_code": 0,
+      "duration_seconds": 18,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_6_Evidencia_20260723_234113/logs/03_verify_integrated.log"
+    },
+    {
+      "name": "test_domain",
+      "exit_code": 0,
+      "duration_seconds": 1,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_6_Evidencia_20260723_234113/logs/04_test_domain.log"
+    },
+    {
+      "name": "test_schemas",
+      "exit_code": 0,
+      "duration_seconds": 0,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_6_Evidencia_20260723_234113/logs/05_test_schemas.log"
+    },
+    {
+      "name": "test_parity",
+      "exit_code": 0,
+      "duration_seconds": 1,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_6_Evidencia_20260723_234113/logs/06_test_parity.log"
+    },
+    {
+      "name": "test_offline",
+      "exit_code": 0,
+      "duration_seconds": 0,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_6_Evidencia_20260723_234113/logs/07_test_offline.log"
+    },
+    {
+      "name": "test_application",
+      "exit_code": 0,
+      "duration_seconds": 2,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_6_Evidencia_20260723_234113/logs/08_test_application.log"
+    },
+    {
+      "name": "test_adapters",
+      "exit_code": 0,
+      "duration_seconds": 1,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_6_Evidencia_20260723_234113/logs/09_test_adapters.log"
+    },
+    {
+      "name": "test_presentation",
+      "exit_code": 0,
+      "duration_seconds": 9,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_6_Evidencia_20260723_234113/logs/10_test_presentation.log"
+    },
+    {
+      "name": "test_accessibility",
+      "exit_code": 0,
+      "duration_seconds": 2,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_6_Evidencia_20260723_234113/logs/11_test_accessibility.log"
+    },
+    {
+      "name": "test_security",
+      "exit_code": 0,
+      "duration_seconds": 14,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_6_Evidencia_20260723_234113/logs/12_test_security.log"
+    },
+    {
+      "name": "test_cycle",
+      "exit_code": 0,
+      "duration_seconds": 3,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_6_Evidencia_20260723_234113/logs/13_test_cycle.log"
+    },
+    {
+      "name": "test_persistence",
+      "exit_code": 0,
+      "duration_seconds": 1,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_6_Evidencia_20260723_234113/logs/14_test_persistence.log"
+    },
+    {
+      "name": "test_recovery_ui",
+      "exit_code": 0,
+      "duration_seconds": 2,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_6_Evidencia_20260723_234113/logs/15_test_recovery_ui.log"
+    },
+    {
+      "name": "test_integration",
+      "exit_code": 0,
+      "duration_seconds": 4,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_6_Evidencia_20260723_234113/logs/16_test_integration.log"
+    }
+  ],
+  "test_counts": {
+    "verify_integrated": {
+      "files": 49,
+      "tests": 248
+    },
+    "test_domain": {
+      "files": 2,
+      "tests": 26
+    },
+    "test_schemas": {
+      "files": 1,
+      "tests": 8
+    },
+    "test_parity": {
+      "files": 1,
+      "tests": 6
+    },
+    "test_offline": {
+      "files": 1,
+      "tests": 1
+    },
+    "test_application": {
+      "files": 15,
+      "tests": 88
+    },
+    "test_adapters": {
+      "files": 8,
+      "tests": 49
+    },
+    "test_presentation": {
+      "files": 10,
+      "tests": 35
+    },
+    "test_accessibility": {
+      "files": 4,
+      "tests": 20
+    },
+    "test_security": {
+      "files": 49,
+      "tests": 248
+    },
+    "test_cycle": {
+      "files": 2,
+      "tests": 21
+    },
+    "test_persistence": {
+      "files": 3,
+      "tests": 28
+    },
+    "test_recovery_ui": {
+      "files": 2,
+      "tests": 5
+    },
+    "test_integration": {
+      "files": 2,
+      "tests": 7
+    }
+  },
+  "PH_IT_AT": {
+    "automatic_evaluation": false,
+    "human_confirmation_required": true,
+    "guide_is_not_rubric": true,
+    "real_participants": false,
+    "research_activation": false
+  },
+  "H08_6A": "CLOSED",
+  "Ready_for_Review": "NOT_AUTHORIZED",
+  "merge": "NOT_AUTHORIZED",
+  "GATE_V08_CLOSE": "NOT_AUTHORIZED"
+}
