@@ -1,0 +1,7 @@
+id,domain,evidence,severity,status,route,blocks_h08_6_1_close,blocks_gate_v08_close,recommended_disposition
+SEC-DEP-001,Seguridad/dependencias,fast-uri 3.1.3 transitivo vía ajv; afectado por GHSA-v2hh-gcrm-f6hx; dependencia de validación incorporada al bundle,HIGH_UPSTREAM,OPEN,H08-6.3 + H08-6.4,NO,YES,Remediar y ejecutar regresión; exploitabilidad actual no demostrada
+DOC-DRIFT-001,Documentación,"README de app, README activo, descripción del paquete y nombre de workflow desalineados",MEDIUM,OPEN,H08-6.5,NO,YES,Actualizar solo fuentes activas; preservar históricos
+TEST-SEC-001,Pruebas de seguridad,test:security ejecuta solo application.safe-error.test.ts,MEDIUM,OPEN,H08-6.3,NO,YES,Crear agregación explícita de regresión de seguridad
+PERF-BASE-001,Rendimiento,480 KB dist; JS 467.66 KB y 130.78 KB gzip; sin presupuesto aprobado,OBSERVATION,BASELINE_CAPTURED,H08-6.4,NO,NO,Definir presupuesto y medir cambios
+DEP-OPT-001,Dependencias opcionales,UNMET OPTIONAL DEPENDENCY con npm ls exit 0,INFO,ACCEPTED_INFORMATION,N/A,NO,NO,No tratar como instalación rota
+PROTO-EVID-001,Protocolo/evidencia,ZIP contiene metadatos __MACOSX; checksums declarados pasan,LOW,IMPROVEMENT,Evolución de protocolo,NO,NO,Excluir AppleDouble en futuros paquetes
