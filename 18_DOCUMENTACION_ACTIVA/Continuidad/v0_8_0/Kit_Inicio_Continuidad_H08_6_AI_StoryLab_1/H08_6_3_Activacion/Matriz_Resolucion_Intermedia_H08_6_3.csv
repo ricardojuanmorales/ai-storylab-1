@@ -1,0 +1,4 @@
+id,status_before,repair,status_after,evidence,blocks_security_close
+SEC_DEP_001,CONFIRMED,"override fast-uri 3.1.4",RESOLVED,"npm audit 0; npm ls fast-uri 3.1.4",NO
+TEST_SEC_001,CONFIRMED,"test:security expanded to 49 explicit files",RESOLVED,"49 files and 248 tests PASS",NO
+DIAGNOSTIC_EXECUTION,FAIL,"repair operator reran required audits and regression",RESOLVED_FOR_REPAIR_REVIEW,"previous failures: npm_ci_ignore_scripts(exit 1); npm_audit_json(exit 1); ",NO
