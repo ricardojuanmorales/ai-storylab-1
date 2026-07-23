@@ -1,0 +1,7 @@
+id,domain,status,severity,evidence,blocking,route
+PERF_BASE_001,performance,RESOLVED,NONE,verify=17s/16s; build=0s/0s; dist=483460 bytes in 3 files,False,NONE
+RESILIENCE_BASE_001,resilience,PASS,NONE,"persistence, recovery UI, integration, offline and security commands executed",False,NONE
+REPRO_BUILD_001,reproducibility,PASS,NONE,two clean production builds compared byte-for-byte,False,NONE
+LOCK_REPRO_001,reproducibility,PASS,NONE,package-lock SHA-256 before and after npm ci,False,NONE
+SEC_DEP_001,dependency_security,VERIFIED_RESOLVED,NONE,npm audit and integrated verify executed after H08-6.3,False,NONE
+CI_ACTION_RUNTIME_001,ci_maintenance,ROUTED_NON_BLOCKING,LOW,actions/checkout@v4 or actions/setup-node@v4 remains present,False,H08-6.5
