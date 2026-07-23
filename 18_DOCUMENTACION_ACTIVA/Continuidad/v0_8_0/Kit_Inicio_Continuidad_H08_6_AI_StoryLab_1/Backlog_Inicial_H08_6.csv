@@ -1,0 +1,11 @@
+id,bloque,trabajo,resultado,gate
+H08-6-ACT-01,Activacion,cargar ZIP y prompt externo,contexto disponible,humano
+H08-6-ACT-02,Activacion,verificar MANIFEST y CHECKSUMS,integridad confirmada,maquina
+H08-6-ACT-03,Activacion,confirmar main y merge PR62,baseline confirmado,maquina
+H08-6-ACT-04,Activacion,revisar atestacion heredada,verdad temporal aceptada,humano
+H08-6-ACT-05,Activacion,leer protocolo y bitacora,reglas recuperadas,humano
+H08-6-ALIGN-01,Alineamiento,distinguir hechos inferencias y decisiones,mapa epistemico,humano
+H08-6-ALIGN-02,Alineamiento,definir proposito y alcance,acuerdo de sesion,humano
+H08-6-PLAN-01,Planificacion,proponer hitos criterios riesgos y pruebas,arquitectura de trabajo,humano
+H08-6-PLAN-02,Planificacion,definir rama y PR,contrato operacional,humano
+H08-6-ACT-06,Activacion,preparar primer commit documental,kit y activacion,publicacion
