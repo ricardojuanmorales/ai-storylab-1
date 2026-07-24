@@ -1,0 +1,49 @@
+{
+  "project": "AI StoryLab 1",
+  "version": "v0.9.0",
+  "hito": "H09-2",
+  "status": "EVIDENCE_COMPLETE",
+  "entry_head": "3b9eaaa4be38e3562d12f5526a916665e925ebb1",
+  "functional_head": "a4a52fc7cdf4077350ffa5693419b191d60f3c20",
+  "PR": 64,
+  "candidate_suite": {
+    "suite_id": "AI_STORYLAB_V09_CANDIDATE_BASELINE",
+    "test_files": 49,
+    "tests": 248,
+    "test_inventory_sha256": "6311d45ccc64c237e950dcc700461b400df40ce21caab6274889b9ed1f056322",
+    "supported_node": [
+      22,
+      24
+    ],
+    "functional_expansion": false
+  },
+  "clean_reproducibility": {
+    "runs": 2,
+    "status": "PASS",
+    "standard": "SEMANTIC",
+    "binary_reproducibility_claimed": false,
+    "dist_manifest_sha256": "32c48badd0aee620f3b2f27f056d1ec0eb5981bcff24742d9f431b908255100b",
+    "package_lock_sha256": "b904c19fbd5d88a98118ab1319c5a75eeb584e84fefff2bf7d729edad6ca3a32"
+  },
+  "functional_CI": {
+    "run": 30103513289,
+    "url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/30103513289",
+    "head": "a4a52fc7cdf4077350ffa5693419b191d60f3c20",
+    "node_22": "PASS",
+    "node_24": "PASS"
+  },
+  "final_documentary_CI": {
+    "state": "RESOLVED_AFTER_DOCUMENTARY_COMMIT",
+    "binding_evidence": "operator state and evidence ZIP"
+  },
+  "blocking_findings": [],
+  "routed_findings": [
+    "browser_validation_to_H09_3_H09_5",
+    "security_revalidation_to_H09_4",
+    "binary_artifact_reproducibility_to_H09_5",
+    "version_drift_to_H09_6"
+  ],
+  "next_hito": {
+    "H09_3": "BLOCKED_PENDING_HUMAN_AUTHORIZATION"
+  }
+}

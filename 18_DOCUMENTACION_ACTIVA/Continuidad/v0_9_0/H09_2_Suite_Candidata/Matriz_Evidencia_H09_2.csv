@@ -1,0 +1,8 @@
+evidence_id,category,claim,reference,result,head
+EV-H09-2-01,suite inventory,49 test files,6311d45ccc64c237e950dcc700461b400df40ce21caab6274889b9ed1f056322,PASS,a4a52fc7cdf4077350ffa5693419b191d60f3c20
+EV-H09-2-02,test execution,248 tests passed in clean run 1,248,PASS,a4a52fc7cdf4077350ffa5693419b191d60f3c20
+EV-H09-2-03,clean install,npm ci --ignore-scripts in isolated archive 1,b904c19fbd5d88a98118ab1319c5a75eeb584e84fefff2bf7d729edad6ca3a32,PASS,a4a52fc7cdf4077350ffa5693419b191d60f3c20
+EV-H09-2-04,clean install,npm ci --ignore-scripts in isolated archive 2,b904c19fbd5d88a98118ab1319c5a75eeb584e84fefff2bf7d729edad6ca3a32,PASS,a4a52fc7cdf4077350ffa5693419b191d60f3c20
+EV-H09-2-05,semantic build equivalence,dist file lists and content hashes equal,32c48badd0aee620f3b2f27f056d1ec0eb5981bcff24742d9f431b908255100b,PASS,a4a52fc7cdf4077350ffa5693419b191d60f3c20
+EV-H09-2-06,CI Node 22,workflow run 30103513289,https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/30103513289,PASS,a4a52fc7cdf4077350ffa5693419b191d60f3c20
+EV-H09-2-07,CI Node 24,workflow run 30103513289,https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/30103513289,PASS,a4a52fc7cdf4077350ffa5693419b191d60f3c20
