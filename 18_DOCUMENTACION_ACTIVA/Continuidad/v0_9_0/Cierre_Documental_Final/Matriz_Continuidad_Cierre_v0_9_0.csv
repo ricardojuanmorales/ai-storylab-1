@@ -1,0 +1,12 @@
+movement,purpose,disposition,evidence,continuity_note
+H09-0,phase activation and contract,CLOSED,138af5024951d809ce3a3ad91026b77447b17027,none
+H09-1,candidate contract and support matrix,CLOSED,approved,none
+H09-2,candidate suite and baseline,CLOSED,49 files; 248 tests,none
+H09-3,experience accessibility and integrity,CLOSED_WITH_RESERVATIONS,PH-IT-AT,reservations preserved
+H09-4,security privacy dependencies,CLOSED_WITH_RESERVATIONS,zero blockers,reservations preserved
+H09-5,deterministic packaging,CLOSED_WITH_RESERVATIONS,3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf,cross OS identity not demonstrated
+H09-6,documentation versioning debt,CLOSED_WITH_RESERVATIONS,28 accepted debt items,implementation not authorized
+H09-7,candidate assembly and frozen regression,CLOSED_WITH_RESERVATIONS,29585b7b692818243f59d9f0e3c0dc572597fd11,artifact unpublished
+H09-A,procedural independent checkpoint,CLOSED_WITH_RESERVATIONS,artifact reproduced,not external third party
+GATE-V09-RC,eligibility evaluation,PASS_WITH_EXPLICIT_RESERVATIONS,8f39c4824b98646b10fbafb0b136418d860f69e1,no RC created
+CLOSURE,formal phase and session closure,SELF_COMMIT,last session commit,future work requires authorization

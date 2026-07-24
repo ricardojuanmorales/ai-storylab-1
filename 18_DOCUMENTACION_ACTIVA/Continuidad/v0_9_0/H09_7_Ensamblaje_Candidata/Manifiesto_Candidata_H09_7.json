@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "AI_STORYLAB_1_V09_H09_7_CANDIDATE_EVIDENCE",
+  "project": "AI StoryLab 1",
+  "projectReleaseLine": "v0.9.0",
+  "candidateVersion": "0.9.0-unreleased",
+  "publicationStatus": "UNPUBLISHED_CANDIDATE_EVIDENCE",
+  "candidateSourceHead": "29585b7b692818243f59d9f0e3c0dc572597fd11",
+  "documentaryClosureHead": "RESOLVED_BY_OPERATOR",
+  "applicationTreeGitObject": "2b64a7ecaae3b5c86cb465fd00a952e8f48d04bd",
+  "applicationTreeInventorySha256": "b57aa45ded48b59ed99cf0c287040c7720a78c60985eecd89bfd77204253fe2e",
+  "candidateSuite": {
+    "testFiles": 49,
+    "tests": 248,
+    "testInventorySha256": "6311d45ccc64c237e950dcc700461b400df40ce21caab6274889b9ed1f056322",
+    "packageLockSha256": "364ff396ab46b84c6eabc1ddf41f076ee772fd338bf6fa4e999582a3ccac52f1",
+    "distManifestSha256": "32c48badd0aee620f3b2f27f056d1ec0eb5981bcff24742d9f431b908255100b"
+  },
+  "artifact": {
+    "format": "DETERMINISTIC_ZIP_STORE",
+    "sha256": "3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf",
+    "sizeBytes": 486552,
+    "entries": 7,
+    "applicationFiles": 3,
+    "internalVerification": "PASS"
+  },
+  "sourceCI": {
+    "status": "PASS",
+    "run": 30114749454,
+    "head": "29585b7b692818243f59d9f0e3c0dc572597fd11",
+    "node_22": "PASS",
+    "node_24": "PASS",
+    "marker_count": 2,
+    "artifact_sha256": "ac84f63d9f11dd3c076c96aaca874cb587218f40a11900bce176cbccbf9fb216",
+    "cross_node_binary_reproducibility": "PASS"
+  },
+  "reservations": [
+    "artifact_not_published",
+    "cross_os_binary_reproducibility_not_demonstrated",
+    "browser_support_not_claimed",
+    "windows_support_not_claimed",
+    "file_protocol_not_claimed",
+    "manual_screen_reader_review_not_performed",
+    "participant_usability_not_studied",
+    "independent_checkpoint_pending_H09_A"
+  ],
+  "blockingFindings": []
+}

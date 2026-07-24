@@ -1,0 +1,9 @@
+claim_id,claim,status,evidence_basis,validation_hito,blocks_rc_if_unsatisfied
+CLM-01,Arco creativo mínimo M1-M4 existente,PROPOSED_FOR_CP_V09_1,suite heredada y revisión H09-3/H09-6 pendientes,"H09-2,H09-3,H09-6",yes
+CLM-02,Operación principal local-first,PROPOSED_FOR_CP_V09_1,auditorías y tests heredados; revalidación H09-2/H09-4,"H09-2,H09-4",yes
+CLM-03,Persistencia recuperación importación exportación roundtrip,TARGET_VALIDATION,tests existentes identificados en package scripts,H09-2,yes
+CLM-04,Agencia humana y reversibilidad creativa,TARGET_QUALITATIVE_VALIDATION,plan aprobado y revisión PH-IT-AT futura,"H09-3,H09-A",yes
+CLM-05,Build semánticamente reproducible,TARGET_VALIDATION,lockfile sha256 b904c19fbd5d88a98118ab1319c5a75eeb584e84fefff2bf7d729edad6ca3a32; build local PASS,"H09-2,H09-5",yes
+CLM-06,Artefacto ZIP de dist con manifiesto y checksums,PROPOSED_FOR_CP_V09_1,Vite outDir dist; empaquetado no verificado,H09-5,yes
+CLM-07,Ausencia de hallazgos críticos conocidos,NOT_CURRENTLY_CLAIMED,requiere auditoría H09-4 en head candidato,H09-4,yes
+CLM-08,Accesibilidad declarada con reservas,NOT_CURRENTLY_CLAIMED,requiere revisión manual H09-3,H09-3,yes

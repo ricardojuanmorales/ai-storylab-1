@@ -1,0 +1,89 @@
+{
+  "project": "AI StoryLab 1",
+  "version": "v0.9.0",
+  "hito": "H09-7",
+  "status": "CANDIDATE_ASSEMBLED_HUMAN_REVIEW_PENDING",
+  "entry_head": "29585b7b692818243f59d9f0e3c0dc572597fd11",
+  "candidate_source_head": "29585b7b692818243f59d9f0e3c0dc572597fd11",
+  "PR": 64,
+  "freeze": {
+    "status": "PASS",
+    "candidate_source_head": "29585b7b692818243f59d9f0e3c0dc572597fd11",
+    "application_tree_git_object": "2b64a7ecaae3b5c86cb465fd00a952e8f48d04bd",
+    "application_tree_inventory_sha256": "b57aa45ded48b59ed99cf0c287040c7720a78c60985eecd89bfd77204253fe2e",
+    "package_lock_sha256": "364ff396ab46b84c6eabc1ddf41f076ee772fd338bf6fa4e999582a3ccac52f1",
+    "candidate_suite_sha256": "9e22d243b380ff8076b52de18e5a70221b22b2c2557819c1c5990faa050529db",
+    "expected_test_files": 49,
+    "expected_tests": 248,
+    "canonical_application_version": "0.9.0-unreleased",
+    "current_schema_version": "0.8.0-alpha.2",
+    "source_frozen": true
+  },
+  "candidate_suite": {
+    "test_files": 49,
+    "tests": 248,
+    "status": "PASS",
+    "test_inventory_sha256": "6311d45ccc64c237e950dcc700461b400df40ce21caab6274889b9ed1f056322"
+  },
+  "clean_regression": {
+    "status": "PASS",
+    "candidate_source_head": "29585b7b692818243f59d9f0e3c0dc572597fd11",
+    "runs": 2,
+    "test_inventory_equal": true,
+    "package_lock_equal": true,
+    "dist_manifest_equal": true,
+    "binary_artifact_equal": true,
+    "artifact_size_equal": true,
+    "artifact_entries_equal": true,
+    "test_files": 49,
+    "tests": 248,
+    "test_inventory_sha256": "6311d45ccc64c237e950dcc700461b400df40ce21caab6274889b9ed1f056322",
+    "package_lock_sha256": "364ff396ab46b84c6eabc1ddf41f076ee772fd338bf6fa4e999582a3ccac52f1",
+    "dist_manifest_sha256": "32c48badd0aee620f3b2f27f056d1ec0eb5981bcff24742d9f431b908255100b",
+    "artifact_sha256": "3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf",
+    "artifact_size": 486552,
+    "artifact_entries": 7,
+    "application_files": 3
+  },
+  "artifact": {
+    "publication_status": "UNPUBLISHED_CANDIDATE_EVIDENCE",
+    "sha256": "3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf",
+    "size_bytes": 486552,
+    "entries": 7,
+    "application_files": 3,
+    "internal_verification": "PASS"
+  },
+  "source_CI": {
+    "status": "PASS",
+    "run": 30114749454,
+    "head": "29585b7b692818243f59d9f0e3c0dc572597fd11",
+    "node_22": "PASS",
+    "node_24": "PASS",
+    "marker_count": 2,
+    "artifact_sha256": "ac84f63d9f11dd3c076c96aaca874cb587218f40a11900bce176cbccbf9fb216",
+    "cross_node_binary_reproducibility": "PASS"
+  },
+  "blocking_findings": [],
+  "reservations": [
+    "artifact_not_published",
+    "cross_os_binary_reproducibility_not_demonstrated",
+    "browser_support_not_claimed",
+    "windows_support_not_claimed",
+    "file_protocol_not_claimed",
+    "manual_screen_reader_review_not_performed",
+    "participant_usability_not_studied",
+    "independent_checkpoint_pending_H09_A"
+  ],
+  "recommendation": "APPROVE_H09_7_AND_FORWARD_TO_H09_A_WITH_EXPLICIT_RESERVATIONS",
+  "functional_changes": false,
+  "app_tree_changes": false,
+  "repairs": false,
+  "debt_implementation": false,
+  "schema_changes": false,
+  "dependency_changes": false,
+  "workflow_changes": false,
+  "artifact_publication": false,
+  "next_hito": {
+    "H09_A": "BLOCKED_PENDING_HUMAN_AUTHORIZATION"
+  }
+}

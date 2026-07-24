@@ -1,9 +1,9 @@
 {
   "name": "@ai-storylab/storylab-baseline",
   "private": true,
-  "version": "0.8.0-alpha.1",
+  "version": "0.9.0-unreleased",
   "type": "module",
-  "description": "Vertical slice local-first de AI StoryLab 1 consolidada mediante pruebas integradas y evidencia automática para H08-2A.",
+  "description": "AI StoryLab 1 v0.9.0-unreleased: arco creativo local-first M1-M4, agencia humana, privacidad, reversibilidad y empaquetado verificable.",
   "engines": {
     "node": ">=22 <27"
   },
@@ -25,12 +25,14 @@
     "audit:architecture": "node tools/audit-architecture.mjs",
     "audit:secrets": "node tools/audit-secrets.mjs",
     "audit:privacy": "node tools/audit-privacy.mjs",
-    "verify": "npm run typecheck && npm run build && npm run audit:architecture && npm run audit:secrets && npm run audit:privacy && npm run audit:vertical-slice && npm run test",
+    "verify": "node tools/verify-candidate.mjs",
     "test:cycle": "vitest run src/tests/application.creative-cycle.test.ts src/tests/presentation.m1-cycle.test.tsx",
     "test:persistence": "vitest run src/tests/adapters.local-storage.test.ts src/tests/application.recovery-export.test.ts src/tests/schemas.runtime-validation.test.ts",
     "test:recovery-ui": "vitest run src/tests/presentation.recovery-export.test.tsx src/tests/integration.portfolio-transfer-local-first.test.tsx",
     "test:integration": "vitest run src/tests/integration.local-first.test.tsx src/tests/integration.portfolio-transfer-local-first.test.tsx",
-    "audit:vertical-slice": "node tools/audit-vertical-slice.mjs"
+    "audit:vertical-slice": "node tools/audit-vertical-slice.mjs",
+    "verify:components": "npm run typecheck && npm run build && npm run audit:architecture && npm run audit:secrets && npm run audit:privacy && npm run audit:vertical-slice && npm run test",
+    "package:candidate": "node tools/package-candidate.mjs"
   },
   "dependencies": {
     "react": "19.2.7",

@@ -1,0 +1,12 @@
+control_id,category,criterion,result,disposition,evidence
+SEC-01,candidate_suite,49 files and 248 tests,PASS,BLOCKING_IF_FAIL,candidate report
+SEC-02,security_tests,49 files and 248 tests,PASS,BLOCKING_IF_FAIL,focused security report
+SEC-03,architecture,layer and dependency boundaries,PASS,BLOCKING_IF_FAIL,audit architecture
+SEC-04,secrets,180 files scanned,PASS,BLOCKING_IF_FAIL,audit secrets
+PRIV-01,privacy,synthetic local-first no network no runtime logging,PASS,BLOCKING_IF_FAIL,audit privacy
+SEC-05,vertical_slice,deferred capabilities remain disabled,PASS,BLOCKING_IF_FAIL,audit vertical slice
+DEP-01,production_audit,critical=0; high=0,PASS,CRITICAL_HIGH_BLOCK,npm audit omit dev
+DEP-02,all_dependency_audit,critical=0; high=0,REVIEWED,TOOLING_REQUIRES_CONTEXT,npm audit all
+DEP-03,dependency_tree,packages=183,PASS,BLOCKING_IF_INVALID,npm ls all
+DEP-04,license_inventory,unknown=0,PASS,HUMAN_REVIEW,node_modules package metadata
+COMP-01,compatibility_supply_chain,lockfile registry integrity runtime allowlist,PASS,BLOCKING_IF_FAIL,static compatibility report

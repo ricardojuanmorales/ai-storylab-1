@@ -1,0 +1,9 @@
+gap_id,category,description,risk,classification,target_hito,disposition
+GAP-01,runtime,engine permite Node 25 y 26 sin CI,support overclaim,OPEN_NONBLOCKING_FOR_CP,H09-2,choose validate or exclude
+GAP-02,browser,sin pruebas automatizadas en navegadores,browser support unproven,OPEN_EXPECTED,H09-3/H09-5,validate targets
+GAP-03,operating_system,sin matriz Windows y macOS versionada,OS support unproven,OPEN_EXPECTED,H09-2/H09-5,conservative claims
+GAP-04,artifact,ZIP candidato aún no reproducido dos veces,artifact claim pending,OPEN_EXPECTED,H09-5,two-build comparison
+GAP-05,versioning,root 0.3.0 y app 0.8.0-alpha.1,documentary ambiguity,OPEN_BLOCKING_BEFORE_RC,H09-6,reconcile versions
+GAP-06,CI,workflow no se activa por cambios solo documentales,automatic PR check absent,ROUTED,H09-1,manual workflow_dispatch
+GAP-07,accessibility,sin revisión manual candidata,accessibility claim pending,OPEN_EXPECTED,H09-3,manual review
+GAP-08,security,auditoría candidata pendiente,security claim pending,OPEN_EXPECTED,H09-4,run focused audit

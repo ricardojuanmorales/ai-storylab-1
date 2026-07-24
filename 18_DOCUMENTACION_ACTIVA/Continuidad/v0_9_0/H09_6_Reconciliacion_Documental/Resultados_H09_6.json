@@ -1,0 +1,57 @@
+{
+  "project": "AI StoryLab 1",
+  "version": "v0.9.0",
+  "hito": "H09-6",
+  "status": "DOCUMENTARY_PACKAGE_PREPARED_HUMAN_REVIEW_PENDING",
+  "entry_head": "9814ef5e0fd55a12c6d4c826b060e70990c53eb3",
+  "PR": 64,
+  "version_reconciliation": {
+    "project_release_line": "v0.9.0",
+    "canonical_application_version": "0.9.0-unreleased",
+    "current_schema_version": "0.8.0-alpha.2",
+    "previous_schema_version": "0.8.0-alpha.1",
+    "schema_changed": false,
+    "legacy_root_package_version": "0.3.0",
+    "legacy_root_package_status": "HISTORICAL_NON_CANONICAL_EXCLUDED_FROM_CANDIDATE",
+    "RC_version_assigned": false
+  },
+  "documents": {
+    "root_README": "UPDATED",
+    "runtime_README": "UPDATED",
+    "user_guide": "CREATED",
+    "technical_guide": "CREATED",
+    "known_issues": "CREATED",
+    "version_policy": "CREATED",
+    "M1_M4_matrix": "CREATED",
+    "v1_scope": "CREATED"
+  },
+  "debt": {
+    "primary_register": "20_MANTENIMIENTO_Y_EVOLUCION/Registro_Deuda/Registro_Primario_Deuda_Epistemologica_Pedagogica_v0_9_0_AI_StoryLab_1.csv",
+    "items": 28,
+    "blocking_items": 0,
+    "accepted_non_blocking_items": 28,
+    "target_version": "v1.1.0_provisional",
+    "implementation_authorized": false
+  },
+  "blocking_findings": [],
+  "reservations": [
+    "legacy_root_package_remains_historical_0_3_0",
+    "cross_os_binary_reproducibility_not_demonstrated",
+    "browser_support_not_claimed",
+    "windows_support_not_claimed",
+    "file_protocol_not_claimed",
+    "manual_screen_reader_review_not_performed",
+    "participant_usability_not_studied",
+    "final_candidate_assembly_pending_H09_7",
+    "independent_review_pending_H09_A"
+  ],
+  "recommendation": "APPROVE_H09_6_WITH_EXPLICIT_RESERVATIONS",
+  "functional_expansion": false,
+  "schema_changes": false,
+  "dependency_changes": false,
+  "workflow_changes": false,
+  "artifact_publication": false,
+  "next_hito": {
+    "H09_7": "BLOCKED_PENDING_HUMAN_AUTHORIZATION"
+  }
+}

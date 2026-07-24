@@ -1,0 +1,19 @@
+criterion_id,surface,criterion,result,evidence
+ELG-01,human authorization,explicit gate authorization,PASS,decision
+ELG-02,PR state,open draft unmerged,PASS,PR 64
+ELG-03,candidate lineage,exact SHA ancestry,PASS,29585b7b692818243f59d9f0e3c0dc572597fd11
+ELG-04,application freeze,Git tree unchanged,PASS,2b64a7ecaae3b5c86cb465fd00a952e8f48d04bd
+ELG-05,H09-A checksums,11 documents verified,PASS,CHECKSUMS_H09_A
+ELG-06,presented artifact,hash and internal verification,PASS,3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf
+ELG-07,clean rebuild,artifact matches presented,PASS,3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf
+ELG-08,candidate suite,49 files and 248 tests,PASS,6311d45ccc64c237e950dcc700461b400df40ce21caab6274889b9ed1f056322
+ELG-09,source CI,Node 22 and Node 24,PASS,30114749454
+ELG-10,H09-A final CI,Node 22 and Node 24,PASS,30121891627
+ELG-11,independent checkpoint,no blocking findings,PASS,H09-A
+ELG-12,claim discipline,3 supported; 5 reserved; 2 not claimed,PASS,claims matrix
+ELG-13,debt governance,28 accepted; zero authorized,PASS,debt register
+ELG-14,M1-M4 continuity,four missions,PASS,mission matrix
+ELG-15,version and schemas,0.9.0-unreleased; schema 0.8.0-alpha.2,PASS,version policy
+ELG-16,candidate documentation,guides limits and scope,PASS,H09-6
+ELG-17,publication boundary,artifact remains unpublished,PASS,governance
+ELG-18,scope boundary,no functional or infrastructure expansion,PASS,git and results

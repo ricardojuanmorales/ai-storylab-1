@@ -1,0 +1,7 @@
+finding_id,category,description,classification,target,disposition
+H09-2-F01,suite,candidate suite frozen at 49 files and 248 tests,RESOLVED,none,manifest controls drift
+H09-2-F02,reproducibility,two clean semantic builds are equivalent,RESOLVED,none,binary reproducibility remains H09-5
+H09-2-F03,runtime,Node 22 and 24 pass candidate suite,RESOLVED,none,Node 25 and 26 remain not claimed
+H09-2-F04,browser,browser support remains unvalidated,ROUTED,H09-3/H09-5,not blocking H09-2
+H09-2-F05,security,candidate security revalidation remains pending,ROUTED,H09-4,no security claim added
+H09-2-F06,artifact,binary ZIP reproducibility not claimed,ROUTED,H09-5,semantic baseline only

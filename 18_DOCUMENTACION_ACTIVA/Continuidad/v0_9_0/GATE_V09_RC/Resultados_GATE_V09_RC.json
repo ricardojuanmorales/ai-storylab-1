@@ -1,0 +1,116 @@
+{
+  "project": "AI StoryLab 1",
+  "version": "v0.9.0",
+  "hito": "GATE-V09-RC",
+  "status": "GATE_EVIDENCE_COMPLETE_HUMAN_REVIEW_PENDING",
+  "entry_head": "fa7ae966596243c6f97e60478386868bdcdf49d6",
+  "candidate_source_head": "29585b7b692818243f59d9f0e3c0dc572597fd11",
+  "PR": 64,
+  "gate_result": "PASS_WITH_EXPLICIT_RESERVATIONS",
+  "candidate_eligibility": "ELIGIBLE_FOR_SEPARATE_POST_GATE_HUMAN_DECISIONS",
+  "hard_criteria": {
+    "count": 18,
+    "passed": 18,
+    "failed": 0,
+    "items": [
+      "human_authorization_verified",
+      "PR_open_draft_and_unmerged",
+      "candidate_lineage_verified",
+      "application_tree_frozen",
+      "H09_A_documentary_checksums_verified",
+      "presented_artifact_verified",
+      "clean_gate_rebuild_matches_presented",
+      "candidate_suite_49_248_passed",
+      "source_CI_Node_22_24_passed",
+      "H09_A_final_CI_Node_22_24_passed",
+      "H09_A_checkpoint_approved_by_evidence",
+      "claims_discipline_preserved",
+      "accepted_debt_governance_preserved",
+      "M1_M4_continuity_preserved",
+      "version_and_schema_contracts_consistent",
+      "candidate_documentation_complete",
+      "artifact_remains_unpublished",
+      "no_functional_or_infrastructure_expansion"
+    ]
+  },
+  "reservations": {
+    "count": 8,
+    "preserved": 8,
+    "items": [
+      "artifact publication",
+      "cross OS binary identity",
+      "browser support",
+      "Windows support",
+      "file protocol",
+      "manual screen reader",
+      "participant usability",
+      "organizational independence"
+    ]
+  },
+  "claims": {
+    "reviewed": 10,
+    "disposition_counts": {
+      "SUPPORTED": 3,
+      "SUPPORTED_WITH_RESERVATIONS": 5,
+      "NOT_CLAIMED": 2
+    }
+  },
+  "debt": {
+    "accepted_non_blocking_items": 28,
+    "blocking_items": 0,
+    "implementation_authorized": false
+  },
+  "missions": {
+    "reviewed": 4,
+    "ids": [
+      "M1",
+      "M2",
+      "M3",
+      "M4"
+    ]
+  },
+  "presented_artifact": {
+    "status": "PASS",
+    "sha256": "3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf",
+    "source_commit": "29585b7b692818243f59d9f0e3c0dc572597fd11",
+    "publication_status": "UNPUBLISHED_CANDIDATE_EVIDENCE"
+  },
+  "clean_gate_verification": {
+    "status": "PASS",
+    "test_files": 49,
+    "tests": 248,
+    "artifact_sha256": "3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf",
+    "matches_presented": true
+  },
+  "source_CI": {
+    "run": 30114749454,
+    "head": "29585b7b692818243f59d9f0e3c0dc572597fd11",
+    "conclusion": "success"
+  },
+  "H09_A_final_CI": {
+    "run": 30121891627,
+    "head": "fa7ae966596243c6f97e60478386868bdcdf49d6",
+    "conclusion": "success"
+  },
+  "blocking_findings": [],
+  "recommendation": "PASS_GATE_V09_RC_WITH_EXPLICIT_RESERVATIONS_AND_AUTHORIZE_FINAL_DOCUMENTARY_CLOSURE",
+  "functional_changes": false,
+  "app_tree_changes": false,
+  "repairs": false,
+  "debt_implementation": false,
+  "schema_changes": false,
+  "dependency_changes": false,
+  "workflow_changes": false,
+  "artifact_publication": false,
+  "Ready_for_Review": false,
+  "merge": false,
+  "tag": false,
+  "RC_created": false,
+  "release": false,
+  "formal_v0_9_closure": "PENDING_FINAL_DOCUMENTARY_CLOSURE_AFTER_HUMAN_GATE_DECISION",
+  "session_documentary_closure": "PENDING_FINAL_DOCUMENTARY_CLOSURE_AFTER_HUMAN_GATE_DECISION",
+  "final_closure_must_be_last_commit": true,
+  "next_movement": {
+    "FINAL_DOCUMENTARY_CLOSURE": "BLOCKED_PENDING_HUMAN_GATE_DECISION"
+  }
+}

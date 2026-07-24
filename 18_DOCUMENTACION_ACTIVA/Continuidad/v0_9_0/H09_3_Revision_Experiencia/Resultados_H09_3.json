@@ -1,0 +1,64 @@
+{
+  "project": "AI StoryLab 1",
+  "version": "v0.9.0",
+  "hito": "H09-3",
+  "status": "AUTOMATED_EVIDENCE_COMPLETE_HUMAN_REVIEW_PENDING",
+  "entry_head": "c0bea6ce13d6f856bf10aee4b7540ea9c93fa7d7",
+  "PR": 64,
+  "candidate_suite": {
+    "test_files": 49,
+    "tests": 248,
+    "status": "PASS"
+  },
+  "focused_review": {
+    "test_files": 14,
+    "tests": 45,
+    "status": "PASS"
+  },
+  "static_review": {
+    "mission_count": 4,
+    "status": "PASS",
+    "checks": {
+      "four_missions_present": true,
+      "ethical_limits_visible": true,
+      "revisable_narrative_architecture": true,
+      "authorship_and_context_preserved": true,
+      "private_reflection_not_required": true,
+      "human_confirmation_for_export": true,
+      "skip_link_focus_tested": true,
+      "keyboard_reachability_tested": true,
+      "accessibility_preferences_tested": true,
+      "human_decision_not_preselected": true,
+      "multimodality_without_publication": true,
+      "curation_reversible": true,
+      "private_reflections_excluded_from_transfer": true,
+      "accessibility_script_present": true,
+      "candidate_verify_preserved": true
+    }
+  },
+  "methodology": {
+    "participant_research": false,
+    "real_user_data": false,
+    "expert_non_research_review": true,
+    "browser_support_claimed": false,
+    "educational_effectiveness_claimed": false
+  },
+  "blocking_findings": [],
+  "recommendation": "APPROVE_H09_3_WITH_EXPLICIT_RESERVATIONS",
+  "reservations": [
+    "real_browser_keyboard_and_visual_review_pending",
+    "manual_screen_reader_review_not_performed",
+    "full_numeric_contrast_review_pending",
+    "participant_usability_not_studied",
+    "browser_support_not_claimed"
+  ],
+  "routed_findings": [
+    "browser_visual_validation_to_H09_5",
+    "security_privacy_dependencies_to_H09_4",
+    "pedagogical_debt_reconciliation_to_H09_6",
+    "closed_package_review_to_H09_A"
+  ],
+  "next_hito": {
+    "H09_4": "BLOCKED_PENDING_HUMAN_AUTHORIZATION"
+  }
+}

@@ -1,0 +1,413 @@
+{
+  "project": "AI StoryLab 1",
+  "version": "v0.9.0",
+  "hito": "H09-4",
+  "status": "EVIDENCE_COMPLETE_HUMAN_REVIEW_PENDING",
+  "entry_head": "51205b53ed5684def651de7af0651290e67bc16f",
+  "PR": 64,
+  "locked_install": {
+    "status": "PASS",
+    "command": "npm ci --ignore-scripts",
+    "package_lock_sha256": "b904c19fbd5d88a98118ab1319c5a75eeb584e84fefff2bf7d729edad6ca3a32",
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "os": "Darwin 25.5.0 arm64",
+    "lifecycle_scripts_executed": false
+  },
+  "candidate_suite": {
+    "test_files": 49,
+    "tests": 248,
+    "status": "PASS"
+  },
+  "security_tests": {
+    "status": "PASS",
+    "command_exit_code": 0,
+    "test_files": 49,
+    "passed_test_files": 49,
+    "tests": 248,
+    "passed_tests": 248
+  },
+  "source_audits": {
+    "architecture": {
+      "status": "PASS",
+      "scannedFiles": 70,
+      "layers": [
+        "domain",
+        "ports",
+        "application",
+        "adapters",
+        "presentation",
+        "schemas"
+      ],
+      "requiredDirectories": [
+        "src/domain",
+        "src/ports",
+        "src/application",
+        "src/adapters",
+        "src/presentation",
+        "src/schemas"
+      ],
+      "runtimeDependencies": [
+        "react",
+        "react-dom"
+      ],
+      "allowedRuntimeDependencies": [
+        "react",
+        "react-dom"
+      ],
+      "bundledValidationDependencies": [
+        "ajv",
+        "ajv-formats"
+      ],
+      "authorizedStoragePaths": [
+        "src/main.tsx",
+        "src/adapters/storage/local-storage-project-repository.ts"
+      ],
+      "errors": [],
+      "_command_exit_code": 0
+    },
+    "secrets": {
+      "status": "PASS",
+      "scannedFiles": 180,
+      "errors": [],
+      "_command_exit_code": 0
+    },
+    "privacy": {
+      "status": "PASS",
+      "scannedFiles": 94,
+      "scannedRoots": [
+        "src/domain",
+        "src/ports",
+        "src/application",
+        "src/adapters",
+        "src/presentation",
+        "src/fixtures",
+        "src/schemas"
+      ],
+      "standaloneFiles": [
+        "src/main.tsx"
+      ],
+      "scannedExtensions": [
+        ".ts",
+        ".tsx",
+        ".json"
+      ],
+      "policyDataMode": "synthetic_only",
+      "fixtureEvidence": {
+        "scannedFiles": 14,
+        "allMarkedSynthetic": true,
+        "unmarkedFiles": []
+      },
+      "durablePersistenceSelected": true,
+      "durablePersistencePaths": [
+        "src/main.tsx"
+      ],
+      "authorizedDurablePersistencePaths": [
+        "src/main.tsx",
+        "src/adapters/storage/local-storage-project-repository.ts"
+      ],
+      "schemaValidationOnLoadRequired": true,
+      "deferredCapabilitiesEnabled": false,
+      "personalIdentifierFieldsDetected": false,
+      "runtimeLoggingDetected": false,
+      "networkAccessDetected": false,
+      "heuristicLimitAcknowledged": true,
+      "errors": [],
+      "_command_exit_code": 0
+    },
+    "vertical_slice": {
+      "status": "PASS",
+      "checkpointCandidate": "H08-5.5",
+      "requiredFiles": [
+        "src/domain/mission-catalog.ts",
+        "src/application/creative-cycle.ts",
+        "src/application/creative-cycle-contracts.ts",
+        "src/application/curation-record.ts",
+        "src/application/preview-export.ts",
+        "src/application/portfolio-projection.ts",
+        "src/application/portfolio-export.ts",
+        "src/application/portfolio-import.ts",
+        "src/application/portfolio-import-staging.ts",
+        "src/application/portfolio-semantic-equivalence.ts",
+        "src/application/recover-project.ts",
+        "src/adapters/storage/local-storage-project-repository.ts",
+        "src/schemas/runtime-validators.ts",
+        "src/presentation/App.tsx",
+        "src/presentation/ArcSummary.tsx",
+        "src/presentation/PortfolioTransferPanel.tsx",
+        "src/presentation/arc-summary-model.ts",
+        "src/presentation/MissionNavigation.tsx",
+        "src/presentation/MissionOneWorkspace.tsx",
+        "src/presentation/MissionTwoWorkspace.tsx",
+        "src/presentation/MissionThreeWorkspace.tsx",
+        "src/presentation/MissionFourWorkspace.tsx",
+        "src/presentation/MissionWorkspace.tsx",
+        "src/presentation/mission-workspace-model.ts",
+        "src/tests/presentation.arc-summary.test.tsx",
+        "src/tests/presentation.portfolio-transfer.test.tsx",
+        "src/tests/integration.full-arc-local-first.test.tsx",
+        "src/tests/integration.portfolio-transfer-local-first.test.tsx",
+        "src/tests/presentation.mission-engine.test.tsx",
+        "src/tests/presentation.m2-cycle.test.tsx",
+        "src/tests/presentation.m3-cycle.test.tsx",
+        "src/tests/presentation.m4-cycle.test.tsx",
+        "src/tests/integration.m2-local-first.test.tsx",
+        "src/tests/integration.m3-local-first.test.tsx",
+        "src/tests/integration.m4-local-first.test.tsx",
+        "src/tests/integration.local-first.test.tsx"
+      ],
+      "canonicalMissionCount": 4,
+      "functionalMissionCount": 4,
+      "integrationEvidence": {
+        "realPersistenceAdapter": true,
+        "recoveryAfterRemount": true,
+        "exportPrivacy": true,
+        "corruptionHandling": true,
+        "quotaHandling": true,
+        "explicitDelete": true,
+        "reusableMissionEngine": true,
+        "sharedMissionNavigation": true,
+        "m2CompleteCycle": true,
+        "m2SingularEvidence": true,
+        "m2RecoveryAfterRemount": true,
+        "m3MultipleEvidence": true,
+        "m3IndependentDecisions": true,
+        "m3SyntheticMetadataOnly": true,
+        "m3RecoveryAfterRemount": true,
+        "m4SingleCurationRecord": true,
+        "m4AcceptedEvidenceSelection": true,
+        "m4PortfolioOrdering": true,
+        "m4RecordOnlyDecision": true,
+        "m4ConceptualHandoffOnly": true,
+        "m4RecoveryAfterRemount": true,
+        "fullArcSummary": true,
+        "fullArcCompletion": true,
+        "fullArcRecoveryAfterRemount": true,
+        "finalPreviewFromAnyMission": true,
+        "privateReflectionsExcludedFromFinalPreview": true,
+        "portfolioOrderPreservedAcrossRecovery": true,
+        "upstreamReopenInvalidatesCurationClosure": true,
+        "actualHandoffFile": true,
+        "confirmedLocalDownload": true,
+        "importAsLocalCopy": true,
+        "semanticRoundtrip": true,
+        "portfolioRecoveryAfterRemount": true
+      },
+      "deferredCapabilities": {
+        "binaryStorage": false,
+        "mediaUpload": false,
+        "networkAccess": false,
+        "automaticDownload": false,
+        "automaticImport": false,
+        "publish": false
+      },
+      "errors": [],
+      "_command_exit_code": 0
+    }
+  },
+  "dependency_audits": {
+    "production": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "all": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "tree": {
+      "status": "PASS",
+      "command_exit_code": 0,
+      "unique_name_version_pairs": 183,
+      "problems": []
+    },
+    "licenses": {
+      "status": "PASS",
+      "packages": 117,
+      "direct_production": 2,
+      "direct_development": 13,
+      "transitive": 102,
+      "unknown_or_unlicensed": [],
+      "lifecycle_script_packages": []
+    }
+  },
+  "compatibility": {
+    "status": "PASS",
+    "checks": {
+      "package_lock_version_at_least_3": true,
+      "root_lock_matches_package_name": true,
+      "root_lock_matches_package_version": true,
+      "root_lock_matches_node_engine": true,
+      "runtime_dependencies_match_architecture_allowlist": true,
+      "no_non_registry_direct_specs": true,
+      "no_non_registry_resolved_packages": true,
+      "all_remote_packages_have_integrity": true,
+      "privacy_audit_no_network": true,
+      "privacy_audit_no_runtime_logging": true,
+      "privacy_audit_no_personal_identifiers": true,
+      "fixtures_are_synthetic": true
+    },
+    "declared_node_engine": ">=22 <27",
+    "validated_node_majors": [
+      22,
+      24
+    ],
+    "node_25_26_claimed": false,
+    "browser_support_claimed": false,
+    "operating_system_support": {
+      "ubuntu_ci": "EVIDENCE_AVAILABLE",
+      "local_operator": "POINT_EVIDENCE_ONLY",
+      "windows": "NOT_CLAIMED"
+    },
+    "runtime_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "allowed_runtime_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "non_registry_direct_specs": {},
+    "non_registry_resolved_packages": [],
+    "missing_integrity": [],
+    "lockfile_lifecycle_marked_packages": [
+      "node_modules/fsevents"
+    ]
+  },
+  "assessment": {
+    "status": "PASS_WITH_EXPLICIT_RESERVATIONS",
+    "recommendation": "APPROVE_H09_4_WITH_EXPLICIT_RESERVATIONS",
+    "blocking_findings": [],
+    "reservations": [
+      "browser_support_not_claimed",
+      "dependency_audit_is_time_bound_to_execution",
+      "node_25_26_not_claimed",
+      "security_audits_are_not_absolute_guarantees",
+      "windows_support_not_claimed"
+    ],
+    "resolved_findings": [
+      "architecture_audit",
+      "candidate_suite_integrity",
+      "compatibility_supply_chain_integrity",
+      "dependency_license_metadata_present",
+      "dependency_tree_integrity",
+      "focused_security_tests",
+      "no_dependency_lifecycle_scripts_declared",
+      "no_high_or_critical_production_vulnerabilities",
+      "privacy_audit",
+      "secrets_audit",
+      "vertical_slice_audit"
+    ],
+    "production_audit_counts": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "all_dependency_audit_counts": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "security_tests": {
+      "status": "PASS",
+      "command_exit_code": 0,
+      "test_files": 49,
+      "passed_test_files": 49,
+      "tests": 248,
+      "passed_tests": 248
+    },
+    "dependency_tree": {
+      "status": "PASS",
+      "command_exit_code": 0,
+      "unique_name_version_pairs": 183,
+      "problems": []
+    },
+    "license_summary": {
+      "status": "PASS",
+      "packages": 117,
+      "direct_production": 2,
+      "direct_development": 13,
+      "transitive": 102,
+      "unknown_or_unlicensed": [],
+      "lifecycle_script_packages": []
+    },
+    "compatibility": {
+      "status": "PASS",
+      "checks": {
+        "package_lock_version_at_least_3": true,
+        "root_lock_matches_package_name": true,
+        "root_lock_matches_package_version": true,
+        "root_lock_matches_node_engine": true,
+        "runtime_dependencies_match_architecture_allowlist": true,
+        "no_non_registry_direct_specs": true,
+        "no_non_registry_resolved_packages": true,
+        "all_remote_packages_have_integrity": true,
+        "privacy_audit_no_network": true,
+        "privacy_audit_no_runtime_logging": true,
+        "privacy_audit_no_personal_identifiers": true,
+        "fixtures_are_synthetic": true
+      },
+      "declared_node_engine": ">=22 <27",
+      "validated_node_majors": [
+        22,
+        24
+      ],
+      "node_25_26_claimed": false,
+      "browser_support_claimed": false,
+      "operating_system_support": {
+        "ubuntu_ci": "EVIDENCE_AVAILABLE",
+        "local_operator": "POINT_EVIDENCE_ONLY",
+        "windows": "NOT_CLAIMED"
+      },
+      "runtime_dependencies": [
+        "react",
+        "react-dom"
+      ],
+      "allowed_runtime_dependencies": [
+        "react",
+        "react-dom"
+      ],
+      "non_registry_direct_specs": {},
+      "non_registry_resolved_packages": [],
+      "missing_integrity": [],
+      "lockfile_lifecycle_marked_packages": [
+        "node_modules/fsevents"
+      ]
+    },
+    "policy": {
+      "production_high_or_critical": "BLOCKING",
+      "tooling_high_or_critical": "HUMAN_REVIEW",
+      "moderate": "CONTEXTUAL",
+      "low": "DOCUMENTABLE"
+    }
+  },
+  "blocking_findings": [],
+  "reservations": [
+    "browser_support_not_claimed",
+    "dependency_audit_is_time_bound_to_execution",
+    "node_25_26_not_claimed",
+    "security_audits_are_not_absolute_guarantees",
+    "windows_support_not_claimed"
+  ],
+  "recommendation": "APPROVE_H09_4_WITH_EXPLICIT_RESERVATIONS",
+  "repairs": {
+    "performed": false,
+    "authorized": false
+  },
+  "next_hito": {
+    "H09_5": "BLOCKED_PENDING_HUMAN_AUTHORIZATION"
+  }
+}

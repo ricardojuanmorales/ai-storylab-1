@@ -1,0 +1,11 @@
+item_id,surface,before,after,result
+DOC-01,README raíz,stale H08/PR60,current v0.9.0,RESOLVED
+DOC-02,README runtime,stale H08-2.5,current M1-M4,RESOLVED
+VER-01,app package,0.8.0-alpha.1,0.9.0-unreleased,RESOLVED
+VER-02,app lock,0.8.0-alpha.1,0.9.0-unreleased,RESOLVED
+VER-03,schema,0.8.0-alpha.2,0.8.0-alpha.2,PRESERVED
+VER-04,root package,0.3.0,historical excluded,RESOLVED_BY_ROLE
+GUIDE-01,user guide,absent,created,RESOLVED
+GUIDE-02,technical guide,fragmented,created,RESOLVED
+DEBT-01,primary debt register,fragmented historical,28 items,RESOLVED
+SCOPE-01,v1.0 scope,implicit,declared,RESOLVED

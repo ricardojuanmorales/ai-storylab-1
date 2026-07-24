@@ -1,0 +1,47 @@
+{
+  "project": "AI StoryLab 1",
+  "version": "v0.9.0",
+  "hito": "H09-0",
+  "manifest_type": "ACTIVATION_DOCUMENTARY_PACKAGE",
+  "status": "APPROVED_AND_AUTHORIZED",
+  "created_on": "2026-07-24",
+  "protocol": {
+    "version": "3.2",
+    "canonical_path": "00_CONTROL_MAESTRO/Protocolos_Operacion/Protocolo_Trabajo_v3_2_AI_StoryLab_1.md"
+  },
+  "entry": {
+    "branch": "main",
+    "head": "f0996d0bd79c4bd70d9a802ce4cbf67b5c076419"
+  },
+  "phase_branch": "feat/v0.9-h09-0-rc-readiness",
+  "commit_message": "docs(h09-0): activate v0.9 and add approved roadmap",
+  "containing_commit_sha": "RECORDED_OUTSIDE_REPOSITORY_BY_OPERATOR_STATE",
+  "authorized": [
+    "H09-0 activation",
+    "phase branch creation",
+    "first documentary commit"
+  ],
+  "blocked": [
+    "push without separate authorization",
+    "Draft PR",
+    "functional work",
+    "H09-1",
+    "GATE-V09-RC"
+  ],
+  "files": [
+    "00_CONTROL_MAESTRO/Estado_Gobernanza_Documental/Decision_Humana_Aprobacion_y_Activacion_v0_9_0_2026_07_24.md",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_9_0/Kit_Inicio_Continuidad_H09_0_AI_StoryLab_1/README.md",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_9_0/Kit_Inicio_Continuidad_H09_0_AI_StoryLab_1/Plan_Ruta_v0_9_0_AI_StoryLab_1.md",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_9_0/Kit_Inicio_Continuidad_H09_0_AI_StoryLab_1/Estado_Canonico_Apertura_v0_9_0.md",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_9_0/Kit_Inicio_Continuidad_H09_0_AI_StoryLab_1/Matriz_Continuidad_H09_0_v0_9_0.md",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_9_0/Kit_Inicio_Continuidad_H09_0_AI_StoryLab_1/MANIFEST_ACTIVACION_H09_0.json",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_9_0/Kit_Inicio_Continuidad_H09_0_AI_StoryLab_1/CHECKSUMS_ACTIVACION_H09_0.sha256",
+    "18_DOCUMENTACION_ACTIVA/Continuidad/v0_9_0/Kit_Inicio_Continuidad_H09_0_AI_StoryLab_1/CI_DOCUMENTAL_H09_0.md"
+  ],
+  "scope": {
+    "documentary_only": true,
+    "functional_changes": false,
+    "workflow_changes": false,
+    "dependency_changes": false
+  }
+}
