@@ -1,0 +1,13 @@
+sequence,class,command,exit_code,duration_seconds,result
+1,REQUIRED,npm ci --ignore-scripts,0,4,PASS
+2,REQUIRED,npm run verify,0,19,PASS
+3,REQUIRED,npm run test:accessibility,0,3,PASS
+4,REQUIRED,npm run test:security,0,1,PASS
+5,REQUIRED,npm run test:cycle,0,3,PASS
+6,REQUIRED,npm run test:persistence,0,1,PASS
+7,REQUIRED,npm run test:recovery-ui,0,3,PASS
+8,REQUIRED,npm run test:integration,0,4,PASS
+9,REQUIRED,npm run test:offline,0,0,PASS
+10,REQUIRED,npm run test,0,16,PASS
+11,DIAGNOSTIC,npm ls --all,0,1,PASS
+12,DIAGNOSTIC,npm audit --json,1,1,FINDING

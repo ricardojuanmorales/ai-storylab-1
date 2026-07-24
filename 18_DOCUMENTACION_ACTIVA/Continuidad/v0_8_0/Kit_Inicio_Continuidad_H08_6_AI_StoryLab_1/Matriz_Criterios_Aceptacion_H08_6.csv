@@ -1,0 +1,11 @@
+id,dado,cuando,entonces,evidencia
+AC-KIT-01,ZIP y prompt disponibles,se inicia conversacion nueva,se carga ambos artefactos,conversacion
+AC-KIT-02,kit cargado,se verifican checksums,todos coinciden,CHECKSUMS
+AC-BASE-01,main remoto consultado,se compara con el kit,HEAD es ae93ccef94506724559b8df7b1ccdfeb0489a927,GitHub
+AC-ATT-01,atestacion heredada,humano la revisa,estado post-merge aceptado o cuestionado,acta
+AC-PROT-01,protocolo y bitacora leidos,se abre alineamiento,v3.1 se ratifica o se propone revision,decision humana
+AC-ALIGN-01,hechos e inferencias separados,se dialoga alcance,existe acuerdo humano suficiente,acta
+AC-SCOPE-01,alineamiento completado,se formula H08-6,alcance y no alcance son explicitos,spec
+AC-PR-01,alcance ratificado,se define rama y PR,un PR cubre el gran hito,GitHub
+AC-COMMIT-01,acuerdo humano,se crea primer commit,solo contiene kit y activacion,diff
+AC-NOCODE-01,antes del primer commit,se revisa el diff,no hay cambios funcionales,diff

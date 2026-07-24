@@ -1,0 +1,19 @@
+criterion_id,criterion,machine_status,evidence,human_status
+GATE-01,experiencia_completa,SUPPORTED,H08-6.6 regression and full verify,ACCEPTED_BY_GATE_DECISION
+GATE-02,perfil_minimo_local,SUPPORTED,integrated application tests,ACCEPTED_BY_GATE_DECISION
+GATE-03,M1_M4_estables,SUPPORTED,cycle and presentation regression,ACCEPTED_BY_GATE_DECISION
+GATE-04,persistencia_recuperable,SUPPORTED,persistence and recovery suites,ACCEPTED_BY_GATE_DECISION
+GATE-05,portafolio_curado_reversible,SUPPORTED,portfolio and integration evidence,ACCEPTED_BY_GATE_DECISION
+GATE-06,roundtrip_validado,SUPPORTED,export/import semantic roundtrip,ACCEPTED_BY_GATE_DECISION
+GATE-07,schemas_versionados,SUPPORTED,schema and parity tests,ACCEPTED_BY_GATE_DECISION
+GATE-08,pruebas_unitarias_integracion,SUPPORTED,49 files; 248 tests,ACCEPTED_BY_GATE_DECISION
+GATE-09,manejo_de_errores,SUPPORTED,safe errors and recovery evidence,ACCEPTED_BY_GATE_DECISION
+GATE-10,accesibilidad_verificada,SUPPORTED,H08-6.2 and H08-6.6,ACCEPTED_BY_GATE_DECISION
+GATE-11,seguridad_privacidad,SUPPORTED,H08-6.3 and npm audit,ACCEPTED_BY_GATE_DECISION
+GATE-12,documentacion_tecnica_actual,SUPPORTED,H08-6.5,ACCEPTED_BY_GATE_DECISION
+GATE-13,trazabilidad_SDD,SUPPORTED,canonical traceability index,ACCEPTED_BY_GATE_DECISION
+GATE-14,deuda_visible,SUPPORTED,H08-6.1 through H08-6A records,ACCEPTED_BY_GATE_DECISION
+GATE-15,revision_PH_IT_AT,SUPPORTED,human confirmed PASS,ACCEPTED_BY_GATE_DECISION
+GATE-16,checkpoint_independiente,SUPPORTED,H08-6A human PASS,ACCEPTED_BY_GATE_DECISION
+GATE-17,ausencia_datos_reales,SUPPORTED,local-first synthetic-data boundary,ACCEPTED_BY_GATE_DECISION
+GATE-18,ausencia_release_estable_prematuro,SUPPORTED,PR remains Draft,ACCEPTED_BY_GATE_DECISION

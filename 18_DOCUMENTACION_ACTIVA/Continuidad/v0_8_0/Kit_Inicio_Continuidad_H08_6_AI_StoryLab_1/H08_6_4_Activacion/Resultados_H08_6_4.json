@@ -1,0 +1,179 @@
+{
+  "hito": "H08-6.4",
+  "authorization_token": "AUTORIZO_H08_6_4",
+  "generated_at": "2026-07-23T22:35:00.811341+00:00",
+  "overall_status": "PASS_WITH_ROUTED_MAINTENANCE",
+  "required_failures": 0,
+  "blocking_findings": 0,
+  "build_reproducible": true,
+  "lock_reproducible": true,
+  "source_tree_clean": true,
+  "ci_action_runtime_present": true,
+  "metrics": {
+    "verify_pass_1_seconds": 17,
+    "verify_pass_2_seconds": 16,
+    "verify_duration_ratio": 1.0625,
+    "build_repeat_1_seconds": 0,
+    "build_repeat_2_seconds": 0,
+    "dist_files": 3,
+    "dist_total_bytes": 483460,
+    "largest_asset": {
+      "path": "assets/index-Cu9NCcun.js",
+      "bytes": 467818,
+      "sha256": "d2f526309649dfc639c854d5bfb09e3e78e9a71e17d5f8c32c5a3035e55f5b35"
+    },
+    "verify_test_counts": {
+      "files": 49,
+      "tests": 248
+    },
+    "persistence_test_counts": {
+      "files": 3,
+      "tests": 28
+    },
+    "recovery_ui_test_counts": {
+      "files": 2,
+      "tests": 5
+    },
+    "integration_test_counts": {
+      "files": 2,
+      "tests": 7
+    },
+    "offline_test_counts": {
+      "files": 1,
+      "tests": 1
+    },
+    "security_test_counts": {
+      "files": 49,
+      "tests": 248
+    }
+  },
+  "findings": [
+    {
+      "id": "PERF_BASE_001",
+      "domain": "performance",
+      "status": "RESOLVED",
+      "severity": "NONE",
+      "evidence": "verify=17s/16s; build=0s/0s; dist=483460 bytes in 3 files",
+      "blocking": false,
+      "route": "NONE"
+    },
+    {
+      "id": "RESILIENCE_BASE_001",
+      "domain": "resilience",
+      "status": "PASS",
+      "severity": "NONE",
+      "evidence": "persistence, recovery UI, integration, offline and security commands executed",
+      "blocking": false,
+      "route": "NONE"
+    },
+    {
+      "id": "REPRO_BUILD_001",
+      "domain": "reproducibility",
+      "status": "PASS",
+      "severity": "NONE",
+      "evidence": "two clean production builds compared byte-for-byte",
+      "blocking": false,
+      "route": "NONE"
+    },
+    {
+      "id": "LOCK_REPRO_001",
+      "domain": "reproducibility",
+      "status": "PASS",
+      "severity": "NONE",
+      "evidence": "package-lock SHA-256 before and after npm ci",
+      "blocking": false,
+      "route": "NONE"
+    },
+    {
+      "id": "SEC_DEP_001",
+      "domain": "dependency_security",
+      "status": "VERIFIED_RESOLVED",
+      "severity": "NONE",
+      "evidence": "npm audit and integrated verify executed after H08-6.3",
+      "blocking": false,
+      "route": "NONE"
+    },
+    {
+      "id": "CI_ACTION_RUNTIME_001",
+      "domain": "ci_maintenance",
+      "status": "ROUTED_NON_BLOCKING",
+      "severity": "LOW",
+      "evidence": "actions/checkout@v4 or actions/setup-node@v4 remains present",
+      "blocking": false,
+      "route": "H08-6.5"
+    }
+  ],
+  "commands": [
+    {
+      "name": "npm_ci",
+      "exit_code": 0,
+      "duration_seconds": 2,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_4_Evidencia_20260723_223358/logs/01_npm_ci.log"
+    },
+    {
+      "name": "npm_audit",
+      "exit_code": 0,
+      "duration_seconds": 1,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_4_Evidencia_20260723_223358/logs/02_npm_audit.log"
+    },
+    {
+      "name": "verify_pass_1",
+      "exit_code": 0,
+      "duration_seconds": 17,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_4_Evidencia_20260723_223358/logs/03_verify_pass_1.log"
+    },
+    {
+      "name": "resilience_persistence",
+      "exit_code": 0,
+      "duration_seconds": 1,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_4_Evidencia_20260723_223358/logs/04_resilience_persistence.log"
+    },
+    {
+      "name": "resilience_recovery_ui",
+      "exit_code": 0,
+      "duration_seconds": 3,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_4_Evidencia_20260723_223358/logs/05_resilience_recovery_ui.log"
+    },
+    {
+      "name": "resilience_integration",
+      "exit_code": 0,
+      "duration_seconds": 3,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_4_Evidencia_20260723_223358/logs/06_resilience_integration.log"
+    },
+    {
+      "name": "resilience_offline",
+      "exit_code": 0,
+      "duration_seconds": 1,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_4_Evidencia_20260723_223358/logs/07_resilience_offline.log"
+    },
+    {
+      "name": "resilience_security",
+      "exit_code": 0,
+      "duration_seconds": 13,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_4_Evidencia_20260723_223358/logs/08_resilience_security.log"
+    },
+    {
+      "name": "verify_pass_2",
+      "exit_code": 0,
+      "duration_seconds": 16,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_4_Evidencia_20260723_223358/logs/09_verify_pass_2.log"
+    },
+    {
+      "name": "build_repeat_1",
+      "exit_code": 0,
+      "duration_seconds": 0,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_4_Evidencia_20260723_223358/logs/10_build_repeat_1.log"
+    },
+    {
+      "name": "build_repeat_2",
+      "exit_code": 0,
+      "duration_seconds": 0,
+      "log": "/Users/ricardomoralesdejesus/Downloads/H08_6_4_Evidencia_20260723_223358/logs/11_build_repeat_2.log"
+    }
+  ],
+  "repairs_authorized": false,
+  "H08_6_5": "CLOSED",
+  "Ready_for_Review": "NOT_AUTHORIZED",
+  "merge": "NOT_AUTHORIZED",
+  "GATE_V08_CLOSE": "NOT_AUTHORIZED"
+}

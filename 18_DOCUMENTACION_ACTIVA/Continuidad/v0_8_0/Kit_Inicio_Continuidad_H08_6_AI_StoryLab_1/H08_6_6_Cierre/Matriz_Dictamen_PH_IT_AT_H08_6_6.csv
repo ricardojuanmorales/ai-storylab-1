@@ -1,0 +1,10 @@
+role,criterion_id,criterion,automated_evidence,machine_status,human_status
+PH,PH-01,agencia humana y salida legítima,"recovery UI, lifecycle and accessibility tests",SUPPORTED,CONFIRMED_BY_HUMAN_TOKEN
+PH,PH-02,"pausa, retiro y reversibilidad","recovery, import staging and confirmation flows",SUPPORTED,CONFIRMED_BY_HUMAN_TOKEN
+PH,PH-03,lenguaje no coercitivo ni productividad forzada,static alert matches=1,REVIEW_MATCHES,CONFIRMED_BY_HUMAN_TOKEN
+IT,IT-01,ficción diferenciada de dato real,privacy and safe-error audits,SUPPORTED,CONFIRMED_BY_HUMAN_TOKEN
+IT,IT-02,"no investigación, medición o clasificación implícita",measurement-language matches=0,SUPPORTED_WITH_HUMAN_REVIEW,CONFIRMED_BY_HUMAN_TOKEN
+IT,IT-03,trazabilidad y límites local-first,network surface matches=0; offline and security tests,SUPPORTED_WITH_HUMAN_REVIEW,CONFIRMED_BY_HUMAN_TOKEN
+AT,AT-01,apertura creativa y multiplicidad de ritmos,creative-cycle and M1-M4 presentation tests,SUPPORTED,CONFIRMED_BY_HUMAN_TOKEN
+AT,AT-02,derecho a borrador e incompletitud,"persistence, recovery and portfolio tests",SUPPORTED,CONFIRMED_BY_HUMAN_TOKEN
+AT,AT-03,accesibilidad expresiva y error como material recuperable,"accessibility, safe-error and recovery tests",SUPPORTED,CONFIRMED_BY_HUMAN_TOKEN

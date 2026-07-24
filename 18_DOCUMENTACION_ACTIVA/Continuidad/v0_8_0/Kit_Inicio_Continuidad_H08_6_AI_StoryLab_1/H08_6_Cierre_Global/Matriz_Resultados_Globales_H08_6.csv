@@ -1,0 +1,16 @@
+phase,commit,subject,status
+H08-6.0,e3a51465c58e782b42e862ad912b4afd6e56b28a,docs(h08-6): activate stabilization plan and continuity kit,PUBLISHED
+H08-6,ca49010d4de6985226d23512044c047143e4defc,docs(h08-6.1): close baseline audit with accepted routing,PUBLISHED
+H08-6,2b9a8f02f5b5b1b4e584d51c9d181b891e8c479c,fix(h08-6.2): improve secondary text legibility,PUBLISHED
+H08-6.2,e6d433907379259acbfae60367792571f3303a06,docs(h08-6): close accessibility and open security review,PUBLISHED
+H08-6.3,186874e3c9c27a343e40fb02dd91726ac35b22a9,fix(h08-6.3): remediate dependency and security coverage,PUBLISHED
+H08-6.3,38a876eb82c5368c4e6e6b5c0a6e5c9c02023117,docs(h08-6.3): record security repairs for review,PUBLISHED
+H08-6.3,f1a384c25e628a1df5db89d194e557bee325766c,docs(h08-6.3): close security and privacy review,PUBLISHED
+H08-6.4,5335e8e2c4d2044db5683b7bfab2381cc333fd3f,docs(h08-6.4): establish performance and resilience baseline,PUBLISHED
+H08-6.4,31d1e9223daaf2502444c6c4368c08a9e1f3703e,docs(h08-6.4): close performance and resilience review,PUBLISHED
+H08-6.5,e5af2fbfd68cbf365f891d68b3495aa8e823c18e,ci(h08-6.5): update actions runtime,PUBLISHED
+H08-6.5,f88bf774b76ab88f4d540861bb8477561e5a3503,docs(h08-6.5): close documentation and traceability review,PUBLISHED
+H08-6.6,06bf5cdb13407f0422c5679de87197647c0f312b,docs(h08-6.6): publish integrated regression and PH-IT-AT review,PUBLISHED
+H08-6.6,d05c4d45f090c18f96f95da84b93a58b1eff18ed,docs(h08-6.6): close integrated regression and PH-IT-AT review,PUBLISHED
+H08-6A,72e0d6b446d83a1e017e65a23d7650d0760bb846,docs(h08-6A): publish independent checkpoint evidence,PUBLISHED
+H08-6A,bcd8fd7b5ff4abadec05ebbc9902c96af1e67ed1,docs(h08-6A): record human checkpoint verdict,PUBLISHED

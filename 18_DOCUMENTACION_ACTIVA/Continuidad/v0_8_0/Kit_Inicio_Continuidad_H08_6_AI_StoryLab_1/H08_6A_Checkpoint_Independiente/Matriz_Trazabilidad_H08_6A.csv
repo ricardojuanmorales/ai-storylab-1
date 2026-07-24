@@ -1,0 +1,8 @@
+id,domain,status,severity,evidence,blocking,route
+CHECKPOINT_VERIFY_001,automated_verification,PASS,NONE,3 required commands executed,False,NONE
+CHECKPOINT_BRANCH_001,branch_integrity,PASS,NONE,ahead=13; behind=0,False,NONE
+CHECKPOINT_CLOSURES_001,closure_chain,PASS,NONE,required H08-6 closure artifacts present,False,NONE
+CHECKPOINT_TRACE_001,commit_traceability,PASS,NONE,13 commits inventoried,False,NONE
+CHECKPOINT_VERSION_001,versioning,PASS,NONE,package=0.8.0-alpha.1; lock=0.8.0-alpha.1,False,NONE
+CHECKPOINT_CLEAN_001,reproducibility,PASS,NONE,verification preserved clean source tree,False,NONE
+CHECKPOINT_INDEPENDENCE_001,independence,PROCEDURAL_INDEPENDENCE_CONFIRMED,DISCLOSURE,cold review from immutable head; no product changes; not an external third-party audit,False,HUMAN_VERDICT

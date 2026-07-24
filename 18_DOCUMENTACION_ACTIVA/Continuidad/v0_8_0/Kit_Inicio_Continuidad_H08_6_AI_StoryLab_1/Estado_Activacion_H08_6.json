@@ -1,0 +1,13 @@
+{
+  "unit": "H08-6.0",
+  "date": "2026-07-23",
+  "status": "HUMAN_APPROVED_FOR_DOCUMENTARY_ACTIVATION",
+  "repository": "ricardojuanmorales/ai-storylab-1",
+  "baseline": "ae93ccef94506724559b8df7b1ccdfeb0489a927",
+  "branch": "feat/v0.8-h08-6-stabilization",
+  "first_commit_scope": "KIT_AND_ACTIVATION_ONLY",
+  "functional_changes": false,
+  "single_draft_PR": true,
+  "H08_6_1": "CLOSED_PENDING_SEPARATE_HUMAN_AUTHORIZATION",
+  "PR_comments": "HUMAN_ONLY"
+}

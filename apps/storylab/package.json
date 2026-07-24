@@ -21,7 +21,7 @@
     "test:adapters": "vitest run src/tests/adapters.*.test.ts",
     "test:presentation": "vitest run src/tests/presentation.*.test.tsx",
     "test:accessibility": "vitest run src/tests/domain.accessibility.test.ts src/tests/application.accessibility.test.ts src/tests/presentation.shell.test.tsx src/tests/presentation.portfolio-transfer.test.tsx",
-    "test:security": "vitest run src/tests/application.safe-error.test.ts",
+    "test:security": "vitest run src/tests/adapters.browser-file-download.test.ts src/tests/adapters.browser-untrusted-local-file.test.ts src/tests/adapters.in-memory.test.ts src/tests/adapters.local-storage.test.ts src/tests/adapters.storage-contracts.test.ts src/tests/adapters.storage-recovery.test.ts src/tests/adapters.system.test.ts src/tests/adapters.web-crypto-sha256.test.ts src/tests/application.accessibility.test.ts src/tests/application.contract-limits.test.ts src/tests/application.create-project.test.ts src/tests/application.creative-cycle.test.ts src/tests/application.lifecycle.test.ts src/tests/application.portfolio-export.test.ts src/tests/application.portfolio-import-compatibility.test.ts src/tests/application.portfolio-import-preflight.test.ts src/tests/application.portfolio-import-staging.test.ts src/tests/application.portfolio-import.test.ts src/tests/application.portfolio-package-utils.test.ts src/tests/application.portfolio-projection.test.ts src/tests/application.portfolio-semantic-equivalence.test.ts src/tests/application.recovery-export.test.ts src/tests/application.safe-error.test.ts src/tests/domain.accessibility.test.ts src/tests/domain.invariants.test.ts src/tests/integration.full-arc-local-first.test.tsx src/tests/integration.local-first.test.tsx src/tests/integration.m2-local-first.test.tsx src/tests/integration.m3-local-first.test.tsx src/tests/integration.m4-local-first.test.tsx src/tests/integration.persistence-hardening.test.ts src/tests/integration.portfolio-roundtrip.test.ts src/tests/integration.portfolio-transfer-local-first.test.tsx src/tests/offline.guard.test.ts src/tests/parity.test.ts src/tests/presentation.arc-summary.test.tsx src/tests/presentation.m1-cycle.test.tsx src/tests/presentation.m2-cycle.test.tsx src/tests/presentation.m3-cycle.test.tsx src/tests/presentation.m4-cycle.test.tsx src/tests/presentation.mission-engine.test.tsx src/tests/presentation.portfolio-transfer.test.tsx src/tests/presentation.recovery-export.test.tsx src/tests/presentation.secondary-text-legibility.test.tsx src/tests/presentation.shell.test.tsx src/tests/schemas.contract.test.ts src/tests/schemas.migration.test.ts src/tests/schemas.portfolio-package.test.ts src/tests/schemas.runtime-validation.test.ts",
     "audit:architecture": "node tools/audit-architecture.mjs",
     "audit:secrets": "node tools/audit-secrets.mjs",
     "audit:privacy": "node tools/audit-privacy.mjs",
@@ -50,5 +50,8 @@
     "typescript": "7.0.2",
     "vite": "8.1.4",
     "vitest": "4.1.10"
+  },
+  "overrides": {
+    "fast-uri": "3.1.4"
   }
 }

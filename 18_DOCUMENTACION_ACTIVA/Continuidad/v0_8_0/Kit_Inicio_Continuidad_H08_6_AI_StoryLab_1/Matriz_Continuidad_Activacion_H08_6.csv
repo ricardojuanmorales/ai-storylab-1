@@ -1,0 +1,9 @@
+item,estado_entrada,autoridad,evidencia,efecto_H08_6_0
+Plan de ruta,APROBADO,Humano,Decision_Humana_Aprobacion_Plan_Ruta_H08_6_2026_07_23.md,Arquitectura certificada
+Baseline main,CONFIRMADO,Máquina,ae93ccef94506724559b8df7b1ccdfeb0489a927,Rama autorizada desde baseline
+PR 62,MERGED,Máquina y humano,merge commit ae93ccef94506724559b8df7b1ccdfeb0489a927,H08-5 transferido
+H08-5,CLOSED_AND_MERGED,Humano,kit y atestación post-merge,Capacidades heredadas protegidas
+H08-6.0,AUTHORIZED,Humano,aprobación explícita,Publicación documental permitida
+H08-6.1,CLOSED,Humano,Plan de Ruta H08-6,Requiere autorización separada
+Cambios funcionales,PROHIBITED,Humano,Protocolo efectivo,Ninguno en primer commit
+Comentarios PR,HUMAN_ONLY,Humano,Protocolo efectivo,IA solo prepara borradores
