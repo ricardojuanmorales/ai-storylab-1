@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "AI_STORYLAB_1_V09_H09_A_INDEPENDENT_CHECKPOINT",
+  "project": "AI StoryLab 1",
+  "projectReleaseLine": "v0.9.0",
+  "candidateSourceHead": "29585b7b692818243f59d9f0e3c0dc572597fd11",
+  "H09_7DocumentaryHead": "dce29b57b0a70b3da34b542682373c693007faba",
+  "documentaryClosureHead": "RESOLVED_BY_OPERATOR",
+  "independenceMode": "PROCEDURAL_EVIDENCE_FIRST_NOT_EXTERNAL_THIRD_PARTY",
+  "presentedArtifact": {
+    "sha256": "3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf",
+    "status": "PASS",
+    "sourceCommit": "29585b7b692818243f59d9f0e3c0dc572597fd11"
+  },
+  "independentRebuild": {
+    "status": "PASS",
+    "independence_mode": "PROCEDURAL_EVIDENCE_FIRST_NOT_EXTERNAL_THIRD_PARTY",
+    "candidate_source_head": "29585b7b692818243f59d9f0e3c0dc572597fd11",
+    "test_files": 49,
+    "tests": 248,
+    "candidate_suite_status": "PASS",
+    "independent_artifact_sha256": "3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf",
+    "presented_artifact_sha256": "3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf",
+    "artifact_identity_matches_presented": true,
+    "internal_verification": "PASS",
+    "application_files": 3,
+    "entries": 7,
+    "size_bytes": 486552,
+    "dist_manifest_sha256": "32c48badd0aee620f3b2f27f056d1ec0eb5981bcff24742d9f431b908255100b",
+    "test_inventory_sha256": "6311d45ccc64c237e950dcc700461b400df40ce21caab6274889b9ed1f056322",
+    "package_lock_sha256": "364ff396ab46b84c6eabc1ddf41f076ee772fd338bf6fa4e999582a3ccac52f1",
+    "evidence_chain": {
+      "H09_1_to_H09_7_documents_loaded": 7,
+      "results_with_blocking_findings": 0,
+      "freeze_rows": 8,
+      "claims_reviewed": 10,
+      "claim_disposition_counts": {
+        "SUPPORTED": 3,
+        "SUPPORTED_WITH_RESERVATIONS": 5,
+        "NOT_CLAIMED": 2
+      },
+      "H09_7_findings_reviewed": 9,
+      "blocking_H09_7_findings": 0,
+      "accepted_debt_items": 28,
+      "blocking_debt_items": 0,
+      "debt_implementation_authorized": false,
+      "mission_rows": 4
+    },
+    "reservations_confirmed": [
+      "artifact_not_published",
+      "cross_os_binary_reproducibility_not_demonstrated",
+      "browser_support_not_claimed",
+      "windows_support_not_claimed",
+      "file_protocol_not_claimed",
+      "manual_screen_reader_review_not_performed",
+      "participant_usability_not_studied",
+      "organizational_third_party_independence_not_claimed"
+    ],
+    "blocking_findings": []
+  },
+  "sourceCI": {
+    "run": 30114749454,
+    "head": "29585b7b692818243f59d9f0e3c0dc572597fd11",
+    "conclusion": "success"
+  },
+  "H09_7FinalCI": {
+    "run": 30120162846,
+    "head": "dce29b57b0a70b3da34b542682373c693007faba",
+    "conclusion": "success"
+  },
+  "reviewCriteria": 14,
+  "reservations": 8,
+  "blockingFindings": [],
+  "recommendation": "APPROVE_H09_A_WITH_EXPLICIT_RESERVATIONS_AND_FORWARD_TO_HUMAN_GATE_AUTHORIZATION_DECISION"
+}

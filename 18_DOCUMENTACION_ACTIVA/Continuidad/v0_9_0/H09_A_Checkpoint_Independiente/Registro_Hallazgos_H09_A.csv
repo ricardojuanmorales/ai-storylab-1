@@ -1,0 +1,13 @@
+finding_id,category,description,classification,target
+H09-A-F01,lineage,candidate and closure lineage verified,RESOLVED,none
+H09-A-F02,application freeze,Git tree identity verified,RESOLVED,none
+H09-A-F03,presented artifact,hash and manifest verified,RESOLVED,none
+H09-A-F04,independent rebuild,artifact identity reproduced,RESOLVED,none
+H09-A-F05,candidate suite,49 files and 248 tests pass,RESOLVED,none
+H09-A-F06,source and closure CI,Node 22 and Node 24 pass,RESOLVED,none
+H09-A-F07,cross OS identity,not demonstrated,RESERVATION,preserve
+H09-A-F08,browser Windows file protocol,not claimed,RESERVATION,preserve
+H09-A-F09,assistive technology,manual review pending,RESERVATION,preserve
+H09-A-F10,participant usability,not studied,RESERVATION,preserve
+H09-A-F11,organizational independence,not claimed,RESERVATION,preserve
+H09-A-F12,publication and gate,not authorized,BOUNDARY,human decision

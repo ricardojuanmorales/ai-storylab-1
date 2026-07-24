@@ -1,0 +1,15 @@
+review_id,surface,criterion,result,evidence
+REV-01,authorization and protocol,separate H09-A authorization,PASS,decision
+REV-02,candidate lineage,candidate is ancestor of H09-7 closure,PASS,29585b7b692818243f59d9f0e3c0dc572597fd11
+REV-03,application freeze,same Git tree object,PASS,2b64a7ecaae3b5c86cb465fd00a952e8f48d04bd
+REV-04,H09-7 documentary checksums,10 entries verified,PASS,CHECKSUMS_H09_7
+REV-05,presented ZIP integrity,hash and internal verification,PASS,3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf
+REV-06,independent clean reconstruction,49 files and 248 tests,PASS,3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf
+REV-07,artifact identity,independent equals presented,PASS,True
+REV-08,source CI,Node 22 and Node 24,PASS,30114749454
+REV-09,H09-7 final CI,Node 22 and Node 24,PASS,30120162846
+REV-10,claim discipline,supported reserved and not claimed,PASS_WITH_RESERVATIONS,10 claims
+REV-11,pedagogical debt governance,28 accepted; zero authorized,PASS,debt register
+REV-12,M1-M4 continuity,four missions and human decisions,PASS,mission matrix
+REV-13,publication boundary,artifact remains unpublished,PASS,governance
+REV-14,independence boundary,not external third party,RESERVATION,explicit
