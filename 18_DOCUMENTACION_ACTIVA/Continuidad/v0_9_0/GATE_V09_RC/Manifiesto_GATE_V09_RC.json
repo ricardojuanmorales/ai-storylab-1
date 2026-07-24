@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "AI_STORYLAB_1_V09_GATE_V09_RC",
+  "project": "AI StoryLab 1",
+  "projectReleaseLine": "v0.9.0",
+  "gate": "GATE-V09-RC",
+  "candidateSourceHead": "29585b7b692818243f59d9f0e3c0dc572597fd11",
+  "H09_ADocumentaryHead": "fa7ae966596243c6f97e60478386868bdcdf49d6",
+  "gateDocumentaryHead": "RESOLVED_BY_OPERATOR",
+  "candidateArtifactSha256": "3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf",
+  "gateResult": "PASS_WITH_EXPLICIT_RESERVATIONS",
+  "candidateEligibility": "ELIGIBLE_FOR_SEPARATE_POST_GATE_HUMAN_DECISIONS",
+  "hardCriteria": {
+    "count": 18,
+    "passed": 18,
+    "failed": 0,
+    "items": [
+      "human_authorization_verified",
+      "PR_open_draft_and_unmerged",
+      "candidate_lineage_verified",
+      "application_tree_frozen",
+      "H09_A_documentary_checksums_verified",
+      "presented_artifact_verified",
+      "clean_gate_rebuild_matches_presented",
+      "candidate_suite_49_248_passed",
+      "source_CI_Node_22_24_passed",
+      "H09_A_final_CI_Node_22_24_passed",
+      "H09_A_checkpoint_approved_by_evidence",
+      "claims_discipline_preserved",
+      "accepted_debt_governance_preserved",
+      "M1_M4_continuity_preserved",
+      "version_and_schema_contracts_consistent",
+      "candidate_documentation_complete",
+      "artifact_remains_unpublished",
+      "no_functional_or_infrastructure_expansion"
+    ]
+  },
+  "reservations": {
+    "count": 8,
+    "preserved": 8,
+    "items": [
+      "artifact publication",
+      "cross OS binary identity",
+      "browser support",
+      "Windows support",
+      "file protocol",
+      "manual screen reader",
+      "participant usability",
+      "organizational independence"
+    ]
+  },
+  "blockingFindings": [],
+  "RC_created": false,
+  "artifactPublished": false,
+  "ReadyForReviewAuthorized": false,
+  "mergeAuthorized": false,
+  "formalV09Closure": "PENDING_FINAL_DOCUMENTARY_CLOSURE",
+  "sessionDocumentaryClosure": "PENDING_FINAL_DOCUMENTARY_CLOSURE",
+  "finalClosureMustBeLastCommit": true,
+  "recommendation": "PASS_GATE_V09_RC_WITH_EXPLICIT_RESERVATIONS_AND_AUTHORIZE_FINAL_DOCUMENTARY_CLOSURE"
+}

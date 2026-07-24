@@ -1,0 +1,15 @@
+finding_id,category,description,classification,target
+GATE-F01,authorization,gate authorized separately,RESOLVED,none
+GATE-F02,candidate lineage,SHA and Git tree verified,RESOLVED,none
+GATE-F03,artifact,presented ZIP verified,RESOLVED,none
+GATE-F04,clean rebuild,artifact identity reproduced,RESOLVED,none
+GATE-F05,candidate suite,49 files and 248 tests pass,RESOLVED,none
+GATE-F06,CI chain,Node 22 and Node 24 pass,RESOLVED,none
+GATE-F07,claim discipline,supported reserved and unclaimed preserved,RESOLVED,none
+GATE-F08,debt governance,28 items remain unimplemented,RESOLVED,none
+GATE-F09,cross OS identity,not demonstrated,RESERVATION,preserve
+GATE-F10,platform and browser support,not claimed,RESERVATION,preserve
+GATE-F11,human studies and assistive review,not performed,RESERVATION,preserve
+GATE-F12,publication,not authorized,BOUNDARY,separate human decision
+GATE-F13,RC creation,not authorized,BOUNDARY,separate human decision
+GATE-F14,formal closure,not yet executed,BOUNDARY,final documentary closure
