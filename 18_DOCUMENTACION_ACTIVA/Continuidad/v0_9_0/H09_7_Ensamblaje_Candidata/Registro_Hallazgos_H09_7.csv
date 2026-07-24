@@ -1,0 +1,10 @@
+finding_id,category,description,classification,target
+H09-7-F01,frozen regression,two clean runs match,RESOLVED,none
+H09-7-F02,candidate artifact,internally verified,RESOLVED,none
+H09-7-F03,Node 22/24,same Ubuntu artifact hash,RESOLVED,none
+H09-7-F04,cross OS identity,not demonstrated,RESERVATION,H09-A
+H09-7-F05,browser Windows file protocol,not claimed,RESERVATION,H09-A
+H09-7-F06,assistive technology,manual screen reader pending,RESERVATION,H09-A
+H09-7-F07,participant usability,not studied,RESERVATION,future governed research
+H09-7-F08,independent checkpoint,not executed,BOUNDARY,H09-A
+H09-7-F09,publication,not authorized,BOUNDARY,separate human decision

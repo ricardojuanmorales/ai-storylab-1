@@ -1,0 +1,11 @@
+claim_id,claim,status,boundary,evidence_route
+CLM-01,build and install,SUPPORTED,Node 22/24,H09-2; H09-7
+CLM-02,local-first and privacy,SUPPORTED,synthetic no network,H09-3; H09-4
+CLM-03,persistence recovery roundtrip,SUPPORTED,candidate suite,H09-2; H09-7
+CLM-04,human agency and reversibility,SUPPORTED_WITH_RESERVATIONS,PH review,H09-3
+CLM-05,accessibility baseline,SUPPORTED_WITH_RESERVATIONS,automated contracts,H09-3
+CLM-06,security and dependencies,SUPPORTED_WITH_RESERVATIONS,time-bound audits,H09-4
+CLM-07,deterministic packaging,SUPPORTED_WITH_RESERVATIONS,same-environment evidence,H09-5; H09-7
+CLM-08,documentation and versioning,SUPPORTED_WITH_RESERVATIONS,canonical package,H09-6
+CLM-09,browser Windows file protocol,NOT_CLAIMED,not validated,H09-1; H09-6
+CLM-10,educational effectiveness,NOT_CLAIMED,no participant research,H09-3; H09-6

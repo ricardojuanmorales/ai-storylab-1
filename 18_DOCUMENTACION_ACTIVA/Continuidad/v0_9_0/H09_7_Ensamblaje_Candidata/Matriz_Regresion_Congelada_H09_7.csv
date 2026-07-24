@@ -1,0 +1,9 @@
+freeze_id,surface,reference,result,evidence
+FRZ-01,candidate_source_head,29585b7b692818243f59d9f0e3c0dc572597fd11,PASS,git head
+FRZ-02,application_tree,2b64a7ecaae3b5c86cb465fd00a952e8f48d04bd,PASS,git tree object
+FRZ-03,test_inventory,6311d45ccc64c237e950dcc700461b400df40ce21caab6274889b9ed1f056322,PASS,49 files; 248 tests
+FRZ-04,package_lock,364ff396ab46b84c6eabc1ddf41f076ee772fd338bf6fa4e999582a3ccac52f1,PASS,two clean runs
+FRZ-05,dist_manifest,32c48badd0aee620f3b2f27f056d1ec0eb5981bcff24742d9f431b908255100b,PASS,two clean runs
+FRZ-06,local_binary_artifact,3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf,PASS,two clean runs
+FRZ-07,ubuntu_node_22_24,ac84f63d9f11dd3c076c96aaca874cb587218f40a11900bce176cbccbf9fb216,PASS,CI 30114749454
+FRZ-08,cross_os_identity,macOS vs Ubuntu,NOT_DEMONSTRATED,explicit reservation
