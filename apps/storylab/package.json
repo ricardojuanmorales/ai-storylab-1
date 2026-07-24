@@ -1,9 +1,9 @@
 {
   "name": "@ai-storylab/storylab-baseline",
   "private": true,
-  "version": "0.8.0-alpha.1",
+  "version": "0.9.0-unreleased",
   "type": "module",
-  "description": "Vertical slice local-first de AI StoryLab 1 consolidada mediante pruebas integradas y evidencia automática para H08-2A.",
+  "description": "AI StoryLab 1 v0.9.0-unreleased: arco creativo local-first M1-M4, agencia humana, privacidad, reversibilidad y empaquetado verificable.",
   "engines": {
     "node": ">=22 <27"
   },

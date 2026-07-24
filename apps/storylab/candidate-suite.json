@@ -78,6 +78,18 @@
     "candidateVersion": "0.9.0-unreleased",
     "fixedZipTimestamp": "1980-01-01T00:00:00Z",
     "binaryReproducibilityRequired": true,
-    "versionDriftStatus": "PENDING_H09_6"
+    "versionDriftStatus": "RESOLVED_FOR_CANONICAL_APPLICATION"
+  },
+  "versionPolicy": {
+    "projectReleaseLine": "v0.9.0",
+    "canonicalApplicationPackage": "apps/storylab",
+    "canonicalApplicationVersion": "0.9.0-unreleased",
+    "currentSchemaVersion": "0.8.0-alpha.2",
+    "previousSchemaVersion": "0.8.0-alpha.1",
+    "schemaVersionIndependentFromApplicationVersion": true,
+    "legacyRootPackageVersion": "0.3.0",
+    "legacyRootPackageStatus": "HISTORICAL_NON_CANONICAL_EXCLUDED_FROM_CANDIDATE",
+    "RCVersionAssigned": false,
+    "stableV1VersionAssigned": false
   }
 }
