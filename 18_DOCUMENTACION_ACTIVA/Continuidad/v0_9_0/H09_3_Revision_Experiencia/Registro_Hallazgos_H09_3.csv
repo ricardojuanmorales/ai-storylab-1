@@ -1,0 +1,9 @@
+finding_id,category,description,classification,target,disposition
+H09-3-F01,accessibility,landmarks focus keyboard preferences and legibility pass,RESOLVED,none,machine evidence
+H09-3-F02,human_agency,decisions remain human and reversible,RESOLVED,none,PH evidence
+H09-3-F03,transdisciplinary_integrity,M1-M4 retain differentiated connected purposes,RESOLVED,none,source and tests
+H09-3-F04,browser,real browser keyboard and visual behavior not yet demonstrated,RESERVATION,H09-5,support remains not claimed
+H09-3-F05,assistive_technology,manual screen reader session not performed,RESERVATION,human review or H09-A,do not claim universal accessibility
+H09-3-F06,contrast,all visual states not numerically measured,RESERVATION,H09-5,automated contract only
+H09-3-F07,usability,no participant research or empirical usability evidence,EXPECTED_LIMIT,future separately governed research,no effectiveness claims
+H09-3-F08,pedagogical_representation,expanded glossary tools ludic activities and specialized views absent,ACCEPTED_NON_BLOCKING_EPISTEMOLOGICAL_PEDAGOGICAL_DEBT,H09-6 and post-v1,not implementation backlog

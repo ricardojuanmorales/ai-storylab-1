@@ -1,0 +1,13 @@
+criterion_id,dimension,criterion,evidence,result,method,reservation
+PH-01,PH,decisión creativa humana,no preselección y cierres humanos,PASS,automated,none
+PH-02,PH,reflexión privada,opcional y excluida de la transferencia,PASS,automated,none
+PH-03,PH,reversibilidad,reapertura M1-M4 y curaduría actualizable,PASS,automated,none
+IT-01,IT,operación local-first,offline guard y ausencia de red,PASS,automated,none
+IT-02,IT,persistencia y recuperación,repositorio real y recuperación tras remontar,PASS,automated,none
+IT-03,IT,integridad del arco,M1-M4 y roundtrip semántico,PASS,automated,none
+AT-01,AT,landmarks y navegación,banner nav main contentinfo,PASS,automated,none
+AT-02,AT,teclado y foco,skip link y controles iniciales,PASS_WITH_RESERVATION,jsdom,real_browser_review_pending
+AT-03,AT,preferencias,contraste movimiento y escala,PASS_WITH_RESERVATION,automated,visual_measurement_pending
+AT-04,AT,legibilidad,escala compartida de texto secundario,PASS_WITH_RESERVATION,source_contract,full_visual_review_pending
+TD-01,transdisciplinary,M1-M4 conectadas,intención narrativa multimodalidad curaduría,PASS,source_and_tests,none
+US-01,authorized_usability,revisión experta no investigativa,contratos pruebas y heurísticas,PASS_WITH_RESERVATION,expert_review,no_participant_claims
