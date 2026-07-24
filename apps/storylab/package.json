@@ -31,7 +31,8 @@
     "test:recovery-ui": "vitest run src/tests/presentation.recovery-export.test.tsx src/tests/integration.portfolio-transfer-local-first.test.tsx",
     "test:integration": "vitest run src/tests/integration.local-first.test.tsx src/tests/integration.portfolio-transfer-local-first.test.tsx",
     "audit:vertical-slice": "node tools/audit-vertical-slice.mjs",
-    "verify:components": "npm run typecheck && npm run build && npm run audit:architecture && npm run audit:secrets && npm run audit:privacy && npm run audit:vertical-slice && npm run test"
+    "verify:components": "npm run typecheck && npm run build && npm run audit:architecture && npm run audit:secrets && npm run audit:privacy && npm run audit:vertical-slice && npm run test",
+    "package:candidate": "node tools/package-candidate.mjs"
   },
   "dependencies": {
     "react": "19.2.7",

@@ -162,8 +162,21 @@ if (inventorySha256 !== manifest.testInventorySha256) {
   );
 }
 
-const tempRoot = mkdtempSync(join(tmpdir(), "ai-storylab-h09-2-"));
+const tempRoot = mkdtempSync(join(tmpdir(), "ai-storylab-h09-5-"));
 const vitestReportPath = join(tempRoot, "vitest.json");
+const packageOnePath = join(tempRoot, "candidate-one.zip");
+const packageTwoPath = join(tempRoot, "candidate-two.zip");
+const packageOneReportPath = join(tempRoot, "candidate-one.json");
+const packageTwoReportPath = join(tempRoot, "candidate-two.json");
+const sourceCommit =
+  process.env.AI_STORYLAB_SOURCE_COMMIT ??
+  process.env.GITHUB_SHA;
+
+if (!sourceCommit || !/^[0-9a-f]{40}$/.test(sourceCommit)) {
+  throw new Error(
+    "AI_STORYLAB_SOURCE_COMMIT or GITHUB_SHA must be a full Git SHA",
+  );
+}
 
 try {
   run("npm", ["run", "typecheck"]);
@@ -198,6 +211,45 @@ try {
 
   const dist = buildDistManifest();
   const lockSha256 = sha256File(join(appRoot, "package-lock.json"));
+  const packageTool = join(appRoot, "tools", "package-candidate.mjs");
+  const candidateVersion =
+    manifest.artifactContract?.candidateVersion ??
+    "0.9.0-unreleased";
+
+  for (const [output, reportPath] of [
+    [packageOnePath, packageOneReportPath],
+    [packageTwoPath, packageTwoReportPath],
+  ]) {
+    run(process.execPath, [
+      packageTool,
+      "--source",
+      join(appRoot, "dist"),
+      "--output",
+      output,
+      "--commit",
+      sourceCommit,
+      "--candidate-version",
+      candidateVersion,
+      "--report",
+      reportPath,
+    ]);
+  }
+
+  const packageOne = JSON.parse(readFileSync(packageOneReportPath, "utf8"));
+  const packageTwo = JSON.parse(readFileSync(packageTwoReportPath, "utf8"));
+
+  if (
+    packageOne.status !== "PASS" ||
+    packageTwo.status !== "PASS" ||
+    packageOne.artifactSha256 !== packageTwo.artifactSha256 ||
+    sha256File(packageOnePath) !== sha256File(packageTwoPath)
+  ) {
+    throw new Error("Binary artifact mismatch");
+  }
+
+  process.stdout.write(
+    `AI_STORYLAB_CANDIDATE_ARTIFACT_SHA256=${packageOne.artifactSha256}\n`,
+  );
 
   const report = {
     schemaVersion: 1,
@@ -223,6 +275,18 @@ try {
       reproducibilityStandard: manifest.reproducibilityStandard,
       distManifestSha256: dist.sha256,
       files: dist.files,
+    },
+    artifact: {
+      status: "PASS",
+      format: "DETERMINISTIC_ZIP_STORE",
+      sourceCommit,
+      candidateVersion,
+      binaryReproducibility: "PASS",
+      artifactSha256: packageOne.artifactSha256,
+      artifactSize: packageOne.artifactSize,
+      entries: packageOne.entries,
+      applicationFiles: packageOne.applicationFiles,
+      manifest: packageOne.manifest,
     },
   };
 
