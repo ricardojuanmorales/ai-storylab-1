@@ -1,0 +1,30 @@
+{
+  "session": "H08-6 global closure and GATE-V08-CLOSE",
+  "date": "2026-07-23",
+  "entry_head": "bcd8fd7b5ff4abadec05ebbc9902c96af1e67ed1",
+  "H08_6": {
+    "state": "CLOSED",
+    "disposition": "PASS"
+  },
+  "GATE_V08_CLOSE": {
+    "outcome": "APPROVE_V09_ENTRY_PREPARATION",
+    "notes": "Sin reservas adicionales."
+  },
+  "v0_8_0": "CLOSED",
+  "v0_9_entry_preparation": "AUTHORIZED",
+  "technical_recommendation": "READY_FOR_HUMAN_GATE",
+  "blocking_findings": 0,
+  "full_test_files": 49,
+  "full_tests": 248,
+  "evidence_zip": "/Users/ricardomoralesdejesus/Downloads/H08_6_Global_GATE_V08_Evidencia_20260723_234759.zip",
+  "evidence_zip_sha256": "2b58ce840cdd186f6f05cc97a4e207e2b9440f05dbe3d1a9df75168cbe09c61a",
+  "protocol": {
+    "version": "3.2",
+    "status": "APROBADO_PARA_USO"
+  },
+  "session_state": "CLOSED_DOCUMENTALLY",
+  "PR": 63,
+  "PR_mode": "DRAFT",
+  "Ready_for_Review": "NOT_AUTHORIZED",
+  "merge": "NOT_AUTHORIZED"
+}

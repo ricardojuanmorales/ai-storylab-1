@@ -1,0 +1,14 @@
+unit,state,evidence_or_next_action
+H08-6.0,CLOSED,activation and continuity
+H08-6.1,CLOSED,integrated baseline and gaps
+H08-6.2,CLOSED,accessibility
+H08-6.3,CLOSED,security and privacy
+H08-6.4,CLOSED,performance and resilience
+H08-6.5,CLOSED,documentation and traceability
+H08-6.6,CLOSED,regression and PH-IT-AT
+H08-6A,CLOSED_PASS,procedural independent checkpoint
+H08-6_GLOBAL,CLOSED,PASS
+GATE-V08-CLOSE,APPROVE_V09_ENTRY_PREPARATION,Sin reservas adicionales.
+v0.8.0,CLOSED,AUTHORIZED
+Ready,NOT_AUTHORIZED,separate human decision
+merge,NOT_AUTHORIZED,separate human decision

@@ -1,0 +1,15 @@
+# Cierre global H08-6 y GATE-V08-CLOSE
+
+```yaml
+authorization: AUTORIZO_CIERRE_GLOBAL_H08_6_Y_EJECUCION_GATE_V08_CLOSE
+global_candidate_token: CONFIRMO_H08_6_GLOBAL_PASS_CANDIDATE
+H08_6: CLOSED
+GATE_V08_CLOSE: APPROVE_V09_ENTRY_PREPARATION
+v0_8_0: CLOSED
+v0_9_entry_preparation: AUTHORIZED
+protocol_current: v3.2
+PR: 63
+PR_mode: DRAFT
+Ready_for_Review: NOT_AUTHORIZED
+merge: NOT_AUTHORIZED
+```
