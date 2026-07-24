@@ -1,0 +1,15 @@
+category,target,status,evidence,disposition
+build_runtime,Node 22,PROPOSED_SUPPORTED,inherited CI matrix,ratify CP-V09-1
+build_runtime,Node 24,PROPOSED_SUPPORTED,inherited CI matrix and local v24.18.0,ratify CP-V09-1
+build_runtime,Node 25,NOT_CLAIMED,engine permits but no CI evidence,validate or exclude
+build_runtime,Node 26,NOT_CLAIMED,engine permits but no CI evidence,validate or exclude
+build_runtime,Node <=20,UNSUPPORTED,outside application engine and H09-1 preflight,exclude
+operating_system,ubuntu-latest,EVIDENCE_AVAILABLE,inherited GitHub Actions,revalidate H09-2
+operating_system,Darwin 25.5.0 arm64,POINT_EVIDENCE_AVAILABLE,local H09-1 verification,do not generalize
+operating_system,Windows,NOT_CLAIMED,no current evidence,future human decision
+browser,Chromium current stable,TARGET_VALIDATION,no browser automation,H09-3/H09-5
+browser,Firefox current or ESR,TARGET_VALIDATION,no browser automation,H09-3/H09-5
+browser,Safari current,TARGET_VALIDATION,no browser automation,H09-3/H09-5
+artifact,static dist ZIP,PROPOSED,Vite build outDir dist,verify H09-5
+serving,local HTTP server,PROPOSED,Vite preview model,verify H09-5
+serving,file URL,NOT_CLAIMED,no explicit evidence,do not promise

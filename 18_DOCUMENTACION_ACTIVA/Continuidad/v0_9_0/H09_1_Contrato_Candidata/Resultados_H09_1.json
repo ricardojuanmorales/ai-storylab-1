@@ -1,0 +1,50 @@
+{
+  "project": "AI StoryLab 1",
+  "version": "v0.9.0",
+  "hito": "H09-1",
+  "status": "EVIDENCE_PREPARED_FOR_CP_V09_1",
+  "entry_head": "138af5024951d809ce3a3ad91026b77447b17027",
+  "PR": 64,
+  "local_environment": {
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "os": "Darwin 25.5.0 arm64",
+    "verification": "PASS",
+    "test_files_reported": "not_parsed",
+    "tests_reported": "not_parsed"
+  },
+  "repository_facts": {
+    "root_version": "0.3.0",
+    "app_version": "0.8.0-alpha.1",
+    "app_node_engine": ">=22 <27",
+    "inherited_CI_nodes": [
+      22,
+      24
+    ],
+    "inherited_CI_os": "ubuntu-latest",
+    "vite_output_directory": "dist",
+    "package_lock_sha256": "b904c19fbd5d88a98118ab1319c5a75eeb584e84fefff2bf7d729edad6ca3a32"
+  },
+  "proposed_contract": {
+    "official_node_support": [
+      22,
+      24
+    ],
+    "node_not_claimed": [
+      25,
+      26
+    ],
+    "browser_status": "TARGET_VALIDATION",
+    "artifact": "static dist ZIP plus manifest and checksums",
+    "reproducibility": "semantic_before_binary"
+  },
+  "checkpoint": {
+    "name": "CP-V09-1",
+    "state": "PENDING_HUMAN_DECISION",
+    "H09_2": "BLOCKED"
+  },
+  "remote_CI": {
+    "state": "RESOLVED_BY_OPERATOR_AFTER_PUSH",
+    "binding": "operator state, evidence ZIP and PR checks"
+  }
+}
