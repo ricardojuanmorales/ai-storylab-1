@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "AI_STORYLAB_1_V09_CANDIDATE_PACKAGE",
+  "candidateVersion": "0.9.0-unreleased",
+  "publicationStatus": "UNPUBLISHED_CANDIDATE_EVIDENCE",
+  "applicationPackageVersion": "0.8.0-alpha.1",
+  "sourceCommit": "588fa20eb4e8a4a2f5e0682391ad7d352696f6fc",
+  "packagingFormat": "DETERMINISTIC_ZIP_STORE",
+  "fixedZipTimestamp": "1980-01-01T00:00:00Z",
+  "binaryReproducibilityTarget": true,
+  "versionDriftStatus": "PENDING_H09_6",
+  "supportClaims": {
+    "nodeBuildRuntime": [
+      22,
+      24
+    ],
+    "browserSupport": "NOT_CLAIMED",
+    "windowsSupport": "NOT_CLAIMED",
+    "fileProtocol": "NOT_CLAIMED"
+  },
+  "files": [
+    {
+      "path": "app/assets/index-Cu9NCcun.js",
+      "sha256": "d2f526309649dfc639c854d5bfb09e3e78e9a71e17d5f8c32c5a3035e55f5b35",
+      "size": 467818
+    },
+    {
+      "path": "app/assets/index-XgLtcM5W.css",
+      "sha256": "dd4a4147f26c8dc3c24865491599df526ba75b931d6cf9d5c7fd88f248474eec",
+      "size": 15138
+    },
+    {
+      "path": "app/index.html",
+      "sha256": "d3888a1444353c9fabbd1215193d484b4dd12c062308e34bca12b6b3d0f396d0",
+      "size": 504
+    }
+  ]
+}

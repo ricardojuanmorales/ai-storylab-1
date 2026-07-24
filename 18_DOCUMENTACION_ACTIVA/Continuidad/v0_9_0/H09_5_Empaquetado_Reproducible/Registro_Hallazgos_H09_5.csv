@@ -1,0 +1,8 @@
+id,category,classification,target
+H09-5-F01,binary_reproducibility,RESOLVED,none
+H09-5-F02,cross_node_reproducibility,RESOLVED,none
+H09-5-F03,artifact_integrity,RESOLVED,none
+H09-5-F04,cross_os_binary_identity,RESERVATION,H09-7/H09-A
+H09-5-F05,version_drift,ROUTED,H09-6
+H09-5-F06,browser_windows_file_protocol,RESERVATION,H09-7/H09-A
+H09-5-F07,publication,BOUNDARY,separate human decision

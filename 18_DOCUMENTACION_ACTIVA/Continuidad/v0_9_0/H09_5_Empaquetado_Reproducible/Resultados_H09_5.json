@@ -1,0 +1,95 @@
+{
+  "project": "AI StoryLab 1",
+  "version": "v0.9.0",
+  "hito": "H09-5",
+  "status": "EVIDENCE_COMPLETE_HUMAN_REVIEW_PENDING",
+  "entry_head": "eddc051c175997186097d232f05789fcea038f5c",
+  "functional_head": "588fa20eb4e8a4a2f5e0682391ad7d352696f6fc",
+  "PR": 64,
+  "artifact": {
+    "format": "DETERMINISTIC_ZIP_STORE",
+    "publication_status": "UNPUBLISHED_CANDIDATE_EVIDENCE",
+    "sha256": "5644bbb0addfb1e12c161d29fadd7b904fb8d19dd9e144419c5c693a80f6df8a",
+    "size": 486546,
+    "entries": 7,
+    "application_files": 3,
+    "manifest": {
+      "schemaVersion": 1,
+      "artifactId": "AI_STORYLAB_1_V09_CANDIDATE_PACKAGE",
+      "candidateVersion": "0.9.0-unreleased",
+      "publicationStatus": "UNPUBLISHED_CANDIDATE_EVIDENCE",
+      "applicationPackageVersion": "0.8.0-alpha.1",
+      "sourceCommit": "588fa20eb4e8a4a2f5e0682391ad7d352696f6fc",
+      "packagingFormat": "DETERMINISTIC_ZIP_STORE",
+      "fixedZipTimestamp": "1980-01-01T00:00:00Z",
+      "binaryReproducibilityTarget": true,
+      "versionDriftStatus": "PENDING_H09_6",
+      "supportClaims": {
+        "nodeBuildRuntime": [
+          22,
+          24
+        ],
+        "browserSupport": "NOT_CLAIMED",
+        "windowsSupport": "NOT_CLAIMED",
+        "fileProtocol": "NOT_CLAIMED"
+      },
+      "files": [
+        {
+          "path": "app/assets/index-Cu9NCcun.js",
+          "sha256": "d2f526309649dfc639c854d5bfb09e3e78e9a71e17d5f8c32c5a3035e55f5b35",
+          "size": 467818
+        },
+        {
+          "path": "app/assets/index-XgLtcM5W.css",
+          "sha256": "dd4a4147f26c8dc3c24865491599df526ba75b931d6cf9d5c7fd88f248474eec",
+          "size": 15138
+        },
+        {
+          "path": "app/index.html",
+          "sha256": "d3888a1444353c9fabbd1215193d484b4dd12c062308e34bca12b6b3d0f396d0",
+          "size": 504
+        }
+      ]
+    },
+    "internal_verification": "PASS"
+  },
+  "local_reproducibility": {
+    "status": "PASS",
+    "functional_head": "588fa20eb4e8a4a2f5e0682391ad7d352696f6fc",
+    "test_inventory_equal": true,
+    "lockfile_equal": true,
+    "dist_manifest_equal": true,
+    "binary_artifact_equal": true,
+    "artifact_size_equal": true,
+    "artifact_sha256": "5644bbb0addfb1e12c161d29fadd7b904fb8d19dd9e144419c5c693a80f6df8a",
+    "artifact_size": 486546,
+    "entries": 7,
+    "application_files": 3,
+    "dist_manifest_sha256": "32c48badd0aee620f3b2f27f056d1ec0eb5981bcff24742d9f431b908255100b"
+  },
+  "functional_CI": {
+    "run": 30109398826,
+    "node_22": "PASS",
+    "node_24": "PASS",
+    "cross_node_binary_reproducibility": "PASS",
+    "cross_os_binary_reproducibility": "NOT_DEMONSTRATED",
+    "artifact_sha256": "4015414e6f7734f66aa41f37090d2c23ced9bb764070887209b6d2bfbacec1fc",
+    "local_artifact_sha256": "5644bbb0addfb1e12c161d29fadd7b904fb8d19dd9e144419c5c693a80f6df8a",
+    "matches_local": false
+  },
+  "blocking_findings": [],
+  "reservations": [
+    "artifact_not_published",
+    "cross_os_binary_reproducibility_not_demonstrated",
+    "application_package_version_pending_H09_6",
+    "browser_support_not_claimed",
+    "windows_support_not_claimed",
+    "file_protocol_not_claimed",
+    "final_candidate_assembly_pending_H09_7",
+    "independent_review_pending_H09_A"
+  ],
+  "recommendation": "APPROVE_H09_5_WITH_EXPLICIT_RESERVATIONS",
+  "next_hito": {
+    "H09_6": "BLOCKED_PENDING_HUMAN_AUTHORIZATION"
+  }
+}
