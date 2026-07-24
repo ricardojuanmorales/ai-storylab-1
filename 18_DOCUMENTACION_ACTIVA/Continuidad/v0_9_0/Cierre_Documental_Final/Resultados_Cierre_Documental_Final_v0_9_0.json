@@ -1,0 +1,64 @@
+{
+  "project": "AI StoryLab 1",
+  "version": "v0.9.0",
+  "hito": "CIERRE-DOCUMENTAL-FINAL-V09",
+  "status": "FINAL_DOCUMENTARY_CLOSURE_PREPARED",
+  "entry_head": "8f39c4824b98646b10fbafb0b136418d860f69e1",
+  "final_documentary_head": "SELF_COMMIT_RESOLVED_AFTER_COMMIT",
+  "candidate_source_head": "29585b7b692818243f59d9f0e3c0dc572597fd11",
+  "candidate_application_tree": "2b64a7ecaae3b5c86cb465fd00a952e8f48d04bd",
+  "candidate_artifact_sha256": "3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf",
+  "gate": {
+    "result": "PASS_WITH_EXPLICIT_RESERVATIONS",
+    "hard_criteria_passed": 18,
+    "hard_criteria_failed": 0,
+    "reservations_preserved": 8,
+    "blocking_findings": 0
+  },
+  "formal_v0_9_closure": "CLOSED_BY_HUMAN_WITH_EXPLICIT_RESERVATIONS",
+  "session_documentary_closure": "CLOSED_BY_HUMAN",
+  "final_commit_is_last_session_commit": true,
+  "candidate_eligibility": "ELIGIBLE_FOR_SEPARATE_POST_GATE_HUMAN_DECISIONS",
+  "candidate_suite": {
+    "test_files": 49,
+    "tests": 248,
+    "status": "PASS"
+  },
+  "claims": {
+    "reviewed": 10,
+    "supported": 3,
+    "supported_with_reservations": 5,
+    "not_claimed": 2
+  },
+  "debt": {
+    "accepted_non_blocking_items": 28,
+    "blocking_items": 0,
+    "implementation_authorized": false
+  },
+  "missions_reviewed": 4,
+  "reservations": [
+    "artifact_not_published",
+    "cross_os_binary_reproducibility_not_demonstrated",
+    "browser_support_not_claimed",
+    "windows_support_not_claimed",
+    "file_protocol_not_claimed",
+    "manual_screen_reader_review_not_performed",
+    "participant_usability_not_studied",
+    "organizational_third_party_independence_not_claimed"
+  ],
+  "functional_changes": false,
+  "app_tree_changes": false,
+  "repairs": false,
+  "debt_implementation": false,
+  "schema_changes": false,
+  "dependency_changes": false,
+  "workflow_changes": false,
+  "artifact_publication": false,
+  "Ready_for_Review": false,
+  "merge": false,
+  "tag": false,
+  "RC_created": false,
+  "release": false,
+  "next_hito": null,
+  "pending_automatic_work": false
+}

@@ -14,21 +14,28 @@ artificial responsable.
 ```yaml
 project_release_line: v0.9.0
 project_version: 0.9.0-unreleased
-phase: RC_READINESS
-active_hito: H09-6
+phase: FORMALLY_CLOSED_WITH_EXPLICIT_RESERVATIONS
+active_hito: NONE
 PR: 64
 PR_mode: consolidated_draft
 canonical_runtime: apps/storylab
+candidate_source_head: 29585b7b692818243f59d9f0e3c0dc572597fd11
+candidate_artifact_sha256: 3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf
 candidate_suite:
   test_files: 49
   tests: 248
 supported_build_runtime:
   - Node 22
   - Node 24
+GATE_V09_RC: PASS_WITH_EXPLICIT_RESERVATIONS
+candidate_eligibility: ELIGIBLE_FOR_SEPARATE_POST_GATE_HUMAN_DECISIONS
 artifact_publication: false
 Ready_for_Review: false
 merge: false
-GATE_V09_RC: NOT_AUTHORIZED
+tag: false
+RC: false
+release: false
+session_documentary_closure: COMPLETE
 ```
 
 ## Runtime canónico
@@ -79,5 +86,7 @@ AI_STORYLAB_SOURCE_COMMIT="$(git rev-parse HEAD)" npm run verify
 
 ## Fronteras
 
-`v0.9.0-unreleased` no es una RC publicada ni una release estable. H09-7,
-H09-A y `GATE-V09-RC` requieren decisiones humanas separadas.
+`v0.9.0-unreleased` queda formalmente cerrado como fase validada con
+reservas explícitas. `GATE-V09-RC` pasó con reservas, pero no creó una RC,
+no publicó el artefacto y no autorizó Ready for Review, merge, tag o release.
+Cualquier movimiento posterior requiere una autorización humana nueva.
