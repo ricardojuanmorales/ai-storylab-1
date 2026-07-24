@@ -12,12 +12,18 @@ artificial responsable.
 ## Estado actual
 
 ```yaml
-project_release_line: v0.9.0
+project_release_line: v1.0.0
 project_version: 0.9.0-unreleased
-phase: FORMALLY_CLOSED_WITH_EXPLICIT_RESERVATIONS
-active_hito: NONE
-PR: 64
-PR_mode: consolidated_draft
+phase: V10_0_FORMALLY_ACTIVATED
+active_hito: V10-0
+branch: feat/v1.0-release-readiness
+PR: PENDING_DRAFT_CREATION_FROM_ACTIVATION_COMMIT
+PR_mode: single_consolidated_draft
+baseline_main_head: 83cd5983ad3e66d43a442c090ce95f3bb22ee968
+integrated_PR_64:
+  merged: true
+  merge_commit: 83cd5983ad3e66d43a442c090ce95f3bb22ee968
+post_merge_delta: EXPECTED_POST_SESSION_INTEGRATION_DELTA
 canonical_runtime: apps/storylab
 candidate_source_head: 29585b7b692818243f59d9f0e3c0dc572597fd11
 candidate_artifact_sha256: 3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf
@@ -28,14 +34,15 @@ supported_build_runtime:
   - Node 22
   - Node 24
 GATE_V09_RC: PASS_WITH_EXPLICIT_RESERVATIONS
-candidate_eligibility: ELIGIBLE_FOR_SEPARATE_POST_GATE_HUMAN_DECISIONS
+reservations_preserved: 8
+debt_items_not_authorized: 28
+V10_1: BLOCKED
 artifact_publication: false
 Ready_for_Review: false
 merge: false
 tag: false
 RC: false
 release: false
-session_documentary_closure: COMPLETE
 ```
 
 ## Runtime canónico

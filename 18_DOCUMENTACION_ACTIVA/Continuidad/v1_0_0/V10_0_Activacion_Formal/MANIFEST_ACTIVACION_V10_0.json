@@ -1,0 +1,23 @@
+{
+  "project": "AI StoryLab 1",
+  "phase": "v1.0.0",
+  "hito": "V10-0",
+  "movement": "FORMAL_ACTIVATION_AND_RELEASE_PHASE_CONTRACT",
+  "date": "2026-07-24",
+  "entry_head": "83cd5983ad3e66d43a442c090ce95f3bb22ee968",
+  "branch": "feat/v1.0-release-readiness",
+  "PR_mode": "single_consolidated_draft_PR",
+  "execution_channel": "VS_Code_integrated_terminal",
+  "first_commit": "strictly_documentary",
+  "candidate_source_head": "29585b7b692818243f59d9f0e3c0dc572597fd11",
+  "candidate_application_tree": "2b64a7ecaae3b5c86cb465fd00a952e8f48d04bd",
+  "candidate_artifact_sha256": "3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf",
+  "reservations_preserved": 8,
+  "debt_items_not_authorized": 28,
+  "functional_changes": false,
+  "dependency_changes": false,
+  "schema_changes": false,
+  "workflow_changes": false,
+  "artifact_publication": false,
+  "V10_1": "BLOCKED"
+}

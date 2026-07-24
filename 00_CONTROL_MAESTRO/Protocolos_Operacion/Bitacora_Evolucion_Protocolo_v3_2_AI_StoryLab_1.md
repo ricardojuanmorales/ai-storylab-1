@@ -76,3 +76,49 @@ controls_added:
 
 El responsable humano aprobó v3.2 como versión actual y autorizó incorporarla
 en el último commit documental de la sesión.
+
+---
+
+## Entrada 2026-07-24 · Pausa epistemológica y activación V10-0
+
+```yaml
+entry:
+  date: 2026-07-24
+  session: apertura_v1_0_0
+  hito: V10-0
+  protocol_version: 3.2
+  observed_pattern:
+    - release_planning_detached_from_longitudinal_protocol
+    - GitHub_connector_confused_with_operational_channel
+    - excessive_document_granularity_before_strategic_alignment
+    - captain_log_omitted_from_initial_continuity
+  epistemic_interpretation:
+    - verification_is_not_equivalent_to_orientation
+    - tool_capability_does_not_override_human_machine_workflow
+    - release_readiness_is_subordinate_to_project_governance
+  technical_cause:
+    - remote_state_was_prioritized_before_operational_context
+  documentary_cause:
+    - protocol_and_longitudinal_logs_were_not_loaded_as_a_single_system
+  human_machine_AI_effect:
+    - human_paused_and_reoriented
+    - AI_acknowledged_and_redesigned
+    - machine_writes_remain_under_human_terminal_execution
+  proposed_control:
+    - load_protocol_captain_log_and_protocol_evolution_before_phase_planning
+    - declare_operational_channel_before_designing_operator
+    - present_main_milestones_before_file_inventory
+  alternatives_considered:
+    - direct_GitHub_connector_execution_rejected
+    - multiple_PRs_rejected
+    - fragmented_operators_rejected
+  human_decision: APPROVED_FOR_V10_0_ACTIVATION
+  disposition: CONTROL_REINFORCED_WITHOUT_PROTOCOL_VERSION_CHANGE
+  effective_from: V10_0
+  evidence:
+    - human_feedback_in_activation_conversation
+    - V10_0_decision_record
+```
+
+No se modifica la versión 3.2. La entrada refuerza controles ya aprobados y
+registra el aprendizaje para continuidad.
