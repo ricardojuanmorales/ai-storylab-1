@@ -1,0 +1,10 @@
+support_id,surface,environment,declared_scope,status,evidence,boundary
+SUP-001,Automated baseline,Ubuntu GitHub Actions,Node 22,VALIDATED,run 30133403038,Exact commit validation
+SUP-002,Automated baseline,Ubuntu GitHub Actions,Node 24,VALIDATED,run 30133403038,Exact commit validation
+SUP-003,Browser runtime,Specific browsers,Not declared,PENDING,RSV-03,V10-3 must define and test exact browsers
+SUP-004,Operating system,Windows,Not declared,NOT_CLAIMED,RSV-04,Requires explicit test and authorization
+SUP-005,Operating system,macOS,Operator channel only,NOT_APP_SUPPORT_EVIDENCE,VS Code terminal execution,Do not convert operator portability into app support
+SUP-006,Protocol,file://,Unclassified,NOT_CLAIMED,RSV-05,Disposition required in V10-2/V10-3
+SUP-007,Assistive technology,Screen reader,Manual review absent,NOT_CLAIMED,RSV-06,Human-authorized review decision required
+SUP-008,Distribution,Cross-OS binary identity,Not demonstrated,NOT_CLAIMED,RSV-02,V10-5 policy decision
+SUP-009,Data model,Local-first,Architectural boundary,BOUNDED,existing documentation/tests,Not a universal compatibility claim

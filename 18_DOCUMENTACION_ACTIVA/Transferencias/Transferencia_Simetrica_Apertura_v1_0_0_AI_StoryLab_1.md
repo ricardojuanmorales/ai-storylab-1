@@ -32,3 +32,19 @@
 
 La salida del operador y la CI del commit exacto constituyen evidencia de
 apertura. Cerrar V10-0 o abrir V10-1 requiere otra decisión humana explícita.
+
+---
+
+## Continuidad incorporada · V10-1
+
+- autorización: `Adelante con V10-1 expedito.`;
+- rama y Draft PR: sin cambio;
+- parent de ejecución: `7486b9f1b67e9f00e2a1bfad0742c5b54c2d4b6e`;
+- objetivo: definir release y afirmaciones, no probar compatibilidad;
+- navegadores, Windows, `file://` y lector de pantalla: no afirmados;
+- efectividad educativa poblacional: prohibida sin investigación nueva;
+- identidad binaria universal: no afirmada;
+- V10-2: bloqueado hasta cierre humano de V10-1.
+
+La próxima decisión deberá cerrar V10-1 y, si procede, abrir V10-2 para disponer
+las ocho reservas sin reparación automática.

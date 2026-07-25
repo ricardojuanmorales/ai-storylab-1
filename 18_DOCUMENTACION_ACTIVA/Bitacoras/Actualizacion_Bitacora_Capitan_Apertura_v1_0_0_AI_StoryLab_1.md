@@ -38,3 +38,23 @@ Antes de trazar una maniobra debe recuperarse el sentido longitudinal del
 proyecto, no solo el estado remoto. La capacidad de una herramienta para escribir
 en GitHub no sustituye el canal acordado: la persona ejecuta desde VS Code, la IA
 estructura y la máquina demuestra.
+
+---
+
+## Punto de navegación · V10-1
+
+```yaml
+hito: V10-1
+maneuver: RELEASE_CONTRACT_AND_CLAIMS_DISCIPLINE
+parent_commit: 7486b9f1b67e9f00e2a1bfad0742c5b54c2d4b6e
+human_order: "Adelante con V10-1 expedito."
+functional_engines: SEALED
+course_definition:
+  verified_claims: EVIDENCE_REQUIRED
+  unsupported_claims: NOT_ALLOWED
+  publication: HUMAN_SEPARATE_DECISION
+next_hito: V10_2_BLOCKED
+```
+
+La travesía entra en aguas de precisión semántica: el nombre `v1.0.0` no será
+una bandera decorativa, sino una afirmación que deberá cargar su propia evidencia.

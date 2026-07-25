@@ -1,0 +1,14 @@
+claim_id,claim,status,evidence,boundary,next_validation
+CLM-001,El proyecto está en una fase gobernada de preparación hacia v1.0.0.,VERIFIED,PR #65; rama feat/v1.0-release-readiness,No equivale a release publicada.,V10-Z
+CLM-002,Existe una candidata 0.9.0-unreleased transferida desde v0.9.0.,VERIFIED,candidate source 29585b7; application tree 2b64a7e,La candidata no es todavía v1.0.0 estable.,V10-6
+CLM-003,El baseline automatizado pasa en Node 22 y Node 24.,VERIFIED,CI run 30133403038 sobre 7486b9f1b67e9f00e2a1bfad0742c5b54c2d4b6e,Validado en GitHub Actions Ubuntu.,V10-3/V10-6
+CLM-004,La arquitectura preserva operación local-first.,BOUNDED,documentación y pruebas heredadas de v0.9.0,No implica soporte universal de navegador o protocolo.,V10-3/V10-7
+CLM-005,Se soportan navegadores específicos.,NOT_CLAIMED,sin matriz autorizada todavía,No enumerar navegadores hasta V10-3.,V10-3
+CLM-006,Windows está soportado.,NOT_CLAIMED,RSV-04,No afirmar hasta prueba y autorización.,V10-2/V10-3
+CLM-007,La ejecución mediante file:// está soportada.,NOT_CLAIMED,RSV-05,"Debe clasificarse como soportada, no soportada o irrelevante.",V10-2/V10-3
+CLM-008,Existe compatibilidad manual demostrada con lector de pantalla.,NOT_CLAIMED,RSV-06,La revisión manual no se ha realizado.,V10-2/V10-3
+CLM-009,La aplicación demuestra efectividad educativa o usabilidad poblacional.,PROHIBITED_WITHOUT_NEW_EVIDENCE,RSV-07,Requiere investigación gobernada con participantes.,FUTURE_RESEARCH
+CLM-010,El artefacto es binariamente idéntico en todos los sistemas operativos.,NOT_CLAIMED,RSV-02,Solo podrá declararse reproducibilidad dentro de límites demostrados.,V10-2/V10-5
+CLM-011,H09-A fue una auditoría externa o de tercero.,PROHIBITED_WITHOUT_NEW_EVIDENCE,RSV-08,Solo se permite afirmar independencia procedimental.,V10-7
+CLM-012,El artefacto de v1.0.0 está publicado.,FALSE_CURRENT_STATE,RSV-01; artifact_publication=false,Publicación requiere decisión humana separada.,POST-GATE
+CLM-013,AI StoryLab 1 v1.0.0 ya fue liberado.,FALSE_CURRENT_STATE,Ready=false; merge=false; tag=false; release=false,El estado actual es preparación gobernada.,POST-GATE
