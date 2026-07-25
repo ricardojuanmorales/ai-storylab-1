@@ -48,3 +48,29 @@ V10_2: BLOCKED_PENDING_HUMAN_DECISION
 
 V10-1 establece el lenguaje permitido para la fase y evita transformar ausencia
 de evidencia en compatibilidad, independencia, eficacia o publicación implícita.
+
+---
+
+## Ejecución de V10-2
+
+```yaml
+authorization: "Adelante con V10-2 expedito."
+parent_commit: b36f0e9e39861022b540d7ca1129e5037f7db118
+reservations_total: 8
+dispositions:
+  RESOLVED: 1
+  ACCEPTED_LIMITATION: 2
+  NOT_CLAIMED: 2
+  DEFERRED: 1
+  BLOCKING: 2
+blocking_reservations:
+  - RSV-03
+  - RSV-06
+automatic_repairs: 0
+functional_changes: false
+V10_3: BLOCKED_PENDING_HUMAN_DECISION
+```
+
+V10-2 distingue condiciones de release de defectos del producto. Dos reservas
+requieren evidencia en V10-3; las demás quedan gobernadas mediante límites,
+no-afirmación, diferimiento o precisión documental.

@@ -58,3 +58,27 @@ next_hito: V10_2_BLOCKED
 
 La travesía entra en aguas de precisión semántica: el nombre `v1.0.0` no será
 una bandera decorativa, sino una afirmación que deberá cargar su propia evidencia.
+
+---
+
+## Carta de reservas · V10-2
+
+```yaml
+hito: V10-2
+maneuver: DISPOSITION_OF_EIGHT_INHERITED_RESERVATIONS
+parent_commit: b36f0e9e39861022b540d7ca1129e5037f7db118
+human_order: "Adelante con V10-2 expedito."
+reservations:
+  resolved: 1
+  accepted_limitation: 2
+  not_claimed: 2
+  deferred: 1
+  blocking_for_release: 2
+functional_engines: SEALED
+next_hito: V10_3_BLOCKED
+```
+
+La tripulación no arrojó las reservas por la borda ni las convirtió en averías
+imaginarias. Cada una recibió coordenadas, efecto y autoridad. RSV-03 y RSV-06
+quedan como boyas rojas antes de la publicación; las demás delimitan el canal
+sin encender reparaciones.

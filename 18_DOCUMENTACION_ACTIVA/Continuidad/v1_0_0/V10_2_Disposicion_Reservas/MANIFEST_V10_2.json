@@ -1,0 +1,42 @@
+{
+  "project": "AI StoryLab 1",
+  "phase": "v1.0.0",
+  "hito": "V10-2",
+  "movement": "FINAL_DISPOSITION_OF_EIGHT_INHERITED_RESERVATIONS",
+  "date": "2026-07-24",
+  "authorization": "Adelante con V10-2 expedito.",
+  "parent_commit": "b36f0e9e39861022b540d7ca1129e5037f7db118",
+  "branch": "feat/v1.0-release-readiness",
+  "PR": 65,
+  "PR_mode": "DRAFT_SINGLE_CONSOLIDATED",
+  "commit": "CONTAINING_COMMIT",
+  "evidence_model": "CONTAINING_COMMIT_PLUS_EXACT_CI",
+  "reservations_total": 8,
+  "disposition_counts": {
+    "RESOLVED": 1,
+    "ACCEPTED_LIMITATION": 2,
+    "NOT_CLAIMED": 2,
+    "DEFERRED": 1,
+    "BLOCKING": 2
+  },
+  "blocking_reservations": [
+    "RSV-03",
+    "RSV-06"
+  ],
+  "blocking_findings_in_execution": 0,
+  "functional_changes": false,
+  "testing": false,
+  "repairs": false,
+  "dependency_changes": false,
+  "schema_changes": false,
+  "workflow_changes": false,
+  "participant_research": false,
+  "real_user_data": false,
+  "artifact_publication": false,
+  "Ready_for_Review": false,
+  "merge": false,
+  "tag": false,
+  "RC": false,
+  "release": false,
+  "V10_3": "BLOCKED_PENDING_HUMAN_DECISION"
+}

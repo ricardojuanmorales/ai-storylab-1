@@ -48,3 +48,21 @@ apertura. Cerrar V10-0 o abrir V10-1 requiere otra decisión humana explícita.
 
 La próxima decisión deberá cerrar V10-1 y, si procede, abrir V10-2 para disponer
 las ocho reservas sin reparación automática.
+
+---
+
+## Continuidad incorporada · V10-2
+
+- autorización: `Adelante con V10-2 expedito.`;
+- parent de ejecución: `b36f0e9e39861022b540d7ca1129e5037f7db118`;
+- ocho reservas clasificadas;
+- `RSV-03` navegador y `RSV-06` lector de pantalla bloquean release hasta V10-3;
+- `RSV-02` y `RSV-05` son limitaciones aceptadas;
+- `RSV-04` y `RSV-07` permanecen no afirmadas;
+- `RSV-01` se difiere a decisión humana post-gate;
+- `RSV-08` queda resuelta por precisión de lenguaje;
+- reparaciones, pruebas ampliadas y trabajo funcional: no autorizados;
+- V10-3: bloqueado hasta cierre humano de V10-2.
+
+La próxima maniobra deberá validar experiencia, accesibilidad y compatibilidad
+declarada únicamente dentro de las superficies autorizadas.

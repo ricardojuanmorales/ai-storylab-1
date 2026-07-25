@@ -14,8 +14,8 @@ artificial responsable.
 ```yaml
 project_release_line: v1.0.0
 project_version: 0.9.0-unreleased
-phase: V10_1_RELEASE_CONTRACT
-active_hito: V10-1_AT_HUMAN_CLOSE_GATE
+phase: V10_2_RESERVATION_DISPOSITION
+active_hito: V10-2_AT_HUMAN_CLOSE_GATE
 branch: feat/v1.0-release-readiness
 PR: 65
 PR_mode: single_consolidated_draft
@@ -23,30 +23,33 @@ baseline_main_head: 83cd5983ad3e66d43a442c090ce95f3bb22ee968
 V10_0:
   activation_commit: 7486b9f1b67e9f00e2a1bfad0742c5b54c2d4b6e
   CI_run: 30133403038
-  CI: PASS
   lifecycle: CLOSED_BY_HUMAN_DECISION
 V10_1:
+  commit: b36f0e9e39861022b540d7ca1129e5037f7db118
+  CI_run: 30135561526
+  lifecycle: CLOSED_BY_HUMAN_DECISION
+V10_2:
   authorization: OPEN_AND_EXECUTE
-  scope:
-    - release_contract
-    - claims_discipline
-  commit: CONTAINING_COMMIT
   state: HUMAN_CLOSE_GATE
-V10_2: BLOCKED_PENDING_HUMAN_DECISION
+  commit: CONTAINING_COMMIT
+  reservations_total: 8
+  dispositions:
+    resolved: 1
+    accepted_limitation: 2
+    not_claimed: 2
+    deferred: 1
+    blocking_for_release: 2
+  blocking_reservations:
+    - RSV-03
+    - RSV-06
+V10_3: BLOCKED_PENDING_HUMAN_DECISION
 canonical_runtime: apps/storylab
-candidate_source_head: 29585b7b692818243f59d9f0e3c0dc572597fd11
-candidate_artifact_sha256: 3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf
-candidate_suite:
-  test_files: 49
-  tests: 248
-supported_build_runtime:
-  - Node 22
-  - Node 24
-browser_support: NOT_YET_CLAIMED
+browser_support: REQUIRES_V10_3_VALIDATION
 Windows_support: NOT_CLAIMED
-file_protocol_support: NOT_CLAIMED
-screen_reader_manual_review: NOT_PERFORMED
-educational_effectiveness: NOT_CLAIMED
+file_protocol_support: OUTSIDE_DECLARED_RUNTIME
+manual_screen_reader_review: REQUIRES_V10_3
+participant_usability: NOT_CLAIMED
+cross_OS_binary_identity: NOT_CLAIMED
 artifact_publication: false
 Ready_for_Review: false
 merge: false
