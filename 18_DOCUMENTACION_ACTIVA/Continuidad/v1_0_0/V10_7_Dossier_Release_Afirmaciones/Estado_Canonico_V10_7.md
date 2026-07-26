@@ -4,10 +4,10 @@
 project: AI StoryLab 1
 phase: v1.0.0
 hito: V10-7
-state: HUMAN_CLOSE_GATE
+state: CLOSED_BY_HUMAN_DECISION
 disposition: RELEASE_DOSSIER_NOTES_VERIFICATION_AND_FINAL_CLAIMS_COMPLETE
 parent_commit: f888bb35abc65e6b3a6b70374b2865a96d6d7e5a
-commit: CONTAINING_COMMIT
+commit: ace90849e74cc14937e3cf9782fff90854b7849e
 source_commit: 533fcf28a0c9053b7da79ca70ded80450d94cf35
 branch: feat/v1.0-release-readiness
 PR: 65
@@ -47,6 +47,6 @@ Ready_for_Review: false
 merge: false
 tag: false
 release: false
-V10_A: BLOCKED_PENDING_HUMAN_DECISION
-PR_comment: PREPARE_AFTER_HUMAN_DECISION_FOR_MANUAL_PUBLICATION
+V10_A: OPENED_AND_EXECUTED_BY_HUMAN_AUTHORIZATION
+PR_comment: PREPARED_FOR_MANUAL_PUBLICATION
 ```

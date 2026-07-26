@@ -14,8 +14,8 @@ artificial responsable.
 ```yaml
 project_release_line: v1.0.0
 project_version: 1.0.0-rc.1
-phase: V10_7_RELEASE_DOSSIER_FINAL_CLAIMS
-active_hito: V10-7_AT_HUMAN_CLOSE_GATE
+phase: V10_A_PROCEDURAL_INDEPENDENT_AUDIT
+active_hito: V10-A_AT_HUMAN_CLOSE_GATE
 branch: feat/v1.0-release-readiness
 PR: 65
 PR_mode: single_consolidated_draft
@@ -33,21 +33,23 @@ V10_4:
 V10_5:
   lifecycle: CLOSED_BY_HUMAN_DECISION
 V10_6:
-  source_commit: 533fcf28a0c9053b7da79ca70ded80450d94cf35
-  evidence_commit: f888bb35abc65e6b3a6b70374b2865a96d6d7e5a
   lifecycle: CLOSED_BY_HUMAN_DECISION
 V10_7:
+  commit: ace90849e74cc14937e3cf9782fff90854b7849e
+  lifecycle: CLOSED_BY_HUMAN_DECISION
+V10_A:
   authorization: OPEN_AND_EXECUTE
   state: HUMAN_CLOSE_GATE
   commit: CONTAINING_COMMIT
-  dossier_gate: PASS
-  candidate_version: 1.0.0-rc.1
-  artifact_sha256: 6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c
-  artifact_reverification: PASS
-  final_claims_total: 22
-  unsupported_public_claims: 0
+  audit_gate: PASS
+  controls_total: 24
+  controls_passed: 24
+  controls_failed: 0
+  blocking_findings: 0
+  binary_reconstruction: PASS
+  gate_packet: READY_FOR_HUMAN_GATE_OPENING
   publication_hold: ACTIVE
-V10_A: BLOCKED_PENDING_HUMAN_DECISION
+GATE_V10_RELEASE: BLOCKED_PENDING_HUMAN_DECISION
 artifact_publication: false
 Ready_for_Review: false
 merge: false

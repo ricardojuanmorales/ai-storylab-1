@@ -169,3 +169,21 @@ publication_hold: ACTIVE
 artifact_publication: false
 V10_A: BLOCKED_PENDING_HUMAN_DECISION
 ```
+
+---
+
+## Ejecución de V10-A
+
+```yaml
+authorization: "Adelante con V10-A expedito."
+parent_commit: ace90849e74cc14937e3cf9782fff90854b7849e
+candidate_version: 1.0.0-rc.1
+audit_gate: PASS
+controls_total: 24
+controls_passed: 24
+controls_failed: 0
+blocking_findings: 0
+binary_reconstruction: PASS
+publication_hold: ACTIVE
+GATE_V10_RELEASE: BLOCKED_PENDING_HUMAN_DECISION
+```

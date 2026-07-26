@@ -151,3 +151,22 @@ Candidata `1.0.0-rc.1`, source `533fcf28a0c9053b7da79ca70ded80450d94cf35`, SHA-2
 
 La próxima maniobra deberá auditar procedimentalmente el dossier y preparar la
 entrada del GATE-V10-RELEASE sin reparar ni publicar.
+
+---
+
+## Continuidad incorporada · V10-A
+
+- candidata: `1.0.0-rc.1`;
+- source commit: `533fcf28a0c9053b7da79ca70ded80450d94cf35`;
+- V10-7 commit: `ace90849e74cc14937e3cf9782fff90854b7849e`;
+- SHA-256: `6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c`;
+- controles: `24` PASS / `0` FAIL;
+- audit gate: `PASS`;
+- reconstrucción binaria: `PASS`;
+- afirmaciones auditadas: `22`;
+- publication hold: `ACTIVE`;
+- entrada GATE-V10-RELEASE: `PREPARED`;
+- GATE-V10-RELEASE: bloqueado hasta decisión humana.
+
+La próxima maniobra solo puede abrir el gate mediante una autorización humana
+separada. No se autorizaron publicación, Ready for Review, merge o tag.

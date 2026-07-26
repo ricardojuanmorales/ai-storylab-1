@@ -172,3 +172,24 @@ next_hito: V10_A_BLOCKED
 
 La nave sigue en dique seco, pero ahora cada escotilla, límite y sello tiene una
 leyenda verificable. V10-A recibe el mapa, no la llave de publicación.
+
+---
+
+## Auditoría del astillero · V10-A
+
+```yaml
+hito: V10-A
+maneuver: PROCEDURAL_INDEPENDENT_AUDIT
+parent_commit: ace90849e74cc14937e3cf9782fff90854b7849e
+source_commit: 533fcf28a0c9053b7da79ca70ded80450d94cf35
+candidate_version: 1.0.0-rc.1
+artifact_sha256: 6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c
+audit_gate: PASS
+controls_passed: 24
+controls_failed: 0
+publication_hold: ACTIVE
+GATE_V10_RELEASE: BLOCKED
+```
+
+Se volvió al plano original, se reconstruyó el casco y se comparó byte por byte.
+El informe prepara la puerta del gate, pero no gira su llave.

@@ -1,0 +1,23 @@
+claim_id,source_status,audit_result,audit_disposition,evidence,boundary,release_wording
+FCL-001,AUTHORIZED,PASS,SUPPORTED_AS_WRITTEN_WITH_CURRENT_STATE_CONTEXT,Draft PR #65; rama feat/v1.0-release-readiness; cadena V10-0 a V10-7,"No equivale a publicación, merge, tag o release.",Preparación gobernada de AI StoryLab 1 v1.0.0.
+FCL-002,AUTHORIZED,PASS,SUPPORTED_AS_WRITTEN_WITH_CURRENT_STATE_CONTEXT,source commit 533fcf28a0c9053b7da79ca70ded80450d94cf35; atestación V10-6,La identidad RC es interna; no es una RC pública.,Candidata interna no publicada 1.0.0-rc.1.
+FCL-003,AUTHORIZED,PASS,SUPPORTED_AS_WRITTEN_WITH_CURRENT_STATE_CONTEXT,6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c,El hash identifica bytes; no constituye firma del autor.,SHA-256: 6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c.
+FCL-004,AUTHORIZED,PASS,SUPPORTED_AS_WRITTEN_WITH_CURRENT_STATE_CONTEXT,533fcf28a0c9053b7da79ca70ded80450d94cf35,El evidence commit posterior no sustituye al source commit.,Source commit: 533fcf28a0c9053b7da79ca70ded80450d94cf35.
+FCL-005,AUTHORIZED_BOUNDED,PASS,SUPPORTED_ONLY_WITH_BOUNDARY,CI 30216684999; atestación V10-6,Limitado a los entornos Ubuntu registrados.,Identidad binaria verificada en los entornos Node 22 y Node 24 registrados.
+FCL-006,AUTHORIZED_BOUNDED,PASS,SUPPORTED_ONLY_WITH_BOUNDARY,reverification status=PASS; artifact=6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c,"Verificación interna, no auditoría externa.",El artefacto superó su verificador interno.
+FCL-007,AUTHORIZED_BOUNDED,PASS,SUPPORTED_ONLY_WITH_BOUNDARY,Pruebas y auditorías heredadas; V10-1/V10-4,No implica soporte universal de plataforma o protocolo.,Arquitectura local-first dentro del alcance declarado.
+FCL-008,AUTHORIZED_BOUNDED,PASS,SUPPORTED_ONLY_WITH_BOUNDARY,V10-3 real_user_data=false; V10-4 policy synthetic_only,No constituye investigación con participantes.,Validación realizada con datos sintéticos.
+FCL-009,AUTHORIZED_BOUNDED,PASS,SUPPORTED_ONLY_WITH_BOUNDARY,Safari 26.5.2 (PASS); Google Chrome 150.0.7871.184 (PASS); Firefox 152.0.1 (PASS),No implica soporte de otras versiones o navegadores.,Matriz interna validada: Safari 26.5.2 (PASS); Google Chrome 150.0.7871.184 (PASS); Firefox 152.0.1 (PASS).
+FCL-010,AUTHORIZED_BOUNDED,PASS,SUPPORTED_ONLY_WITH_BOUNDARY,V10-3 voiceover=PASS,No equivale a certificación WCAG ni a soporte universal de lectores de pantalla.,VoiceOver con Safari: atestación humana interna acotada en PASS.
+FCL-011,AUTHORIZED_BOUNDED,PASS,SUPPORTED_ONLY_WITH_BOUNDARY,security_gate=PASS; blocking=0; audit snapshot 2026-07-26,Representa el estado de las fuentes y registros consultados en esa fecha.,"Auditoría interna de seguridad, privacidad y cadena de suministro en PASS para el snapshot registrado."
+FCL-012,AUTHORIZED_BOUNDED,PASS,SUPPORTED_ONLY_WITH_BOUNDARY,production=0; full=0,No promete ausencia futura de advisories.,Cero vulnerabilidades NPM reportadas en el snapshot auditado.
+FCL-013,NOT_CLAIMED,PASS,MUST_NOT_BE_PUBLISHED_AS_POSITIVE_CLAIM,RSV-04; V10-3 Windows_support=NOT_CLAIMED,Windows queda fuera del soporte declarado.,No afirmar.
+FCL-014,NOT_CLAIMED,PASS,MUST_NOT_BE_PUBLISHED_AS_POSITIVE_CLAIM,RSV-05 accepted limitation,El uso documentado requiere servidor HTTP local.,No afirmar; indicar servidor HTTP local.
+FCL-015,NOT_CLAIMED,PASS,MUST_NOT_BE_PUBLISHED_AS_POSITIVE_CLAIM,V10-3 universal_browser_support=NOT_CLAIMED,Solo existe una matriz específica.,No afirmar.
+FCL-016,NOT_CLAIMED,PASS,MUST_NOT_BE_PUBLISHED_AS_POSITIVE_CLAIM,V10-3 WCAG_certification=NOT_CLAIMED,Pruebas y atestaciones internas no son certificación.,No afirmar.
+FCL-017,NOT_CLAIMED,PASS,MUST_NOT_BE_PUBLISHED_AS_POSITIVE_CLAIM,V10-6 universalCrossOsIdentityClaimed=false,La identidad se limita a los entornos registrados.,No afirmar.
+FCL-018,NOT_CLAIMED,PASS,MUST_NOT_BE_PUBLISHED_AS_POSITIVE_CLAIM,Atestación V10-6: notSlsaProvenance; cryptographicSignature=NOT_CLAIMED,SHA-256 no es una firma.,No afirmar.
+FCL-019,PROHIBITED_WITHOUT_NEW_EVIDENCE,PASS,MUST_NOT_BE_PUBLISHED_AS_POSITIVE_CLAIM,RSV-08,V10-A es un checkpoint procedimental independiente.,"Usar 'auditoría procedimental independiente', nunca 'auditoría externa'."
+FCL-020,PROHIBITED_WITHOUT_NEW_EVIDENCE,PASS,MUST_NOT_BE_PUBLISHED_AS_POSITIVE_CLAIM,RSV-07; participant_research=false,Requiere investigación gobernada con participantes.,No afirmar.
+FCL-021,FALSE_CURRENT_STATE,PASS,MUST_NOT_BE_PUBLISHED_AS_POSITIVE_CLAIM,artifact_publication=false; tag=false; release=false,Cualquier publicación requiere una decisión humana posterior.,No afirmar.
+FCL-022,FALSE_CURRENT_STATE,PASS,MUST_NOT_BE_PUBLISHED_AS_POSITIVE_CLAIM,Ready_for_Review=false; merge=false,El PR permanece Draft.,No afirmar.
