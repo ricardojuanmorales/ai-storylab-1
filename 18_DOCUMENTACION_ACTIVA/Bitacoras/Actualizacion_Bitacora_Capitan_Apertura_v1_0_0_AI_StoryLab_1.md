@@ -82,3 +82,24 @@ La tripulación no arrojó las reservas por la borda ni las convirtió en averí
 imaginarias. Cada una recibió coordenadas, efecto y autoridad. RSV-03 y RSV-06
 quedan como boyas rojas antes de la publicación; las demás delimitan el canal
 sin encender reparaciones.
+
+---
+
+## Recorrido de visibilidad · V10-3
+
+```yaml
+hito: V10-3
+maneuver: EXPERIENCE_ACCESSIBILITY_AND_DECLARED_COMPATIBILITY
+parent_commit: 7cfd79bc087e90e286fb6e76d10716c6ef434555
+human_order: "Adelante con V10-3 expedito."
+declared_browsers: "Safari 26.5.2, Google Chrome 150.0.7871.184, Firefox 152.0.1"
+VoiceOver: PASS
+RSV_03: RESOLVED_BOUNDED
+RSV_06: RESOLVED_BOUNDED
+functional_engines: SEALED
+next_hito: V10_4_BLOCKED
+```
+
+La nave probó sus instrumentos en aguas concretas, no en todos los océanos. La
+matriz declara solo navegadores realmente recorridos y la revisión de VoiceOver
+permanece acotada a la combinación observada.

@@ -74,3 +74,32 @@ V10_3: BLOCKED_PENDING_HUMAN_DECISION
 V10-2 distingue condiciones de release de defectos del producto. Dos reservas
 requieren evidencia en V10-3; las demás quedan gobernadas mediante límites,
 no-afirmación, diferimiento o precisión documental.
+
+---
+
+## Ejecución de V10-3
+
+```yaml
+authorization: "Adelante con V10-3 expedito."
+parent_commit: 7cfd79bc087e90e286fb6e76d10716c6ef434555
+automated:
+  typecheck: PASS
+  build: PASS
+  accessibility: PASS
+  presentation: PASS
+  full_arc: PASS
+manual:
+  browsers: 3
+  result: PASS
+  VoiceOver: PASS
+  synthetic_data_only: true
+reservations:
+  RSV_03: RESOLVED_WITH_BOUNDED_DECLARED_MATRIX
+  RSV_06: RESOLVED_WITH_BOUNDED_MANUAL_ATTESTATION
+repairs: 0
+functional_changes: false
+V10_4: BLOCKED_PENDING_HUMAN_DECISION
+```
+
+La validación humana fue una atestación interna guiada. No se transforma en
+auditoría externa, certificación WCAG ni evidencia con participantes.

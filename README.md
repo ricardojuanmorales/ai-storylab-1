@@ -14,42 +14,37 @@ artificial responsable.
 ```yaml
 project_release_line: v1.0.0
 project_version: 0.9.0-unreleased
-phase: V10_2_RESERVATION_DISPOSITION
-active_hito: V10-2_AT_HUMAN_CLOSE_GATE
+phase: V10_3_EXPERIENCE_ACCESSIBILITY_COMPATIBILITY
+active_hito: V10-3_AT_HUMAN_CLOSE_GATE
 branch: feat/v1.0-release-readiness
 PR: 65
 PR_mode: single_consolidated_draft
 baseline_main_head: 83cd5983ad3e66d43a442c090ce95f3bb22ee968
 V10_0:
-  activation_commit: 7486b9f1b67e9f00e2a1bfad0742c5b54c2d4b6e
-  CI_run: 30133403038
   lifecycle: CLOSED_BY_HUMAN_DECISION
 V10_1:
-  commit: b36f0e9e39861022b540d7ca1129e5037f7db118
-  CI_run: 30135561526
   lifecycle: CLOSED_BY_HUMAN_DECISION
 V10_2:
+  commit: 7cfd79bc087e90e286fb6e76d10716c6ef434555
+  CI_run: 30136713958
+  lifecycle: CLOSED_BY_HUMAN_DECISION
+V10_3:
   authorization: OPEN_AND_EXECUTE
   state: HUMAN_CLOSE_GATE
   commit: CONTAINING_COMMIT
-  reservations_total: 8
-  dispositions:
-    resolved: 1
-    accepted_limitation: 2
-    not_claimed: 2
-    deferred: 1
-    blocking_for_release: 2
-  blocking_reservations:
-    - RSV-03
-    - RSV-06
-V10_3: BLOCKED_PENDING_HUMAN_DECISION
-canonical_runtime: apps/storylab
-browser_support: REQUIRES_V10_3_VALIDATION
+  automated_validation: PASS
+  browser_matrix: BOUNDED_PASS
+  VoiceOver_manual_review: BOUNDED_PASS
+  RSV_03: RESOLVED_BOUNDED
+  RSV_06: RESOLVED_BOUNDED
+  declared_browsers: "Safari 26.5.2, Google Chrome 150.0.7871.184, Firefox 152.0.1"
+  operating_system: "macOS 26.5.2"
+V10_4: BLOCKED_PENDING_HUMAN_DECISION
 Windows_support: NOT_CLAIMED
+universal_browser_support: NOT_CLAIMED
 file_protocol_support: OUTSIDE_DECLARED_RUNTIME
-manual_screen_reader_review: REQUIRES_V10_3
 participant_usability: NOT_CLAIMED
-cross_OS_binary_identity: NOT_CLAIMED
+WCAG_certification: NOT_CLAIMED
 artifact_publication: false
 Ready_for_Review: false
 merge: false

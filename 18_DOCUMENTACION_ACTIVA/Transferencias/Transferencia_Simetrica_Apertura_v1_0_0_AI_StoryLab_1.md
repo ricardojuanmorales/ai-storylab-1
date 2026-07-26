@@ -66,3 +66,21 @@ las ocho reservas sin reparación automática.
 
 La próxima maniobra deberá validar experiencia, accesibilidad y compatibilidad
 declarada únicamente dentro de las superficies autorizadas.
+
+---
+
+## Continuidad incorporada · V10-3
+
+- parent de ejecución: `7cfd79bc087e90e286fb6e76d10716c6ef434555`;
+- navegadores declarados y validados: Safari 26.5.2, Google Chrome 150.0.7871.184, Firefox 152.0.1;
+- sistema observado: macOS 26.5.2;
+- recorrido de teclado y persistencia local: PASS;
+- VoiceOver en Safari: PASS;
+- RSV-03 y RSV-06: resueltas dentro de límites explícitos;
+- Windows, soporte universal y certificación WCAG: no afirmados;
+- datos reales y participantes: no utilizados;
+- reparaciones y cambios funcionales: no autorizados;
+- V10-4: bloqueado hasta cierre humano de V10-3.
+
+La próxima maniobra deberá cubrir seguridad, privacidad y cadena de suministro
+sin convertir hallazgos en reparaciones automáticas.
