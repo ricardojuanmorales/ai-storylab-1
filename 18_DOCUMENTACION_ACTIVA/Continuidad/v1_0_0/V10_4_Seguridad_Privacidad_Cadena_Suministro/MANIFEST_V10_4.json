@@ -11,7 +11,7 @@
   "PR_mode": "DRAFT_SINGLE_CONSOLIDATED",
   "commit": "CONTAINING_COMMIT",
   "evidence_model": "AUTOMATED_AUDIT_PLUS_NORMALIZED_CLASSIFICATION_PLUS_EXACT_CI",
-  "state": "HUMAN_CLOSE_GATE",
+  "state": "CLOSED_BY_HUMAN_DECISION",
   "security_gate": "PASS",
   "blocking_findings": 0,
   "review_findings": 3,
@@ -44,5 +44,6 @@
   "tag": false,
   "RC": false,
   "release": false,
-  "V10_5": "BLOCKED_PENDING_HUMAN_DECISION"
+  "V10_5": "OPENED_AND_EXECUTED_BY_HUMAN_AUTHORIZATION",
+  "human_close_decision": true
 }

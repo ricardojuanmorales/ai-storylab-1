@@ -14,8 +14,8 @@ artificial responsable.
 ```yaml
 project_release_line: v1.0.0
 project_version: 0.9.0-unreleased
-phase: V10_4_SECURITY_PRIVACY_SUPPLY_CHAIN
-active_hito: V10-4_AT_HUMAN_CLOSE_GATE
+phase: V10_5_VERSION_SCHEMA_ARTIFACT_POLICY
+active_hito: V10-5_AT_HUMAN_CLOSE_GATE
 branch: feat/v1.0-release-readiness
 PR: 65
 PR_mode: single_consolidated_draft
@@ -27,25 +27,26 @@ V10_1:
 V10_2:
   lifecycle: CLOSED_BY_HUMAN_DECISION
 V10_3:
-  commit: c4b5a5174b9617251effe6fd5a6b025d9f210d0f
-  CI_run: 30209763811
   lifecycle: CLOSED_BY_HUMAN_DECISION
 V10_4:
+  commit: 5cf66e862f0d414a3fdbe532d87c32e52ab75f91
+  CI_run: 30212507055
+  lifecycle: CLOSED_BY_HUMAN_DECISION
+V10_5:
   authorization: OPEN_AND_EXECUTE
   state: HUMAN_CLOSE_GATE
   commit: CONTAINING_COMMIT
-  security_gate: PASS
-  blocking_findings: 0
-  review_findings: 3
-  secret_scan: PASS
-  privacy_audit: PASS
-  security_tests: PASS
-  production_vulnerabilities: 0
-  full_vulnerabilities: 0
-V10_5: BLOCKED_PENDING_HUMAN_DECISION
-dependency_changes: false
-workflow_changes: false
-npm_audit_fix: false
+  artifact_gate: PASS
+  release_candidate_pattern: 1.0.0-rc.N
+  release_candidate_assigned: false
+  stable_version_assigned: false
+  schema_version: 0.8.0-alpha.2
+  schema_changed: false
+  source_commit: 5cf66e862f0d414a3fdbe532d87c32e52ab75f91
+  application_tree: 2b64a7ecaae3b5c86cb465fd00a952e8f48d04bd
+  policy_probe_artifact_sha256: 594a60d8f5b2a5b58b3c435d30b52cde2c7998ace8712f0b8363c7e0d15cbad5
+  cross_OS_binary_identity: NOT_CLAIMED
+V10_6: BLOCKED_PENDING_HUMAN_DECISION
 artifact_publication: false
 Ready_for_Review: false
 merge: false

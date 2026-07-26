@@ -124,3 +124,26 @@ next_hito: V10_5_BLOCKED
 
 La inspección abrió las cajas, leyó los sellos y revisó el casco sin reemplazar
 piezas. Cada hallazgo conserva severidad, efecto y autoridad humana.
+
+---
+
+## Carta de identidad de la candidata · V10-5
+
+```yaml
+hito: V10-5
+maneuver: VERSION_SCHEMA_AND_ARTIFACT_POLICY
+parent_commit: 5cf66e862f0d414a3fdbe532d87c32e52ab75f91
+human_order: "Adelante con V10-5 expedito."
+artifact_gate: PASS
+source_commit: 5cf66e862f0d414a3fdbe532d87c32e52ab75f91
+application_tree: 2b64a7ecaae3b5c86cb465fd00a952e8f48d04bd
+probe_artifact_sha256: 594a60d8f5b2a5b58b3c435d30b52cde2c7998ace8712f0b8363c7e0d15cbad5
+RC_assigned: false
+stable_assigned: false
+artifact_published: false
+next_hito: V10_6_BLOCKED
+```
+
+Se midieron dos cascos construidos desde el mismo plano y en el mismo astillero.
+Sus hashes coinciden, pero la nave final todavía no ha sido
+ensamblada ni botada.

@@ -104,3 +104,23 @@ sin convertir hallazgos en reparaciones automáticas.
 
 La próxima maniobra deberá definir versión, artefacto, reproducibilidad y
 checksums sin publicar nada por inferencia.
+
+---
+
+## Continuidad incorporada · V10-5
+
+- release line objetivo: `v1.0.0`;
+- versión de aplicación preservada: `0.9.0-unreleased`;
+- patrón de RC definido: `1.0.0-rc.N`, sin asignación;
+- schema preservado: `0.8.0-alpha.2`;
+- commit fuente de la sonda: `5cf66e862f0d414a3fdbe532d87c32e52ab75f91`;
+- application tree: `2b64a7ecaae3b5c86cb465fd00a952e8f48d04bd`;
+- SHA-256 del artefacto de sonda: `594a60d8f5b2a5b58b3c435d30b52cde2c7998ace8712f0b8363c7e0d15cbad5`;
+- reproducibilidad local: `PASS`;
+- identidad binaria cross-OS: no afirmada;
+- metadata v0.9.0 heredada: alineación requerida en V10-6;
+- publicación, tag, RC y release: no autorizados;
+- V10-6: bloqueado hasta decisión humana.
+
+La próxima maniobra deberá congelar un head exacto, alinear metadata y ensamblar
+la candidata final en el entorno canónico.

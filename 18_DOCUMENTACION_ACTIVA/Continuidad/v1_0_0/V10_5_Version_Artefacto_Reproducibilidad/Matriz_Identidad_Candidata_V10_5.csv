@@ -1,0 +1,9 @@
+identity_id,surface,value,status,boundary,next_authority
+ID-001,release_line,v1.0.0,TARGET_DEFINED,Not assigned as stable application version.,POST_GATE_HUMAN_DECISION
+ID-002,current_application_version,0.9.0-unreleased,PRESERVED,Source version remains unreleased during V10-5.,V10-6
+ID-003,release_candidate_pattern,1.0.0-rc.N,POLICY_DEFINED_NOT_ASSIGNED,No RC identifier is created by V10-5.,V10-6_HUMAN_GATE
+ID-004,schema_version,0.8.0-alpha.2,UNCHANGED_INDEPENDENT,No material schema evidence authorizes a change.,FUTURE_MATERIAL_SCHEMA_CHANGE
+ID-005,source_commit,5cf66e862f0d414a3fdbe532d87c32e52ab75f91,EXACT,"Policy probe source, not final V10-6 candidate head.",V10-6
+ID-006,application_tree,2b64a7ecaae3b5c86cb465fd00a952e8f48d04bd,EXACT,Git tree for apps/storylab at source commit.,V10-6
+ID-007,package_lock_sha256,364ff396ab46b84c6eabc1ddf41f076ee772fd338bf6fa4e999582a3ccac52f1,EXACT,Locked dependency identity.,V10-6
+ID-008,policy_probe_artifact_sha256,594a60d8f5b2a5b58b3c435d30b52cde2c7998ace8712f0b8363c7e0d15cbad5,LOCAL_PROBE_PASS,Unpublished local evidence; not the final candidate.,V10-6

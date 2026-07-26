@@ -1,0 +1,6 @@
+check_id,surface,result,value_one,value_two,boundary
+REP-001,clean_build_one,PASS,0,,Local macOS policy probe.
+REP-002,clean_build_two,PASS,0,,Local macOS policy probe.
+REP-003,dist_manifest_identity,PASS,32c48badd0aee620f3b2f27f056d1ec0eb5981bcff24742d9f431b908255100b,32c48badd0aee620f3b2f27f056d1ec0eb5981bcff24742d9f431b908255100b,Same source and same local environment only.
+REP-004,deterministic_zip_identity,PASS,594a60d8f5b2a5b58b3c435d30b52cde2c7998ace8712f0b8363c7e0d15cbad5,594a60d8f5b2a5b58b3c435d30b52cde2c7998ace8712f0b8363c7e0d15cbad5,Does not demonstrate cross-OS binary identity.
+REP-005,artifact_self_verification,PASS,PASS,PASS,Internal package verifier.

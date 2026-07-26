@@ -125,3 +125,22 @@ dependency_changes: false
 workflow_changes: false
 V10_5: BLOCKED_PENDING_HUMAN_DECISION
 ```
+
+---
+
+## Ejecución de V10-5
+
+```yaml
+authorization: "Adelante con V10-5 expedito."
+parent_commit: 5cf66e862f0d414a3fdbe532d87c32e52ab75f91
+application_version: 0.9.0-unreleased
+schema_version: 0.8.0-alpha.2
+clean_build_one: PASS
+clean_build_two: PASS
+dist_identity: PASS
+artifact_identity: PASS
+artifact_gate: PASS
+blocking_findings: 0
+artifact_publication: false
+V10_6: BLOCKED_PENDING_HUMAN_DECISION
+```

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "attestationType": "AI_STORYLAB_INTERNAL_BUILD_ATTESTATION",
+  "status": "PASS",
+  "createdAt": "2026-07-26T17:48:34.088410+00:00",
+  "notSlsaProvenance": true,
+  "notExternalCertification": true,
+  "publicationStatus": "UNPUBLISHED_LOCAL_POLICY_PROBE",
+  "subject": {
+    "name": "ai-storylab-1_0.9.0-unreleased_5cf66e862f0d_probe-one.zip",
+    "sha256": "594a60d8f5b2a5b58b3c435d30b52cde2c7998ace8712f0b8363c7e0d15cbad5",
+    "sizeBytes": 486552
+  },
+  "materials": {
+    "sourceCommit": "5cf66e862f0d414a3fdbe532d87c32e52ab75f91",
+    "applicationTree": "2b64a7ecaae3b5c86cb465fd00a952e8f48d04bd",
+    "packageJsonSha256": "2adb5eb0fee857e7bdd9230ee959d41212cd9ab824ca8a7b11ecc8eeb685887f",
+    "packageLockSha256": "364ff396ab46b84c6eabc1ddf41f076ee772fd338bf6fa4e999582a3ccac52f1",
+    "applicationPackageVersion": "0.9.0-unreleased",
+    "schemaVersion": "0.8.0-alpha.2"
+  },
+  "builder": {
+    "class": "LOCAL_HUMAN_EXECUTED_OPERATOR",
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "platform": "Darwin 25.5.0 arm64"
+  },
+  "reproducibility": {
+    "scope": "SAME_SOURCE_SAME_LOCAL_ENVIRONMENT_TWO_CLEAN_BUILDS",
+    "distManifestSha256": "32c48badd0aee620f3b2f27f056d1ec0eb5981bcff24742d9f431b908255100b",
+    "distIdentity": true,
+    "artifactIdentity": true,
+    "crossOsBinaryIdentityClaimed": false
+  },
+  "policy": {
+    "stableTarget": "1.0.0",
+    "releaseCandidatePattern": "1.0.0-rc.N",
+    "releaseCandidateAssigned": false,
+    "stableVersionAssigned": false,
+    "schemaChanged": false,
+    "finalCandidateAssembly": "V10-6",
+    "canonicalFinalBuildEnvironment": {
+      "runner": "ubuntu-latest",
+      "node": 22,
+      "verificationNode": 24,
+      "install": "npm ci --ignore-scripts"
+    },
+    "checksums": "SHA-256_REQUIRED",
+    "cryptographicSignature": "NOT_CLAIMED_NO_SIGNING_IDENTITY_CONFIGURED",
+    "publicationAuthorized": false
+  },
+  "limitations": [
+    "This is not the final V10-6 release candidate.",
+    "This artifact is not published.",
+    "The local probe does not demonstrate cross-OS binary identity.",
+    "The existing package metadata remains inherited from v0.9.0 and requires V10-6 alignment.",
+    "No RC or stable version is assigned."
+  ],
+  "blockingReasons": []
+}
