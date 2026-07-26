@@ -130,3 +130,24 @@ la candidata final en el entorno canónico.
 ## Continuidad incorporada · V10-6
 
 Candidata `1.0.0-rc.1`, source `533fcf28a0c9053b7da79ca70ded80450d94cf35`, SHA-256 `6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c`, V10-7 bloqueado.
+
+---
+
+## Continuidad incorporada · V10-7
+
+- candidata: `1.0.0-rc.1`;
+- source commit: `533fcf28a0c9053b7da79ca70ded80450d94cf35`;
+- evidence commit V10-6: `f888bb35abc65e6b3a6b70374b2865a96d6d7e5a`;
+- SHA-256: `6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c`;
+- reverificación del ZIP: `PASS`;
+- dossier: `COMPLETE`;
+- notas: `COMPLETE`;
+- guía de verificación: `COMPLETE`;
+- afirmaciones autorizadas: `4`;
+- afirmaciones autorizadas acotadas: `8`;
+- afirmaciones restringidas: `10`;
+- publication hold: `ACTIVE`;
+- V10-A: bloqueado hasta decisión humana.
+
+La próxima maniobra deberá auditar procedimentalmente el dossier y preparar la
+entrada del GATE-V10-RELEASE sin reparar ni publicar.

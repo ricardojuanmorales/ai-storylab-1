@@ -153,3 +153,22 @@ ensamblada ni botada.
 ## Botadura retenida · V10-6
 
 Source `533fcf28a0c9053b7da79ca70ded80450d94cf35`, candidata `1.0.0-rc.1`, SHA-256 `6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c`, publicación retenida.
+
+---
+
+## Cartas de navegación para el gate · V10-7
+
+```yaml
+hito: V10-7
+maneuver: RELEASE_DOSSIER_AND_FINAL_CLAIMS
+parent_commit: f888bb35abc65e6b3a6b70374b2865a96d6d7e5a
+source_commit: 533fcf28a0c9053b7da79ca70ded80450d94cf35
+candidate_version: 1.0.0-rc.1
+artifact_sha256: 6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c
+dossier_gate: PASS
+publication_hold: ACTIVE
+next_hito: V10_A_BLOCKED
+```
+
+La nave sigue en dique seco, pero ahora cada escotilla, límite y sello tiene una
+leyenda verificable. V10-A recibe el mapa, no la llave de publicación.

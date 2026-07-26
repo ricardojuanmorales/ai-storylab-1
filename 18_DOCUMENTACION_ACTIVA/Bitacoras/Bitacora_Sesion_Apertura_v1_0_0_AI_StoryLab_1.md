@@ -150,3 +150,22 @@ V10_6: BLOCKED_PENDING_HUMAN_DECISION
 ## Ejecución de V10-6
 
 CI fuente `30216684999`; artifact gate `PASS`; publicación `false`.
+
+---
+
+## Ejecución de V10-7
+
+```yaml
+authorization: "Adelante con V10-7 expedito."
+parent_commit: f888bb35abc65e6b3a6b70374b2865a96d6d7e5a
+candidate_version: 1.0.0-rc.1
+artifact_reverification: PASS
+dossier_gate: PASS
+blocking_findings: 0
+authorized_claims: 4
+bounded_claims: 8
+restricted_claims: 10
+publication_hold: ACTIVE
+artifact_publication: false
+V10_A: BLOCKED_PENDING_HUMAN_DECISION
+```

@@ -14,22 +14,45 @@ artificial responsable.
 ```yaml
 project_release_line: v1.0.0
 project_version: 1.0.0-rc.1
-phase: V10_6_FINAL_UNPUBLISHED_CANDIDATE
-active_hito: V10-6_AT_HUMAN_CLOSE_GATE
+phase: V10_7_RELEASE_DOSSIER_FINAL_CLAIMS
+active_hito: V10-7_AT_HUMAN_CLOSE_GATE
 branch: feat/v1.0-release-readiness
 PR: 65
-source_commit: 533fcf28a0c9053b7da79ca70ded80450d94cf35
-evidence_commit: CONTAINING_COMMIT
-source_CI_run: 30216684999
-candidate_version: 1.0.0-rc.1
-artifact_gate: PASS
-artifact_sha256: 6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c
+PR_mode: single_consolidated_draft
+baseline_main_head: 83cd5983ad3e66d43a442c090ce95f3bb22ee968
+V10_0:
+  lifecycle: CLOSED_BY_HUMAN_DECISION
+V10_1:
+  lifecycle: CLOSED_BY_HUMAN_DECISION
+V10_2:
+  lifecycle: CLOSED_BY_HUMAN_DECISION
+V10_3:
+  lifecycle: CLOSED_BY_HUMAN_DECISION
+V10_4:
+  lifecycle: CLOSED_BY_HUMAN_DECISION
+V10_5:
+  lifecycle: CLOSED_BY_HUMAN_DECISION
+V10_6:
+  source_commit: 533fcf28a0c9053b7da79ca70ded80450d94cf35
+  evidence_commit: f888bb35abc65e6b3a6b70374b2865a96d6d7e5a
+  lifecycle: CLOSED_BY_HUMAN_DECISION
+V10_7:
+  authorization: OPEN_AND_EXECUTE
+  state: HUMAN_CLOSE_GATE
+  commit: CONTAINING_COMMIT
+  dossier_gate: PASS
+  candidate_version: 1.0.0-rc.1
+  artifact_sha256: 6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c
+  artifact_reverification: PASS
+  final_claims_total: 22
+  unsupported_public_claims: 0
+  publication_hold: ACTIVE
+V10_A: BLOCKED_PENDING_HUMAN_DECISION
 artifact_publication: false
 Ready_for_Review: false
 merge: false
 tag: false
 release: false
-V10_7: BLOCKED_PENDING_HUMAN_DECISION
 ```
 
 ## Runtime canónico
