@@ -200,3 +200,15 @@ La próxima maniobra solo puede autorizar Ready for Review de forma separada.
 - versión estable y ZIP: bloqueados para V10-STABLE;
 - autorización anterior de Ready: pausada por cambio de head;
 - publicación: no ejecutada.
+
+---
+
+## Continuidad incorporada · V10-PAGES
+- base: `/ai-storylab-1/`;
+- URL prevista: `https://ricardojuanmorales.github.io/ai-storylab-1/`;
+- workflow: build en PR/main, deployment manual desde main;
+- humo local: PASS;
+- configuración Pages preexistente: `True`;
+- endpoint preexistente observado como vivo: `True`;
+- deployment realizado por V10-PAGES: `false`;
+- próximo hito: V10-STABLE.

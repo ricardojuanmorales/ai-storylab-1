@@ -1,7 +1,7 @@
 # Guía rápida · AI StoryLab 1 v1.0.0
 
 ## Estado de acceso
-- Aplicación en GitHub Pages: pendiente de V10-PAGES.
+- Aplicación en GitHub Pages: preparada para `https://ricardojuanmorales.github.io/ai-storylab-1/`. Se detectó y preservó una configuración preexistente (legacy, estado built, HTTP 200). V10-PAGES no ejecutó un deployment nuevo.
 - Descarga estable: pendiente de V10-STABLE.
 - Desarrollo local: disponible desde el repositorio.
 

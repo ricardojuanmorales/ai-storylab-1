@@ -18,3 +18,11 @@ stable_version: NOT_YET_ASSIGNED
 ```
 
 La identidad estable `1.0.0` requerirá un source commit, ZIP y SHA-256 nuevos.
+
+## Build de GitHub Pages
+```bash
+AI_STORYLAB_BASE_PATH=/ai-storylab-1/ npm run build
+touch dist/.nojekyll
+node tools/verify-pages-build.mjs dist /ai-storylab-1/
+```
+El deployment requiere `workflow_dispatch`, `deploy=true`, `main` y autorización.

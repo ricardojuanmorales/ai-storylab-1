@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "base": "/ai-storylab-1/",
+  "index": {
+    "relative": "index.html",
+    "size": 532,
+    "sha256": "197457500c8a5acea2ab2eaa061e2aaf0c1cdf169e7c3148cfe3d66e9574feb6"
+  },
+  "noJekyll": true,
+  "noJekyllSize": 0,
+  "assetCount": 2,
+  "assets": [
+    {
+      "url": "/ai-storylab-1/assets/index-Cu9NCcun.js",
+      "relative": "assets/index-Cu9NCcun.js",
+      "size": 467818,
+      "sha256": "d2f526309649dfc639c854d5bfb09e3e78e9a71e17d5f8c32c5a3035e55f5b35"
+    },
+    {
+      "url": "/ai-storylab-1/assets/index-XgLtcM5W.css",
+      "relative": "assets/index-XgLtcM5W.css",
+      "size": 15138,
+      "sha256": "dd4a4147f26c8dc3c24865491599df526ba75b931d6cf9d5c7fd88f248474eec"
+    }
+  ],
+  "assertions": {
+    "subpathIndexServed": true,
+    "allIndexAssetsUnderBase": true,
+    "allIndexAssetsServed": true,
+    "noJekyllPresent": true
+  }
+}

@@ -1,0 +1,85 @@
+name: AI StoryLab Pages
+
+on:
+  pull_request:
+    paths:
+      - "apps/storylab/**"
+      - ".github/workflows/ai-storylab-pages.yml"
+      - "19_IMPLEMENTACION_Y_DESPLIEGUE/GitHub_Pages/**"
+  push:
+    branches:
+      - main
+    paths:
+      - "apps/storylab/**"
+      - ".github/workflows/ai-storylab-pages.yml"
+      - "19_IMPLEMENTACION_Y_DESPLIEGUE/GitHub_Pages/**"
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: "Deploy to GitHub Pages after separate human authorization"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build and smoke-test Pages
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      AI_STORYLAB_BASE_PATH: /ai-storylab-1/
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: apps/storylab/package-lock.json
+      - name: Install locked dependencies
+        working-directory: apps/storylab
+        run: npm ci --ignore-scripts
+      - name: Typecheck
+        working-directory: apps/storylab
+        run: npm run typecheck
+      - name: Build Pages site
+        working-directory: apps/storylab
+        run: npm run build
+      - name: Add no-Jekyll marker
+        working-directory: apps/storylab
+        run: touch dist/.nojekyll
+      - name: Smoke-test repository subpath
+        working-directory: apps/storylab
+        run: node tools/verify-pages-build.mjs dist /ai-storylab-1/
+      - name: Upload temporary Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: apps/storylab/dist
+
+  deploy:
+    name: Deploy only after a separate human authorization
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy == true && github.ref == 'refs/heads/main' }}
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Deploy Pages artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

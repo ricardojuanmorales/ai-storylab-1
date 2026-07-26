@@ -5,7 +5,7 @@
   "date": "2026-07-26",
   "authorization": "Adelante con la Ruta expedita recomendada. Autorizo V10-PUBLIC.",
   "parent_commit": "5e811917ad5906112bee8b23a44fcd88b8cf9e88",
-  "commit": "CONTAINING_COMMIT",
+  "commit": "2bad11c85a832172d2af3671a73273e7f9e40a92",
   "branch": "feat/v1.0-release-readiness",
   "PR": 65,
   "candidate_version": "1.0.0-rc.1",
@@ -21,7 +21,7 @@
   "privacy_security_accessibility": true,
   "known_limits": true,
   "maintenance_support": true,
-  "GitHub_Pages": "BLOCKED_PENDING_V10_PAGES",
+  "GitHub_Pages": "PREPARATION_WITH_PREEXISTING_STATE_PRESERVED",
   "stable_ZIP": "BLOCKED_PENDING_V10_STABLE",
   "Ready_for_Review": false,
   "Ready_authorization_from_previous_head": "PAUSED_BY_NEW_HEAD",
@@ -32,5 +32,8 @@
   "workflow_changes": false,
   "functional_changes": false,
   "dependency_changes": false,
-  "schema_changes": false
+  "schema_changes": false,
+  "state": "CLOSED_BY_HUMAN_DECISION",
+  "human_close_decision": true,
+  "V10_PAGES": "OPENED_AND_EXECUTED_BY_HUMAN_AUTHORIZATION"
 }

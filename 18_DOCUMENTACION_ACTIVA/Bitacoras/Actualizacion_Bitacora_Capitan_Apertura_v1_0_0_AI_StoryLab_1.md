@@ -228,3 +228,18 @@ stable_ZIP: BLOCKED
 Ready_for_Review: PAUSED_BY_NEW_HEAD
 ```
 La nave ya tiene letreros para visitantes, pero el muelle web y el paquete estable esperan sus propias inspecciones.
+
+---
+
+## Muelle web sin abrir · V10-PAGES
+```yaml
+base: /ai-storylab-1/
+planned_url: https://ricardojuanmorales.github.io/ai-storylab-1/
+local_smoke: PASS
+workflow: BUILD_ALWAYS_DEPLOY_MANUAL_MAIN_ONLY
+deployment_performed_by_V10_PAGES: false
+preexisting_configured: true
+preexisting_live_endpoint_observed: true
+configuration_compatibility: SOURCE_SWITCH_REQUIRED_BEFORE_DEPLOYMENT
+```
+El muelle ya soporta peso. V10-PAGES no movió la configuración remota preexistente.

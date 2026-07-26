@@ -121,3 +121,12 @@ Todas las modificaciones importantes del MVP se registran aquí siguiendo [Keep 
 - created minimum human documentation;
 - kept Pages, stable ZIP, tag and Release unpublished;
 - paused the prior Ready authorization because the PR head will change.
+
+---
+
+## GitHub Pages preparation · V10-PAGES
+- added environment-aware Vite base;
+- added deterministic Pages smoke test;
+- added build-always, deploy-manually workflow;
+- did not execute a new public deployment;
+- recorded and preserved the preexisting Pages state.

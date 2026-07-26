@@ -9,7 +9,7 @@ AI StoryLab 1 es un ecosistema educativo local-first para investigación-creaci�
 release_line: v1.0.0
 current_candidate: 1.0.0-rc.1
 stable_release: NOT_YET_PUBLISHED
-GitHub_Pages: NOT_YET_PUBLISHED
+GitHub_Pages: PREPARED_NOT_YET_DEPLOYED
 downloadable_stable_ZIP: NOT_YET_PUBLISHED
 publication_hold: ACTIVE
 ```
@@ -24,7 +24,7 @@ La candidata técnica superó auditorías internas. V10-PUBLIC prepara la docume
 
 ## Acceso
 ### Aplicación web
-GitHub Pages todavía no está activo.
+GitHub Pages está preparado para `https://ricardojuanmorales.github.io/ai-storylab-1/`. Se detectó y preservó una configuración preexistente (legacy, estado built, HTTP 200). V10-PAGES no ejecutó un deployment nuevo.
 
 ### Descarga estable
 La GitHub Release `v1.0.0` todavía no existe.

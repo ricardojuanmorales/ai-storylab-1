@@ -1,0 +1,15 @@
+control_id,surface,status,evidence
+PAGE-001,V10-PUBLIC exacto,PASS,2bad11c85a832172d2af3671a73273e7f9e40a92
+PAGE-002,Estado Pages preexistente,PASS,configured=True; status=built; build_type=legacy; live=True; compatibility=SOURCE_SWITCH_REQUIRED_BEFORE_DEPLOYMENT
+PAGE-003,Base Vite por entorno,PASS,/ai-storylab-1/
+PAGE-004,Base local predeterminada,PASS,/
+PAGE-005,Build Pages bajo subruta,PASS,/ai-storylab-1/
+PAGE-006,Index servido bajo subruta,PASS,smoke local
+PAGE-007,Recursos bajo base,PASS,2
+PAGE-008,.nojekyll,PASS,present regular file; size=0 bytes; empty allowed
+PAGE-009,PR build-only,PASS,pull_request
+PAGE-010,Push main sin deploy,PASS,build-only
+PAGE-011,Deploy manual main-only,PASS,workflow_dispatch
+PAGE-012,Permisos acotados,PASS,deploy job only
+PAGE-013,Documentación,PASS,3 docs
+PAGE-014,Local-first preservado,PASS,static hosting/local storage
