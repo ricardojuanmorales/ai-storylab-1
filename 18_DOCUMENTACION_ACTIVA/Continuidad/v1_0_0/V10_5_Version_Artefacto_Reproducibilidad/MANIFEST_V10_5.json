@@ -10,7 +10,7 @@
   "PR": 65,
   "PR_mode": "DRAFT_SINGLE_CONSOLIDATED",
   "commit": "CONTAINING_COMMIT",
-  "state": "HUMAN_CLOSE_GATE",
+  "state": "CLOSED_BY_HUMAN_DECISION",
   "artifact_gate": "PASS",
   "blocking_findings": 0,
   "release_line": "v1.0.0",
@@ -36,5 +36,6 @@
   "tag": false,
   "RC": false,
   "release": false,
-  "V10_6": "BLOCKED_PENDING_HUMAN_DECISION"
+  "V10_6": "OPENED_AND_EXECUTED_BY_HUMAN_AUTHORIZATION",
+  "human_close_decision": true
 }

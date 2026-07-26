@@ -13,46 +13,23 @@ artificial responsable.
 
 ```yaml
 project_release_line: v1.0.0
-project_version: 0.9.0-unreleased
-phase: V10_5_VERSION_SCHEMA_ARTIFACT_POLICY
-active_hito: V10-5_AT_HUMAN_CLOSE_GATE
+project_version: 1.0.0-rc.1
+phase: V10_6_FINAL_UNPUBLISHED_CANDIDATE
+active_hito: V10-6_AT_HUMAN_CLOSE_GATE
 branch: feat/v1.0-release-readiness
 PR: 65
-PR_mode: single_consolidated_draft
-baseline_main_head: 83cd5983ad3e66d43a442c090ce95f3bb22ee968
-V10_0:
-  lifecycle: CLOSED_BY_HUMAN_DECISION
-V10_1:
-  lifecycle: CLOSED_BY_HUMAN_DECISION
-V10_2:
-  lifecycle: CLOSED_BY_HUMAN_DECISION
-V10_3:
-  lifecycle: CLOSED_BY_HUMAN_DECISION
-V10_4:
-  commit: 5cf66e862f0d414a3fdbe532d87c32e52ab75f91
-  CI_run: 30212507055
-  lifecycle: CLOSED_BY_HUMAN_DECISION
-V10_5:
-  authorization: OPEN_AND_EXECUTE
-  state: HUMAN_CLOSE_GATE
-  commit: CONTAINING_COMMIT
-  artifact_gate: PASS
-  release_candidate_pattern: 1.0.0-rc.N
-  release_candidate_assigned: false
-  stable_version_assigned: false
-  schema_version: 0.8.0-alpha.2
-  schema_changed: false
-  source_commit: 5cf66e862f0d414a3fdbe532d87c32e52ab75f91
-  application_tree: 2b64a7ecaae3b5c86cb465fd00a952e8f48d04bd
-  policy_probe_artifact_sha256: 594a60d8f5b2a5b58b3c435d30b52cde2c7998ace8712f0b8363c7e0d15cbad5
-  cross_OS_binary_identity: NOT_CLAIMED
-V10_6: BLOCKED_PENDING_HUMAN_DECISION
+source_commit: 533fcf28a0c9053b7da79ca70ded80450d94cf35
+evidence_commit: CONTAINING_COMMIT
+source_CI_run: 30216684999
+candidate_version: 1.0.0-rc.1
+artifact_gate: PASS
+artifact_sha256: 6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c
 artifact_publication: false
 Ready_for_Review: false
 merge: false
 tag: false
-RC: false
 release: false
+V10_7: BLOCKED_PENDING_HUMAN_DECISION
 ```
 
 ## Runtime canónico

@@ -124,3 +124,9 @@ checksums sin publicar nada por inferencia.
 
 La próxima maniobra deberá congelar un head exacto, alinear metadata y ensamblar
 la candidata final en el entorno canónico.
+
+---
+
+## Continuidad incorporada · V10-6
+
+Candidata `1.0.0-rc.1`, source `533fcf28a0c9053b7da79ca70ded80450d94cf35`, SHA-256 `6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c`, V10-7 bloqueado.

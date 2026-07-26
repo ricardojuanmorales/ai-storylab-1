@@ -144,3 +144,9 @@ blocking_findings: 0
 artifact_publication: false
 V10_6: BLOCKED_PENDING_HUMAN_DECISION
 ```
+
+---
+
+## Ejecución de V10-6
+
+CI fuente `30216684999`; artifact gate `PASS`; publicación `false`.

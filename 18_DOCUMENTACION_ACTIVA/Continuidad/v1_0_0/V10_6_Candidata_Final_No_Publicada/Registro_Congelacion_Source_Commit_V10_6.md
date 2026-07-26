@@ -1,0 +1,11 @@
+# Congelación V10-6
+
+```yaml
+candidate_version: 1.0.0-rc.1
+source_commit: 533fcf28a0c9053b7da79ca70ded80450d94cf35
+application_tree: 999be850336096466da19e487f556f760a820b6f
+package_json_sha256: 7038b04ef849b3696f5319895c9be3d4ca3b85e4f9ae696a69ff7185f543c55d
+package_lock_sha256: af14ba245fe30b7d8a54ee4cbee39b9dadfb8314f23bf5cf3be0e67fec06ba04
+source_CI_run: 30216684999
+publication: false
+```

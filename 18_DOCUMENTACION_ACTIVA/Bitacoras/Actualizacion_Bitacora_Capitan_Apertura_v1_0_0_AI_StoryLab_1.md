@@ -147,3 +147,9 @@ next_hito: V10_6_BLOCKED
 Se midieron dos cascos construidos desde el mismo plano y en el mismo astillero.
 Sus hashes coinciden, pero la nave final todavía no ha sido
 ensamblada ni botada.
+
+---
+
+## Botadura retenida · V10-6
+
+Source `533fcf28a0c9053b7da79ca70ded80450d94cf35`, candidata `1.0.0-rc.1`, SHA-256 `6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c`, publicación retenida.

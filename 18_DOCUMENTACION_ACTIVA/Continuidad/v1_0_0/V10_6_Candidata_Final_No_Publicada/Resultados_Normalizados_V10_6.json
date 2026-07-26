@@ -1,0 +1,24 @@
+{
+  "hito": "V10-6",
+  "candidateVersion": "1.0.0-rc.1",
+  "sourceCommit": "533fcf28a0c9053b7da79ca70ded80450d94cf35",
+  "sourceCiRun": 30216684999,
+  "artifactGate": "PASS",
+  "gateState": "HUMAN_CLOSE_GATE",
+  "blockingFindings": 0,
+  "artifactSha256": {
+    "node22": "6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c",
+    "node24": "6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c",
+    "local": "6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c"
+  },
+  "distSha256": {
+    "node22": "32c48badd0aee620f3b2f27f056d1ec0eb5981bcff24742d9f431b908255100b",
+    "node24": "32c48badd0aee620f3b2f27f056d1ec0eb5981bcff24742d9f431b908255100b",
+    "local": "32c48badd0aee620f3b2f27f056d1ec0eb5981bcff24742d9f431b908255100b"
+  },
+  "publication": false,
+  "functionalChanges": false,
+  "dependencyChanges": false,
+  "schemaChanges": false,
+  "workflowChanges": false
+}
