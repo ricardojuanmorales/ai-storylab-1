@@ -4,10 +4,10 @@
 project: AI StoryLab 1
 phase: v1.0.0
 gate: GATE-V10-RELEASE
-state: HUMAN_CLOSE_GATE
+state: CLOSED_BY_HUMAN_DECISION
 disposition: SEPARATE_RELEASE_AUTHORITIES_PREPARED
 parent_commit: 2201cd183237ce8a5038c4eb2bd4f2f8360e9457
-commit: CONTAINING_COMMIT
+commit: 5e811917ad5906112bee8b23a44fcd88b8cf9e88
 branch: feat/v1.0-release-readiness
 PR: 65
 PR_mode: DRAFT_SINGLE_CONSOLIDATED
@@ -45,4 +45,13 @@ dependency_changes: false
 schema_changes: false
 workflow_changes: false
 PR_comment: PREPARE_AFTER_HUMAN_DECISION_FOR_MANUAL_PUBLICATION
+```
+
+## Continuidad posterior
+```yaml
+Ready_for_Review_authorization:
+  original_target: exact_GATE_head
+  execution: false
+  current_status: PAUSED_BY_V10_PUBLIC_NEW_HEAD
+V10_PUBLIC: OPENED_AND_EXECUTED_BY_HUMAN_AUTHORIZATION
 ```

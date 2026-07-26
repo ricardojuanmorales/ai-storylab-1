@@ -189,3 +189,14 @@ separada. No se autorizaron publicación, Ready for Review, merge o tag.
 - publication hold: `ACTIVE`.
 
 La próxima maniobra solo puede autorizar Ready for Review de forma separada.
+
+---
+
+## Continuidad incorporada · V10-PUBLIC
+- README público: preparado;
+- paquete humano mínimo: 10 superficies;
+- candidata vigente: `1.0.0-rc.1`;
+- GitHub Pages: bloqueado para V10-PAGES;
+- versión estable y ZIP: bloqueados para V10-STABLE;
+- autorización anterior de Ready: pausada por cambio de head;
+- publicación: no ejecutada.

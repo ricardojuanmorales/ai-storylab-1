@@ -1,0 +1,11 @@
+control_id,surface,path,status,boundary
+PUB-001,README público,README.md,COMPLETE,No activa enlaces inexistentes
+PUB-002,Índice público,21_WIKI_DOCUMENTACION_HUMANA/v1_0_0/README.md,COMPLETE,Navegación humana
+PUB-003,Guía rápida,21_WIKI_DOCUMENTACION_HUMANA/v1_0_0/Guia_Rapida_AI_StoryLab_1_v1_0_0.md,COMPLETE,Acceso actual y futuro
+PUB-004,Guía de usuario,21_WIKI_DOCUMENTACION_HUMANA/v1_0_0/Guia_Usuario_AI_StoryLab_1_v1_0_0.md,COMPLETE,M1-M4 y privacidad
+PUB-005,Instalación,21_WIKI_DOCUMENTACION_HUMANA/v1_0_0/Guia_Instalacion_Ejecucion_Local_AI_StoryLab_1_v1_0_0.md,COMPLETE,Fuente y ZIP futuro
+PUB-006,Guía técnica,21_WIKI_DOCUMENTACION_HUMANA/v1_0_0/Guia_Tecnica_Verificacion_AI_StoryLab_1_v1_0_0.md,COMPLETE,RC versus estable
+PUB-007,Privacidad y accesibilidad,21_WIKI_DOCUMENTACION_HUMANA/v1_0_0/Privacidad_Seguridad_Accesibilidad_AI_StoryLab_1_v1_0_0.md,COMPLETE,Afirmaciones acotadas
+PUB-008,Límites,21_WIKI_DOCUMENTACION_HUMANA/v1_0_0/Problemas_Conocidos_Limitaciones_AI_StoryLab_1_v1_0_0.md,COMPLETE,Límites visibles
+PUB-009,Mantenimiento,21_WIKI_DOCUMENTACION_HUMANA/v1_0_0/Mantenimiento_Soporte_AI_StoryLab_1_v1_0_0.md,COMPLETE,Reporte y severidad
+PUB-010,Docentes e investigadores,21_WIKI_DOCUMENTACION_HUMANA/v1_0_0/Orientaciones_Docentes_Investigadores_AI_StoryLab_1_v1_0_0.md,COMPLETE,Orientación breve

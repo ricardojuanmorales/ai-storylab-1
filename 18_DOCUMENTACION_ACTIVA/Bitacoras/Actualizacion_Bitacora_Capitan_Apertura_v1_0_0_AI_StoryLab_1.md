@@ -213,3 +213,18 @@ actions_executed: 0
 
 El gate inspeccionó cuatro llaves, pero ninguna salió de su sobre. La primera
 puede presentarse a decisión humana; las otras esperan su turno y sus pruebas.
+
+---
+
+## Luces del muelle · V10-PUBLIC
+```yaml
+hito: V10-PUBLIC
+parent_commit: 5e811917ad5906112bee8b23a44fcd88b8cf9e88
+candidate_version: 1.0.0-rc.1
+public_documents: 10
+public_surface_gate: PASS
+GitHub_Pages: BLOCKED
+stable_ZIP: BLOCKED
+Ready_for_Review: PAUSED_BY_NEW_HEAD
+```
+La nave ya tiene letreros para visitantes, pero el muelle web y el paquete estable esperan sus propias inspecciones.

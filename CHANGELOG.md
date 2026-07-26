@@ -112,3 +112,12 @@ Todas las modificaciones importantes del MVP se registran aquí siguiendo [Keep 
 - Compendio inicial del MVP
 - `README.md` inicial
 - `.gitignore` base
+
+---
+
+## Public surface preparation · V10-PUBLIC
+
+- prepared a public-facing README;
+- created minimum human documentation;
+- kept Pages, stable ZIP, tag and Release unpublished;
+- paused the prior Ready authorization because the PR head will change.

@@ -206,3 +206,17 @@ tag_action: false
 publication_action: false
 publication_hold: ACTIVE
 ```
+
+---
+
+## Ejecución de V10-PUBLIC
+```yaml
+authorization: "Adelante con la Ruta expedita recomendada. Autorizo V10-PUBLIC."
+parent_commit: 5e811917ad5906112bee8b23a44fcd88b8cf9e88
+public_surface_gate: PASS
+public_documents: 10
+workflow_changes: false
+GitHub_Pages: false
+stable_release: false
+Ready_for_Review_action: false
+```
