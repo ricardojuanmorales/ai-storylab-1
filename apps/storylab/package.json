@@ -1,9 +1,9 @@
 {
-  "name": "@ai-storylab/storylab-baseline",
+  "name": "@ai-storylab/storylab",
   "private": true,
-  "version": "0.9.0-unreleased",
+  "version": "1.0.0-rc.1",
   "type": "module",
-  "description": "AI StoryLab 1 v0.9.0-unreleased: arco creativo local-first M1-M4, agencia humana, privacidad, reversibilidad y empaquetado verificable.",
+  "description": "AI StoryLab 1 v1.0.0-rc.1: candidata final no publicada, local-first, verificable y gobernada.",
   "engines": {
     "node": ">=22 <27"
   },

@@ -162,7 +162,7 @@ if (inventorySha256 !== manifest.testInventorySha256) {
   );
 }
 
-const tempRoot = mkdtempSync(join(tmpdir(), "ai-storylab-h09-5-"));
+const tempRoot = mkdtempSync(join(tmpdir(), "ai-storylab-v10-6-"));
 const vitestReportPath = join(tempRoot, "vitest.json");
 const packageOnePath = join(tempRoot, "candidate-one.zip");
 const packageTwoPath = join(tempRoot, "candidate-two.zip");
@@ -214,7 +214,7 @@ try {
   const packageTool = join(appRoot, "tools", "package-candidate.mjs");
   const candidateVersion =
     manifest.artifactContract?.candidateVersion ??
-    "0.9.0-unreleased";
+    "1.0.0-rc.1";
 
   for (const [output, reportPath] of [
     [packageOnePath, packageOneReportPath],

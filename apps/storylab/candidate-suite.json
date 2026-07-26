@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "suiteId": "AI_STORYLAB_V09_CANDIDATE_BASELINE",
-  "status": "FROZEN_FOR_H09_2_VALIDATION",
+  "suiteId": "AI_STORYLAB_V10_6_FINAL_UNPUBLISHED_RC1",
+  "status": "FROZEN_FOR_V10_6_FINAL_UNPUBLISHED_CANDIDATE",
   "supportedNodeMajors": [
     22,
     24
@@ -69,27 +69,30 @@
     "npm run audit:vertical-slice",
     "vitest run --reporter=json"
   ],
-  "reproducibilityStandard": "SEMANTIC",
-  "binaryReproducibilityClaimed": false,
+  "reproducibilityStandard": "BINARY_IDENTITY_ACROSS_RECORDED_V10_6_ENVIRONMENTS",
+  "binaryReproducibilityClaimed": true,
   "functionalExpansion": false,
   "artifactContract": {
     "schemaVersion": 1,
     "format": "DETERMINISTIC_ZIP_STORE",
-    "candidateVersion": "0.9.0-unreleased",
+    "candidateVersion": "1.0.0-rc.1",
     "fixedZipTimestamp": "1980-01-01T00:00:00Z",
     "binaryReproducibilityRequired": true,
-    "versionDriftStatus": "RESOLVED_FOR_CANONICAL_APPLICATION"
+    "versionDriftStatus": "RESOLVED_FOR_V10_6",
+    "publicationStatus": "UNPUBLISHED_FINAL_CANDIDATE"
   },
   "versionPolicy": {
-    "projectReleaseLine": "v0.9.0",
+    "projectReleaseLine": "v1.0.0",
     "canonicalApplicationPackage": "apps/storylab",
-    "canonicalApplicationVersion": "0.9.0-unreleased",
+    "canonicalApplicationVersion": "1.0.0-rc.1",
     "currentSchemaVersion": "0.8.0-alpha.2",
     "previousSchemaVersion": "0.8.0-alpha.1",
     "schemaVersionIndependentFromApplicationVersion": true,
     "legacyRootPackageVersion": "0.3.0",
     "legacyRootPackageStatus": "HISTORICAL_NON_CANONICAL_EXCLUDED_FROM_CANDIDATE",
-    "RCVersionAssigned": false,
-    "stableV1VersionAssigned": false
+    "RCVersionAssigned": true,
+    "stableV1VersionAssigned": false,
+    "RCIdentifier": "1.0.0-rc.1",
+    "RCPublicationStatus": "UNPUBLISHED"
   }
 }

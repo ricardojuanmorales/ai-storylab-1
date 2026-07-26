@@ -222,20 +222,22 @@ function buildPackageEntries(sourceRoot, metadata) {
 
   const manifest = {
     schemaVersion: 1,
-    artifactId: 'AI_STORYLAB_1_V09_CANDIDATE_PACKAGE',
+    artifactId: 'AI_STORYLAB_1_V10_6_FINAL_UNPUBLISHED_RC1',
     candidateVersion: metadata.candidateVersion,
-    publicationStatus: 'UNPUBLISHED_CANDIDATE_EVIDENCE',
+    publicationStatus: 'UNPUBLISHED_FINAL_CANDIDATE',
     applicationPackageVersion: metadata.applicationPackageVersion,
     sourceCommit: metadata.sourceCommit,
     packagingFormat: 'DETERMINISTIC_ZIP_STORE',
     fixedZipTimestamp: '1980-01-01T00:00:00Z',
     binaryReproducibilityTarget: true,
-    versionDriftStatus: 'PENDING_H09_6',
+    versionDriftStatus: 'RESOLVED_FOR_V10_6',
     supportClaims: {
       nodeBuildRuntime: [22, 24],
-      browserSupport: 'NOT_CLAIMED',
+      browserSupport: 'BOUNDED_DECLARED_MATRIX_V10_3',
+      browserMatrix: ['Safari 26.5.2', 'Google Chrome 150.0.7871.184', 'Firefox 152.0.1'],
+      assistiveTechnology: 'VoiceOver with Safari; bounded internal attestation',
       windowsSupport: 'NOT_CLAIMED',
-      fileProtocol: 'NOT_CLAIMED',
+      fileProtocol: 'NOT_CLAIMED_LOCAL_HTTP_REQUIRED',
     },
     files: appEntries.map(({ sourcePath, sha256, size }) => ({
       path: `app/${sourcePath}`,
@@ -249,15 +251,15 @@ function buildPackageEntries(sourceRoot, metadata) {
     .join('');
 
   const readme = [
-    'AI StoryLab 1 v0.9.0 candidate evidence package',
+    'AI StoryLab 1 v1.0.0-rc.1 final unpublished candidate',
     '',
-    'Status: unpublished validation artifact. This is not a release.',
+    'Status: final unpublished candidate. This is not a release or a published RC.',
     `Source commit: ${metadata.sourceCommit}`,
     `Application package version: ${metadata.applicationPackageVersion}`,
     '',
     'Serve the app/ directory through a local HTTP server.',
     'Direct file:// execution is not claimed.',
-    'Browser and Windows support are not claimed by this package.',
+    'Browser support is limited to the V10-3 declared matrix. Windows support is not claimed.',
     '',
   ].join('\n');
 
@@ -365,7 +367,7 @@ if (verifyPath) {
   const source = resolve(args.get('source') ?? 'dist');
   const output = resolve(args.get('output') ?? 'candidate.zip');
   const sourceCommit = args.get('commit');
-  const candidateVersion = args.get('candidate-version') ?? '0.9.0-unreleased';
+  const candidateVersion = args.get('candidate-version') ?? '1.0.0-rc.1';
   if (!sourceCommit || !/^[0-9a-f]{40}$/.test(sourceCommit)) {
     throw new Error('--commit must be a full 40-character Git SHA');
   }
