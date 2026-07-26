@@ -187,3 +187,22 @@ binary_reconstruction: PASS
 publication_hold: ACTIVE
 GATE_V10_RELEASE: BLOCKED_PENDING_HUMAN_DECISION
 ```
+
+---
+
+## Ejecución de GATE-V10-RELEASE
+
+```yaml
+authorization: "Adelante con GATE-V10-RELEASE."
+parent_commit: 2201cd183237ce8a5038c4eb2bd4f2f8360e9457
+gate_result: PASS
+controls_total: 18
+controls_passed: 18
+controls_failed: 0
+blocking_findings: 0
+Ready_for_Review_action: false
+merge_action: false
+tag_action: false
+publication_action: false
+publication_hold: ACTIVE
+```

@@ -193,3 +193,23 @@ GATE_V10_RELEASE: BLOCKED
 
 Se volvió al plano original, se reconstruyó el casco y se comparó byte por byte.
 El informe prepara la puerta del gate, pero no gira su llave.
+
+---
+
+## Cuatro llaves en sobres separados · GATE-V10-RELEASE
+
+```yaml
+gate: GATE-V10-RELEASE
+parent_commit: 2201cd183237ce8a5038c4eb2bd4f2f8360e9457
+candidate_version: 1.0.0-rc.1
+source_commit: 533fcf28a0c9053b7da79ca70ded80450d94cf35
+artifact_sha256: 6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c
+gate_result: PASS
+controls_passed: 18
+controls_failed: 0
+publication_hold: ACTIVE
+actions_executed: 0
+```
+
+El gate inspeccionó cuatro llaves, pero ninguna salió de su sobre. La primera
+puede presentarse a decisión humana; las otras esperan su turno y sus pruebas.

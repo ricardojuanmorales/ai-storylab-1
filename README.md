@@ -14,47 +14,35 @@ artificial responsable.
 ```yaml
 project_release_line: v1.0.0
 project_version: 1.0.0-rc.1
-phase: V10_A_PROCEDURAL_INDEPENDENT_AUDIT
-active_hito: V10-A_AT_HUMAN_CLOSE_GATE
+phase: GATE_V10_RELEASE_AUTHORITY_EVALUATION
+active_gate: GATE-V10-RELEASE_AT_HUMAN_CLOSE_GATE
 branch: feat/v1.0-release-readiness
 PR: 65
 PR_mode: single_consolidated_draft
 baseline_main_head: 83cd5983ad3e66d43a442c090ce95f3bb22ee968
-V10_0:
+V10_0_to_V10_A:
   lifecycle: CLOSED_BY_HUMAN_DECISION
-V10_1:
-  lifecycle: CLOSED_BY_HUMAN_DECISION
-V10_2:
-  lifecycle: CLOSED_BY_HUMAN_DECISION
-V10_3:
-  lifecycle: CLOSED_BY_HUMAN_DECISION
-V10_4:
-  lifecycle: CLOSED_BY_HUMAN_DECISION
-V10_5:
-  lifecycle: CLOSED_BY_HUMAN_DECISION
-V10_6:
-  lifecycle: CLOSED_BY_HUMAN_DECISION
-V10_7:
-  commit: ace90849e74cc14937e3cf9782fff90854b7849e
-  lifecycle: CLOSED_BY_HUMAN_DECISION
-V10_A:
+GATE_V10_RELEASE:
   authorization: OPEN_AND_EXECUTE
   state: HUMAN_CLOSE_GATE
   commit: CONTAINING_COMMIT
-  audit_gate: PASS
-  controls_total: 24
-  controls_passed: 24
+  gate_result: PASS
+  controls_total: 18
+  controls_passed: 18
   controls_failed: 0
   blocking_findings: 0
-  binary_reconstruction: PASS
-  gate_packet: READY_FOR_HUMAN_GATE_OPENING
-  publication_hold: ACTIVE
-GATE_V10_RELEASE: BLOCKED_PENDING_HUMAN_DECISION
+  Ready_for_Review: ELIGIBLE_FOR_SEPARATE_HUMAN_AUTHORIZATION_NOW
+  merge: CONDITIONAL_AFTER_READY_FOR_REVIEW_AND_REVIEW_REQUIREMENTS
+  tag: CONDITIONAL_AFTER_MERGE_AND_SOURCE_ANCESTRY_RECHECK
+  publication: CONDITIONAL_AFTER_TAG_AND_FINAL_HASH_RECHECK
+candidate_tag_reserved: v1.0.0-rc.1
+stable_version: NOT_ASSIGNED
+publication_hold: ACTIVE
+Ready_for_Review_action: false
+merge_action: false
+tag_action: false
 artifact_publication: false
-Ready_for_Review: false
-merge: false
-tag: false
-release: false
+GitHub_Release: false
 ```
 
 ## Runtime canónico

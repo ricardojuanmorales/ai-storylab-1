@@ -4,10 +4,10 @@
 project: AI StoryLab 1
 phase: v1.0.0
 hito: V10-A
-state: HUMAN_CLOSE_GATE
+state: CLOSED_BY_HUMAN_DECISION
 disposition: PROCEDURAL_AUDIT_PASS_GATE_INPUT_PREPARED
 parent_commit: ace90849e74cc14937e3cf9782fff90854b7849e
-commit: CONTAINING_COMMIT
+commit: 2201cd183237ce8a5038c4eb2bd4f2f8360e9457
 branch: feat/v1.0-release-readiness
 PR: 65
 PR_mode: DRAFT_SINGLE_CONSOLIDATED
@@ -33,7 +33,7 @@ audit:
 
 gate_packet:
   status: READY_FOR_HUMAN_GATE_OPENING
-  GATE_V10_RELEASE: BLOCKED_PENDING_HUMAN_DECISION
+  GATE_V10_RELEASE: OPENED_AND_EXECUTED_BY_HUMAN_AUTHORIZATION
 
 changes:
   documentation_only: true
@@ -48,5 +48,5 @@ Ready_for_Review: false
 merge: false
 tag: false
 release: false
-PR_comment: PREPARE_AFTER_HUMAN_DECISION_FOR_MANUAL_PUBLICATION
+PR_comment: PREPARED_FOR_MANUAL_PUBLICATION
 ```
