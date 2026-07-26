@@ -52,5 +52,7 @@
   "tag": false,
   "RC": false,
   "release": false,
-  "V10_4": "BLOCKED_PENDING_HUMAN_DECISION"
+  "V10_4": "OPENED_AND_EXECUTED_BY_HUMAN_AUTHORIZATION",
+  "state": "CLOSED_BY_HUMAN_DECISION",
+  "human_close_decision": true
 }

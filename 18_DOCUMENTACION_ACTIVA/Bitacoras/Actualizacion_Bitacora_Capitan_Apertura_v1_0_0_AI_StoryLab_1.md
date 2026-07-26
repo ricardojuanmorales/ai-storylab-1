@@ -103,3 +103,24 @@ next_hito: V10_4_BLOCKED
 La nave probó sus instrumentos en aguas concretas, no en todos los océanos. La
 matriz declara solo navegadores realmente recorridos y la revisión de VoiceOver
 permanece acotada a la combinación observada.
+
+---
+
+## Inspección de casco y suministros · V10-4
+
+```yaml
+hito: V10-4
+maneuver: SECURITY_PRIVACY_AND_SUPPLY_CHAIN_AUDIT
+parent_commit: c4b5a5174b9617251effe6fd5a6b025d9f210d0f
+human_order: "Adelante con V10-4 expedito."
+security_gate: PASS
+blocking_findings: 0
+review_findings: 3
+repairs: 0
+dependencies_changed: false
+workflows_changed: false
+next_hito: V10_5_BLOCKED
+```
+
+La inspección abrió las cajas, leyó los sellos y revisó el casco sin reemplazar
+piezas. Cada hallazgo conserva severidad, efecto y autoridad humana.

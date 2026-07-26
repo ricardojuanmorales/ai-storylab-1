@@ -1,0 +1,6 @@
+control_id,control,observed,result,boundary
+CI-001,Workflow permissions,contents: read,PASS,Top-level baseline workflow inspection.
+CI-002,Locked installation,npm ci --ignore-scripts,PASS,Baseline workflow only.
+CI-003,Node matrix,Node 22 and 24,PASS,Declared baseline matrix.
+CI-004,Third-party action pinning,0 immutable; 2 mutable references,OBSERVATION,Mutable major/version tags are not represented as immutable SHA pins.
+CI-005,Write permissions,0 write permission occurrences,PASS,Occurrence scan; contextual authorization remains human.

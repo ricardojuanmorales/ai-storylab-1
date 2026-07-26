@@ -1,0 +1,13 @@
+finding_id,domain,control,result,severity,classification,blocking,evidence,disposition
+SEC-001,SECURITY,Secret scan,PASS,NONE,VERIFIED,false,scanned_files=181; errors=0,No action.
+SEC-002,SECURITY,Security test suite,PASS,NONE,VERIFIED,false,exit_code=0; raw_log_sha256=6c80ff54ce273c9d2ff4932ad5c3aea5d2cc4af6ffe444a6b249bf680a157342,No action.
+SEC-003,SECURITY,Tracked environment files,PASS,NONE,VERIFIED,false,tracked_env_files=[],No action.
+PRIV-001,PRIVACY,Privacy boundary audit,PASS,NONE,VERIFIED,false,scanned_files=94; errors=0; policy=synthetic_only,Preserve synthetic-only and local-first boundaries.
+SC-001,SUPPLY_CHAIN,Lockfile and installed tree consistency,PASS,NONE,VERIFIED,false,lockfile_version=3; package_match=True; non_registry_sources=0; missing_integrity=0; npm_ls_exit=0; npm_ls_problems=0,Preserve package-lock.json and npm ci --ignore-scripts.
+SC-002,SUPPLY_CHAIN,NPM high and critical vulnerabilities,PASS,NONE,VERIFIED,false,full_high=0; full_critical=0; production_high=0; production_critical=0,No action.
+SC-003,SUPPLY_CHAIN,NPM low and moderate vulnerabilities,PASS,NONE,VERIFIED,false,full_low=0; full_moderate=0; production_low=0; production_moderate=0,No action.
+SC-004,SUPPLY_CHAIN,Lifecycle scripts,OBSERVATION,LOW,ACCEPTED_LIMITATION,false,packages_with_install_scripts=1; installation_used_ignore_scripts=true,Keep npm ci --ignore-scripts; review only if packaging requirements change.
+SC-005,SUPPLY_CHAIN,License metadata,REVIEW,LOW,REVIEW_REQUIRED,false,packages_without_recorded_license=15,Verify missing license metadata before publication dossier.
+SC-006,SUPPLY_CHAIN,GitHub Action references,OBSERVATION,MODERATE,ACCEPTED_LIMITATION,false,mutable_action_references=2; immutable_action_references=0,Immutable pinning is future hardening; workflow changes are not authorized in V10-4.
+SC-007,SUPPLY_CHAIN,Deprecated packages,PASS,NONE,VERIFIED,false,deprecated_packages=0,No action.
+SC-008,SUPPLY_CHAIN,Workflow write permissions,PASS,NONE,VERIFIED,false,write_permission_occurrences=0,No action.

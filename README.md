@@ -14,8 +14,8 @@ artificial responsable.
 ```yaml
 project_release_line: v1.0.0
 project_version: 0.9.0-unreleased
-phase: V10_3_EXPERIENCE_ACCESSIBILITY_COMPATIBILITY
-active_hito: V10-3_AT_HUMAN_CLOSE_GATE
+phase: V10_4_SECURITY_PRIVACY_SUPPLY_CHAIN
+active_hito: V10-4_AT_HUMAN_CLOSE_GATE
 branch: feat/v1.0-release-readiness
 PR: 65
 PR_mode: single_consolidated_draft
@@ -25,26 +25,27 @@ V10_0:
 V10_1:
   lifecycle: CLOSED_BY_HUMAN_DECISION
 V10_2:
-  commit: 7cfd79bc087e90e286fb6e76d10716c6ef434555
-  CI_run: 30136713958
   lifecycle: CLOSED_BY_HUMAN_DECISION
 V10_3:
+  commit: c4b5a5174b9617251effe6fd5a6b025d9f210d0f
+  CI_run: 30209763811
+  lifecycle: CLOSED_BY_HUMAN_DECISION
+V10_4:
   authorization: OPEN_AND_EXECUTE
   state: HUMAN_CLOSE_GATE
   commit: CONTAINING_COMMIT
-  automated_validation: PASS
-  browser_matrix: BOUNDED_PASS
-  VoiceOver_manual_review: BOUNDED_PASS
-  RSV_03: RESOLVED_BOUNDED
-  RSV_06: RESOLVED_BOUNDED
-  declared_browsers: "Safari 26.5.2, Google Chrome 150.0.7871.184, Firefox 152.0.1"
-  operating_system: "macOS 26.5.2"
-V10_4: BLOCKED_PENDING_HUMAN_DECISION
-Windows_support: NOT_CLAIMED
-universal_browser_support: NOT_CLAIMED
-file_protocol_support: OUTSIDE_DECLARED_RUNTIME
-participant_usability: NOT_CLAIMED
-WCAG_certification: NOT_CLAIMED
+  security_gate: PASS
+  blocking_findings: 0
+  review_findings: 3
+  secret_scan: PASS
+  privacy_audit: PASS
+  security_tests: PASS
+  production_vulnerabilities: 0
+  full_vulnerabilities: 0
+V10_5: BLOCKED_PENDING_HUMAN_DECISION
+dependency_changes: false
+workflow_changes: false
+npm_audit_fix: false
 artifact_publication: false
 Ready_for_Review: false
 merge: false

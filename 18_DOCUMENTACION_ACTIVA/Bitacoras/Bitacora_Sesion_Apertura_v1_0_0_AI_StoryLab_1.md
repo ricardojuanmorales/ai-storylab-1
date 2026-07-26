@@ -103,3 +103,25 @@ V10_4: BLOCKED_PENDING_HUMAN_DECISION
 
 La validación humana fue una atestación interna guiada. No se transforma en
 auditoría externa, certificación WCAG ni evidencia con participantes.
+
+---
+
+## Ejecución de V10-4
+
+```yaml
+authorization: "Adelante con V10-4 expedito."
+parent_commit: c4b5a5174b9617251effe6fd5a6b025d9f210d0f
+secret_scan: PASS
+privacy_audit: PASS
+security_tests: PASS
+dependency_packages: 164
+production_vulnerabilities: 0
+full_vulnerabilities: 0
+blocking_findings: 0
+review_findings: 3
+security_gate: PASS
+repairs: false
+dependency_changes: false
+workflow_changes: false
+V10_5: BLOCKED_PENDING_HUMAN_DECISION
+```
