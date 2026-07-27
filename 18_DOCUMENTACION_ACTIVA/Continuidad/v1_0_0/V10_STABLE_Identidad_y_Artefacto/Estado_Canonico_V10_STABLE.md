@@ -2,15 +2,28 @@
 
 ```yaml
 hito: V10-STABLE
-state: SOURCE_FREEZE_PREPARATION
-parent_commit: f912bef9017b1624da28c469c5b9a1f57cb9dc17
-stable_source_commit: PENDING
+state: HUMAN_CLOSE_GATE
+disposition: STABLE_IDENTITY_AND_EXACT_ARTIFACT_VERIFIED_NOT_PUBLISHED
+stable_source_commit: e05369e0052f86dfebadeb010f9a792496d64800
+evidence_commit: RECORDED_BY_GIT_HISTORY
 application_version: 1.0.0
 schema_version: 0.8.0-alpha.2
-stable_identity_assigned: true
-artifact_built: false
+test_files: 51
+tests: 252
+baseline_CI_run: 30233085298
+Pages_validation_CI_run: 30233089719
+artifact_filename: ai-storylab-1_1.0.0_e05369e0052f.zip
+artifact_sha256: 2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be
+artifact_size_bytes: 773342
+artifact_entries: 16
+application_files: 12
+cross_node_reproducibility: PASS
+CI_local_binary_identity: PASS
+legacy_snapshot_included: true
+legacy_bridge_included: true
 artifact_published: false
-Pages_deployment: false
+Pages_configuration_changed: false
+deployment_performed: false
 Ready_for_Review: false
 merge: false
 tag: false

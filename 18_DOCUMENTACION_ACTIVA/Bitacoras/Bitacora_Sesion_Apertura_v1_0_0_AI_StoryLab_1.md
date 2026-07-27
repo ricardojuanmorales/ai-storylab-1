@@ -300,3 +300,15 @@ source_commit: PENDING
 artifact: PENDING_EXACT_SOURCE_FREEZE
 publication: false
 ```
+
+---
+
+## Evidencia exacta de V10-STABLE
+
+```yaml
+source_commit: e05369e0052f86dfebadeb010f9a792496d64800
+stable_ZIP: ai-storylab-1_1.0.0_e05369e0052f.zip
+SHA_256: 2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be
+CI_local_binary_identity: PASS
+state: HUMAN_CLOSE_GATE
+```

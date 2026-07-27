@@ -1,0 +1,21 @@
+control_id,surface,status,evidence
+STB-001,Parent exacto,PASS,f912bef9017b1624da28c469c5b9a1f57cb9dc17
+STB-002,Versión package,PASS,1.0.0
+STB-003,Versión lock,PASS,1.0.0
+STB-004,Identidad suite,PASS,V10_STABLE_UNPUBLISHED
+STB-005,Schemas,PASS,0.8.0-alpha.2 unchanged
+STB-006,Dependencias,PASS,graph unchanged
+STB-007,Archivos de prueba,PASS,51
+STB-008,Pruebas,PASS,252
+STB-009,Baseline Node 22/24,PASS,30233085298
+STB-010,Hash CI cruzado,PASS,2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be
+STB-011,Pages validation,PASS,30233089719
+STB-012,Deploy job,PASS,skipped
+STB-013,ZIP determinista local,PASS,2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be
+STB-014,Identidad CI/local,PASS,2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be
+STB-015,Snapshot v0.3.0 incluido,PASS,true
+STB-016,Puente legacy incluido,PASS,true
+STB-017,Pages remoto,PASS,legacy unchanged
+STB-018,MVP público,PASS,HTTP 200
+STB-019,Publicación ZIP,PASS,false
+STB-020,Acciones de release,PASS,none

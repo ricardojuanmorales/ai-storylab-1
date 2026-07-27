@@ -2,6 +2,15 @@
 
 ## [1.0.0] — Unreleased
 
+### Exact stable artifact
+
+- source commit `e05369e0052f86dfebadeb010f9a792496d64800`;
+- SHA-256 `2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be`;
+- size `773342` bytes;
+- baseline `30233085298` and Pages validation `30233089719` passed;
+- ZIP remains local and unpublished.
+
+
 ### Stable identity
 
 - assigned application version `1.0.0`;

@@ -314,3 +314,17 @@ Pages_deployment: false
 ```
 
 La nave recibe nombre estable, pero permanece dentro del astillero gobernado.
+
+---
+
+## V10-STABLE · Artefacto exacto verificado
+
+```yaml
+source_commit: e05369e0052f86dfebadeb010f9a792496d64800
+artifact_sha256: 2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be
+artifact_size_bytes: 773342
+baseline_CI: 30233085298
+Pages_validation_CI: 30233089719
+publication: false
+deployment: false
+```

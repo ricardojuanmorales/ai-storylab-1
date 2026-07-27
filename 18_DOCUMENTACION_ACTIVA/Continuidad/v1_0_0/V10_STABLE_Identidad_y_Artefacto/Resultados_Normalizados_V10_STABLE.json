@@ -1,0 +1,37 @@
+{
+  "hito": "V10-STABLE",
+  "gate": "PASS",
+  "sourceCommit": "e05369e0052f86dfebadeb010f9a792496d64800",
+  "version": "1.0.0",
+  "schemaVersion": "0.8.0-alpha.2",
+  "suite": {
+    "testFiles": 51,
+    "tests": 252,
+    "baselineRun": 30233085298,
+    "status": "PASS"
+  },
+  "pages": {
+    "validationRun": 30233089719,
+    "status": "PASS",
+    "deployJob": "skipped",
+    "configurationChanged": false,
+    "deploymentPerformed": false
+  },
+  "artifact": {
+    "filename": "ai-storylab-1_1.0.0_e05369e0052f.zip",
+    "sha256": "2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be",
+    "sizeBytes": 773342,
+    "entries": 16,
+    "applicationFiles": 12,
+    "ciHash": "2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be",
+    "localHash": "2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be",
+    "binaryIdentity": "PASS",
+    "publication": false
+  },
+  "legacy": {
+    "snapshotIncluded": true,
+    "bridgeIncluded": true,
+    "publicMvpPreserved": true
+  },
+  "nextHito": "V10-A-STABLE"
+}

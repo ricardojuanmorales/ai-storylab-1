@@ -10,7 +10,7 @@ release_line: v1.0.0
 stable_identity: 1.0.0
 stable_release: ASSIGNED_NOT_YET_PUBLISHED
 GitHub_Pages: PREPARED_NOT_YET_DEPLOYED
-stable_ZIP: BUILD_PENDING_V10_STABLE_NOT_PUBLISHED
+stable_ZIP: BUILT_VERIFIED_NOT_PUBLISHED
 publication_hold: ACTIVE
 ```
 
@@ -56,3 +56,15 @@ No se afirma soporte universal, Windows, `file://`, certificación WCAG, firma c
 ## Continuidad del MVP v0.3.0
 
 La continuidad de v0.3.0 está preparada mediante una futura ruta histórica y un puente local de respaldo. Estas rutas todavía no están desplegadas.
+
+## Evidencia estable no publicada
+
+```yaml
+stable_source_commit: e05369e0052f86dfebadeb010f9a792496d64800
+stable_artifact_sha256: 2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be
+stable_artifact_size_bytes: 773342
+baseline_CI: 30233085298
+Pages_validation_CI: 30233089719
+artifact_publication: false
+Pages_deployment: false
+```
