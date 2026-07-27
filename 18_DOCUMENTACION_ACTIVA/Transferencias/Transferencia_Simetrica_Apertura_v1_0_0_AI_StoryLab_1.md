@@ -306,3 +306,9 @@ La próxima maniobra solo puede autorizar Ready for Review de forma separada.
 ## Transferencia hacia Ready for Review
 
 Ready for Review es elegible pero no ejecutado. Los seis pasos posteriores siguen bloqueados.
+
+---
+
+## GATE-V1-PUBLISH listo para decisión Ready
+
+Ready for Review es elegible y requiere autorización separada.

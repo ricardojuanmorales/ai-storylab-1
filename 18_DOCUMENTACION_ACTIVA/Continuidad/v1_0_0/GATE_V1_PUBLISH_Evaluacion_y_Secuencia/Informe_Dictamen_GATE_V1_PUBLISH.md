@@ -1,7 +1,7 @@
 # Dictamen · GATE-V1-PUBLISH
 
 ```yaml
-status: PASS_LOCAL_PENDING_EXACT_GATE_CI
+status: PASS
 parent_commit: 186b2df49f608033165e1d743fc1523464f96fde
 application_version: 1.0.0
 schema_version: 0.8.0-alpha.2
@@ -14,3 +14,7 @@ actions_executed: 0
 
 El próximo movimiento elegible es solicitar autorización humana separada para
 marcar el PR Ready for Review. Merge, tag, Release, ZIP y Pages siguen bloqueados.
+
+## CI exacta
+
+Baseline `30266779381` PASS. Pages `30266788397` PASS. Deployment `skipped`.

@@ -19,3 +19,5 @@ PUB-017,threads,PASS,0
 PUB-018,Ready ejecutado,PASS,false
 PUB-019,merge ejecutado,PASS,false
 PUB-020,publicación ejecutada,PASS,false
+PUB-021,Baseline gate,PASS,30266779381
+PUB-022,Pages gate,PASS,30266788397; deploy=skipped

@@ -4,8 +4,8 @@
   "gate": "GATE-V1-PUBLISH",
   "date": "2026-07-27",
   "parent_commit": "186b2df49f608033165e1d743fc1523464f96fde",
-  "gate_commit": "RECORDED_BY_GIT_HISTORY",
-  "gate_evidence_commit": "PENDING",
+  "gate_commit": "a4a391ce961479016629e4da94aad7c3c1ce97a3",
+  "gate_evidence_commit": "RECORDED_BY_GIT_HISTORY",
   "application_version": "1.0.0",
   "schema_version": "0.8.0-alpha.2",
   "schema_version_independent": true,
@@ -93,8 +93,19 @@
   "schema_changes": false,
   "functional_changes": false,
   "workflow_changes": false,
-  "gate_baseline_CI": "PENDING",
-  "gate_pages_validation_CI": "PENDING",
+  "gate_baseline_CI": {
+    "run": 30266779381,
+    "url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/30266779381",
+    "status": "PASS",
+    "head": "a4a391ce961479016629e4da94aad7c3c1ce97a3"
+  },
+  "gate_pages_validation_CI": {
+    "run": 30266788397,
+    "url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/30266788397",
+    "status": "PASS",
+    "head": "a4a391ce961479016629e4da94aad7c3c1ce97a3",
+    "deploy_job": "skipped"
+  },
   "next_decision": "READY_FOR_REVIEW_PENDING_SEPARATE_HUMAN_AUTHORIZATION",
-  "state": "GATE_COMMIT_PREPARATION"
+  "state": "HUMAN_CLOSE_GATE"
 }

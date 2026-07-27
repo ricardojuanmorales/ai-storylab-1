@@ -343,3 +343,9 @@ state: HUMAN_CLOSE_GATE
 ## Ejecución de GATE-V1-PUBLISH
 
 Cadena, artefacto, PR, main, threads y límites de publicación: PASS.
+
+---
+
+## Evidencia remota de GATE-V1-PUBLISH
+
+Commit a4a391ce961479016629e4da94aad7c3c1ce97a3; baseline y Pages PASS; cero acciones de publicación.

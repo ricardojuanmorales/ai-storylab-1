@@ -1,6 +1,6 @@
 {
   "gate": "GATE-V1-PUBLISH",
-  "status": "PASS_LOCAL_PENDING_EXACT_GATE_CI",
+  "status": "PASS",
   "readyEligibility": "ELIGIBLE_PENDING_SEPARATE_HUMAN_AUTHORIZATION",
   "stableChain": "PASS",
   "artifactInvariant": "PASS",
@@ -64,5 +64,17 @@
       "action": "verify root and legacy routes then close",
       "stop": true
     }
-  ]
+  ],
+  "gateCommit": "a4a391ce961479016629e4da94aad7c3c1ce97a3",
+  "exactCI": {
+    "baseline": {
+      "run": 30266779381,
+      "status": "PASS"
+    },
+    "pages": {
+      "run": 30266788397,
+      "status": "PASS",
+      "deployJob": "skipped"
+    }
+  }
 }

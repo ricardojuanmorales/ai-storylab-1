@@ -365,3 +365,9 @@ local_gate: PASS
 Ready_for_Review_eligibility: ELIGIBLE_PENDING_SEPARATE_HUMAN_AUTHORIZATION
 actions_executed: 0
 ```
+
+---
+
+## GATE-V1-PUBLISH · CI exacta
+
+Baseline 30266779381 PASS. Pages 30266788397 PASS. Ready elegible, no ejecutado.
