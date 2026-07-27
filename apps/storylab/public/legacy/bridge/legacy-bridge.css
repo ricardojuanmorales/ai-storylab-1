@@ -1,0 +1,15 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+body { margin: 0; }
+.shell { width: min(52rem, calc(100% - 2rem)); margin: 0 auto; padding: 2rem 0 4rem; }
+.eyebrow { font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.card, .boundary { border: 1px solid currentColor; border-radius: 0.75rem; margin: 1.5rem 0; padding: 1rem; }
+dl { display: grid; grid-template-columns: minmax(12rem, 1fr) 2fr; gap: 0.5rem 1rem; }
+dt { font-weight: 700; }
+.confirmation { display: flex; gap: 0.75rem; align-items: flex-start; margin: 1rem 0; }
+button, a { font: inherit; }
+button { padding: 0.65rem 1rem; }
+nav { display: flex; flex-wrap: wrap; gap: 1rem; }

@@ -130,3 +130,14 @@ Todas las modificaciones importantes del MVP se registran aquí siguiendo [Keep 
 - added build-always, deploy-manually workflow;
 - did not execute a new public deployment;
 - recorded and preserved the preexisting Pages state.
+
+---
+
+## Legacy continuity · V10-LEGACY-BRIDGE
+
+- captured the live v0.3.0 fingerprint;
+- built a historical snapshot under a future legacy route;
+- added a read-only backup bridge;
+- proved v1 clear operations preserve MVP keys;
+- kept GitHub Pages legacy configuration unchanged;
+- performed no deployment.

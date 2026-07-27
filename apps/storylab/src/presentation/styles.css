@@ -1124,3 +1124,10 @@ small {
   }
 }
 
+
+
+/* V10-LEGACY-BRIDGE */
+.legacy-continuity-panel { border-style: dashed; }
+.legacy-continuity-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.legacy-continuity-actions a { font-weight: 700; }
+.legacy-warning { border-inline-start: 0.3rem solid currentColor; padding-inline-start: 0.8rem; }

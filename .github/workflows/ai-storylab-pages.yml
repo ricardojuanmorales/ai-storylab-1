@@ -59,6 +59,10 @@ jobs:
       - name: Smoke-test repository subpath
         working-directory: apps/storylab
         run: node tools/verify-pages-build.mjs dist /ai-storylab-1/
+      - name: Verify legacy continuity routes
+        working-directory: apps/storylab
+        run: node tools/verify-legacy-bridge.mjs dist /ai-storylab-1/
+
       - name: Upload temporary Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:

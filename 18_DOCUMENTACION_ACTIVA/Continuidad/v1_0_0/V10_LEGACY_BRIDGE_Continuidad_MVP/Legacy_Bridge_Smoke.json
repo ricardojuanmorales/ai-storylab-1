@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "base": "/ai-storylab-1/",
+  "legacyBase": "/ai-storylab-1/legacy/v0.3.0/",
+  "bridgeBase": "/ai-storylab-1/legacy/bridge/",
+  "legacyAssets": 3,
+  "bridgeReadOnly": true,
+  "sourceKeysPreserved": true,
+  "semanticConversionPerformed": false,
+  "files": [
+    "index.html",
+    "legacy-bridge.css",
+    "legacy-bridge.js"
+  ]
+}

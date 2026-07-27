@@ -234,3 +234,18 @@ preexisting_configured: true
 preexisting_status: built
 stable_version: false
 ```
+
+---
+
+## Ejecución de V10-LEGACY-BRIDGE
+
+```yaml
+authorization: "Adelante con V10-LEGACY_BRIDGE."
+parent_commit: c3e0783b9299584fcfa38770ac94f3c628c89c14
+live_fingerprint: PASS
+legacy_snapshot: PASS
+read_only_bridge: PASS
+semantic_conversion: DEFERRED
+remote_Pages_changed: false
+deployment: false
+```

@@ -243,3 +243,15 @@ preexisting_live_endpoint_observed: true
 configuration_compatibility: SOURCE_SWITCH_REQUIRED_BEFORE_DEPLOYMENT
 ```
 El muelle ya soporta peso. V10-PAGES no movió la configuración remota preexistente.
+
+---
+
+## Puente de memoria · V10-LEGACY-BRIDGE
+
+```yaml
+live_MVP: https://ricardojuanmorales.github.io/ai-storylab-1/
+legacy_route_prepared: /ai-storylab-1/legacy/v0.3.0/
+backup_bridge_prepared: /ai-storylab-1/legacy/bridge/
+source_keys_preserved: true
+deployment: false
+```

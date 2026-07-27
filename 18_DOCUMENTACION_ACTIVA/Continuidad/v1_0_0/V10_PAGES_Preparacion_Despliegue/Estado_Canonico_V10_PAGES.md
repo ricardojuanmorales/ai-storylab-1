@@ -1,10 +1,10 @@
 # Estado canónico · V10-PAGES
 ```yaml
 hito: V10-PAGES
-state: HUMAN_CLOSE_GATE
+state: CLOSED_BY_HUMAN_DECISION
 disposition: GITHUB_PAGES_BUILD_WORKFLOW_AND_SMOKE_PREPARED
 parent_commit: 2bad11c85a832172d2af3671a73273e7f9e40a92
-commit: CONTAINING_COMMIT
+commit: c3e0783b9299584fcfa38770ac94f3c628c89c14
 pages_gate: PASS
 controls_total: 14
 controls_passed: 14
@@ -32,4 +32,12 @@ tag: false
 GitHub_Release: false
 stable_ZIP_publication: false
 V10_STABLE: BLOCKED_PENDING_HUMAN_AUTHORIZATION
+```
+
+## Continuidad posterior a V10-PAGES
+
+```yaml
+V10_LEGACY_BRIDGE: OPENED_AND_EXECUTED_BY_HUMAN_AUTHORIZATION
+MVP_v0_3_0: LIVE_AND_PRESERVED
+deployment_performed: false
 ```

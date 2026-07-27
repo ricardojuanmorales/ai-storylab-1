@@ -1,0 +1,41 @@
+{
+  "hito": "V10-LEGACY-BRIDGE",
+  "gate": "PASS",
+  "legacyVersion": "0.3.0",
+  "liveMvp": {
+    "url": "https://ricardojuanmorales.github.io/ai-storylab-1/",
+    "status": "PASS",
+    "httpStatus": 200,
+    "assets": 3,
+    "storageKeysFound": [
+      "aistorylab_group_progress_v0_2",
+      "aistorylab_student_progress_v0_2"
+    ]
+  },
+  "preparedRoutes": {
+    "legacyApp": "/ai-storylab-1/legacy/v0.3.0/",
+    "backupBridge": "/ai-storylab-1/legacy/bridge/",
+    "deployed": false
+  },
+  "continuity": {
+    "snapshotNavigable": true,
+    "bridgeReadOnly": true,
+    "humanConfirmedBackup": true,
+    "sourceKeysPreserved": true,
+    "v1ClearPreservesMvpKeys": true,
+    "semanticConversionPerformed": false
+  },
+  "remotePages": {
+    "buildType": "legacy",
+    "source": "gh-pages:/",
+    "configurationChanged": false
+  },
+  "actionsExecuted": {
+    "pagesDeployment": false,
+    "readyForReview": false,
+    "merge": false,
+    "tag": false,
+    "release": false
+  },
+  "nextHito": "V10-STABLE"
+}

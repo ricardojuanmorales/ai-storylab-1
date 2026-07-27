@@ -15,3 +15,4 @@ Este cartapacio reúne la documentación humana mínima del ecosistema estable.
 - [Docentes e investigadores](Orientaciones_Docentes_Investigadores_AI_StoryLab_1_v1_0_0.md)
 
 La aplicación continúa como candidata interna `1.0.0-rc.1`. GitHub Pages está preparado. Se detectó y preservó una configuración preexistente (legacy, estado built, HTTP 200). V10-PAGES no ejecutó un deployment nuevo. El ZIP estable y la GitHub Release `v1.0.0` todavía no están publicados.
+- [Continuidad del MVP v0.3.0](Guia_Continuidad_MVP_v0_3_0.md)

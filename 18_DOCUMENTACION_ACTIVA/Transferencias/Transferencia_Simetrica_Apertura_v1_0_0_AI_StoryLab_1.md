@@ -212,3 +212,14 @@ La próxima maniobra solo puede autorizar Ready for Review de forma separada.
 - endpoint preexistente observado como vivo: `True`;
 - deployment realizado por V10-PAGES: `false`;
 - próximo hito: V10-STABLE.
+
+---
+
+## Continuidad incorporada · V10-LEGACY-BRIDGE
+
+- MVP v0.3.0 público preservado;
+- snapshot preparado en `/ai-storylab-1/legacy/v0.3.0/`;
+- respaldo preparado en `/ai-storylab-1/legacy/bridge/`;
+- claves históricas no borradas;
+- conversión semántica no realizada;
+- V10-STABLE permanece bloqueado.

@@ -52,3 +52,7 @@ No requiere cuenta, backend, nube, telemetría ni API de IA. Los proyectos se al
 
 ## Límites
 No se afirma soporte universal, Windows, `file://`, certificación WCAG, firma criptográfica, efectividad educativa poblacional ni publicación estable antes de los gates restantes.
+
+## Continuidad del MVP v0.3.0
+
+La continuidad de v0.3.0 está preparada mediante una futura ruta histórica y un puente local de respaldo. Estas rutas todavía no están desplegadas.
