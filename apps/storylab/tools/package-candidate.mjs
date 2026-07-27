@@ -222,15 +222,15 @@ function buildPackageEntries(sourceRoot, metadata) {
 
   const manifest = {
     schemaVersion: 1,
-    artifactId: 'AI_STORYLAB_1_V10_6_FINAL_UNPUBLISHED_RC1',
-    candidateVersion: metadata.candidateVersion,
-    publicationStatus: 'UNPUBLISHED_FINAL_CANDIDATE',
+    artifactId: 'AI_STORYLAB_1_V10_STABLE_UNPUBLISHED_1_0_0',
+    releaseVersion: metadata.releaseVersion,
+    publicationStatus: 'UNPUBLISHED_STABLE_ARTIFACT',
     applicationPackageVersion: metadata.applicationPackageVersion,
     sourceCommit: metadata.sourceCommit,
     packagingFormat: 'DETERMINISTIC_ZIP_STORE',
     fixedZipTimestamp: '1980-01-01T00:00:00Z',
     binaryReproducibilityTarget: true,
-    versionDriftStatus: 'RESOLVED_FOR_V10_6',
+    versionDriftStatus: 'RESOLVED_FOR_V10_STABLE',
     supportClaims: {
       nodeBuildRuntime: [22, 24],
       browserSupport: 'BOUNDED_DECLARED_MATRIX_V10_3',
@@ -251,9 +251,9 @@ function buildPackageEntries(sourceRoot, metadata) {
     .join('');
 
   const readme = [
-    'AI StoryLab 1 v1.0.0-rc.1 final unpublished candidate',
+    'AI StoryLab 1 v1.0.0 stable artifact, not published',
     '',
-    'Status: final unpublished candidate. This is not a release or a published RC.',
+    'Status: stable identity assigned and artifact verified, but not published.',
     `Source commit: ${metadata.sourceCommit}`,
     `Application package version: ${metadata.applicationPackageVersion}`,
     '',
@@ -269,7 +269,7 @@ function buildPackageEntries(sourceRoot, metadata) {
     '1. Confirm the ZIP SHA-256 distributed with the evidence bundle.',
     '2. Extract the package.',
     '3. Recalculate SHA-256 for every file listed in CHECKSUMS.sha256.',
-    '4. Confirm MANIFEST.json sourceCommit and candidateVersion.',
+    '4. Confirm MANIFEST.json sourceCommit and releaseVersion.',
     '',
     'The ZIP uses stored entries, fixed timestamps, sorted paths and fixed permissions.',
     '',
@@ -367,7 +367,7 @@ if (verifyPath) {
   const source = resolve(args.get('source') ?? 'dist');
   const output = resolve(args.get('output') ?? 'candidate.zip');
   const sourceCommit = args.get('commit');
-  const candidateVersion = args.get('candidate-version') ?? '1.0.0-rc.1';
+  const releaseVersion = args.get('release-version') ?? '1.0.0';
   if (!sourceCommit || !/^[0-9a-f]{40}$/.test(sourceCommit)) {
     throw new Error('--commit must be a full 40-character Git SHA');
   }
@@ -379,7 +379,7 @@ if (verifyPath) {
   );
   const entries = buildPackageEntries(source, {
     sourceCommit,
-    candidateVersion,
+    releaseVersion,
     applicationPackageVersion: packageJson.version,
   });
   const zip = createZip(entries);

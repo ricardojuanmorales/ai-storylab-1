@@ -288,3 +288,15 @@ architecture_boundary: RECOVERED
 local_verify: PASS
 remote_CI: PENDING_NEW_HEAD
 ```
+
+---
+
+## Apertura y ejecución de V10-STABLE
+
+```yaml
+parent_commit: f912bef9017b1624da28c469c5b9a1f57cb9dc17
+stable_identity: 1.0.0
+source_commit: PENDING
+artifact: PENDING_EXACT_SOURCE_FREEZE
+publication: false
+```

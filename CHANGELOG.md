@@ -1,5 +1,15 @@
 # Changelog — AI StoryLab
 
+## [1.0.0] — Unreleased
+
+### Stable identity
+
+- assigned application version `1.0.0`;
+- preserved schema version `0.8.0-alpha.2`;
+- preserved the v0.3.0 historical snapshot and read-only backup bridge;
+- stable ZIP remains unreported and unpublished until exact evidence is produced;
+- no merge, tag, GitHub Release or Pages deployment was performed.
+
 Todas las modificaciones importantes del MVP se registran aquí siguiendo [Keep a Changelog](https://keepachangelog.com/es/1.0.0/) y [Semantic Versioning](https://semver.org/lang/es/).
 
 ---

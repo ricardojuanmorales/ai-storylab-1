@@ -256,3 +256,13 @@ La próxima maniobra solo puede autorizar Ready for Review de forma separada.
 - comportamiento: sin cambios;
 - claves legacy: preservadas;
 - deployment: no ejecutado.
+
+---
+
+## Continuidad hacia V10-STABLE
+
+- `1.0.0` asignada a la aplicación;
+- schema `0.8.0-alpha.2` preservado;
+- snapshot y puente legacy preservados;
+- ZIP estable pendiente del commit fuente exacto;
+- cero deployment, tag, Release o publicación.

@@ -7,14 +7,14 @@ AI StoryLab 1 es un ecosistema educativo local-first para investigación-creaci�
 ## Estado del proyecto
 ```yaml
 release_line: v1.0.0
-current_candidate: 1.0.0-rc.1
-stable_release: NOT_YET_PUBLISHED
+stable_identity: 1.0.0
+stable_release: ASSIGNED_NOT_YET_PUBLISHED
 GitHub_Pages: PREPARED_NOT_YET_DEPLOYED
-downloadable_stable_ZIP: NOT_YET_PUBLISHED
+stable_ZIP: BUILD_PENDING_V10_STABLE_NOT_PUBLISHED
 publication_hold: ACTIVE
 ```
 
-La candidata técnica superó auditorías internas. V10-PUBLIC prepara la documentación pública. Faltan GitHub Pages, la identidad estable `1.0.0`, auditoría estable y autorizaciones finales.
+La identidad estable `1.0.0` está asignada dentro del Draft PR. El artefacto estable se construirá y verificará en V10-STABLE, sin publicación, merge, tag, Release ni deployment.
 
 ## Qué puedes hacer
 1. M1 · Intención: propósito, audiencia, premisa y límites.

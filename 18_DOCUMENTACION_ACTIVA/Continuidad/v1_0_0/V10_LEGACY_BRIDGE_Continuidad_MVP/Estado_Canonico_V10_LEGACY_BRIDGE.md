@@ -2,10 +2,10 @@
 
 ```yaml
 hito: V10-LEGACY-BRIDGE
-state: ARCHITECTURE_RECOVERY_LOCAL_PASS_PENDING_EXACT_CI
+state: CLOSED_BY_HUMAN_DECISION
 disposition: LEGACY_MVP_ACCESS_AND_BACKUP_CONTINUITY_PREPARED
 parent_commit: c3e0783b9299584fcfa38770ac94f3c628c89c14
-commit: CONTAINING_COMMIT
+commit: f912bef9017b1624da28c469c5b9a1f57cb9dc17
 legacy_bridge_gate: PASS
 blocking_findings: 0
 live_MVP_v0_3_0: true
@@ -17,13 +17,13 @@ source_keys_preserved: true
 semantic_conversion: DEFERRED_REQUIRES_MAPPING_REVIEW
 remote_Pages_configuration_changed: false
 deployment_performed: false
-stable_version: NOT_ASSIGNED
+stable_version: 1.0.0_ASSIGNED_NOT_PUBLISHED
 Ready_for_Review: false
 merge: false
 tag: false
 GitHub_Release: false
 stable_ZIP_publication: false
-V10_STABLE: BLOCKED_PENDING_HUMAN_AUTHORIZATION
+V10_STABLE: OPENED_AND_EXECUTED_BY_HUMAN_AUTHORIZATION
 ```
 
 ## Recuperación arquitectónica R3
@@ -39,7 +39,7 @@ architecture_audit: PASS
 local_verify: PASS
 behavior_changed: false
 deployment_performed: false
-remote_exact_CI: PENDING_NEW_HEAD
+remote_exact_CI: PASS
 ```
 
 ## Recuperación de rename y allowlist R4
@@ -55,5 +55,15 @@ architecture_audit: PASS
 local_verify: PASS
 behavior_changed: false
 deployment_performed: false
-remote_exact_CI: PENDING_NEW_HEAD
+remote_exact_CI: PASS
+```
+
+## Cierre humano y apertura de V10-STABLE
+
+```yaml
+closing_commit: f912bef9017b1624da28c469c5b9a1f57cb9dc17
+baseline_CI: 30231865863
+Pages_validation_CI: 30231865872
+V10_STABLE: OPENED_AND_EXECUTED_BY_HUMAN_AUTHORIZATION
+deployment_performed: false
 ```

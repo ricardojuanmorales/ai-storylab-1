@@ -5,7 +5,7 @@
   "date": "2026-07-27",
   "authorization": "Adelante con V10-LEGACY_BRIDGE.",
   "parent_commit": "c3e0783b9299584fcfa38770ac94f3c628c89c14",
-  "commit": "CONTAINING_COMMIT",
+  "commit": "f912bef9017b1624da28c469c5b9a1f57cb9dc17",
   "branch": "feat/v1.0-release-readiness",
   "PR": 65,
   "legacy_version": "0.3.0",
@@ -39,11 +39,11 @@
   "tag": false,
   "GitHub_Release": false,
   "stable_ZIP_publication": false,
-  "stable_version": false,
+  "stable_version": true,
   "dependency_changes": false,
   "schema_changes": false,
   "next_hito": "V10-STABLE",
-  "state": "ARCHITECTURE_RECOVERY_LOCAL_PASS_PENDING_EXACT_CI",
+  "state": "CLOSED_BY_HUMAN_DECISION",
   "baseline_recovery": {
     "revision": "R5_PRESERVED_RECOVERY_EVIDENCE_RECONCILIATION_2026_07_27",
     "failedRun": 30228489563,
@@ -59,6 +59,14 @@
     "browserInspectionLayer": "adapters",
     "localArchitectureAudit": "PASS",
     "localVerify": "PASS",
-    "exactRemoteCI": "PENDING_NEW_HEAD"
-  }
+    "exactRemoteCI": "PASS",
+    "baselineRun": 30231865863,
+    "pagesRun": 30231865872
+  },
+  "human_close_decision": true,
+  "baseline_CI": 30231865863,
+  "pages_validation_CI": 30231865872,
+  "exact_remote_CI": "PASS",
+  "stable_version_identifier": "1.0.0",
+  "V10_STABLE": "OPENED_AND_EXECUTED_BY_HUMAN_AUTHORIZATION"
 }

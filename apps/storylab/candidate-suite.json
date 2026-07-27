@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "suiteId": "AI_STORYLAB_V10_6_FINAL_UNPUBLISHED_RC1",
-  "status": "REFRESHED_FOR_AUTHORIZED_V10_LEGACY_BRIDGE",
+  "suiteId": "AI_STORYLAB_V10_STABLE_UNPUBLISHED_1_0_0",
+  "status": "FROZEN_FOR_V10_STABLE_UNPUBLISHED",
   "supportedNodeMajors": [
     22,
     24
@@ -71,36 +71,38 @@
     "npm run audit:vertical-slice",
     "vitest run --reporter=json"
   ],
-  "reproducibilityStandard": "BINARY_IDENTITY_ACROSS_RECORDED_V10_6_ENVIRONMENTS",
+  "reproducibilityStandard": "BINARY_IDENTITY_ACROSS_NODE_22_NODE_24_AND_LOCAL_RECORDED_ENVIRONMENT",
   "binaryReproducibilityClaimed": true,
   "functionalExpansion": true,
   "artifactContract": {
     "schemaVersion": 1,
     "format": "DETERMINISTIC_ZIP_STORE",
-    "candidateVersion": "1.0.0-rc.1",
     "fixedZipTimestamp": "1980-01-01T00:00:00Z",
     "binaryReproducibilityRequired": true,
-    "versionDriftStatus": "RESOLVED_FOR_V10_6",
-    "publicationStatus": "UNPUBLISHED_FINAL_CANDIDATE"
+    "versionDriftStatus": "RESOLVED_FOR_V10_STABLE",
+    "publicationStatus": "UNPUBLISHED_STABLE_ARTIFACT",
+    "releaseVersion": "1.0.0"
   },
   "versionPolicy": {
     "projectReleaseLine": "v1.0.0",
     "canonicalApplicationPackage": "apps/storylab",
-    "canonicalApplicationVersion": "1.0.0-rc.1",
+    "canonicalApplicationVersion": "1.0.0",
     "currentSchemaVersion": "0.8.0-alpha.2",
     "previousSchemaVersion": "0.8.0-alpha.1",
     "schemaVersionIndependentFromApplicationVersion": true,
     "legacyRootPackageVersion": "0.3.0",
     "legacyRootPackageStatus": "HISTORICAL_NON_CANONICAL_EXCLUDED_FROM_CANDIDATE",
     "RCVersionAssigned": true,
-    "stableV1VersionAssigned": false,
+    "stableV1VersionAssigned": true,
     "RCIdentifier": "1.0.0-rc.1",
-    "RCPublicationStatus": "UNPUBLISHED"
+    "RCPublicationStatus": "UNPUBLISHED_HISTORICAL_CANDIDATE",
+    "StableIdentifier": "1.0.0",
+    "StablePublicationStatus": "UNPUBLISHED"
   },
   "authorizedFunctionalExpansion": {
     "hito": "V10-LEGACY-BRIDGE",
     "parentCommit": "63285e3b21228dffba6008eb7daf7be769f42863",
-    "containingCommit": "CONTAINING_COMMIT",
+    "containingCommit": "f912bef9017b1624da28c469c5b9a1f57cb9dc17",
     "scope": "LEGACY_CONTINUITY_ONLY",
     "addedTestFiles": [
       "src/tests/adapters.legacy-mvp-continuity.test.ts",
@@ -111,6 +113,21 @@
     "schemaChanges": false,
     "deploymentPerformed": false,
     "baselineRecoveryOfRun": 30228489563,
-    "architectureRecovery": "PENDING_R3"
+    "architectureRecovery": {
+      "revision": "R5_PRESERVED_RECOVERY_EVIDENCE_RECONCILIATION_2026_07_27",
+      "status": "PASS",
+      "sharedContractLayer": "ports",
+      "browserInspectionLayer": "adapters",
+      "behaviorChanged": false
+    }
+  },
+  "stableIdentityAssignment": {
+    "hito": "V10-STABLE",
+    "version": "1.0.0",
+    "publicationStatus": "UNPUBLISHED",
+    "functionalChanges": false,
+    "dependencyChanges": false,
+    "schemaChanges": false,
+    "pagesDeployment": false
   }
 }

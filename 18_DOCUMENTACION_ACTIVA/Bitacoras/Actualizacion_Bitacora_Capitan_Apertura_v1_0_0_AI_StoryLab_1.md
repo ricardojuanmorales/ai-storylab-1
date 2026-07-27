@@ -300,3 +300,17 @@ local_verify: PASS
 behavior_changed: false
 deployment: false
 ```
+
+---
+
+## V10-STABLE · Identidad estable asignada
+
+```yaml
+application_version: 1.0.0
+schema_version: 0.8.0-alpha.2
+source_freeze: PREPARING
+stable_ZIP: NOT_PUBLISHED
+Pages_deployment: false
+```
+
+La nave recibe nombre estable, pero permanece dentro del astillero gobernado.
