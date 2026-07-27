@@ -7,7 +7,7 @@
   "stable_source_commit": "e05369e0052f86dfebadeb010f9a792496d64800",
   "stable_evidence_commit": "a4da9e8ad757247e557e0f31d25740ff7ef6d032",
   "audit_commit": "025940e3d1c2ef9d86fcdc00b5c7f45073d45b3b",
-  "audit_evidence_commit": "RECORDED_BY_GIT_HISTORY",
+  "audit_evidence_commit": "186b2df49f608033165e1d743fc1523464f96fde",
   "application_version": "1.0.0",
   "schema_version": "0.8.0-alpha.2",
   "schema_version_independent": true,
@@ -66,5 +66,7 @@
     "deploy_job": "skipped"
   },
   "next_hito": "GATE-V1-PUBLISH",
-  "state": "HUMAN_CLOSE_GATE"
+  "state": "CLOSED_BY_HUMAN_DECISION",
+  "human_close_decision": true,
+  "GATE_V1_PUBLISH": "OPENED_AND_EVALUATED_BY_HUMAN_AUTHORIZATION"
 }

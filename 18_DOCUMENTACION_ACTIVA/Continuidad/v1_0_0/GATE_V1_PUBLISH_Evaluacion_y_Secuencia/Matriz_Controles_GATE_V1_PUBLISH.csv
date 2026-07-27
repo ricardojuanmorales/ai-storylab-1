@@ -1,0 +1,21 @@
+control_id,surface,status,evidence
+PUB-001,Head exacto,PASS,186b2df49f608033165e1d743fc1523464f96fde
+PUB-002,PR abierto Draft,PASS,true
+PUB-003,PR mergeable,PASS,true
+PUB-004,main sin deriva,PASS,83cd5983ad3e66d43a442c090ce95f3bb22ee968
+PUB-005,cadena estable,PASS,true
+PUB-006,app sin deriva,PASS,true
+PUB-007,versión,PASS,1.0.0
+PUB-008,schema,PASS,0.8.0-alpha.2
+PUB-009,suite,PASS,51/252
+PUB-010,auditoría,PASS,025940e3d1c2ef9d86fcdc00b5c7f45073d45b3b
+PUB-011,ZIP,PASS,2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be
+PUB-012,ZIP en repo,PASS,false
+PUB-013,tag,PASS,absent
+PUB-014,Release,PASS,absent
+PUB-015,Pages,PASS,legacy
+PUB-016,MVP,PASS,live
+PUB-017,threads,PASS,0
+PUB-018,Ready ejecutado,PASS,false
+PUB-019,merge ejecutado,PASS,false
+PUB-020,publicación ejecutada,PASS,false

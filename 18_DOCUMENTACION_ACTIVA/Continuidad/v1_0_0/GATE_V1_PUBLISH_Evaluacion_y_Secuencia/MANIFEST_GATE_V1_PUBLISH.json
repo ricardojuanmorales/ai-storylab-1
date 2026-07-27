@@ -1,0 +1,100 @@
+{
+  "project": "AI StoryLab 1",
+  "phase": "v1.0.0",
+  "gate": "GATE-V1-PUBLISH",
+  "date": "2026-07-27",
+  "parent_commit": "186b2df49f608033165e1d743fc1523464f96fde",
+  "gate_commit": "RECORDED_BY_GIT_HISTORY",
+  "gate_evidence_commit": "PENDING",
+  "application_version": "1.0.0",
+  "schema_version": "0.8.0-alpha.2",
+  "schema_version_independent": true,
+  "stable_chain": {
+    "legacy_close": "f912bef9017b1624da28c469c5b9a1f57cb9dc17",
+    "stable_source": "e05369e0052f86dfebadeb010f9a792496d64800",
+    "stable_evidence": "a4da9e8ad757247e557e0f31d25740ff7ef6d032",
+    "audit": "025940e3d1c2ef9d86fcdc00b5c7f45073d45b3b",
+    "audit_evidence": "186b2df49f608033165e1d743fc1523464f96fde",
+    "status": "PASS"
+  },
+  "artifact": {
+    "filename": "ai-storylab-1_1.0.0_e05369e0052f.zip",
+    "sha256": "2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be",
+    "size_bytes": 773342,
+    "repository_copy": false,
+    "publication": false
+  },
+  "audit_baseline_CI": 30234515703,
+  "audit_pages_validation_CI": 30234521008,
+  "gate_local_evaluation": "PASS",
+  "blocking_findings": 0,
+  "ready_for_review_eligibility": "ELIGIBLE_PENDING_SEPARATE_HUMAN_AUTHORIZATION",
+  "decision_sequence": [
+    {
+      "order": 1,
+      "decision": "READY_FOR_REVIEW",
+      "status": "ELIGIBLE_PENDING_SEPARATE_HUMAN_AUTHORIZATION",
+      "action": "mark PR #65 Ready and stop",
+      "stop": true
+    },
+    {
+      "order": 2,
+      "decision": "MERGE",
+      "status": "BLOCKED_UNTIL_READY_REVIEW_AND_POST_READY_CI",
+      "action": "merge after separate authorization and stop",
+      "stop": true
+    },
+    {
+      "order": 3,
+      "decision": "TAG_V1_0_0",
+      "status": "BLOCKED_UNTIL_MERGE_AND_MAIN_VERIFICATION",
+      "action": "tag verified main commit and stop",
+      "stop": true
+    },
+    {
+      "order": 4,
+      "decision": "GITHUB_RELEASE_AND_ZIP",
+      "status": "BLOCKED_UNTIL_TAG_AND_ASSET_REVERIFICATION",
+      "action": "publish exact ZIP and checksum and stop",
+      "stop": true
+    },
+    {
+      "order": 5,
+      "decision": "PAGES_SOURCE_CHANGE",
+      "status": "BLOCKED_UNTIL_RELEASE_ASSET_VERIFICATION",
+      "action": "change source after separate authorization and stop",
+      "stop": true
+    },
+    {
+      "order": 6,
+      "decision": "PAGES_DEPLOYMENT",
+      "status": "BLOCKED_UNTIL_SOURCE_AND_SEPARATE_AUTHORIZATION",
+      "action": "deploy manually from main and stop",
+      "stop": true
+    },
+    {
+      "order": 7,
+      "decision": "PUBLIC_SMOKE_AND_CLOSE",
+      "status": "BLOCKED_UNTIL_DEPLOYMENT",
+      "action": "verify root and legacy routes then close",
+      "stop": true
+    }
+  ],
+  "actions_executed": {
+    "Ready_for_Review": false,
+    "merge": false,
+    "tag": false,
+    "GitHub_Release": false,
+    "stable_ZIP_publication": false,
+    "Pages_source_change": false,
+    "Pages_deployment": false
+  },
+  "dependency_changes": false,
+  "schema_changes": false,
+  "functional_changes": false,
+  "workflow_changes": false,
+  "gate_baseline_CI": "PENDING",
+  "gate_pages_validation_CI": "PENDING",
+  "next_decision": "READY_FOR_REVIEW_PENDING_SEPARATE_HUMAN_AUTHORIZATION",
+  "state": "GATE_COMMIT_PREPARATION"
+}

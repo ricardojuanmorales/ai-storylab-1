@@ -337,3 +337,9 @@ Pages_validation_CI_status: PASS
 deployment: false
 state: HUMAN_CLOSE_GATE
 ```
+
+---
+
+## Ejecución de GATE-V1-PUBLISH
+
+Cadena, artefacto, PR, main, threads y límites de publicación: PASS.

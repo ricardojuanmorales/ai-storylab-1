@@ -1,0 +1,8 @@
+order,decision,status,action,stop
+1,READY_FOR_REVIEW,ELIGIBLE_PENDING_SEPARATE_HUMAN_AUTHORIZATION,mark PR #65 Ready and stop,True
+2,MERGE,BLOCKED_UNTIL_READY_REVIEW_AND_POST_READY_CI,merge after separate authorization and stop,True
+3,TAG_V1_0_0,BLOCKED_UNTIL_MERGE_AND_MAIN_VERIFICATION,tag verified main commit and stop,True
+4,GITHUB_RELEASE_AND_ZIP,BLOCKED_UNTIL_TAG_AND_ASSET_REVERIFICATION,publish exact ZIP and checksum and stop,True
+5,PAGES_SOURCE_CHANGE,BLOCKED_UNTIL_RELEASE_ASSET_VERIFICATION,change source after separate authorization and stop,True
+6,PAGES_DEPLOYMENT,BLOCKED_UNTIL_SOURCE_AND_SEPARATE_AUTHORIZATION,deploy manually from main and stop,True
+7,PUBLIC_SMOKE_AND_CLOSE,BLOCKED_UNTIL_DEPLOYMENT,verify root and legacy routes then close,True

@@ -196,3 +196,11 @@ Todas las modificaciones importantes del MVP se registran aquí siguiendo [Keep 
 - rebuilt it from source commit `e05369e0052f86dfebadeb010f9a792496d64800`;
 - confirmed SHA-256 `2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be`;
 - confirmed legacy routes, no repository ZIP, no tag, no Release and no deployment.
+
+---
+
+## Publication decision gate · GATE-V1-PUBLISH
+
+- Ready for Review eligible for separate authorization;
+- merge, tag, Release, ZIP and Pages remain blocked;
+- no publication action executed.

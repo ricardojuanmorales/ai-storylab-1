@@ -1,0 +1,68 @@
+{
+  "gate": "GATE-V1-PUBLISH",
+  "status": "PASS_LOCAL_PENDING_EXACT_GATE_CI",
+  "readyEligibility": "ELIGIBLE_PENDING_SEPARATE_HUMAN_AUTHORIZATION",
+  "stableChain": "PASS",
+  "artifactInvariant": "PASS",
+  "mainDrift": false,
+  "unresolvedThreads": 0,
+  "publicationSurface": {
+    "tag": false,
+    "release": false,
+    "zipPublished": false,
+    "pagesSourceChanged": false,
+    "pagesDeployed": false
+  },
+  "nextDecision": "READY_FOR_REVIEW",
+  "sequence": [
+    {
+      "order": 1,
+      "decision": "READY_FOR_REVIEW",
+      "status": "ELIGIBLE_PENDING_SEPARATE_HUMAN_AUTHORIZATION",
+      "action": "mark PR #65 Ready and stop",
+      "stop": true
+    },
+    {
+      "order": 2,
+      "decision": "MERGE",
+      "status": "BLOCKED_UNTIL_READY_REVIEW_AND_POST_READY_CI",
+      "action": "merge after separate authorization and stop",
+      "stop": true
+    },
+    {
+      "order": 3,
+      "decision": "TAG_V1_0_0",
+      "status": "BLOCKED_UNTIL_MERGE_AND_MAIN_VERIFICATION",
+      "action": "tag verified main commit and stop",
+      "stop": true
+    },
+    {
+      "order": 4,
+      "decision": "GITHUB_RELEASE_AND_ZIP",
+      "status": "BLOCKED_UNTIL_TAG_AND_ASSET_REVERIFICATION",
+      "action": "publish exact ZIP and checksum and stop",
+      "stop": true
+    },
+    {
+      "order": 5,
+      "decision": "PAGES_SOURCE_CHANGE",
+      "status": "BLOCKED_UNTIL_RELEASE_ASSET_VERIFICATION",
+      "action": "change source after separate authorization and stop",
+      "stop": true
+    },
+    {
+      "order": 6,
+      "decision": "PAGES_DEPLOYMENT",
+      "status": "BLOCKED_UNTIL_SOURCE_AND_SEPARATE_AUTHORIZATION",
+      "action": "deploy manually from main and stop",
+      "stop": true
+    },
+    {
+      "order": 7,
+      "decision": "PUBLIC_SMOKE_AND_CLOSE",
+      "status": "BLOCKED_UNTIL_DEPLOYMENT",
+      "action": "verify root and legacy routes then close",
+      "stop": true
+    }
+  ]
+}

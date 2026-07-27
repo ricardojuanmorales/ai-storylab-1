@@ -300,3 +300,9 @@ La próxima maniobra solo puede autorizar Ready for Review de forma separada.
 - Pages: `30234521008` PASS;
 - deployment: no ejecutado;
 - GATE-V1-PUBLISH: pendiente de autorización.
+
+---
+
+## Transferencia hacia Ready for Review
+
+Ready for Review es elegible pero no ejecutado. Los seis pasos posteriores siguen bloqueados.
