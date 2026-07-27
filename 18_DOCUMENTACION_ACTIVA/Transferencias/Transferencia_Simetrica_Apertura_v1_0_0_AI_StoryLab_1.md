@@ -278,3 +278,15 @@ La próxima maniobra solo puede autorizar Ready for Review de forma separada.
 - rutas legacy incluidas;
 - publicación y deployment: bloqueados;
 - siguiente hito: V10-A-STABLE, pendiente de autorización.
+
+---
+
+## Transferencia hacia GATE-V1-PUBLISH
+
+- fuente estable auditada: `e05369e0052f86dfebadeb010f9a792496d64800`;
+- evidencia estable auditada: `a4da9e8ad757247e557e0f31d25740ff7ef6d032`;
+- ZIP aprobado: `ai-storylab-1_1.0.0_e05369e0052f.zip`;
+- SHA-256: `2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be`;
+- reconstrucción binaria: PASS;
+- tag, Release, publicación y deployment: ausentes;
+- GATE-V1-PUBLISH permanece bloqueado.

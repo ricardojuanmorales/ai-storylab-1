@@ -2,10 +2,10 @@
 
 ```yaml
 hito: V10-STABLE
-state: HUMAN_CLOSE_GATE
+state: CLOSED_BY_HUMAN_DECISION
 disposition: STABLE_IDENTITY_AND_EXACT_ARTIFACT_VERIFIED_NOT_PUBLISHED
 stable_source_commit: e05369e0052f86dfebadeb010f9a792496d64800
-evidence_commit: RECORDED_BY_GIT_HISTORY
+evidence_commit: a4da9e8ad757247e557e0f31d25740ff7ef6d032
 application_version: 1.0.0
 schema_version: 0.8.0-alpha.2
 test_files: 51
@@ -28,5 +28,5 @@ Ready_for_Review: false
 merge: false
 tag: false
 GitHub_Release: false
-V10_A_STABLE: BLOCKED_PENDING_HUMAN_AUTHORIZATION
+V10_A_STABLE: OPENED_AND_EXECUTED_BY_HUMAN_AUTHORIZATION
 ```

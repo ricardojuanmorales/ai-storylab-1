@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "suiteId": "AI_STORYLAB_V10_STABLE_UNPUBLISHED_1_0_0",
+  "status": "PASS",
+  "startedAt": "2026-07-27T03:23:39.958Z",
+  "completedAt": "2026-07-27T03:23:57.329Z",
+  "environment": {
+    "node": "v24.18.0",
+    "npm": "npm/11.16.0 node/v24.18.0 darwin arm64 workspaces/false",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "suite": {
+    "expectedTestFiles": 51,
+    "expectedTests": 252,
+    "actualTestFiles": 51,
+    "actualTests": 252,
+    "testInventorySha256": "c4b7e63a06e5f98464a6daed7daa1756f915d449f1c748f87cf9819c196586d7",
+    "packageLockSha256": "984b70592750e5b7888c6e91c43f0f0e6bd22ccf78b7271251cd3032e0057f85"
+  },
+  "build": {
+    "reproducibilityStandard": "BINARY_IDENTITY_ACROSS_NODE_22_NODE_24_AND_LOCAL_RECORDED_ENVIRONMENT",
+    "distManifestSha256": "6d5039e6191b46a3153c9f723e9c6c30792993dfee6115075af0032e937b5b91",
+    "files": [
+      {
+        "path": "assets/index-BZ5yWMFi.css",
+        "sha256": "18fa197b5a441e05d8650295178847660b9dfaae740b591a26e0e138d5d212bf",
+        "size": 15369
+      },
+      {
+        "path": "assets/index-DFrXey1Z.js",
+        "sha256": "436fe92d60b5305669c4287cde48679c72d40d2b11331da38a935c0f91e07fc2",
+        "size": 469836
+      },
+      {
+        "path": "index.html",
+        "sha256": "4a5fffa9fbbe752f2950d8d04bb7d670af3c9473679d6a689f9568c6600a5cbd",
+        "size": 504
+      },
+      {
+        "path": "legacy/bridge/index.html",
+        "sha256": "05daead140da6bae6840b4ec6b7f95335fb9bea1f50e1f20170f3291a2546f05",
+        "size": 2087
+      },
+      {
+        "path": "legacy/bridge/legacy-bridge.css",
+        "sha256": "6b5e45196e58129e1b1f9acc2a38bbe89b0bd1637563ffc9a24c8591a60f2d6c",
+        "size": 709
+      },
+      {
+        "path": "legacy/bridge/legacy-bridge.js",
+        "sha256": "91a1944ee493d493287d0b5cdde97ce50a0bca0e74f53304f11839faef43d732",
+        "size": 3088
+      },
+      {
+        "path": "legacy/v0.3.0/assets/avatar/mentor.svg",
+        "sha256": "7183ccd972dcee625aa646c18e88c11352a5941b372ba0b9fff3fc2bcdd0603c",
+        "size": 889
+      },
+      {
+        "path": "legacy/v0.3.0/assets/badges/.gitkeep",
+        "sha256": "3829ff91880fcce72d1f43b08244dad45f019f2a33d7323aae7c884a50689c80",
+        "size": 81
+      },
+      {
+        "path": "legacy/v0.3.0/assets/icons/flask.svg",
+        "sha256": "029d248c758a5c3904bc11d683acbea0ae6555a6320826734c5f0912bb3390d7",
+        "size": 343
+      },
+      {
+        "path": "legacy/v0.3.0/assets/index-BY1x5DUd.js",
+        "sha256": "8a90e8f4aef0f278b041e0db12649bb8ced15e0ce95f74790dbb7e86e546b9d5",
+        "size": 252085
+      },
+      {
+        "path": "legacy/v0.3.0/assets/index-G4FtF_cY.css",
+        "sha256": "7d63acc6bf725f0b2588fb85d7fb63be9f177a59a6d0635e7d7e5c45307bcff5",
+        "size": 20190
+      },
+      {
+        "path": "legacy/v0.3.0/index.html",
+        "sha256": "2aeb0e82798044217e6815b7bbac95790ed31f91c4bf28b39d063c1e523420d6",
+        "size": 744
+      }
+    ]
+  },
+  "artifact": {
+    "status": "PASS",
+    "format": "DETERMINISTIC_ZIP_STORE",
+    "sourceCommit": "e05369e0052f86dfebadeb010f9a792496d64800",
+    "releaseVersion": "1.0.0",
+    "binaryReproducibility": "PASS",
+    "artifactSha256": "2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be",
+    "artifactSize": 773342,
+    "entries": 16,
+    "applicationFiles": 12,
+    "manifest": {
+      "schemaVersion": 1,
+      "artifactId": "AI_STORYLAB_1_V10_STABLE_UNPUBLISHED_1_0_0",
+      "releaseVersion": "1.0.0",
+      "publicationStatus": "UNPUBLISHED_STABLE_ARTIFACT",
+      "applicationPackageVersion": "1.0.0",
+      "sourceCommit": "e05369e0052f86dfebadeb010f9a792496d64800",
+      "packagingFormat": "DETERMINISTIC_ZIP_STORE",
+      "fixedZipTimestamp": "1980-01-01T00:00:00Z",
+      "binaryReproducibilityTarget": true,
+      "versionDriftStatus": "RESOLVED_FOR_V10_STABLE",
+      "supportClaims": {
+        "nodeBuildRuntime": [
+          22,
+          24
+        ],
+        "browserSupport": "BOUNDED_DECLARED_MATRIX_V10_3",
+        "browserMatrix": [
+          "Safari 26.5.2",
+          "Google Chrome 150.0.7871.184",
+          "Firefox 152.0.1"
+        ],
+        "assistiveTechnology": "VoiceOver with Safari; bounded internal attestation",
+        "windowsSupport": "NOT_CLAIMED",
+        "fileProtocol": "NOT_CLAIMED_LOCAL_HTTP_REQUIRED"
+      },
+      "files": [
+        {
+          "path": "app/assets/index-BZ5yWMFi.css",
+          "sha256": "18fa197b5a441e05d8650295178847660b9dfaae740b591a26e0e138d5d212bf",
+          "size": 15369
+        },
+        {
+          "path": "app/assets/index-DFrXey1Z.js",
+          "sha256": "436fe92d60b5305669c4287cde48679c72d40d2b11331da38a935c0f91e07fc2",
+          "size": 469836
+        },
+        {
+          "path": "app/index.html",
+          "sha256": "4a5fffa9fbbe752f2950d8d04bb7d670af3c9473679d6a689f9568c6600a5cbd",
+          "size": 504
+        },
+        {
+          "path": "app/legacy/bridge/index.html",
+          "sha256": "05daead140da6bae6840b4ec6b7f95335fb9bea1f50e1f20170f3291a2546f05",
+          "size": 2087
+        },
+        {
+          "path": "app/legacy/bridge/legacy-bridge.css",
+          "sha256": "6b5e45196e58129e1b1f9acc2a38bbe89b0bd1637563ffc9a24c8591a60f2d6c",
+          "size": 709
+        },
+        {
+          "path": "app/legacy/bridge/legacy-bridge.js",
+          "sha256": "91a1944ee493d493287d0b5cdde97ce50a0bca0e74f53304f11839faef43d732",
+          "size": 3088
+        },
+        {
+          "path": "app/legacy/v0.3.0/assets/avatar/mentor.svg",
+          "sha256": "7183ccd972dcee625aa646c18e88c11352a5941b372ba0b9fff3fc2bcdd0603c",
+          "size": 889
+        },
+        {
+          "path": "app/legacy/v0.3.0/assets/badges/.gitkeep",
+          "sha256": "3829ff91880fcce72d1f43b08244dad45f019f2a33d7323aae7c884a50689c80",
+          "size": 81
+        },
+        {
+          "path": "app/legacy/v0.3.0/assets/icons/flask.svg",
+          "sha256": "029d248c758a5c3904bc11d683acbea0ae6555a6320826734c5f0912bb3390d7",
+          "size": 343
+        },
+        {
+          "path": "app/legacy/v0.3.0/assets/index-BY1x5DUd.js",
+          "sha256": "8a90e8f4aef0f278b041e0db12649bb8ced15e0ce95f74790dbb7e86e546b9d5",
+          "size": 252085
+        },
+        {
+          "path": "app/legacy/v0.3.0/assets/index-G4FtF_cY.css",
+          "sha256": "7d63acc6bf725f0b2588fb85d7fb63be9f177a59a6d0635e7d7e5c45307bcff5",
+          "size": 20190
+        },
+        {
+          "path": "app/legacy/v0.3.0/index.html",
+          "sha256": "2aeb0e82798044217e6815b7bbac95790ed31f91c4bf28b39d063c1e523420d6",
+          "size": 744
+        }
+      ]
+    }
+  }
+}
