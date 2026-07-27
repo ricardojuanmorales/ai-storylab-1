@@ -5,7 +5,7 @@ import {
   type MouseEvent,
 } from "react";
 import type { StoryLabUseCases } from "../application";
-import type { LegacyMvpContinuitySummary } from "../adapters/storage/legacy-mvp-continuity";
+import type { LegacyMvpContinuitySummary } from "../ports/mvp-continuity";
 import { MISSION_CATALOG } from "../domain/mission-catalog";
 import type {
   AccessibilityPreferences,

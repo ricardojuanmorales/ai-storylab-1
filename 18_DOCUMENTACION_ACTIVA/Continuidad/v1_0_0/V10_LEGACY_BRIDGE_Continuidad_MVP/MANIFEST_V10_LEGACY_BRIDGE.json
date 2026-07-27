@@ -16,8 +16,8 @@
   "legacy_snapshot_base": "/ai-storylab-1/legacy/v0.3.0/",
   "legacy_bridge_base": "/ai-storylab-1/legacy/bridge/",
   "legacy_bridge_gate": "PASS",
-  "controls_total": 18,
-  "controls_passed": 16,
+  "controls_total": 22,
+  "controls_passed": 20,
   "controls_deferred": 1,
   "controls_blocked": 1,
   "blocking_findings": 0,
@@ -42,5 +42,23 @@
   "stable_version": false,
   "dependency_changes": false,
   "schema_changes": false,
-  "next_hito": "V10-STABLE"
+  "next_hito": "V10-STABLE",
+  "state": "ARCHITECTURE_RECOVERY_LOCAL_PASS_PENDING_EXACT_CI",
+  "baseline_recovery": {
+    "revision": "R5_PRESERVED_RECOVERY_EVIDENCE_RECONCILIATION_2026_07_27",
+    "failedRun": 30228489563,
+    "rootCauses": [
+      "FROZEN_TEST_INVENTORY_49_VS_ACTUAL_51",
+      "PRESENTATION_IMPORTED_ADAPTER_TYPE",
+      "LOWERCASE_LEGACY_TOKEN_IN_IMPORT_PATH"
+    ],
+    "testFiles": 51,
+    "tests": 252,
+    "inventorySha256": "c4b7e63a06e5f98464a6daed7daa1756f915d449f1c748f87cf9819c196586d7",
+    "sharedContractLayer": "ports",
+    "browserInspectionLayer": "adapters",
+    "localArchitectureAudit": "PASS",
+    "localVerify": "PASS",
+    "exactRemoteCI": "PENDING_NEW_HEAD"
+  }
 }

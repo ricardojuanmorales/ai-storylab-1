@@ -255,3 +255,48 @@ backup_bridge_prepared: /ai-storylab-1/legacy/bridge/
 source_keys_preserved: true
 deployment: false
 ```
+
+---
+
+## El puente entra por la puerta correcta · R3
+
+```yaml
+test_files: 51
+tests: 252
+contract_layer: ports
+browser_layer: adapters
+architecture_audit: PASS
+local_verify: PASS
+behavior_changed: false
+deployment: false
+```
+
+---
+
+## El puente queda contado correctamente · R4
+
+```yaml
+test_files: 51
+tests: 252
+contract_layer: ports
+browser_layer: adapters
+architecture_audit: PASS
+local_verify: PASS
+behavior_changed: false
+deployment: false
+```
+
+---
+
+## La bitácora conserva todas sus huellas · R5
+
+```yaml
+test_files: 51
+tests: 252
+contract_layer: ports
+browser_layer: adapters
+architecture_audit: PASS
+local_verify: PASS
+behavior_changed: false
+deployment: false
+```

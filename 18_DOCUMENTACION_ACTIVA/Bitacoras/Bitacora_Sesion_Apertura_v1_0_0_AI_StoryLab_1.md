@@ -249,3 +249,42 @@ semantic_conversion: DEFERRED
 remote_Pages_changed: false
 deployment: false
 ```
+
+---
+
+## Recuperación arquitectónica · V10-LEGACY-BRIDGE R3
+
+```yaml
+parent_commit: 63285e3b21228dffba6008eb7daf7be769f42863
+failed_run: 30228489563
+candidate_suite: SYNCHRONIZED
+architecture_boundary: RECOVERED
+local_verify: PASS
+remote_CI: PENDING_NEW_HEAD
+```
+
+---
+
+## Recuperación rename-aware · V10-LEGACY-BRIDGE R4
+
+```yaml
+parent_commit: 63285e3b21228dffba6008eb7daf7be769f42863
+failed_run: 30228489563
+candidate_suite: SYNCHRONIZED
+architecture_boundary: RECOVERED
+local_verify: PASS
+remote_CI: PENDING_NEW_HEAD
+```
+
+---
+
+## Reconciliación de evidencia · V10-LEGACY-BRIDGE R5
+
+```yaml
+parent_commit: 63285e3b21228dffba6008eb7daf7be769f42863
+failed_run: 30228489563
+candidate_suite: SYNCHRONIZED
+architecture_boundary: RECOVERED
+local_verify: PASS
+remote_CI: PENDING_NEW_HEAD
+```

@@ -1,17 +1,10 @@
+import type { LegacyMvpContinuitySummary } from "../../ports/mvp-continuity";
 import type { StorageLike } from "./local-storage-project-repository";
 
 export const LEGACY_MVP_STORAGE_KEYS = Object.freeze({
   progress: "aistorylab_student_progress_v0_2",
   group: "aistorylab_group_progress_v0_2",
 });
-
-export interface LegacyMvpContinuitySummary {
-  readonly storageAvailable: boolean;
-  readonly progressPresent: boolean;
-  readonly groupPresent: boolean;
-  readonly hasLegacyData: boolean;
-  readonly invalidJsonKeys: readonly string[];
-}
 
 type ReadOnlyStorage = Pick<StorageLike, "getItem">;
 

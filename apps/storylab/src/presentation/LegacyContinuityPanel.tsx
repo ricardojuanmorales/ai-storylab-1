@@ -1,4 +1,4 @@
-import type { LegacyMvpContinuitySummary } from "../adapters/storage/legacy-mvp-continuity";
+import type { LegacyMvpContinuitySummary } from "../ports/mvp-continuity";
 
 export interface LegacyContinuityPanelProps {
   readonly summary: LegacyMvpContinuitySummary;

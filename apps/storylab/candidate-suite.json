@@ -1,18 +1,19 @@
 {
   "schemaVersion": 1,
   "suiteId": "AI_STORYLAB_V10_6_FINAL_UNPUBLISHED_RC1",
-  "status": "FROZEN_FOR_V10_6_FINAL_UNPUBLISHED_CANDIDATE",
+  "status": "REFRESHED_FOR_AUTHORIZED_V10_LEGACY_BRIDGE",
   "supportedNodeMajors": [
     22,
     24
   ],
-  "expectedTestFiles": 49,
-  "expectedTests": 248,
-  "testInventorySha256": "6311d45ccc64c237e950dcc700461b400df40ce21caab6274889b9ed1f056322",
+  "expectedTestFiles": 51,
+  "expectedTests": 252,
+  "testInventorySha256": "c4b7e63a06e5f98464a6daed7daa1756f915d449f1c748f87cf9819c196586d7",
   "testInventory": [
     "src/tests/adapters.browser-file-download.test.ts",
     "src/tests/adapters.browser-untrusted-local-file.test.ts",
     "src/tests/adapters.in-memory.test.ts",
+    "src/tests/adapters.legacy-mvp-continuity.test.ts",
     "src/tests/adapters.local-storage.test.ts",
     "src/tests/adapters.storage-contracts.test.ts",
     "src/tests/adapters.storage-recovery.test.ts",
@@ -46,6 +47,7 @@
     "src/tests/offline.guard.test.ts",
     "src/tests/parity.test.ts",
     "src/tests/presentation.arc-summary.test.tsx",
+    "src/tests/presentation.legacy-continuity.test.tsx",
     "src/tests/presentation.m1-cycle.test.tsx",
     "src/tests/presentation.m2-cycle.test.tsx",
     "src/tests/presentation.m3-cycle.test.tsx",
@@ -71,7 +73,7 @@
   ],
   "reproducibilityStandard": "BINARY_IDENTITY_ACROSS_RECORDED_V10_6_ENVIRONMENTS",
   "binaryReproducibilityClaimed": true,
-  "functionalExpansion": false,
+  "functionalExpansion": true,
   "artifactContract": {
     "schemaVersion": 1,
     "format": "DETERMINISTIC_ZIP_STORE",
@@ -94,5 +96,21 @@
     "stableV1VersionAssigned": false,
     "RCIdentifier": "1.0.0-rc.1",
     "RCPublicationStatus": "UNPUBLISHED"
+  },
+  "authorizedFunctionalExpansion": {
+    "hito": "V10-LEGACY-BRIDGE",
+    "parentCommit": "63285e3b21228dffba6008eb7daf7be769f42863",
+    "containingCommit": "CONTAINING_COMMIT",
+    "scope": "LEGACY_CONTINUITY_ONLY",
+    "addedTestFiles": [
+      "src/tests/adapters.legacy-mvp-continuity.test.ts",
+      "src/tests/presentation.legacy-continuity.test.tsx"
+    ],
+    "addedTests": 4,
+    "dependencyChanges": false,
+    "schemaChanges": false,
+    "deploymentPerformed": false,
+    "baselineRecoveryOfRun": 30228489563,
+    "architectureRecovery": "PENDING_R3"
   }
 }

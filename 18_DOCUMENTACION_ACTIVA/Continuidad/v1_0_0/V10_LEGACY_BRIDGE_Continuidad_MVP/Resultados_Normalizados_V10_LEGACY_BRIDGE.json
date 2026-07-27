@@ -37,5 +37,19 @@
     "tag": false,
     "release": false
   },
-  "nextHito": "V10-STABLE"
+  "nextHito": "V10-STABLE",
+  "baselineRecovery": {
+    "status": "LOCAL_PASS_PENDING_EXACT_CI",
+    "failedRun": 30228489563,
+    "testFiles": 51,
+    "tests": 252,
+    "inventorySha256": "c4b7e63a06e5f98464a6daed7daa1756f915d449f1c748f87cf9819c196586d7",
+    "architecture": {
+      "contractLayer": "ports",
+      "browserInspectionLayer": "adapters",
+      "audit": "PASS",
+      "behaviorChanged": false
+    },
+    "localVerify": "PASS"
+  }
 }

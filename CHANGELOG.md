@@ -141,3 +141,30 @@ Todas las modificaciones importantes del MVP se registran aquí siguiendo [Keep 
 - proved v1 clear operations preserve MVP keys;
 - kept GitHub Pages legacy configuration unchanged;
 - performed no deployment.
+
+---
+
+## Architecture recovery · V10-LEGACY-BRIDGE R3
+
+- synchronized the candidate suite to 51 files and 252 tests;
+- moved the shared continuity contract to the ports layer;
+- kept browser storage inspection in adapters;
+- preserved behavior, keys, dependencies, schemas and deployment hold.
+
+---
+
+## Rename-aware recovery · V10-LEGACY-BRIDGE R4
+
+- synchronized the candidate suite to 51 files and 252 tests;
+- moved the shared continuity contract to the ports layer;
+- kept browser storage inspection in adapters;
+- preserved behavior, keys, dependencies, schemas and deployment hold.
+
+---
+
+## Evidence reconciliation · V10-LEGACY-BRIDGE R5
+
+- synchronized the candidate suite to 51 files and 252 tests;
+- moved the shared continuity contract to the ports layer;
+- kept browser storage inspection in adapters;
+- preserved behavior, keys, dependencies, schemas and deployment hold.

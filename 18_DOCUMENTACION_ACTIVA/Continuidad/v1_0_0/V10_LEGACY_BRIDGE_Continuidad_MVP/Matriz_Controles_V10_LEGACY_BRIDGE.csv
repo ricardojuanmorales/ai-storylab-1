@@ -17,3 +17,7 @@ LEG-015,Pages remoto,PASS,legacy unchanged
 LEG-016,Deployment,BLOCKED,not executed
 LEG-017,Dependencias,PASS,unchanged
 LEG-018,Schemas,PASS,unchanged
+LEG-019,Inventario candidate-suite,PASS,51 files; 252 tests; c4b7e63a06e5f98464a6daed7daa1756f915d449f1c748f87cf9819c196586d7
+LEG-020,Contrato compartido,PASS,src/ports/mvp-continuity.ts
+LEG-021,Inspección de navegador,PASS,adapters/storage/mvp-v0-3-continuity.ts
+LEG-022,Audit + verify local,PASS,architecture PASS; verify PASS

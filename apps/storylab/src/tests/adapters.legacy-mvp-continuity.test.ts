@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   inspectLegacyMvpContinuity,
   LEGACY_MVP_STORAGE_KEYS,
-} from "../adapters/storage/legacy-mvp-continuity";
+} from "../adapters/storage/mvp-v0-3-continuity";
 import { LocalStorageProjectRepository } from "../adapters/storage/local-storage-project-repository";
 
 class MemoryStorage {

@@ -15,7 +15,7 @@ import {
   LocalStorageProjectRepository,
   type StorageLike,
 } from "./adapters/storage/local-storage-project-repository";
-import { inspectLegacyMvpContinuity } from "./adapters/storage/legacy-mvp-continuity";
+import { inspectLegacyMvpContinuity } from "./adapters/storage/mvp-v0-3-continuity";
 import { SystemClock } from "./adapters/system/system-clock";
 import { App } from "./presentation/App";
 import type { PersistenceMode } from "./presentation/persistence-mode";

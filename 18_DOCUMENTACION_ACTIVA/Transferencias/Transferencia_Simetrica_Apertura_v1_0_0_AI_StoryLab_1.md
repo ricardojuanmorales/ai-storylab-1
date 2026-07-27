@@ -223,3 +223,36 @@ La próxima maniobra solo puede autorizar Ready for Review de forma separada.
 - claves históricas no borradas;
 - conversión semántica no realizada;
 - V10-STABLE permanece bloqueado.
+
+---
+
+## Continuidad arquitectónica · V10-LEGACY-BRIDGE R3
+
+- inventario: `51` archivos y `252` pruebas;
+- contrato compartido: `ports`;
+- lectura de navegador: `adapters`;
+- comportamiento: sin cambios;
+- claves legacy: preservadas;
+- deployment: no ejecutado.
+
+---
+
+## Continuidad rename-aware · V10-LEGACY-BRIDGE R4
+
+- inventario: `51` archivos y `252` pruebas;
+- contrato compartido: `ports`;
+- lectura de navegador: `adapters`;
+- comportamiento: sin cambios;
+- claves legacy: preservadas;
+- deployment: no ejecutado.
+
+---
+
+## Continuidad de evidencia · V10-LEGACY-BRIDGE R5
+
+- inventario: `51` archivos y `252` pruebas;
+- contrato compartido: `ports`;
+- lectura de navegador: `adapters`;
+- comportamiento: sin cambios;
+- claves legacy: preservadas;
+- deployment: no ejecutado.
