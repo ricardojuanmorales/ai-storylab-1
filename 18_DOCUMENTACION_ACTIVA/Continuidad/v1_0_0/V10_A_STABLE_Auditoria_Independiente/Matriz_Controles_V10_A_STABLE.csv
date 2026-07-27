@@ -23,3 +23,5 @@ AST-021,Puente legacy,PASS,included
 AST-022,ZIP en repositorio,PASS,false
 AST-023,Tag y Release,PASS,absent
 AST-024,Pages y deployment,PASS,legacy/false
+AST-025,Baseline audit commit,PASS,30234515703
+AST-026,Pages audit commit,PASS,30234521008; deploy=skipped

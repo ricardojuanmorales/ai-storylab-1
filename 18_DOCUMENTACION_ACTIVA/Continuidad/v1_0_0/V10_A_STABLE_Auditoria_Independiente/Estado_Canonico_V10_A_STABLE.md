@@ -2,15 +2,15 @@
 
 ```yaml
 hito: V10-A-STABLE
-state: AUDIT_COMMIT_PREPARATION
+state: HUMAN_CLOSE_GATE
 disposition: STABLE_SOURCE_AND_ARTIFACT_INDEPENDENTLY_VERIFIED
-stable_source_commit: e05369e0052f86dfebadeb010f9a792496d64800
-stable_evidence_commit: a4da9e8ad757247e557e0f31d25740ff7ef6d032
-audit_commit: PENDING
-audit_evidence_commit: PENDING
-artifact_sha256: 2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be
+audit_commit: 025940e3d1c2ef9d86fcdc00b5c7f45073d45b3b
+audit_evidence_commit: RECORDED_BY_GIT_HISTORY
+audit_baseline_CI_run: 30234515703
+audit_pages_validation_CI_run: 30234521008
+audit_deploy_job_conclusion: skipped
 local_audit: PASS
-exact_audit_CI: PENDING
+exact_audit_CI: PASS
 blocking_findings: 0
 artifact_published: false
 Pages_deployment: false

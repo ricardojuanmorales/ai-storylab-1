@@ -1,6 +1,6 @@
 {
   "hito": "V10-A-STABLE",
-  "gate": "PASS_LOCAL_PENDING_EXACT_AUDIT_CI",
+  "gate": "PASS",
   "chain": {
     "parent": "f912bef9017b1624da28c469c5b9a1f57cb9dc17",
     "source": "e05369e0052f86dfebadeb010f9a792496d64800",
@@ -36,5 +36,17 @@
     "pagesDeployment": false,
     "pagesSourceChange": false
   },
-  "nextHito": "GATE-V1-PUBLISH"
+  "nextHito": "GATE-V1-PUBLISH",
+  "auditCommit": "025940e3d1c2ef9d86fcdc00b5c7f45073d45b3b",
+  "exactCI": {
+    "baseline": {
+      "run": 30234515703,
+      "status": "PASS"
+    },
+    "pages": {
+      "run": 30234521008,
+      "status": "PASS",
+      "deployJob": "skipped"
+    }
+  }
 }

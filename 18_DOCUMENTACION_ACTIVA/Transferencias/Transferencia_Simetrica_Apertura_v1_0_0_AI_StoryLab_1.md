@@ -290,3 +290,13 @@ La próxima maniobra solo puede autorizar Ready for Review de forma separada.
 - reconstrucción binaria: PASS;
 - tag, Release, publicación y deployment: ausentes;
 - GATE-V1-PUBLISH permanece bloqueado.
+
+---
+
+## V10-A-STABLE listo para gate humano
+
+- commit de auditoría: `025940e3d1c2ef9d86fcdc00b5c7f45073d45b3b`;
+- baseline: `30234515703` PASS;
+- Pages: `30234521008` PASS;
+- deployment: no ejecutado;
+- GATE-V1-PUBLISH: pendiente de autorización.

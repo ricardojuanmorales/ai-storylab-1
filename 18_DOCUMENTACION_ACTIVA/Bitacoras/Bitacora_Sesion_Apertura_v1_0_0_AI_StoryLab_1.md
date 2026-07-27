@@ -325,3 +325,15 @@ publication_boundaries: PASS
 audit_commit: PENDING
 remote_CI: PENDING
 ```
+
+---
+
+## Evidencia remota de V10-A-STABLE
+
+```yaml
+audit_commit: 025940e3d1c2ef9d86fcdc00b5c7f45073d45b3b
+baseline_CI_status: PASS
+Pages_validation_CI_status: PASS
+deployment: false
+state: HUMAN_CLOSE_GATE
+```

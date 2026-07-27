@@ -342,3 +342,15 @@ source_rebuild_binary_identity: PASS
 publication: false
 deployment: false
 ```
+
+---
+
+## V10-A-STABLE · CI exacta de auditoría
+
+```yaml
+audit_commit: 025940e3d1c2ef9d86fcdc00b5c7f45073d45b3b
+baseline_CI: 30234515703
+Pages_validation_CI: 30234521008
+deploy_job: skipped
+audit_gate: PASS
+```

@@ -6,8 +6,8 @@
   "stable_parent_commit": "f912bef9017b1624da28c469c5b9a1f57cb9dc17",
   "stable_source_commit": "e05369e0052f86dfebadeb010f9a792496d64800",
   "stable_evidence_commit": "a4da9e8ad757247e557e0f31d25740ff7ef6d032",
-  "audit_commit": "RECORDED_BY_GIT_HISTORY",
-  "audit_evidence_commit": "PENDING",
+  "audit_commit": "025940e3d1c2ef9d86fcdc00b5c7f45073d45b3b",
+  "audit_evidence_commit": "RECORDED_BY_GIT_HISTORY",
   "application_version": "1.0.0",
   "schema_version": "0.8.0-alpha.2",
   "schema_version_independent": true,
@@ -35,7 +35,7 @@
     "repository_copy": false,
     "publication": false
   },
-  "audit_gate": "PASS_LOCAL_PENDING_EXACT_AUDIT_CI",
+  "audit_gate": "PASS",
   "controls_total": 24,
   "controls_passed": 24,
   "blocking_findings": 0,
@@ -52,7 +52,19 @@
   "dependency_changes": false,
   "schema_changes": false,
   "functional_changes": false,
-  "audit_baseline_CI": "PENDING_AUDIT_COMMIT",
-  "audit_pages_validation_CI": "PENDING_AUDIT_COMMIT",
-  "next_hito": "GATE-V1-PUBLISH"
+  "audit_baseline_CI": {
+    "run": 30234515703,
+    "url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/30234515703",
+    "status": "PASS",
+    "head": "025940e3d1c2ef9d86fcdc00b5c7f45073d45b3b"
+  },
+  "audit_pages_validation_CI": {
+    "run": 30234521008,
+    "url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/30234521008",
+    "status": "PASS",
+    "head": "025940e3d1c2ef9d86fcdc00b5c7f45073d45b3b",
+    "deploy_job": "skipped"
+  },
+  "next_hito": "GATE-V1-PUBLISH",
+  "state": "HUMAN_CLOSE_GATE"
 }

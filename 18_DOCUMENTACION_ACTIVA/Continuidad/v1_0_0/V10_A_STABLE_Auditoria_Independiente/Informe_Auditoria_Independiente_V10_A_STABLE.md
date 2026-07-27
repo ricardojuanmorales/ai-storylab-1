@@ -3,7 +3,7 @@
 ## Dictamen local
 
 ```yaml
-audit_gate: PASS_LOCAL_PENDING_EXACT_AUDIT_CI
+audit_gate: PASS
 stable_source_commit: e05369e0052f86dfebadeb010f9a792496d64800
 stable_evidence_commit: a4da9e8ad757247e557e0f31d25740ff7ef6d032
 artifact: ai-storylab-1_1.0.0_e05369e0052f.zip
@@ -27,3 +27,14 @@ timestamps y permisos, y reconstruyó el binario desde un worktree limpio del
 commit fuente exacto.
 
 El ZIP reconstruido fue idéntico byte por byte al archivo aprobado.
+
+## CI exacta del commit de auditoría
+
+```yaml
+audit_commit: 025940e3d1c2ef9d86fcdc00b5c7f45073d45b3b
+baseline_CI_run: 30234515703
+baseline_CI: PASS
+Pages_validation_CI_run: 30234521008
+Pages_validation_CI: PASS
+deploy_job_conclusion: skipped
+```
