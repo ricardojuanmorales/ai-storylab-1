@@ -160,11 +160,29 @@ La Wiki oficial permite estudiar cómo una aplicación educativa con IA responsa
 
 ---
 
+## Entrada 12. El fundamento se volvió sistema
+
+Entre v0.4.4 y v0.9.0, las preguntas filosóficas se transformaron en specs, contratos de dominio, schemas, invariantes, pruebas, puertos, adaptadores y una experiencia creativa local-first.
+
+## Entrada 13. El MVP se convirtió en linaje
+
+El MVP v0.3.0 no fue borrado. Su snapshot histórico y un puente local de respaldo preservan continuidad sin migración silenciosa, conversión automática o destrucción de claves.
+
+## Entrada 14. Publicación estable
+
+AI StoryLab 1 v1.0.0 fue fusionado, etiquetado, publicado y desplegado mediante autoridades humanas separadas. La fuente estable, el artefacto, el hash, el merge, el tag, la Release y Pages permanecen como identidades relacionadas pero distintas.
+
+## Entrada 15. Pausa reflexiva y protocolo v3.3
+
+La publicación dejó un aprendizaje rector: una autorización humana debe corresponder a una unidad de escritura, seguida por verificación y pausa. Los errores se convierten en controles; la documentación conserva el aprendizaje.
+
 ## Estado del viaje
 
 ```text
-Fase actual: v0.4.3
-Estado: documentación fundacional avanzada
-Implementación funcional: no activada
-Siguiente horizonte: cierre de deuda, WIKI_SYNC y transición hacia specs
+Fase actual: v1.0.0
+Estado: PUBLICADA_Y_CERRADA_DOCUMENTALMENTE
+Aplicación: estable y pública
+Arquitectura: local-first
+Próximo horizonte: kit de inicio y continuidad post-v1.0.0
+Autorización del próximo ciclo: pendiente
 ```

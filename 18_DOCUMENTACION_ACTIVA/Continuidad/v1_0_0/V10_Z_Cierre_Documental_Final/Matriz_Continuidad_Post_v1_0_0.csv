@@ -1,0 +1,10 @@
+item,state,next_condition
+v1.0.0,CLOSED_DOCUMENTALLY,preserve historical truth
+main_parent,16b4f4eadf9f30db1b7526c58cc31c25fdb7f939,V10-Z containing commit follows
+tag_v1.0.0,PUBLISHED_IMMUTABLE_IDENTITY,do not retarget
+GitHub_Release,PUBLISHED_VERIFIED,do not replace audited ZIP
+Pages,DEPLOYED_VERIFIED,no redeploy in V10-Z
+protocol_v3.3,APPROVED,load at next session
+pedagogical_debt,VISIBLE_NOT_AUTHORIZED,human reassessment
+next_kit,NOT_CREATED,new session and human orientation
+next_version,NOT_OPEN,separate decision

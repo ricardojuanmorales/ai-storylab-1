@@ -1,0 +1,93 @@
+{
+  "close_v1_0_0": "PASS",
+  "v10_z": "CLOSED_DOCUMENTALLY",
+  "parent_main": "16b4f4eadf9f30db1b7526c58cc31c25fdb7f939",
+  "source_commit": "e05369e0052f86dfebadeb010f9a792496d64800",
+  "tag": "v1.0.0",
+  "tag_object": "5dd85c4ab8d6877f524b1ae34823307c4bb62341",
+  "tag_target": "16b4f4eadf9f30db1b7526c58cc31c25fdb7f939",
+  "release": {
+    "name": "AI StoryLab 1 v1.0.0",
+    "url": "https://github.com/ricardojuanmorales/ai-storylab-1/releases/tag/v1.0.0",
+    "published_at": "2026-07-28T13:04:15Z",
+    "target_commitish": "main",
+    "assets": [
+      {
+        "apiUrl": "https://api.github.com/repos/ricardojuanmorales/ai-storylab-1/releases/assets/492726445",
+        "contentType": "application/zip",
+        "createdAt": "2026-07-28T13:04:14Z",
+        "digest": "sha256:2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be",
+        "downloadCount": 2,
+        "id": "RA_kwDOSydS-s4dXmit",
+        "label": "AI StoryLab 1 v1.0.0 stable ZIP",
+        "name": "ai-storylab-1_1.0.0_e05369e0052f.zip",
+        "size": 773342,
+        "state": "uploaded",
+        "updatedAt": "2026-07-28T13:04:15Z",
+        "url": "https://github.com/ricardojuanmorales/ai-storylab-1/releases/download/v1.0.0/ai-storylab-1_1.0.0_e05369e0052f.zip"
+      },
+      {
+        "apiUrl": "https://api.github.com/repos/ricardojuanmorales/ai-storylab-1/releases/assets/492726443",
+        "contentType": "application/octet-stream",
+        "createdAt": "2026-07-28T13:04:14Z",
+        "digest": "sha256:3748f3defacfbbd47d1454f276ce9e6e2159d7eef3564c8730e5b2517066f3b0",
+        "downloadCount": 2,
+        "id": "RA_kwDOSydS-s4dXmir",
+        "label": "SHA-256 checksum",
+        "name": "ai-storylab-1_1.0.0_e05369e0052f.zip.sha256",
+        "size": 103,
+        "state": "uploaded",
+        "updatedAt": "2026-07-28T13:04:14Z",
+        "url": "https://github.com/ricardojuanmorales/ai-storylab-1/releases/download/v1.0.0/ai-storylab-1_1.0.0_e05369e0052f.zip.sha256"
+      }
+    ]
+  },
+  "artifact": {
+    "name": "ai-storylab-1_1.0.0_e05369e0052f.zip",
+    "sha256": "2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be",
+    "size_bytes": 773342,
+    "downloaded_sha256": "2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be",
+    "downloaded_size_bytes": 773342
+  },
+  "ci": {
+    "baseline": {
+      "run_id": 30357045514,
+      "url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/30357045514",
+      "name": "H08-1.3 Baseline"
+    },
+    "pages_validation": {
+      "run_id": 30362915685,
+      "url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/30362915685",
+      "name": "AI StoryLab Pages"
+    },
+    "pages_deployment": {
+      "run_id": 30362915685,
+      "url": "https://github.com/ricardojuanmorales/ai-storylab-1/actions/runs/30362915685",
+      "name": "AI StoryLab Pages"
+    }
+  },
+  "public_smoke": {
+    "application": {
+      "url": "https://ricardojuanmorales.github.io/ai-storylab-1/",
+      "http": 200
+    },
+    "legacy": {
+      "url": "https://ricardojuanmorales.github.io/ai-storylab-1/legacy/v0.3.0/",
+      "http": 200
+    },
+    "bridge": {
+      "url": "https://ricardojuanmorales.github.io/ai-storylab-1/legacy/bridge/",
+      "http": 200
+    }
+  },
+  "changes": {
+    "functional": 0,
+    "schema": 0,
+    "dependencies": 0,
+    "workflows": 0,
+    "documents_only": true
+  },
+  "next_kit": "PENDING_SEPARATE_SESSION",
+  "mandatory_pause": true,
+  "generated_at_utc": "2026-07-28T16:09:11.037903+00:00"
+}

@@ -1,0 +1,45 @@
+{
+  "document": "MANIFEST_V10_Z",
+  "status": "CLOSED_DOCUMENTALLY",
+  "parent_main": "16b4f4eadf9f30db1b7526c58cc31c25fdb7f939",
+  "containing_commit": "RECORDED_EXTERNALLY_AFTER_PUSH",
+  "strictly_documentary": true,
+  "next_kit_created": false,
+  "files": [
+    {
+      "path": "18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_Z_Cierre_Documental_Final/Estado_Canonico_Cierre_v1_0_0.md",
+      "sha256": "85869bc90675c2ab8c30bacd7cd71ee77ac8df46841c6e4e92e2cb0118dbb37e",
+      "bytes": 1135
+    },
+    {
+      "path": "18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_Z_Cierre_Documental_Final/Informe_Cierre_Documental_V10_Z.md",
+      "sha256": "3c6a9c7c6db7b54f54053e8011084dea70f51e6de3e6917dfb818a4a36ac1081",
+      "bytes": 1321
+    },
+    {
+      "path": "18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_Z_Cierre_Documental_Final/Matriz_Continuidad_Post_v1_0_0.csv",
+      "sha256": "7f36ed5c89ea870f1a108aa1b07ee720d948b69dca20a02233fc0dc7843db3e4",
+      "bytes": 524
+    },
+    {
+      "path": "18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_Z_Cierre_Documental_Final/Matriz_Deuda_Pedagogica_Post_v1_0_0.csv",
+      "sha256": "0f0e7fec7b03cac857e3742995ad91f61b44d29034f26fef99050ad1c9ec6254",
+      "bytes": 768
+    },
+    {
+      "path": "18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_Z_Cierre_Documental_Final/Matriz_Identidades_Cierre_V10_Z.csv",
+      "sha256": "c086dacb78a7f2cede56c9d4ea8f4d6588b67434ba94c962c604e01a0857d9c4",
+      "bytes": 944
+    },
+    {
+      "path": "18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_Z_Cierre_Documental_Final/README.md",
+      "sha256": "81b4939ca6d5a1ee1975c3eaa086b9e101137f48fffd37d9f3af5136edb873a6",
+      "bytes": 539
+    },
+    {
+      "path": "18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_Z_Cierre_Documental_Final/Resultados_Normalizados_V10_Z.json",
+      "sha256": "86cfc72930cece4b41d5e59ecb407181944dd006bb0bd3afeff545f6a4b54873",
+      "bytes": 3507
+    }
+  ]
+}

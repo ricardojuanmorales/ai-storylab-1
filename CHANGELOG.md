@@ -1,23 +1,38 @@
 # Changelog — AI StoryLab
 
-## [1.0.0] — Unreleased
+## [1.0.0] — 2026-07-28
 
-### Exact stable artifact
+### Released
 
 - source commit `e05369e0052f86dfebadeb010f9a792496d64800`;
+- merge commit `16b4f4eadf9f30db1b7526c58cc31c25fdb7f939`;
+- annotated tag `v1.0.0`;
+- GitHub Release published with the exact ZIP and checksum assets;
+- stable ZIP `ai-storylab-1_1.0.0_e05369e0052f.zip`;
 - SHA-256 `2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be`;
 - size `773342` bytes;
-- baseline `30233085298` and Pages validation `30233089719` passed;
-- ZIP remains local and unpublished.
+- GitHub Pages deployed at `https://ricardojuanmorales.github.io/ai-storylab-1/`;
+- historical MVP and read-only legacy bridge published under governed routes.
 
+### Quality and governance
 
-### Stable identity
+- application version `1.0.0`;
+- schema version `0.8.0-alpha.2` preserved independently;
+- 51 test files and 252 tests in the stable candidate suite;
+- Node 22 and Node 24 baseline verification;
+- security, privacy, dependency, accessibility and reproducibility reviews completed within declared scope;
+- Ready, merge, tag, Release and Pages executed as separate human-authorized transitions;
+- V10-Z records the final documentary closure.
 
-- assigned application version `1.0.0`;
-- preserved schema version `0.8.0-alpha.2`;
-- preserved the v0.3.0 historical snapshot and read-only backup bridge;
-- stable ZIP remains unreported and unpublished until exact evidence is produced;
-- no merge, tag, GitHub Release or Pages deployment was performed.
+### Scope preserved
+
+- no backend;
+- no account or authentication requirement;
+- no mandatory cloud;
+- no telemetry or analytics;
+- no embedded external AI by default;
+- no automatic evaluation or publication;
+- accepted pedagogical debt remains visible for a later governed cycle.
 
 Todas las modificaciones importantes del MVP se registran aquí siguiendo [Keep a Changelog](https://keepachangelog.com/es/1.0.0/) y [Semantic Versioning](https://semver.org/lang/es/).
 

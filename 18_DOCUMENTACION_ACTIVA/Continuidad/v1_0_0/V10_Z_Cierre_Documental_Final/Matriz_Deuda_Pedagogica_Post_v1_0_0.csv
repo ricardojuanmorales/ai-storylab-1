@@ -1,0 +1,7 @@
+cluster,examples,status,target,authorization
+lenguaje_y_orientacion,glosario interactivo; ayudas contextuales; búsqueda,ACCEPTED_NON_BLOCKING,first_post_v1_cycle,REQUIRED
+aprendizaje_ludico,widgets no textuales; retos; progreso formativo,ACCEPTED_NON_BLOCKING,first_post_v1_cycle,REQUIRED
+prompts_y_apoyo,prompts por misión; variables guiadas; trazabilidad,ACCEPTED_NON_BLOCKING,first_post_v1_cycle,REQUIRED
+competencias_y_evaluacion,competencias visibles; taxonomías; rúbricas,ACCEPTED_NON_BLOCKING,first_post_v1_cycle,REQUIRED
+guias_diferenciadas,escuela; universidad; docencia; investigación,ACCEPTED_NON_BLOCKING,first_post_v1_cycle,REQUIRED
+superficies_especializadas,facilitación; grupo; investigación,ACCEPTED_NON_BLOCKING,future_governed_cycle,REQUIRED

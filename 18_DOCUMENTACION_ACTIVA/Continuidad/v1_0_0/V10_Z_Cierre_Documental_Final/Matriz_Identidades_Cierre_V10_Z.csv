@@ -1,0 +1,13 @@
+identity,value,verification,status
+stable_source,e05369e0052f86dfebadeb010f9a792496d64800,git object,PASS
+stable_evidence,a4da9e8ad757247e557e0f31d25740ff7ef6d032,git object,PASS
+audit_commit,025940e3d1c2ef9d86fcdc00b5c7f45073d45b3b,git object,PASS
+audit_evidence,186b2df49f608033165e1d743fc1523464f96fde,git object,PASS
+gate_commit,a4a391ce961479016629e4da94aad7c3c1ce97a3,git object,PASS
+gate_evidence,775a4c33e229296e48780540597807cc90394541,git object,PASS
+merge_commit,16b4f4eadf9f30db1b7526c58cc31c25fdb7f939,origin/main before V10-Z,PASS
+annotated_tag,5dd85c4ab8d6877f524b1ae34823307c4bb62341,git cat-file tag,PASS
+tag_target,16b4f4eadf9f30db1b7526c58cc31c25fdb7f939,peeled commit,PASS
+release,https://github.com/ricardojuanmorales/ai-storylab-1/releases/tag/v1.0.0,gh release view,PASS
+artifact,ai-storylab-1_1.0.0_e05369e0052f.zip,download and SHA-256,PASS
+pages,https://ricardojuanmorales.github.io/ai-storylab-1/,semantic smoke,PASS
