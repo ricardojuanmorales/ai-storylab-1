@@ -1,0 +1,5 @@
+control_id,surface,expected,actual,result,severity,evidence
+AUD-001,Draft PR identity,OPEN/DRAFT/feat/v1.0-release-readiness/ace90849e74cc14937e3cf9782fff90854b7849e,OPEN/true/feat/v1.0-release-readiness/ace90849e74cc14937e3cf9782fff90854b7849e,PASS,BLOCKING,GitHub PR #65
+AUD-022,Documentary publication hold,ACTIVE and all prohibitions visible,"{""missing"":[]}",PASS,BLOCKING,18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_7_Dossier_Release_Afirmaciones/PUBLICATION_HOLD_V10_7.md
+AUD-023,Public tag absence,ABSENT,ABSENT,PASS,BLOCKING,refs/tags/v1.0.0-rc.1
+AUD-024,GitHub Release absence,ABSENT,ABSENT,PASS,BLOCKING,GitHub Release v1.0.0-rc.1

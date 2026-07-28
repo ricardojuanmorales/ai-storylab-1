@@ -1,0 +1,58 @@
+{
+  "project": "AI StoryLab 1",
+  "phase": "v1.0.0",
+  "hito": "V10-3",
+  "movement": "EXPERIENCE_ACCESSIBILITY_AND_DECLARED_COMPATIBILITY_VALIDATION",
+  "date": "2026-07-24",
+  "authorization": "Adelante con V10-3 expedito.",
+  "parent_commit": "7cfd79bc087e90e286fb6e76d10716c6ef434555",
+  "branch": "feat/v1.0-release-readiness",
+  "PR": 65,
+  "PR_mode": "DRAFT_SINGLE_CONSOLIDATED",
+  "commit": "CONTAINING_COMMIT",
+  "evidence_model": "AUTOMATED_TESTS_PLUS_INTERNAL_HUMAN_ATTESTATION_PLUS_EXACT_CI",
+  "browsers_validated": 3,
+  "declared_browsers": [
+    {
+      "browser": "Safari",
+      "version": "26.5.2",
+      "status": "PASS",
+      "attested_at_utc": "2026-07-26T16:03:44Z"
+    },
+    {
+      "browser": "Google Chrome",
+      "version": "150.0.7871.184",
+      "status": "PASS",
+      "attested_at_utc": "2026-07-26T16:05:20Z"
+    },
+    {
+      "browser": "Firefox",
+      "version": "152.0.1",
+      "status": "PASS",
+      "attested_at_utc": "2026-07-26T16:08:14Z"
+    }
+  ],
+  "voiceover_result": "PASS",
+  "RSV_03": "RESOLVED_WITH_BOUNDED_DECLARED_MATRIX",
+  "RSV_06": "RESOLVED_WITH_BOUNDED_MANUAL_ATTESTATION",
+  "blocking_findings_in_execution": 0,
+  "functional_changes": false,
+  "repairs": false,
+  "dependency_changes": false,
+  "schema_changes": false,
+  "workflow_changes": false,
+  "participant_research": false,
+  "real_user_data": false,
+  "Windows_support": "NOT_CLAIMED",
+  "universal_browser_support": "NOT_CLAIMED",
+  "WCAG_certification": "NOT_CLAIMED",
+  "artifact_publication": false,
+  "Ready_for_Review": false,
+  "merge": false,
+  "tag": false,
+  "RC": false,
+  "release": false,
+  "V10_4": "OPENED_AND_EXECUTED_BY_HUMAN_AUTHORIZATION",
+  "state": "CLOSED_BY_HUMAN_DECISION",
+  "human_close_decision": true
+}

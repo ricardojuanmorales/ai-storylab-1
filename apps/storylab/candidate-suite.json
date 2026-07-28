@@ -1,18 +1,19 @@
 {
   "schemaVersion": 1,
-  "suiteId": "AI_STORYLAB_V09_CANDIDATE_BASELINE",
-  "status": "FROZEN_FOR_H09_2_VALIDATION",
+  "suiteId": "AI_STORYLAB_V10_STABLE_UNPUBLISHED_1_0_0",
+  "status": "FROZEN_FOR_V10_STABLE_UNPUBLISHED",
   "supportedNodeMajors": [
     22,
     24
   ],
-  "expectedTestFiles": 49,
-  "expectedTests": 248,
-  "testInventorySha256": "6311d45ccc64c237e950dcc700461b400df40ce21caab6274889b9ed1f056322",
+  "expectedTestFiles": 51,
+  "expectedTests": 252,
+  "testInventorySha256": "c4b7e63a06e5f98464a6daed7daa1756f915d449f1c748f87cf9819c196586d7",
   "testInventory": [
     "src/tests/adapters.browser-file-download.test.ts",
     "src/tests/adapters.browser-untrusted-local-file.test.ts",
     "src/tests/adapters.in-memory.test.ts",
+    "src/tests/adapters.legacy-mvp-continuity.test.ts",
     "src/tests/adapters.local-storage.test.ts",
     "src/tests/adapters.storage-contracts.test.ts",
     "src/tests/adapters.storage-recovery.test.ts",
@@ -46,6 +47,7 @@
     "src/tests/offline.guard.test.ts",
     "src/tests/parity.test.ts",
     "src/tests/presentation.arc-summary.test.tsx",
+    "src/tests/presentation.legacy-continuity.test.tsx",
     "src/tests/presentation.m1-cycle.test.tsx",
     "src/tests/presentation.m2-cycle.test.tsx",
     "src/tests/presentation.m3-cycle.test.tsx",
@@ -69,27 +71,63 @@
     "npm run audit:vertical-slice",
     "vitest run --reporter=json"
   ],
-  "reproducibilityStandard": "SEMANTIC",
-  "binaryReproducibilityClaimed": false,
-  "functionalExpansion": false,
+  "reproducibilityStandard": "BINARY_IDENTITY_ACROSS_NODE_22_NODE_24_AND_LOCAL_RECORDED_ENVIRONMENT",
+  "binaryReproducibilityClaimed": true,
+  "functionalExpansion": true,
   "artifactContract": {
     "schemaVersion": 1,
     "format": "DETERMINISTIC_ZIP_STORE",
-    "candidateVersion": "0.9.0-unreleased",
     "fixedZipTimestamp": "1980-01-01T00:00:00Z",
     "binaryReproducibilityRequired": true,
-    "versionDriftStatus": "RESOLVED_FOR_CANONICAL_APPLICATION"
+    "versionDriftStatus": "RESOLVED_FOR_V10_STABLE",
+    "publicationStatus": "UNPUBLISHED_STABLE_ARTIFACT",
+    "releaseVersion": "1.0.0"
   },
   "versionPolicy": {
-    "projectReleaseLine": "v0.9.0",
+    "projectReleaseLine": "v1.0.0",
     "canonicalApplicationPackage": "apps/storylab",
-    "canonicalApplicationVersion": "0.9.0-unreleased",
+    "canonicalApplicationVersion": "1.0.0",
     "currentSchemaVersion": "0.8.0-alpha.2",
     "previousSchemaVersion": "0.8.0-alpha.1",
     "schemaVersionIndependentFromApplicationVersion": true,
     "legacyRootPackageVersion": "0.3.0",
     "legacyRootPackageStatus": "HISTORICAL_NON_CANONICAL_EXCLUDED_FROM_CANDIDATE",
-    "RCVersionAssigned": false,
-    "stableV1VersionAssigned": false
+    "RCVersionAssigned": true,
+    "stableV1VersionAssigned": true,
+    "RCIdentifier": "1.0.0-rc.1",
+    "RCPublicationStatus": "UNPUBLISHED_HISTORICAL_CANDIDATE",
+    "StableIdentifier": "1.0.0",
+    "StablePublicationStatus": "UNPUBLISHED"
+  },
+  "authorizedFunctionalExpansion": {
+    "hito": "V10-LEGACY-BRIDGE",
+    "parentCommit": "63285e3b21228dffba6008eb7daf7be769f42863",
+    "containingCommit": "f912bef9017b1624da28c469c5b9a1f57cb9dc17",
+    "scope": "LEGACY_CONTINUITY_ONLY",
+    "addedTestFiles": [
+      "src/tests/adapters.legacy-mvp-continuity.test.ts",
+      "src/tests/presentation.legacy-continuity.test.tsx"
+    ],
+    "addedTests": 4,
+    "dependencyChanges": false,
+    "schemaChanges": false,
+    "deploymentPerformed": false,
+    "baselineRecoveryOfRun": 30228489563,
+    "architectureRecovery": {
+      "revision": "R5_PRESERVED_RECOVERY_EVIDENCE_RECONCILIATION_2026_07_27",
+      "status": "PASS",
+      "sharedContractLayer": "ports",
+      "browserInspectionLayer": "adapters",
+      "behaviorChanged": false
+    }
+  },
+  "stableIdentityAssignment": {
+    "hito": "V10-STABLE",
+    "version": "1.0.0",
+    "publicationStatus": "UNPUBLISHED",
+    "functionalChanges": false,
+    "dependencyChanges": false,
+    "schemaChanges": false,
+    "pagesDeployment": false
   }
 }

@@ -1,9 +1,9 @@
 {
-  "name": "@ai-storylab/storylab-baseline",
+  "name": "@ai-storylab/storylab",
   "private": true,
-  "version": "0.9.0-unreleased",
+  "version": "1.0.0",
   "type": "module",
-  "description": "AI StoryLab 1 v0.9.0-unreleased: arco creativo local-first M1-M4, agencia humana, privacidad, reversibilidad y empaquetado verificable.",
+  "description": "AI StoryLab 1 v1.0.0: identidad estable asignada, artefacto verificable y todavía no publicado.",
   "engines": {
     "node": ">=22 <27"
   },
@@ -32,7 +32,7 @@
     "test:integration": "vitest run src/tests/integration.local-first.test.tsx src/tests/integration.portfolio-transfer-local-first.test.tsx",
     "audit:vertical-slice": "node tools/audit-vertical-slice.mjs",
     "verify:components": "npm run typecheck && npm run build && npm run audit:architecture && npm run audit:secrets && npm run audit:privacy && npm run audit:vertical-slice && npm run test",
-    "package:candidate": "node tools/package-candidate.mjs"
+    "package:stable": "node tools/package-candidate.mjs"
   },
   "dependencies": {
     "react": "19.2.7",

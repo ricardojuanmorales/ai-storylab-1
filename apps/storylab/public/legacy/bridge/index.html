@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Puente local y no destructivo para preservar datos del MVP v0.3.0 de AI StoryLab 1." />
+    <title>Continuidad v0.3.0 · AI StoryLab 1</title>
+    <link rel="stylesheet" href="./legacy-bridge.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <p class="eyebrow">Continuidad local-first</p>
+      <h1>Respaldo del MVP v0.3.0</h1>
+      <p>Esta herramienta examina exclusivamente las dos claves históricas del MVP. No convierte, escribe ni borra datos.</p>
+      <section class="card" aria-labelledby="status-title">
+        <h2 id="status-title">Estado local</h2>
+        <dl id="legacy-status"></dl>
+        <p id="status-message" role="status" aria-live="polite">Comprobando el almacenamiento local.</p>
+      </section>
+      <section class="card" aria-labelledby="backup-title">
+        <h2 id="backup-title">Crear una copia descargable</h2>
+        <p>El archivo conserva el texto exacto almacenado y sus hashes. No se importa automáticamente en v1.0.0.</p>
+        <label class="confirmation">
+          <input id="confirm-backup" type="checkbox" />
+          Confirmo que deseo descargar una copia local sin modificar la fuente.
+        </label>
+        <button id="download-backup" type="button" disabled>Descargar respaldo legacy</button>
+      </section>
+      <nav aria-label="Rutas de continuidad">
+        <a href="../v0.3.0/">Abrir la aplicación histórica v0.3.0</a>
+        <a href="../../">Regresar a AI StoryLab 1</a>
+      </nav>
+      <aside class="boundary">
+        <h2>Límites</h2>
+        <ul>
+          <li>No existe migración silenciosa.</li>
+          <li>No se elimina ninguna clave.</li>
+          <li>La conversión semántica a v1.0.0 queda fuera de este puente.</li>
+          <li>El respaldo requiere una acción humana explícita.</li>
+        </ul>
+      </aside>
+    </main>
+    <script type="module" src="./legacy-bridge.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+{
+  "project": "AI StoryLab 1",
+  "phase": "v1.0.0",
+  "gate": "GATE-V10-RELEASE",
+  "parentCommit": "2201cd183237ce8a5038c4eb2bd4f2f8360e9457",
+  "candidateVersion": "1.0.0-rc.1",
+  "sourceCommit": "533fcf28a0c9053b7da79ca70ded80450d94cf35",
+  "candidateTag": "v1.0.0-rc.1",
+  "artifactName": "ai-storylab-1_1.0.0-rc.1_533fcf28a0c9.zip",
+  "artifactSha256": "6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c",
+  "artifactSizeBytes": 486825,
+  "gateResult": "PASS",
+  "gateState": "HUMAN_CLOSE_GATE",
+  "controls": {
+    "total": 18,
+    "passed": 18,
+    "failed": 0,
+    "allBlocking": true
+  },
+  "blockingFindings": 0,
+  "authorities": [
+    {
+      "authority_id": "AUT-001",
+      "authority": "READY_FOR_REVIEW",
+      "gate_disposition": "ELIGIBLE_FOR_SEPARATE_HUMAN_AUTHORIZATION_NOW",
+      "current_action_status": "NOT_AUTHORIZED",
+      "prerequisites": "gate PASS; exact gate commit CI PASS; PR still Draft and unchanged",
+      "target": "PR #65",
+      "human_decision_required": "YES_SEPARATE",
+      "automatic_action": "NONE"
+    },
+    {
+      "authority_id": "AUT-002",
+      "authority": "MERGE",
+      "gate_disposition": "CONDITIONAL_AFTER_READY_FOR_REVIEW_AND_REVIEW_REQUIREMENTS",
+      "current_action_status": "NOT_AUTHORIZED",
+      "prerequisites": "Ready for Review separately authorized and executed; required review complete; exact head CI PASS; no drift",
+      "target": "feat/v1.0-release-readiness -> main",
+      "human_decision_required": "YES_SEPARATE_AFTER_PREREQUISITES",
+      "automatic_action": "NONE"
+    },
+    {
+      "authority_id": "AUT-003",
+      "authority": "TAG",
+      "gate_disposition": "CONDITIONAL_AFTER_MERGE_AND_SOURCE_ANCESTRY_RECHECK",
+      "current_action_status": "NOT_AUTHORIZED",
+      "prerequisites": "merge separately authorized and complete; 533fcf28a0c9053b7da79ca70ded80450d94cf35 is ancestor of main; tag absent",
+      "target": "v1.0.0-rc.1 -> 533fcf28a0c9053b7da79ca70ded80450d94cf35",
+      "human_decision_required": "YES_SEPARATE_AFTER_PREREQUISITES",
+      "automatic_action": "NONE"
+    },
+    {
+      "authority_id": "AUT-004",
+      "authority": "PUBLICATION",
+      "gate_disposition": "CONDITIONAL_AFTER_TAG_AND_FINAL_HASH_RECHECK",
+      "current_action_status": "NOT_AUTHORIZED",
+      "prerequisites": "v1.0.0-rc.1 exists at 533fcf28a0c9053b7da79ca70ded80450d94cf35; ZIP hash and size reverified; prerelease notes approved",
+      "target": "GitHub prerelease v1.0.0-rc.1 with ai-storylab-1_1.0.0-rc.1_533fcf28a0c9.zip",
+      "human_decision_required": "YES_SEPARATE_AFTER_PREREQUISITES",
+      "automatic_action": "NONE"
+    }
+  ],
+  "publicationHold": "ACTIVE",
+  "stableVersion": "NOT_ASSIGNED",
+  "actionsExecuted": {
+    "readyForReview": false,
+    "merge": false,
+    "tag": false,
+    "publication": false,
+    "GitHubRelease": false
+  },
+  "changes": {
+    "documentationOnly": true,
+    "candidate": false,
+    "functional": false,
+    "dependencies": false,
+    "schema": false,
+    "workflows": false
+  }
+}

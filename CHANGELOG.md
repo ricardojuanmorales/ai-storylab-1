@@ -1,5 +1,24 @@
 # Changelog — AI StoryLab
 
+## [1.0.0] — Unreleased
+
+### Exact stable artifact
+
+- source commit `e05369e0052f86dfebadeb010f9a792496d64800`;
+- SHA-256 `2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be`;
+- size `773342` bytes;
+- baseline `30233085298` and Pages validation `30233089719` passed;
+- ZIP remains local and unpublished.
+
+
+### Stable identity
+
+- assigned application version `1.0.0`;
+- preserved schema version `0.8.0-alpha.2`;
+- preserved the v0.3.0 historical snapshot and read-only backup bridge;
+- stable ZIP remains unreported and unpublished until exact evidence is produced;
+- no merge, tag, GitHub Release or Pages deployment was performed.
+
 Todas las modificaciones importantes del MVP se registran aquí siguiendo [Keep a Changelog](https://keepachangelog.com/es/1.0.0/) y [Semantic Versioning](https://semver.org/lang/es/).
 
 ---
@@ -112,3 +131,76 @@ Todas las modificaciones importantes del MVP se registran aquí siguiendo [Keep 
 - Compendio inicial del MVP
 - `README.md` inicial
 - `.gitignore` base
+
+---
+
+## Public surface preparation · V10-PUBLIC
+
+- prepared a public-facing README;
+- created minimum human documentation;
+- kept Pages, stable ZIP, tag and Release unpublished;
+- paused the prior Ready authorization because the PR head will change.
+
+---
+
+## GitHub Pages preparation · V10-PAGES
+- added environment-aware Vite base;
+- added deterministic Pages smoke test;
+- added build-always, deploy-manually workflow;
+- did not execute a new public deployment;
+- recorded and preserved the preexisting Pages state.
+
+---
+
+## Legacy continuity · V10-LEGACY-BRIDGE
+
+- captured the live v0.3.0 fingerprint;
+- built a historical snapshot under a future legacy route;
+- added a read-only backup bridge;
+- proved v1 clear operations preserve MVP keys;
+- kept GitHub Pages legacy configuration unchanged;
+- performed no deployment.
+
+---
+
+## Architecture recovery · V10-LEGACY-BRIDGE R3
+
+- synchronized the candidate suite to 51 files and 252 tests;
+- moved the shared continuity contract to the ports layer;
+- kept browser storage inspection in adapters;
+- preserved behavior, keys, dependencies, schemas and deployment hold.
+
+---
+
+## Rename-aware recovery · V10-LEGACY-BRIDGE R4
+
+- synchronized the candidate suite to 51 files and 252 tests;
+- moved the shared continuity contract to the ports layer;
+- kept browser storage inspection in adapters;
+- preserved behavior, keys, dependencies, schemas and deployment hold.
+
+---
+
+## Evidence reconciliation · V10-LEGACY-BRIDGE R5
+
+- synchronized the candidate suite to 51 files and 252 tests;
+- moved the shared continuity contract to the ports layer;
+- kept browser storage inspection in adapters;
+- preserved behavior, keys, dependencies, schemas and deployment hold.
+
+---
+
+## Independent stable audit · V10-A-STABLE
+
+- independently inspected the stable ZIP;
+- rebuilt it from source commit `e05369e0052f86dfebadeb010f9a792496d64800`;
+- confirmed SHA-256 `2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be`;
+- confirmed legacy routes, no repository ZIP, no tag, no Release and no deployment.
+
+---
+
+## Publication decision gate · GATE-V1-PUBLISH
+
+- Ready for Review eligible for separate authorization;
+- merge, tag, Release, ZIP and Pages remain blocked;
+- no publication action executed.

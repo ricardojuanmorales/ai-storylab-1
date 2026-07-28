@@ -1,0 +1,47 @@
+{
+  "project": "AI StoryLab 1",
+  "phase": "v1.0.0",
+  "hito": "V10-5",
+  "parentCommit": "5cf66e862f0d414a3fdbe532d87c32e52ab75f91",
+  "artifactGate": "PASS",
+  "gateState": "HUMAN_CLOSE_GATE",
+  "blockingFindings": 0,
+  "blockingReasons": [],
+  "versionPolicy": {
+    "releaseLine": "v1.0.0",
+    "currentApplicationVersion": "0.9.0-unreleased",
+    "releaseCandidatePattern": "1.0.0-rc.N",
+    "releaseCandidateAssigned": false,
+    "stableVersionAssigned": false,
+    "schemaVersion": "0.8.0-alpha.2",
+    "schemaIndependent": true,
+    "schemaChanged": false
+  },
+  "identity": {
+    "sourceCommit": "5cf66e862f0d414a3fdbe532d87c32e52ab75f91",
+    "applicationTree": "2b64a7ecaae3b5c86cb465fd00a952e8f48d04bd",
+    "packageJsonSha256": "2adb5eb0fee857e7bdd9230ee959d41212cd9ab824ca8a7b11ecc8eeb685887f",
+    "packageLockSha256": "364ff396ab46b84c6eabc1ddf41f076ee772fd338bf6fa4e999582a3ccac52f1"
+  },
+  "probe": {
+    "buildOneExit": 0,
+    "buildTwoExit": 0,
+    "packageOneExit": 0,
+    "packageTwoExit": 0,
+    "distOneManifestSha256": "32c48badd0aee620f3b2f27f056d1ec0eb5981bcff24742d9f431b908255100b",
+    "distTwoManifestSha256": "32c48badd0aee620f3b2f27f056d1ec0eb5981bcff24742d9f431b908255100b",
+    "distIdentity": true,
+    "artifactOneSha256": "594a60d8f5b2a5b58b3c435d30b52cde2c7998ace8712f0b8363c7e0d15cbad5",
+    "artifactTwoSha256": "594a60d8f5b2a5b58b3c435d30b52cde2c7998ace8712f0b8363c7e0d15cbad5",
+    "artifactIdentity": true,
+    "artifactSize": 486552,
+    "localArtifactDirectory": "/Users/ricardomoralesdejesus/.ai-storylab-1/operators/V10_5_VERSION_ARTEFACTO_REPRODUCIBILIDAD_R1_2026_07_26/artifacts",
+    "publicationStatus": "UNPUBLISHED_LOCAL_POLICY_PROBE"
+  },
+  "metadataAlignmentRequiredInV10_6": true,
+  "functionalChanges": false,
+  "dependencyChanges": false,
+  "schemaChanges": false,
+  "workflowChanges": false,
+  "artifactPublication": false
+}

@@ -1,0 +1,38 @@
+{
+  "project": "AI StoryLab 1",
+  "hito": "V10-3",
+  "parent_commit": "7cfd79bc087e90e286fb6e76d10716c6ef434555",
+  "evidence_class": "INTERNAL_HUMAN_ATTESTATION_BOUNDED",
+  "synthetic_data_only": true,
+  "macOS_version": "26.5.2",
+  "browsers": [
+    {
+      "browser": "Safari",
+      "version": "26.5.2",
+      "status": "PASS",
+      "attested_at_utc": "2026-07-26T16:03:44Z"
+    },
+    {
+      "browser": "Google Chrome",
+      "version": "150.0.7871.184",
+      "status": "PASS",
+      "attested_at_utc": "2026-07-26T16:05:20Z"
+    },
+    {
+      "browser": "Firefox",
+      "version": "152.0.1",
+      "status": "PASS",
+      "attested_at_utc": "2026-07-26T16:08:14Z"
+    }
+  ],
+  "voiceover": {
+    "technology": "VoiceOver",
+    "browser": "Safari 26.5.2",
+    "operating_system": "macOS 26.5.2",
+    "status": "PASS",
+    "attested_at_utc": "2026-07-26T16:09:11Z"
+  },
+  "result": "PASS",
+  "not_an_external_audit": true,
+  "not_participant_research": true
+}

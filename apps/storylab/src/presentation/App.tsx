@@ -5,6 +5,7 @@ import {
   type MouseEvent,
 } from "react";
 import type { StoryLabUseCases } from "../application";
+import type { LegacyMvpContinuitySummary } from "../ports/mvp-continuity";
 import { MISSION_CATALOG } from "../domain/mission-catalog";
 import type {
   AccessibilityPreferences,
@@ -12,6 +13,7 @@ import type {
 } from "../domain/model";
 import type { MissionId } from "../domain/types";
 import { ArcSummary } from "./ArcSummary";
+import { LegacyContinuityPanel } from "./LegacyContinuityPanel";
 import { PortfolioTransferPanel } from "./PortfolioTransferPanel";
 import type { PortfolioTransferRuntime } from "./portfolio-transfer-runtime";
 import { MissionFourWorkspace } from "./MissionFourWorkspace";
@@ -46,12 +48,18 @@ export interface AppProps {
   readonly useCases: StoryLabUseCases;
   readonly portfolioTransfer?: PortfolioTransferRuntime;
   readonly persistenceMode?: PersistenceMode;
+  readonly legacyContinuity?: LegacyMvpContinuitySummary;
+  readonly legacyAppUrl?: string;
+  readonly legacyBridgeUrl?: string;
 }
 
 export function App({
   useCases,
   portfolioTransfer,
   persistenceMode = "memory",
+  legacyContinuity,
+  legacyAppUrl = "/legacy/v0.3.0/",
+  legacyBridgeUrl = "/legacy/bridge/",
 }: AppProps) {
   const [preferences, setPreferences] =
     useState<AccessibilityPreferences>(DEFAULT_PREFERENCES);
@@ -255,6 +263,14 @@ export function App({
             </ul>
           </aside>
         </section>
+
+        {legacyContinuity ? (
+          <LegacyContinuityPanel
+            summary={legacyContinuity}
+            legacyAppUrl={legacyAppUrl}
+            legacyBridgeUrl={legacyBridgeUrl}
+          />
+        ) : null}
 
         <section
           id="preferencias"

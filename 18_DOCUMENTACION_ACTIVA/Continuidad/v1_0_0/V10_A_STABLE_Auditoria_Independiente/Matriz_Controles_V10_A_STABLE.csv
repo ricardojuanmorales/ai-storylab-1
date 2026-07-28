@@ -1,0 +1,27 @@
+control_id,surface,status,evidence
+AST-001,Parent estable,PASS,f912bef9017b1624da28c469c5b9a1f57cb9dc17
+AST-002,Fuente estable,PASS,e05369e0052f86dfebadeb010f9a792496d64800
+AST-003,Evidencia estable,PASS,a4da9e8ad757247e557e0f31d25740ff7ef6d032
+AST-004,Cadena lineal,PASS,parent→source→evidence
+AST-005,Evidencia no cambia app,PASS,true
+AST-006,Versión aplicación,PASS,1.0.0
+AST-007,Versión schema,PASS,0.8.0-alpha.2
+AST-008,Independencia schema,PASS,true
+AST-009,Grafo dependencias,PASS,unchanged
+AST-010,Cambios funcionales,PASS,false
+AST-011,Checksums documentales,PASS,V10-STABLE
+AST-012,Hash ZIP,PASS,2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be
+AST-013,Tamaño ZIP,PASS,773342
+AST-014,Entradas ZIP,PASS,16
+AST-015,Archivos app,PASS,12
+AST-016,Manifiesto interno,PASS,verified
+AST-017,Checksums internos,PASS,verified
+AST-018,Formato determinista,PASS,stored/sorted/fixed
+AST-019,Reconstrucción fuente,PASS,2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be
+AST-020,Snapshot legacy,PASS,included
+AST-021,Puente legacy,PASS,included
+AST-022,ZIP en repositorio,PASS,false
+AST-023,Tag y Release,PASS,absent
+AST-024,Pages y deployment,PASS,legacy/false
+AST-025,Baseline audit commit,PASS,30234515703
+AST-026,Pages audit commit,PASS,30234521008; deploy=skipped

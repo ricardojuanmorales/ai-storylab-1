@@ -1,0 +1,33 @@
+{
+  "hito": "V10-PAGES",
+  "pagesGate": "PASS",
+  "controls": {
+    "total": 14,
+    "passed": 14,
+    "failed": 0
+  },
+  "blockingFindings": 0,
+  "base": "/ai-storylab-1/",
+  "plannedUrl": "https://ricardojuanmorales.github.io/ai-storylab-1/",
+  "localSmoke": "PASS",
+  "assetsChecked": 2,
+  "deploymentPerformedByV10Pages": false,
+  "preexistingPages": {
+    "configured": true,
+    "status": "built",
+    "buildType": "legacy",
+    "url": "https://ricardojuanmorales.github.io/ai-storylab-1/",
+    "sourceBranch": "gh-pages",
+    "sourcePath": "/",
+    "httpStatus": "200",
+    "liveEndpointObserved": true,
+    "compatibility": "SOURCE_SWITCH_REQUIRED_BEFORE_DEPLOYMENT"
+  },
+  "workflow": {
+    "buildOnPullRequest": true,
+    "buildOnMainPush": true,
+    "automaticDeploy": false,
+    "manualDeployFromMainOnly": true
+  },
+  "nextHito": "V10-STABLE"
+}

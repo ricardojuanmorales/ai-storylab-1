@@ -162,12 +162,12 @@ if (inventorySha256 !== manifest.testInventorySha256) {
   );
 }
 
-const tempRoot = mkdtempSync(join(tmpdir(), "ai-storylab-h09-5-"));
+const tempRoot = mkdtempSync(join(tmpdir(), "ai-storylab-v10-stable-"));
 const vitestReportPath = join(tempRoot, "vitest.json");
-const packageOnePath = join(tempRoot, "candidate-one.zip");
-const packageTwoPath = join(tempRoot, "candidate-two.zip");
-const packageOneReportPath = join(tempRoot, "candidate-one.json");
-const packageTwoReportPath = join(tempRoot, "candidate-two.json");
+const packageOnePath = join(tempRoot, "stable-one.zip");
+const packageTwoPath = join(tempRoot, "stable-two.zip");
+const packageOneReportPath = join(tempRoot, "stable-one.json");
+const packageTwoReportPath = join(tempRoot, "stable-two.json");
 const sourceCommit =
   process.env.AI_STORYLAB_SOURCE_COMMIT ??
   process.env.GITHUB_SHA;
@@ -205,16 +205,16 @@ try {
     vitest.passedTests !== manifest.expectedTests
   ) {
     throw new Error(
-      `Candidate suite mismatch: ${JSON.stringify(vitest)}`,
+      `Stable suite mismatch: ${JSON.stringify(vitest)}`,
     );
   }
 
   const dist = buildDistManifest();
   const lockSha256 = sha256File(join(appRoot, "package-lock.json"));
   const packageTool = join(appRoot, "tools", "package-candidate.mjs");
-  const candidateVersion =
-    manifest.artifactContract?.candidateVersion ??
-    "0.9.0-unreleased";
+  const releaseVersion =
+    manifest.artifactContract?.releaseVersion ??
+    "1.0.0";
 
   for (const [output, reportPath] of [
     [packageOnePath, packageOneReportPath],
@@ -228,8 +228,8 @@ try {
       output,
       "--commit",
       sourceCommit,
-      "--candidate-version",
-      candidateVersion,
+      "--release-version",
+      releaseVersion,
       "--report",
       reportPath,
     ]);
@@ -248,7 +248,7 @@ try {
   }
 
   process.stdout.write(
-    `AI_STORYLAB_CANDIDATE_ARTIFACT_SHA256=${packageOne.artifactSha256}\n`,
+    `AI_STORYLAB_STABLE_ARTIFACT_SHA256=${packageOne.artifactSha256}\n`,
   );
 
   const report = {
@@ -280,7 +280,7 @@ try {
       status: "PASS",
       format: "DETERMINISTIC_ZIP_STORE",
       sourceCommit,
-      candidateVersion,
+      releaseVersion,
       binaryReproducibility: "PASS",
       artifactSha256: packageOne.artifactSha256,
       artifactSize: packageOne.artifactSize,

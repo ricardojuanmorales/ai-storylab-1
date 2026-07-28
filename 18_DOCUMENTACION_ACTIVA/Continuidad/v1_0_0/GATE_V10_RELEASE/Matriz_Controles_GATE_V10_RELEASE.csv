@@ -1,0 +1,19 @@
+control_id,surface,expected,actual,result,severity,evidence
+GVR-001,Draft PR identity,OPEN/DRAFT/feat/v1.0-release-readiness/2201cd183237ce8a5038c4eb2bd4f2f8360e9457,OPEN/true/feat/v1.0-release-readiness/2201cd183237ce8a5038c4eb2bd4f2f8360e9457,PASS,BLOCKING,GitHub PR #65
+GVR-002,V10-A exact CI,2201cd183237ce8a5038c4eb2bd4f2f8360e9457/completed/success,2201cd183237ce8a5038c4eb2bd4f2f8360e9457/completed/success,PASS,BLOCKING,GitHub Actions run 30218309672
+GVR-003,V10-A closing evidence,24 PASS/0 FAIL/audit PASS/hold ACTIVE,"{""state"":""HUMAN_CLOSE_GATE"",""audit_gate"":""PASS"",""controls_total"":24,""controls_passed"":24,""controls_failed"":0,""blocking_findings"":0,""binary_reconstruction"":true,""unsupported_public_claims"":0,""publication_hold"":""ACTIVE"",""GATE_V10_RELEASE"":""BLOCKED_PENDING_HUMAN_DECISION""}",PASS,BLOCKING,18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_A_Auditoria_Procedimental/MANIFEST_V10_A.json
+GVR-004,V10-A documentary checksums,PASS,PASS,PASS,BLOCKING,18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_A_Auditoria_Procedimental/CHECKSUMS_V10_A.sha256
+GVR-005,Candidate tree continuity,999be850336096466da19e487f556f760a820b6f,999be850336096466da19e487f556f760a820b6f/999be850336096466da19e487f556f760a820b6f,PASS,BLOCKING,Git tree source and V10-A
+GVR-006,Claims readiness,22 audited/0 unsupported,22/0,PASS,BLOCKING,18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_A_Auditoria_Procedimental/MANIFEST_V10_A.json
+GVR-007,Preserved authority boundaries,all false,candidate_changes=false/functional_changes=false/dependency_changes=false/schema_changes=false/workflow_changes=false/artifact_publication=false/Ready_for_Review=false/merge=false/tag=false/release=false,PASS,BLOCKING,18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_A_Auditoria_Procedimental/MANIFEST_V10_A.json
+GVR-008,Retained artifact identity,6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c/486825,6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c/486825,PASS,BLOCKING,/Users/ricardomoralesdejesus/.ai-storylab-1/operators/V10_6_CONGELAR_ALINEAR_ENSAMBLAR_RC1_R1_2026_07_26/final-unpublished-candidate/ai-storylab-1_1.0.0-rc.1_533fcf28a0c9.zip
+GVR-009,Artifact internal verification,PASS/exact identity/unpublished,PASS,PASS,BLOCKING,/Users/ricardomoralesdejesus/.ai-storylab-1/operators/GATE_V10_RELEASE_EVALUAR_AUTORIDADES_R1_2026_07_26/raw/gate-artifact-verification.json
+GVR-010,Publication hold,ACTIVE/all prohibitions visible,"{""missing"":[]}",PASS,BLOCKING,18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_7_Dossier_Release_Afirmaciones/PUBLICATION_HOLD_V10_7.md
+GVR-011,Candidate tag absence,ABSENT,ABSENT,PASS,BLOCKING,refs/tags/v1.0.0-rc.1
+GVR-012,Candidate GitHub Release absence,ABSENT,ABSENT,PASS,BLOCKING,GitHub Release v1.0.0-rc.1
+GVR-013,Ready for Review packet,ELIGIBLE_FOR_SEPARATE_HUMAN_AUTHORIZATION_NOW,dossier PASS; audit 24/24 PASS; CI exact; PR remains Draft,PASS,BLOCKING,V10-7 and V10-A packets
+GVR-014,Merge packet,CONDITIONAL_AFTER_READY_FOR_REVIEW_AND_REVIEW_REQUIREMENTS,separate authority required; no merge performed,PASS,BLOCKING,Sequencing contract
+GVR-015,Tag packet,CONDITIONAL_AFTER_MERGE_AND_SOURCE_ANCESTRY_RECHECK,v1.0.0-rc.1 target=533fcf28a0c9053b7da79ca70ded80450d94cf35; tag absent,PASS,BLOCKING,Candidate identity contract
+GVR-016,Publication packet,CONDITIONAL_AFTER_TAG_AND_FINAL_HASH_RECHECK,prerelease only; artifact=6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c; release absent,PASS,BLOCKING,Publication contract
+GVR-017,Stable release boundary,1.0.0_NOT_ASSIGNED,1.0.0-rc.1; stable release remains unassigned,PASS,BLOCKING,Version policy
+GVR-018,Suspension and rollback contract,DEFINED_BEFORE_ANY_POST_GATE_ACTION,"stop on head drift, CI failure, hash drift, tag/release surprise, or claim drift",PASS,BLOCKING,Gate governance contract

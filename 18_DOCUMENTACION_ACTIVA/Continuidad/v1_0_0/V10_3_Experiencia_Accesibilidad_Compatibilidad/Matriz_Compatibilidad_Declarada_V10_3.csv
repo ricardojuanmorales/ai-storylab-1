@@ -1,0 +1,4 @@
+browser,version,operating_system,protocol,experience_route,keyboard_route,local_persistence_reload,declared_support,attested_at_utc,boundary
+Safari,26.5.2,macOS 26.5.2,http://127.0.0.1 local preview,PASS,PASS,PASS,BOUNDED_VALIDATED,2026-07-26T16:03:44Z,Exact installed browser version on tested macOS; no universal or future-version claim.
+Google Chrome,150.0.7871.184,macOS 26.5.2,http://127.0.0.1 local preview,PASS,PASS,PASS,BOUNDED_VALIDATED,2026-07-26T16:05:20Z,Exact installed browser version on tested macOS; no universal or future-version claim.
+Firefox,152.0.1,macOS 26.5.2,http://127.0.0.1 local preview,PASS,PASS,PASS,BOUNDED_VALIDATED,2026-07-26T16:08:14Z,Exact installed browser version on tested macOS; no universal or future-version claim.

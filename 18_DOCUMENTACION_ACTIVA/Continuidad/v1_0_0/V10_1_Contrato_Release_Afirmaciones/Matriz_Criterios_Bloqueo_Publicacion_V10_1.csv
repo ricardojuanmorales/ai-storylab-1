@@ -1,0 +1,11 @@
+criterion_id,criterion,trigger,classification,required_disposition,decision_point
+BLK-001,Unsupported public claim,Any release statement lacks mapped evidence.,BLOCKING,Remove or support the claim.,V10-7/GATE
+BLK-002,Declared-environment regression,Final candidate fails CI or validation in a declared environment.,BLOCKING,Human-authorized repair or scope reduction.,V10-3/V10-6
+BLK-003,Blocking reservation,Any inherited reservation is classified as blocking.,BLOCKING,Human disposition or authorized remediation.,V10-2
+BLK-004,Security or privacy failure,Release dossier contains unresolved hard security/privacy finding.,BLOCKING,Separate repair authorization.,V10-4
+BLK-005,Version or artifact ambiguity,"Version, schema, artifact identity or checksum policy remains contradictory.",BLOCKING,Resolve policy without artificial schema bump.,V10-5
+BLK-006,Candidate identity mismatch,"Evidence, artifact and final head do not point to the same candidate.",BLOCKING,Reassemble exact candidate.,V10-6
+BLK-007,Incomplete publication documentation,"Support, privacy, accessibility, known issues or release notes lack evidence mapping.",BLOCKING,Complete documentation.,V10-7
+BLK-008,Independent checkpoint failure,V10-A cannot reconstruct or validate the candidate.,BLOCKING,Return to the responsible hito.,V10-A
+BLK-009,Release gate failure,GATE-V10-RELEASE returns FAIL.,BLOCKING,No publication action.,GATE
+BLK-010,Missing human publication authority,"Ready, merge, tag, RC, release or artifact publication lacks explicit human approval.",BLOCKING,Obtain the separate decision.,POST-GATE

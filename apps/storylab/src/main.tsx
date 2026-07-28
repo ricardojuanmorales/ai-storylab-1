@@ -15,6 +15,7 @@ import {
   LocalStorageProjectRepository,
   type StorageLike,
 } from "./adapters/storage/local-storage-project-repository";
+import { inspectLegacyMvpContinuity } from "./adapters/storage/mvp-v0-3-continuity";
 import { SystemClock } from "./adapters/system/system-clock";
 import { App } from "./presentation/App";
 import type { PersistenceMode } from "./presentation/persistence-mode";
@@ -40,6 +41,10 @@ const resolveBrowserStorage = (): StorageLike | null => {
 };
 
 const storage = resolveBrowserStorage();
+const legacyContinuity = inspectLegacyMvpContinuity(storage);
+const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
 const persistenceMode: PersistenceMode = storage
   ? "local"
   : "memory";
@@ -87,6 +92,9 @@ createRoot(rootElement).render(
       useCases={useCases}
       portfolioTransfer={portfolioTransfer}
       persistenceMode={persistenceMode}
+      legacyContinuity={legacyContinuity}
+      legacyAppUrl={`${baseUrl}legacy/v0.3.0/`}
+      legacyBridgeUrl={`${baseUrl}legacy/bridge/`}
     />
   </StrictMode>,
 );

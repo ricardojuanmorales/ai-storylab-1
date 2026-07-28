@@ -2,91 +2,69 @@
 
 ## Constructor ético de historias multimedia con IA responsable
 
-AI StoryLab 1 es un entorno transdisciplinario de investigación-creación,
-aprendizaje lúdico y producción multimedia asistida por inteligencia
-artificial responsable.
+AI StoryLab 1 es un ecosistema educativo local-first para investigación-creación, aprendizaje lúdico y producción narrativa multimodal. La aplicación acompaña el proceso; la persona conserva autoría, criterio y decisión ética.
 
-> La persona conserva la agencia. La tecnología amplía posibilidades sin
-> apropiarse del criterio creativo, pedagógico o ético.
-
-## Estado actual
-
+## Estado del proyecto
 ```yaml
-project_release_line: v0.9.0
-project_version: 0.9.0-unreleased
-phase: FORMALLY_CLOSED_WITH_EXPLICIT_RESERVATIONS
-active_hito: NONE
-PR: 64
-PR_mode: consolidated_draft
-canonical_runtime: apps/storylab
-candidate_source_head: 29585b7b692818243f59d9f0e3c0dc572597fd11
-candidate_artifact_sha256: 3287c93281d2ce73e11f41b785ca79f91b013869cc0a7caf091ff863ee67c6cf
-candidate_suite:
-  test_files: 49
-  tests: 248
-supported_build_runtime:
-  - Node 22
-  - Node 24
-GATE_V09_RC: PASS_WITH_EXPLICIT_RESERVATIONS
-candidate_eligibility: ELIGIBLE_FOR_SEPARATE_POST_GATE_HUMAN_DECISIONS
-artifact_publication: false
-Ready_for_Review: false
-merge: false
-tag: false
-RC: false
-release: false
-session_documentary_closure: COMPLETE
+release_line: v1.0.0
+stable_identity: 1.0.0
+stable_release: ASSIGNED_NOT_YET_PUBLISHED
+GitHub_Pages: PREPARED_NOT_YET_DEPLOYED
+stable_ZIP: BUILT_VERIFIED_NOT_PUBLISHED
+publication_hold: ACTIVE
 ```
 
-## Runtime canónico
+La identidad estable `1.0.0` está asignada dentro del Draft PR. El artefacto estable se construirá y verificará en V10-STABLE, sin publicación, merge, tag, Release ni deployment.
 
-La aplicación candidata está en `apps/storylab/`.
+## Qué puedes hacer
+1. M1 · Intención: propósito, audiencia, premisa y límites.
+2. M2 · Arquitectura: personajes, mundo, conflicto y estructura.
+3. M3 · Producción: evidencias, transformaciones, autoría y contexto.
+4. M4 · Curaduría: reflexión, selección, cierre, exportación y recuperación.
 
-El `package.json` raíz conserva la línea histórica `0.3.0` y no forma parte del
-artefacto candidato. Su versión no representa el runtime actual.
+## Acceso
+### Aplicación web
+GitHub Pages está preparado para `https://ricardojuanmorales.github.io/ai-storylab-1/`. Se detectó y preservó una configuración preexistente (legacy, estado built, HTTP 200). V10-PAGES no ejecutó un deployment nuevo.
 
+### Descarga estable
+La GitHub Release `v1.0.0` todavía no existe.
+
+### Desarrollo local
 ```bash
-cd apps/storylab
+git clone https://github.com/ricardojuanmorales/ai-storylab-1.git
+cd ai-storylab-1/apps/storylab
 npm ci --ignore-scripts
 npm run dev
 ```
 
-Verificación completa:
+## Privacidad
+No requiere cuenta, backend, nube, telemetría ni API de IA. Los proyectos se almacenan localmente en el navegador.
 
-```bash
-cd apps/storylab
-AI_STORYLAB_SOURCE_COMMIT="$(git rev-parse HEAD)" npm run verify
+## Documentación
+- [Guía rápida](21_WIKI_DOCUMENTACION_HUMANA/v1_0_0/Guia_Rapida_AI_StoryLab_1_v1_0_0.md)
+- [Guía de usuario](21_WIKI_DOCUMENTACION_HUMANA/v1_0_0/Guia_Usuario_AI_StoryLab_1_v1_0_0.md)
+- [Instalación local](21_WIKI_DOCUMENTACION_HUMANA/v1_0_0/Guia_Instalacion_Ejecucion_Local_AI_StoryLab_1_v1_0_0.md)
+- [Guía técnica](21_WIKI_DOCUMENTACION_HUMANA/v1_0_0/Guia_Tecnica_Verificacion_AI_StoryLab_1_v1_0_0.md)
+- [Privacidad, seguridad y accesibilidad](21_WIKI_DOCUMENTACION_HUMANA/v1_0_0/Privacidad_Seguridad_Accesibilidad_AI_StoryLab_1_v1_0_0.md)
+- [Problemas conocidos](21_WIKI_DOCUMENTACION_HUMANA/v1_0_0/Problemas_Conocidos_Limitaciones_AI_StoryLab_1_v1_0_0.md)
+- [Mantenimiento y soporte](21_WIKI_DOCUMENTACION_HUMANA/v1_0_0/Mantenimiento_Soporte_AI_StoryLab_1_v1_0_0.md)
+- [Docentes e investigadores](21_WIKI_DOCUMENTACION_HUMANA/v1_0_0/Orientaciones_Docentes_Investigadores_AI_StoryLab_1_v1_0_0.md)
+
+## Límites
+No se afirma soporte universal, Windows, `file://`, certificación WCAG, firma criptográfica, efectividad educativa poblacional ni publicación estable antes de los gates restantes.
+
+## Continuidad del MVP v0.3.0
+
+La continuidad de v0.3.0 está preparada mediante una futura ruta histórica y un puente local de respaldo. Estas rutas todavía no están desplegadas.
+
+## Evidencia estable no publicada
+
+```yaml
+stable_source_commit: e05369e0052f86dfebadeb010f9a792496d64800
+stable_artifact_sha256: 2cbb5e357848118adc50e9336640d6599f9d82cf3a41accc4ff6a5bd2bd2b2be
+stable_artifact_size_bytes: 773342
+baseline_CI: 30233085298
+Pages_validation_CI: 30233089719
+artifact_publication: false
+Pages_deployment: false
 ```
-
-## Arco creativo mínimo
-
-1. **M1 · Intención creadora:** sentido, audiencia, premisa y límites.
-2. **M2 · Arquitectura narrativa:** personajes, mundo, tensiones y estructura.
-3. **M3 · Producción multimodal:** evidencias, transformaciones, autoría y contexto.
-4. **M4 · Curaduría y cierre:** reflexión privada, selección, retiro, confirmación y exportación.
-
-## Compromisos preservados
-
-- operación local-first;
-- datos sintéticos en validación;
-- privacidad y reflexión privada;
-- decisiones humanas explícitas y reversibles;
-- importación como copia local;
-- recuperación y roundtrip;
-- accesibilidad transversal con reservas documentadas;
-- cero backend, autenticación, nube o telemetría.
-
-## Documentación de candidata
-
-- [Guía de usuario](18_DOCUMENTACION_ACTIVA/Continuidad/v0_9_0/H09_6_Reconciliacion_Documental/Guia_Usuario_v0_9_0.md)
-- [Guía técnica y de verificación](18_DOCUMENTACION_ACTIVA/Continuidad/v0_9_0/H09_6_Reconciliacion_Documental/Guia_Tecnica_y_Verificacion_v0_9_0.md)
-- [Problemas conocidos](18_DOCUMENTACION_ACTIVA/Continuidad/v0_9_0/H09_6_Reconciliacion_Documental/Problemas_Conocidos_y_Limitaciones_v0_9_0.md)
-- [Declaración de alcance v1.0.0](18_DOCUMENTACION_ACTIVA/Continuidad/v0_9_0/H09_6_Reconciliacion_Documental/Declaracion_Alcance_v1_0_0.md)
-- [Registro primario de deuda](20_MANTENIMIENTO_Y_EVOLUCION/Registro_Deuda/Registro_Primario_Deuda_Epistemologica_Pedagogica_v0_9_0_AI_StoryLab_1.csv)
-
-## Fronteras
-
-`v0.9.0-unreleased` queda formalmente cerrado como fase validada con
-reservas explícitas. `GATE-V09-RC` pasó con reservas, pero no creó una RC,
-no publicó el artefacto y no autorizó Ready for Review, merge, tag o release.
-Cualquier movimiento posterior requiere una autorización humana nueva.

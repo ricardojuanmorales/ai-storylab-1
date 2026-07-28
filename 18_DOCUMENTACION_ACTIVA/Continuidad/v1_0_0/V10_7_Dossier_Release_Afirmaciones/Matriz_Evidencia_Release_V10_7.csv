@@ -1,0 +1,13 @@
+evidence_id,surface,hito,source,summary,status
+EVD-001,Disciplina inicial de afirmaciones,V10-1,18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_1_Contrato_Release_Afirmaciones/Matriz_Afirmaciones_V10_1.csv,13 afirmaciones heredadas,AVAILABLE
+EVD-002,Disposición de reservas,V10-2,18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_2_Disposicion_Reservas/Matriz_Disposicion_Ocho_Reservas_V10_2.csv,8 reservas,AVAILABLE
+EVD-003,Navegadores y VoiceOver,V10-3,18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_3_Experiencia_Accesibilidad_Compatibilidad/MANIFEST_V10_3.json,3 navegadores; VoiceOver PASS,AVAILABLE
+EVD-004,"Seguridad, privacidad y cadena de suministro",V10-4,18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_4_Seguridad_Privacidad_Cadena_Suministro/MANIFEST_V10_4.json,security_gate=PASS; blockers=0,AVAILABLE
+EVD-005,Contrato de versión y artefacto,V10-5,18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_5_Version_Artefacto_Reproducibilidad/MANIFEST_V10_5.json,artifact_gate=PASS,AVAILABLE
+EVD-006,Atestación de candidata,V10-6,18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_6_Candidata_Final_No_Publicada/Atestacion_Candidata_Final_No_Publicada_V10_6.json,candidate=1.0.0-rc.1; sha256=6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c,AVAILABLE
+EVD-007,Source commit,V10-6,533fcf28a0c9053b7da79ca70ded80450d94cf35,CI 30216684999 PASS,VERIFIED
+EVD-008,Evidence commit,V10-6,f888bb35abc65e6b3a6b70374b2865a96d6d7e5a,CI 30216738433 PASS,VERIFIED
+EVD-009,Reverificación local del ZIP,V10-7,/Users/ricardomoralesdejesus/.ai-storylab-1/operators/V10_7_DOSSIER_NOTAS_AFIRMACIONES_R1_2026_07_26/raw/artifact-reverification.json,status=PASS,VERIFIED
+EVD-010,Publication hold,V10-6/V10-7,18_DOCUMENTACION_ACTIVA/Continuidad/v1_0_0/V10_7_Dossier_Release_Afirmaciones/PUBLICATION_HOLD_V10_7.md,"No publicación, tag, release o adjunto",ACTIVE
+EVD-011,Identidad de aplicación,V10-6,999be850336096466da19e487f556f760a820b6f,Source y evidence conservan el mismo app tree,VERIFIED
+EVD-012,Autorización humana,V10-7,Adelante con V10-7 expedito.,Apertura acotada,RECORDED

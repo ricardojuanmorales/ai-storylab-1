@@ -1,0 +1,9 @@
+check_id,surface,criterion,result,browser,operating_system
+A11Y-001,Landmarks,"banner, navegación principal, main y contentinfo reconocibles",PASS,Safari 26.5.2,macOS 26.5.2
+A11Y-002,Heading,encabezado principal anunciado,PASS,Safari 26.5.2,macOS 26.5.2
+A11Y-003,Control names and states,"contraste, movimiento y escala con nombres y estado",PASS,Safari 26.5.2,macOS 26.5.2
+A11Y-004,Form labels,"seudónimo, título y contexto etiquetados",PASS,Safari 26.5.2,macOS 26.5.2
+A11Y-005,Skip link,mueve el foco al contenido principal,PASS,Safari 26.5.2,macOS 26.5.2
+A11Y-006,Status announcements,cambios de contraste o texto producen anuncio,PASS,Safari 26.5.2,macOS 26.5.2
+A11Y-007,Focus continuity,sin trampa de foco en el recorrido esencial,PASS,Safari 26.5.2,macOS 26.5.2
+A11Y-008,Synthetic-data boundary,sin datos reales durante la revisión,PASS,Safari 26.5.2,macOS 26.5.2

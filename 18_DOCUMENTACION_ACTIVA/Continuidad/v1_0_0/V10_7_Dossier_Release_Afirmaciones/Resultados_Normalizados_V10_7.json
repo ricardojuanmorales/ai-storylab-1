@@ -1,0 +1,34 @@
+{
+  "project": "AI StoryLab 1",
+  "phase": "v1.0.0",
+  "hito": "V10-7",
+  "parentCommit": "f888bb35abc65e6b3a6b70374b2865a96d6d7e5a",
+  "sourceCommit": "533fcf28a0c9053b7da79ca70ded80450d94cf35",
+  "candidateVersion": "1.0.0-rc.1",
+  "artifactName": "ai-storylab-1_1.0.0-rc.1_533fcf28a0c9.zip",
+  "artifactSha256": "6def29a246180ec5b6f65944bec207c90a86d50bcc6823e2988865504c0cda7c",
+  "artifactSizeBytes": 486825,
+  "artifactReverification": "PASS",
+  "dossierGate": "PASS",
+  "blockingFindings": 0,
+  "claims": {
+    "authorized": 4,
+    "authorizedBounded": 8,
+    "restricted": 10,
+    "total": 22,
+    "unsupportedPublicClaims": 0
+  },
+  "evidenceRows": 12,
+  "publicationHold": "ACTIVE",
+  "sourceCiRun": 30216684999,
+  "finalCiRun": 30216738433,
+  "V10_A": "BLOCKED_PENDING_HUMAN_DECISION",
+  "changes": {
+    "functional": false,
+    "dependencies": false,
+    "schema": false,
+    "workflows": false,
+    "candidate": false,
+    "documentationOnly": true
+  }
+}

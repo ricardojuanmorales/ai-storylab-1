@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "captured_url": "https://ricardojuanmorales.github.io/ai-storylab-1/",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "title": "AI StoryLab · Constructor Ético de Historias Multimedia",
+  "index_size": 702,
+  "index_sha256": "788cf820f13b5c6438a87f99f25753a54675506049a43bd54e8c689346a788b3",
+  "assets_total": 3,
+  "assets": [
+    {
+      "url": "https://ricardojuanmorales.github.io/ai-storylab-1/assets/icons/flask.svg",
+      "status": 200,
+      "content_type": "image/svg+xml",
+      "size": 343,
+      "sha256": "029d248c758a5c3904bc11d683acbea0ae6555a6320826734c5f0912bb3390d7"
+    },
+    {
+      "url": "https://ricardojuanmorales.github.io/ai-storylab-1/assets/index-CN43Yk1q.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=utf-8",
+      "size": 252071,
+      "sha256": "9b6ac36b1fe5d22bd115d48eaac100019278043c3b39089940dda2b6d839f0cd"
+    },
+    {
+      "url": "https://ricardojuanmorales.github.io/ai-storylab-1/assets/index-G4FtF_cY.css",
+      "status": 200,
+      "content_type": "text/css; charset=utf-8",
+      "size": 20190,
+      "sha256": "7d63acc6bf725f0b2588fb85d7fb63be9f177a59a6d0635e7d7e5c45307bcff5"
+    }
+  ],
+  "legacy_storage_keys_found": [
+    "aistorylab_group_progress_v0_2",
+    "aistorylab_student_progress_v0_2"
+  ]
+}

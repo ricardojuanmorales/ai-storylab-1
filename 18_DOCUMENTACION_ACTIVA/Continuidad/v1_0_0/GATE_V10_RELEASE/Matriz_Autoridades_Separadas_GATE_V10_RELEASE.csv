@@ -1,0 +1,5 @@
+authority_id,authority,gate_disposition,current_action_status,prerequisites,target,human_decision_required,automatic_action
+AUT-001,READY_FOR_REVIEW,ELIGIBLE_FOR_SEPARATE_HUMAN_AUTHORIZATION_NOW,NOT_AUTHORIZED,gate PASS; exact gate commit CI PASS; PR still Draft and unchanged,PR #65,YES_SEPARATE,NONE
+AUT-002,MERGE,CONDITIONAL_AFTER_READY_FOR_REVIEW_AND_REVIEW_REQUIREMENTS,NOT_AUTHORIZED,Ready for Review separately authorized and executed; required review complete; exact head CI PASS; no drift,feat/v1.0-release-readiness -> main,YES_SEPARATE_AFTER_PREREQUISITES,NONE
+AUT-003,TAG,CONDITIONAL_AFTER_MERGE_AND_SOURCE_ANCESTRY_RECHECK,NOT_AUTHORIZED,merge separately authorized and complete; 533fcf28a0c9053b7da79ca70ded80450d94cf35 is ancestor of main; tag absent,v1.0.0-rc.1 -> 533fcf28a0c9053b7da79ca70ded80450d94cf35,YES_SEPARATE_AFTER_PREREQUISITES,NONE
+AUT-004,PUBLICATION,CONDITIONAL_AFTER_TAG_AND_FINAL_HASH_RECHECK,NOT_AUTHORIZED,v1.0.0-rc.1 exists at 533fcf28a0c9053b7da79ca70ded80450d94cf35; ZIP hash and size reverified; prerelease notes approved,GitHub prerelease v1.0.0-rc.1 with ai-storylab-1_1.0.0-rc.1_533fcf28a0c9.zip,YES_SEPARATE_AFTER_PREREQUISITES,NONE

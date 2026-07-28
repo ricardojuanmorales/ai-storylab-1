@@ -1,0 +1,19 @@
+{
+  "hito": "V10-PUBLIC",
+  "publicSurfaceGate": "PASS",
+  "publicDocuments": 10,
+  "blockingFindings": 0,
+  "currentCandidate": "1.0.0-rc.1",
+  "stableRelease": false,
+  "GitHubPages": false,
+  "stableZip": false,
+  "readyForReview": false,
+  "previousReadyAuthorization": "PAUSED_BY_NEW_HEAD",
+  "changes": {
+    "documentationOnly": true,
+    "workflows": false,
+    "functional": false,
+    "dependencies": false,
+    "schema": false
+  }
+}
